@@ -43,12 +43,12 @@ const serviceOptions = [
 ] as const;
 
 const inputClasses =
-  "w-full bg-[#2A2A2A]/50 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#498f6d]/50 focus:ring-1 focus:ring-[#498f6d]/30 transition-colors duration-200";
+  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200";
 
 const selectClasses =
-  "w-full bg-[#2A2A2A]/50 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#498f6d]/50 focus:ring-1 focus:ring-[#498f6d]/30 transition-colors duration-200 appearance-none";
+  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A1A] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200 appearance-none";
 
-const errorClasses = "text-red-400 text-xs mt-1";
+const errorClasses = "text-red-600 text-xs mt-1";
 
 interface LeadCaptureFormProps {
   title: string;
@@ -106,7 +106,7 @@ export function LeadCaptureForm({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-white font-medium"
+              className="text-[#1A1A1A] font-medium"
             >
               Merci !
             </motion.p>
@@ -114,7 +114,7 @@ export function LeadCaptureForm({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-white/60 text-sm mt-1"
+              className="text-[#6B7280] text-sm mt-1"
             >
               Nous vous contacterons bientôt.
             </motion.p>
@@ -126,10 +126,10 @@ export function LeadCaptureForm({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <h4 className="text-white font-semibold text-base mb-1">
+            <h4 className="text-[#1A1A1A] font-semibold text-base mb-1">
               {title}
             </h4>
-            <p className="text-white/50 text-sm mb-4">{subtitle}</p>
+            <p className="text-[#6B7280] text-sm mb-4">{subtitle}</p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
               <div>

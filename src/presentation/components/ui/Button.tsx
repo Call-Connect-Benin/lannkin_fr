@@ -12,10 +12,10 @@ const variants = {
   primary:
     "bg-accent text-on-accent font-semibold hover:brightness-110 shadow-[0_0_20px_rgba(73,143,109,0.15)]",
   secondary:
-    "glass border border-white/10 text-white hover:border-accent/40 hover:text-accent",
-  ghost: "bg-transparent text-white hover:bg-white/5 hover:text-accent",
+    "border-2 border-accent/60 text-accent bg-transparent hover:bg-accent/10 hover:border-accent font-semibold",
+  ghost: "bg-transparent text-accent hover:bg-accent/5 font-medium",
   danger:
-    "bg-danger text-white font-semibold hover:brightness-110 shadow-[0_0_20px_rgba(255,68,68,0.15)]",
+    "bg-danger text-[#FFFFFF] font-semibold hover:brightness-110 shadow-[0_0_20px_rgba(255,68,68,0.15)]",
 } as const;
 
 const sizes = {

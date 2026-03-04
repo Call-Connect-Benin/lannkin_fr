@@ -81,7 +81,7 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
                   type="email"
                   placeholder="votre@email.com"
                   className={cn(
-                    "w-full bg-[#2A2A2A]/50 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#498f6d]/50 focus:ring-1 focus:ring-[#498f6d]/30 transition-colors duration-200",
+                    "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-4 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200",
                     errors.email && "border-red-400/50"
                   )}
                   {...register("email")}

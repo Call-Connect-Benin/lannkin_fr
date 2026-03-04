@@ -166,7 +166,7 @@ export default function AgenceTrafficLavalPage() {
             </Link>
             <Link
               href="/contact/"
-              className="glass inline-flex items-center rounded-lg border border-white/10 px-6 py-3 font-semibold text-white transition-colors hover:border-[#498f6d]/30"
+              className="inline-flex items-center rounded-lg border-2 border-accent/60 bg-transparent px-6 py-3 font-semibold text-accent transition-colors hover:border-accent hover:bg-accent/10"
             >
               Nous contacter
             </Link>
@@ -335,7 +335,7 @@ export default function AgenceTrafficLavalPage() {
             </Link>
             <Link
               href="/contact/"
-              className="glass inline-flex items-center rounded-lg border border-white/10 px-8 py-4 text-lg font-semibold text-white transition-colors hover:border-[#498f6d]/30"
+              className="inline-flex items-center rounded-lg border-2 border-accent/60 bg-transparent px-8 py-4 text-lg font-semibold text-accent transition-colors hover:border-accent hover:bg-accent/10"
             >
               Nous contacter
             </Link>

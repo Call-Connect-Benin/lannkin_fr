@@ -280,7 +280,7 @@ export default function DeveloppementSaasPage() {
               </Link>
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-8 py-4 text-lg font-medium text-white backdrop-blur transition-colors hover:border-accent/40 hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-accent/60 bg-transparent px-8 py-4 text-lg font-semibold text-accent transition-colors hover:border-accent hover:bg-accent/10"
               >
                 Nous contacter
               </Link>

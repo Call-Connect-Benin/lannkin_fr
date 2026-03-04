@@ -46,14 +46,14 @@ const budgetOptions = [
 ] as const;
 
 const inputClasses =
-  "w-full bg-[#2A2A2A]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-[#498f6d]/50 focus:ring-1 focus:ring-[#498f6d]/30 transition-colors duration-200";
+  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-4 py-2.5 text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200 text-sm";
 
 const selectClasses =
-  "w-full bg-[#2A2A2A]/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#498f6d]/50 focus:ring-1 focus:ring-[#498f6d]/30 transition-colors duration-200 appearance-none";
+  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-4 py-2.5 text-[#1A1A1A] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200 appearance-none text-sm";
 
-const labelClasses = "block text-sm font-medium text-white/70 mb-1.5";
+const labelClasses = "block text-sm font-medium text-[#374151] mb-1";
 
-const errorClasses = "text-red-400 text-sm mt-1";
+const errorClasses = "text-red-600 text-xs mt-1";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -110,10 +110,10 @@ export function ContactForm() {
           >
             <CheckCircle className="h-16 w-16 text-[#498f6d] mb-4" />
           </motion.div>
-          <h3 className="text-2xl font-semibold text-white mb-2">
+          <h3 className="text-2xl font-semibold text-[#1A1A1A] mb-2">
             Message envoyé !
           </h3>
-          <p className="text-white/60 mb-6">
+          <p className="text-[#6B7280] mb-6">
             Nous vous répondrons dans les plus brefs délais.
           </p>
           <Button
