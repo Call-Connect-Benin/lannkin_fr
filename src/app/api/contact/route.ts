@@ -64,9 +64,12 @@ const devisSchema = baseSchema.extend({
 
 const leadSchema = baseSchema.extend({
   formType: z.literal("lead"),
-  name: z.string().min(2).max(100),
+  firstName: z.string().min(1).max(100),
+  lastName: z.string().min(1).max(100),
+  company: z.string().max(100).optional(),
   email: z.string().email(),
-  service: z.string().min(1),
+  phone: z.string().optional(),
+  message: z.string().min(5).max(2000),
 });
 
 const bodySchema = z.discriminatedUnion("formType", [contactSchema, devisSchema, leadSchema]);
@@ -76,7 +79,7 @@ const bodySchema = z.discriminatedUnion("formType", [contactSchema, devisSchema,
 // ---------------------------------------------------------------------------
 
 export async function POST(req: NextRequest) {
-  // IP for rate limiting
+  // IP for rate limiting + logging
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
     req.headers.get("x-real-ip") ??
@@ -124,8 +127,10 @@ export async function POST(req: NextRequest) {
       "Entreprise": data.company,
       "Service souhaité": data.service,
       "Budget": data.budget,
-      "Page source": data.sourceUrl,
       "Message": data.message,
+      "—": undefined,
+      "Formulaire (URL)": data.sourceUrl,
+      "Adresse IP": ip !== "unknown" ? ip : undefined,
     };
   } else if (data.formType === "devis") {
     const urgencyLabel: Record<string, string> = {
@@ -142,21 +147,28 @@ export async function POST(req: NextRequest) {
       "Entreprise": data.company,
       "Service souhaité": data.service,
       "Budget": data.budget,
-      "Message": data.message,
       "Type de projet": data.projectType,
       "Urgence": urgencyLabel[data.urgency] ?? data.urgency,
       "Site actuel": data.currentSite,
       "Objectifs": data.objectives,
-      "Page source": data.sourceUrl,
+      "Message": data.message,
+      "—": undefined,
+      "Formulaire (URL)": data.sourceUrl,
+      "Adresse IP": ip !== "unknown" ? ip : undefined,
     };
   } else {
     // lead
-    subject = `[Lead] ${data.name} — ${data.service}`;
+    subject = `[Lead] ${data.firstName} ${data.lastName} — ${data.email}`;
     fields = {
-      "Nom": data.name,
+      "Prénom": data.firstName,
+      "Nom": data.lastName,
       "Email": data.email,
-      "Service souhaité": data.service,
-      "Page source": data.sourceUrl,
+      "Téléphone": data.phone,
+      "Entreprise": data.company,
+      "Message / Projet": data.message,
+      "—": undefined,
+      "Formulaire (URL)": data.sourceUrl,
+      "Adresse IP": ip !== "unknown" ? ip : undefined,
     };
   }
 
@@ -173,7 +185,7 @@ export async function POST(req: NextRequest) {
       replyTo: "email" in data ? data.email : undefined,
       subject,
       text: Object.entries(fields)
-        .filter(([, v]) => v)
+        .filter(([k, v]) => v && k !== "—")
         .map(([k, v]) => `${k}: ${v}`)
         .join("\n"),
       html: buildContactHtml(fields, titleMap[data.formType] ?? "Nouveau formulaire"),

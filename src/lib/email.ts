@@ -31,6 +31,15 @@ export const SMTP_TO = process.env.SMTP_TO ?? "info@lannkin.ca";
 
 function row(label: string, value: string | undefined) {
   if (!value) return "";
+  // Meta rows (URL, IP) — lighter style
+  const isMeta = label === "Formulaire (URL)" || label === "Adresse IP";
+  if (isMeta) {
+    return `
+    <tr>
+      <td style="padding:6px 12px;background:#fafafa;font-weight:500;font-size:11px;width:160px;vertical-align:top;color:#9ca3af;">${label}</td>
+      <td style="padding:6px 12px;font-size:11px;color:#6b7280;vertical-align:top;font-family:monospace;">${value}</td>
+    </tr>`;
+  }
   return `
     <tr>
       <td style="padding:8px 12px;background:#f5f5f5;font-weight:600;font-size:13px;width:160px;vertical-align:top;color:#374151;">${label}</td>
@@ -38,10 +47,13 @@ function row(label: string, value: string | undefined) {
     </tr>`;
 }
 
+function separator() {
+  return `<tr><td colspan="2" style="padding:0;height:1px;background:#e5e7eb;"></td></tr>`;
+}
+
 export function buildContactHtml(fields: Record<string, string | undefined>, title: string) {
   const entries = Object.entries(fields)
-    .filter(([, v]) => v)
-    .map(([k, v]) => row(k, v))
+    .map(([k, v]) => k === "—" ? separator() : row(k, v))
     .join("");
 
   return `<!DOCTYPE html>

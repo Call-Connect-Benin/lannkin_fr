@@ -12,43 +12,21 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/presentation/components/ui";
 
 const leadCaptureSchema = z.object({
-  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+  firstName: z.string().min(2, "Prénom requis"),
+  lastName: z.string().min(2, "Nom requis"),
+  company: z.string().optional(),
   email: z.string().email("Adresse email invalide"),
-  service: z.string().min(1, "Veuillez sélectionner un service"),
+  phone: z.string().optional(),
+  message: z.string().min(5, "Décrivez brièvement votre projet (min. 5 caractères)").max(2000),
+  website: z.string().max(0).optional(), // honeypot
 });
 
 type LeadCaptureData = z.infer<typeof leadCaptureSchema>;
 
-const serviceOptions = [
-  { value: "sites-web", label: "Sites Web" },
-  { value: "ecommerce", label: "E-Commerce" },
-  { value: "applications-web", label: "Applications Web" },
-  { value: "applications-mobiles", label: "Applications Mobiles" },
-  { value: "seo", label: "SEO" },
-  { value: "sem-google-ads", label: "SEM / Google Ads" },
-  { value: "social-media", label: "Social Media" },
-  { value: "email-marketing", label: "Email Marketing" },
-  { value: "content-marketing", label: "Content Marketing" },
-  { value: "branding", label: "Branding" },
-  { value: "design-graphique", label: "Design Graphique" },
-  { value: "ui-ux-design", label: "UI/UX Design" },
-  { value: "motion-design", label: "Motion Design" },
-  { value: "photographie", label: "Photographie" },
-  { value: "video", label: "Production Vidéo" },
-  { value: "ia-automatisation", label: "IA & Automatisation" },
-  { value: "chatbots-ia", label: "Chatbots IA" },
-  { value: "analytics", label: "Analytics & Data" },
-  { value: "consulting", label: "Consulting Digital" },
-  { value: "formation", label: "Formation" },
-] as const;
-
 const inputClasses =
-  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200";
+  "w-full bg-white/[0.06] border border-white/[0.12] rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-200";
 
-const selectClasses =
-  "w-full bg-[#FFFFFF] border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A1A] focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-200 appearance-none";
-
-const errorClasses = "text-red-600 text-xs mt-1";
+const errorClasses = "text-red-400 text-xs mt-1";
 
 interface LeadCaptureFormProps {
   title: string;
@@ -56,11 +34,7 @@ interface LeadCaptureFormProps {
   onSuccess?: () => void;
 }
 
-export function LeadCaptureForm({
-  title,
-  subtitle,
-  onSuccess,
-}: LeadCaptureFormProps) {
+export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
@@ -100,33 +74,28 @@ export function LeadCaptureForm({
   };
 
   return (
-    <div className="bg-[#1A1A1A] border border-white/10 rounded-xl p-5">
+    <div className="rounded-2xl border border-white/[0.1] bg-black/80 p-6">
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div
             key="success"
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            className="flex flex-col items-center justify-center py-6 text-center"
+            className="flex flex-col items-center justify-center py-8 text-center"
           >
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 15,
-                delay: 0.1,
-              }}
+              transition={{ type: "spring", stiffness: 300, damping: 15, delay: 0.1 }}
             >
-              <CheckCircle className="h-12 w-12 text-[#498f6d] mb-3" />
+              <CheckCircle className="h-12 w-12 text-accent mb-3" />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-[#1A1A1A] font-medium"
+              className="text-white font-semibold text-lg"
             >
               Merci !
             </motion.p>
@@ -134,89 +103,93 @@ export function LeadCaptureForm({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-[#6B7280] text-sm mt-1"
+              className="text-white/60 text-sm mt-1"
             >
-              Nous vous contacterons bientôt.
+              Nous vous contacterons sous 24h.
             </motion.p>
           </motion.div>
         ) : (
-          <motion.div
-            key="form"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <h4 className="text-[#1A1A1A] font-semibold text-base mb-1">
+          <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <h4 className="font-semibold text-base mb-0.5" style={{ color: "#FFFFFF" }}>
               {title}
             </h4>
-            <p className="text-[#6B7280] text-sm mb-4">{subtitle}</p>
+            <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.55)" }}>
+              {subtitle}
+            </p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+              {/* Honeypot */}
+              <input type="text" {...register("website")} className="hidden" tabIndex={-1} autoComplete="off" />
+
+              {/* Prénom + Nom */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Prénom *"
+                    className={cn(inputClasses, errors.firstName && "border-red-400/50")}
+                    {...register("firstName")}
+                  />
+                  {errors.firstName && <p className={errorClasses}>{errors.firstName.message}</p>}
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Nom *"
+                    className={cn(inputClasses, errors.lastName && "border-red-400/50")}
+                    {...register("lastName")}
+                  />
+                  {errors.lastName && <p className={errorClasses}>{errors.lastName.message}</p>}
+                </div>
+              </div>
+
+              {/* Société */}
               <div>
                 <input
                   type="text"
-                  placeholder="Votre nom"
-                  className={cn(
-                    inputClasses,
-                    errors.name && "border-red-400/50"
-                  )}
-                  {...register("name")}
+                  placeholder="Entreprise / Société"
+                  className={inputClasses}
+                  {...register("company")}
                 />
-                {errors.name && (
-                  <p className={errorClasses}>{errors.name.message}</p>
-                )}
               </div>
 
+              {/* Email + Téléphone */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email *"
+                    className={cn(inputClasses, errors.email && "border-red-400/50")}
+                    {...register("email")}
+                  />
+                  {errors.email && <p className={errorClasses}>{errors.email.message}</p>}
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Téléphone"
+                    className={inputClasses}
+                    {...register("phone")}
+                  />
+                </div>
+              </div>
+
+              {/* Description */}
               <div>
-                <input
-                  type="email"
-                  placeholder="votre@email.com"
-                  className={cn(
-                    inputClasses,
-                    errors.email && "border-red-400/50"
-                  )}
-                  {...register("email")}
+                <textarea
+                  placeholder="Décrivez votre projet en quelques mots *"
+                  rows={3}
+                  className={cn(inputClasses, "resize-none", errors.message && "border-red-400/50")}
+                  {...register("message")}
                 />
-                {errors.email && (
-                  <p className={errorClasses}>{errors.email.message}</p>
-                )}
+                {errors.message && <p className={errorClasses}>{errors.message.message}</p>}
               </div>
 
-              <div>
-                <select
-                  className={cn(
-                    selectClasses,
-                    errors.service && "border-red-400/50"
-                  )}
-                  defaultValue=""
-                  {...register("service")}
-                >
-                  <option value="" disabled>
-                    Service souhaité
-                  </option>
-                  {serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-                {errors.service && (
-                  <p className={errorClasses}>{errors.service.message}</p>
-                )}
-              </div>
+              {submitError && <p className="text-red-400 text-xs">{submitError}</p>}
 
-              {submitError && (
-                <p className="text-red-600 text-xs">{submitError}</p>
-              )}
-
-              <Button
-                type="submit"
-                size="sm"
-                loading={isSubmitting}
-                className="w-full"
-              >
+              <Button type="submit" size="sm" loading={isSubmitting} className="w-full">
                 <Send className="h-3.5 w-3.5" />
-                Envoyer
+                Envoyer ma demande
               </Button>
             </form>
           </motion.div>
