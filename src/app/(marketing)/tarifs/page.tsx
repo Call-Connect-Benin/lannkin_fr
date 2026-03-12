@@ -9,7 +9,6 @@ import {
 } from "@/data/pricing";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
 import { Container } from "@/presentation/components/ui/Container";
-import { Button } from "@/presentation/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Tarifs Transparents | Lannkin",

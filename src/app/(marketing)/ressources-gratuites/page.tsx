@@ -352,7 +352,7 @@ function ResourceSection({
 
 function ResourceCard({ resource }: { resource: Resource }) {
   const config = TYPE_CONFIG[resource.type];
-  const Icon = config.icon;
+  const Icon = config.icon as React.FC<{ className?: string }>;
 
   const cardContent = (
     <>

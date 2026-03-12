@@ -66,7 +66,7 @@ export function AuditGoogleAdsLP() {
           if (tp === "multi") {
             next[nm] = Array.from(selected).map((o) => o.getAttribute("data-v")!);
           } else {
-            next[nm] = selected[0].getAttribute("data-v")!;
+            next[nm] = selected[0]?.getAttribute("data-v") ?? "";
           }
         }
       });
