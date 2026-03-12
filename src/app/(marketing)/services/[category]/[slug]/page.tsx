@@ -10,6 +10,31 @@ import {
 import { Container, Card, Badge, Button } from "@/presentation/components/ui";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
 import { Breadcrumb, InternalLinks } from "@/presentation/components/seo";
+import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
+
+const HUB_PARALLAX_IMAGES: Record<string, string> = {
+  "conception-web":            "/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp",
+  "vibe-coding":               "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
+  "odoo":                      "/images/rendu3D/rendu3d-cube-vert-macro.webp",
+  "google-ads":                "/images/rendu3D/rendu3d-cubes-rocket-fond-vert.webp",
+  "facebook-ads":              "/images/rendu3D/rendu3d-ovni-cubes-fond-rose.webp",
+  "tiktok-ads":                "/images/rendu3D/rendu3d-ovni-cubes-fond-rose.webp",
+  "linkedin-ads":              "/images/rendu3D/rendu3d-cubes-overhead.webp",
+  "snapchat-ads":              "/images/rendu3D/rendu3d-ovni-cubes-fond-rose.webp",
+  "pinterest-ads":             "/images/rendu3D/rendu3d-flatlay-fond-vert.webp",
+  "native-ads":                "/images/rendu3D/rendu3d-cube-verre-flou-blanc.webp",
+  "bing-ads":                  "/images/rendu3D/rendu3d-rocket-cubes-gris.webp",
+  "amazon-ads":                "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
+  "waze-ads":                  "/images/rendu3D/rendu3d-trio-cubes-flottants.webp",
+  "seo":                       "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
+  "google-my-business":        "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
+  "graphisme":                 "/images/rendu3D/rendu3d-cadre-verre-closeup.webp",
+  "lead-generation":           "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp",
+  "intelligence-artificielle": "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
+  "developpement-saas":        "/images/rendu3D/rendu3d-rocket-sur-cube-rouge.webp",
+  "sites-immersifs-3d":        "/images/rendu3D/rendu3d-cadre-verre-closeup.webp",
+  "montage-video":             "/images/rendu3D/rendu3d-orbite-planete-fond-rouge.webp",
+};
 
 // ---------------------------------------------------------------------------
 // Static params — pre-render all 126 sub-pages with their parent category
@@ -96,29 +121,35 @@ export default async function ServiceSubPage({ params }: PageProps) {
       </Container>
 
       {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            {parentHub && (
-              <Link
-                href={`/services/${parentHub.slug}/`}
-                className="mb-4 inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
-              >
-                <span aria-hidden>&larr;</span>
-                {parentHub.name}
-              </Link>
-            )}
-            <Badge variant="default" size="sm" className="mb-6">
-              <LucideIcon name={service.icon} className="h-5 w-5" />
-            </Badge>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              {service.name}
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
-              {service.shortDescription}
-            </p>
-          </div>
-        </Container>
+      <section className="parallax-section relative overflow-hidden py-16 lg:py-24">
+        <ParallaxBg
+          src={HUB_PARALLAX_IMAGES[service.parentSlug ?? category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"}
+          overlay={0.62}
+        />
+        <div className="relative z-10">
+          <Container>
+            <div className="mx-auto max-w-3xl text-center">
+              {parentHub && (
+                <Link
+                  href={`/services/${parentHub.slug}/`}
+                  className="mb-4 inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+                >
+                  <span aria-hidden>&larr;</span>
+                  {parentHub.name}
+                </Link>
+              )}
+              <Badge variant="default" size="sm" className="mb-6">
+                <LucideIcon name={service.icon} className="h-5 w-5" />
+              </Badge>
+              <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                {service.name}
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed sm:text-xl" style={{ color: "#DDDDDD" }}>
+                {service.shortDescription}
+              </p>
+            </div>
+          </Container>
+        </div>
       </section>
 
       {/* Related services */}

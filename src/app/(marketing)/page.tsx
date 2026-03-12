@@ -44,40 +44,42 @@ export default function HomePage() {
 
               {/* Left column — copy + social proof */}
               <div className="lg:col-span-7">
-                <AnimatedReveal variant="fadeInUp">
-                  <Badge>{HERO.badge}</Badge>
-                </AnimatedReveal>
-                <AnimatedReveal variant="fadeInUp" delay={0.1}>
-                  <h1 className="mt-5 font-heading text-4xl font-bold tracking-tight text-[#FFFFFF] sm:text-5xl lg:text-6xl">
-                    {HERO.title}
-                  </h1>
-                </AnimatedReveal>
-                <AnimatedReveal variant="fadeInUp" delay={0.2}>
-                  <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#DDDDDD]">
-                    {HERO.subtitle}
-                  </p>
-                </AnimatedReveal>
+                <div className="rounded-2xl bg-black/50 p-6 backdrop-blur-sm lg:p-8">
+                  <AnimatedReveal variant="fadeInUp">
+                    <Badge>{HERO.badge}</Badge>
+                  </AnimatedReveal>
+                  <AnimatedReveal variant="fadeInUp" delay={0.1}>
+                    <h1 className="mt-5 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                      {HERO.title}
+                    </h1>
+                  </AnimatedReveal>
+                  <AnimatedReveal variant="fadeInUp" delay={0.2}>
+                    <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#DDDDDD]">
+                      {HERO.subtitle}
+                    </p>
+                  </AnimatedReveal>
 
-                {/* Stats */}
-                <AnimatedReveal variant="fadeInUp" delay={0.3}>
-                  <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-4">
-                    {HERO.stats.map((stat) => (
-                      <div key={stat.label}>
-                        <div className="font-heading text-2xl font-bold text-accent">
-                          {stat.value}
+                  {/* Stats */}
+                  <AnimatedReveal variant="fadeInUp" delay={0.3}>
+                    <div className="mt-8 grid grid-cols-2 gap-5 border-t border-white/10 pt-6 sm:grid-cols-4">
+                      {HERO.stats.map((stat) => (
+                        <div key={stat.label}>
+                          <div className="font-heading text-2xl font-bold text-accent">
+                            {stat.value}
+                          </div>
+                          <div className="mt-0.5 text-xs text-[#CCCCCC]">{stat.label}</div>
                         </div>
-                        <div className="mt-0.5 text-xs text-[#CCCCCC]">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </AnimatedReveal>
+                      ))}
+                    </div>
+                  </AnimatedReveal>
 
-                {/* Google reviews — social proof */}
-                <AnimatedReveal variant="fadeInUp" delay={0.4}>
-                  <div className="mt-7">
-                    <GoogleMapsWidget />
-                  </div>
-                </AnimatedReveal>
+                  {/* Google reviews — social proof */}
+                  <AnimatedReveal variant="fadeInUp" delay={0.4}>
+                    <div className="mt-6 border-t border-white/10 pt-6">
+                      <GoogleMapsWidget />
+                    </div>
+                  </AnimatedReveal>
+                </div>
               </div>
 
               {/* Right column — lead form */}
@@ -265,6 +267,91 @@ export default function HomePage() {
                 </div>
               </AnimatedReveal>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 7b. CLIENT LOGOS + BADGES — Dark 3D */}
+      <section
+        className="relative overflow-hidden py-16"
+        style={{ backgroundColor: "#0C0C0C" }}
+      >
+        {/* 3D render — diagonal fade */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute inset-y-0 right-0 w-[55%]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
+              alt=""
+              className="h-full w-full object-cover object-center"
+              style={{ opacity: 0.28 }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(105deg, #0C0C0C 20%, rgba(12,12,12,0.6) 42%, transparent 62%)",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to bottom, #0C0C0C 0%, transparent 18%, transparent 82%, #0C0C0C 100%)",
+              }}
+            />
+          </div>
+        </div>
+        <div
+          className="pointer-events-none absolute right-[30%] top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full blur-[120px]"
+          style={{ backgroundColor: "rgba(73, 143, 109, 0.07)" }}
+          aria-hidden
+        />
+
+        <Container className="relative z-10">
+          {/* Badge pulsing */}
+          <div className="mb-10 flex justify-center">
+            <div
+              className="inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              style={{ borderColor: "rgba(73,143,109,0.30)", backgroundColor: "rgba(73,143,109,0.10)" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span
+                  className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                  style={{ backgroundColor: "#498f6d" }}
+                />
+                <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
+              </span>
+              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+                Ils nous font confiance
+              </span>
+            </div>
+          </div>
+
+          {/* Logo grid */}
+          <div className="grid grid-cols-4 gap-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+            {Array.from({ length: 29 }, (_, i) => `logo-client-${String(i + 1).padStart(2, "0")}.png`).map((file) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={file}
+                src={`/images/logo-client/${file}`}
+                alt=""
+                className="h-14 w-full object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              />
+            ))}
+          </div>
+
+          {/* Partner badges */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-white/10 pt-10">
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Certifications &amp; partenariats
+            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" className="h-10 w-10 opacity-80 transition-opacity hover:opacity-100" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" className="h-10 w-auto opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" className="h-10 w-auto opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0" />
           </div>
         </Container>
       </section>

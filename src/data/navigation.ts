@@ -278,7 +278,7 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
   NAV_TARIFS,
   { label: "Réalisations", href: "/realisations/" },
   { label: "Blog", href: "/blog/" },
-  { label: "Ressources gratuites", href: "/ressources-gratuites/audit-google-ads/", target: "_blank" },
+  { label: "Ressources gratuites", href: "/ressources-gratuites/" },
   { label: "À propos", href: "/a-propos/" },
   { label: "Contact", href: "/contact/" },
 ];
@@ -319,6 +319,7 @@ export const FOOTER_NAVIGATION = {
     links: [
       { label: "Tarifs", href: "/tarifs/" },
       { label: "Devis gratuit", href: "/devis-gratuit/" },
+      { label: "Ressources gratuites", href: "/ressources-gratuites/" },
       { label: "Audit Google Ads gratuit", href: "/ressources-gratuites/audit-google-ads/" },
       { label: "Secteurs d'activité", href: "/secteurs/" },
       { label: "Zones desservies", href: "/zone/" },
@@ -343,7 +344,7 @@ export const MOBILE_NAVIGATION: SimpleNavItem[] = [
   { label: "Tarifs", href: "/tarifs/" },
   { label: "Réalisations", href: "/realisations/" },
   { label: "Blog", href: "/blog/" },
-  { label: "Ressources gratuites", href: "/ressources-gratuites/audit-google-ads/", target: "_blank" },
+  { label: "Ressources gratuites", href: "/ressources-gratuites/" },
   { label: "À propos", href: "/a-propos/" },
   { label: "Contact", href: "/contact/" },
   { label: "Devis gratuit", href: "/devis-gratuit/" },

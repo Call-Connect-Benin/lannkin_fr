@@ -17,7 +17,7 @@ const PARTNERS = [
     id: "google",
     name: "Google Partner",
     badge: "🔵",
-    badgeImg: "/images/badges/PartnerBadgeClickable-goole.svg",
+    badgeImg: "/images/badges/badge-google-partner.svg",
     description:
       "Certifiée Google Partner, Lannkin démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
     certifications: [

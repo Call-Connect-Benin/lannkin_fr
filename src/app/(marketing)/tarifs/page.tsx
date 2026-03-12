@@ -38,32 +38,63 @@ function getPriceRange(category: string): string {
 
 export default function TarifsPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="mb-4 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-xs font-medium text-accent">
-              {PRICING_CATEGORIES.length} catégories
-            </span>
-            <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Tarifs <span className="text-accent">transparents</span>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+
+      {/* ═══════════════════════════════════════════════════════
+          HERO
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden pb-14 pt-12">
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute inset-y-0 right-0 w-[60%]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp"
+              alt=""
+              className="h-full w-full object-cover object-center"
+              style={{ opacity: 0.20 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(108deg, #0C0C0C 18%, rgba(12,12,12,0.65) 40%, transparent 62%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #0C0C0C 0%, transparent 20%, transparent 80%, #0C0C0C 100%)" }} />
+          </div>
+        </div>
+        <div
+          className="pointer-events-none absolute right-1/3 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
+          style={{ backgroundColor: "rgba(73,143,109,0.08)" }}
+          aria-hidden
+        />
+
+        <Container className="relative z-10">
+          <div className="max-w-2xl">
+            <div
+              className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
+            >
+              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+                {PRICING_CATEGORIES.length} catégories · Pas de frais cachés
+              </span>
+            </div>
+            <h1 className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]" style={{ color: "#FFFFFF" }}>
+              Tarifs <span style={{ color: "#498f6d" }}>transparents</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted">
-              Des prix clairs pour chaque service. Pas de frais cachés,
-              pas de surprises. Choisissez le forfait adapté à vos objectifs.
+            <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
+            <p className="mt-5 max-w-lg text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+              Des prix clairs pour chaque service. Pas de surprises, pas de frais cachés.
+              Choisissez le forfait adapté à vos objectifs et votre budget.
             </p>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-xs" style={{ color: "rgba(255,255,255,0.28)" }}>
               Tous les prix sont en dollars canadiens (CAD), avant taxes.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Categories Grid */}
-      <section className="border-t border-white/5 bg-surface-light pb-20 pt-16 lg:pb-28">
+      {/* ═══════════════════════════════════════════════════════
+          GRILLE CATÉGORIES
+      ═══════════════════════════════════════════════════════ */}
+      <section className="pb-20 pt-4">
+        <div className="mb-14 h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }} />
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {PRICING_CATEGORIES.map((cat) => {
               const highlighted = getHighlightedPlan(cat.slug);
               const priceRange = getPriceRange(cat.slug);
@@ -73,34 +104,41 @@ export default function TarifsPage() {
                 <Link
                   key={cat.slug}
                   href={`/tarifs/${cat.slug}/`}
-                  className="group glass relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.06)]"
+                  className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+                  style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    <LucideIcon name={cat.icon} className="h-6 w-6" />
+                  <div
+                    className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl"
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                  >
+                    <LucideIcon name={cat.icon} className="h-5 w-5" />
                   </div>
-                  <h2 className="font-heading text-xl font-bold text-white">
+                  <h2 className="font-heading text-lg font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#FFFFFF" }}>
                     {cat.name}
                   </h2>
                   {priceRange && (
-                    <p className="mt-2 font-heading text-lg font-semibold text-accent">
+                    <p className="mt-2 font-heading text-base font-semibold" style={{ color: "#498f6d" }}>
                       {priceRange}
                     </p>
                   )}
-                  <p className="mt-1 text-sm text-muted">
-                    {planCount} forfait{planCount > 1 ? "s" : ""} disponible
-                    {planCount > 1 ? "s" : ""}
+                  <p className="mt-1 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+                    {planCount} forfait{planCount > 1 ? "s" : ""} disponible{planCount > 1 ? "s" : ""}
                   </p>
                   {highlighted && (
-                    <p className="mt-3 text-sm text-white/70">
-                      Populaire : <span className="font-medium text-white">{highlighted.name}</span> à{" "}
-                      {formatPrice(highlighted.price)}
+                    <p className="mt-3 text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
+                      Populaire :{" "}
+                      <span className="font-semibold" style={{ color: "rgba(255,255,255,0.75)" }}>
+                        {highlighted.name}
+                      </span>{" "}
+                      à {formatPrice(highlighted.price)}
                       {highlighted.priceUnit === "month" ? "/mois" : ""}
                     </p>
                   )}
-                  <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent opacity-0 transition-all duration-200 group-hover:opacity-100">
+                  <div className="mt-5 inline-flex items-center gap-1 text-xs font-semibold opacity-0 transition-all duration-200 group-hover:opacity-100" style={{ color: "#498f6d" }}>
                     Voir les forfaits
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3 w-3" />
                   </div>
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.25)" }} />
                 </Link>
               );
             })}
@@ -108,21 +146,53 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      {/* ═══════════════════════════════════════════════════════
+          CTA
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden pb-24">
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute inset-y-0 right-0 w-[45%]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rendu3D/rendu3d-cube-verre-flou-blanc.webp"
+              alt=""
+              className="h-full w-full object-cover object-left"
+              style={{ opacity: 0.08 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to left, transparent, #0C0C0C 55%)" }} />
+          </div>
+        </div>
+        <Container className="relative z-10">
+          <div
+            className="mx-auto max-w-2xl rounded-2xl p-10 text-center sm:p-14"
+            style={{
+              background: "linear-gradient(135deg, rgba(73,143,109,0.09) 0%, rgba(73,143,109,0.03) 100%)",
+              border: "1px solid rgba(73,143,109,0.18)",
+            }}
+          >
+            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               Besoin d&apos;un forfait sur mesure ?
             </h2>
-            <p className="mt-4 text-lg text-muted">
+            <p className="mx-auto mt-4 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.52)" }}>
               Combinez plusieurs services ou adaptez un forfait existant.
-              Contactez-nous pour un devis personnalisé gratuit.
+              Notre équipe vous propose un devis personnalisé gratuit.
             </p>
-            <div className="mt-8">
-              <Button href="/devis-gratuit/" size="lg">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/devis-gratuit/"
+                className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
+                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+              >
                 Demander un devis gratuit
-              </Button>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contact/"
+                className="inline-flex items-center gap-2 rounded-xl border px-8 py-3.5 text-sm font-medium transition-colors"
+                style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.55)" }}
+              >
+                Nous contacter
+              </Link>
             </div>
           </div>
         </Container>

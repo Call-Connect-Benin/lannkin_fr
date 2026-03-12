@@ -1,8 +1,9 @@
+"use client";
+
 import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { Container } from "@/presentation/components/ui/Container";
-import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 import { cn } from "@/lib/utils";
 
 // ---------------------------------------------------------------------------
@@ -19,7 +20,7 @@ interface RealisationsBannerProps {
 }
 
 // ---------------------------------------------------------------------------
-// Categories config (computed at module load — server-safe)
+// Config
 // ---------------------------------------------------------------------------
 
 const CATEGORIES: Array<{ slug: RealisationCategory; label: string; href: string }> = [
@@ -29,6 +30,14 @@ const CATEGORIES: Array<{ slug: RealisationCategory; label: string; href: string
   { slug: "ecommerce", label: "E-commerce", href: "/realisations/ecommerce/" },
   { slug: "international", label: "International", href: "/realisations/international/" },
 ];
+
+const CATEGORY_3D: Record<RealisationCategory, string> = {
+  tous: "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
+  multipages: "/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp",
+  onepage: "/images/rendu3D/rendu3d-cube-vert-rocket-embed.webp",
+  ecommerce: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
+  international: "/images/rendu3D/rendu3d-orbite-planete-fond-rouge.webp",
+};
 
 function getCategoryCount(slug: RealisationCategory): number {
   if (slug === "tous") return PORTFOLIO_PROJECTS.length;
@@ -45,73 +54,149 @@ export function RealisationsBanner({
   description,
   stats,
 }: RealisationsBannerProps) {
+  const bg3d = CATEGORY_3D[currentCategory];
+
   return (
-    <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
-      <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png" overlay={0.6} />
-      <div className="relative z-10">
-        <Container>
-          <div className="max-w-3xl rounded-2xl bg-[#FFFFFF] p-6 shadow-xl sm:p-8">
-
-            {/* Breadcrumb — hidden on root */}
-            {currentCategory !== "tous" && (
-              <nav className="mb-3 flex items-center gap-2 text-sm text-[#6B7280]">
-                <Link href="/realisations/" className="transition-colors hover:text-accent">
-                  Réalisations
-                </Link>
-                <span>/</span>
-                <span className="text-[#1A1A1A] font-medium">{title}</span>
-              </nav>
-            )}
-
-            {/* Title */}
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-[#1A1A1A] sm:text-5xl">
-              {title}
-            </h1>
-
-            {/* Description */}
-            <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-lg">
-              {description}
-            </p>
-
-            {/* Stats row */}
-            {stats && stats.length > 0 && (
-              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="flex items-center gap-2">
-                    <span className="font-bold text-accent">{stat.value}</span>
-                    <span className="text-sm text-[#6B7280]">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Category navigation */}
-            <div className="mt-6 flex flex-wrap gap-2 border-t border-[#E5E7EB] pt-5">
-              {CATEGORIES.map((cat) => {
-                const count = getCategoryCount(cat.slug);
-                const isActive = cat.slug === currentCategory;
-                return (
-                  <Link
-                    key={cat.slug}
-                    href={cat.href}
-                    className={cn(
-                      "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
-                      isActive
-                        ? "bg-accent text-white shadow-md"
-                        : "bg-[#F3F4F6] text-[#374151] hover:bg-accent/10 hover:text-accent"
-                    )}
-                  >
-                    {cat.label}{" "}
-                    <span className={cn("ml-1 text-xs", isActive ? "opacity-80" : "opacity-50")}>
-                      ({count})
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </Container>
+    <section
+      className="relative overflow-hidden pb-14 pt-10"
+      style={{ backgroundColor: "#0C0C0C" }}
+    >
+      {/* 3D background diagonal */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute inset-y-0 right-0 w-[62%]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={bg3d}
+            alt=""
+            className="h-full w-full object-cover object-center"
+            style={{ opacity: 0.20 }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(108deg, #0C0C0C 16%, rgba(12,12,12,0.7) 38%, transparent 60%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, #0C0C0C 0%, transparent 20%, transparent 80%, #0C0C0C 100%)",
+            }}
+          />
+        </div>
       </div>
+
+      {/* Halo */}
+      <div
+        className="pointer-events-none absolute right-1/3 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
+        style={{ backgroundColor: "rgba(73,143,109,0.07)" }}
+        aria-hidden
+      />
+
+      <Container className="relative z-10">
+        {/* Breadcrumb — sous-catégories seulement */}
+        {currentCategory !== "tous" && (
+          <nav
+            className="mb-5 flex items-center gap-2 text-sm"
+            style={{ color: "rgba(255,255,255,0.35)" }}
+          >
+            <Link href="/realisations/" className="transition-colors hover:text-white" style={{ color: "inherit" }}>
+              Réalisations
+            </Link>
+            <span>/</span>
+            <span style={{ color: "rgba(255,255,255,0.65)" }}>{title}</span>
+          </nav>
+        )}
+
+        {/* Badge */}
+        <div
+          className="mb-5 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+          style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
+        >
+          <span className="relative flex h-2 w-2">
+            <span
+              className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+              style={{ backgroundColor: "#498f6d" }}
+            />
+            <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
+          </span>
+          <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+            {getCategoryCount(currentCategory)} projet{getCategoryCount(currentCategory) > 1 ? "s" : ""} · Laval, Québec
+          </span>
+        </div>
+
+        {/* Title */}
+        <h1
+          className="max-w-2xl font-heading text-4xl font-bold tracking-tight sm:text-5xl"
+          style={{ color: "#FFFFFF" }}
+        >
+          {title}
+        </h1>
+
+        {/* Ligne déco */}
+        <div
+          className="mt-4 h-px w-14"
+          style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }}
+        />
+
+        {/* Description */}
+        <p
+          className="mt-4 max-w-xl text-base leading-relaxed"
+          style={{ color: "rgba(255,255,255,0.55)" }}
+        >
+          {description}
+        </p>
+
+        {/* Stats */}
+        {stats && stats.length > 0 && (
+          <div className="mt-8 flex flex-wrap gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <p className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>
+                  {stat.value}
+                </p>
+                <p className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Filtres catégories */}
+        <div
+          className="mt-10 flex flex-wrap gap-2 border-t pt-6"
+          style={{ borderColor: "rgba(255,255,255,0.07)" }}
+        >
+          {CATEGORIES.map((cat) => {
+            const count = getCategoryCount(cat.slug);
+            const isActive = cat.slug === currentCategory;
+            return (
+              <Link
+                key={cat.slug}
+                href={cat.href}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
+                )}
+                style={
+                  isActive
+                    ? { backgroundColor: "#498f6d", color: "#FFFFFF" }
+                    : {
+                        backgroundColor: "rgba(255,255,255,0.05)",
+                        color: "rgba(255,255,255,0.55)",
+                        border: "1px solid rgba(255,255,255,0.08)",
+                      }
+                }
+              >
+                {cat.label}{" "}
+                <span style={{ opacity: isActive ? 0.8 : 0.45 }}>({count})</span>
+              </Link>
+            );
+          })}
+        </div>
+      </Container>
     </section>
   );
 }

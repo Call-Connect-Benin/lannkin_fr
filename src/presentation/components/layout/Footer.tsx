@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Globe, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Globe, Instagram, Linkedin, Phone, Youtube } from "lucide-react";
 import Link from "next/link";
 
 import { FOOTER_NAVIGATION } from "@/data/navigation";
@@ -120,8 +120,19 @@ export function Footer() {
                 ))}
               </div>
 
-              {/* Google reviews badge */}
+              {/* Phone */}
               <div className="mt-5">
+                <a
+                  href={`tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}`}
+                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-accent" />
+                  {SITE_CONFIG.phone}
+                </a>
+              </div>
+
+              {/* Google reviews badge */}
+              <div className="mt-3">
                 <GoogleMapsWidget />
               </div>
             </motion.div>

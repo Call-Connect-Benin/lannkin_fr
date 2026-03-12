@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   neq: "1179695284",
   url: "https://lannkin.ca",
   email: "info@lannkin.ca",
-  phone: "+1 (450) 555-0000",
+  phone: "+1 (438) 944-6129",
   founded: 2015,
   founders: ["Albert Lanne", "Kevin Kinani"],
   location: {

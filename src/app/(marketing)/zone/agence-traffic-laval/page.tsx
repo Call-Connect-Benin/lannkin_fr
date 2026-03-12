@@ -358,7 +358,7 @@ export default function AgenceTrafficLavalPage() {
             name: "Lannkin S.A.",
             description: zone?.description,
             url: "https://lannkin.ca/zone/agence-traffic-laval/",
-            telephone: "+1-450-555-0000",
+            telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Laval",

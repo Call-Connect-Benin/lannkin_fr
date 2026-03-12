@@ -121,6 +121,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web multipage pour Réno St-Georges. Conception web entrepreneur rénovation résidentielle Québec.",
     externalUrl: "https://www.renostgeorges.ca/",
+    previewImage: "/images/portfolio/reno-st-georges.webp",
   },
   {
     id: "groupe-lariviere",
@@ -151,6 +152,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web multipage pour le Groupe Larivière. Conception web institutionnelle Québec, navigation multi-services.",
     externalUrl: "https://www.groupelariviere.ca/fr",
+    previewImage: "/images/portfolio/groupe-lariviere.webp",
   },
   {
     id: "peinture-pro",
@@ -181,6 +183,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Peinture Pro, peintre résidentiel au Québec. Conception web, SEO local et Google Ads.",
     externalUrl: "https://www.peinture-pro.ca/",
+    previewImage: "/images/portfolio/peinture-pro.webp",
   },
   {
     id: "constructeurs-de-qualite",
@@ -211,6 +214,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle Québec.",
     externalUrl: "https://www.constructeursdequalite.ca/",
+    previewImage: "/images/portfolio/constructeurs-de-qualite.webp",
   },
   {
     id: "constructions-guillen",
@@ -241,6 +245,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web multipage pour Constructions Guillen. Construction et rénovation résidentielle Québec.",
     externalUrl: "https://www.constructionsguillen.com/",
+    previewImage: "/images/portfolio/constructions-guillen.webp",
   },
   {
     id: "mtl-luxe",
@@ -308,6 +313,7 @@ const onePageProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel Québec, Google Ads et Facebook Ads.",
     externalUrl: "https://www.nettoyageideal.com/",
+    previewImage: "/images/portfolio/nettoyage-ideal.webp",
   },
   {
     id: "rasage-corporel-a-domicile",
@@ -368,6 +374,7 @@ const onePageProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : landing page pour Nettoyage Leblanc. Entretien ménager résidentiel et commercial Québec.",
     externalUrl: "https://www.nettoyageleblanc.ca/",
+    previewImage: "/images/portfolio/nettoyage-leblanc.webp",
   },
   {
     id: "ethique-service-nettoyage",
@@ -428,6 +435,7 @@ const onePageProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : landing page pour Ture Beau Ménage. Entretien ménager résidentiel Québec, Google Ads et conception web.",
     externalUrl: "https://www.turebeaumenage.com/",
+    previewImage: "/images/portfolio/ture-beau-menage.webp",
   },
 ];
 
@@ -465,6 +473,7 @@ const ecommerceProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : e-commerce pour Le Coffre à Jouets. Boutique en ligne jouets et cadeaux Québec, WooCommerce et SEO.",
     externalUrl: "https://lecoffreajouets.net/",
+    previewImage: "/images/portfolio/coffre-a-jouets.webp",
   },
   {
     id: "bout-de-chou-boutique",
@@ -662,6 +671,223 @@ const internationalProjects: PortfolioProject[] = [
 ];
 
 // ============================================================
+// NOUVEAUX PROJETS (images ajoutées 2026)
+// ============================================================
+
+const additionalProjects: PortfolioProject[] = [
+  {
+    id: "boiseries-sem",
+    slug: "boiseries-sem",
+    name: "Boiseries Sem",
+    client: "Boiseries Sem",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Boiseries et menuiserie",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un artisan spécialisé en boiseries et menuiserie sur mesure au Québec.",
+    description:
+      "Conception d'un site web multipage pour Boiseries Sem, entreprise artisanale spécialisée en fabrication et installation de boiseries, moulures et menuiserie sur mesure. Galerie de réalisations, présentation des produits et services, et formulaire de demande de soumission.",
+    services: ["Conception Web", "SEO", "Graphisme"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Présence web professionnelle établie",
+      "Galerie de réalisations artisanales mise en valeur",
+      "Demandes de soumission générées en ligne",
+      "Référencement local amélioré",
+    ],
+    challenge:
+      "Mettre en valeur le savoir-faire artisanal d'une entreprise de menuiserie et convaincre les clients de la qualité des finitions avant même la visite.",
+    solution:
+      "Site multipage axé sur la galerie de réalisations avec photos haute résolution et contenu SEO ciblant les propriétaires résidentiels locaux.",
+    seoTitle: "Site Web Boiseries Menuiserie Québec | Boiseries Sem — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Boiseries Sem. Boiseries et menuiserie sur mesure Québec, conception web et SEO local.",
+    previewImage: "/images/portfolio/boiseries-sem.webp",
+  },
+  {
+    id: "construction-fontes",
+    slug: "construction-fontes",
+    name: "Construction Fontes",
+    client: "Construction Fontes",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Construction et rénovation",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un entrepreneur général en construction et rénovation résidentielle au Québec.",
+    description:
+      "Réalisation du site web multipage de Construction Fontes, entrepreneur général spécialisé en construction neuve et rénovation résidentielle. Portfolio de réalisations, pages services détaillées, formulaire de soumission gratuite et optimisation SEO locale pour attirer de nouveaux clients.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
+    results: [
+      "Site web professionnel reflétant l'expertise en construction",
+      "Portfolio de projets réalisés convaincant",
+      "Demandes de soumission en ligne générées",
+      "Meilleure visibilité Google locale",
+    ],
+    challenge:
+      "Établir une présence digitale crédible dans un secteur de la construction très compétitif au Québec.",
+    solution:
+      "Site multipage mettant en avant les réalisations photographiées avec contenu SEO local et formulaire de soumission optimisé.",
+    seoTitle: "Site Web Entrepreneur Général Québec | Construction Fontes — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Construction Fontes. Entrepreneur général construction et rénovation résidentielle Québec.",
+    previewImage: "/images/portfolio/construction-fontes.webp",
+  },
+  {
+    id: "cuisine-innovex",
+    slug: "cuisine-innovex",
+    name: "Cuisine Innovex",
+    client: "Cuisine Innovex",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Cuisine et salle de bain",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un spécialiste de la conception et installation de cuisines et salles de bain sur mesure.",
+    description:
+      "Conception du site web multipage de Cuisine Innovex, entreprise spécialisée dans la design et l'installation de cuisines et salles de bain sur mesure. Galerie de projets réalisés, configurateur de styles, présentation des matériaux et formulaire de prise de rendez-vous en showroom.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Site vitrine professionnel mettant en valeur les réalisations",
+      "Galerie de cuisines et salles de bain inspirante",
+      "Rendez-vous showroom générés en ligne",
+      "Référencement local optimisé",
+    ],
+    challenge:
+      "Inspirer et convaincre les clients de la qualité des réalisations avant la visite du showroom, dans un marché très visuel.",
+    solution:
+      "Site multipage axé sur la galerie photo haut de gamme avec parcours utilisateur simplifié menant à la prise de rendez-vous.",
+    seoTitle: "Site Web Cuisines Salles de Bain Québec | Cuisine Innovex — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Cuisine Innovex. Cuisines et salles de bain sur mesure Québec, conception web et SEO.",
+    previewImage: "/images/portfolio/cuisine-innovex.webp",
+  },
+  {
+    id: "maconnerie-baka",
+    slug: "maconnerie-baka",
+    name: "Maçonnerie Baka",
+    client: "Maçonnerie Baka",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Maçonnerie et béton",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une entreprise de maçonnerie spécialisée en briques, pierres et béton au Québec.",
+    description:
+      "Réalisation du site web multipage de Maçonnerie Baka, entrepreneur spécialisé en travaux de maçonnerie : briques, pierres naturelles, béton décoratif et réparation. Galerie de réalisations avant/après, pages services détaillées et formulaire de soumission gratuite.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
+    results: [
+      "Présence web professionnelle établie",
+      "Galerie de travaux de maçonnerie percutante",
+      "Soumissions en ligne reçues dès le lancement",
+      "Visibilité locale sur Google améliorée",
+    ],
+    challenge:
+      "Se démarquer dans un secteur de la maçonnerie où les clients choisissent principalement sur la base de photos de réalisations et de recommandations.",
+    solution:
+      "Site multipage centré sur la galerie de travaux, avec témoignages clients et SEO local ciblant les propriétaires résidentiels de la région.",
+    seoTitle: "Site Web Maçonnerie Québec | Maçonnerie Baka — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Maçonnerie Baka. Briques, pierres et béton décoratif Québec, conception web et SEO local.",
+    previewImage: "/images/portfolio/maconnerie-baka.webp",
+  },
+  {
+    id: "patrenov",
+    slug: "patrenov",
+    name: "Patrenov",
+    client: "Patrenov",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Rénovation résidentielle",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un entrepreneur en rénovation résidentielle avec galerie de projets et soumission en ligne.",
+    description:
+      "Conception du site web multipage de Patrenov, entreprise spécialisée en rénovation résidentielle complète. Portfolio de projets réalisés, pages services par type de rénovation (cuisine, salle de bain, sous-sol, toiture), formulaire de soumission gratuite et contenu SEO local.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Site professionnel valorisant le savoir-faire de l'équipe",
+      "Portfolio de réalisations convaincant",
+      "Leads générés via formulaire de soumission",
+      "Référencement local établi rapidement",
+    ],
+    challenge:
+      "Bâtir la confiance auprès de clients résidentiels pour des projets de rénovation importants et coûteux.",
+    solution:
+      "Site multipage misant sur la preuve sociale (galerie + témoignages) et une navigation par type de projet pour guider les visiteurs vers la demande de soumission.",
+    seoTitle: "Site Web Rénovation Résidentielle Québec | Patrenov — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Patrenov. Rénovation résidentielle complète Québec, conception web et SEO local.",
+    previewImage: "/images/portfolio/patrenov.webp",
+  },
+  {
+    id: "plomberie-slb",
+    slug: "plomberie-slb",
+    name: "Plomberie SLB",
+    client: "Plomberie SLB",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Plomberie et chauffage",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une entreprise de plomberie et chauffage avec pages services, urgences et formulaire de contact.",
+    description:
+      "Développement d'un site web multipage professionnel pour Plomberie SLB, entreprise de plomberie et chauffage au Québec. Pages services détaillées (plomberie résidentielle, commerciale, chauffage, urgences 24/7), galerie de réalisations, formulaire de contact et optimisation SEO local.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Site web professionnel livré",
+      "Visibilité locale améliorée sur Google",
+      "Leads qualifiés via formulaire et téléphone",
+      "PageSpeed optimisé",
+    ],
+    challenge:
+      "Se positionner sur les recherches d'urgence plomberie et générer des appels directs via le web dans un marché très compétitif.",
+    solution:
+      "Site multipage avec appel à l'action téléphonique proéminent, contenu SEO local ciblant les urgences et formulaire de contact simplifié.",
+    seoTitle: "Site Web Plomberie Québec | Plomberie SLB — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Plomberie SLB. Plomberie et chauffage Québec, SEO local et Google Ads.",
+    previewImage: "/images/portfolio/plomberie-slb.webp",
+  },
+  {
+    id: "scs-entretien",
+    slug: "scs-entretien",
+    name: "SCS Entretien",
+    client: "SCS Entretien",
+    category: "onepage",
+    categoryLabel: "Onepage",
+    sector: "Services d'entretien",
+    year: 2024,
+    shortDescription:
+      "Landing page pour une entreprise de services d'entretien résidentiel et commercial avec forfaits et formulaire de réservation.",
+    description:
+      "Conception d'une landing page optimisée pour SCS Entretien, service d'entretien ménager résidentiel et commercial au Québec. Présentation des forfaits, section témoignages clients, processus de service en 3 étapes et formulaire de demande de soumission en ligne.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Landing page opérationnelle dès le lancement",
+      "Demandes de soumission reçues en ligne",
+      "Présence Google locale établie",
+      "Design professionnel fidèle à l'image de l'entreprise",
+    ],
+    challenge:
+      "Générer rapidement des demandes de service dans un marché local de l'entretien très concurrentiel.",
+    solution:
+      "Landing page conversion-first avec offre claire, preuve sociale renforcée et formulaire de contact simplifié.",
+    seoTitle: "Site Web Services Entretien Québec | SCS Entretien — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial Québec.",
+    previewImage: "/images/portfolio/scs-entretien.webp",
+  },
+];
+
+// ============================================================
 // EXPORT
 // ============================================================
 
@@ -670,6 +896,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   ...onePageProjects,
   ...ecommerceProjects,
   ...internationalProjects,
+  ...additionalProjects,
 ];
 
 export const PORTFOLIO_CATEGORIES: { id: PortfolioCategory | "all"; label: string }[] = [

@@ -108,7 +108,7 @@ const LOCAL_BUSINESS_JSONLD = {
     latitude: 45.5733,
     longitude: -73.6921,
   },
-  telephone: "+1-514-000-0000",
+  telephone: "+1-438-944-6129",
   priceRange: "$$",
   aggregateRating: {
     "@type": "AggregateRating",
