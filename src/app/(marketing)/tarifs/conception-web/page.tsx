@@ -16,6 +16,9 @@ export default function TarifsConceptionWebPage() {
       subtitle="Du site vitrine one-page à la boutique e-commerce, choisissez le forfait qui correspond à votre projet. Tous nos sites sont responsifs, optimisés SEO et livrés avec hébergement inclus."
       plans={PRICING_CONCEPTION_WEB}
       serviceHref="/services/conception-web/"
+      parallaxImage="/images/rendu3D/rendu3d-cube-vert-minimaliste.png"
+      youtubeIds={["jAowTOGtOaQ"]}
+      youtubeTitle="Découvrez nos créations 3D interactives"
     />
   );
 }

@@ -2,18 +2,22 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { ArrowRight, Check, ShieldCheck } from "lucide-react";
 
 import type { PricingPlan } from "@/domain/entities/pricing";
 import { cn } from "@/lib/utils";
 import { Container } from "@/presentation/components/ui/Container";
 import { Button } from "@/presentation/components/ui/Button";
+import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 interface PricingPageContentProps {
   title: string;
   subtitle: string;
   plans: PricingPlan[];
   serviceHref: string;
+  parallaxImage?: string;
+  youtubeIds?: string[];
+  youtubeTitle?: string;
 }
 
 const containerVariants = {
@@ -46,26 +50,89 @@ export function PricingPageContent({
   subtitle,
   plans,
   serviceHref,
+  parallaxImage = "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png",
+  youtubeIds,
+  youtubeTitle = "Ressources vidéo",
 }: PricingPageContentProps) {
   return (
     <main>
-      {/* Hero */}
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              {title}
-            </h1>
-            <p className="mt-4 text-lg leading-relaxed text-muted">{subtitle}</p>
-            <p className="mt-2 text-sm text-muted">
-              Tous les prix sont en dollars canadiens (CAD), avant taxes.
-            </p>
-          </div>
-        </Container>
+      {/* Hero — parallax 3D, compact 2-col */}
+      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
+        <ParallaxBg src={parallaxImage} overlay={0.65} />
+        <div className="relative z-10">
+          <Container>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
+
+              {/* Left — Title + subtitle */}
+              <div className="flex-1">
+                <h1 style={{ color: "#FFFFFF" }} className="font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                  {title}
+                </h1>
+                <p className="mt-4 text-base leading-relaxed" style={{ color: "#DDDDDD" }}>
+                  {subtitle}
+                </p>
+                <a
+                  href="#forfaits"
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
+                >
+                  Voir les forfaits
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
+              {/* Right — Reassurance card */}
+              <div className="shrink-0 lg:w-72">
+                <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <span className="text-xl">⭐</span>
+                      <div>
+                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>4,9 / 5 sur Google</p>
+                        <p className="text-xs" style={{ color: "#CCCCCC" }}>54+ avis vérifiés</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <span className="text-xl">🔵</span>
+                      <div>
+                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>Google Partner</p>
+                        <p className="text-xs" style={{ color: "#CCCCCC" }}>Certifié depuis 2015</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <span className="text-xl">◆</span>
+                      <div>
+                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>+10 ans d&apos;expérience</p>
+                        <p className="text-xs" style={{ color: "#CCCCCC" }}>100k+$/mois de budgets gérés</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-center text-xs" style={{ color: "#AAAAAA" }}>
+                    Prix en CAD, avant taxes
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </Container>
+        </div>
       </section>
 
+      {/* Thin separator + anchor */}
+      <div id="forfaits" className="border-t border-accent/20 bg-surface">
+        <Container>
+          <div className="flex items-center justify-between py-3">
+            <p className="text-xs text-muted">Choisissez votre forfait</p>
+            <div className="flex gap-1">
+              {[...Array(3)].map((_, i) => (
+                <span key={i} className="inline-block h-1 w-1 rounded-full bg-accent/40" />
+              ))}
+            </div>
+          </div>
+        </Container>
+      </div>
+
       {/* Pricing Cards */}
-      <section className="border-t border-white/5 bg-surface-light pb-20 pt-16 lg:pb-28">
+      <section className="bg-surface pb-16 pt-8 lg:pb-24">
         <Container>
           <motion.div
             variants={containerVariants}
@@ -131,17 +198,28 @@ export function PricingPageContent({
                   ))}
                 </ul>
 
-                <Link
-                  href="/devis-gratuit/"
-                  className={cn(
-                    "block rounded-lg py-3 text-center text-sm font-semibold transition-all duration-200",
-                    plan.highlighted
-                      ? "bg-accent text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] hover:brightness-110"
-                      : "border border-white/10 text-white hover:border-accent/30 hover:text-accent",
+                <div>
+                  <Link
+                    href={plan.paymentLink ?? "/devis-gratuit/"}
+                    target={plan.paymentLink ? "_blank" : undefined}
+                    rel={plan.paymentLink ? "noopener noreferrer" : undefined}
+                    className={cn(
+                      "flex items-center justify-center gap-2 rounded-lg py-3 text-center text-sm font-semibold transition-all duration-200",
+                      plan.highlighted
+                        ? "bg-accent text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] hover:brightness-110"
+                        : "border border-white/10 text-white hover:border-accent/30 hover:text-accent",
+                    )}
+                  >
+                    {plan.cta}
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                  </Link>
+                  {plan.paymentLink && (
+                    <p className="mt-2 flex items-center justify-center gap-1 text-xs text-muted/60">
+                      <ShieldCheck className="h-3 w-3" />
+                      Paiement sécurisé via Stripe
+                    </p>
                   )}
-                >
-                  {plan.cta}
-                </Link>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -149,7 +227,7 @@ export function PricingPageContent({
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="bg-surface-light py-20">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -170,6 +248,46 @@ export function PricingPageContent({
           </div>
         </Container>
       </section>
+
+      {/* YouTube Videos */}
+      {youtubeIds && youtubeIds.length > 0 && (
+        <section className="bg-surface py-16 lg:py-20">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-8 font-heading text-2xl font-bold text-white sm:text-3xl text-center">
+                {youtubeTitle}
+              </h2>
+              <div
+                className={cn(
+                  "grid gap-6",
+                  youtubeIds.length === 1 && "mx-auto max-w-2xl",
+                  youtubeIds.length === 2 && "sm:grid-cols-2",
+                  youtubeIds.length >= 3 && "sm:grid-cols-2 lg:grid-cols-3",
+                )}
+              >
+                {youtubeIds.map((id) => (
+                  <div
+                    key={id}
+                    className="overflow-hidden rounded-xl border border-white/[0.06] bg-surface-light"
+                  >
+                    <div className="relative aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${id}`}
+                        title="Vidéo YouTube"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
     </main>
   );
 }

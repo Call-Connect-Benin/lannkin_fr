@@ -13,9 +13,11 @@ export const SITE_CONFIG = {
     country: "Canada",
   },
   social: {
-    facebook: "https://facebook.com/lannkin",
-    instagram: "https://instagram.com/lannkin",
+    facebook: "https://web.facebook.com/people/Lannkin/100086166664875/",
+    instagram: "https://www.instagram.com/lannkinassociates/",
     linkedin: "https://linkedin.com/company/lannkin",
+    youtube: "https://www.youtube.com/@AlbertLanneAds",
+    tiktok: "https://tiktok.com/@albertdelannkin",
     google: "https://g.page/lannkin",
   },
   stats: {

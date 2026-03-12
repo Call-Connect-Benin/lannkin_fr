@@ -17,6 +17,7 @@ export default function TarifsMontageVideoPage() {
         subtitle="Du montage YouTube au contenu TikTok viral, choisissez la formule adaptée à vos besoins. Script, voix-off et effets visuels inclus dans chaque vidéo."
         plans={PRICING_MONTAGE_VIDEO}
         serviceHref="/services/montage-video/"
+        parallaxImage="/images/rendu3D/rendu3d-rouge-vert-dramatic.png"
       />
 
       {/* Options supplémentaires */}
@@ -36,6 +37,45 @@ export default function TarifsMontageVideoPage() {
               </span>
             </div>
           ))}
+        </div>
+
+        {/* YouTube channel promo */}
+        <div className="mt-8 flex flex-col gap-4 rounded-xl border border-[#FF0000]/20 bg-[#FF0000]/5 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 className="font-semibold text-[#1A1A1A]">📺 Inspirez-vous sur notre chaîne YouTube</h3>
+            <p className="mt-1 text-sm text-[#374151]">
+              Des exemples de montages, tutoriels et coulisses de production sur{" "}
+              <strong>@AlbertLanneAds</strong>.
+            </p>
+          </div>
+          <a
+            href="https://www.youtube.com/@AlbertLanneAds"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 rounded-lg bg-[#FF0000] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            Voir la chaîne →
+          </a>
+        </div>
+
+        {/* Instagram + TikTok */}
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a
+            href="https://www.instagram.com/lannkinassociates/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-lg border border-[#E1306C]/20 bg-[#E1306C]/5 px-4 py-2 text-sm font-semibold text-[#E1306C] transition-opacity hover:opacity-80"
+          >
+            📷 @lannkinassociates sur Instagram
+          </a>
+          <a
+            href="https://tiktok.com/@albertdelannkin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-lg border border-[#1A1A1A]/10 bg-[#1A1A1A]/5 px-4 py-2 text-sm font-semibold text-[#1A1A1A] transition-opacity hover:opacity-80"
+          >
+            🎵 @albertdelannkin sur TikTok
+          </a>
         </div>
 
         <div className="mt-8 rounded-xl border border-accent/20 bg-accent/5 p-6">

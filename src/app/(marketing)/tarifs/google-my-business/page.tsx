@@ -16,6 +16,9 @@ export default function TarifsGoogleMyBusinessPage() {
       subtitle="Optimisez votre présence locale sur Google Maps et la recherche locale. De la gestion de base à la création complète de votre fiche avec stratégie d'avis clients."
       plans={PRICING_GMB}
       serviceHref="/services/google-my-business/"
+      parallaxImage="/images/rendu3D/rendu3d-flatlay-fond-vert.png"
+      youtubeIds={["F0yg_aHoWe0"]}
+      youtubeTitle="Maîtrisez Google My Business"
     />
   );
 }

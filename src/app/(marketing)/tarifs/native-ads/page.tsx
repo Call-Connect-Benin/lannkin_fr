@@ -16,6 +16,9 @@ export default function TarifsNativeAdsPage() {
       subtitle="Atteignez votre audience avec de la publicité native sur Taboola, Outbrain et Traffic Factory. Des contenus sponsorisés qui s'intègrent naturellement aux sites médias."
       plans={PRICING_NATIVE_ADS}
       serviceHref="/services/native-ads/"
+      parallaxImage="/images/rendu3D/rendu3d-cubes-lateral-angle-2.png"
+      youtubeIds={["sQMtifmaRiI"]}
+      youtubeTitle="Comment créer une landing page qui convertit"
     />
   );
 }

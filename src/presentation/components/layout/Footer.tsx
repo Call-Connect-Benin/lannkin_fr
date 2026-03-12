@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Globe, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Globe, Instagram, Linkedin, Music, Youtube } from "lucide-react";
 import Link from "next/link";
 
 import { FOOTER_NAVIGATION } from "@/data/navigation";
@@ -16,6 +16,8 @@ const SOCIAL_LINKS = [
   { label: "Facebook", href: SITE_CONFIG.social.facebook, icon: Facebook },
   { label: "Instagram", href: SITE_CONFIG.social.instagram, icon: Instagram },
   { label: "LinkedIn", href: SITE_CONFIG.social.linkedin, icon: Linkedin },
+  { label: "YouTube", href: SITE_CONFIG.social.youtube, icon: Youtube },
+  { label: "TikTok", href: SITE_CONFIG.social.tiktok, icon: Music },
   { label: "Google", href: SITE_CONFIG.social.google, icon: Globe },
 ] as const;
 

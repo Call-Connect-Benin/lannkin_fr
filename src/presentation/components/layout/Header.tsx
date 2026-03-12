@@ -21,76 +21,14 @@ import { cn } from "@/lib/utils";
 // LogoGif — Plays the GIF once, then freezes on the last frame via canvas
 // ---------------------------------------------------------------------------
 
-const GIF_DURATION_MS = 3200;
-
-function LogoGif({ className }: { className?: string }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const imgRef = useRef<HTMLImageElement | null>(null);
-  const [frozen, setFrozen] = useState(false);
-  const rafRef = useRef<number>(0);
-
-  useEffect(() => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.src = "/images/logo-gif.gif";
-    imgRef.current = img;
-
-    const paintLoop = () => {
-      const canvas = canvasRef.current;
-      if (!canvas || !img.naturalWidth) {
-        rafRef.current = requestAnimationFrame(paintLoop);
-        return;
-      }
-      if (canvas.width !== img.naturalWidth) {
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-      }
-      const ctx = canvas.getContext("2d");
-      if (ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-      }
-      rafRef.current = requestAnimationFrame(paintLoop);
-    };
-
-    const onLoad = () => {
-      rafRef.current = requestAnimationFrame(paintLoop);
-      setTimeout(() => {
-        cancelAnimationFrame(rafRef.current);
-        setFrozen(true);
-      }, GIF_DURATION_MS);
-    };
-
-    if (img.complete && img.naturalWidth > 0) {
-      onLoad();
-    } else {
-      img.addEventListener("load", onLoad, { once: true });
-    }
-
-    return () => {
-      cancelAnimationFrame(rafRef.current);
-      img.removeEventListener("load", onLoad);
-    };
-  }, []);
-
+function LogoImg({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-block", className)}>
-      <canvas
-        ref={canvasRef}
-        className="h-8 w-auto"
-        aria-label="LANNKIN"
-        role="img"
-        style={{ display: frozen ? "block" : "none" }}
-      />
-      {!frozen && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src="/images/logo-gif.gif"
-          alt="LANNKIN"
-          className="h-8 w-auto"
-        />
-      )}
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/images/logo-lannkin-var.png"
+      alt="LANNKIN"
+      className={cn("h-8 w-auto", className)}
+    />
   );
 }
 
@@ -326,7 +264,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <LogoGif className="h-8" />
+          <LogoImg className="h-8" />
         </Link>
 
         {/* Desktop navigation */}
