@@ -41,7 +41,7 @@ export default function ServicesPage() {
     <main>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-24 sm:py-32">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-lateral-angle.png" overlay={0.55} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-lateral-angle.webp" overlay={0.55} />
         <div className="relative z-10">
           <div className="absolute inset-0 -z-10">
             <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-accent/5 blur-[120px]" />

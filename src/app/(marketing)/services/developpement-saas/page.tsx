@@ -90,7 +90,7 @@ export default function DeveloppementSaasPage() {
     <main>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-24 sm:py-32">
-        <ParallaxBg src="/images/rendu3D/rendu3d-rocket-cubes-gris.png" overlay={0.55} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-rocket-cubes-gris.webp" overlay={0.55} />
         <div className="relative z-10">
           <Container>
             <div className="mx-auto max-w-4xl">

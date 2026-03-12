@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -86,6 +87,19 @@ export function PortfolioGrid() {
                 exit="exit"
                 className="group relative flex flex-col rounded-2xl border border-white/[0.06] bg-surface p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_8px_32px_rgba(73,143,109,0.06)]"
               >
+                {/* Preview image */}
+                {project.previewImage && (
+                  <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={project.previewImage}
+                      alt={`Preview ${project.name}`}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
+
                 {/* Category badge */}
                 <div className="mb-4 flex items-center justify-between">
                   <span

@@ -17,7 +17,7 @@ export default function TarifsMontageVideoPage() {
         subtitle="Du montage YouTube au contenu TikTok viral, choisissez la formule adaptée à vos besoins. Script, voix-off et effets visuels inclus dans chaque vidéo."
         plans={PRICING_MONTAGE_VIDEO}
         serviceHref="/services/montage-video/"
-        parallaxImage="/images/rendu3D/rendu3d-rouge-vert-dramatic.png"
+        parallaxImage="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp"
       />
 
       {/* Options supplémentaires */}

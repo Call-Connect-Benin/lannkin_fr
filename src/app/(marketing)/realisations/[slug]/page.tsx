@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const PARALLAX_IMAGES: Record<string, string> = {
-  multipages: "/images/rendu3D/rendu3d-cubes-logo-lk-lateral.png",
-  onepage: "/images/rendu3D/rendu3d-cube-vert-rocket-embed.png",
-  ecommerce: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.png",
+  multipages: "/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp",
+  onepage: "/images/rendu3D/rendu3d-cube-vert-rocket-embed.webp",
+  ecommerce: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
 };
 
 export default async function PortfolioProjectPage({ params }: Props) {
@@ -46,7 +46,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-20 lg:py-28">
         <ParallaxBg
-          src={PARALLAX_IMAGES[project.category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png"}
+          src={PARALLAX_IMAGES[project.category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"}
           overlay={0.6}
         />
         <div className="relative z-10">

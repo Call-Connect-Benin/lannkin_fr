@@ -16,7 +16,7 @@ export default function TarifsSeoPage() {
       subtitle="Améliorez votre positionnement Google avec nos services de référencement naturel. De l'audit technique à la stratégie de backlinks, chaque forfait est conçu pour des résultats mesurables."
       plans={PRICING_SEO}
       serviceHref="/services/seo/"
-      parallaxImage="/images/rendu3D/rendu3d-cube-vert-macro.png"
+      parallaxImage="/images/rendu3D/rendu3d-cube-vert-macro.webp"
       youtubeIds={["1owrwmEiPIg"]}
       youtubeTitle="Comprendre le SEO avec Lannkin"
     />

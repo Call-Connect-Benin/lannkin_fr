@@ -16,7 +16,7 @@ export default function TarifsGoogleAdsPage() {
       subtitle="Des forfaits adaptés à votre budget publicitaire. Du tracking initial à la gestion premium de vos campagnes Search, Display, Shopping et YouTube."
       plans={PRICING_GOOGLE_ADS}
       serviceHref="/services/google-ads/"
-      parallaxImage="/images/rendu3D/rendu3d-rocket-launch-fond-vert.png"
+      parallaxImage="/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp"
       youtubeIds={["7-roIfvYlz4", "8x2GnzA-IWA", "-jGUN3meqpo"]}
       youtubeTitle="Apprenez Google Ads avec Lannkin"
     />

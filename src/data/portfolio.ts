@@ -23,6 +23,8 @@ export interface PortfolioProject {
   seoTitle: string;
   seoDescription: string;
   externalUrl?: string;
+  previewImage?: string;
+  clientLogo?: string;
 }
 
 // ============================================================
@@ -452,6 +454,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "Quad Venture Agadir — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : site web pour Quad Venture Agadir, Maroc. Conception web internationale.",
     externalUrl: "https://quadventure-agadir.com/",
+    previewImage: "/images/portfolio/quadventure-agadir.webp",
   },
   {
     id: "alltouchdisplay",
@@ -477,6 +480,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "All Touch Display Chine — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : e-commerce B2B pour All Touch Display, fabricant d'écrans tactiles en Chine.",
     externalUrl: "https://www.alltouchdisplay.com/",
+    previewImage: "/images/portfolio/alltouchdisplay.webp",
   },
   {
     id: "artisans-marceau-paris",
@@ -502,6 +506,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "Les Artisans Marceau Paris — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : site SEO pour Les Artisans Marceau, plombier Paris. Top 5 Google marché ultra-compétitif.",
     externalUrl: "https://www.lesartisansmarceau.fr/",
+    previewImage: "/images/portfolio/artisans-marceau-paris.webp",
   },
   {
     id: "vigilante-4x4",
@@ -527,6 +532,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "Vigilante 4x4 USA — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : site web premium pour Vigilante 4x4, marque américaine de 4x4 rétro de luxe.",
     externalUrl: "https://vigilante4x4.com/",
+    previewImage: "/images/portfolio/vigilante-4x4.webp",
   },
   {
     id: "essence-design-lausanne",
@@ -552,6 +558,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "Essence Design Lausanne — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : site web pour Essence Design, agence de branding à Lausanne Suisse.",
     externalUrl: "https://www.essencedesign.com/",
+    previewImage: "/images/portfolio/essence-design-lausanne.webp",
   },
   {
     id: "rotho-ecommerce-allemagne",
@@ -577,6 +584,7 @@ const internationalProjects: PortfolioProject[] = [
     seoTitle: "Rotho Allemagne — Portfolio International Lannkin",
     seoDescription: "Réalisation Lannkin : stratégie digitale e-commerce pour Rotho, marque de produits ménagers en Allemagne.",
     externalUrl: "https://rotho.com/",
+    previewImage: "/images/portfolio/rotho-ecommerce-allemagne.webp",
   },
 ];
 

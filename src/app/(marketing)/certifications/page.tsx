@@ -74,7 +74,7 @@ export default function CertificationsPage() {
     <main>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-14 lg:py-20">
-        <ParallaxBg src="/images/rendu3D/rendu3d-rouge-vert-dramatic.png" overlay={0.72} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp" overlay={0.72} />
         <div className="relative z-10">
           <Container>
             <div className="mx-auto max-w-3xl text-center">

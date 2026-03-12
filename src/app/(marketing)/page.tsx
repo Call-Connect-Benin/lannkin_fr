@@ -35,7 +35,7 @@ export default function HomePage() {
     <main>
       {/* 1. HERO — Parallax 3D full-width */}
       <section className="parallax-section relative overflow-hidden py-20 lg:py-32">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png" overlay={0.45} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp" overlay={0.45} />
         <div className="relative z-10">
           <Container>
             <AnimatedReveal variant="fadeInUp">
@@ -368,7 +368,7 @@ export default function HomePage() {
 
       {/* 11. CTA — Parallax 3D */}
       <section className="parallax-section relative overflow-hidden py-20 lg:py-28">
-        <ParallaxBg src="/images/rendu3D/rendu3d-rouge-vert-dramatic.png" overlay={0.55} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp" overlay={0.55} />
         <div className="relative z-10">
           <Container size="md">
             <AnimatedReveal variant="scaleIn">

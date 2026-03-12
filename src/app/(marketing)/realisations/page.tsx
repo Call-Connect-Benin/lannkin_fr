@@ -23,7 +23,7 @@ export default function RealisationsPage() {
     <main>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-20 lg:py-32">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png" overlay={0.55} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp" overlay={0.55} />
         <div className="relative z-10">
           <Container>
             <div className="mx-auto max-w-3xl text-center">

@@ -50,7 +50,7 @@ export function PricingPageContent({
   subtitle,
   plans,
   serviceHref,
-  parallaxImage = "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png",
+  parallaxImage = "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp",
   youtubeIds,
   youtubeTitle = "Ressources vidéo",
 }: PricingPageContentProps) {
