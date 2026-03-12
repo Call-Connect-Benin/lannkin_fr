@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
+import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
-import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
   title: "Création Site Web Multipage Laval & Québec | Portfolio Lannkin",
@@ -37,71 +37,16 @@ const INCLUS = [
 export default function RealisationsMultipagesPage() {
   return (
     <main>
-      {/* Hero compact 2-col */}
-      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-lateral-angle.png" overlay={0.65} />
-        <div className="relative z-10">
-          <Container>
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-              {/* Left */}
-              <div className="flex-1 rounded-2xl border border-white/[0.08] bg-black/80 p-6">
-                <nav className="mb-3 flex items-center gap-2 text-sm" style={{ color: "#AAAAAA" }}>
-                  <Link href="/realisations/" className="hover:text-accent transition-colors">Réalisations</Link>
-                  <span>/</span>
-                  <span style={{ color: "#FFFFFF" }}>Multipages</span>
-                </nav>
-                <h1
-                  className="font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Création de sites web<br className="hidden sm:block" /> multipages à Laval
-                </h1>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "#DDDDDD" }}>
-                  Sites vitrine, sites PME, sites institutionnels — notre agence web à Laval conçoit
-                  des sites multipages modernes et optimisés pour le SEO local, pour les entreprises
-                  du Québec et de la Rive-Nord.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href="#projets"
-                    className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
-                  >
-                    Voir nos projets
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <Link
-                    href="/devis-gratuit/"
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-accent/40"
-                    style={{ color: "#FFFFFF" }}
-                  >
-                    Devis gratuit
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right — Stats */}
-              <div className="shrink-0 lg:w-64">
-                <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
-                  <div className="space-y-3">
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>+187 %</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>de leads qualifiés (client Laval)</p>
-                    </div>
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>{multiPagesCount} projets</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>multipages livrés</p>
-                    </div>
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>🔵 Google Partner</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>SEO certifié depuis 2015</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-      </section>
+      <RealisationsBanner
+        currentCategory="multipages"
+        title="Création de sites web multipages à Laval"
+        description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Laval conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises du Québec et de la Rive-Nord."
+        stats={[
+          { value: "+187 %", label: "de leads qualifiés (client Laval)" },
+          { value: `${multiPagesCount} projets`, label: "multipages livrés" },
+          { value: "Google Partner", label: "SEO certifié depuis 2015" },
+        ]}
+      />
 
       {/* Separator */}
       <div id="projets" className="border-t border-accent/20 bg-surface">

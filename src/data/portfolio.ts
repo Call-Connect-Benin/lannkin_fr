@@ -31,149 +31,244 @@ export interface PortfolioProject {
 
 const multiPagesProjects: PortfolioProject[] = [
   {
-    id: "groupe-bellerive-auto",
-    slug: "groupe-bellerive-auto",
-    name: "Groupe Bellerive Auto",
-    client: "Groupe Bellerive Auto",
+    id: "plomberies-lb",
+    slug: "plomberies-lb",
+    name: "Plomberies LB",
+    client: "Plomberies LB",
     category: "multipages",
     categoryLabel: "Multipages",
-    sector: "Concessionnaire automobile",
-    year: 2024,
+    sector: "Plomberie et chauffage",
+    year: 2023,
     shortDescription:
-      "Site web multipage pour un concessionnaire auto de la Rive-Nord avec inventaire dynamique et formulaire de prise de rendez-vous.",
+      "Site web multipage pour une entreprise de plomberie et chauffage avec pages services, galerie de réalisations et formulaire de contact.",
     description:
-      "Refonte complète du site web d'un concessionnaire automobile de Laval. Architecture multipage avec catalogue de véhicules filtrable, système de prise de rendez-vous en ligne, et landing pages dédiées pour chaque modèle. Intégration SEO local pour dominer les recherches « concessionnaire auto Laval ».",
+      "Conception d'un site web multipage professionnel pour Plomberies LB, entreprise spécialisée en plomberie et chauffage au Québec. Architecture multipage avec pages services détaillées, galerie de réalisations, formulaire de contact et optimisation SEO local pour dominer les recherches locales.",
     services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
-      "+187 % de leads qualifiés en 3 mois",
-      "Position #1 sur « concessionnaire auto Laval »",
-      "Taux de conversion formulaire : 4,2 %",
-      "PageSpeed Score : 97/100",
+      "Site web professionnel livré",
+      "Visibilité locale améliorée sur Google",
+      "Leads via formulaire de contact",
+      "PageSpeed optimisé",
     ],
     challenge:
-      "L'ancien site en WordPress était lent (PageSpeed < 40), mal référencé et ne convertissait pas les visiteurs en prospects.",
+      "Se démarquer dans un marché compétitif de la plomberie en ligne et générer des demandes de service directement via le web.",
     solution:
-      "Migration vers Next.js avec génération statique des pages véhicules, SEO technique complet et intégration Google Ads avec suivi des conversions.",
-    seoTitle: "Site Web Concessionnaire Auto Laval | Groupe Bellerive — Portfolio Lannkin",
+      "Site multipage optimisé pour le SEO local avec pages services détaillées, galerie photo et formulaire de demande de service en ligne.",
+    seoTitle: "Site Web Plomberie Québec | Plomberies LB — Portfolio Lannkin",
     seoDescription:
-      "Découvrez comment Lannkin a créé le site web multipage du Groupe Bellerive Auto à Laval : +187 % de leads, position #1 sur Google. Agence web Laval.",
+      "Portfolio Lannkin : site web multipage pour Plomberies LB. Conception web plomberie Québec, SEO local et Google Ads.",
+    externalUrl: "https://www.plomberieslb.ca/",
   },
   {
-    id: "clinique-physio-nordik",
-    slug: "clinique-physio-nordik",
-    name: "Clinique Physio Nordik",
-    client: "Clinique Physio Nordik",
+    id: "peinture-excel-pro",
+    slug: "peinture-excel-pro",
+    name: "Peinture Excel Pro",
+    client: "Peinture Excel Pro",
     category: "multipages",
     categoryLabel: "Multipages",
-    sector: "Santé et physiothérapie",
-    year: 2024,
+    sector: "Peinture résidentielle et commerciale",
+    year: 2023,
     shortDescription:
-      "Site web clinique de physiothérapie avec prise de rendez-vous en ligne, fiches de professionnels et blogue santé.",
+      "Site web multipage pour une entreprise de peinture avec galerie de projets, soumission en ligne et pages par type de service.",
     description:
-      "Conception d'un site web professionnel pour une clinique de physiothérapie sur la Rive-Nord de Montréal. Pages dédiées par thérapeute, système de réservation en ligne intégré, blogue de contenu santé pour le SEO, et optimisation Google My Business.",
-    services: ["Conception Web", "SEO", "Google My Business"],
-    technologies: ["WordPress", "Elementor Pro", "WooBookings", "Cloudflare"],
+      "Réalisation d'un site web multipage pour Peinture Excel Pro, peintre professionnel en résidentiel et commercial au Québec. Galerie de réalisations avant/après, formulaire de demande de soumission, pages détaillées par service (intérieur, extérieur, commercial) et SEO local.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
-      "+210 % de prises de rendez-vous en ligne",
-      "Top 3 Google sur « physiothérapeute Laval »",
-      "Note Google My Business : 4,9 / 5",
-      "Temps de chargement < 2 s",
+      "Site web professionnel avec galerie de réalisations",
+      "Formulaire de soumission en ligne fonctionnel",
+      "Référencement local amélioré",
+      "Site mobile-first et rapide",
     ],
     challenge:
-      "La clinique dépendait entièrement du téléphone pour les réservations et était invisible sur Google face à des concurrents bien établis.",
+      "Mettre en valeur la qualité du travail artisanal via une galerie de réalisations percutante tout en générant des demandes de soumission en ligne.",
     solution:
-      "Site multipage optimisé pour la recherche locale avec intégration d'un système de réservation en ligne et stratégie de contenu santé pour le SEO.",
-    seoTitle: "Site Web Clinique Physiothérapie Laval | Physio Nordik — Portfolio Lannkin",
+      "Site multipage avec galerie photo haute résolution, formulaire de soumission multi-étapes et pages services optimisées pour le SEO local québécois.",
+    seoTitle: "Site Web Peintre Québec | Peinture Excel Pro — Portfolio Lannkin",
     seoDescription:
-      "Réalisation Lannkin : site web multipage pour la Clinique Physio Nordik à Laval. +210 % de réservations, Top 3 Google. Agence web Rive-Nord.",
+      "Portfolio Lannkin : site web multipage pour Peinture Excel Pro. Conception web peinture résidentielle et commerciale au Québec.",
+    externalUrl: "https://www.peintureexcelpro.com/",
   },
   {
-    id: "toitures-excellence-qc",
-    slug: "toitures-excellence-qc",
-    name: "Toitures Excellence QC",
-    client: "Toitures Excellence QC",
+    id: "reno-st-georges",
+    slug: "reno-st-georges",
+    name: "Réno St-Georges",
+    client: "Réno St-Georges",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Rénovation résidentielle",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une entreprise de rénovation résidentielle avec galerie projets, soumission en ligne et pages par service.",
+    description:
+      "Conception d'un site web multipage pour Réno St-Georges, entrepreneur en rénovation résidentielle. Pages services détaillées (cuisine, salle de bain, sous-sol), galerie de réalisations avec photos avant/après, formulaire de soumission gratuite et contenu SEO ciblant la clientèle locale.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
+    results: [
+      "Présence web professionnelle établie",
+      "Galerie de réalisations valorisant le savoir-faire",
+      "Demandes de soumission générées en ligne",
+      "Meilleure visibilité locale sur Google",
+    ],
+    challenge:
+      "Valoriser un savoir-faire artisanal de qualité face à des concurrents mieux établis en ligne et générer des soumissions qualifiées.",
+    solution:
+      "Site multipage avec galerie photo immersive, contenu SEO local et formulaire de soumission simplifié pour convertir les visiteurs en clients.",
+    seoTitle: "Site Web Entrepreneur Rénovation Québec | Réno St-Georges — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web multipage pour Réno St-Georges. Conception web entrepreneur rénovation résidentielle Québec.",
+    externalUrl: "https://www.renostgeorges.ca/",
+  },
+  {
+    id: "groupe-lariviere",
+    slug: "groupe-lariviere",
+    name: "Groupe Larivière",
+    client: "Groupe Larivière",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Groupe de services",
+    year: 2023,
+    shortDescription:
+      "Site web multipage institutionnel pour un groupe d'entreprises de services avec navigation multi-secteurs et formulaires de contact.",
+    description:
+      "Réalisation du site web multipage du Groupe Larivière, regroupant plusieurs entités de services. Architecture multipage pensée pour présenter plusieurs secteurs d'activité de façon claire, avec navigation intuitive, pages par division et formulaires de contact adaptés à chaque service.",
+    services: ["Conception Web", "SEO", "Graphisme"],
+    technologies: ["WordPress", "Elementor Pro", "WP Rocket", "Cloudflare"],
+    results: [
+      "Site institutionnel professionnel livré",
+      "Navigation claire entre les divisions du groupe",
+      "Présence en ligne unifiée pour toutes les entités",
+      "Site responsive et performant",
+    ],
+    challenge:
+      "Concevoir un site qui reflète la diversité des services du groupe tout en maintenant une identité visuelle cohérente et une navigation simple.",
+    solution:
+      "Architecture multipage modulaire avec navigation par secteur, identité visuelle unifiée et contenu SEO spécifique à chaque division du groupe.",
+    seoTitle: "Site Web Groupe de Services Québec | Groupe Larivière — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web multipage pour le Groupe Larivière. Conception web institutionnelle Québec, navigation multi-services.",
+    externalUrl: "https://www.groupelariviere.ca/fr",
+  },
+  {
+    id: "peinture-pro",
+    slug: "peinture-pro",
+    name: "Peinture Pro",
+    client: "Peinture Pro",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Peinture résidentielle",
+    year: 2022,
+    shortDescription:
+      "Site web multipage pour un peintre résidentiel avec galerie de projets, demande de soumission et témoignages clients.",
+    description:
+      "Conception d'un site web multipage pour Peinture Pro, peintre en bâtiment résidentiel au Québec. Galerie de réalisations, pages services (intérieur, extérieur, calfeutrage), section témoignages clients, formulaire de demande de soumission gratuite et optimisation SEO.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Site professionnel valorisant la qualité du travail",
+      "Formulaire de soumission générant des leads qualifiés",
+      "Témoignages clients intégrés pour la preuve sociale",
+      "Référencement local opérationnel",
+    ],
+    challenge:
+      "Se distinguer dans un secteur de la peinture où les entreprises se ressemblent et convaincre les clients de la qualité du travail avant même la visite.",
+    solution:
+      "Site multipage misant sur la preuve sociale (galerie + témoignages), avec formulaire de soumission simplifié et contenu SEO local ciblé.",
+    seoTitle: "Site Web Peintre Résidentiel Québec | Peinture Pro — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Peinture Pro, peintre résidentiel au Québec. Conception web, SEO local et Google Ads.",
+    externalUrl: "https://www.peinture-pro.ca/",
+  },
+  {
+    id: "constructeurs-de-qualite",
+    slug: "constructeurs-de-qualite",
+    name: "Constructeurs de Qualité",
+    client: "Constructeurs de Qualité",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Construction résidentielle",
+    year: 2023,
+    shortDescription:
+      "Site web multipage pour un entrepreneur général en construction résidentielle avec galerie projets et demande de soumission.",
+    description:
+      "Réalisation du site web multipage de Constructeurs de Qualité, entrepreneur général en construction résidentielle au Québec. Présentation des projets réalisés (maisons neuves, extensions, rénovations majeures), pages services détaillées, formulaire de soumission et optimisation SEO locale.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
+    results: [
+      "Site web professionnel reflétant l'expertise en construction",
+      "Galerie de projets réalisés convaincante",
+      "Demandes de soumission générées en ligne",
+      "Meilleure visibilité Google locale",
+    ],
+    challenge:
+      "Établir une présence digitale crédible dans un secteur de la construction où la réputation et les réalisations sont déterminantes.",
+    solution:
+      "Site multipage mettant en avant les réalisations photographiées avec contenu SEO local et formulaire de soumission optimisé.",
+    seoTitle: "Site Web Entrepreneur Général Construction Québec | Constructeurs de Qualité — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle Québec.",
+    externalUrl: "https://www.constructeursdequalite.ca/",
+  },
+  {
+    id: "constructions-guillen",
+    slug: "constructions-guillen",
+    name: "Constructions Guillen",
+    client: "Constructions Guillen",
     category: "multipages",
     categoryLabel: "Multipages",
     sector: "Construction et rénovation",
-    year: 2023,
-    shortDescription:
-      "Site vitrine multipage pour une entreprise de couverture et toiture en Montérégie avec devis en ligne et galerie de projets.",
-    description:
-      "Création d'un site web multipage pour un entrepreneur en toiture desservant la grande région de Montréal. Galerie de réalisations avec photos avant/après, formulaire de demande de devis, pages services détaillées et contenu SEO ciblant les villes de la région.",
-    services: ["Conception Web", "SEO", "Google Ads", "Facebook Ads"],
-    technologies: ["WordPress", "Beaver Builder", "WPForms", "WP Rocket"],
-    results: [
-      "+340 % de demandes de devis",
-      "ROI Google Ads : 8:1",
-      "Position Top 5 sur 12 mots-clés locaux",
-      "Taux de rebond réduit de 62 % à 34 %",
-    ],
-    challenge:
-      "Présence digitale nulle : aucun site web, aucune visibilité Google, acquisition de clients 100 % par bouche-à-oreille.",
-    solution:
-      "Lancement d'un site professionnel avec SEO local agressif et campagnes Google Ads géolocalisées pour générer des leads dès le premier mois.",
-    seoTitle: "Site Web Entreprise Toiture Québec | Toitures Excellence — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Toitures Excellence QC. +340 % de demandes de devis, ROI Google Ads 8:1. Agence web marketing digital Québec.",
-  },
-  {
-    id: "assurances-bergeron-associes",
-    slug: "assurances-bergeron-associes",
-    name: "Assurances Bergeron & Associés",
-    client: "Assurances Bergeron & Associés",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Services financiers et assurances",
-    year: 2023,
-    shortDescription:
-      "Refonte du site web d'un cabinet de courtage en assurances avec espace client, calculateurs interactifs et contenu SEO.",
-    description:
-      "Refonte complète du site web d'un cabinet de courtage indépendant en assurances de dommages à Laval. Architecture multipage avec calculateurs de primes, espace client sécurisé, blogue d'articles de conseil et pages optimisées pour chaque type d'assurance.",
-    services: ["Conception Web", "SEO", "Graphisme"],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS"],
-    results: [
-      "+95 % de trafic organique en 6 mois",
-      "Réduction du taux de rebond de 58 %",
-      "Top 3 sur « courtier assurance Laval »",
-      "+128 % de demandes de soumissions",
-    ],
-    challenge:
-      "Site vieillissant (2015), non responsive, contenu obsolète et positionnement Google inexistant face aux grands assureurs nationaux.",
-    solution:
-      "Refonte complète avec architecture SEO pensée pour le contenu de longue traîne, design moderne épuré et stratégie de contenu autorité.",
-    seoTitle: "Refonte Site Web Cabinet Assurances Laval | Bergeron & Associés — Portfolio Lannkin",
-    seoDescription:
-      "Réalisation Lannkin : refonte web pour Assurances Bergeron & Associés à Laval. +95 % trafic organique, Top 3 Google. Portfolio agence web Québec.",
-  },
-  {
-    id: "cuisine-signature-laval",
-    slug: "cuisine-signature-laval",
-    name: "Cuisine Signature Laval",
-    client: "Cuisine Signature Laval",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Rénovation et cuisinistes",
     year: 2024,
     shortDescription:
-      "Site web multipage pour un cuisiniste de Laval avec configurateur 3D, galerie projets et formulaire de consultation.",
+      "Site web multipage pour une entreprise de construction et rénovation avec portfolios de projets et formulaire de soumission.",
     description:
-      "Conception d'un site web haut de gamme pour un cuisiniste indépendant de Laval. Galerie de réalisations avec photos haute résolution, outil de configuration de cuisine simplifié, témoignages clients, blogue de tendances et pages optimisées pour le SEO local.",
-    services: ["Conception Web", "SEO", "Réseaux Sociaux", "Graphisme"],
-    technologies: ["Next.js", "Framer Motion", "Cloudinary", "Vercel"],
+      "Conception du site web multipage de Constructions Guillen, entreprise spécialisée en construction neuve et rénovation au Québec. Architecture multipage avec portfolio de réalisations, pages services (construction, rénovation, finition), formulaire de soumission et contenu optimisé pour le SEO local.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
-      "+260 % de consultations planifiées",
-      "Position #2 sur « cuisiniste Laval »",
-      "Durée moyenne de session : 3 min 42 s",
-      "Note Google : 4,8 / 5 (124 avis)",
+      "Présence web professionnelle établie",
+      "Portfolio de réalisations mis en valeur",
+      "Leads en ligne générés via formulaire",
+      "Référencement local amélioré",
     ],
     challenge:
-      "Malgré un excellent travail artisanal, l'entreprise peinait à se démarquer des grandes chaînes de cuisines avec plus de budget publicitaire.",
+      "Construire une présence numérique de confiance pour une entreprise en croissance souhaitant attirer une clientèle résidentielle premium.",
     solution:
-      "Mise en valeur du savoir-faire local avec un site visuellement fort, galerie de projets immersive et stratégie de contenu ciblant les propriétaires de Laval.",
-    seoTitle: "Site Web Cuisiniste Laval | Cuisine Signature — Portfolio Lannkin",
+      "Site multipage avec galerie de réalisations soignée, identité visuelle professionnelle et SEO local ciblant les propriétaires résidentiels de la région.",
+    seoTitle: "Site Web Construction Rénovation Québec | Constructions Guillen — Portfolio Lannkin",
     seoDescription:
-      "Réalisation Lannkin : site web pour Cuisine Signature Laval. +260 % de consultations, position #2 Google. Portfolio site vitrine Laval Québec.",
+      "Portfolio Lannkin : site web multipage pour Constructions Guillen. Construction et rénovation résidentielle Québec.",
+    externalUrl: "https://www.constructionsguillen.com/",
+  },
+  {
+    id: "mtl-luxe",
+    slug: "mtl-luxe",
+    name: "MTL Luxe",
+    client: "MTL Luxe",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Services premium Montréal",
+    year: 2024,
+    shortDescription:
+      "Site web multipage haut de gamme pour une marque de services premium à Montréal avec design immersif et expérience utilisateur soignée.",
+    description:
+      "Réalisation d'un site web multipage premium pour MTL Luxe, marque montréalaise positionnée sur le segment haut de gamme. Design élégant et immersif, navigation fluide, pages services détaillées et expérience utilisateur optimisée pour une clientèle exigeante.",
+    services: ["Conception Web", "SEO", "Graphisme"],
+    technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WP Rocket"],
+    results: [
+      "Identité digitale premium cohérente avec le positionnement",
+      "Expérience utilisateur haut de gamme",
+      "Site performant et esthétiquement distinctif",
+      "Référencement local Montréal optimisé",
+    ],
+    challenge:
+      "Traduire un positionnement premium en expérience digitale qui reflète l'image haut de gamme de la marque et attire la bonne clientèle.",
+    solution:
+      "Design web soigné avec typographie et visuels haut de gamme, animations subtiles et contenu copywriting orienté désirabilité.",
+    seoTitle: "Site Web Services Premium Montréal | MTL Luxe — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web premium pour MTL Luxe Montréal. Conception web haut de gamme, design immersif et SEO local.",
+    externalUrl: "https://mtlluxe.ca/",
   },
 ];
 
@@ -183,120 +278,154 @@ const multiPagesProjects: PortfolioProject[] = [
 
 const onePageProjects: PortfolioProject[] = [
   {
-    id: "ecoclin-entretien-menager",
-    slug: "ecoclin-entretien-menager",
-    name: "ÉcoClin Entretien",
-    client: "ÉcoClin Entretien Ménager",
+    id: "nettoyage-ideal",
+    slug: "nettoyage-ideal",
+    name: "Nettoyage Idéal",
+    client: "Nettoyage Idéal",
+    category: "onepage",
+    categoryLabel: "Onepage",
+    sector: "Entretien ménager résidentiel",
+    year: 2023,
+    shortDescription:
+      "Landing page haute conversion pour une entreprise d'entretien ménager résidentiel avec formulaire de réservation et témoignages clients.",
+    description:
+      "Conception d'une landing page optimisée pour la conversion pour Nettoyage Idéal, service d'entretien ménager résidentiel au Québec. Page unique avec présentation des services, grille tarifaire, témoignages clients, galerie avant/après et formulaire de réservation en ligne intégré.",
+    services: ["Conception Web", "Google Ads", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Landing page optimisée pour la conversion",
+      "Formulaire de réservation en ligne fonctionnel",
+      "Campagnes publicitaires ROI-positives",
+      "Nouvelles réservations générées dès le lancement",
+    ],
+    challenge:
+      "Se démarquer dans un marché compétitif de l'entretien ménager et convertir rapidement les visiteurs en clients réguliers.",
+    solution:
+      "Landing page focalisée sur la conversion avec preuve sociale forte, offre claire et formulaire de réservation simplifié en quelques clics.",
+    seoTitle: "Site Web Entretien Ménager Québec | Nettoyage Idéal — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel Québec, Google Ads et Facebook Ads.",
+    externalUrl: "https://www.nettoyageideal.com/",
+  },
+  {
+    id: "rasage-corporel-a-domicile",
+    slug: "rasage-corporel-a-domicile",
+    name: "Rasage Corporel à Domicile",
+    client: "Rasage Corporel à Domicile",
+    category: "onepage",
+    categoryLabel: "Onepage",
+    sector: "Soins corporels à domicile",
+    year: 2023,
+    shortDescription:
+      "Site onepage pour un service de soins corporels à domicile avec présentation des services, tarifs et prise de rendez-vous.",
+    description:
+      "Conception d'un site onepage pour Rasage Corporel à Domicile, service de soins à domicile au Québec. Présentation des prestations, galerie, grille tarifaire claire, témoignages clients et formulaire de prise de rendez-vous en ligne simplifié.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
+    results: [
+      "Site web professionnel et rassurant livré",
+      "Prise de rendez-vous en ligne opérationnelle",
+      "Meilleure crédibilité en ligne",
+      "Acquisition de clients via formulaire",
+    ],
+    challenge:
+      "Instaurer la confiance pour un service à domicile et convaincre les clients de la qualité et de la sécurité des prestations.",
+    solution:
+      "Site onepage rassurant avec témoignages mis en avant, description détaillée des services et formulaire de prise de rendez-vous sécurisé.",
+    seoTitle: "Site Web Soins Corporels à Domicile Québec | Rasage Corporel — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site onepage pour Rasage Corporel à Domicile. Conception web soins à domicile Québec, prise de rendez-vous en ligne.",
+    externalUrl: "https://www.rasagecorporeladomicile.ca/",
+  },
+  {
+    id: "nettoyage-leblanc",
+    slug: "nettoyage-leblanc",
+    name: "Nettoyage Leblanc",
+    client: "Nettoyage Leblanc",
     category: "onepage",
     categoryLabel: "Onepage",
     sector: "Entretien ménager",
-    year: 2024,
+    year: 2022,
     shortDescription:
-      "Landing page haute conversion pour une entreprise d'entretien ménager écologique avec système de réservation en ligne.",
+      "Landing page pour une entreprise d'entretien ménager résidentiel et commercial avec formulaire de contact et témoignages.",
     description:
-      "Conception d'une landing page optimisée pour la conversion pour une entreprise d'entretien ménager éco-responsable à Laval. Page unique avec témoignages, galerie avant/après, formulaire de réservation multi-étapes et intégration de Google Ads.",
-    services: ["Conception Web", "Google Ads", "Facebook Ads"],
-    technologies: ["Next.js", "Framer Motion", "Stripe", "Vercel"],
+      "Réalisation d'une landing page pour Nettoyage Leblanc, service d'entretien ménager résidentiel et commercial. Page unique avec présentation des forfaits, galerie avant/après, section témoignages clients et formulaire de demande de soumission gratuite.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
-      "Taux de conversion : 7,8 % (industrie : 2,5 %)",
-      "Coût par lead Google Ads : 4,20 $",
-      "ROI Facebook Ads : 11:1",
-      "120 nouveaux clients en 90 jours",
+      "Landing page opérationnelle dès le lancement",
+      "Demandes de soumission générées en ligne",
+      "Présence Google locale établie",
+      "Design professionnel fidèle à l'image de l'entreprise",
     ],
     challenge:
-      "Marché très concurrentiel avec de nombreux indépendants et besoin de se démarquer rapidement avec un budget publicitaire limité.",
+      "Établir rapidement une présence digitale crédible pour attirer de nouveaux clients résidentiels et commerciaux.",
     solution:
-      "Landing page ultra-focalisée sur la conversion avec preuve sociale forte, offre claire et tunnel de réservation simplifié en 3 étapes.",
-    seoTitle: "Landing Page Entretien Ménager Laval | ÉcoClin — Portfolio Lannkin",
+      "Landing page efficace avec preuve sociale, offres claires et formulaire de soumission pour convertir les visiteurs en clients.",
+    seoTitle: "Site Web Entretien Ménager Québec | Nettoyage Leblanc — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : landing page pour ÉcoClin Entretien à Laval. Taux de conversion 7,8 %, 120 nouveaux clients en 90 jours. Site onepage Québec.",
+      "Portfolio Lannkin : landing page pour Nettoyage Leblanc. Entretien ménager résidentiel et commercial Québec.",
+    externalUrl: "https://www.nettoyageleblanc.ca/",
   },
   {
-    id: "studio-forme-laval",
-    slug: "studio-forme-laval",
-    name: "Studio Forme Laval",
-    client: "Studio Forme Laval",
+    id: "ethique-service-nettoyage",
+    slug: "ethique-service-nettoyage",
+    name: "Éthique Service Nettoyage",
+    client: "Éthique Service Nettoyage",
     category: "onepage",
     categoryLabel: "Onepage",
-    sector: "Fitness et bien-être",
+    sector: "Nettoyage écologique",
     year: 2023,
     shortDescription:
-      "Site onepage moderne pour un studio de fitness boutique à Laval avec horaires, cours et inscription en ligne.",
+      "Site onepage pour un service de nettoyage éco-responsable mettant en avant ses valeurs environnementales et ses forfaits.",
     description:
-      "Création d'un site onepage dynamique pour un studio de fitness boutique à Laval. Présentation des cours (yoga, HIIT, pilates), horaires interactifs, profils des entraîneurs, témoignages vidéo et système d'inscription/abonnement en ligne.",
-    services: ["Conception Web", "Facebook Ads", "Réseaux Sociaux"],
-    technologies: ["WordPress", "Elementor Pro", "MindBody Integration", "WP Rocket"],
+      "Conception d'un site onepage pour Éthique Service Nettoyage, entreprise d'entretien ménager engagée dans des pratiques écologiques. Mise en valeur des produits naturels utilisés, certifications, forfaits détaillés et formulaire de réservation en ligne.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
     results: [
-      "+180 % d'inscriptions en ligne",
-      "Taux de rebond < 28 %",
-      "Campagnes Facebook : ROAS 6,5",
-      "Croissance Instagram : +1 200 abonnés en 6 mois",
+      "Identité de marque éco-responsable bien communiquée",
+      "Réservations en ligne opérationnelles",
+      "Clients sensibles à l'écologie attirés",
+      "Présence locale sur Google établie",
     ],
     challenge:
-      "Studio ouvert depuis 6 mois avec peu de notoriété locale, concurrencé par les grandes chaînes de fitness à faible coût.",
+      "Communiquer efficacement la proposition de valeur écologique pour se différencier des services de nettoyage traditionnels.",
     solution:
-      "Site onepage avec identité visuelle forte, mise en avant de la communauté et campagnes Meta Ads ciblant les résidents de Laval dans un rayon de 5 km.",
-    seoTitle: "Site Web Studio Fitness Laval | Studio Forme — Portfolio Lannkin",
+      "Site onepage avec storytelling centré sur les valeurs éco-responsables, certifications et témoignages de clients convaincus.",
+    seoTitle: "Site Web Nettoyage Écologique Québec | Éthique Service Nettoyage — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : site onepage pour Studio Forme Laval. +180 % inscriptions, ROAS Facebook 6,5. Conception site web fitness Laval Québec.",
+      "Portfolio Lannkin : site onepage pour Éthique Service Nettoyage. Entretien ménager écologique Québec, conception web et SEO.",
+    externalUrl: "https://www.ethiqueservicenettoyage.ca/",
   },
   {
-    id: "resto-aux-saveurs-du-nil",
-    slug: "resto-aux-saveurs-du-nil",
-    name: "Aux Saveurs du Nil",
-    client: "Restaurant Aux Saveurs du Nil",
+    id: "ture-beau-menage",
+    slug: "ture-beau-menage",
+    name: "Ture Beau Ménage",
+    client: "Ture Beau Ménage",
     category: "onepage",
     categoryLabel: "Onepage",
-    sector: "Restauration",
-    year: 2023,
-    shortDescription:
-      "Site onepage élégant pour un restaurant gastronomique africain à Montréal avec menu dynamique et réservation en ligne.",
-    description:
-      "Conception d'un site onepage haut de gamme pour un restaurant gastronomique africain à Montréal. Menu interactif avec photos professionnelles, système de réservation en ligne, intégration Google Maps, galerie de l'ambiance et section traiteur pour événements.",
-    services: ["Conception Web", "SEO", "Google My Business", "Réseaux Sociaux"],
-    technologies: ["Next.js", "Sanity CMS", "OpenTable Integration", "Vercel"],
-    results: [
-      "+320 % de réservations en ligne",
-      "Top 5 sur « restaurant africain Montréal »",
-      "Note Google : 4,9 / 5 (89 avis)",
-      "+85 % de trafic organique en 4 mois",
-    ],
-    challenge:
-      "Restaurant récemment ouvert, besoin de visibilité rapide dans un quartier compétitif sans budget publicitaire élevé.",
-    solution:
-      "Site onepage immersif avec photos culinaires professionnelles, SEO local optimisé et stratégie Google My Business pour maximiser les découvertes organiques.",
-    seoTitle: "Site Web Restaurant Montréal | Aux Saveurs du Nil — Portfolio Lannkin",
-    seoDescription:
-      "Réalisation Lannkin : site onepage pour le restaurant Aux Saveurs du Nil à Montréal. +320 % réservations, Top 5 Google. Portfolio web Québec.",
-  },
-  {
-    id: "formations-numerik-pro",
-    slug: "formations-numerik-pro",
-    name: "NumerikPro Formation",
-    client: "NumerikPro Formation",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Formation professionnelle",
+    sector: "Entretien ménager résidentiel",
     year: 2024,
     shortDescription:
-      "Landing page pour des formations en marketing numérique avec tunnel de vente intégré et paiement Stripe.",
+      "Landing page moderne pour un service d'entretien ménager résidentiel avec réservation en ligne et présentation des forfaits.",
     description:
-      "Conception d'une landing page de vente pour une entreprise de formation en marketing numérique. Tunnel de vente avec vidéo VSL, témoignages, FAQ, garantie de remboursement et checkout Stripe optimisé. Intégration de campagnes Google Ads et Meta Ads.",
-    services: ["Conception Web", "Google Ads", "Facebook Ads"],
-    technologies: ["Next.js", "Stripe", "ConvertKit", "Vercel"],
+      "Réalisation d'une landing page moderne pour Ture Beau Ménage, service d'entretien résidentiel au Québec. Design épuré mettant en avant les forfaits, le processus de service, les témoignages et un formulaire de réservation simplifié pour convertir les visiteurs.",
+    services: ["Conception Web", "Google Ads", "SEO"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
-      "Taux de conversion page : 5,4 %",
-      "Coût d'acquisition client : 38 $ CAD",
-      "ROAS Google Ads : 9,2",
-      "Revenus mois 1 : 47 000 $ CAD",
+      "Landing page optimisée pour la conversion livée",
+      "Processus de réservation simplifié en ligne",
+      "Nouveaux clients acquis via Google Ads",
+      "Présence locale établie rapidement",
     ],
     challenge:
-      "Lancement d'un nouveau programme de formation avec besoin de vendre rapidement pour valider le marché et couvrir les coûts de création de contenu.",
+      "Lancer rapidement un nouveau service d'entretien ménager et acquérir les premiers clients avec un budget marketing maîtrisé.",
     solution:
-      "Landing page de vente avec copywriting persuasif, preuve sociale solide et tunnel de conversion optimisé, combiné à des campagnes publicitaires ROI-positives dès la première semaine.",
-    seoTitle: "Landing Page Formation Marketing Numérique | NumerikPro — Portfolio Lannkin",
+      "Landing page conversion-first combinée à des campagnes Google Ads géolocalisées pour générer des réservations dès le lancement.",
+    seoTitle: "Site Web Entretien Ménager Résidentiel | Ture Beau Ménage — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : landing page pour NumerikPro Formation. ROAS 9,2, 47 000 $ de revenus le premier mois. Conception site web formation Québec.",
+      "Portfolio Lannkin : landing page pour Ture Beau Ménage. Entretien ménager résidentiel Québec, Google Ads et conception web.",
+    externalUrl: "https://www.turebeaumenage.com/",
   },
 ];
 
@@ -306,120 +435,64 @@ const onePageProjects: PortfolioProject[] = [
 
 const ecommerceProjects: PortfolioProject[] = [
   {
-    id: "boutique-nordik-outdoor",
-    slug: "boutique-nordik-outdoor",
-    name: "Nordik Outdoor",
-    client: "Nordik Outdoor",
+    id: "le-coffre-a-jouets",
+    slug: "le-coffre-a-jouets",
+    name: "Le Coffre à Jouets",
+    client: "Le Coffre à Jouets",
     category: "ecommerce",
     categoryLabel: "E-commerce",
-    sector: "Vêtements et équipement de plein air",
-    year: 2024,
-    shortDescription:
-      "Boutique en ligne Shopify pour une marque québécoise de vêtements de plein air avec +800 produits et logistique automatisée.",
-    description:
-      "Création d'une boutique e-commerce Shopify premium pour une marque québécoise de vêtements et équipements de plein air. Catalogue de +800 produits avec filtres avancés, gestion des tailles et couleurs, intégration logistique (ShipStation), et stratégies d'acquisition multi-canaux.",
-    services: ["Conception Web", "Google Ads", "Facebook Ads", "SEO"],
-    technologies: ["Shopify Plus", "Liquid", "Google Shopping", "Klaviyo"],
-    results: [
-      "Revenus e-commerce : +420 % en 6 mois",
-      "ROAS Google Shopping : 7,8",
-      "Panier moyen : 287 $ CAD",
-      "Taux d'abandon de panier réduit de 72 % à 58 %",
-    ],
-    challenge:
-      "Marque établie en détail physique souhaitant lancer sa présence en ligne pour réduire sa dépendance aux revendeurs et augmenter ses marges.",
-    solution:
-      "Migration vers Shopify Plus avec expérience d'achat premium, campagnes Google Shopping optimisées et automatisation marketing par courriel avec Klaviyo.",
-    seoTitle: "Boutique E-commerce Shopify Québec | Nordik Outdoor — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : boutique e-commerce Shopify pour Nordik Outdoor. +420 % revenus, ROAS 7,8. Création e-commerce Québec Canada.",
-  },
-  {
-    id: "artisan-savon-nature",
-    slug: "artisan-savon-nature",
-    name: "Savon Nature Artisan",
-    client: "Savon Nature Artisan",
-    category: "ecommerce",
-    categoryLabel: "E-commerce",
-    sector: "Cosmétiques naturels et artisanaux",
+    sector: "Jouets et cadeaux",
     year: 2023,
     shortDescription:
-      "Boutique en ligne WooCommerce pour une artisane savonnière québécoise avec abonnement mensuel et vente en gros.",
+      "Boutique en ligne pour une boutique de jouets québécoise avec catalogue produits, paiement sécurisé et livraison au Canada.",
     description:
-      "Développement d'une boutique e-commerce WooCommerce pour une artisane savonnière de la région de Québec. Système d'abonnement mensuel (boîte surprise), vente en gros pour les détaillants, pages produits optimisées avec descriptions riches et stratégie SEO pour le e-commerce naturel.",
-    services: ["Conception Web", "SEO", "Facebook Ads", "Réseaux Sociaux"],
-    technologies: ["WordPress", "WooCommerce", "WooSubscriptions", "Meta Ads"],
-    results: [
-      "Lancement : 12 000 $ de ventes le mois 1",
-      "300 abonnés actifs à la boîte mensuelle",
-      "ROAS Facebook/Instagram : 5,3",
-      "Top 3 sur « savon artisanal Québec »",
-    ],
-    challenge:
-      "Artisane vendant uniquement en marchés locaux et foires artisanales, souhaitant créer une source de revenus récurrents en ligne.",
-    solution:
-      "Boutique e-commerce avec mise en valeur de l'artisanat québécois, système d'abonnement pour revenus prévisibles et campagnes Meta Ads ciblant les amateurs de produits naturels au Canada.",
-    seoTitle: "Boutique E-commerce Cosmétiques Naturels Québec | Savon Nature — Portfolio Lannkin",
-    seoDescription:
-      "Réalisation Lannkin : e-commerce pour Savon Nature Artisan. 12 000 $ mois 1, 300 abonnés, ROAS 5,3. Création boutique en ligne Québec Canada.",
-  },
-  {
-    id: "equipements-pro-chef",
-    slug: "equipements-pro-chef",
-    name: "ProChef Équipements",
-    client: "ProChef Équipements",
-    category: "ecommerce",
-    categoryLabel: "E-commerce",
-    sector: "Équipements de cuisine professionnelle",
-    year: 2024,
-    shortDescription:
-      "E-commerce B2B pour la vente d'équipements de cuisine professionnelle au Canada avec catalogue de +2 000 produits.",
-    description:
-      "Développement d'une plateforme e-commerce B2B pour un distributeur d'équipements de cuisine professionnelle desservant les restaurants, hôtels et traiteurs du Canada. Catalogue de +2 000 références, pricing par paliers selon le volume, espace compte client professionnel et devis automatisés.",
+      "Développement d'une boutique e-commerce pour Le Coffre à Jouets, détaillant québécois de jouets et cadeaux. Catalogue produits organisé par catégories et âges, fiche produit détaillée, panier et checkout optimisés, intégration de paiement sécurisé et gestion des expéditions au Canada.",
     services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["Next.js", "Medusa.js", "Stripe", "Algolia Search"],
+    technologies: ["WooCommerce", "WordPress", "Stripe", "WP Rocket"],
     results: [
-      "+890 % de commandes en ligne vs téléphone",
-      "Économie opérationnelle : 40 h/semaine",
-      "Panier moyen : 1 840 $ CAD",
-      "Position Top 5 sur 25 mots-clés B2B",
+      "Boutique en ligne fonctionnelle et sécurisée",
+      "Catalogue produits bien organisé",
+      "Ventes en ligne générées dès le lancement",
+      "Expérience d'achat optimisée sur mobile",
     ],
     challenge:
-      "Processus de commande entièrement manuel (téléphone, fax, email), catalogue papier obsolète et perte de clients au profit de concurrents en ligne.",
+      "Transition d'un modèle de vente physique vers le commerce en ligne tout en conservant l'expérience chaleureuse d'une boutique locale.",
     solution:
-      "Plateforme e-commerce B2B sur mesure avec recherche ultra-rapide (Algolia), tarification dynamique par volume et espace client professionnel pour gérer les commandes.",
-    seoTitle: "E-commerce B2B Équipements CHR Canada | ProChef — Portfolio Lannkin",
+      "Boutique e-commerce WooCommerce avec design accueillant, navigation intuitive par catégorie d'âge et processus d'achat simplifié pour maximiser les conversions.",
+    seoTitle: "Boutique E-commerce Jouets Québec | Le Coffre à Jouets — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : e-commerce B2B pour ProChef Équipements. +890 % commandes en ligne, panier moyen 1 840 $. Création boutique en ligne Canada.",
+      "Portfolio Lannkin : e-commerce pour Le Coffre à Jouets. Boutique en ligne jouets et cadeaux Québec, WooCommerce et SEO.",
+    externalUrl: "https://lecoffreajouets.net/",
   },
   {
-    id: "deco-maison-kali",
-    slug: "deco-maison-kali",
-    name: "Kali Déco Maison",
-    client: "Kali Déco Maison",
+    id: "bout-de-chou-boutique",
+    slug: "bout-de-chou-boutique",
+    name: "Bout de Chou Boutique",
+    client: "Bout de Chou Boutique",
     category: "ecommerce",
     categoryLabel: "E-commerce",
-    sector: "Décoration intérieure",
-    year: 2023,
+    sector: "Mode et accessoires enfants",
+    year: 2024,
     shortDescription:
-      "Boutique e-commerce Shopify pour une entreprise de décoration intérieure avec lookbooks interactifs et AR preview.",
+      "Boutique e-commerce de vêtements et accessoires pour enfants avec catalogue saisonnier, lookbook et livraison partout au Canada.",
     description:
-      "Création d'une boutique Shopify haut de gamme pour une marque québécoise de décoration intérieure. Lookbooks interactifs saison par saison, intégration AR pour visualiser les produits chez soi, programme de fidélité et stratégie de contenu Pinterest/Instagram très développée.",
-    services: ["Conception Web", "Facebook Ads", "Réseaux Sociaux", "SEO"],
-    technologies: ["Shopify Plus", "Liquid", "Instagram Shopping", "Yotpo"],
+      "Création d'une boutique e-commerce pour Bout de Chou Boutique, spécialiste de la mode et des accessoires pour enfants au Québec. Catalogue par taille et collection, lookbooks saisonniers, fiches produits détaillées avec photos multiples, gestion des tailles et couleurs, et checkout optimisé.",
+    services: ["Conception Web", "Facebook Ads", "Réseaux Sociaux"],
+    technologies: ["Shopify", "Liquid", "Instagram Shopping", "Meta Ads"],
     results: [
-      "Revenus première année : 380 000 $ CAD",
-      "ROAS Facebook/Instagram : 4,8",
-      "Taux de répétition d'achat : 42 %",
-      "+6 800 abonnés Instagram en 12 mois",
+      "Boutique Shopify en ligne lancée avec succès",
+      "Catalogue produits saisonnier bien présenté",
+      "Ventes via Instagram Shopping intégrées",
+      "Expérience d'achat mobile optimisée",
     ],
     challenge:
-      "Marque créative avec un très beau produit mais aucune présence digitale structurée, vendant uniquement via les réseaux sociaux sans site propre.",
+      "Créer une expérience d'achat en ligne qui reflète l'univers doux et chaleureux de la boutique physique pour les parents achetant pour leurs enfants.",
     solution:
-      "Boutique Shopify premium reflétant l'univers esthétique de la marque, avec stratégie social commerce intégrée et programme de fidélité pour maximiser la valeur vie client.",
-    seoTitle: "Boutique E-commerce Déco Intérieure Québec | Kali Déco — Portfolio Lannkin",
+      "Boutique Shopify avec design doux et coloré, lookbooks photographiques et intégration Instagram Shopping pour atteindre les parents sur les réseaux sociaux.",
+    seoTitle: "Boutique E-commerce Mode Enfants Québec | Bout de Chou — Portfolio Lannkin",
     seoDescription:
-      "Réalisation Lannkin : e-commerce Shopify pour Kali Déco Maison. 380 000 $ revenus an 1, ROAS 4,8. Boutique en ligne déco intérieure Québec.",
+      "Portfolio Lannkin : e-commerce Shopify pour Bout de Chou Boutique. Mode et accessoires enfants Québec, vente en ligne et Instagram Shopping.",
+    externalUrl: "https://boutdechouboutique.com/",
   },
 ];
 

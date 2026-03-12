@@ -24,7 +24,7 @@ const leadCaptureSchema = z.object({
 type LeadCaptureData = z.infer<typeof leadCaptureSchema>;
 
 const inputClasses =
-  "w-full bg-white/[0.06] border border-white/[0.12] rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-200";
+  "w-full bg-[#FFFFFF]/[0.06] border border-[#FFFFFF]/[0.12] rounded-lg px-3 py-2.5 text-sm text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-200";
 
 const errorClasses = "text-red-400 text-xs mt-1";
 
@@ -74,7 +74,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
   };
 
   return (
-    <div className="rounded-2xl border border-white/[0.1] bg-black/80 p-6">
+    <div className="rounded-2xl border border-[#FFFFFF]/[0.1] bg-[#1A1A1A]/90 p-6">
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div
@@ -95,7 +95,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-white font-semibold text-lg"
+              className="text-[#FFFFFF] font-semibold text-lg"
             >
               Merci !
             </motion.p>
@@ -103,7 +103,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-white/60 text-sm mt-1"
+              className="text-[#FFFFFF]/60 text-sm mt-1"
             >
               Nous vous contacterons sous 24h.
             </motion.p>

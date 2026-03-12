@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ArrowLeft, ArrowRight, Check, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ExternalLink, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
@@ -83,6 +83,20 @@ export default async function PortfolioProjectPage({ params }: Props) {
                   </span>
                 ))}
               </div>
+              {/* External link */}
+              {project.externalUrl && (
+                <div className="mt-6">
+                  <a
+                    href={project.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/40 hover:bg-white/10 hover:text-accent"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Visiter le site
+                  </a>
+                </div>
+              )}
             </div>
           </Container>
         </div>

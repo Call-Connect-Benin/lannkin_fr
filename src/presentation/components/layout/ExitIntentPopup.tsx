@@ -11,28 +11,37 @@ export function ExitIntentPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof sessionStorage !== "undefined" && sessionStorage.getItem("exitPopupShown")) return;
+    if (localStorage.getItem("exitPopupShown")) return;
+
+    const show = () => {
+      if (localStorage.getItem("exitPopupShown")) return;
+      setVisible(true);
+      localStorage.setItem("exitPopupShown", "1");
+    };
+
+    let ready = false;
+    // Wait 3s before activating exit-intent (avoids accidental trigger on load)
+    const warmup = setTimeout(() => {
+      ready = true;
+    }, 3000);
 
     // Desktop: mouse leaves top of viewport
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0) {
-        setVisible(true);
-        sessionStorage.setItem("exitPopupShown", "1");
-      }
+      if (ready && e.clientY <= 0) show();
     };
 
-    // Mobile: after 45s on page
-    const timer = setTimeout(() => {
-      if (!sessionStorage.getItem("exitPopupShown")) {
-        setVisible(true);
-        sessionStorage.setItem("exitPopupShown", "1");
-      }
-    }, 45000);
+    // Mobile: user switches away from the tab/app
+    const handleVisibility = () => {
+      if (ready && document.visibilityState === "hidden") show();
+    };
 
     document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("visibilitychange", handleVisibility);
+
     return () => {
+      clearTimeout(warmup);
       document.removeEventListener("mouseleave", handleMouseLeave);
-      clearTimeout(timer);
+      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
 

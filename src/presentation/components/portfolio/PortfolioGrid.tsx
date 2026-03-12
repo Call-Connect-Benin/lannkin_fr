@@ -94,26 +94,27 @@ export function PortfolioGrid({ initialFilter = "all" }: { initialFilter?: Portf
                   </p>
                 )}
 
-                {/* Link */}
-                {project.externalUrl ? (
-                  <a
-                    href={project.externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
-                  >
-                    Visiter le site
-                    <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                ) : (
+                {/* Links */}
+                <div className="mt-4 flex items-center gap-4">
                   <Link
                     href={`/realisations/${project.slug}/`}
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
                   >
                     Voir le projet
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </Link>
-                )}
+                  {project.externalUrl && (
+                    <a
+                      href={project.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-white/40 transition-colors duration-200 hover:text-white/70"
+                    >
+                      Visiter le site
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.article>
           ))}

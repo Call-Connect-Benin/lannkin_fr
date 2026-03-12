@@ -17,6 +17,7 @@ const PARTNERS = [
     id: "google",
     name: "Google Partner",
     badge: "🔵",
+    badgeImg: "/images/badges/PartnerBadgeClickable-goole.svg",
     description:
       "Certifiée Google Partner, Lannkin démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
     certifications: [
@@ -139,7 +140,11 @@ export default function CertificationsPage() {
                   key={partner.id}
                   className="rounded-2xl border border-white/[0.06] bg-surface p-6 text-center"
                 >
-                  <span className="text-4xl">{partner.badge}</span>
+                  {"badgeImg" in partner ? (
+                    <img src={(partner as { badgeImg: string }).badgeImg} alt={partner.name} className="mx-auto h-16 w-16" />
+                  ) : (
+                    <span className="text-4xl">{partner.badge}</span>
+                  )}
                   <h3 className="mt-3 font-heading text-lg font-bold text-white">
                     {partner.name}
                   </h3>
@@ -155,7 +160,11 @@ export default function CertificationsPage() {
                   className="rounded-2xl border border-white/[0.06] bg-surface p-8"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{partner.badge}</span>
+                    {"badgeImg" in partner ? (
+                      <img src={(partner as { badgeImg: string }).badgeImg} alt={partner.name} className="h-10 w-10 shrink-0" />
+                    ) : (
+                      <span className="text-3xl">{partner.badge}</span>
+                    )}
                     <h3 className="font-heading text-xl font-bold text-white">{partner.name}</h3>
                   </div>
                   <p className="text-sm leading-relaxed text-muted mb-5">{partner.description}</p>

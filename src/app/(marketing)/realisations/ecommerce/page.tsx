@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
+import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
-import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
   title: "Création Boutique E-commerce Laval & Québec | Portfolio Lannkin",
@@ -37,71 +37,16 @@ const WHY_US = [
 export default function RealisationsEcommercePage() {
   return (
     <main>
-      {/* Hero compact 2-col */}
-      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png" overlay={0.65} />
-        <div className="relative z-10">
-          <Container>
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-              {/* Left */}
-              <div className="flex-1 rounded-2xl border border-white/[0.08] bg-black/80 p-6">
-                <nav className="mb-3 flex items-center gap-2 text-sm" style={{ color: "#AAAAAA" }}>
-                  <Link href="/realisations/" className="hover:text-accent transition-colors">Réalisations</Link>
-                  <span>/</span>
-                  <span style={{ color: "#FFFFFF" }}>E-commerce</span>
-                </nav>
-                <h1
-                  className="font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Création de boutiques<br className="hidden sm:block" /> e-commerce à Laval
-                </h1>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "#DDDDDD" }}>
-                  Shopify, WooCommerce ou sur mesure — notre agence e-commerce de Laval crée
-                  des boutiques en ligne performantes pour les entreprises québécoises et canadiennes
-                  qui veulent vendre plus.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href="#projets"
-                    className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
-                  >
-                    Voir nos projets
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <Link
-                    href="/devis-gratuit/"
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-accent/40"
-                    style={{ color: "#FFFFFF" }}
-                  >
-                    Devis gratuit
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right — Stats */}
-              <div className="shrink-0 lg:w-64">
-                <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
-                  <div className="space-y-3">
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>+420 %</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>de revenus e-commerce (client réel)</p>
-                    </div>
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>{ecommerceCount} projets</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>e-commerce livrés</p>
-                    </div>
-                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>🟢 Shopify Partner</p>
-                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>Certifié depuis 2015</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-      </section>
+      <RealisationsBanner
+        currentCategory="ecommerce"
+        title="Création de boutiques e-commerce à Laval"
+        description="Shopify, WooCommerce ou sur mesure — notre agence e-commerce de Laval crée des boutiques en ligne performantes pour les entreprises québécoises et canadiennes qui veulent vendre plus."
+        stats={[
+          { value: "+420 %", label: "de revenus e-commerce (client réel)" },
+          { value: `${ecommerceCount} projets`, label: "e-commerce livrés" },
+          { value: "Shopify Partner", label: "certifié depuis 2015" },
+        ]}
+      />
 
       {/* Separator */}
       <div id="projets" className="border-t border-accent/20 bg-surface">
