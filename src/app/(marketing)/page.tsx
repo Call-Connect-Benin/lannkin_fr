@@ -15,6 +15,8 @@ import {
   CTA_SECTION,
   ECOSYSTEM,
 } from "@/data/homepage";
+import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWidget";
+import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
 import { AnimatedReveal } from "@/presentation/components/ui/AnimatedReveal";
 import { Badge } from "@/presentation/components/ui/Badge";
 import { Button } from "@/presentation/components/ui/Button";
@@ -38,39 +40,57 @@ export default function HomePage() {
         <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp" overlay={0.45} />
         <div className="relative z-10">
           <Container>
-            <AnimatedReveal variant="fadeInUp">
-              <Badge>{HERO.badge}</Badge>
-            </AnimatedReveal>
-            <AnimatedReveal variant="fadeInUp" delay={0.1}>
-              <h1 className="mt-6 max-w-4xl font-heading text-4xl font-bold tracking-tight text-[#FFFFFF] sm:text-5xl lg:text-7xl">
-                {HERO.title}
-              </h1>
-            </AnimatedReveal>
-            <AnimatedReveal variant="fadeInUp" delay={0.2}>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#DDDDDD]">
-                {HERO.subtitle}
-              </p>
-            </AnimatedReveal>
-            <AnimatedReveal variant="fadeInUp" delay={0.3}>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button href={HERO.cta.primary.href}>{HERO.cta.primary.label}</Button>
-                <Button href={HERO.cta.secondary.href} variant="secondary">
-                  {HERO.cta.secondary.label}
-                </Button>
-              </div>
-            </AnimatedReveal>
-            <AnimatedReveal variant="fadeInUp" delay={0.4}>
-              <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
-                {HERO.stats.map((stat) => (
-                  <div key={stat.label}>
-                    <div className="font-heading text-3xl font-bold text-accent">
-                      {stat.value}
-                    </div>
-                    <div className="mt-1 text-sm text-[#CCCCCC]">{stat.label}</div>
+            <div className="grid items-center gap-10 lg:grid-cols-12">
+
+              {/* Left column — copy + social proof */}
+              <div className="lg:col-span-7">
+                <AnimatedReveal variant="fadeInUp">
+                  <Badge>{HERO.badge}</Badge>
+                </AnimatedReveal>
+                <AnimatedReveal variant="fadeInUp" delay={0.1}>
+                  <h1 className="mt-5 font-heading text-4xl font-bold tracking-tight text-[#FFFFFF] sm:text-5xl lg:text-6xl">
+                    {HERO.title}
+                  </h1>
+                </AnimatedReveal>
+                <AnimatedReveal variant="fadeInUp" delay={0.2}>
+                  <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#DDDDDD]">
+                    {HERO.subtitle}
+                  </p>
+                </AnimatedReveal>
+
+                {/* Stats */}
+                <AnimatedReveal variant="fadeInUp" delay={0.3}>
+                  <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-4">
+                    {HERO.stats.map((stat) => (
+                      <div key={stat.label}>
+                        <div className="font-heading text-2xl font-bold text-accent">
+                          {stat.value}
+                        </div>
+                        <div className="mt-0.5 text-xs text-[#CCCCCC]">{stat.label}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </AnimatedReveal>
+
+                {/* Google reviews — social proof */}
+                <AnimatedReveal variant="fadeInUp" delay={0.4}>
+                  <div className="mt-7">
+                    <GoogleMapsWidget />
+                  </div>
+                </AnimatedReveal>
               </div>
-            </AnimatedReveal>
+
+              {/* Right column — lead form */}
+              <div className="lg:col-span-5">
+                <AnimatedReveal variant="fadeInUp" delay={0.25}>
+                  <LeadCaptureForm
+                    title="Obtenez votre devis gratuit"
+                    subtitle="Réponse en moins de 24h par un expert Lannkin."
+                  />
+                </AnimatedReveal>
+              </div>
+
+            </div>
           </Container>
         </div>
       </section>

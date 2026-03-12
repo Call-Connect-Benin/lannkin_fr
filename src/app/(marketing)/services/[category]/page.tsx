@@ -71,7 +71,7 @@ export default async function ServiceHubPage({ params }: PageProps) {
       </Container>
 
       {/* Hero */}
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <Badge variant="default" size="sm" className="mb-6">

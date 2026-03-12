@@ -25,7 +25,7 @@ function LogoImg({ className }: { className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/images/logo-lannkin-var.png"
+      src="/images/logo-lannkin-2026.svg"
       alt="LANNKIN"
       className={cn("h-8 w-auto", className)}
     />

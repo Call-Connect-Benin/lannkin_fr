@@ -14,10 +14,11 @@ export const metadata: Metadata = {
     "Découvrez nos réalisations web : sites vitrine, multipages, onepage et boutiques e-commerce. Portfolio de l'agence web Lannkin à Laval, Québec. +10 ans d'expérience.",
 };
 
+const multiPagesCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "multipages").length;
+const onePageCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "onepage").length;
+const ecommerceCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "ecommerce").length;
+
 export default function RealisationsPage() {
-  const multiPagesCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "multipages").length;
-  const onePageCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "onepage").length;
-  const ecommerceCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "ecommerce").length;
 
   return (
     <main>
@@ -52,7 +53,7 @@ export default function RealisationsPage() {
         </div>
       </section>
 
-      {/* Portfolio Grid with filters */}
+      {/* Portfolio Grid */}
       <PortfolioGrid />
 
       {/* SEO Text Section */}

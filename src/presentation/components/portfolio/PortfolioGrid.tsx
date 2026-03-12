@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
-
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import {
-  PORTFOLIO_CATEGORIES,
   PORTFOLIO_PROJECTS,
   type PortfolioCategory,
 } from "@/data/portfolio";
@@ -17,16 +14,11 @@ import { Container } from "@/presentation/components/ui/Container";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
-  visible: {
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: [0.23, 1, 0.32, 1] as const },
-  },
-  exit: {
-    opacity: 0,
-    y: -16,
-    transition: { duration: 0.25, ease: "easeIn" as const },
-  },
+    transition: { duration: 0.45, ease: [0.23, 1, 0.32, 1] as const, delay: i * 0.06 },
+  }),
 };
 
 const CATEGORY_COLORS: Record<PortfolioCategory, string> = {
@@ -36,51 +28,26 @@ const CATEGORY_COLORS: Record<PortfolioCategory, string> = {
   international: "bg-purple-500/10 text-purple-500",
 };
 
-export function PortfolioGrid() {
-  const [activeFilter, setActiveFilter] = useState<PortfolioCategory | "all">("all");
-
+export function PortfolioGrid({ initialFilter = "all" }: { initialFilter?: PortfolioCategory | "all" }) {
   const filtered =
-    activeFilter === "all"
+    initialFilter === "all"
       ? PORTFOLIO_PROJECTS
-      : PORTFOLIO_PROJECTS.filter((p) => p.category === activeFilter);
+      : PORTFOLIO_PROJECTS.filter((p) => p.category === initialFilter);
 
   return (
     <section className="bg-surface pb-20 pt-12 lg:pb-28">
       <Container>
-        {/* Filter Tabs */}
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
-          {PORTFOLIO_CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              onClick={() => setActiveFilter(cat.id)}
-              className={cn(
-                "rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200",
-                activeFilter === cat.id
-                  ? "bg-accent text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)]"
-                  : "border border-white/[0.12] bg-surface text-white/70 hover:border-accent/30 hover:text-white",
-              )}
-            >
-              {cat.label}
-              {cat.id !== "all" && (
-                <span className="ml-2 text-xs opacity-60">
-                  ({PORTFOLIO_PROJECTS.filter((p) => p.category === cat.id).length})
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-
         {/* Grid */}
         <motion.div
           layout
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
+            {filtered.map((project, i) => (
               <motion.article
                 key={project.id}
                 layout
+                custom={i}
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
@@ -144,26 +111,27 @@ export function PortfolioGrid() {
                     </p>
                   )}
 
-                  {/* Link */}
-                  {project.externalUrl ? (
-                    <a
-                      href={project.externalUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
-                    >
-                      Visiter le site
-                      <ExternalLink className="h-3.5 w-3.5" />
-                    </a>
-                  ) : (
+                  {/* Links */}
+                  <div className="mt-4 flex items-center gap-4">
                     <Link
                       href={`/realisations/${project.slug}/`}
-                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 transition-colors duration-200 hover:text-accent"
                     >
                       Voir le projet
                       <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </Link>
-                  )}
+                    {project.externalUrl && (
+                      <a
+                        href={project.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm text-white/40 transition-colors duration-200 hover:text-white/70"
+                      >
+                        Visiter le site
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.article>
             ))}

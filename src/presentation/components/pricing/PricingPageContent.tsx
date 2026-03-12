@@ -92,7 +92,7 @@ export function PricingPageContent({
                       </div>
                     </div>
                     <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
-                      <span className="text-xl">🔵</span>
+                      <img src="/images/badges/PartnerBadgeClickable-goole.svg" alt="Google Partner" className="h-8 w-8 shrink-0" />
                       <div>
                         <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>Google Partner</p>
                         <p className="text-xs" style={{ color: "#CCCCCC" }}>Certifié depuis 2015</p>

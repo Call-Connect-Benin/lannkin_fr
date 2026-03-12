@@ -9,4 +9,5 @@ export interface PricingPlan {
   features: string[];
   highlighted?: boolean;
   cta: string;
+  paymentLink?: string;
 }

@@ -76,6 +76,7 @@ const itemVariants = {
 
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -86,11 +87,29 @@ export function ContactForm() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = async (_data: ContactFormData) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitted(true);
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "contact",
+          ...data,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'envoi.");
+      }
+
+      setIsSubmitted(true);
+      reset();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    }
   };
 
   return (
@@ -294,6 +313,16 @@ export function ContactForm() {
               <p className={errorClasses}>{errors.message.message}</p>
             )}
           </motion.div>
+
+          {/* Error */}
+          {submitError && (
+            <motion.div
+              variants={itemVariants}
+              className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+            >
+              {submitError}
+            </motion.div>
+          )}
 
           {/* Submit */}
           <motion.div variants={itemVariants}>

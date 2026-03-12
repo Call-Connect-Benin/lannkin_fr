@@ -17,7 +17,7 @@ export default function SecteursPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="py-20 lg:py-28">
+      <section className="py-10 lg:py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <span className="mb-4 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-xs font-medium text-accent">
