@@ -728,6 +728,129 @@ export const PRICING_GRAPHISME: PricingPlan[] = [
   },
 ];
 
+// --- MONTAGE VIDÉO ---
+export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
+  {
+    id: "video-unitaire",
+    name: "À la carte",
+    slug: "a-la-carte",
+    category: "montage-video",
+    price: 119,
+    priceUnit: "one-shot",
+    features: [
+      "1 vidéo montée professionnellement",
+      "Script vidéo inclus",
+      "Recherche visuelle",
+      "Voix-off incluse",
+      "Effets visuels & sonores",
+      "2 révisions incluses",
+      "Livraison format optimisé",
+    ],
+    cta: "Commander",
+  },
+  {
+    id: "video-pack-10",
+    name: "Pack 10 vidéos",
+    slug: "pack-10",
+    category: "montage-video",
+    price: 1099,
+    priceUnit: "one-shot",
+    features: [
+      "10 vidéos montées (109 $/vidéo)",
+      "Script vidéo pour chaque",
+      "Recherche visuelle",
+      "Voix-off incluse",
+      "Effets visuels & sonores",
+      "2 révisions par vidéo",
+      "Économie de 91 $ vs unitaire",
+    ],
+    highlighted: true,
+    cta: "Choisir le pack",
+  },
+  {
+    id: "video-pack-15",
+    name: "Pack 15 vidéos",
+    slug: "pack-15",
+    category: "montage-video",
+    price: 1399,
+    priceUnit: "one-shot",
+    features: [
+      "15 vidéos montées (93 $/vidéo)",
+      "Script vidéo pour chaque",
+      "Recherche visuelle",
+      "Voix-off incluse",
+      "Effets visuels & sonores",
+      "2 révisions par vidéo",
+      "Économie de 386 $ vs unitaire",
+    ],
+    cta: "Choisir le pack",
+  },
+  {
+    id: "video-illimite-1",
+    name: "Illimité 1 mois",
+    slug: "illimite-1-mois",
+    category: "montage-video",
+    price: 1199,
+    priceUnit: "month",
+    features: [
+      "Vidéos illimitées pendant 1 mois",
+      "Script, voix-off, effets inclus",
+      "2 révisions par vidéo",
+      "Tous formats (YouTube, TikTok, Shorts)",
+      "Gestionnaire de projet dédié",
+      "Livraison 48-72h par vidéo",
+    ],
+    cta: "S'abonner",
+  },
+  {
+    id: "video-illimite-3",
+    name: "Illimité 3 mois",
+    slug: "illimite-3-mois",
+    category: "montage-video",
+    price: 999,
+    priceUnit: "month",
+    setupFee: 0,
+    features: [
+      "Vidéos illimitées pendant 3 mois",
+      "Script, voix-off, effets inclus",
+      "2 révisions par vidéo",
+      "Tous formats (YouTube, TikTok, Shorts)",
+      "Gestionnaire de projet dédié",
+      "Livraison 48-72h par vidéo",
+      "Engagement 3 mois (2 999 $ total)",
+    ],
+    highlighted: true,
+    cta: "S'abonner",
+  },
+  {
+    id: "video-illimite-12",
+    name: "Illimité 12 mois",
+    slug: "illimite-12-mois",
+    category: "montage-video",
+    price: 799,
+    priceUnit: "month",
+    features: [
+      "Vidéos illimitées pendant 12 mois",
+      "Script, voix-off, effets inclus",
+      "2 révisions par vidéo",
+      "Tous formats (YouTube, TikTok, Shorts)",
+      "Gestionnaire de projet dédié",
+      "Livraison 48-72h par vidéo",
+      "Meilleur rapport qualité-prix (9 499 $ total)",
+    ],
+    cta: "S'abonner",
+  },
+];
+
+// Options supplémentaires (affichées sur la page tarifs)
+export const VIDEO_OPTIONS = [
+  { name: "Images ou animations IA", price: 35 },
+  { name: "Doublage voix-off supplémentaire", price: 39, unit: "/ langue" },
+  { name: "Sous-titrage multilingue", price: 19 },
+  { name: "Adaptation de format vidéo", price: 25 },
+  { name: "Révisions supplémentaires (2 max)", price: 49 },
+];
+
 // ============================================================
 // Agrégation & Helpers
 // ============================================================
@@ -743,6 +866,7 @@ export const ALL_PRICING: PricingPlan[] = [
   ...PRICING_SEO,
   ...PRICING_GMB,
   ...PRICING_GRAPHISME,
+  ...PRICING_MONTAGE_VIDEO,
 ];
 
 export function getPricingByCategory(category: string): PricingPlan[] {
@@ -768,4 +892,5 @@ export const PRICING_CATEGORIES = [
   { slug: "seo", name: "SEO", icon: "Search" },
   { slug: "google-my-business", name: "Google My Business", icon: "MapPin" },
   { slug: "graphisme", name: "Graphisme", icon: "Palette" },
+  { slug: "montage-video", name: "Montage Vidéo", icon: "Video" },
 ] as const;

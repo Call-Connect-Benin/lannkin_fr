@@ -144,6 +144,12 @@ export const NAV_SERVICES: MegaMenuItem = {
           icon: "Palette",
         },
         {
+          label: "Montage Vidéo",
+          href: "/services/montage-video/",
+          description: "YouTube, TikTok, Shorts, corporate",
+          icon: "Video",
+        },
+        {
           label: "Lead Generation",
           href: "/services/lead-generation/",
           description: "Landing pages, tunnels de vente",
@@ -246,6 +252,12 @@ export const NAV_TARIFS: MegaMenuItem = {
           description: "À partir de 450 $",
           icon: "Palette",
         },
+        {
+          label: "Montage Vidéo",
+          href: "/tarifs/montage-video/",
+          description: "À partir de 119 $/vidéo",
+          icon: "Video",
+        },
       ],
     },
   ],
@@ -284,6 +296,7 @@ export const FOOTER_NAVIGATION = {
       { label: "Facebook Ads", href: "/services/facebook-ads/" },
       { label: "SEO", href: "/services/seo/" },
       { label: "Graphisme", href: "/services/graphisme/" },
+      { label: "Montage Vidéo", href: "/services/montage-video/" },
       { label: "Intelligence Artificielle", href: "/services/intelligence-artificielle/" },
       { label: "Tous les services →", href: "/services/" },
     ],

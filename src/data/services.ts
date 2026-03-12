@@ -919,10 +919,54 @@ const sites3dSubs: ServiceData[] = [
 ];
 
 // ============================================================
+// 21. MONTAGE VIDÉO
+// ============================================================
+
+const montageVideo: ServiceData = {
+  slug: "montage-video",
+  name: "Montage Vidéo",
+  category: "creative",
+  parentSlug: null,
+  icon: "Video",
+  shortDescription: "Création et montage vidéo professionnel : YouTube, TikTok, Shorts, Reels, vidéo corporate, mariage, événementiel.",
+  metaTitle: "Montage Vidéo Professionnel Laval | Création Vidéo Québec",
+  metaDescription: "Service de montage vidéo professionnel à Laval. YouTube, TikTok, Shorts, Reels. Script, voix-off, effets visuels. Dès 119 $/vidéo. Devis gratuit.",
+  keywords: ["montage vidéo laval", "création vidéo montréal", "monteur vidéo québec", "vidéo professionnelle laval", "montage youtube", "vidéo tiktok", "vidéo corporate"],
+  relatedServices: ["graphisme", "facebook-ads", "tiktok-ads", "google-ads", "lead-generation", "intelligence-artificielle"],
+  relatedSectors: ["restaurant-restauration", "beaute-esthetique", "immobilier", "tourisme-hotellerie", "commerce-detail", "ecommerce-en-ligne"],
+  relatedBlogCategories: ["reseaux-sociaux", "marketing-digital"],
+  pricingLink: "/tarifs/montage-video/",
+  stripeLinks: [],
+  subServices: [
+    "montage-video-youtube", "montage-video-tiktok", "montage-video-shorts-reels",
+    "montage-video-instagram", "montage-video-linkedin", "montage-video-publicitaire",
+    "video-mariage", "video-anniversaire", "video-corporate", "video-evenementiel",
+    "video-immobilier", "video-ecommerce-produit",
+  ],
+};
+
+const montageVideoSubs: ServiceData[] = [
+  // --- Par plateforme ---
+  { slug: "montage-video-youtube", name: "Montage Vidéo YouTube", category: "creative", parentSlug: "montage-video", icon: "Youtube", shortDescription: "Montage vidéo YouTube professionnel. Intros, transitions, sous-titres, miniatures, optimisation SEO YouTube.", metaTitle: "Montage Vidéo YouTube | LANNKIN Laval", metaDescription: "Montage vidéo YouTube professionnel à Laval. Script, voix-off, effets visuels, miniatures. Boostez votre chaîne YouTube.", keywords: ["montage vidéo youtube", "monteur youtube", "vidéo youtube professionnel", "création vidéo youtube", "éditeur vidéo youtube laval"], relatedServices: ["montage-video-tiktok", "montage-video-shorts-reels", "google-ads"], relatedSectors: ["restaurant-restauration", "beaute-esthetique", "education-formation"], relatedBlogCategories: ["reseaux-sociaux"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "montage-video-tiktok", name: "Montage Vidéo TikTok", category: "creative", parentSlug: "montage-video", icon: "Music", shortDescription: "Montage vidéo TikTok accrocheur. Format vertical, tendances, hooks percutants, effets viraux.", metaTitle: "Montage Vidéo TikTok | Création Contenu Viral", metaDescription: "Montage vidéo TikTok à Laval. Contenu viral, tendances, hooks percutants. Augmentez votre visibilité sur TikTok.", keywords: ["montage vidéo tiktok", "vidéo tiktok professionnel", "création contenu tiktok", "monteur tiktok", "vidéo virale tiktok"], relatedServices: ["montage-video-shorts-reels", "montage-video-youtube", "tiktok-ads"], relatedSectors: ["restaurant-restauration", "beaute-esthetique", "commerce-detail"], relatedBlogCategories: ["reseaux-sociaux"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "montage-video-shorts-reels", name: "Montage Shorts & Reels", category: "creative", parentSlug: "montage-video", icon: "Smartphone", shortDescription: "Montage YouTube Shorts et Instagram Reels. Format court vertical, contenu dynamique et engageant.", metaTitle: "Montage Shorts & Reels | Vidéo Format Court", metaDescription: "Montage YouTube Shorts et Instagram Reels à Laval. Format court percutant, sous-titres animés, effets tendance.", keywords: ["montage shorts youtube", "montage reels instagram", "vidéo format court", "shorts professionnel", "reels professionnel"], relatedServices: ["montage-video-tiktok", "montage-video-instagram", "montage-video-youtube"], relatedSectors: ["beaute-esthetique", "restaurant-restauration", "commerce-detail"], relatedBlogCategories: ["reseaux-sociaux"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "montage-video-instagram", name: "Montage Vidéo Instagram", category: "creative", parentSlug: "montage-video", icon: "Camera", shortDescription: "Montage vidéo Instagram : Stories, Reels, publications vidéo. Contenu esthétique et engageant.", metaTitle: "Montage Vidéo Instagram | Contenu Visuel Pro", metaDescription: "Montage vidéo Instagram à Laval. Stories, Reels, publications. Contenu esthétique qui engage votre audience.", keywords: ["montage vidéo instagram", "vidéo instagram professionnel", "stories instagram", "contenu instagram vidéo"], relatedServices: ["montage-video-shorts-reels", "montage-video-tiktok", "facebook-ads"], relatedSectors: ["beaute-esthetique", "restaurant-restauration", "tourisme-hotellerie"], relatedBlogCategories: ["reseaux-sociaux"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "montage-video-linkedin", name: "Montage Vidéo LinkedIn", category: "creative", parentSlug: "montage-video", icon: "Linkedin", shortDescription: "Montage vidéo LinkedIn professionnel. Témoignages, thought leadership, recrutement, présentation corporate.", metaTitle: "Montage Vidéo LinkedIn | Contenu B2B Pro", metaDescription: "Montage vidéo LinkedIn à Laval. Contenu B2B professionnel, témoignages, thought leadership. Renforcez votre image.", keywords: ["montage vidéo linkedin", "vidéo linkedin professionnel", "contenu vidéo b2b", "vidéo corporate linkedin"], relatedServices: ["montage-video-youtube", "video-corporate", "linkedin-ads"], relatedSectors: ["services-professionnels", "education-formation", "juridique-avocats"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "montage-video-publicitaire", name: "Montage Vidéo Publicitaire", category: "creative", parentSlug: "montage-video", icon: "Megaphone", shortDescription: "Montage vidéo publicitaire pour campagnes ads. Formats optimisés Google, Meta, TikTok, YouTube.", metaTitle: "Montage Vidéo Publicitaire | Ads Créatives", metaDescription: "Montage vidéo publicitaire à Laval. Créatives ads optimisées pour Google, Meta, TikTok. Maximisez votre ROI.", keywords: ["montage vidéo publicitaire", "vidéo ads", "créative vidéo publicitaire", "vidéo marketing", "production vidéo publicitaire"], relatedServices: ["google-ads", "facebook-ads", "tiktok-ads", "lead-generation"], relatedSectors: ["ecommerce-en-ligne", "commerce-detail", "automobile"], relatedBlogCategories: ["google-ads", "facebook-ads"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  // --- Par thématique ---
+  { slug: "video-mariage", name: "Vidéo Mariage", category: "creative", parentSlug: "montage-video", icon: "Heart", shortDescription: "Montage vidéo mariage professionnel. Film souvenir, highlights, aftermovie, teaser réseaux sociaux.", metaTitle: "Montage Vidéo Mariage Laval | Film Mariage", metaDescription: "Montage vidéo mariage à Laval. Film souvenir, highlights, aftermovie. Revivez votre journée en images. Devis gratuit.", keywords: ["montage vidéo mariage", "vidéo mariage laval", "film mariage montréal", "vidéaste mariage québec", "monteur vidéo mariage"], relatedServices: ["video-anniversaire", "video-evenementiel", "graphisme"], relatedSectors: ["tourisme-hotellerie", "beaute-esthetique"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "video-anniversaire", name: "Vidéo Anniversaire", category: "creative", parentSlug: "montage-video", icon: "PartyPopper", shortDescription: "Montage vidéo anniversaire et fêtes. Rétrospective, diaporama animé, vidéo surprise personnalisée.", metaTitle: "Montage Vidéo Anniversaire | Vidéo Fête", metaDescription: "Montage vidéo anniversaire à Laval. Rétrospective, diaporama animé, vidéo surprise. Un cadeau original et émouvant.", keywords: ["montage vidéo anniversaire", "vidéo anniversaire", "vidéo fête", "diaporama anniversaire", "vidéo surprise"], relatedServices: ["video-mariage", "video-evenementiel", "montage-video-youtube"], relatedSectors: ["tourisme-hotellerie"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "video-corporate", name: "Vidéo Corporate", category: "creative", parentSlug: "montage-video", icon: "Building2", shortDescription: "Vidéo corporate professionnelle. Présentation entreprise, culture, recrutement, rapport annuel en vidéo.", metaTitle: "Vidéo Corporate Laval | Film d'Entreprise", metaDescription: "Vidéo corporate à Laval. Film d'entreprise, présentation, recrutement, culture. Renforcez votre image de marque.", keywords: ["vidéo corporate", "film entreprise laval", "vidéo institutionnelle", "vidéo recrutement", "présentation vidéo entreprise"], relatedServices: ["montage-video-linkedin", "montage-video-youtube", "graphisme"], relatedSectors: ["services-professionnels", "education-formation", "construction-renovation"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "video-evenementiel", name: "Vidéo Événementiel", category: "creative", parentSlug: "montage-video", icon: "CalendarDays", shortDescription: "Montage vidéo événementiel. Conférences, salons, lancements, galas, aftermovies professionnels.", metaTitle: "Vidéo Événementiel Laval | Aftermovie Pro", metaDescription: "Montage vidéo événementiel à Laval. Conférences, salons, galas, lancements produits. Aftermovies professionnels.", keywords: ["vidéo événementiel", "aftermovie professionnel", "vidéo conférence", "vidéo salon", "vidéo gala", "vidéo lancement"], relatedServices: ["video-corporate", "montage-video-youtube", "montage-video-linkedin"], relatedSectors: ["tourisme-hotellerie", "education-formation", "services-professionnels"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "video-immobilier", name: "Vidéo Immobilier", category: "creative", parentSlug: "montage-video", icon: "Home", shortDescription: "Vidéo immobilière professionnelle. Visites filmées, drone, présentation de biens, agences immobilières.", metaTitle: "Vidéo Immobilier Laval | Visite Vidéo Pro", metaDescription: "Vidéo immobilière à Laval. Visites filmées, présentations de biens, vidéo drone. Vendez plus vite avec la vidéo.", keywords: ["vidéo immobilier", "visite vidéo immobilier", "vidéo drone immobilier", "film immobilier", "vidéo agent immobilier"], relatedServices: ["video-corporate", "visite-virtuelle-360", "montage-video-youtube"], relatedSectors: ["immobilier", "construction-renovation"], relatedBlogCategories: ["marketing-digital"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+  { slug: "video-ecommerce-produit", name: "Vidéo E-commerce & Produit", category: "creative", parentSlug: "montage-video", icon: "ShoppingBag", shortDescription: "Vidéo produit e-commerce. Unboxing, démonstration, présentation produit, vidéo 360° produit.", metaTitle: "Vidéo Produit E-commerce | Vidéo Unboxing", metaDescription: "Vidéo produit et e-commerce à Laval. Unboxing, démonstration, présentation. Boostez vos ventes avec la vidéo.", keywords: ["vidéo produit", "vidéo ecommerce", "unboxing vidéo", "vidéo démonstration produit", "vidéo 360 produit"], relatedServices: ["montage-video-publicitaire", "montage-video-instagram", "montage-video-tiktok"], relatedSectors: ["ecommerce-en-ligne", "commerce-detail", "beaute-esthetique"], relatedBlogCategories: ["ecommerce"], pricingLink: "/tarifs/montage-video/", stripeLinks: [] },
+];
+
+// ============================================================
 // EXPORT — Assembled data
 // ============================================================
 
-/** All 20 service hubs */
+/** All 21 service hubs */
 export const SERVICE_HUBS: ServiceData[] = [
   conceptionWeb,
   vibeCoding,
@@ -944,6 +988,7 @@ export const SERVICE_HUBS: ServiceData[] = [
   intelligenceArtificielle,
   developpementSaas,
   sitesImmersifs3d,
+  montageVideo,
 ];
 
 /** All sub-services flat array */
@@ -967,6 +1012,7 @@ export const SERVICE_SUBS: ServiceData[] = [
   ...iaSubs,
   ...devSaasSubs,
   ...sites3dSubs,
+  ...montageVideoSubs,
 ];
 
 /** All services combined (hubs + subs) */
