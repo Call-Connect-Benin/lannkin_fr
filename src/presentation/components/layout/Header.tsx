@@ -194,6 +194,7 @@ function DesktopNavItem({
   return (
     <Link
       href={item.href}
+      {...("target" in item && item.target ? { target: item.target, rel: "noopener noreferrer" } : {})}
       className={cn(
         "px-3 py-2 text-sm font-medium transition-colors duration-200",
         isActive ? "text-accent" : "text-white/80 hover:text-white"
@@ -338,6 +339,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
+                      {...(item.target ? { target: item.target, rel: "noopener noreferrer" } : {})}
                       className={cn(
                         "block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-150",
                         pathname.startsWith(item.href)
