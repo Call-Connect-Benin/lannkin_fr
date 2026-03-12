@@ -44,7 +44,7 @@ export default function BlogPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="parallax-section relative overflow-hidden py-24 sm:py-32">
+      <section className="parallax-section relative overflow-hidden py-12 sm:py-16">
         <ParallaxBg src="/images/rendu3D/rendu3d-diamant-cubes-flottants.png" overlay={0.55} />
         <div className="relative z-10">
           <div className="absolute inset-0 -z-10">

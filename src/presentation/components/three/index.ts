@@ -4,3 +4,5 @@ export { FloatingGrid } from "./FloatingGrid";
 export { SpinningLogo } from "./SpinningLogo";
 export { ParticleField } from "./ParticleField";
 export { GradientSphere } from "./GradientSphere";
+export { PricingBgScene } from "./PricingBgScene";
+export { ServiceHeroScene } from "./ServiceHeroScene";

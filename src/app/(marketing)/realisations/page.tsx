@@ -18,41 +18,83 @@ export default function RealisationsPage() {
   const multiPagesCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "multipages").length;
   const onePageCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "onepage").length;
   const ecommerceCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "ecommerce").length;
+  const internationalCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "international").length;
+
+  const categories = [
+    { href: "/realisations/multipages/", label: "Sites multipages", count: multiPagesCount },
+    { href: "/realisations/onepage/", label: "Sites onepage", count: onePageCount },
+    { href: "/realisations/ecommerce/", label: "E-commerce", count: ecommerceCount },
+    { href: "/realisations/international/", label: "International", count: internationalCount },
+  ];
 
   return (
     <main>
       {/* Hero */}
-      <section className="parallax-section relative overflow-hidden py-20 lg:py-32">
+      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
         <ParallaxBg src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png" overlay={0.55} />
         <div className="relative z-10">
           <Container>
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Nos Réalisations
-              </h1>
-              <p className="mt-5 text-lg leading-relaxed text-[#DDDDDD]">
-                De Laval à Montréal, découvrez les projets web que nous avons créés pour des
-                entreprises québécoises : sites vitrine, multipages, onepage et boutiques
-                e-commerce.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
-                <span className="flex items-center gap-1.5 text-sm text-[#CCCCCC]">
-                  <span className="text-accent">★</span> 4,9/5 sur Google
-                </span>
-                <span className="flex items-center gap-1.5 text-sm text-[#CCCCCC]">
-                  <span className="text-accent">✓</span> {PORTFOLIO_PROJECTS.length} projets
-                  réalisés
-                </span>
-                <span className="flex items-center gap-1.5 text-sm text-[#CCCCCC]">
-                  <span className="text-accent">◆</span> +10 ans d&apos;expérience
-                </span>
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+              {/* Left: text */}
+              <div className="max-w-xl rounded-2xl border border-white/[0.08] bg-black/80 p-6">
+                <h1
+                  className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+                  style={{ color: "#FFFFFF" }}
+                >
+                  Nos Réalisations
+                </h1>
+                <p className="mt-5 text-lg leading-relaxed" style={{ color: "#DDDDDD" }}>
+                  De Laval à Montréal, découvrez les projets web que nous avons créés pour des
+                  entreprises québécoises : sites vitrine, multipages, onepage et boutiques
+                  e-commerce.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                  <span className="flex items-center gap-1.5 text-sm" style={{ color: "#CCCCCC" }}>
+                    <span className="text-accent">★</span> 4,9/5 sur Google
+                  </span>
+                  <span className="flex items-center gap-1.5 text-sm" style={{ color: "#CCCCCC" }}>
+                    <span className="text-accent">✓</span> {PORTFOLIO_PROJECTS.length} projets
+                    réalisés
+                  </span>
+                  <span className="flex items-center gap-1.5 text-sm" style={{ color: "#CCCCCC" }}>
+                    <span className="text-accent">◆</span> +10 ans d&apos;expérience
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: category filter buttons */}
+              <div className="flex flex-col gap-3 rounded-2xl border border-white/[0.08] bg-black/80 p-6 lg:min-w-[240px]">
+                <p
+                  className="text-xs font-semibold uppercase tracking-widest"
+                  style={{ color: "rgba(255,255,255,0.5)" }}
+                >
+                  Filtrer par catégorie
+                </p>
+                <Link
+                  href="/realisations/"
+                  className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.25)] transition-all duration-200"
+                >
+                  Tous les projets{" "}
+                  <span className="ml-1.5 text-xs opacity-70">({PORTFOLIO_PROJECTS.length})</span>
+                </Link>
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.href}
+                    href={cat.href}
+                    className="rounded-full border border-white/[0.15] bg-white/5 px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-accent/40 hover:bg-white/10"
+                    style={{ color: "rgba(255,255,255,0.75)" }}
+                  >
+                    {cat.label}{" "}
+                    <span className="ml-1.5 text-xs opacity-60">({cat.count})</span>
+                  </Link>
+                ))}
               </div>
             </div>
           </Container>
         </div>
       </section>
 
-      {/* Portfolio Grid with filters */}
+      {/* Portfolio Grid */}
       <PortfolioGrid />
 
       {/* SEO Text Section */}

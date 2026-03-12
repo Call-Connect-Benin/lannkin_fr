@@ -78,9 +78,51 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/images/logo-lannkin-2026.svg",
+    apple: "/images/logo-lannkin-2026.svg",
+  },
   alternates: {
     canonical: "https://lannkin.ca",
   },
+};
+
+const LOCAL_BUSINESS_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Lannkin S.A.",
+  alternateName: "Agence web Lannkin",
+  url: "https://lannkin.ca",
+  logo: "https://lannkin.ca/images/logo-lannkin-2026.svg",
+  image: "https://lannkin.ca/images/logo-lannkin-2026.svg",
+  description:
+    "Agence marketing digital et développement web à Laval, Québec. Google Ads, SEO, Facebook Ads, conception web, IA et 3D.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Laval",
+    addressRegion: "QC",
+    addressCountry: "CA",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 45.5733,
+    longitude: -73.6921,
+  },
+  telephone: "+1-514-000-0000",
+  priceRange: "$$",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "54",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  sameAs: [
+    "https://www.google.com/maps/search/LANNKIN%20S.A",
+    "https://www.facebook.com/lannkin",
+    "https://www.instagram.com/lannkin",
+    "https://www.linkedin.com/company/lannkin",
+  ],
 };
 
 export default function RootLayout({
@@ -95,6 +137,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSONLD) }}
+        />
         <Script
           id="gtm-head"
           strategy="afterInteractive"

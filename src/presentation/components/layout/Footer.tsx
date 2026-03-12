@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FOOTER_NAVIGATION } from "@/data/navigation";
 import { SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { GoogleMapsWidget } from "./GoogleMapsWidget";
 
 // ---------------------------------------------------------------------------
 // Social links config
@@ -72,12 +73,13 @@ export function Footer() {
           >
             {/* Brand column */}
             <motion.div variants={columnVariants} className="lg:col-span-2">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-0.5 font-heading text-xl font-bold tracking-tight text-white"
-              >
-                LANNKIN
-                <span className="text-accent">.</span>
+              <Link href="/" className="inline-flex items-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/logo-lannkin-2026.svg"
+                  alt="LANNKIN"
+                  className="h-7 w-auto"
+                />
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
                 Agence de marketing digital et de
@@ -104,6 +106,11 @@ export function Footer() {
                     <Icon className="h-4 w-4" />
                   </a>
                 ))}
+              </div>
+
+              {/* Google reviews badge */}
+              <div className="mt-5">
+                <GoogleMapsWidget />
               </div>
             </motion.div>
 

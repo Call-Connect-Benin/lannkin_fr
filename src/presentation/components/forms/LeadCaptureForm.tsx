@@ -62,6 +62,7 @@ export function LeadCaptureForm({
   onSuccess,
 }: LeadCaptureFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -72,11 +73,30 @@ export function LeadCaptureForm({
     resolver: zodResolver(leadCaptureSchema),
   });
 
-  const onSubmit = async (_data: LeadCaptureData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    reset();
-    onSuccess?.();
+  const onSubmit = async (data: LeadCaptureData) => {
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "lead",
+          ...data,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'envoi.");
+      }
+
+      setIsSubmitted(true);
+      reset();
+      onSuccess?.();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    }
   };
 
   return (
@@ -184,6 +204,10 @@ export function LeadCaptureForm({
                   <p className={errorClasses}>{errors.service.message}</p>
                 )}
               </div>
+
+              {submitError && (
+                <p className="text-red-600 text-xs">{submitError}</p>
+              )}
 
               <Button
                 type="submit"

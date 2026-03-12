@@ -33,14 +33,24 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
     resolver: zodResolver(newsletterSchema),
   });
 
-  const onSubmit = async (_data: NewsletterData) => {
+  const onSubmit = async (data: NewsletterData) => {
     setSubmitError(null);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'inscription.");
+      }
+
       setIsSubmitted(true);
       reset();
-    } catch {
-      setSubmitError("Une erreur est survenue. Veuillez réessayer.");
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
     }
   };
 

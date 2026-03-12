@@ -115,6 +115,7 @@ export function DevisForm() {
   const [step, setStep] = useState(1);
   const [direction, setDirection] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -148,10 +149,29 @@ export function DevisForm() {
     setStep(1);
   };
 
-  const onSubmit = async (_data: DevisFormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitted(true);
-    reset();
+  const onSubmit = async (data: DevisFormData) => {
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "devis",
+          ...data,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'envoi.");
+      }
+
+      setIsSubmitted(true);
+      reset();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    }
   };
 
   if (isSubmitted) {
@@ -516,6 +536,13 @@ export function DevisForm() {
                   <p className={errorClasses}>{errors.objectives.message}</p>
                 )}
               </div>
+
+              {/* Error */}
+              {submitError && (
+                <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                  {submitError}
+                </div>
+              )}
 
               {/* Navigation */}
               <div className="flex justify-between">

@@ -1,0 +1,220 @@
+import type { Metadata } from "next";
+
+import { ArrowRight, Check } from "lucide-react";
+import Link from "next/link";
+
+import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
+import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
+import { Container } from "@/presentation/components/ui/Container";
+import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
+
+export const metadata: Metadata = {
+  title: "Agence Web Internationale Laval Canada | Portfolio Projets Internationaux Lannkin",
+  description:
+    "Agence web bilingue à Laval (Canada) : création de sites web et stratégies digitales pour les entreprises internationales. France, Suisse, USA, Maroc. Portfolio et devis.",
+  alternates: {
+    canonical: "https://lannkin.ca/realisations/international/",
+  },
+  openGraph: {
+    title: "Agence Web Internationale Laval Canada | Portfolio Lannkin",
+    description:
+      "Portfolio international de Lannkin : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web canadienne bilingue.",
+    url: "https://lannkin.ca/realisations/international/",
+  },
+};
+
+const internationalCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "international").length;
+
+const INCLUS = [
+  "Sites web bilingues français/anglais",
+  "SEO international : Google.fr, Google.ca, Google.com",
+  "Hébergement selon la localisation cible (EU/CA/US)",
+  "Respect des normes RGPD (Europe) et LPRPDE (Canada)",
+  "Traduction et localisation du contenu",
+  "Campagnes Google Ads et Meta Ads internationales",
+];
+
+export default function RealisationsInternationalPage() {
+  return (
+    <main>
+      {/* Hero compact 2-col */}
+      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
+        <ParallaxBg src="/images/rendu3D/rendu3d-rouge-vert-dramatic.png" overlay={0.65} />
+        <div className="relative z-10">
+          <Container>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
+              {/* Left */}
+              <div className="flex-1 rounded-2xl border border-white/[0.08] bg-black/80 p-6">
+                <nav className="mb-3 flex items-center gap-2 text-sm" style={{ color: "#AAAAAA" }}>
+                  <Link href="/realisations/" className="hover:text-accent transition-colors">Réalisations</Link>
+                  <span>/</span>
+                  <span style={{ color: "#FFFFFF" }}>International</span>
+                </nav>
+                <h1
+                  className="font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+                  style={{ color: "#FFFFFF" }}
+                >
+                  Agence web internationale<br className="hidden sm:block" /> basée au Canada
+                </h1>
+                <p className="mt-4 text-base leading-relaxed" style={{ color: "#DDDDDD" }}>
+                  De Laval à Paris, de Montréal à Lausanne — notre agence web canadienne accompagne
+                  les entreprises d&apos;Europe, des États-Unis, du Maroc et du Canada dans leur
+                  présence digitale internationale.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href="#projets"
+                    className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
+                  >
+                    Voir nos projets
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <Link
+                    href="/devis-gratuit/"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-accent/40"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    Devis gratuit
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right — Stats */}
+              <div className="shrink-0 lg:w-64">
+                <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
+                  <div className="space-y-3">
+                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>40+ pays</p>
+                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>clients générés via nos sites</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <p className="text-2xl font-bold" style={{ color: "#FFFFFF" }}>{internationalCount} projets</p>
+                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>internationaux livrés</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                      <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>🌍 FR / EN / DE</p>
+                      <p className="text-xs mt-0.5" style={{ color: "#CCCCCC" }}>Sites bilingues et multilingues</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </div>
+      </section>
+
+      {/* Separator */}
+      <div id="projets" className="border-t border-accent/20 bg-surface">
+        <Container>
+          <div className="flex items-center justify-between py-3">
+            <p className="text-xs text-muted">Nos réalisations — projets internationaux</p>
+            <Link href="/realisations/" className="text-xs text-muted hover:text-accent transition-colors">
+              ← Voir tous les projets
+            </Link>
+          </div>
+        </Container>
+      </div>
+
+      {/* Portfolio Grid — pre-filtered on international */}
+      <PortfolioGrid initialFilter="international" />
+
+      {/* SEO Content Section */}
+      <section className="bg-surface-light py-16 lg:py-20">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+              Agence web canadienne pour projets internationaux — Laval, Québec
+            </h2>
+            <div className="mt-6 grid gap-8 sm:grid-cols-2">
+              <div className="text-sm leading-relaxed text-muted space-y-4">
+                <p>
+                  Lannkin est une <strong className="text-white">agence web bilingue basée à Laval, Canada</strong>,
+                  avec une expertise reconnue pour les projets web internationaux. Notre équipe maîtrise
+                  le SEO en français, anglais et allemand, et comprend les spécificités de chaque marché :
+                  Google France, Google Suisse, Google Maroc, Google.com pour le marché américain.
+                </p>
+                <p>
+                  Pour les <strong className="text-white">entreprises françaises, européennes ou américaines</strong>
+                  {" "}qui souhaitent faire appel à une agence web au Canada, Lannkin offre un avantage
+                  unique : des tarifs compétitifs en dollars canadiens, une expertise technique de premier
+                  niveau et une compréhension culturelle des marchés francophones et anglophones.
+                </p>
+                <p>
+                  Pour les <strong className="text-white">entreprises québécoises et canadiennes</strong>
+                  {" "}qui veulent percer à l&apos;international, nous créons des sites web adaptés aux
+                  marchés cibles avec SEO international, hébergement optimisé et campagnes publicitaires
+                  multilingues.
+                </p>
+              </div>
+              <div>
+                <h3 className="mb-4 font-semibold text-white">Nos services pour projets internationaux :</h3>
+                <ul className="space-y-2">
+                  {INCLUS.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span className="text-sm text-muted">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Markets block */}
+            <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
+              <h2 className="font-heading text-xl font-bold text-white">
+                Marchés internationaux couverts par notre agence
+              </h2>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  { flag: "🇨🇦", title: "Canada", desc: "Québec, Ontario, Alberta — SEO .ca et campagnes bilingues" },
+                  { flag: "🇫🇷", title: "France", desc: "Paris, Lyon, Marseille — SEO Google.fr, RGPD" },
+                  { flag: "🇨🇭", title: "Suisse", desc: "Suisse romande et alémanique — .ch, multilingue" },
+                  { flag: "🇲🇦", title: "Maroc", desc: "Casablanca, Agadir — tourisme, commerce, B2B" },
+                  { flag: "🇺🇸", title: "États-Unis", desc: "Google.com, campagnes USD, marché anglophone" },
+                  { flag: "🇩🇪", title: "Europe DACH", desc: "Allemagne, Autriche — e-commerce, Google Shopping" },
+                ].map((market) => (
+                  <div key={market.title} className="rounded-xl border border-white/[0.06] p-4">
+                    <p className="text-lg">{market.flag}</p>
+                    <p className="mt-1 font-semibold text-white text-sm">{market.title}</p>
+                    <p className="mt-1 text-xs text-muted">{market.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link
+                  href="/devis-gratuit/"
+                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
+                >
+                  Discuter de votre projet international
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Related categories */}
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              <Link
+                href="/realisations/multipages/"
+                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+              >
+                → Sites multipages
+              </Link>
+              <Link
+                href="/realisations/ecommerce/"
+                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+              >
+                → Boutiques e-commerce
+              </Link>
+              <Link
+                href="/realisations/onepage/"
+                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+              >
+                → Sites onepage
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </main>
+  );
+}

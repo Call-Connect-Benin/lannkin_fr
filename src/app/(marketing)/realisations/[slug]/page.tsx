@@ -44,7 +44,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
   return (
     <main>
       {/* Hero */}
-      <section className="parallax-section relative overflow-hidden py-20 lg:py-28">
+      <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
         <ParallaxBg
           src={PARALLAX_IMAGES[project.category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.png"}
           overlay={0.6}

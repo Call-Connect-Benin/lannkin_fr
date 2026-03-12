@@ -16,6 +16,7 @@ export default function TarifsFacebookAdsPage() {
       subtitle="De la création de votre page professionnelle à la gestion de campagnes publicitaires sur Facebook, Instagram et Messenger. Maximisez votre ROI sur l'écosystème Meta."
       plans={PRICING_FACEBOOK_ADS}
       serviceHref="/services/facebook-ads/"
+      parallaxImage="/images/rendu3D/rendu3d-cubes-lateral-angle.png"
     />
   );
 }
