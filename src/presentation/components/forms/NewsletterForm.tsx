@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
+import { useFormSubmit } from "@/presentation/hooks";
 
 const newsletterSchema = z.object({
   email: z.string().email("Adresse email invalide"),
@@ -23,6 +24,7 @@ interface NewsletterFormProps {
 export function NewsletterForm({ className }: NewsletterFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const { submit } = useFormSubmit();
 
   const {
     register,
@@ -35,22 +37,16 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
 
   const onSubmit = async (data: NewsletterData) => {
     setSubmitError(null);
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+    const result = await submit({
+      url: "/api/newsletter",
+      body: data,
+    });
 
-      if (!res.ok) {
-        const json = await res.json().catch(() => ({}));
-        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'inscription.");
-      }
-
+    if (result.ok) {
       setIsSubmitted(true);
       reset();
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    } else {
+      setSubmitError(result.error ?? "Une erreur est survenue.");
     }
   };
 

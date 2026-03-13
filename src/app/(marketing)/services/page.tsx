@@ -79,7 +79,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services — two-column layout */}
-      <section className="bg-white pb-20 pt-12">
+      <section className="pb-20 pt-12" style={{ backgroundColor: "#0C0C0C" }}>
         <Container>
           <div className="flex gap-10 lg:items-start">
 
@@ -119,7 +119,7 @@ export default function ServicesPage() {
               </div>
 
               {/* TOC */}
-              <nav className="rounded-xl border border-black/[0.06] bg-[#F8F8F5] p-5">
+              <nav className="rounded-xl p-5" style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted">
                   Sommaire
                 </p>
@@ -128,7 +128,8 @@ export default function ServicesPage() {
                     <li key={category}>
                       <a
                         href={`#${category}`}
-                        className="flex items-center gap-2 text-sm text-[#374151] transition-colors hover:text-accent"
+                        className="flex items-center gap-2 text-sm transition-colors hover:text-accent"
+                        style={{ color: "rgba(255,255,255,0.65)" }}
                       >
                         <span className="h-1 w-1 shrink-0 rounded-full bg-accent/50" />
                         {CATEGORY_LABELS[category] ?? category}
@@ -151,7 +152,8 @@ export default function ServicesPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}/`}
-                        className="group glass rounded-xl p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.08)]"
+                        className="group rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
+                        style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.08)" }}
                       >
                         <div className="mb-3 flex items-center gap-3">
                           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">

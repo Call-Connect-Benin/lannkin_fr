@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 
 import {
   HERO,
-  CERTIFICATIONS,
   SERVICES_OVERVIEW,
   STATS,
   WHY_LANNKIN,
@@ -86,7 +85,7 @@ export default function HomePage() {
                 sur le web.
               </h1>
               <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-              <p className="mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+              <p className="mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.70)" }}>
                 {HERO.subtitle}
               </p>
 
@@ -102,7 +101,7 @@ export default function HomePage() {
                 <Link
                   href={HERO.cta.secondary.href}
                   className="inline-flex items-center gap-2 rounded-xl border px-7 py-3.5 text-sm font-medium transition-colors"
-                  style={{ borderColor: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.60)" }}
+                  style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
                 >
                   {HERO.cta.secondary.label}
                 </Link>
@@ -111,18 +110,18 @@ export default function HomePage() {
               {/* Stats */}
               <div
                 className="mt-10 grid grid-cols-2 gap-5 border-t pt-8 sm:grid-cols-4"
-                style={{ borderColor: "rgba(255,255,255,0.07)" }}
+                style={{ borderColor: "rgba(255,255,255,0.12)" }}
               >
                 {HERO.stats.map((stat) => (
                   <div key={stat.label}>
                     <div className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{stat.value}</div>
-                    <div className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>{stat.label}</div>
+                    <div className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.label}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 border-t pt-6" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
-                <GoogleMapsWidget />
+              <div className="mt-6 border-t pt-6" style={{ borderColor: "rgba(255,255,255,0.12)" }}>
+                <GoogleMapsWidget variant="dark" />
               </div>
             </div>
 
@@ -130,7 +129,7 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div
                 className="rounded-2xl p-6 lg:p-8"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <LeadCaptureForm
                   title="Obtenez votre devis gratuit"
@@ -144,47 +143,23 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          2. CERTIFICATIONS
-      ═══════════════════════════════════════════════════════ */}
-      <section className="py-10">
-        <div
-          className="mb-10 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
-        />
-        <Container>
-          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.28)" }}>
-              {CERTIFICATIONS.title}
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              {CERTIFICATIONS.items.map((cert) => (
-                <span key={cert.name} className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.55)" }}>
-                  {cert.name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
           3. SERVICES OVERVIEW
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-20 pt-4 lg:pb-28">
+      <section className="pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <Container>
-          <div className="mb-14">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+          <div className="mb-10">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {SERVICES_OVERVIEW.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {SERVICES_OVERVIEW.title}
             </h2>
             <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.65)" }}>
               {SERVICES_OVERVIEW.subtitle}
             </p>
           </div>
@@ -194,7 +169,7 @@ export default function HomePage() {
               <div
                 key={cat.title}
                 className="rounded-2xl p-6"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <h3 className="mb-5 font-heading text-base font-bold" style={{ color: "#FFFFFF" }}>{cat.title}</h3>
                 <ul className="space-y-3">
@@ -203,7 +178,7 @@ export default function HomePage() {
                       <Link
                         href={svc.href}
                         className="flex items-center gap-2.5 text-sm transition-colors hover:text-[#498f6d]"
-                        style={{ color: "rgba(255,255,255,0.55)" }}
+                        style={{ color: "rgba(255,255,255,0.70)" }}
                       >
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "rgba(73,143,109,0.55)" }} />
                         {svc.name}
@@ -219,7 +194,7 @@ export default function HomePage() {
             <Link
               href={SERVICES_OVERVIEW.cta.href}
               className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+              style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
             >
               {SERVICES_OVERVIEW.cta.label}
               <ArrowRight className="h-4 w-4" />
@@ -231,10 +206,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           4. STATS
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[45%]">
@@ -250,9 +225,9 @@ export default function HomePage() {
         </div>
         <Container className="relative z-10">
           <div className="mb-12 text-center">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {STATS.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {STATS.title}
             </h2>
@@ -261,7 +236,7 @@ export default function HomePage() {
             {STATS.items.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-heading text-3xl font-bold" style={{ color: "#498f6d" }}>{stat.value}</div>
-                <div className="mt-2 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>{stat.label}</div>
+                <div className="mt-2 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -271,10 +246,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           5. POURQUOI LANNKIN
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 left-0 w-[45%]">
@@ -289,15 +264,15 @@ export default function HomePage() {
           </div>
         </div>
         <Container className="relative z-10">
-          <div className="mb-14">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+          <div className="mb-10">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {WHY_LANNKIN.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {WHY_LANNKIN.title}
             </h2>
             <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.65)" }}>
               {WHY_LANNKIN.subtitle}
             </p>
           </div>
@@ -306,7 +281,7 @@ export default function HomePage() {
               <div
                 key={point.title}
                 className="rounded-xl p-6"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div
                   className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
@@ -315,7 +290,7 @@ export default function HomePage() {
                   <LucideIcon name={point.icon} className="h-5 w-5" />
                 </div>
                 <h3 className="font-heading text-base font-bold" style={{ color: "#FFFFFF" }}>{point.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>{point.description}</p>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>{point.description}</p>
               </div>
             ))}
           </div>
@@ -325,13 +300,13 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           6. SERVICES PHARES
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-20 pt-4 lg:pb-28">
+      <section className="pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <Container>
-          <div className="mb-14">
+          <div className="mb-10">
             <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {FEATURED_SERVICES.badge}
             </p>
@@ -346,7 +321,7 @@ export default function HomePage() {
                 key={svc.title}
                 href={svc.href}
                 className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div className="mb-5 flex items-start justify-between">
                   <div
@@ -357,13 +332,13 @@ export default function HomePage() {
                   </div>
                   <div className="text-right">
                     <div className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{svc.stat.value}</div>
-                    <div className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>{svc.stat.label}</div>
+                    <div className="text-xs" style={{ color: "rgba(255,255,255,0.50)" }}>{svc.stat.label}</div>
                   </div>
                 </div>
                 <h3 className="font-heading text-lg font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#FFFFFF" }}>
                   {svc.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>
+                <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
                   {svc.description}
                 </p>
                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.25)" }} />
@@ -376,10 +351,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           7. TESTIMONIALS
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[40%]">
@@ -394,21 +369,21 @@ export default function HomePage() {
           </div>
         </div>
         <Container className="relative z-10">
-          <div className="mb-14 text-center">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+          <div className="mb-10 text-center">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {TESTIMONIALS.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {TESTIMONIALS.title}
             </h2>
-            <p className="mt-3 text-sm" style={{ color: "rgba(255,255,255,0.38)" }}>{TESTIMONIALS.subtitle}</p>
+            <p className="mt-3 text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>{TESTIMONIALS.subtitle}</p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {TESTIMONIALS.items.map((testimonial) => (
               <div
                 key={testimonial.name}
                 className="rounded-2xl p-6"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div className="mb-4 flex items-center gap-0.5">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -420,7 +395,7 @@ export default function HomePage() {
                 </p>
                 <div>
                   <div className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>{testimonial.name}</div>
-                  <div className="text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
+                  <div className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>
                     {testimonial.company} · {testimonial.sector}
                   </div>
                 </div>
@@ -487,21 +462,21 @@ export default function HomePage() {
                 alt=""
                 loading="lazy"
                 decoding="async"
-                className="h-14 w-full object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                className="h-14 w-full object-contain opacity-75 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
               />
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-white/10 pt-10">
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 pt-10" style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}>
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.50)" }}>
               Certifications &amp; partenariats
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-10 w-10 opacity-80 transition-opacity hover:opacity-100" />
+            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-10 w-auto opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0" />
+            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" loading="lazy" decoding="async" className="h-10 w-auto opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0" />
+            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
           </div>
         </Container>
       </section>
@@ -509,20 +484,20 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           8. PRICING PREVIEW
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-20 pt-4 lg:pb-28">
+      <section className="pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <Container>
-          <div className="mb-14 text-center">
+          <div className="mb-10 text-center">
             <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {PRICING_PREVIEW.badge}
             </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {PRICING_PREVIEW.title}
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(255,255,255,0.65)" }}>
               {PRICING_PREVIEW.subtitle}
             </p>
           </div>
@@ -535,7 +510,7 @@ export default function HomePage() {
                   href={plan.href}
                   className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5"
                   style={{
-                    backgroundColor: "#111111",
+                    backgroundColor: "#141414",
                     border: highlighted ? "1px solid rgba(73,143,109,0.30)" : "1px solid rgba(255,255,255,0.07)",
                     boxShadow: highlighted ? "0 0 30px rgba(73,143,109,0.08)" : undefined,
                   }}
@@ -550,7 +525,7 @@ export default function HomePage() {
                   )}
                   <div className="font-heading text-base font-bold" style={{ color: "#FFFFFF" }}>{plan.name}</div>
                   <div className="mt-2 font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{plan.price}</div>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>{plan.description}</p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>{plan.description}</p>
                   <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.22)" }} />
                 </Link>
               );
@@ -560,7 +535,7 @@ export default function HomePage() {
             <Link
               href={PRICING_PREVIEW.cta.href}
               className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+              style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
             >
               {PRICING_PREVIEW.cta.label}
               <ArrowRight className="h-4 w-4" />
@@ -572,20 +547,20 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           9. SECTEURS
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-20 pt-4 lg:pb-28">
+      <section className="pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <Container>
-          <div className="mb-14 text-center">
+          <div className="mb-10 text-center">
             <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {SECTORS_PREVIEW.badge}
             </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {SECTORS_PREVIEW.title}
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(255,255,255,0.65)" }}>
               {SECTORS_PREVIEW.subtitle}
             </p>
           </div>
@@ -595,7 +570,7 @@ export default function HomePage() {
                 key={sector.name}
                 href={sector.href}
                 className="group flex flex-col items-center gap-3 rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-0.5"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div
                   className="flex h-10 w-10 items-center justify-center rounded-xl"
@@ -616,7 +591,7 @@ export default function HomePage() {
             <Link
               href={SECTORS_PREVIEW.cta.href}
               className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+              style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
             >
               {SECTORS_PREVIEW.cta.label}
               <ArrowRight className="h-4 w-4" />
@@ -628,10 +603,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           10. RESSOURCES
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[40%]">
@@ -646,15 +621,15 @@ export default function HomePage() {
           </div>
         </div>
         <Container className="relative z-10">
-          <div className="mb-14">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+          <div className="mb-10">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {BLOG_PREVIEW.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {BLOG_PREVIEW.title}
             </h2>
             <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(255,255,255,0.65)" }}>
               {BLOG_PREVIEW.subtitle}
             </p>
           </div>
@@ -664,7 +639,7 @@ export default function HomePage() {
                 key={resource.name}
                 href={resource.href}
                 className="group flex gap-4 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-colors"
@@ -687,7 +662,7 @@ export default function HomePage() {
                       {resource.type}
                     </span>
                   </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
                     {resource.description}
                   </p>
                 </div>
@@ -698,7 +673,7 @@ export default function HomePage() {
             <Link
               href={BLOG_PREVIEW.cta.href}
               className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+              style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
             >
               {BLOG_PREVIEW.cta.label}
               <ArrowRight className="h-4 w-4" />
@@ -710,10 +685,10 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           11. CTA FINAL
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[55%]">
@@ -744,7 +719,7 @@ export default function HomePage() {
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {CTA_SECTION.title}
             </h2>
-            <p className="mx-auto mt-4 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.52)" }}>
+            <p className="mx-auto mt-4 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
               {CTA_SECTION.subtitle}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -759,12 +734,12 @@ export default function HomePage() {
               <Link
                 href={CTA_SECTION.cta.secondary.href}
                 className="inline-flex items-center gap-2 rounded-xl border px-8 py-3.5 text-sm font-medium transition-colors"
-                style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.55)" }}
+                style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.70)" }}
               >
                 {CTA_SECTION.cta.secondary.label}
               </Link>
             </div>
-            <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
+            <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>
               {CTA_SECTION.trust.map((item) => (
                 <span key={item}>✓ {item}</span>
               ))}
@@ -776,13 +751,13 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           12. ÉCOSYSTÈME
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-20 pt-4 lg:pb-28">
+      <section className="pb-10 pt-4 lg:pb-14">
         <div
-          className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          className="mb-8 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
         />
         <Container>
-          <div className="mb-14 text-center">
+          <div className="mb-10 text-center">
             <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {ECOSYSTEM.badge}
             </p>
@@ -798,7 +773,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <div
                   className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
@@ -809,7 +784,7 @@ export default function HomePage() {
                 <div className="font-heading font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#FFFFFF" }}>
                   {site.name}
                 </div>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
                   {site.description}
                 </p>
                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.22)" }} />

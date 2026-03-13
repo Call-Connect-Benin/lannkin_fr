@@ -101,16 +101,16 @@ export default async function ServiceSubPage({ params }: PageProps) {
   const sectorLabels: Record<string, string> = {
     "restaurant-restauration": "Restaurant & Restauration",
     immobilier: "Immobilier",
-    "sante-clinique": "Sante & Clinique",
-    "construction-renovation": "Construction & Renovation",
-    "commerce-detail": "Commerce de detail",
+    sante: "Santé & Bien-être",
+    construction: "Construction & Rénovation",
+    "commerce-detail": "Commerce de détail",
     "services-professionnels": "Services professionnels",
-    "beaute-esthetique": "Beaute & Esthetique",
+    beaute: "Beauté & Esthétique",
     automobile: "Automobile",
-    "ecommerce-en-ligne": "E-commerce",
-    "education-formation": "Education & Formation",
-    "tourisme-hotellerie": "Tourisme & Hotellerie",
-    "juridique-avocats": "Juridique & Avocats",
+    ecommerce: "E-commerce",
+    education: "Éducation & Formation",
+    tourisme: "Tourisme & Hôtellerie",
+    juridique: "Juridique",
   };
 
   return (

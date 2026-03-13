@@ -264,33 +264,33 @@ export const BLOG_PREVIEW = {
     {
       name: "Guide Google Ads pour PME",
       description: "Comment lancer vos premières campagnes publicitaires et obtenir un ROI positif.",
-      href: "/ressources/guide-google-ads-pme/",
+      href: "/ressources-gratuites/",
       icon: "Target",
       type: "Guide",
     },
     {
       name: "Audit SEO gratuit",
       description: "Analysez votre site web et identifiez les opportunités de croissance organique.",
-      href: "/ressources/audit-seo-gratuit/",
+      href: "/ressources-gratuites/",
       icon: "Search",
       type: "Outil",
     },
     {
       name: "Template site vitrine",
       description: "Checklist complète pour créer un site web professionnel qui convertit.",
-      href: "/ressources/template-site-vitrine/",
+      href: "/ressources-gratuites/",
       icon: "FileCode",
       type: "Template",
     },
     {
       name: "Calculateur ROI publicité",
       description: "Estimez le retour sur investissement de vos campagnes publicitaires.",
-      href: "/ressources/calculateur-roi/",
+      href: "/ressources-gratuites/",
       icon: "TrendingUp",
       type: "Outil",
     },
   ],
-  cta: { label: "Toutes les ressources", href: "/ressources/" },
+  cta: { label: "Toutes les ressources", href: "/ressources-gratuites/" },
 } as const;
 
 // --- 11. CTA SECTION ---

@@ -14,6 +14,7 @@ import {
 } from "@/domain/entities/contact-form";
 import { cn } from "@/lib/utils";
 import { Button } from "@/presentation/components/ui";
+import { useFormSubmit } from "@/presentation/hooks";
 
 const devisExtensionSchema = z.object({
   urgency: z.enum(["normal", "urgent", "tres-urgent"]),
@@ -149,28 +150,24 @@ export function DevisForm() {
     setStep(1);
   };
 
+  const { submit } = useFormSubmit();
+
   const onSubmit = async (data: DevisFormData) => {
     setSubmitError(null);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          formType: "devis",
-          ...data,
-          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
-        }),
-      });
+    const result = await submit({
+      url: "/api/contact",
+      body: {
+        formType: "devis",
+        ...data,
+        sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+      },
+    });
 
-      if (!res.ok) {
-        const json = await res.json().catch(() => ({}));
-        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'envoi.");
-      }
-
+    if (result.ok) {
       setIsSubmitted(true);
       reset();
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    } else {
+      setSubmitError(result.error ?? "Une erreur est survenue.");
     }
   };
 

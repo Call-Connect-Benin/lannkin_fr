@@ -65,6 +65,22 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[API/newsletter] sendMail error:", err);
-    return NextResponse.json({ error: "Erreur lors de l'inscription." }, { status: 500 });
+    const code = (err as NodeJS.ErrnoException).code;
+    if (code === "ETIMEDOUT" || code === "ECONNREFUSED" || code === "ESOCKET") {
+      return NextResponse.json(
+        { error: "Le serveur email est temporairement indisponible. Réessayez dans quelques instants." },
+        { status: 503 },
+      );
+    }
+    if (code === "EAUTH") {
+      return NextResponse.json(
+        { error: "Erreur de configuration email. Veuillez nous contacter directement à info@lannkin.ca." },
+        { status: 503 },
+      );
+    }
+    return NextResponse.json(
+      { error: "Une erreur est survenue lors de l'inscription. Veuillez réessayer." },
+      { status: 500 },
+    );
   }
 }

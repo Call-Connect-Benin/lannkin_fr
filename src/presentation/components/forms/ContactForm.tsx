@@ -13,6 +13,7 @@ import {
 } from "@/domain/entities/contact-form";
 import { cn } from "@/lib/utils";
 import { Button } from "@/presentation/components/ui";
+import { useFormSubmit } from "@/presentation/hooks";
 
 const serviceOptions = [
   { value: "sites-web", label: "Sites Web" },
@@ -77,6 +78,7 @@ const itemVariants = {
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const { submit } = useFormSubmit();
 
   const {
     register,
@@ -89,26 +91,20 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setSubmitError(null);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          formType: "contact",
-          ...data,
-          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
-        }),
-      });
+    const result = await submit({
+      url: "/api/contact",
+      body: {
+        formType: "contact",
+        ...data,
+        sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+      },
+    });
 
-      if (!res.ok) {
-        const json = await res.json().catch(() => ({}));
-        throw new Error((json as { error?: string }).error ?? "Erreur lors de l'envoi.");
-      }
-
+    if (result.ok) {
       setIsSubmitted(true);
       reset();
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    } else {
+      setSubmitError(result.error ?? "Une erreur est survenue.");
     }
   };
 

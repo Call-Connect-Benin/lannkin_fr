@@ -3,15 +3,15 @@
 /* ===== DESIGN TOKENS ===== */
 
 @theme {
-  /* Colors — Light theme (token names kept for cascade compatibility) */
-  --color-black: #F8F8F5;
-  --color-surface: #FFFFFF;
-  --color-surface-light: #F0F0EC;
+  /* Colors — Dark theme */
+  --color-black: #0C0C0C;
+  --color-surface: #141414;
+  --color-surface-light: #1A1A1A;
   --color-accent: #498f6d;
   --color-accent-secondary: #85353e;
-  --color-paper: #F8F8F5;
-  --color-white: #1A1A1A;
-  --color-muted: #6B7280;
+  --color-paper: #0C0C0C;
+  --color-white: #FFFFFF;
+  --color-muted: #9CA3AF;
   --color-danger: #DC2626;
   --color-on-accent: #FFFFFF;
 
@@ -119,10 +119,10 @@ body::before {
 
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(20, 20, 20, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .glass-dark {
@@ -144,8 +144,8 @@ body::before {
 /* ===== SELECTION ===== */
 
 ::selection {
-  background-color: rgba(73, 143, 109, 0.2);
-  color: #1A1A1A;
+  background-color: rgba(73, 143, 109, 0.3);
+  color: #FFFFFF;
 }
 
 /* ===== SCROLLBAR ===== */
@@ -155,16 +155,16 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F0F0EC;
+  background: #141414;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4C4C0;
+  background: #333;
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9CA3AF;
+  background: #555;
 }
 
 /* ===== PARALLAX DARK SECTIONS ===== */

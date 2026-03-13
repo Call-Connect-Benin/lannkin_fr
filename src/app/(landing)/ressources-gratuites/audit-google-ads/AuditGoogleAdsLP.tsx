@@ -722,10 +722,10 @@ export function AuditGoogleAdsLP() {
           </div>
           <div className="ft-col">
             <h4>Services</h4>
-            <a href="https://www.lannkin.ca/service-google-ads/" target="_blank" rel="noopener noreferrer">Google Ads</a>
-            <a href="https://www.lannkin.ca/pack-smart-business/" target="_blank" rel="noopener noreferrer">Pack Smart Business</a>
-            <a href="https://www.lannkin.ca/conception-de-site-web/" target="_blank" rel="noopener noreferrer">Conception de site web</a>
-            <a href="https://www.lannkin.ca/maximisez-votre-visibilite-grace-au-seo/" target="_blank" rel="noopener noreferrer">SEO</a>
+            <a href="/services/google-ads/">Google Ads</a>
+            <a href="/services/">Pack Smart Business</a>
+            <a href="/services/conception-web/">Conception de site web</a>
+            <a href="/services/seo/">SEO</a>
           </div>
         </div>
         <div className="ft-bottom"><span className="ft-copy">&copy; 2026 LANNKIN S.A. - Tous droits réservés - Canada</span></div>
