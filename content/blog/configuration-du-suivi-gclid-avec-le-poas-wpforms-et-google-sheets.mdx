@@ -1,0 +1,192 @@
+---
+title: "Configuration du Suivi GCLID avec le POAS: WPForms et Google Sheets"
+excerpt: "Le suivi du GCLID (Google Click Identifier) est crucial pour analyser l&rsquo;efficacité de vos campagnes publicitaires sur Google Ads et optimiser vos performances. Ce guide vous montre comment configurer WPForms pour capturer le GCLID des annonces Google Ads et l’enregistrer dans Google Sheets, vo"
+date: "2025-06-04"
+category: "google-ads"
+tags: []
+author: "Équipe Lannkin"
+readTime: "7 min"
+---
+
+Le suivi du GCLID (Google Click Identifier) est crucial pour analyser l’efficacité de vos campagnes publicitaires sur Google Ads et optimiser vos performances. Ce guide vous montre comment configurer WPForms pour capturer le GCLID des annonces Google Ads et l’enregistrer dans Google Sheets, vous permettant ainsi de suivre vos conversions et de maximiser votre ROI.
+
+#### 1\. Ajout des Champs Cachés dans WPForms
+
+Pour suivre le GCLID, vous devez d’abord ajouter trois champs cachés dans votre formulaire WPForms :
+
+-   **GCLID** (nom du champ : `gclid`)
+-   **Date et Heure** (nom du champ : `date_time`) (optionnel)
+-   **Nom du Site** (optionnel, avec une valeur par défaut dans WPForms)
+
+Ces champs captureront les informations essentielles lors de la soumission du formulaire.
+
+#### 2\. Ajout du Script dans `header.php`
+
+Ensuite, vous devez ajouter un script dans le fichier `header.php` de votre thème WordPress, juste avant la fermeture de la balise `<head>`. Ce script permet de récupérer le GCLID de l’URL et de le stocker dans un cookie pour une utilisation ultérieure :
+
+```
+<script> 
+document.addEventListener('DOMContentLoaded', function () { 
+    const urlParams = new URLSearchParams(window.location.search); 
+    const gclid = urlParams.get('gclid'); 
+    if (gclid) { 
+        const date = new Date(); 
+        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); 
+        document.cookie = `firstpartygclid=${gclid}; expires=${date.toGMTString()}; path=/`; 
+    } 
+}); 
+</script>
+```
+
+Ce script stocke le GCLID dans un cookie qui sera récupéré plus tard lors de la soumission du formulaire.
+
+#### 3\. Ajout du Script dans `footer.php`
+
+Le deuxième script est ajouté dans `footer.php`, juste avant la fermeture de la balise `</body>`. Ce script récupère le GCLID du cookie et l’insère dans le champ caché `gclid` du formulaire WPForms :
+
+```
+<script> 
+document.addEventListener("DOMContentLoaded", function() { 
+    var gclid = getCookie("firstpartygclid"); // Récupération du cookie GCLID 
+    if (gclid) { 
+        var hiddenField = document.getElementById("wpforms-...-field_..."); // ID du champ GCLID 
+        if (hiddenField) { 
+            hiddenField.value = gclid; 
+            console.log("✅ GCLID injecté :", gclid); 
+        } else { 
+            console.log("❌ Champ caché GCLID introuvable."); 
+        } 
+    } else { 
+        console.log("❌ Aucun GCLID trouvé dans les cookies."); 
+    } 
+}); 
+
+function getCookie(name) { 
+    var value = "; " + document.cookie; 
+    var parts = value.split("; " + name + "="); 
+    if (parts.length === 2) return parts.pop().split(";").shift(); 
+} 
+</script>
+```
+
+Ce script insère automatiquement le GCLID dans le formulaire lorsque l’utilisateur soumet le formulaire.
+
+#### 4\. Script pour Ajouter la Date et l’Heure (Optionnel)
+
+Si vous souhaitez également enregistrer la date et l’heure de la soumission, ajoutez ce script dans `footer.php` sous le précédent :
+
+```
+<script> 
+document.addEventListener("DOMContentLoaded", function () { 
+    let dateField = document.getElementById("wpforms-78697-field_11"); // ID du champ date 
+    if (dateField) { 
+        let now = new Date(); 
+        let formattedDate = now.toISOString().slice(0, 19).replace("T", " "); // Format YYYY-MM-DD HH:MM:SS 
+        dateField.value = formattedDate; 
+    } 
+}); 
+</script>
+```
+
+Ce script insère automatiquement la date et l’heure actuelles dans le champ dédié du formulaire WPForms.
+
+#### 5\. Paramétrage du Champ « Nom du Site » (Optionnel)
+
+Dans WPForms, définissez la valeur par défaut du champ **Nom du site** en dur. Par exemple, si votre site est `omegaexpert.fr`, utilisez cette valeur comme valeur par défaut dans le champ.
+
+#### 6\. Vérification du Bon Fonctionnement
+
+Avant de finaliser l’intégration, il est essentiel de vérifier si tout fonctionne correctement :
+
+1.  Ouvrez une page contenant votre formulaire.
+2.  Ajoutez `?gclid=test123` à l’URL pour tester la capture du GCLID.
+3.  Ouvrez la console (F12 > Console) et vérifiez si le message **« ✅ GCLID injecté »** apparaît.
+4.  Soumettez le formulaire et assurez-vous que les données (GCLID, Date et Heure, Nom du site) sont bien envoyées à Google Sheets.
+
+#### 7\. Connecter WPForms à Google Sheets avec Bit Integrations
+
+Pour connecter WPForms à Google Sheets, suivez ces étapes :
+
+**Installer Bit Integrations**
+
+Allez dans l’onglet **Extensions** de WordPress.
+
+Recherchez **« Bit Integrations »** et installez-le
+
+Activez le plugin.
+
+**Créer une Intégration**
+
+Accédez à **Bit Integrations**
+
+cliquez sur **Create Integration**.
+
+Sélectionnez **WPForms** comme déclencheur et choisissez le formulaire que vous avez configuré.
+
+**Connecter Google Sheets**
+
+Recherchez **« Google Sheets »** dans les destinations.
+
+Connectez votre compte Google via l’URL de redirection bit et autorisez Bit Integrations sur [https://console.cloud.google.com](https://console.cloud.google.com/).
+
+Sélectionnez la feuille Google Sheet où vous souhaitez enregistrer les données.
+
+**Associer les Champs**
+
+Associez les champs WPForms aux colonnes Google Sheets :
+
+**GCLID** → Colonne GCLID
+
+**Date** → Colonne Date de soumission
+
+**Nom du site** → Colonne Site
+
+**Testez l’Intégration**
+
+Après avoir effectué l’intégration, effectuez un test pour vous assurer que les données sont correctement envoyées à Google Sheets.
+
+### Conclusion
+
+En configurant correctement WPForms avec le suivi GCLID et l’intégration à Google Sheets, vous pourrez suivre de manière précise l’efficacité de vos campagnes Google Ads et enregistrer toutes les informations cruciales pour une analyse approfondie. Grâce à cette configuration, vous optimiserez vos campagnes publicitaires et améliorerez votre retour sur investissement.
+
+### Questions Fréquentes (FAQ)
+
+#### 1\. **Qu’est-ce que le GCLID et pourquoi est-il important ?**
+
+Le GCLID (Google Click Identifier) est un identifiant unique attribué à chaque clic sur une annonce Google Ads. Il permet de suivre et de lier les conversions directement aux clics publicitaires, offrant ainsi une analyse détaillée de la performance de vos campagnes Google Ads.
+
+#### 2\. **Comment puis-je vérifier si le GCLID est correctement capturé dans mon formulaire WPForms ?**
+
+Pour vérifier si le GCLID est capturé correctement, ajoutez `?gclid=test123` à l’URL de la page contenant le formulaire. Ouvrez la console du navigateur (F12 > Console) et assurez-vous que le message **« ✅ GCLID injecté »** apparaît. Ensuite, soumettez le formulaire et vérifiez que les données sont bien envoyées à Google Sheets.
+
+#### 3\. **Pourquoi utiliser un cookie pour stocker le GCLID ?**
+
+Le cookie permet de conserver le GCLID d’un utilisateur lorsqu’il navigue sur votre site, même s’il quitte la page ou revient plus tard. Cela garantit que le GCLID est correctement capturé, même si le formulaire n’est pas soumis immédiatement après un clic sur l’annonce.
+
+#### 4\. **Puis-je utiliser le script de date et heure sans ajouter d’autres champs dans le formulaire ?**
+
+Oui, vous pouvez utiliser le script pour ajouter la date et l’heure sans ajouter d’autres champs dans le formulaire. Cependant, il est important que le champ **Date** soit présent dans votre formulaire WPForms pour stocker cette information.
+
+#### 5\. **Dois-je utiliser un plugin tiers pour connecter WPForms à Google Sheets ?**
+
+Oui, le plugin **Bit Integrations** est nécessaire pour connecter WPForms à Google Sheets. Il permet de configurer facilement l’intégration entre les deux et de s’assurer que les données soumises par le formulaire sont automatiquement envoyées à la feuille Google Sheets.
+
+#### 6\. **Quels types de données peuvent être envoyés à Google Sheets via WPForms ?**
+
+Vous pouvez envoyer des informations telles que le **GCLID**, la **date et l’heure** de soumission, et le **nom du site**. Ces informations sont essentielles pour analyser l’efficacité de vos campagnes Google Ads et suivre les conversions en temps réel.
+
+#### 7\. **Est-ce que cette configuration fonctionne sur toutes les pages de mon site WordPress ?**
+
+Oui, tant que le script est correctement ajouté dans les fichiers `header.php` et `footer.php` de votre thème WordPress, le suivi du GCLID fonctionnera sur toutes les pages contenant le formulaire WPForms.
+
+#### 8\. **Est-ce que je peux ajouter d’autres champs personnalisés dans WPForms pour collecter des informations supplémentaires ?**
+
+Oui, vous pouvez ajouter d’autres champs personnalisés dans WPForms pour collecter des informations supplémentaires, comme des champs pour les coordonnées des utilisateurs ou des détails spécifiques liés à vos campagnes.
+
+#### 9\. **Que faire si le GCLID n’est pas capturé ou enregistré dans le formulaire ?**
+
+Si le GCLID n’est pas capturé ou enregistré, vérifiez si le script dans le fichier `header.php` fonctionne correctement et assurez-vous que le cookie est bien stocké. Vous pouvez également vérifier les erreurs dans la console de votre navigateur pour identifier d’éventuels problèmes.
+
+#### 10\. **Est-ce que cette méthode de suivi est conforme aux règles de confidentialité (RGPD) ?**
+
+Oui, en utilisant des cookies pour capturer le GCLID, vous devez vous assurer que votre site informe les utilisateurs de l’utilisation de cookies et qu’ils donnent leur consentement, conformément aux exigences du RGPD. Assurez-vous d’avoir une politique de cookies claire sur votre site.

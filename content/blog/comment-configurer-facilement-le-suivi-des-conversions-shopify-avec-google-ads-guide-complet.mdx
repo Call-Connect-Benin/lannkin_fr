@@ -1,0 +1,94 @@
+---
+title: "Comment configurer facilement le suivi des conversions Shopify avec Google Ads : Guide complet"
+excerpt: "Le suivi des conversions est essentiel pour toute boutique Shopify souhaitant maximiser l’efficacité de ses campagnes Google Ads. Il permet de mesurer précisément l’impact des annonces sur vos ventes et d’adapter votre stratégie marketing en conséquence. Dans cet article, nous vous présentons deux m"
+date: "2025-05-16"
+category: "google-ads"
+tags: []
+author: "Équipe Lannkin"
+readTime: "4 min"
+---
+
+Le suivi des conversions est essentiel pour toute boutique Shopify souhaitant maximiser l’efficacité de ses campagnes Google Ads. Il permet de mesurer précisément l’impact des annonces sur vos ventes et d’adapter votre stratégie marketing en conséquence. Dans cet article, nous vous présentons deux méthodes simples pour configurer ce suivi.
+
+**Méthode 1 : Utiliser l’application Google & YouTube de Shopify (la plus simple)**
+
+**Étapes pour l’installation**
+
+1.  Connectez-vous à votre compte Shopify.
+2.  Dans la boutique d’applications Shopify, recherchez et installez l’application officielle **Google**.
+
+1.  Connectez votre compte Google Ads à l’application.
+
+1.  Créez ou liez un compte Merchant Center.
+2.  Activez le suivi des conversions dans les paramètres de l’application.
+
+1.  Vérifiez dans Google Ads que Merchant Center et Shopify sont bien liés via le gestionnaire de données.
+
+1.  Activez la fonctionnalité Customer Match pour créer automatiquement des listes clients.
+2.  Finalisez la configuration et laissez l’application synchroniser vos données.
+
+**Avantages**
+
+-   Installation rapide et sans code.
+-   Gestion automatique des tags de conversion.
+-   Intégration directe avec Merchant Center.
+
+**Limites**
+
+-   Possibilité d’erreurs ou de données partielles.
+-   Personnalisation limitée comparée à la méthode manuelle.
+
+**Méthode 2 : Intégrer manuellement le tag Google Ads dans Shopify (plus avancée)**
+
+**Création de la conversion dans Google Ads**
+
+1.  Dans Google Ads, allez dans « Objectifs » > « Créer une action de conversion ».
+2.  Sélectionnez « Achat » comme type de conversion et nommez-la clairement.
+3.  Configurez la valeur dynamique pour récupérer le montant exact de chaque vente.
+4.  Définissez la fenêtre de conversion (par défaut 30 jours).
+5.  Validez et récupérez le code de suivi (event snippet).
+
+**Implémentation du code dans Shopify**
+
+1.  Connectez-vous à Shopify et ouvrez les paramètres.
+2.  Accédez à « Événements client personnalisés ».
+3.  Ajoutez un nouveau pixel personnalisé nommé « Google Ads Conversion Tracking ».
+4.  Collez le code de suivi obtenu de Google Ads.
+5.  Modifiez les valeurs conversion ID et conversion label dans le code selon votre compte.
+6.  Enregistrez et connectez le pixel.
+
+**Test et validation**
+
+-   Effectuez un achat test via un mode de paiement factice.
+-   Vérifiez que la conversion est bien enregistrée dans Google Ads (peut prendre plusieurs heures).
+-   Utilisez un outil comme [Tag Assistant](https://tagassistant.google.com/) pour confirmer le déclenchement du tag.
+
+**Gérer plusieurs tags pour éviter la double comptabilisation**
+
+Si vous utilisez les deux méthodes simultanément, évitez de configurer les deux tags comme « primaires » dans Google Ads pour ne pas doubler les conversions.
+
+Pour cela :
+
+-   Allez dans les paramètres de conversion Google Ads.
+-   Passez en « secondaire » ou désactivez la conversion à ne pas utiliser pour l’optimisation.
+-   Vous gardez ainsi une sauvegarde fonctionnelle sans fausser vos statistiques.
+
+**Conclusion**
+
+Mettre en place un suivi des conversions efficace entre Shopify et Google Ads est un levier puissant pour optimiser vos campagnes publicitaires. L’application Shopify offre une solution rapide, tandis que la méthode manuelle garantit plus de personnalisation et de fiabilité. En combinant ces deux approches avec soin, vous sécurisez vos données et maximisez votre retour sur investissement.
+
+Pour approfondir vos compétences, n’hésitez pas à consulter nos services dédiés à [Google Ads](https://www.lannkin.ca/service-google-ads/) et au [Référencement SEO.](https://www.lannkin.ca/maximisez-votre-visibilite-grace-au-seo/)
+
+**Mini FAQ**
+
+**Comment vérifier que le suivi des conversions fonctionne ?**  
+Réalisez un achat test avec un paiement factice et vérifiez dans Google Ads si la conversion est enregistrée. Vous pouvez aussi utiliser l’outil Tag Assistant de Google.
+
+**Puis-je utiliser les deux méthodes de suivi en même temps ?**  
+Oui, mais veillez à ne pas configurer les deux tags comme « primaires » pour éviter la double comptabilisation des conversions.
+
+**Faut-il modifier le code de suivi Google Ads ?**  
+Oui, il faut adapter le conversion ID et le conversion label à ceux spécifiques à votre compte Google Ads.
+
+**Que faire si l’application Shopify ne synchronise pas correctement les données ?**  
+Dans ce cas, la méthode manuelle avec ajout de tags personnalisés peut offrir une meilleure fiabilité.
