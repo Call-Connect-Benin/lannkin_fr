@@ -121,9 +121,20 @@ export default function BlogPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}/`}
-                  className="group flex flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+                  className="group flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
                   style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.06)" }}
                 >
+                  {post.coverImage && (
+                    <div className="aspect-[16/9] w-full overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={post.coverImage}
+                        alt={post.title}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col p-5">
                   <div className="mb-4 flex items-center gap-3">
                     <span
                       className="rounded-full px-2.5 py-0.5 font-mono text-xs font-medium"
@@ -158,6 +169,7 @@ export default function BlogPage() {
                       Lire l&apos;article
                       <ArrowRight className="h-3 w-3" />
                     </span>
+                  </div>
                   </div>
                 </Link>
               ))}
