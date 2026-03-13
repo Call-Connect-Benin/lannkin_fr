@@ -146,10 +146,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           2. CERTIFICATIONS
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="py-10"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="py-10">
+        <div
+          className="mb-10 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.28)" }}>
@@ -169,7 +170,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           3. SERVICES OVERVIEW
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28">
+      <section className="pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="mb-14">
             <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
@@ -226,10 +231,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           4. STATS
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="relative overflow-hidden py-20 lg:py-28"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[45%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -265,7 +271,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           5. POURQUOI LANNKIN
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
+      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 left-0 w-[45%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -315,15 +325,16 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           6. SERVICES PHARES
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="py-20 lg:py-28"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="mb-14">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {FEATURED_SERVICES.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {FEATURED_SERVICES.title}
             </h2>
@@ -365,7 +376,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           7. TESTIMONIALS
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
+      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[40%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -494,15 +509,16 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           8. PRICING PREVIEW
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="py-20 lg:py-28"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="mb-14 text-center">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {PRICING_PREVIEW.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {PRICING_PREVIEW.title}
             </h2>
@@ -556,12 +572,16 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           9. SECTEURS
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28">
+      <section className="pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="mb-14 text-center">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {SECTORS_PREVIEW.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {SECTORS_PREVIEW.title}
             </h2>
@@ -608,10 +628,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           10. RESSOURCES
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="relative overflow-hidden py-20 lg:py-28"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[40%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -689,7 +710,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           11. CTA FINAL
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
+      <section className="relative overflow-hidden pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-y-0 right-0 w-[55%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -751,15 +776,16 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           12. ÉCOSYSTÈME
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="py-20 lg:py-28"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
-      >
+      <section className="pb-20 pt-4 lg:pb-28">
+        <div
+          className="mb-14 h-px w-full"
+          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        />
         <Container>
           <div className="mb-14 text-center">
-            <span className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
               {ECOSYSTEM.badge}
-            </span>
+            </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
               {ECOSYSTEM.title}
             </h2>
