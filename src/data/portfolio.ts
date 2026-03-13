@@ -768,6 +768,336 @@ const additionalProjects: PortfolioProject[] = [
       "Portfolio Lannkin : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial Québec.",
     previewImage: "/images/portfolio/scs-entretien.webp",
   },
+  {
+    id: "christian-olivier-ducharme",
+    slug: "christian-olivier-ducharme",
+    name: "Christian-Olivier Ducharme",
+    client: "Christian-Olivier Ducharme",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Courtage immobilier",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un courtier immobilier avec intégration Centris, pages propriétés et prise de rendez-vous en ligne.",
+    description:
+      "Réalisation d'un site web multipage pour Christian-Olivier Ducharme, courtier immobilier couvrant Montréal et Laval. Pages Acheter/Vendre, intégration Centris/MLS, galerie de propriétés, témoignages clients et formulaire de prise de rendez-vous en ligne.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Centris"],
+    results: [
+      "Site professionnel avec intégration Centris",
+      "Prise de rendez-vous en ligne opérationnelle",
+      "Visibilité locale Montréal et Laval améliorée",
+      "Image de marque personnelle renforcée",
+    ],
+    challenge:
+      "Se démarquer dans un marché immobilier saturé de courtiers et établir une présence digitale qui inspire confiance.",
+    solution:
+      "Site multipage professionnel avec intégration Centris, témoignages clients et contenu SEO local ciblant Montréal et Laval.",
+    seoTitle: "Site Web Courtier Immobilier Montréal | Christian-Olivier Ducharme — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Christian-Olivier Ducharme, courtier immobilier. Conception web immobilier Montréal et Laval.",
+    externalUrl: "https://www.christianolivierducharme.com/",
+  },
+  {
+    id: "creations-boreales-du-lac",
+    slug: "creations-boreales-du-lac",
+    name: "Créations Boréales du Lac",
+    client: "Créations Boréales du Lac",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Artisanat bois et époxy",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un artisan spécialisé en tables bois et époxy sur mesure au Saguenay-Lac-Saint-Jean.",
+    description:
+      "Conception d'un site web multipage pour Créations Boréales du Lac, artisan du Saguenay créant des pièces décoratives sur mesure alliant bois et époxy. Galerie de réalisations, pages services, présentation des produits personnalisables et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket", "Google Analytics 4"],
+    results: [
+      "Site vitrine mettant en valeur le savoir-faire artisanal",
+      "Galerie de réalisations bois et époxy percutante",
+      "Demandes de commandes sur mesure générées",
+      "Référencement local Saguenay optimisé",
+    ],
+    challenge:
+      "Mettre en valeur un artisanat unique et convaincre les clients de la qualité des pièces sur mesure sans visite physique.",
+    solution:
+      "Site multipage axé sur la galerie photo haute résolution et le storytelling artisanal, avec SEO ciblant le Saguenay-Lac-Saint-Jean.",
+    seoTitle: "Site Web Artisan Bois Époxy Saguenay | Créations Boréales du Lac — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Créations Boréales du Lac. Tables bois et époxy sur mesure Saguenay, conception web et SEO.",
+    externalUrl: "https://www.creationsborealesdulac.ca/",
+  },
+  {
+    id: "metal-plus",
+    slug: "metal-plus",
+    name: "Métal Plus",
+    client: "Métal Plus Inc",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Coffrage et bétonnage",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une entreprise de coffrage, bétonnage et armatures en Abitibi-Témiscamingue.",
+    description:
+      "Développement d'un site web multipage pour Métal Plus, spécialiste en coffrage résidentiel et commercial, bétonnage et pose d'armatures en Abitibi-Témiscamingue. Pages services détaillées, régions desservies (Val-d'Or, Amos, Rouyn-Noranda), galerie de réalisations et blog.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WPForms"],
+    results: [
+      "Présence web professionnelle en Abitibi-Témiscamingue",
+      "Pages régions desservies optimisées pour le SEO local",
+      "Demandes de soumission en ligne générées",
+      "Blog actif pour le référencement organique",
+    ],
+    challenge:
+      "Couvrir un vaste territoire en Abitibi-Témiscamingue et se positionner sur les recherches locales dans plusieurs villes.",
+    solution:
+      "Site multipage avec pages dédiées par région desservie et par service, optimisées pour le SEO local multirégion.",
+    seoTitle: "Site Web Coffrage Bétonnage Abitibi | Métal Plus — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Métal Plus. Coffrage et bétonnage Abitibi-Témiscamingue, conception web et SEO local.",
+    externalUrl: "https://www.metalplus.ca/",
+  },
+  {
+    id: "installation-lgagne",
+    slug: "installation-lgagne",
+    name: "Installation L. Gagné",
+    client: "Installation L. Gagné Inc",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Soudure et travaux d'acier",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une firme de soudure mobile et travaux d'acier sur mesure certifiée RBQ et CWB.",
+    description:
+      "Réalisation d'un site web multipage pour Installation L. Gagné, firme spécialisée en soudure mobile et travaux d'acier sur mesure. Galerie de réalisations, pages services (structures d'acier, escaliers, rampes, réparation agricole), régions desservies et formulaire de soumission.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
+    results: [
+      "Site professionnel reflétant l'expertise en soudure",
+      "Certifications RBQ et CWB mises en avant",
+      "Soumissions en ligne reçues régulièrement",
+      "Visibilité locale améliorée dans plusieurs régions",
+    ],
+    challenge:
+      "Couvrir un large territoire (Trois-Rivières, Montréal, Longueuil, Mont-Tremblant) et attirer des projets diversifiés.",
+    solution:
+      "Site multipage avec pages régions et services détaillées, mettant en avant les certifications et la polyvalence de l'entreprise.",
+    seoTitle: "Site Web Soudure Travaux Acier Québec | Installation L. Gagné — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Installation L. Gagné. Soudure mobile et travaux d'acier sur mesure Québec.",
+    externalUrl: "https://installationlgagne.ca/",
+  },
+  {
+    id: "construction-veloce",
+    slug: "construction-veloce",
+    name: "Construction Véloce",
+    client: "Construction Véloce Inc",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Charpenterie",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour une entreprise de charpenterie haut de gamme à Montréal et Rive-Sud.",
+    description:
+      "Conception d'un site web multipage pour Construction Véloce, spécialiste en charpenterie sur mesure à Montréal et Rive-Sud. Pages services (construction de charpente, rénovation, rénovation majeure), galerie de projets réalisés et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "Google Analytics 4", "Google Site Kit"],
+    results: [
+      "Image de marque haut de gamme établie en ligne",
+      "Portfolio de charpentes sur mesure convaincant",
+      "Leads qualifiés générés via le site",
+      "Positionnement SEO local Montréal et Rive-Sud",
+    ],
+    challenge:
+      "Communiquer le positionnement haut de gamme et la qualité sans compromis dans un secteur de la construction souvent perçu comme générique.",
+    solution:
+      "Site multipage avec design professionnel, galerie photo mettant en valeur la qualité des charpentes et contenu SEO ciblé.",
+    seoTitle: "Site Web Charpenterie Montréal | Construction Véloce — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Construction Véloce. Charpenterie haut de gamme Montréal et Rive-Sud.",
+    externalUrl: "https://constructionveloce.ca/",
+  },
+  {
+    id: "andleikay-garderie-24h",
+    slug: "andleikay-garderie-24h",
+    name: "Andleikay Garderie 24h",
+    client: "Andleikay Garderie 24h",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Services de garde — Petite enfance",
+    year: 2024,
+    shortDescription:
+      "Site web multipage bilingue pour une garderie 24h offrant des horaires flexibles et des services spécialisés.",
+    description:
+      "Développement d'un site web multipage bilingue (FR/EN) pour Andleikay Garderie 24h, garderie fondée en 2013 offrant un service 24h avec transport, hébergement de nuit, halte-répit et accompagnement pour enfants à besoins particuliers.",
+    services: ["Conception Web", "SEO", "Facebook Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Tag Manager"],
+    results: [
+      "Site bilingue fonctionnel FR/EN",
+      "Inscriptions générées via formulaire en ligne",
+      "Visibilité accrue pour les parents aux horaires non conventionnels",
+      "Confiance renforcée grâce à la présentation des services",
+    ],
+    challenge:
+      "Rassurer les parents sur la qualité et la sécurité d'une garderie 24h et les convaincre d'inscrire leurs enfants.",
+    solution:
+      "Site multipage rassurant avec présentation détaillée des services, galerie photo chaleureuse et témoignages de parents satisfaits.",
+    seoTitle: "Site Web Garderie 24h Québec | Andleikay Garderie — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Andleikay Garderie 24h. Garderie avec horaires flexibles Québec, conception web bilingue.",
+    externalUrl: "https://andleikaygarderie24h.ca/",
+  },
+  {
+    id: "kagalexo",
+    slug: "kagalexo",
+    name: "Kagalexo",
+    client: "Kagalexo Inc",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Construction et rénovation",
+    year: 2024,
+    shortDescription:
+      "Site web multipage bilingue pour un entrepreneur général en rénovation et restauration dans le Grand Montréal.",
+    description:
+      "Réalisation d'un site web multipage bilingue (FR/EN) pour Kagalexo, entrepreneur général certifié RBQ et APCHQ spécialisé en rénovation résidentielle et commerciale, restauration de bâtiments patrimoniaux et inspections techniques dans le Grand Montréal.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
+    results: [
+      "Site bilingue professionnel établissant la crédibilité",
+      "Certifications RBQ et APCHQ mises en avant",
+      "Demandes de soumission en ligne opérationnelles",
+      "Référencement local Grand Montréal amélioré",
+    ],
+    challenge:
+      "Positionner Kagalexo comme guichet unique de confiance pour des projets de rénovation complexes dans le Grand Montréal.",
+    solution:
+      "Site multipage bilingue mettant en avant l'approche un seul point de contact, les certifications et le portfolio de réalisations.",
+    seoTitle: "Site Web Entrepreneur Général Montréal | Kagalexo — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Kagalexo. Rénovation et restauration Grand Montréal, conception web bilingue et SEO.",
+    externalUrl: "https://www.kagalexo.com/",
+  },
+  {
+    id: "dcg-electrique",
+    slug: "dcg-electrique",
+    name: "DCG Électrique",
+    client: "DCG Électrique Inc",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Services électriques",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un maître électricien certifié RBQ desservant Montréal, Laval, Laurentides et Lanaudière.",
+    description:
+      "Conception d'un site web multipage pour DCG Électrique, maître électricien avec plus de 25 ans d'expérience. Pages services (filage, rénovation électrique, bornes de recharge, urgences 24/7), régions desservies et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
+    results: [
+      "Site professionnel reflétant 25 ans d'expertise",
+      "Service d'urgence 24/7 mis en avant",
+      "Leads qualifiés via formulaire et appels directs",
+      "Visibilité locale dans 4 régions",
+    ],
+    challenge:
+      "Couvrir quatre régions (Montréal, Laval, Laurentides, Lanaudière) et se positionner sur les recherches d'urgence électrique.",
+    solution:
+      "Site multipage avec pages régions dédiées, CTA téléphonique proéminent pour les urgences et contenu SEO local multirégion.",
+    seoTitle: "Site Web Électricien Montréal Laval | DCG Électrique — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour DCG Électrique. Maître électricien Montréal, Laval, Laurentides et Lanaudière.",
+    externalUrl: "https://www.dcgelectrique.ca/",
+  },
+  {
+    id: "yves-baillargeon",
+    slug: "yves-baillargeon",
+    name: "Yves Baillargeon",
+    client: "Yves Baillargeon",
+    category: "multipages",
+    categoryLabel: "Multipages",
+    sector: "Courtage immobilier",
+    year: 2024,
+    shortDescription:
+      "Site web multipage pour un courtier immobilier Via Capitale Élite dans la région de Québec.",
+    description:
+      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de Québec/Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WPForms"],
+    results: [
+      "Image de marque personnelle professionnelle",
+      "Site vitrine mettant en avant l'expertise locale",
+      "Prise de contact facilitée via formulaire",
+      "Référencement local région de Québec",
+    ],
+    challenge:
+      "Établir une présence digitale personnelle distincte dans un marché immobilier compétitif à Québec.",
+    solution:
+      "Site multipage personnel avec témoignages clients, pages de services immobiliers et contenu SEO ciblant la région de Québec.",
+    seoTitle: "Site Web Courtier Immobilier Québec | Yves Baillargeon — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site web pour Yves Baillargeon, courtier immobilier Via Capitale Élite, région de Québec.",
+    externalUrl: "https://www.yvesbaillargeon.ca/",
+  },
+  {
+    id: "myriame-chic-salon",
+    slug: "myriame-chic-salon",
+    name: "Myriame Chic Salon",
+    client: "Myriame Chic Salon",
+    category: "onepage",
+    categoryLabel: "Onepage",
+    sector: "Salon de coiffure",
+    year: 2024,
+    shortDescription:
+      "Site onepage pour un salon de coiffure à Sherbrooke avec présentation des services, réalisations et témoignages.",
+    description:
+      "Conception d'un site onepage pour Myriame Chic Salon, salon de coiffure à Sherbrooke. Sections À propos, services (coupes, colorations, soins capillaires), galerie de réalisations, témoignages clients et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Réseaux Sociaux"],
+    technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WP Rocket"],
+    results: [
+      "Site vitrine professionnel reflétant l'image du salon",
+      "Galerie de réalisations coiffure inspirante",
+      "Nouveaux clients acquis via le web",
+      "Référencement local Sherbrooke optimisé",
+    ],
+    challenge:
+      "Refléter l'ambiance et le style du salon en ligne pour attirer une clientèle locale à Sherbrooke.",
+    solution:
+      "Site onepage avec design élégant, galerie de réalisations et témoignages pour convaincre les visiteurs de prendre rendez-vous.",
+    seoTitle: "Site Web Salon Coiffure Sherbrooke | Myriame Chic Salon — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site onepage pour Myriame Chic Salon. Salon de coiffure Sherbrooke, conception web et SEO local.",
+    externalUrl: "https://www.myriamechicsalon.ca/",
+  },
+  {
+    id: "fenide-dieujuste",
+    slug: "fenide-dieujuste",
+    name: "Fenide Dieujuste",
+    client: "Fenide Dieujuste",
+    category: "onepage",
+    categoryLabel: "Onepage",
+    sector: "Courtage immobilier",
+    year: 2024,
+    shortDescription:
+      "Site onepage avec blog pour une courtière immobilière avec présentation des services, régions desservies et prise de contact.",
+    description:
+      "Conception d'un site onepage avec section blog pour Fenide Dieujuste, courtière immobilière accompagnant ses clients dans l'achat, la vente et l'investissement immobilier. Sections À propos, services, régions desservies et formulaire de contact.",
+    services: ["Conception Web", "SEO", "Réseaux Sociaux"],
+    technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WP Rocket"],
+    results: [
+      "Image de marque personnelle professionnelle établie",
+      "Blog actif pour le référencement organique",
+      "Prise de contact facilitée via formulaire",
+      "Visibilité locale améliorée",
+    ],
+    challenge:
+      "Construire une marque personnelle digitale de confiance pour une courtière immobilière en début de carrière.",
+    solution:
+      "Site onepage avec storytelling personnel, blog pour le SEO et mise en avant de l'empathie et de la disponibilité.",
+    seoTitle: "Site Web Courtière Immobilière | Fenide Dieujuste — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : site onepage pour Fenide Dieujuste, courtière immobilière. Conception web immobilier et SEO.",
+    externalUrl: "https://www.fenidedieujuste.com/",
+  },
 ];
 
 // ============================================================
