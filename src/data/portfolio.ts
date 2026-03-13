@@ -64,37 +64,6 @@ const multiPagesProjects: PortfolioProject[] = [
     previewImage: "/images/portfolio/plomberie-slb.webp",
   },
   {
-    id: "peinture-excel-pro",
-    slug: "peinture-excel-pro",
-    name: "Peinture Excel Pro",
-    client: "Peinture Excel Pro",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Peinture résidentielle et commerciale",
-    year: 2023,
-    shortDescription:
-      "Site web multipage pour une entreprise de peinture avec galerie de projets, soumission en ligne et pages par type de service.",
-    description:
-      "Réalisation d'un site web multipage pour Peinture Excel Pro, peintre professionnel en résidentiel et commercial au Québec. Galerie de réalisations avant/après, formulaire de demande de soumission, pages détaillées par service (intérieur, extérieur, commercial) et SEO local.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Site web professionnel avec galerie de réalisations",
-      "Formulaire de soumission en ligne fonctionnel",
-      "Référencement local amélioré",
-      "Site mobile-first et rapide",
-    ],
-    challenge:
-      "Mettre en valeur la qualité du travail artisanal via une galerie de réalisations percutante tout en générant des demandes de soumission en ligne.",
-    solution:
-      "Site multipage avec galerie photo haute résolution, formulaire de soumission multi-étapes et pages services optimisées pour le SEO local québécois.",
-    seoTitle: "Site Web Peintre Québec | Peinture Excel Pro — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web multipage pour Peinture Excel Pro. Conception web peinture résidentielle et commerciale au Québec.",
-    externalUrl: "https://www.peintureexcelpro.com/",
-    previewImage: "/images/portfolio/peinture-excel-pro.webp",
-  },
-  {
     id: "reno-st-georges",
     slug: "reno-st-georges",
     name: "Réno St-Georges",
