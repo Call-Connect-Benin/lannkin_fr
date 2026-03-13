@@ -97,7 +97,7 @@ export default function BlogFacebookAdsPage() {
     <main>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-24 sm:py-32">
-        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-lateral-angle.png" overlay={0.6} />
+        <ParallaxBg src="/images/rendu3D/rendu3d-cubes-lateral-angle.webp" overlay={0.6} />
         <div className="relative z-10">
           <div className="absolute inset-0 -z-10">
             <div

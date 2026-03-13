@@ -16,7 +16,7 @@ export default function TarifsOdooPage() {
       subtitle="De l'implantation ERP complète au simple site web Odoo, nos forfaits couvrent tous vos besoins de gestion d'entreprise. Migration de données et formation incluses."
       plans={PRICING_ODOO}
       serviceHref="/services/odoo/"
-      parallaxImage="/images/rendu3D/rendu3d-cubes-overhead.png"
+      parallaxImage="/images/rendu3D/rendu3d-cubes-overhead.webp"
     />
   );
 }

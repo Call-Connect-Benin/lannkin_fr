@@ -16,7 +16,7 @@ export default function TarifsReseauxSociauxPage() {
       subtitle="Touchez votre audience sur TikTok, LinkedIn, Snapchat et Pinterest. Chaque plateforme a ses forces : nous créons et gérons vos campagnes pour un impact maximal."
       plans={PRICING_RESEAUX_SOCIAUX}
       serviceHref="/services/tiktok-ads/"
-      parallaxImage="/images/rendu3D/rendu3d-trio-cubes-flottants.png"
+      parallaxImage="/images/rendu3D/rendu3d-trio-cubes-flottants.webp"
     />
   );
 }

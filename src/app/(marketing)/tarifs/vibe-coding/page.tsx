@@ -16,7 +16,7 @@ export default function TarifsVibeCodingPage() {
       subtitle="Créez votre site ou application web avec les meilleurs outils IA du marché. De Lovable à Claude Code, nous exploitons la puissance de l'IA pour livrer plus vite et à moindre coût."
       plans={PRICING_VIBE_CODING}
       serviceHref="/services/vibe-coding/"
-      parallaxImage="/images/rendu3D/rendu3d-cubes-logo-lk-lateral.png"
+      parallaxImage="/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp"
     />
   );
 }
