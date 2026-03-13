@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, BookOpen, Gauge, GraduationCap, Lock } from "lucide-react";
+import { ArrowRight, BookOpen, Gauge, GraduationCap, Lock, Youtube } from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/presentation/components/ui/Container";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 // ─── Données des ressources ───────────────────────────────────────────────────
 
-type ResourceType = "outil" | "ebook" | "formation";
+type ResourceType = "outil" | "ebook" | "formation" | "video";
 
 interface Resource {
   type: ResourceType;
@@ -35,7 +35,7 @@ const RESOURCES: Resource[] = [
     description:
       "Analysez 90 jours de données et découvrez combien vous perdez en clics robots, trafic hors zone et budget gaspillé. Récupérez votre argent via Google.",
     href: "/ressources-gratuites/audit-google-ads/",
-    image: "/images/rendu3D/rendu3d-cubes-rocket-fond-vert.webp",
+    image: "/images/ressources/audit-google-ads.webp",
     tag: "Disponible",
     available: true,
   },
@@ -45,9 +45,10 @@ const RESOURCES: Resource[] = [
     title: "Guide SEO Local Québec 2025",
     description:
       "Tout ce qu'il faut savoir pour dominer les résultats de recherche dans votre ville : Google Business Profile, citations locales, avis clients et contenu géo-ciblé.",
-    image: "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
-    tag: "Bientôt",
-    available: false,
+    href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
+    image: "/images/ressources/guide-seo-local.webp",
+    tag: "Disponible",
+    available: true,
   },
   {
     type: "ebook",
@@ -55,9 +56,10 @@ const RESOURCES: Resource[] = [
     title: "Guide Google Ads pour débutants",
     description:
       "De la création du compte à votre première campagne rentable : structure, enchères, ciblage, extensions et suivi des conversions expliqués simplement.",
-    image: "/images/rendu3D/rendu3d-flatlay-fond-vert.webp",
-    tag: "Bientôt",
-    available: false,
+    href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
+    image: "/images/ressources/guide-google-ads.webp",
+    tag: "Disponible",
+    available: true,
   },
   {
     type: "formation",
@@ -65,7 +67,7 @@ const RESOURCES: Resource[] = [
     title: "Formation Google Ads — Niveau 1",
     description:
       "Apprenez à gérer vos campagnes Google Ads de A à Z. Modules vidéo, exercices pratiques et accès à notre communauté d'entraide.",
-    image: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
+    image: "/images/ressources/formation-google-ads.webp",
     tag: "Bientôt",
     available: false,
   },
@@ -75,7 +77,7 @@ const RESOURCES: Resource[] = [
     title: "Formation SEO & Contenu — Niveau 1",
     description:
       "Maîtrisez les fondamentaux du référencement naturel : audit technique, recherche de mots-clés, rédaction optimisée et création de liens.",
-    image: "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp",
+    image: "/images/ressources/formation-seo-contenu.webp",
     tag: "Bientôt",
     available: false,
   },
@@ -85,9 +87,75 @@ const RESOURCES: Resource[] = [
     title: "Calculateur ROI publicitaire",
     description:
       "Estimez le retour sur investissement de vos campagnes publicitaires en quelques clics. Comparaison Google Ads, Meta Ads, SEO et Native Ads.",
-    image: "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
+    image: "/images/ressources/calculateur-roi.webp",
     tag: "Bientôt",
     available: false,
+  },
+  {
+    type: "outil",
+    label: "Outil gratuit",
+    title: "Checklist CRO",
+    description:
+      "Checklist complète pour optimiser le taux de conversion de votre site web. Parcourez chaque point et améliorez vos performances.",
+    href: "https://docs.google.com/spreadsheets/d/19aLnQvIRFY1QkCwVlrK6_ySEPj5PIBzK/edit",
+    image: "/images/ressources/checklist-cro.webp",
+    tag: "Disponible",
+    available: true,
+  },
+  {
+    type: "outil",
+    label: "Outil gratuit",
+    title: "Optimisation fiche Google My Business",
+    description:
+      "Guide complet pour optimiser votre fiche Google Business Profile : catégories, descriptions, photos, avis et astuces pour le SEO local.",
+    href: "https://docs.google.com/spreadsheets/d/1ezdD5MJo-I-pNU6wtDqALF7Sp4HxpH7IOaBbBMJMj6A/edit",
+    image: "/images/ressources/optimisation-gmb.webp",
+    tag: "Disponible",
+    available: true,
+  },
+  {
+    type: "ebook",
+    label: "Ebook PDF",
+    title: "Collection Ebooks Lannkin",
+    description:
+      "Accédez à tous nos ebooks et guides PDF sur le marketing digital : SEO, Google Ads, réseaux sociaux et plus encore.",
+    href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
+    image: "/images/ressources/collection-ebooks.webp",
+    tag: "Disponible",
+    available: true,
+  },
+  {
+    type: "video",
+    label: "Chaîne YouTube",
+    title: "Albert Lanne Ads",
+    description:
+      "Tutoriels Google Ads, stratégies publicitaires et conseils pratiques pour optimiser vos campagnes.",
+    href: "https://www.youtube.com/@AlbertLanneAds",
+    image: "/images/ressources/albert-lanne-ads.webp",
+    tag: "Disponible",
+    available: true,
+  },
+  {
+    type: "video",
+    label: "Chaîne YouTube",
+    title: "Lannkin France",
+    description:
+      "Conseils marketing digital, tutoriels et analyses pour le marché français.",
+    href: "https://www.youtube.com/@LannkinFrance",
+    image: "/images/ressources/lannkin-france.webp",
+    tag: "Disponible",
+    available: true,
+  },
+  {
+    type: "video",
+    label: "Chaîne YouTube",
+    title: "Lannkin Canada",
+    description:
+      "Stratégies web, marketing digital et croissance pour les entreprises canadiennes.",
+    href: "https://www.youtube.com/@LannkinCanada",
+    image: "/images/ressources/lannkin-canada.webp",
+    tag: "Disponible",
+    available: true,
   },
 ];
 
@@ -95,6 +163,7 @@ const TYPE_CONFIG: Record<ResourceType, { icon: React.ElementType; color: string
   outil: { icon: Gauge, color: "#498f6d", bg: "rgba(73,143,109,0.12)" },
   ebook: { icon: BookOpen, color: "#7C6CF0", bg: "rgba(124,108,240,0.12)" },
   formation: { icon: GraduationCap, color: "#E88C3A", bg: "rgba(232,140,58,0.12)" },
+  video: { icon: Youtube, color: "#FF0000", bg: "rgba(255,0,0,0.12)" },
 };
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -189,8 +258,8 @@ export default function RessourcesGratuitesPage() {
             {/* Stats rapides */}
             <div className="mt-10 flex flex-wrap gap-8">
               {[
-                { value: "1", label: "outil disponible" },
-                { value: "5+", label: "ressources à venir" },
+                { value: "9", label: "ressources disponibles" },
+                { value: "2", label: "ressources à venir" },
                 { value: "0 $", label: "coût total" },
               ].map((stat) => (
                 <div key={stat.label}>
@@ -243,6 +312,14 @@ export default function RessourcesGratuitesPage() {
             title="Formations vidéo"
             description="Apprenez à votre rythme avec nos formations pratiques et actionnables."
             resources={RESOURCES.filter((r) => r.type === "formation")}
+          />
+
+          {/* Section : YouTube */}
+          <ResourceSection
+            id="youtube"
+            title="Chaînes YouTube"
+            description="Suivez nos chaînes pour des tutoriels, analyses et stratégies marketing en vidéo."
+            resources={RESOURCES.filter((r) => r.type === "video")}
           />
         </Container>
       </section>
@@ -358,7 +435,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
     <>
       {/* Image 3D miniature */}
       <div
-        className="relative mb-5 h-36 overflow-hidden rounded-xl"
+        className="relative mb-5 h-36 overflow-hidden rounded-lg"
         style={{ backgroundColor: "#161616" }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -366,13 +443,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
           src={resource.image}
           alt=""
           className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          style={{ opacity: resource.available ? 0.60 : 0.30 }}
+          style={{ opacity: resource.available ? 0.90 : 0.30 }}
         />
         {/* Gradient sur l'image */}
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to top, rgba(22,22,22,0.8) 0%, transparent 60%)",
+            background: "linear-gradient(to top, rgba(22,22,22,0.6) 0%, transparent 40%)",
           }}
         />
         {/* Tag coin supérieur droit */}
@@ -448,6 +525,14 @@ function ResourceCard({ resource }: { resource: Resource }) {
     "group flex flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]";
 
   if (resource.available && resource.href) {
+    const isExternal = resource.href.startsWith("http");
+    if (isExternal) {
+      return (
+        <a href={resource.href} target="_blank" rel="noopener noreferrer" className={hoverClass} style={cardStyle}>
+          {cardContent}
+        </a>
+      );
+    }
     return (
       <Link href={resource.href} className={hoverClass} style={cardStyle}>
         {cardContent}
