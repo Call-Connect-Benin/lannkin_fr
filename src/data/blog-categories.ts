@@ -9,6 +9,7 @@ export interface BlogCategoryData {
   name: string;
   description: string;
   icon: string;
+  image: string;
   relatedServices: string[];
   metaTitle: string;
   metaDescription: string;
@@ -22,6 +23,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Guides, tutoriels et stratégies Google Ads. Search, Display, Shopping, YouTube, Performance Max. Optimisation ROI et scripts avancés.",
     icon: "Target",
+    image: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
     relatedServices: ["google-ads"],
     metaTitle: "Blog Google Ads | Guides & Stratégies | Lannkin",
     metaDescription:
@@ -34,6 +36,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Stratégies Facebook Ads, Instagram Ads et Meta. Ciblage, créatifs, Pixel, API Conversions et retargeting dynamique.",
     icon: "Facebook",
+    image: "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
     relatedServices: ["facebook-ads", "tiktok-ads"],
     metaTitle: "Blog Facebook Ads | Stratégies Meta | Lannkin",
     metaDescription:
@@ -46,6 +49,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Guides SEO complets : référencement local, backlinks, maillage interne, SEO technique, on-page et migration. Dominez Google naturellement.",
     icon: "Search",
+    image: "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
     relatedServices: ["seo", "google-my-business"],
     metaTitle: "Blog SEO | Référencement Naturel | Lannkin",
     metaDescription:
@@ -58,6 +62,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Tendances web design, UX/UI, WordPress, Shopify, Next.js et headless CMS. Bonnes pratiques de développement web moderne.",
     icon: "Monitor",
+    image: "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
     relatedServices: ["conception-web", "developpement-saas"],
     metaTitle: "Blog Conception Web | Design & Développement | Lannkin",
     metaDescription:
@@ -70,6 +75,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "L'IA au service du marketing et du business. Agents IA, chatbots, automatisation, RAG, prompt engineering et outils IA pour PME.",
     icon: "Brain",
+    image: "/images/rendu3D/rendu3d-orbite-planete-fond-rouge.webp",
     relatedServices: ["intelligence-artificielle", "vibe-coding"],
     metaTitle: "Blog IA | Intelligence Artificielle pour PME | Lannkin",
     metaDescription:
@@ -82,6 +88,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Stratégies e-commerce, Shopify, WooCommerce, optimisation du taux de conversion, Google Shopping et marketing de rétention.",
     icon: "ShoppingCart",
+    image: "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
     relatedServices: ["conception-web", "google-ads", "facebook-ads"],
     metaTitle: "Blog E-commerce | Stratégies de Vente en Ligne | Lannkin",
     metaDescription:
@@ -94,6 +101,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Stratégies réseaux sociaux, community management, TikTok, LinkedIn, Snapchat et Pinterest. Croissance organique et payante.",
     icon: "Share2",
+    image: "/images/rendu3D/rendu3d-ovni-cubes-fond-rose.webp",
     relatedServices: [
       "facebook-ads",
       "tiktok-ads",
@@ -112,6 +120,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Optimisation Google Business Profile, gestion d'avis, SEO local, Google Maps marketing et stratégie de visibilité locale.",
     icon: "MapPin",
+    image: "/images/rendu3D/rendu3d-cube-vert-macro.webp",
     relatedServices: ["google-my-business", "seo"],
     metaTitle: "Blog Google My Business | SEO Local | Lannkin",
     metaDescription:
@@ -124,6 +133,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Tendances design graphique, création de logo, identité visuelle, branding et communication print. L'art de la marque forte.",
     icon: "Palette",
+    image: "/images/rendu3D/rendu3d-rouge-vert-dramatic.webp",
     relatedServices: ["graphisme"],
     metaTitle: "Blog Graphisme | Branding & Identité Visuelle | Lannkin",
     metaDescription:
@@ -136,6 +146,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Actualités et stratégies marketing digital. Growth hacking, email marketing, analytics, CRO et tendances du marché québécois.",
     icon: "TrendingUp",
+    image: "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
     relatedServices: ["lead-generation", "google-ads", "seo"],
     metaTitle: "Blog Marketing Digital | Stratégies & Tendances | Lannkin",
     metaDescription:
@@ -148,6 +159,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Le futur du développement web. Lovable, Bolt, Cursor, Claude Code, v0, Windsurf et Replit. Tutoriels, comparatifs et bonnes pratiques du coding assisté par IA.",
     icon: "Sparkles",
+    image: "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp",
     relatedServices: ["vibe-coding", "conception-web"],
     metaTitle: "Blog Vibe Coding | CMS IA & Développement | Lannkin",
     metaDescription:
@@ -160,6 +172,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     description:
       "Guides Odoo : implantation ERP, CRM, e-commerce, migration et personnalisation. Tout savoir sur la plateforme open-source #1.",
     icon: "Building2",
+    image: "/images/rendu3D/rendu3d-trio-cubes-flottants.webp",
     relatedServices: ["odoo"],
     metaTitle: "Blog Odoo | ERP, CRM & E-commerce | Lannkin",
     metaDescription:

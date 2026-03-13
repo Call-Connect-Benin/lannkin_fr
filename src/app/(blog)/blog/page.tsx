@@ -227,39 +227,44 @@ export default function BlogPage() {
               <Link
                 key={cat.slug}
                 href={`/blog/${cat.slug}/`}
-                className="group rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+                className="group overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
                 style={{
                   backgroundColor: "#111111",
                   border: "1px solid rgba(255,255,255,0.06)",
                 }}
               >
-                <div
-                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-base font-bold"
-                  style={{
-                    backgroundColor: `${cat.color}18`,
-                    color: cat.color,
-                  }}
-                >
-                  {cat.name.charAt(0)}
+                <div className="relative aspect-[2.4/1] w-full overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(to top, #111111 0%, transparent 60%)" }}
+                  />
                 </div>
-                <h3
-                  className="font-heading text-base font-semibold transition-colors group-hover:text-[#498f6d]"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  {cat.name}
-                </h3>
-                <p
-                  className="mt-2 line-clamp-2 text-sm leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.40)" }}
-                >
-                  {cat.description}
-                </p>
-                <div
-                  className="mt-4 inline-flex items-center gap-1 text-xs font-medium opacity-0 transition-all duration-200 group-hover:opacity-100"
-                  style={{ color: "#498f6d" }}
-                >
-                  Voir les articles
-                  <ArrowRight className="h-3 w-3" />
+                <div className="p-5 pt-0">
+                  <h3
+                    className="font-heading text-base font-semibold transition-colors group-hover:text-[#498f6d]"
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    {cat.name}
+                  </h3>
+                  <p
+                    className="mt-2 line-clamp-2 text-sm leading-relaxed"
+                    style={{ color: "rgba(255,255,255,0.40)" }}
+                  >
+                    {cat.description}
+                  </p>
+                  <div
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium opacity-0 transition-all duration-200 group-hover:opacity-100"
+                    style={{ color: "#498f6d" }}
+                  >
+                    Voir les articles
+                    <ArrowRight className="h-3 w-3" />
+                  </div>
                 </div>
               </Link>
             ))}
