@@ -61,6 +61,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web multipage pour Plomberies LB. Conception web plomberie Québec, SEO local et Google Ads.",
     externalUrl: "https://www.plomberieslb.ca/",
+    previewImage: "/images/portfolio/plomberie-slb.webp",
   },
   {
     id: "peinture-excel-pro",
