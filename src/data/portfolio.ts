@@ -797,6 +797,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Christian-Olivier Ducharme, courtier immobilier. Conception web immobilier Montréal et Laval.",
     externalUrl: "https://www.christianolivierducharme.com/",
+    previewImage: "/images/portfolio/christian-olivier-ducharme.webp",
   },
   {
     id: "creations-boreales-du-lac",
@@ -827,6 +828,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Créations Boréales du Lac. Tables bois et époxy sur mesure Saguenay, conception web et SEO.",
     externalUrl: "https://www.creationsborealesdulac.ca/",
+    previewImage: "/images/portfolio/creations-boreales-du-lac.webp",
   },
   {
     id: "metal-plus",
@@ -887,6 +889,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Installation L. Gagné. Soudure mobile et travaux d'acier sur mesure Québec.",
     externalUrl: "https://installationlgagne.ca/",
+    previewImage: "/images/portfolio/installation-lgagne.webp",
   },
   {
     id: "construction-veloce",
@@ -917,6 +920,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Construction Véloce. Charpenterie haut de gamme Montréal et Rive-Sud.",
     externalUrl: "https://constructionveloce.ca/",
+    previewImage: "/images/portfolio/construction-veloce.webp",
   },
   {
     id: "andleikay-garderie-24h",
@@ -947,6 +951,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Andleikay Garderie 24h. Garderie avec horaires flexibles Québec, conception web bilingue.",
     externalUrl: "https://andleikaygarderie24h.ca/",
+    previewImage: "/images/portfolio/andleikay-garderie-24h.webp",
   },
   {
     id: "kagalexo",
@@ -977,6 +982,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Kagalexo. Rénovation et restauration Grand Montréal, conception web bilingue et SEO.",
     externalUrl: "https://www.kagalexo.com/",
+    previewImage: "/images/portfolio/kagalexo.webp",
   },
   {
     id: "dcg-electrique",
@@ -1007,6 +1013,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour DCG Électrique. Maître électricien Montréal, Laval, Laurentides et Lanaudière.",
     externalUrl: "https://www.dcgelectrique.ca/",
+    previewImage: "/images/portfolio/dcg-electrique.webp",
   },
   {
     id: "yves-baillargeon",
@@ -1037,6 +1044,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Yves Baillargeon, courtier immobilier Via Capitale Élite, région de Québec.",
     externalUrl: "https://www.yvesbaillargeon.ca/",
+    previewImage: "/images/portfolio/yves-baillargeon.webp",
   },
   {
     id: "myriame-chic-salon",
@@ -1067,6 +1075,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site onepage pour Myriame Chic Salon. Salon de coiffure Sherbrooke, conception web et SEO local.",
     externalUrl: "https://www.myriamechicsalon.ca/",
+    previewImage: "/images/portfolio/myriame-chic-salon.webp",
   },
   {
     id: "fenide-dieujuste",
@@ -1097,6 +1106,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site onepage pour Fenide Dieujuste, courtière immobilière. Conception web immobilier et SEO.",
     externalUrl: "https://www.fenidedieujuste.com/",
+    previewImage: "/images/portfolio/fenide-dieujuste.webp",
   },
 ];
 
