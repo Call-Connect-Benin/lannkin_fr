@@ -92,6 +92,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web multipage pour Peinture Excel Pro. Conception web peinture résidentielle et commerciale au Québec.",
     externalUrl: "https://www.peintureexcelpro.com/",
+    previewImage: "/images/portfolio/peinture-excel-pro.webp",
   },
   {
     id: "reno-st-georges",
@@ -277,6 +278,7 @@ const multiPagesProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web premium pour MTL Luxe Montréal. Conception web haut de gamme, design immersif et SEO local.",
     externalUrl: "https://mtlluxe.ca/",
+    previewImage: "/images/portfolio/mtl-luxe.webp",
   },
 ];
 
@@ -345,6 +347,7 @@ const onePageProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site onepage pour Rasage Corporel à Domicile. Conception web soins à domicile Québec, prise de rendez-vous en ligne.",
     externalUrl: "https://www.rasagecorporeladomicile.ca/",
+    previewImage: "/images/portfolio/rasage-corporel.webp",
   },
   {
     id: "nettoyage-leblanc",
@@ -406,6 +409,7 @@ const onePageProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site onepage pour Éthique Service Nettoyage. Entretien ménager écologique Québec, conception web et SEO.",
     externalUrl: "https://www.ethiqueservicenettoyage.ca/",
+    previewImage: "/images/portfolio/ethique-service-nettoyage.webp",
   },
   {
     id: "ture-beau-menage",
@@ -505,6 +509,7 @@ const ecommerceProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : e-commerce Shopify pour Bout de Chou Boutique. Mode et accessoires enfants Québec, vente en ligne et Instagram Shopping.",
     externalUrl: "https://boutdechouboutique.com/",
+    previewImage: "/images/portfolio/bout-de-choux.webp",
   },
 ];
 
