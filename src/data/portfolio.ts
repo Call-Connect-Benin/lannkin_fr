@@ -218,37 +218,6 @@ const multiPagesProjects: PortfolioProject[] = [
     externalUrl: "https://www.constructionsguillen.com/",
     previewImage: "/images/portfolio/constructions-guillen.webp",
   },
-  {
-    id: "mtl-luxe",
-    slug: "mtl-luxe",
-    name: "MTL Luxe",
-    client: "MTL Luxe",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Services premium Montréal",
-    year: 2024,
-    shortDescription:
-      "Site web multipage haut de gamme pour une marque de services premium à Montréal avec design immersif et expérience utilisateur soignée.",
-    description:
-      "Réalisation d'un site web multipage premium pour MTL Luxe, marque montréalaise positionnée sur le segment haut de gamme. Design élégant et immersif, navigation fluide, pages services détaillées et expérience utilisateur optimisée pour une clientèle exigeante.",
-    services: ["Conception Web", "SEO", "Graphisme"],
-    technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WP Rocket"],
-    results: [
-      "Identité digitale premium cohérente avec le positionnement",
-      "Expérience utilisateur haut de gamme",
-      "Site performant et esthétiquement distinctif",
-      "Référencement local Montréal optimisé",
-    ],
-    challenge:
-      "Traduire un positionnement premium en expérience digitale qui reflète l'image haut de gamme de la marque et attire la bonne clientèle.",
-    solution:
-      "Design web soigné avec typographie et visuels haut de gamme, animations subtiles et contenu copywriting orienté désirabilité.",
-    seoTitle: "Site Web Services Premium Montréal | MTL Luxe — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web premium pour MTL Luxe Montréal. Conception web haut de gamme, design immersif et SEO local.",
-    externalUrl: "https://mtlluxe.ca/",
-    previewImage: "/images/portfolio/mtl-luxe.webp",
-  },
 ];
 
 // ============================================================
@@ -286,37 +255,6 @@ const onePageProjects: PortfolioProject[] = [
       "Portfolio Lannkin : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel Québec, Google Ads et Facebook Ads.",
     externalUrl: "https://www.nettoyageideal.com/",
     previewImage: "/images/portfolio/nettoyage-ideal.webp",
-  },
-  {
-    id: "rasage-corporel-a-domicile",
-    slug: "rasage-corporel-a-domicile",
-    name: "Rasage Corporel à Domicile",
-    client: "Rasage Corporel à Domicile",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Soins corporels à domicile",
-    year: 2023,
-    shortDescription:
-      "Site onepage pour un service de soins corporels à domicile avec présentation des services, tarifs et prise de rendez-vous.",
-    description:
-      "Conception d'un site onepage pour Rasage Corporel à Domicile, service de soins à domicile au Québec. Présentation des prestations, galerie, grille tarifaire claire, témoignages clients et formulaire de prise de rendez-vous en ligne simplifié.",
-    services: ["Conception Web", "SEO", "Facebook Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Site web professionnel et rassurant livré",
-      "Prise de rendez-vous en ligne opérationnelle",
-      "Meilleure crédibilité en ligne",
-      "Acquisition de clients via formulaire",
-    ],
-    challenge:
-      "Instaurer la confiance pour un service à domicile et convaincre les clients de la qualité et de la sécurité des prestations.",
-    solution:
-      "Site onepage rassurant avec témoignages mis en avant, description détaillée des services et formulaire de prise de rendez-vous sécurisé.",
-    seoTitle: "Site Web Soins Corporels à Domicile Québec | Rasage Corporel — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site onepage pour Rasage Corporel à Domicile. Conception web soins à domicile Québec, prise de rendez-vous en ligne.",
-    externalUrl: "https://www.rasagecorporeladomicile.ca/",
-    previewImage: "/images/portfolio/rasage-corporel.webp",
   },
   {
     id: "nettoyage-leblanc",
@@ -650,36 +588,6 @@ const internationalProjects: PortfolioProject[] = [
 // ============================================================
 
 const additionalProjects: PortfolioProject[] = [
-  {
-    id: "boiseries-sem",
-    slug: "boiseries-sem",
-    name: "Boiseries Sem",
-    client: "Boiseries Sem",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Boiseries et menuiserie",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour un artisan spécialisé en boiseries et menuiserie sur mesure au Québec.",
-    description:
-      "Conception d'un site web multipage pour Boiseries Sem, entreprise artisanale spécialisée en fabrication et installation de boiseries, moulures et menuiserie sur mesure. Galerie de réalisations, présentation des produits et services, et formulaire de demande de soumission.",
-    services: ["Conception Web", "SEO", "Graphisme"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Présence web professionnelle établie",
-      "Galerie de réalisations artisanales mise en valeur",
-      "Demandes de soumission générées en ligne",
-      "Référencement local amélioré",
-    ],
-    challenge:
-      "Mettre en valeur le savoir-faire artisanal d'une entreprise de menuiserie et convaincre les clients de la qualité des finitions avant même la visite.",
-    solution:
-      "Site multipage axé sur la galerie de réalisations avec photos haute résolution et contenu SEO ciblant les propriétaires résidentiels locaux.",
-    seoTitle: "Site Web Boiseries Menuiserie Québec | Boiseries Sem — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Boiseries Sem. Boiseries et menuiserie sur mesure Québec, conception web et SEO local.",
-    previewImage: "/images/portfolio/boiseries-sem.webp",
-  },
   {
     id: "construction-fontes",
     slug: "construction-fontes",
