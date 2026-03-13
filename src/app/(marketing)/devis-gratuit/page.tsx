@@ -27,101 +27,154 @@ const TRUST_POINTS = [
 
 export default function DevisGratuitPage() {
   return (
-    <main>
-      {/* Compact Hero */}
-      <section className="pb-4 pt-12 lg:pt-16">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="mb-3 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-xs font-medium text-accent">
-              Gratuit &middot; Sans engagement
-            </span>
-            <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Demandez votre{" "}
-              <span className="text-accent">devis gratuit</span>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+
+      {/* ═══════════════════════════════════════════════════════
+          HERO
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden pb-10 pt-12">
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute inset-y-0 right-0 w-[58%]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rendu3D/rendu3d-trio-cubes-flottants.webp"
+              alt=""
+              className="h-full w-full object-cover object-center"
+              style={{ opacity: 0.20 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(108deg, #0C0C0C 18%, rgba(12,12,12,0.65) 40%, transparent 62%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #0C0C0C 0%, transparent 22%, transparent 78%, #0C0C0C 100%)" }} />
+          </div>
+        </div>
+        <div
+          className="pointer-events-none absolute right-1/3 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full blur-[120px]"
+          style={{ backgroundColor: "rgba(73,143,109,0.07)" }}
+          aria-hidden
+        />
+
+        <Container className="relative z-10">
+          <div className="max-w-xl">
+            <div
+              className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: "#498f6d" }} />
+                <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
+              </span>
+              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+                Gratuit · Sans engagement
+              </span>
+            </div>
+            <h1 className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]" style={{ color: "#FFFFFF" }}>
+              Votre <span style={{ color: "#498f6d" }}>devis gratuit</span>
             </h1>
-            <p className="mt-3 text-base leading-relaxed text-muted">
+            <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
+            <p className="mt-5 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
               Décrivez votre projet et recevez une proposition personnalisée sous 24h.
+              Nos experts analysent votre situation et vous conseillent gratuitement.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Form + Sidebar */}
-      <section className="pb-20 pt-8 lg:pb-28">
+      {/* ═══════════════════════════════════════════════════════
+          FORM + SIDEBAR
+      ═══════════════════════════════════════════════════════ */}
+      <section className="pb-24 pt-4">
+        <div className="mb-10 h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }} />
         <Container>
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+
             {/* Form — 2/3 */}
             <div className="lg:col-span-2">
-              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-sm lg:p-8">
+              <div
+                className="rounded-2xl p-6 lg:p-8"
+                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
                 <DevisForm />
               </div>
             </div>
 
             {/* Sidebar — 1/3 */}
-            <div className="space-y-6">
+            <div className="space-y-5">
+
               {/* Trust Points */}
-              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-sm">
-                <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-accent">
+              <div
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <h3 className="mb-4 font-heading text-xs font-semibold uppercase tracking-widest" style={{ color: "#498f6d" }}>
                   Pourquoi nous choisir
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {TRUST_POINTS.map((point) => (
                     <li key={point.text} className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                        <point.icon className="h-4 w-4 text-accent" />
+                      <div
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
+                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                      >
+                        <point.icon className="h-4 w-4" />
                       </div>
-                      <span className="text-sm text-[#374151]">{point.text}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.80)" }}>
+                        {point.text}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Rating */}
-              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-sm">
+              <div
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-amber-400 text-amber-400"
-                    />
+                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                   ))}
-                  <span className="ml-2 text-sm font-semibold text-[#1A1A1A]">
+                  <span className="ml-2 text-sm font-semibold" style={{ color: "#FFFFFF" }}>
                     {SITE_CONFIG.stats.googleRating}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-[#6B7280]">
+                <p className="mt-1.5 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
                   {SITE_CONFIG.stats.googleReviews} avis Google &middot;{" "}
                   {SITE_CONFIG.stats.yearsExperience}+ ans d&apos;expérience
                 </p>
               </div>
 
               {/* Contact Info */}
-              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-sm">
-                <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-accent">
+              <div
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <h3 className="mb-4 font-heading text-xs font-semibold uppercase tracking-widest" style={{ color: "#498f6d" }}>
                   Nous joindre
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3.5">
                   <li className="flex items-center gap-3">
-                    <Mail className="h-4 w-4 text-[#6B7280]" />
+                    <Mail className="h-4 w-4 shrink-0" style={{ color: "rgba(255,255,255,0.30)" }} />
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="text-sm text-[#374151] transition-colors hover:text-accent"
+                      className="text-sm transition-colors hover:text-[#498f6d]"
+                      style={{ color: "rgba(255,255,255,0.55)" }}
                     >
                       {SITE_CONFIG.email}
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
-                    <Phone className="h-4 w-4 text-[#6B7280]" />
+                    <Phone className="h-4 w-4 shrink-0" style={{ color: "rgba(255,255,255,0.30)" }} />
                     <a
                       href={`tel:${SITE_CONFIG.phone}`}
-                      className="text-sm text-[#374151] transition-colors hover:text-accent"
+                      className="text-sm transition-colors hover:text-[#498f6d]"
+                      style={{ color: "rgba(255,255,255,0.55)" }}
                     >
                       {SITE_CONFIG.phone}
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
-                    <MapPin className="h-4 w-4 text-[#6B7280]" />
-                    <span className="text-sm text-[#374151]">
+                    <MapPin className="h-4 w-4 shrink-0" style={{ color: "rgba(255,255,255,0.30)" }} />
+                    <span className="text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
                       {SITE_CONFIG.location.city}, {SITE_CONFIG.location.province}
                     </span>
                   </li>
@@ -129,21 +182,30 @@ export default function DevisGratuitPage() {
               </div>
 
               {/* Certifications */}
-              <div className="rounded-2xl border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-sm">
-                <h3 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wider text-accent">
+              <div
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <h3 className="mb-3 font-heading text-xs font-semibold uppercase tracking-widest" style={{ color: "#498f6d" }}>
                   Certifications
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {SITE_CONFIG.certifications.map((cert) => (
                     <span
                       key={cert}
-                      className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-xs font-medium text-accent"
+                      className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+                      style={{
+                        border: "1px solid rgba(73,143,109,0.25)",
+                        backgroundColor: "rgba(73,143,109,0.08)",
+                        color: "#498f6d",
+                      }}
                     >
                       {cert}
                     </span>
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </Container>

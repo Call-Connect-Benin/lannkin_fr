@@ -16,7 +16,7 @@ export default function TarifsGraphismePage() {
       subtitle="Du logo essentiel à l'identité visuelle complète, donnez une image professionnelle à votre marque. Fichiers vectoriels, charte graphique et brand book inclus selon le forfait."
       plans={PRICING_GRAPHISME}
       serviceHref="/services/graphisme/"
-      parallaxImage="/images/rendu3D/rendu3d-diamant-cubes-flottants.png"
+      parallaxImage="/images/rendu3D/rendu3d-diamant-cubes-flottants.webp"
     />
   );
 }

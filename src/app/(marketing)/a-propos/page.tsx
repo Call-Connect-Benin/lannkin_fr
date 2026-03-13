@@ -22,17 +22,17 @@ export const metadata: Metadata = {
 const OFFICES = [
   {
     country: "LANNKIN CANADA",
-    image: "/images/a-propos/Canada-e1556023963820-2500x1406-1-850x560.jpg.png",
+    image: "/images/a-propos/Canada-e1556023963820-2500x1406-1-850x560.jpg.webp",
     alt: "Skyline de Toronto — Lannkin Canada",
   },
   {
     country: "LANNKIN FRANCE",
-    image: "/images/a-propos/shutterstock_667548661v2-1024x683-1.jpg",
+    image: "/images/a-propos/shutterstock_667548661v2-1024x683-1.webp",
     alt: "Tour Eiffel à Paris — Lannkin France",
   },
   {
     country: "LANNKIN SUISSE",
-    image: "/images/a-propos/suisse-paysage-ville.jpg",
+    image: "/images/a-propos/suisse-paysage-ville.webp",
     alt: "Paysage de ville suisse — Lannkin Suisse",
   },
 ];
@@ -81,14 +81,14 @@ const RD_SCRIPTS = [
     title: "Script Google Ads anti-fraude",
     description:
       "Il identifie les clics frauduleux et vous permet de soumettre des demandes de remboursement auprès de Google, garantissant ainsi une utilisation optimale de votre budget publicitaire.",
-    image: "/images/a-propos/script-clic-export-google-ads.png",
+    image: "/images/a-propos/script-clic-export-google-ads.webp",
     alt: "Export script clics frauduleux Google Ads",
   },
   {
     title: "Script d'analyse des campagnes performantes",
     description:
       "Ce script unique accède à des données masquées, permettant une analyse approfondie pour ajuster vos campagnes avec précision, bien au-delà des outils traditionnels.",
-    image: "/images/a-propos/script-pmaw-analys.png",
+    image: "/images/a-propos/script-pmaw-analys.webp",
     alt: "Script PMAW analyse campagnes Google Ads",
   },
 ];
@@ -333,7 +333,7 @@ export default function AProposPage() {
           style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
         />
         <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="mx-auto max-w-2xl">
             <div>
               <span
                 className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider"
@@ -381,34 +381,6 @@ export default function AProposPage() {
               </div>
             </div>
 
-            {/* Trophée */}
-            <div className="flex justify-center">
-              <div
-                className="overflow-hidden rounded-2xl p-4"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
-              >
-                <div className="relative w-full overflow-hidden rounded-xl" style={{ backgroundColor: "#161616" }}>
-                  <Image
-                    src="/images/a-propos/imgtrophe20M.png"
-                    alt="Albert Lanne avec le trophée ClickFunnels 20M — remporté par CPM Consulting"
-                    width={640}
-                    height={480}
-                    className="h-auto w-full object-contain"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="mt-4 px-2 pb-2">
-                  <p className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>
-                    Albert Lanne — Trophée ClickFunnels 20M
-                  </p>
-                  <p className="mt-1 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.42)" }}>
-                    Ce trophée, remporté par CPM Consulting avec l&apos;aide de Lannkin, représente
-                    un accomplissement unique dans la francophonie — aucun autre acteur
-                    n&apos;ayant atteint un tel niveau de performance avec ClickFunnels.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </Container>
       </section>

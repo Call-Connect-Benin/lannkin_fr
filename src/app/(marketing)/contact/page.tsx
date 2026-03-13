@@ -28,6 +28,7 @@ export default function ContactPage() {
             alt=""
             className="h-full w-full object-cover object-center"
             style={{ opacity: 0.28 }}
+            fetchPriority="high"
           />
           {/* Coupe diagonale */}
           <div
