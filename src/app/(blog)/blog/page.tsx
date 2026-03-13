@@ -13,17 +13,6 @@ export const metadata: Metadata = {
     "Blog Lannkin : articles, guides et conseils en marketing digital, SEO, développement web, IA et publicité en ligne. Restez à jour sur les tendances.",
 };
 
-const DEFAULT_COVERS: Record<string, string> = {
-  "google-ads": "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
-  "marketing-digital": "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
-  seo: "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
-  "reseaux-sociaux": "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
-  graphisme: "/images/rendu3D/rendu3d-cubes-flou-vert-blanc.webp",
-  "conception-web": "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
-  ecommerce: "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
-  "google-my-business": "/images/rendu3D/rendu3d-cube-vert-macro.webp",
-};
-
 export default function BlogPage() {
   const posts = getAllPosts();
 
@@ -138,7 +127,7 @@ export default function BlogPage() {
                   <div className="aspect-[16/9] w-full overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={post.coverImage || DEFAULT_COVERS[post.category] || "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp"}
+                      src={post.coverImage || "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp"}
                       alt={post.title}
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
