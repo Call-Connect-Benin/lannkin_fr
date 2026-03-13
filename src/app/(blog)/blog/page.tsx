@@ -13,6 +13,17 @@ export const metadata: Metadata = {
     "Blog Lannkin : articles, guides et conseils en marketing digital, SEO, développement web, IA et publicité en ligne. Restez à jour sur les tendances.",
 };
 
+const DEFAULT_COVERS: Record<string, string> = {
+  "google-ads": "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
+  "marketing-digital": "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
+  seo: "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
+  "reseaux-sociaux": "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
+  graphisme: "/images/rendu3D/rendu3d-cubes-flou-vert-blanc.webp",
+  "conception-web": "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
+  ecommerce: "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
+  "google-my-business": "/images/rendu3D/rendu3d-cube-vert-macro.webp",
+};
+
 export default function BlogPage() {
   const posts = getAllPosts();
 
@@ -124,16 +135,14 @@ export default function BlogPage() {
                   className="group flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
                   style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.06)" }}
                 >
-                  {post.coverImage && (
-                    <div className="aspect-[16/9] w-full overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={post.coverImage}
-                        alt={post.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                  )}
+                  <div className="aspect-[16/9] w-full overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={post.coverImage || DEFAULT_COVERS[post.category] || "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp"}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="flex flex-1 flex-col p-5">
                   <div className="mb-4 flex items-center gap-3">
                     <span
