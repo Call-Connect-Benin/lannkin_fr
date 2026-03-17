@@ -100,30 +100,34 @@ export function HeroParticles() {
       t += 0.005;
 
       for (let i = 0; i < NUM; i++) {
-        positions[i].add(velocities[i]);
-        if (Math.abs(positions[i].x) > 26) velocities[i].x *= -1;
-        if (Math.abs(positions[i].y) > 16) velocities[i].y *= -1;
-        if (Math.abs(positions[i].z) > 12) velocities[i].z *= -1;
-        posArr[i * 3] = positions[i].x;
-        posArr[i * 3 + 1] = positions[i].y;
-        posArr[i * 3 + 2] = positions[i].z;
+        const pos = positions[i]!;
+        const vel = velocities[i]!;
+        pos.add(vel);
+        if (Math.abs(pos.x) > 26) vel.x *= -1;
+        if (Math.abs(pos.y) > 16) vel.y *= -1;
+        if (Math.abs(pos.z) > 12) vel.z *= -1;
+        posArr[i * 3] = pos.x;
+        posArr[i * 3 + 1] = pos.y;
+        posArr[i * 3 + 2] = pos.z;
       }
-      geo.attributes.position.needsUpdate = true;
+      (geo.attributes.position as THREE.BufferAttribute).needsUpdate = true;
 
       // Update lines
       let lineCount = 0;
       for (let i = 0; i < NUM && lineCount < MAX_LINES - 1; i++) {
+        const pi = positions[i]!;
         for (let j = i + 1; j < NUM && lineCount < MAX_LINES - 1; j++) {
-          const d = positions[i].distanceTo(positions[j]);
+          const pj = positions[j]!;
+          const d = pi.distanceTo(pj);
           if (d < DIST) {
             const tVal = 1 - d / DIST;
             const idx = lineCount * 6;
-            linePosArr[idx] = positions[i].x;
-            linePosArr[idx + 1] = positions[i].y;
-            linePosArr[idx + 2] = positions[i].z;
-            linePosArr[idx + 3] = positions[j].x;
-            linePosArr[idx + 4] = positions[j].y;
-            linePosArr[idx + 5] = positions[j].z;
+            linePosArr[idx] = pi.x;
+            linePosArr[idx + 1] = pi.y;
+            linePosArr[idx + 2] = pi.z;
+            linePosArr[idx + 3] = pj.x;
+            linePosArr[idx + 4] = pj.y;
+            linePosArr[idx + 5] = pj.z;
             lineColArr[idx] = 0.05;
             lineColArr[idx + 1] = 0.5 * tVal;
             lineColArr[idx + 2] = 0.05;
@@ -134,8 +138,8 @@ export function HeroParticles() {
           }
         }
       }
-      lineGeo.attributes.position.needsUpdate = true;
-      lineGeo.attributes.color.needsUpdate = true;
+      (lineGeo.attributes.position as THREE.BufferAttribute).needsUpdate = true;
+      (lineGeo.attributes.color as THREE.BufferAttribute).needsUpdate = true;
       lineGeo.setDrawRange(0, lineCount * 2);
 
       camera.position.x += (mouse.x * 3 - camera.position.x) * 0.02;
