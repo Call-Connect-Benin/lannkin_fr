@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Beaute Esthetique | Lannkin",
-  description: "Marketing digital et site web pour la beauté et l'esthétique. Visibilité locale et réservation en ligne pour salons et spas.",
+  title: "Marketing Digital Beauté Esthétique | Lannkin",
+  description: "Marketing digital beauté et esthétique. Réservation en ligne, SEO local et réseaux sociaux pour salons et spas. Devis gratuit.",
 };
 
 export default function BeauteEsthetiquePage() {

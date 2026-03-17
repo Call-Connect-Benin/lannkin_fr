@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Immobilier | Lannkin",
-  description: "Marketing digital et site web pour l'immobilier. Génération de leads et visibilité en ligne pour agents et agences immobilières.",
+  title: "Marketing Digital Immobilier Laval | Lannkin",
+  description: "Marketing digital immobilier à Laval. Génération de leads, SEO local et Google Ads pour agents et agences. Devis gratuit.",
 };
 
 export default function ImmobilierPage() {

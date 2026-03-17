@@ -9,9 +9,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Tous nos services | Lannkin — Agence Marketing Digital Laval",
+  title: "Services Marketing Digital Laval | Lannkin",
   description:
-    "Découvrez tous nos services : conception web, SaaS, 3D immersif, Google Ads, Facebook Ads, SEO, graphisme, IA et plus. Agence marketing digital à Laval.",
+    "Services marketing digital à Laval : conception web, SEO, Google Ads, Facebook Ads, graphisme et IA. Découvrez nos forfaits et obtenez un devis gratuit.",
 };
 
 const CATEGORY_LABELS: Record<string, string> = {

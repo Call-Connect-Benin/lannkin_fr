@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tourisme Hotellerie | Lannkin",
-  description: "Marketing digital et site web pour le tourisme et l'hôtellerie. Réservations directes et visibilité pour établissements touristiques.",
+  title: "Marketing Digital Tourisme Québec | Lannkin",
+  description: "Marketing digital tourisme au Québec. Réservations directes, SEO et Google Ads pour hôtels et attraits touristiques. Devis gratuit.",
 };
 
 export default function TourismeHotelleriePage() {

@@ -9,9 +9,9 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Réalisations & Portfolio Web | Lannkin — Agence Web Laval",
+  title: "Portfolio Agence Web Laval | Lannkin",
   description:
-    "Découvrez nos réalisations web : sites vitrine, multipages, onepage et boutiques e-commerce. Portfolio de l'agence web Lannkin à Laval, Québec. +10 ans d'expérience.",
+    "Portfolio de l'agence web Lannkin à Laval. Sites vitrine, multipages, onepage et e-commerce. +10 ans d'expérience, +50 projets livrés au Québec.",
 };
 
 const multiPagesCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "multipages").length;

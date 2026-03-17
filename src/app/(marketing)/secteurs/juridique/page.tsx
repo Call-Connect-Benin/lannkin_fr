@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Juridique Avocats | Lannkin",
-  description: "Marketing digital et site web pour avocats et cabinets juridiques. Positionnement d'expert et génération de mandats.",
+  title: "Marketing Digital Cabinet Avocat | Lannkin",
+  description: "Marketing digital pour cabinets d'avocats. SEO juridique, Google Ads et positionnement d'expert en ligne. Devis gratuit.",
 };
 
 export default function JuridiqueAvocatsPage() {

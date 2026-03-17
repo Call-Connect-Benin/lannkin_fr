@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Education Formation | Lannkin",
-  description: "Marketing digital et site web pour l'éducation et la formation. Recrutement d'étudiants et visibilité institutionnelle.",
+  title: "Marketing Digital Éducation | Lannkin",
+  description: "Marketing digital pour l'éducation et la formation. Recrutement d'étudiants, SEO et visibilité en ligne. Devis gratuit.",
 };
 
 export default function EducationFormationPage() {

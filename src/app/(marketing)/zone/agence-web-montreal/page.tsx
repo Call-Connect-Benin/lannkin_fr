@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Agence Web Montreal | Lannkin",
-  description: "Agence web à Montréal. Services de développement web et marketing digital pour entreprises montréalaises.",
+  title: "Agence Web Montréal | Lannkin",
+  description: "Agence web à Montréal. Sites modernes, e-commerce et marketing digital pour entreprises montréalaises. Devis gratuit.",
 };
 
 export default function AgenceWebMontrealPage() {

@@ -23,6 +23,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     ],
     cta: "Commencer",
     paymentLink: "https://buy.stripe.com/7sY14o8DZ4ys7qq9sj6wE2k",
+    stripePriceId: "price_TODO_web_launch",
   },
   {
     id: "web-presence",
@@ -32,7 +33,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     price: 199,
     priceUnit: "month",
     features: [
-      "Site multi-pages (jusqu'à 5 pages)",
+      "Site multi-pages (jusqu'à 3 pages)",
       "Design sur mesure responsive",
       "Hébergement premium et SSL",
       "Blog intégré",
@@ -43,6 +44,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     highlighted: true,
     cta: "Choisir Présence+",
     paymentLink: "https://buy.stripe.com/aFa7sM1bx0iccKK8of6wE2j",
+    stripePriceId: "price_TODO_web_presence",
   },
   {
     id: "web-catalog",
@@ -52,7 +54,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     price: 299,
     priceUnit: "month",
     features: [
-      "Site catalogue jusqu'à 15 pages",
+      "Site catalogue jusqu'à 5 pages",
       "Design premium responsive",
       "CMS WordPress ou headless",
       "Galerie produits avancée",
@@ -62,6 +64,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     ],
     cta: "Choisir Catalog Pro",
     paymentLink: "https://buy.stripe.com/dRmeVe5rN5Cw2661ZR6wE2m",
+    stripePriceId: "price_TODO_web_catalog",
   },
   {
     id: "web-ecommerce",
@@ -83,6 +86,8 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     ],
     cta: "Lancer ma boutique",
     paymentLink: "https://buy.stripe.com/14k9ACfQE7mB1SE9C0",
+    stripePriceId: "price_TODO_web_ecommerce",
+    stripeSetupPriceId: "price_TODO_web_ecommerce_setup",
   },
   {
     id: "web-seo-mastersite",
@@ -95,7 +100,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
       "Site optimisé SEO 360°",
       "Architecture silo thématique",
       "Maillage interne avancé",
-      "Contenu optimisé (10 pages/mois)",
+      "Site de 9 pages",
       "Schéma de données structurées",
       "Core Web Vitals optimisés",
       "Rapport mensuel de positionnement",
@@ -103,6 +108,32 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     ],
     cta: "Dominer Google",
     paymentLink: "https://buy.stripe.com/6oU00k7zVaWQ5ii0VN6wE2n",
+    stripePriceId: "price_TODO_web_seo_mastersite",
+  },
+  {
+    id: "web-smart-business",
+    name: "Pack Smart Business",
+    slug: "smart-business",
+    category: "conception-web",
+    price: 250,
+    priceUnit: "month",
+    features: [
+      "Site web professionnel – 3 pages personnalisées",
+      "Design moderne, responsive (mobile, tablette, ordinateur)",
+      "Nom de domaine inclus",
+      "Sécurité SSL pour protéger vos visiteurs",
+      "Navigation intuitive et fluide",
+      "Formulaire de contact intégré pour générer des prospects",
+      "Hébergement, maintenance et sécurisation sur nos serveurs",
+      "Fiche Google Mon Entreprise optimisée avec option de certification",
+      "Apparaissez sur Google Maps avec vos services, horaires et photos",
+      "Conseils pour gérer vos avis et améliorer votre référencement local",
+      "Page professionnelle sur les réseaux sociaux (Facebook, Instagram ou LinkedIn)",
+      "Publication de lancement incluse",
+      "Création de QR Code personnalisé pour le web et les reviews",
+    ],
+    cta: "Choisir Smart Business",
+    stripePriceId: "price_TODO_web_smart_business",
   },
 ];
 
@@ -124,6 +155,7 @@ export const PRICING_VIBE_CODING: PricingPlan[] = [
       "Support par courriel",
     ],
     cta: "Démarrer en IA",
+    stripePriceId: "price_TODO_vibe_starter",
   },
   {
     id: "vibe-pro",
@@ -144,6 +176,7 @@ export const PRICING_VIBE_CODING: PricingPlan[] = [
     ],
     highlighted: true,
     cta: "Choisir Pro IA",
+    stripePriceId: "price_TODO_vibe_pro",
   },
   {
     id: "vibe-enterprise",
@@ -164,6 +197,7 @@ export const PRICING_VIBE_CODING: PricingPlan[] = [
       "Support 7j/7",
     ],
     cta: "Contacter pour Enterprise",
+    stripePriceId: "price_TODO_vibe_enterprise",
   },
   {
     id: "vibe-formation",
@@ -181,6 +215,7 @@ export const PRICING_VIBE_CODING: PricingPlan[] = [
       "Support post-formation 30 jours",
     ],
     cta: "Réserver ma formation",
+    stripePriceId: "price_TODO_vibe_formation",
   },
 ];
 
@@ -202,6 +237,7 @@ export const PRICING_ODOO: PricingPlan[] = [
       "Formation administration",
     ],
     cta: "Créer mon site Odoo",
+    stripePriceId: "price_TODO_odoo_site",
   },
   {
     id: "odoo-erp",
@@ -220,6 +256,7 @@ export const PRICING_ODOO: PricingPlan[] = [
     ],
     highlighted: true,
     cta: "Implanter mon ERP",
+    stripePriceId: "price_TODO_odoo_erp",
   },
   {
     id: "odoo-crm",
@@ -237,6 +274,7 @@ export const PRICING_ODOO: PricingPlan[] = [
       "Formation équipe",
     ],
     cta: "Optimiser mon CRM",
+    stripePriceId: "price_TODO_odoo_crm",
   },
   {
     id: "odoo-ecommerce",
@@ -256,6 +294,8 @@ export const PRICING_ODOO: PricingPlan[] = [
       "Support prioritaire",
     ],
     cta: "Lancer ma boutique Odoo",
+    stripePriceId: "price_TODO_odoo_ecommerce",
+    stripeSetupPriceId: "price_TODO_odoo_ecommerce_setup",
   },
   {
     id: "odoo-maintenance",
@@ -273,6 +313,7 @@ export const PRICING_ODOO: PricingPlan[] = [
       "Rapport mensuel",
     ],
     cta: "Sécuriser mon Odoo",
+    stripePriceId: "price_TODO_odoo_maintenance",
   },
 ];
 
@@ -294,6 +335,7 @@ export const PRICING_GOOGLE_ADS: PricingPlan[] = [
     ],
     cta: "Installer mes tags",
     paymentLink: "https://buy.stripe.com/eVacMO33S6ixeFqbK9",
+    stripePriceId: "price_TODO_gads_tags",
   },
   {
     id: "gads-medium",
@@ -312,6 +354,7 @@ export const PRICING_GOOGLE_ADS: PricingPlan[] = [
     highlighted: true,
     cta: "Choisir Medium",
     paymentLink: "https://buy.stripe.com/eVaaEGgUI36lcxi14o",
+    stripePriceId: "price_TODO_gads_medium",
   },
   {
     id: "gads-premium",
@@ -330,6 +373,7 @@ export const PRICING_GOOGLE_ADS: PricingPlan[] = [
     ],
     cta: "Passer Premium",
     paymentLink: "https://buy.stripe.com/aEUfZ05c04apgNy8wG",
+    stripePriceId: "price_TODO_gads_premium",
   },
 ];
 
@@ -352,6 +396,7 @@ export const PRICING_FACEBOOK_ADS: PricingPlan[] = [
     ],
     cta: "Créer ma page",
     paymentLink: "https://buy.stripe.com/aEU6oq33S36ldBm7tU",
+    stripePriceId: "price_TODO_fb_page_pro",
   },
   {
     id: "fb-tags",
@@ -369,6 +414,7 @@ export const PRICING_FACEBOOK_ADS: PricingPlan[] = [
     ],
     cta: "Installer mon Pixel",
     paymentLink: "https://buy.stripe.com/3csbIK9sg8qFapa5l1",
+    stripePriceId: "price_TODO_fb_tags",
   },
   {
     id: "fb-standard",
@@ -388,6 +434,7 @@ export const PRICING_FACEBOOK_ADS: PricingPlan[] = [
     highlighted: true,
     cta: "Choisir Standard",
     paymentLink: "https://buy.stripe.com/00g5km0VKbCR8h214M",
+    stripePriceId: "price_TODO_fb_standard",
   },
   {
     id: "fb-premium",
@@ -406,6 +453,7 @@ export const PRICING_FACEBOOK_ADS: PricingPlan[] = [
     ],
     cta: "Passer Premium Meta",
     paymentLink: "https://buy.stripe.com/eVa5kmdIw8qF68U28R",
+    stripePriceId: "price_TODO_fb_premium",
   },
   {
     id: "fb-gestion-page",
@@ -425,6 +473,7 @@ export const PRICING_FACEBOOK_ADS: PricingPlan[] = [
     ],
     cta: "Gérer ma page",
     paymentLink: "https://buy.stripe.com/cN2146bAo4apfJucO6",
+    stripePriceId: "price_TODO_fb_gestion_page",
   },
 ];
 
@@ -445,6 +494,7 @@ export const PRICING_NATIVE_ADS: PricingPlan[] = [
     ],
     cta: "Installer mes tags",
     paymentLink: "https://buy.stripe.com/bIY5km1ZO0Yd2WIbJu",
+    stripePriceId: "price_TODO_native_tags",
   },
   {
     id: "native-gestion",
@@ -463,6 +513,7 @@ export const PRICING_NATIVE_ADS: PricingPlan[] = [
     highlighted: true,
     cta: "Lancer mes campagnes natives",
     paymentLink: "https://buy.stripe.com/9AQ8wy9sgayNeFq4h0",
+    stripePriceId: "price_TODO_native_gestion",
   },
   {
     id: "native-premium",
@@ -480,6 +531,7 @@ export const PRICING_NATIVE_ADS: PricingPlan[] = [
     ],
     cta: "Passer Premium Natif",
     paymentLink: "https://buy.stripe.com/00g28a0VKayNbte8xh",
+    stripePriceId: "price_TODO_native_premium",
   },
 ];
 
@@ -500,6 +552,7 @@ export const PRICING_RESEAUX_SOCIAUX: PricingPlan[] = [
     ],
     cta: "Lancer TikTok Ads",
     paymentLink: "https://buy.stripe.com/4gw3ceeMAcGV68UeVO",
+    stripePriceId: "price_TODO_sma_tiktok",
   },
   {
     id: "sma-linkedin",
@@ -517,6 +570,7 @@ export const PRICING_RESEAUX_SOCIAUX: PricingPlan[] = [
     highlighted: true,
     cta: "Lancer LinkedIn Ads",
     paymentLink: "https://buy.stripe.com/dR63cegUI36leFqfZT",
+    stripePriceId: "price_TODO_sma_linkedin",
   },
   {
     id: "sma-snapchat",
@@ -533,6 +587,7 @@ export const PRICING_RESEAUX_SOCIAUX: PricingPlan[] = [
     ],
     cta: "Lancer Snapchat Ads",
     paymentLink: "https://buy.stripe.com/14k9AC33S22h0OAcNI",
+    stripePriceId: "price_TODO_sma_snapchat",
   },
   {
     id: "sma-pinterest",
@@ -549,6 +604,7 @@ export const PRICING_RESEAUX_SOCIAUX: PricingPlan[] = [
     ],
     cta: "Lancer Pinterest Ads",
     paymentLink: "https://buy.stripe.com/aEU5kmeMA7mBapa6pl",
+    stripePriceId: "price_TODO_sma_pinterest",
   },
 ];
 
@@ -570,6 +626,7 @@ export const PRICING_SEO: PricingPlan[] = [
       "Livraison sous 5 jours ouvrables",
     ],
     cta: "Commander mon audit",
+    stripePriceId: "price_TODO_seo_audit",
   },
   {
     id: "seo-backlinks",
@@ -588,6 +645,7 @@ export const PRICING_SEO: PricingPlan[] = [
     ],
     highlighted: true,
     cta: "Booster mon autorité",
+    stripePriceId: "price_TODO_seo_backlinks",
   },
   {
     id: "seo-maillage",
@@ -606,6 +664,7 @@ export const PRICING_SEO: PricingPlan[] = [
       "Rapport de crawl détaillé",
     ],
     cta: "Structurer mon maillage",
+    stripePriceId: "price_TODO_seo_maillage",
   },
 ];
 
@@ -627,6 +686,7 @@ export const PRICING_GMB: PricingPlan[] = [
     ],
     cta: "Optimiser ma fiche",
     paymentLink: "https://buy.stripe.com/6oE3cegUIeP32WIdRG",
+    stripePriceId: "price_TODO_gmb_base",
   },
   {
     id: "gmb-creation",
@@ -647,6 +707,7 @@ export const PRICING_GMB: PricingPlan[] = [
     highlighted: true,
     cta: "Créer mon profil",
     paymentLink: "https://buy.stripe.com/dR628afQE7mB0OA00P",
+    stripePriceId: "price_TODO_gmb_creation",
   },
   {
     id: "gmb-qrcode",
@@ -664,6 +725,7 @@ export const PRICING_GMB: PricingPlan[] = [
     ],
     cta: "Commander mon QR Code",
     paymentLink: "https://buy.stripe.com/dRm7sMdYj5CweSS1ZR6wE2W",
+    stripePriceId: "price_TODO_gmb_qrcode",
   },
 ];
 
@@ -684,6 +746,7 @@ export const PRICING_GRAPHISME: PricingPlan[] = [
     ],
     cta: "Créer ma brochure",
     paymentLink: "https://buy.stripe.com/7sI5km33S5et9l6eVS",
+    stripePriceId: "price_TODO_graph_brochure",
   },
   {
     id: "graph-logo-essentiel",
@@ -698,6 +761,7 @@ export const PRICING_GRAPHISME: PricingPlan[] = [
     ],
     cta: "Créer mon logo",
     paymentLink: "https://buy.stripe.com/3csdQSdIw22hdBm4hf",
+    stripePriceId: "price_TODO_graph_logo_essentiel",
   },
   {
     id: "graph-logo-premium",
@@ -714,6 +778,7 @@ export const PRICING_GRAPHISME: PricingPlan[] = [
     highlighted: true,
     cta: "Logo Premium",
     paymentLink: "https://buy.stripe.com/cN200247W9uJ7cYdRQ",
+    stripePriceId: "price_TODO_graph_logo_premium",
   },
   {
     id: "graph-identite",
@@ -730,6 +795,7 @@ export const PRICING_GRAPHISME: PricingPlan[] = [
     ],
     cta: "Créer mon identité",
     paymentLink: "https://buy.stripe.com/9AQcMO33SayNfJu3dd",
+    stripePriceId: "price_TODO_graph_identite",
   },
 ];
 
@@ -752,6 +818,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
       "Livraison format optimisé",
     ],
     cta: "Commander",
+    stripePriceId: "price_TODO_video_unitaire",
   },
   {
     id: "video-pack-10",
@@ -771,6 +838,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
     ],
     highlighted: true,
     cta: "Choisir le pack",
+    stripePriceId: "price_TODO_video_pack_10",
   },
   {
     id: "video-pack-15",
@@ -789,6 +857,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
       "Économie de 386 $ vs unitaire",
     ],
     cta: "Choisir le pack",
+    stripePriceId: "price_TODO_video_pack_15",
   },
   {
     id: "video-illimite-1",
@@ -806,6 +875,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
       "Livraison 48-72h par vidéo",
     ],
     cta: "S'abonner",
+    stripePriceId: "price_TODO_video_illimite_1",
   },
   {
     id: "video-illimite-3",
@@ -826,6 +896,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
     ],
     highlighted: true,
     cta: "S'abonner",
+    stripePriceId: "price_TODO_video_illimite_3",
   },
   {
     id: "video-illimite-12",
@@ -844,6 +915,7 @@ export const PRICING_MONTAGE_VIDEO: PricingPlan[] = [
       "Meilleur rapport qualité-prix (9 499 $ total)",
     ],
     cta: "S'abonner",
+    stripePriceId: "price_TODO_video_illimite_12",
   },
 ];
 

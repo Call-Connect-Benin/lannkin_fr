@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services Professionnels | Lannkin",
-  description: "Marketing digital et site web pour les services professionnels. Positionnement d'expert et génération de mandats qualifiés.",
+  title: "Marketing Digital Services Professionnels | Lannkin",
+  description: "Marketing digital pour services professionnels. Positionnement d'expert, SEO et génération de mandats qualifiés. Devis gratuit.",
 };
 
 export default function ServicesProfessionnelsPage() {

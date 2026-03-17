@@ -19,11 +19,12 @@ import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWid
 import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
 import { Container } from "@/presentation/components/ui/Container";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
+import { HeroParticles } from "@/presentation/components/hero/HeroParticles";
 
 export const metadata: Metadata = {
-  title: "Agence Marketing Digital & Développement Web à Laval | Lannkin",
+  title: "Agence Marketing Digital Laval | Lannkin",
   description:
-    "Lannkin est votre agence de marketing digital et développement web à Laval. Expertise en SEO, Google Ads, conception web, IA et vibe coding pour propulser votre entreprise.",
+    "Agence marketing digital à Laval. SEO, Google Ads, conception web et IA pour PME québécoises. Devis gratuit, résultats concrets. Contactez Lannkin.",
 };
 
 export default function HomePage() {
@@ -34,31 +35,8 @@ export default function HomePage() {
           1. HERO
       ═══════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden pb-16 pt-12 lg:pt-20">
-        {/* 3D bg — diagonal right-side placement */}
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[62%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
-              alt=""
-              className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(108deg, #0C0C0C 16%, rgba(12,12,12,0.7) 38%, transparent 60%)" }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to bottom, #0C0C0C 0%, transparent 18%, transparent 82%, #0C0C0C 100%)" }}
-            />
-          </div>
-        </div>
-        <div
-          className="pointer-events-none absolute right-1/3 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
-          style={{ backgroundColor: "rgba(73,143,109,0.08)" }}
-          aria-hidden
-        />
+        {/* 3D animated particles background */}
+        <HeroParticles />
 
         <Container className="relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-12">

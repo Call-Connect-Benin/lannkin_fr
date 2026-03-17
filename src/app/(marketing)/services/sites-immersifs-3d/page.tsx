@@ -18,6 +18,7 @@ import Link from "next/link";
 import { getSubServices } from "@/data/services";
 import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
+import { HeroVideoScroll } from "@/presentation/components/hero/HeroVideoScroll";
 
 export const metadata: Metadata = {
   title: "Sites Immersifs 3D | Three.js WebGL React Three Fiber | LANNKIN Laval",
@@ -158,13 +159,30 @@ export default function SitesImmersifs3dPage() {
       {/* Sub-services */}
       <section className="py-24">
         <Container>
-          <h2 className="mb-4 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
-            Nos expertises 3D
-          </h2>
-          <p className="mb-12 max-w-2xl font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            10 spécialités pour des expériences immersives
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
+              Nos expertises 3D
+            </h2>
+            <p className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              10 spécialités pour des expériences immersives
+            </p>
+          </div>
+
+          {/* Scroll-controlled 3D video showcase */}
+          <HeroVideoScroll>
+            <Container>
+              <div className="text-center">
+                <h3 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+                  L&apos;immersion commence ici
+                </h3>
+                <p className="mt-3 text-base text-[#CCCCCC]">
+                  Scrollez pour voir la magie opérer — exactement comme vos futurs visiteurs.
+                </p>
+              </div>
+            </Container>
+          </HeroVideoScroll>
+
+          <div className="mt-24 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {subServices.map((sub) => (
               <Link
                 key={sub.slug}

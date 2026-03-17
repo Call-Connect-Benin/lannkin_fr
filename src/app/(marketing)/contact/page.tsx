@@ -7,9 +7,9 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Contact | Lannkin — Agence Marketing Digital Laval",
+  title: "Contacter Agence Web Laval | Lannkin",
   description:
-    "Contactez Lannkin pour discuter de votre projet web ou marketing digital. Réponse en moins de 2 minutes. Consultation gratuite avec nos experts à Laval.",
+    "Contactez notre agence web à Laval. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Lannkin.",
   alternates: { canonical: "https://lannkin.ca/contact/" },
 };
 

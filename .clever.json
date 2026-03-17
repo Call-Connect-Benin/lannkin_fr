@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "app_id": "app_47743e63-0844-4ed4-a113-47747d2df641",
+      "org_id": "orga_49be468c-40c4-4bf8-b13c-ea87bff1796f",
+      "deploy_url": "https://push-n2-mtl-clevercloud-customers.services.clever-cloud.com/app_47743e63-0844-4ed4-a113-47747d2df641.git",
+      "git_ssh_url": "git+ssh://git@push-n2-mtl-clevercloud-customers.services.clever-cloud.com/app_47743e63-0844-4ed4-a113-47747d2df641.git",
+      "name": "lannkin.ca (canada)",
+      "alias": "lannkinca-canada"
+    }
+  ]
+}

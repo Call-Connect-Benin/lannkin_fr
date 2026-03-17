@@ -8,9 +8,9 @@ import { getHubBySlug } from "@/data/services";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Secteurs d'activité | Marketing Digital par Industrie | Lannkin",
+  title: "Marketing Digital par Secteur | Lannkin",
   description:
-    "Solutions marketing digital adaptées à votre secteur : restaurant, immobilier, santé, construction, e-commerce, automobile et plus. Expertise sectorielle à Laval et au Québec.",
+    "Marketing digital adapté à votre secteur : restaurant, immobilier, santé, construction, e-commerce et plus. Expertise sectorielle à Laval et au Québec.",
 };
 
 export default function SecteursPage() {

@@ -9,9 +9,9 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "À Propos | Lannkin — Agence Marketing Digital Laval",
+  title: "Agence Web Laval Québec | À Propos | Lannkin",
   description:
-    "Découvrez Lannkin : agence marketing digital et création web pour TPE et PME francophones. Basée à Laval, présente au Canada, en France et en Suisse. +10 ans d'expérience, certifiée Google Partner.",
+    "Agence web à Laval, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME au Canada, France et Suisse. Découvrez l'équipe Lannkin.",
   alternates: { canonical: "https://lannkin.ca/a-propos/" },
 };
 

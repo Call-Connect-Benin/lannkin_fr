@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+// import { useState } from "react";
+// import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, ShieldCheck } from "lucide-react";
 
@@ -54,6 +55,35 @@ export function PricingPageContent({
   youtubeIds,
   youtubeTitle = "Ressources vidéo",
 }: PricingPageContentProps) {
+  // const [loadingPlanId, setLoadingPlanId] = useState<string | null>(null);
+  // const [error, setError] = useState<string | null>(null);
+
+  // async function handleCheckout(planId: string) {
+  //   setLoadingPlanId(planId);
+  //   setError(null);
+  //   try {
+  //     const res = await fetch("/api/stripe/checkout/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ planId }),
+  //     });
+  //     const data = await res.json();
+  //     if (!res.ok) throw new Error(data.error ?? "Erreur inconnue");
+  //     if (data.url) {
+  //       window.location.href = data.url;
+  //     }
+  //   } catch (err) {
+  //     setError(
+  //       err instanceof Error
+  //         ? err.message
+  //         : "Erreur lors de la redirection.",
+  //     );
+  //     setLoadingPlanId(null);
+  //   }
+  // }
+
+  const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/eVaaEGgUI36lcxi14o";
+
   return (
     <main>
       {/* Hero — parallax 3D, compact 2-col */}
@@ -134,6 +164,12 @@ export function PricingPageContent({
       {/* Pricing Cards */}
       <section className="bg-surface pb-16 pt-8 lg:pb-24">
         <Container>
+          {/* {error && (
+            <div className="mb-6 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+              {error}
+            </div>
+          )} */}
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -199,12 +235,12 @@ export function PricingPageContent({
                 </ul>
 
                 <div>
-                  <Link
-                    href={plan.paymentLink ?? "/devis-gratuit/"}
-                    target={plan.paymentLink ? "_blank" : undefined}
-                    rel={plan.paymentLink ? "noopener noreferrer" : undefined}
+                  <a
+                    href={STRIPE_PAYMENT_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
-                      "flex items-center justify-center gap-2 rounded-lg py-3 text-center text-sm font-semibold transition-all duration-200",
+                      "flex w-full items-center justify-center gap-2 rounded-lg py-3 text-center text-sm font-semibold transition-all duration-200",
                       plan.highlighted
                         ? "bg-accent text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] hover:brightness-110"
                         : "border border-white/10 text-white hover:border-accent/30 hover:text-accent",
@@ -212,13 +248,11 @@ export function PricingPageContent({
                   >
                     {plan.cta}
                     <ArrowRight className="h-3.5 w-3.5 shrink-0" />
-                  </Link>
-                  {plan.paymentLink && (
-                    <p className="mt-2 flex items-center justify-center gap-1 text-xs text-muted/60">
-                      <ShieldCheck className="h-3 w-3" />
-                      Paiement sécurisé via Stripe
-                    </p>
-                  )}
+                  </a>
+                  <p className="mt-2 flex items-center justify-center gap-1 text-xs text-muted/60">
+                    <ShieldCheck className="h-3 w-3" />
+                    Paiement sécurisé via Stripe
+                  </p>
                 </div>
               </motion.div>
             ))}

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Restaurant Restauration | Lannkin",
-  description: "Marketing digital et site web pour restaurants et restauration. Solutions adaptées au secteur de la gastronomie.",
+  title: "Marketing Digital Restaurant Québec | Lannkin",
+  description: "Marketing digital pour restaurants au Québec. Site web, Google Ads et réseaux sociaux pour remplir vos tables. Devis gratuit.",
 };
 
 export default function RestaurantRestaurationPage() {

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sante Clinique | Lannkin",
-  description: "Marketing digital et site web pour le secteur santé et cliniques. Solutions conformes et performantes pour professionnels de santé.",
+  title: "Marketing Digital Santé Québec | Lannkin",
+  description: "Marketing digital santé au Québec. Sites conformes, SEO médical et Google Ads pour cliniques et professionnels. Devis gratuit.",
 };
 
 export default function SanteCliniqueePage() {

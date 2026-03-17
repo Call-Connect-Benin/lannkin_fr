@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Agence Marketing Laval | Lannkin",
-  description: "Agence marketing digital à Laval. Stratégies complètes de marketing en ligne pour entreprises de Laval et environs.",
+  description: "Agence marketing à Laval. SEO, Google Ads, réseaux sociaux et lead generation pour PME lavalloises. Devis gratuit.",
 };
 
 export default function AgenceMarketingLavalPage() {

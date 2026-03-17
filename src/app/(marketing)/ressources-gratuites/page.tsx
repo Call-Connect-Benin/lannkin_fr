@@ -6,9 +6,9 @@ import Link from "next/link";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Ressources gratuites | Lannkin — Outils, Ebooks & Formations",
+  title: "Ressources Marketing Digital Gratuites | Lannkin",
   description:
-    "Accédez gratuitement aux outils, ebooks et formations de Lannkin : audit Google Ads, guides SEO, formations marketing digital. Tout pour booster votre croissance.",
+    "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Lannkin pour booster votre croissance en ligne.",
   alternates: { canonical: "https://lannkin.ca/ressources-gratuites/" },
 };
 

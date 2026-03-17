@@ -7,9 +7,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Certifications | Lannkin — Google Partner, Meta Partner, Shopify Partner",
+  title: "Agence Certifiée Google Partner Laval | Lannkin",
   description:
-    "Lannkin est certifiée Google Partner, Meta Business Partner et Shopify Partner. Découvrez nos certifications professionnelles en marketing digital et développement web.",
+    "Lannkin : agence certifiée Google Partner, Meta Partner et Shopify Partner à Laval. Certifications en marketing digital et développement web au Québec.",
 };
 
 const PARTNERS = [

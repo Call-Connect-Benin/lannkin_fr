@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ecommerce En Ligne | Lannkin",
-  description: "Marketing digital et optimisation pour boutiques e-commerce. SEO, publicité et conversion pour ventes en ligne.",
+  title: "Agence E-Commerce Québec | Lannkin",
+  description: "Agence e-commerce au Québec. SEO, publicité et optimisation des conversions pour boutiques en ligne. Devis gratuit.",
 };
 
 export default function EcommerceEnLignePage() {

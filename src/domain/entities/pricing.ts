@@ -10,4 +10,6 @@ export interface PricingPlan {
   highlighted?: boolean;
   cta: string;
   paymentLink?: string;
+  stripePriceId?: string;
+  stripeSetupPriceId?: string;
 }

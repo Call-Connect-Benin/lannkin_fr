@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Agence Seo Montreal | Lannkin",
-  description: "Agence SEO à Montréal. Référencement naturel et optimisation pour moteurs de recherche pour entreprises montréalaises.",
+  title: "Agence SEO Montréal | Lannkin",
+  description: "Agence SEO à Montréal. Référencement naturel local et national, audit technique et backlinks. Devis gratuit en 24h.",
 };
 
 export default function AgenceSeoMontrealPage() {

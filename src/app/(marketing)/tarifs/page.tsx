@@ -11,9 +11,9 @@ import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Tarifs Transparents | Lannkin",
+  title: "Tarifs Agence Web Québec | Lannkin",
   description:
-    "Tous nos tarifs web, SEO, Google Ads, Meta Ads, graphisme et Odoo. Prix clairs dès 50$/mois. Comparez nos forfaits et choisissez le vôtre.",
+    "Tarifs transparents : site web, SEO, Google Ads, Meta Ads et graphisme dès 50$/mois. Comparez nos forfaits marketing digital. Prix clairs, sans surprise.",
 };
 
 function formatPrice(price: number): string {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Agence Web Rive Nord | Lannkin",
-  description: "Agence web Rive-Nord. Services web et marketing digital pour entreprises de la Rive-Nord de Montréal.",
+  description: "Agence web Rive-Nord. Sites web, SEO et marketing digital pour Laval, Terrebonne et Blainville. Devis gratuit.",
 };
 
 export default function AgenceWebRiveNordPage() {

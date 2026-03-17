@@ -14,9 +14,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { DevisForm } from "@/presentation/components/forms/DevisForm";
 
 export const metadata: Metadata = {
-  title: "Devis Gratuit | Lannkin",
+  title: "Devis Gratuit Site Web & Marketing | Lannkin",
   description:
-    "Obtenez un devis gratuit et sans engagement pour votre projet web ou marketing digital. Réponse rapide sous 24h.",
+    "Devis gratuit pour votre site web ou marketing digital à Laval. Sans engagement, réponse sous 24h. Soumission web personnalisée par Lannkin.",
 };
 
 const TRUST_POINTS = [

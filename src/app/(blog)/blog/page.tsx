@@ -8,9 +8,9 @@ import { formatDate, getAllPosts } from "@/lib/blog";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Blog | Lannkin — Marketing Digital, SEO, Web & IA",
+  title: "Blog Marketing Digital Québec | Lannkin",
   description:
-    "Blog Lannkin : articles, guides et conseils en marketing digital, SEO, développement web, IA et publicité en ligne. Restez à jour sur les tendances.",
+    "Conseils SEO, tendances web et guides marketing digital au Québec. Articles par les experts Lannkin sur le SEO, Google Ads, IA et développement web.",
 };
 
 export default function BlogPage() {

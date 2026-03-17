@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Commerce Detail | Lannkin",
-  description: "Marketing digital et site web pour le commerce de détail. Solutions omnicanal pour augmenter le trafic en magasin et en ligne.",
+  title: "Marketing Digital Commerce Détail | Lannkin",
+  description: "Marketing digital commerce de détail. Solutions omnicanal, SEO local et publicité pour augmenter votre trafic. Devis gratuit.",
 };
 
 export default function CommerceDetailPage() {

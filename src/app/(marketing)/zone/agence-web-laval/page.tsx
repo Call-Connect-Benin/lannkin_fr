@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Agence Web Laval | Lannkin",
-  description: "Agence web à Laval. Services de développement web, design et solutions digitales pour entreprises lavalloises.",
+  description: "Agence web à Laval. Sites web, SEO et Google Ads pour PME lavalloises depuis 2015. Devis gratuit en 24h. Contactez Lannkin.",
 };
 
 export default function AgenceWebLavalPage() {
