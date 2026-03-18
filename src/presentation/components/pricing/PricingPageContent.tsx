@@ -82,7 +82,7 @@ export function PricingPageContent({
   //   }
   // }
 
-  const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/eVaaEGgUI36lcxi14o";
+  const FALLBACK_LINK = "/devis-gratuit/";
 
   return (
     <main>
@@ -236,7 +236,7 @@ export function PricingPageContent({
 
                 <div>
                   <a
-                    href={STRIPE_PAYMENT_LINK}
+                    href={plan.paymentLink ?? FALLBACK_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
