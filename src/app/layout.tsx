@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
+import FloatingContact from "@/presentation/components/layout/FloatingContact";
 import "./globals.css";
 
 const inter = Inter({
@@ -163,6 +164,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {children}
+        <FloatingContact />
         <Analytics />
       </body>
     </html>
