@@ -173,16 +173,27 @@ export default function FormulaireConceptionPage() {
     ].filter(Boolean).join("\n");
 
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          firstName: g("firstName"), lastName: g("lastName"),
-          email: g("email"), phone: phone || "",
-          company: g("companyName"), message: lines,
+          formType: "contact",
+          firstName: g("firstName"),
+          lastName: g("lastName"),
+          email: g("email"),
+          phone: phone || "",
+          company: g("companyName") || "",
+          service: `${CATEGORIES.find((c) => c.id === category)?.label} — ${service}`,
+          message: lines,
+          sourceUrl: "/formulaire-de-conception",
         }),
       });
-      setSubmitted(true);
+      if (!res.ok) {
+        const err = await res.json();
+        alert(err.error || "Une erreur est survenue.");
+      } else {
+        setSubmitted(true);
+      }
     } catch { alert("Une erreur est survenue. Veuillez réessayer."); }
     finally { setLoading(false); }
   }

@@ -1,17 +1,14 @@
 import nodemailer from "nodemailer";
 
-const SMTP_PORT = Number(process.env.SMTP_PORT ?? 465);
+const SMTP_PORT = Number(process.env.SMTP_PORT ?? 587);
 
 export const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST ?? "",
+  host: process.env.SMTP_HOST ?? "smtp-relay.brevo.com",
   port: SMTP_PORT,
-  secure: true, // o2switch port 2096 uses SSL
+  secure: SMTP_PORT === 465, // true for 465, false for 587 (STARTTLS)
   auth: {
     user: process.env.SMTP_USER ?? "",
     pass: process.env.SMTP_PASSWORD ?? "",
-  },
-  tls: {
-    rejectUnauthorized: false, // accepte les certificats auto-signés (cPanel / o2switch)
   },
   connectionTimeout: 10_000,
   greetingTimeout: 10_000,
