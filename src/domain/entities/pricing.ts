@@ -8,6 +8,7 @@ export interface PricingPlan {
   setupFee?: number;
   features: string[];
   highlighted?: boolean;
+  badge?: string;
   cta: string;
   paymentLink?: string;
   stripePriceId?: string;

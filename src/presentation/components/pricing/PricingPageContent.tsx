@@ -197,7 +197,7 @@ export function PricingPageContent({
               >
                 {plan.highlighted && (
                   <div className="absolute -top-3 left-6 rounded-full bg-accent px-3 py-1 font-mono text-xs font-semibold text-on-accent">
-                    Populaire
+                    {plan.badge ?? "Populaire"}
                   </div>
                 )}
 

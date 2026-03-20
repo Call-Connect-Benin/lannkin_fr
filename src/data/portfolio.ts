@@ -126,37 +126,6 @@ const multiPagesProjects: PortfolioProject[] = [
     previewImage: "/images/portfolio/groupe-lariviere.webp",
   },
   {
-    id: "peinture-pro",
-    slug: "peinture-pro",
-    name: "Peinture Pro",
-    client: "Peinture Pro",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Peinture résidentielle",
-    year: 2022,
-    shortDescription:
-      "Site web multipage pour un peintre résidentiel avec galerie de projets, demande de soumission et témoignages clients.",
-    description:
-      "Conception d'un site web multipage pour Peinture Pro, peintre en bâtiment résidentiel au Québec. Galerie de réalisations, pages services (intérieur, extérieur, calfeutrage), section témoignages clients, formulaire de demande de soumission gratuite et optimisation SEO.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Site professionnel valorisant la qualité du travail",
-      "Formulaire de soumission générant des leads qualifiés",
-      "Témoignages clients intégrés pour la preuve sociale",
-      "Référencement local opérationnel",
-    ],
-    challenge:
-      "Se distinguer dans un secteur de la peinture où les entreprises se ressemblent et convaincre les clients de la qualité du travail avant même la visite.",
-    solution:
-      "Site multipage misant sur la preuve sociale (galerie + témoignages), avec formulaire de soumission simplifié et contenu SEO local ciblé.",
-    seoTitle: "Site Web Peintre Résidentiel Québec | Peinture Pro — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Peinture Pro, peintre résidentiel au Québec. Conception web, SEO local et Google Ads.",
-    externalUrl: "https://www.peinture-pro.ca/",
-    previewImage: "/images/portfolio/peinture-pro.webp",
-  },
-  {
     id: "constructeurs-de-qualite",
     slug: "constructeurs-de-qualite",
     name: "Constructeurs de Qualité",
@@ -186,37 +155,6 @@ const multiPagesProjects: PortfolioProject[] = [
       "Portfolio Lannkin : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle Québec.",
     externalUrl: "https://www.constructeursdequalite.ca/",
     previewImage: "/images/portfolio/constructeurs-de-qualite.webp",
-  },
-  {
-    id: "constructions-guillen",
-    slug: "constructions-guillen",
-    name: "Constructions Guillen",
-    client: "Constructions Guillen",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Construction et rénovation",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une entreprise de construction et rénovation avec portfolios de projets et formulaire de soumission.",
-    description:
-      "Conception du site web multipage de Constructions Guillen, entreprise spécialisée en construction neuve et rénovation au Québec. Architecture multipage avec portfolio de réalisations, pages services (construction, rénovation, finition), formulaire de soumission et contenu optimisé pour le SEO local.",
-    services: ["Conception Web", "SEO", "Facebook Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Présence web professionnelle établie",
-      "Portfolio de réalisations mis en valeur",
-      "Leads en ligne générés via formulaire",
-      "Référencement local amélioré",
-    ],
-    challenge:
-      "Construire une présence numérique de confiance pour une entreprise en croissance souhaitant attirer une clientèle résidentielle premium.",
-    solution:
-      "Site multipage avec galerie de réalisations soignée, identité visuelle professionnelle et SEO local ciblant les propriétaires résidentiels de la région.",
-    seoTitle: "Site Web Construction Rénovation Québec | Constructions Guillen — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web multipage pour Constructions Guillen. Construction et rénovation résidentielle Québec.",
-    externalUrl: "https://www.constructionsguillen.com/",
-    previewImage: "/images/portfolio/constructions-guillen.webp",
   },
 ];
 
@@ -288,37 +226,6 @@ const onePageProjects: PortfolioProject[] = [
     previewImage: "/images/portfolio/nettoyage-leblanc.webp",
   },
   {
-    id: "ethique-service-nettoyage",
-    slug: "ethique-service-nettoyage",
-    name: "Éthique Service Nettoyage",
-    client: "Éthique Service Nettoyage",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Nettoyage écologique",
-    year: 2023,
-    shortDescription:
-      "Site onepage pour un service de nettoyage éco-responsable mettant en avant ses valeurs environnementales et ses forfaits.",
-    description:
-      "Conception d'un site onepage pour Éthique Service Nettoyage, entreprise d'entretien ménager engagée dans des pratiques écologiques. Mise en valeur des produits naturels utilisés, certifications, forfaits détaillés et formulaire de réservation en ligne.",
-    services: ["Conception Web", "SEO", "Facebook Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
-    results: [
-      "Identité de marque éco-responsable bien communiquée",
-      "Réservations en ligne opérationnelles",
-      "Clients sensibles à l'écologie attirés",
-      "Présence locale sur Google établie",
-    ],
-    challenge:
-      "Communiquer efficacement la proposition de valeur écologique pour se différencier des services de nettoyage traditionnels.",
-    solution:
-      "Site onepage avec storytelling centré sur les valeurs éco-responsables, certifications et témoignages de clients convaincus.",
-    seoTitle: "Site Web Nettoyage Écologique Québec | Éthique Service Nettoyage — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site onepage pour Éthique Service Nettoyage. Entretien ménager écologique Québec, conception web et SEO.",
-    externalUrl: "https://www.ethiqueservicenettoyage.ca/",
-    previewImage: "/images/portfolio/ethique-service-nettoyage.webp",
-  },
-  {
     id: "ture-beau-menage",
     slug: "ture-beau-menage",
     name: "Ture Beau Ménage",
@@ -386,37 +293,6 @@ const ecommerceProjects: PortfolioProject[] = [
       "Portfolio Lannkin : e-commerce pour Le Coffre à Jouets. Boutique en ligne jouets et cadeaux Québec, WooCommerce et SEO.",
     externalUrl: "https://lecoffreajouets.net/",
     previewImage: "/images/portfolio/coffre-a-jouets.webp",
-  },
-  {
-    id: "bout-de-chou-boutique",
-    slug: "bout-de-chou-boutique",
-    name: "Bout de Chou Boutique",
-    client: "Bout de Chou Boutique",
-    category: "ecommerce",
-    categoryLabel: "E-commerce",
-    sector: "Mode et accessoires enfants",
-    year: 2024,
-    shortDescription:
-      "Boutique e-commerce de vêtements et accessoires pour enfants avec catalogue saisonnier, lookbook et livraison partout au Canada.",
-    description:
-      "Création d'une boutique e-commerce pour Bout de Chou Boutique, spécialiste de la mode et des accessoires pour enfants au Québec. Catalogue par taille et collection, lookbooks saisonniers, fiches produits détaillées avec photos multiples, gestion des tailles et couleurs, et checkout optimisé.",
-    services: ["Conception Web", "Facebook Ads", "Réseaux Sociaux"],
-    technologies: ["Shopify", "Liquid", "Instagram Shopping", "Meta Ads"],
-    results: [
-      "Boutique Shopify en ligne lancée avec succès",
-      "Catalogue produits saisonnier bien présenté",
-      "Ventes via Instagram Shopping intégrées",
-      "Expérience d'achat mobile optimisée",
-    ],
-    challenge:
-      "Créer une expérience d'achat en ligne qui reflète l'univers doux et chaleureux de la boutique physique pour les parents achetant pour leurs enfants.",
-    solution:
-      "Boutique Shopify avec design doux et coloré, lookbooks photographiques et intégration Instagram Shopping pour atteindre les parents sur les réseaux sociaux.",
-    seoTitle: "Boutique E-commerce Mode Enfants Québec | Bout de Chou — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : e-commerce Shopify pour Bout de Chou Boutique. Mode et accessoires enfants Québec, vente en ligne et Instagram Shopping.",
-    externalUrl: "https://boutdechouboutique.com/",
-    previewImage: "/images/portfolio/bout-de-choux.webp",
   },
 ];
 
