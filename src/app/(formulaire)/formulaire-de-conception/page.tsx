@@ -131,62 +131,28 @@ export default function FormulaireConceptionPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    const fd = new FormData(e.currentTarget);
-    const g = (n: string) => (fd.get(n) as string) || "";
 
-    const lines = [
-      `Catégorie : ${CATEGORIES.find((c) => c.id === category)?.label}`,
-      `Service : ${service}`,
-      g("companyName") && `Entreprise : ${g("companyName")}`,
-      g("companyWebsite") && `Site web : ${g("companyWebsite")}`,
-      companyPhone && `Tél. entreprise : ${companyPhone}`,
-      g("companyEmail") && `Email entreprise : ${g("companyEmail")}`,
-      g("companyAddress") && `Adresse : ${g("companyAddress")}`,
-      g("domain") && `Domaine d'activité : ${g("domain")}`,
-      g("servicesProducts") && `Services/Produits : ${g("servicesProducts")}`,
-      g("competitors") && `Avantage concurrentiel : ${g("competitors")}`,
-      g("cities") && `Villes : ${g("cities")}`,
-      g("slogan") && `Slogan : ${g("slogan")}`,
-      g("workHours") && `Horaires : ${g("workHours")}`,
-      g("licenses") && `Licences : ${g("licenses")}`,
-      hasDomain && `Nom de domaine : ${hasDomain}`,
-      hasLogo && `Logo : ${hasLogo}`,
-      g("colors") && `Couleurs : ${g("colors")}`,
-      socials.length > 0 && `Pages sociales : ${socials.join(", ")}`,
-      g("targetZone") && `Zone ciblée : ${g("targetZone")}`,
-      g("excludeZone") && `Zones exclues : ${g("excludeZone")}`,
-      g("personas") && `Personas : ${g("personas")}`,
-      g("b2bOrB2c") && `B2B/B2C : ${g("b2bOrB2c")}`,
-      g("targetAudience") && `Audience cible : ${g("targetAudience")}`,
-      g("redirectPage") && `Page de redirection : ${g("redirectPage")}`,
-      hasLanding && `Landing page : ${hasLanding}`,
-      hasVisuals && `Visuels existants : ${hasVisuals}`,
-      g("specialOffer") && `Offre spéciale : ${g("specialOffer")}`,
-      g("adSlogan") && `Slogan pub : ${g("adSlogan")}`,
-      hasCampaign && `Campagne en cours : ${hasCampaign}`,
-      objectives.length > 0 && `Objectifs : ${objectives.join(", ")}`,
-      g("desiredAction") && `Action souhaitée : ${g("desiredAction")}`,
-      g("negativeKeywords") && `Mots-clés à éviter : ${g("negativeKeywords")}`,
-      campaignDuration && `Durée campagne : ${campaignDuration}`,
-      g("referencesSites") && `Sites de références : ${g("referencesSites")}`,
-      g("comments") && `Commentaires : ${g("comments")}`,
-    ].filter(Boolean).join("\n");
+    const fd = new FormData(e.currentTarget);
+
+    // Add fields that are managed via React state (not native inputs)
+    fd.set("category", CATEGORIES.find((c) => c.id === category)?.label ?? "");
+    fd.set("service", service);
+    if (phone) fd.set("phone", phone);
+    if (companyPhone) fd.set("companyPhone", companyPhone);
+    if (hasDomain) fd.set("hasDomain", hasDomain);
+    if (hasLogo) fd.set("hasLogo", hasLogo);
+    if (socials.length > 0) fd.set("socials", socials.join(", "));
+    if (hasLanding) fd.set("hasLanding", hasLanding);
+    if (hasVisuals) fd.set("hasVisuals", hasVisuals);
+    if (hasCampaign) fd.set("hasCampaign", hasCampaign);
+    if (objectives.length > 0) fd.set("objectives", objectives.join(", "));
+    if (campaignDuration) fd.set("campaignDuration", campaignDuration);
+    // targetNetwork, language, otherSocials — added from state when those sections exist
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/formulaire-conception", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          formType: "contact",
-          firstName: g("firstName"),
-          lastName: g("lastName"),
-          email: g("email"),
-          phone: phone || "",
-          company: g("companyName") || "",
-          service: `${CATEGORIES.find((c) => c.id === category)?.label} — ${service}`,
-          message: lines,
-          sourceUrl: "/formulaire-de-conception",
-        }),
+        body: fd,
       });
       if (!res.ok) {
         const err = await res.json();

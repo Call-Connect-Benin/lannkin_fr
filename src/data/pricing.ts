@@ -32,7 +32,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     price: 199,
     priceUnit: "month",
     features: [
-      "Site multi-pages (jusqu'à 5 pages)",
+      "Site multi-pages (jusqu'à 3 pages)",
       "Design sur mesure responsive",
       "Hébergement premium et SSL",
       "Blog intégré",
@@ -53,7 +53,7 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
     price: 299,
     priceUnit: "month",
     features: [
-      "Site catalogue jusqu'à 15 pages",
+      "Site catalogue jusqu'à 5 pages",
       "Design premium responsive",
       "CMS WordPress ou headless",
       "Galerie produits avancée",
@@ -96,13 +96,13 @@ export const PRICING_CONCEPTION_WEB: PricingPlan[] = [
       "Site optimisé SEO 360°",
       "Architecture silo thématique",
       "Maillage interne avancé",
-      "Contenu optimisé (10 pages/mois)",
+      "Site optimisé de 9 pages",
       "Schéma de données structurées",
       "Core Web Vitals optimisés",
       "Rapport mensuel de positionnement",
       "Stratégie de mots-clés complète",
     ],
-    cta: "Dominer Google",
+    cta: "Choisir SEO MasterSite",
     paymentLink: "https://buy.stripe.com/6oU00k7zVaWQ5ii0VN6wE2n",
   },
   {

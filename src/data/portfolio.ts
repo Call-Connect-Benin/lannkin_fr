@@ -492,6 +492,7 @@ const additionalProjects: PortfolioProject[] = [
     seoTitle: "Site Web Entrepreneur Général Québec | Construction Fontes — Portfolio Lannkin",
     seoDescription:
       "Portfolio Lannkin : site web pour Construction Fontes. Entrepreneur général construction et rénovation résidentielle Québec.",
+    externalUrl: "https://constructionfontes.com/",
     previewImage: "/images/portfolio/construction-fontes.webp",
   },
   {
@@ -522,6 +523,7 @@ const additionalProjects: PortfolioProject[] = [
     seoTitle: "Site Web Cuisines Salles de Bain Québec | Cuisine Innovex — Portfolio Lannkin",
     seoDescription:
       "Portfolio Lannkin : site web pour Cuisine Innovex. Cuisines et salles de bain sur mesure Québec, conception web et SEO.",
+    externalUrl: "https://cuisineinnovex.com/",
     previewImage: "/images/portfolio/cuisine-innovex.webp",
   },
   {
@@ -552,6 +554,7 @@ const additionalProjects: PortfolioProject[] = [
     seoTitle: "Site Web Maçonnerie Québec | Maçonnerie Baka — Portfolio Lannkin",
     seoDescription:
       "Portfolio Lannkin : site web pour Maçonnerie Baka. Briques, pierres et béton décoratif Québec, conception web et SEO local.",
+    externalUrl: "https://www.maconnerie-baka.com/",
     previewImage: "/images/portfolio/maconnerie-baka.webp",
   },
   {
@@ -582,37 +585,8 @@ const additionalProjects: PortfolioProject[] = [
     seoTitle: "Site Web Rénovation Résidentielle Québec | Patrenov — Portfolio Lannkin",
     seoDescription:
       "Portfolio Lannkin : site web pour Patrenov. Rénovation résidentielle complète Québec, conception web et SEO local.",
+    externalUrl: "https://www.patrenov.com/",
     previewImage: "/images/portfolio/patrenov.webp",
-  },
-  {
-    id: "plomberie-slb",
-    slug: "plomberie-slb",
-    name: "Plomberie SLB",
-    client: "Plomberie SLB",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Plomberie et chauffage",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une entreprise de plomberie et chauffage avec pages services, urgences et formulaire de contact.",
-    description:
-      "Développement d'un site web multipage professionnel pour Plomberie SLB, entreprise de plomberie et chauffage au Québec. Pages services détaillées (plomberie résidentielle, commerciale, chauffage, urgences 24/7), galerie de réalisations, formulaire de contact et optimisation SEO local.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Site web professionnel livré",
-      "Visibilité locale améliorée sur Google",
-      "Leads qualifiés via formulaire et téléphone",
-      "PageSpeed optimisé",
-    ],
-    challenge:
-      "Se positionner sur les recherches d'urgence plomberie et générer des appels directs via le web dans un marché très compétitif.",
-    solution:
-      "Site multipage avec appel à l'action téléphonique proéminent, contenu SEO local ciblant les urgences et formulaire de contact simplifié.",
-    seoTitle: "Site Web Plomberie Québec | Plomberie SLB — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Plomberie SLB. Plomberie et chauffage Québec, SEO local et Google Ads.",
-    previewImage: "/images/portfolio/plomberie-slb.webp",
   },
   {
     id: "scs-entretien",
@@ -642,6 +616,7 @@ const additionalProjects: PortfolioProject[] = [
     seoTitle: "Site Web Services Entretien Québec | SCS Entretien — Portfolio Lannkin",
     seoDescription:
       "Portfolio Lannkin : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial Québec.",
+    externalUrl: "https://www.scsentretien.ca/",
     previewImage: "/images/portfolio/scs-entretien.webp",
   },
   {
