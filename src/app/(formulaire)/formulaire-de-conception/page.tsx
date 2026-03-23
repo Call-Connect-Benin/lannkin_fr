@@ -112,6 +112,7 @@ export default function FormulaireConceptionPage() {
   const [objectives, setObjectives] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Radio states
   const [hasDomain, setHasDomain] = useState("");
@@ -149,19 +150,21 @@ export default function FormulaireConceptionPage() {
     if (campaignDuration) fd.set("campaignDuration", campaignDuration);
     // targetNetwork, language, otherSocials — added from state when those sections exist
 
+    setSubmitError(null);
     try {
       const res = await fetch("/api/formulaire-conception", {
         method: "POST",
         body: fd,
       });
       if (!res.ok) {
-        const err = await res.json();
-        alert(err.error || "Une erreur est survenue.");
+        const err = await res.json().catch(() => ({}));
+        setSubmitError(err.error || "Une erreur est survenue.");
       } else {
         setSubmitted(true);
       }
-    } catch { alert("Une erreur est survenue. Veuillez réessayer."); }
-    finally { setLoading(false); }
+    } catch {
+      setSubmitError("Impossible de contacter le serveur. Vérifiez votre connexion internet.");
+    } finally { setLoading(false); }
   }
 
   if (submitted) {
@@ -417,6 +420,13 @@ export default function FormulaireConceptionPage() {
               <div><Lbl req>Lien vers la fiche Google a optimiser</Lbl><input type="text" name="googleFicheLink" required placeholder="Veillez saisir le lien vers la fiche Google a optimiser" className={inputCls} /></div>
               <div><Lbl>Des commentaires ou précisions ?</Lbl><textarea name="comments" placeholder="Vos demandes, remarques, besoins particuliers, idées ou suggestions." className={textareaCls} /></div>
             </>
+          )}
+
+          {/* Error message */}
+          {submitError && (
+            <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400">
+              {submitError}
+            </div>
           )}
 
           {/* Submit */}
