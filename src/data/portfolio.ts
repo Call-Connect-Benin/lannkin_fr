@@ -710,6 +710,7 @@ const additionalProjects: PortfolioProject[] = [
     seoDescription:
       "Portfolio Lannkin : site web pour Métal Plus. Coffrage et bétonnage Abitibi-Témiscamingue, conception web et SEO local.",
     externalUrl: "https://www.metalplus.ca/",
+    previewImage: "/images/portfolio/metal-plus.webp",
   },
   {
     id: "installation-lgagne",
