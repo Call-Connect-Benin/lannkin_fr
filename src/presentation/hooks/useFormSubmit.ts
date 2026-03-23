@@ -57,7 +57,8 @@ export function useFormSubmit() {
     const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
     try {
-      const res = await fetch(url, {
+      const normalizedUrl = url.endsWith("/") ? url : `${url}/`;
+      const res = await fetch(normalizedUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

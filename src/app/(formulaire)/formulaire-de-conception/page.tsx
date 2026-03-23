@@ -152,7 +152,7 @@ export default function FormulaireConceptionPage() {
 
     setSubmitError(null);
     try {
-      const res = await fetch("/api/formulaire-conception", {
+      const res = await fetch("/api/formulaire-conception/", {
         method: "POST",
         body: fd,
       });
