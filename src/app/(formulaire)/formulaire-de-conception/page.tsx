@@ -90,13 +90,13 @@ function Checks({ options, selected, toggle }: { options: string[]; selected: st
   );
 }
 
-function FileUpload({ label }: { label: string }) {
+function FileUpload({ label, name }: { label: string; name: string }) {
   const [files, setFiles] = useState<File[]>([]);
   return (
     <div>
       <label className="block font-bold mb-2">{label}</label>
       <label className="flex cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-[#498f6d]/40 bg-white/5 px-4 py-8 text-white/40 hover:border-[#498f6d] hover:bg-white/10 transition-colors">
-        <input type="file" multiple accept="image/*,.pdf" className="sr-only" onChange={(e) => { if (e.target.files) setFiles(Array.from(e.target.files)); }} />
+        <input type="file" name={name} multiple accept="image/*,.pdf" className="sr-only" onChange={(e) => { if (e.target.files) setFiles(Array.from(e.target.files)); }} />
         {files.length > 0 ? files.map((f) => f.name).join(", ") : "Cliquez ici pour téléverser vos fichiers."}
       </label>
     </div>
@@ -245,12 +245,12 @@ export default function FormulaireConceptionPage() {
 
               <Section title="Identité visuelle" />
               <div><Lbl req>Avez-vous un logo ?</Lbl><Radios name="hasLogo" options={["Oui", "Non"]} value={hasLogo} onChange={setHasLogo} req /></div>
-              {hasLogo === "Oui" && <FileUpload label="Téléversez votre logo." />}
-              <FileUpload label="Avez-vous des images à inclure sur votre site ? Si oui, merci de les téléverser." />
+              {hasLogo === "Oui" && <FileUpload name="logo" label="Téléversez votre logo." />}
+              <FileUpload name="images-site" label="Avez-vous des images à inclure sur votre site ? Si oui, merci de les téléverser." />
 
               <Section title="Design & Préférences graphiques" />
               <div><Lbl>Quelles couleurs préférez-vous ?</Lbl><input type="text" name="colors" placeholder="Ex. : Bleu, vert, rouge ou #0055A4, #FF5733" className={inputCls} /></div>
-              <FileUpload label="Disposez-vous d'une maquette pour votre site web ? Si oui, veuillez la téléverser." />
+              <FileUpload name="maquette" label="Disposez-vous d'une maquette pour votre site web ? Si oui, veuillez la téléverser." />
 
               <Section title="Pages sociales" />
               <div><label className="block font-bold mb-4">Avez-vous des pages sociales ?</label><Checks options={SOCIAL_PLATFORMS} selected={socials} toggle={(v) => toggle(socials, setSocials, v)} /></div>
@@ -355,12 +355,12 @@ export default function FormulaireConceptionPage() {
               <div><Lbl>Y a-t-il des couleurs à éviter ?</Lbl><input type="text" name="colorsToAvoid" placeholder="Ex. : rouge vif, jaune fluo..." className={inputCls} /></div>
               <div><Lbl>Quelles polices d&apos;écriture préférez-vous ?</Lbl><input type="text" name="fonts" placeholder="Ex. : Arial, Roboto, Times New Roman..." className={inputCls} /></div>
               <div><Lbl>Quel est le symbole qui représente votre entreprise ?</Lbl><input type="text" name="symbol" placeholder="Ex. : Une plume, une montagne, mes initiales, un symbole abstrait..." className={inputCls} /></div>
-              <FileUpload label="Avez-vous des exemples que vous appréciez ? Si oui, téléversez-les ici." />
+              <FileUpload name="exemples-design" label="Avez-vous des exemples que vous appréciez ? Si oui, téléversez-les ici." />
 
               {service !== "Logo" && (
                 <>
                   <div><Lbl>Avez-vous un logo à fournir ?</Lbl><Radios name="hasLogo" options={["Oui", "Non"]} value={hasLogo} onChange={setHasLogo} /></div>
-                  {hasLogo === "Oui" && <FileUpload label="Téléversez votre logo." />}
+                  {hasLogo === "Oui" && <FileUpload name="logo" label="Téléversez votre logo." />}
                 </>
               )}
 
@@ -403,10 +403,10 @@ export default function FormulaireConceptionPage() {
                 <>
                   <Section title="Identité visuelle" />
                   <div><Lbl req>Avez-vous un logo ?</Lbl><Radios name="hasLogo" options={["Oui", "Non"]} value={hasLogo} onChange={setHasLogo} req /></div>
-                  <FileUpload label="Images de façade et d'intérieur de l'entreprise" />
-                  <FileUpload label="Photos de couverture de la fiche (images à mettre en avant)" />
-                  <FileUpload label="Photos et/ou vidéos des réalisations" />
-                  <FileUpload label="Affiches publicitaires de l'entreprise" />
+                  <FileUpload name="photos-facade" label="Images de façade et d'intérieur de l'entreprise" />
+                  <FileUpload name="photos-couverture" label="Photos de couverture de la fiche (images à mettre en avant)" />
+                  <FileUpload name="photos-realisations" label="Photos et/ou vidéos des réalisations" />
+                  <FileUpload name="affiches-pub" label="Affiches publicitaires de l'entreprise" />
                 </>
               )}
 

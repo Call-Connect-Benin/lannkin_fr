@@ -222,9 +222,10 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
+    setActiveMenu(null);
   }, [pathname]);
 
   // Lock body scroll when mobile menu is open

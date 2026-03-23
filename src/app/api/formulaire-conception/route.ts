@@ -118,9 +118,14 @@ export async function POST(req: NextRequest) {
     // --- Send email + Make webhook in parallel ---
     const subject = `[Formulaire Conception] ${firstName} ${lastName} — ${category} / ${service}`;
 
-    const makePayload = Object.fromEntries(
-      Object.entries(fields).filter(([k, v]) => v && !k.startsWith("—")),
-    );
+    // Build Make FormData with text fields + files
+    const makeForm = new FormData();
+    for (const [k, v] of Object.entries(fields)) {
+      if (v && !k.startsWith("—")) makeForm.append(k, v);
+    }
+    for (const att of attachments) {
+      makeForm.append(att.filename, new Blob([new Uint8Array(att.content)]), att.filename);
+    }
 
     await Promise.all([
       transporter.sendMail({
@@ -137,8 +142,7 @@ export async function POST(req: NextRequest) {
       }),
       fetch("https://hook.eu1.make.com/gw51phycg2hn62js05e2w11kdrhyvjn5", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(makePayload),
+        body: makeForm,
       }).catch((err) => console.error("[Make webhook] error:", err)),
     ]);
 
