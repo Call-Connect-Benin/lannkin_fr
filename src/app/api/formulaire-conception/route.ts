@@ -115,21 +115,32 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // --- Send email ---
+    // --- Send email + Make webhook in parallel ---
     const subject = `[Formulaire Conception] ${firstName} ${lastName} — ${category} / ${service}`;
 
-    await transporter.sendMail({
-      from: SMTP_FROM,
-      to: SMTP_TO,
-      replyTo: email,
-      subject,
-      text: Object.entries(fields)
-        .filter(([k, v]) => v && !k.startsWith("—"))
-        .map(([k, v]) => `${k}: ${v}`)
-        .join("\n"),
-      html: buildContactHtml(fields, `Formulaire de Conception — ${category}`),
-      attachments,
-    });
+    const makePayload = Object.fromEntries(
+      Object.entries(fields).filter(([k, v]) => v && !k.startsWith("—")),
+    );
+
+    await Promise.all([
+      transporter.sendMail({
+        from: SMTP_FROM,
+        to: SMTP_TO,
+        replyTo: email,
+        subject,
+        text: Object.entries(fields)
+          .filter(([k, v]) => v && !k.startsWith("—"))
+          .map(([k, v]) => `${k}: ${v}`)
+          .join("\n"),
+        html: buildContactHtml(fields, `Formulaire de Conception — ${category}`),
+        attachments,
+      }),
+      fetch("https://hook.eu1.make.com/gw51phycg2hn62js05e2w11kdrhyvjn5", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(makePayload),
+      }).catch((err) => console.error("[Make webhook] error:", err)),
+    ]);
 
     return NextResponse.json({ ok: true });
   } catch (err) {
