@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
 import FloatingContact from "@/presentation/components/layout/FloatingContact";
