@@ -137,7 +137,7 @@ export async function POST(req: NextRequest) {
           .filter(([k, v]) => v && !k.startsWith("—"))
           .map(([k, v]) => `${k}: ${v}`)
           .join("\n"),
-        html: buildContactHtml(fields, `Formulaire de Conception — ${category}`),
+        html: buildContactHtml(fields, `Formulaire de conception (${service}) : ${firstName} ${lastName}`),
         attachments,
       }),
       fetch("https://hook.eu1.make.com/gw51phycg2hn62js05e2w11kdrhyvjn5", {
