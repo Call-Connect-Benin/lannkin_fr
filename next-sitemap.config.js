@@ -8,9 +8,6 @@ module.exports = {
   sitemapSize: 5000,
   exclude: ["/api/*"],
   robotsTxtOptions: {
-    additionalSitemaps: [
-      "https://lannkin.ca/server-sitemap.xml",
-    ],
     policies: [
       {
         userAgent: "*",

@@ -325,7 +325,7 @@ export function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed inset-y-0 right-0 top-16 z-50 flex w-72 flex-col backdrop-blur-xl lg:hidden"
+              className="fixed inset-y-0 right-0 top-16 z-50 flex w-[85vw] max-w-72 flex-col backdrop-blur-xl lg:hidden"
               style={{ backgroundColor: "rgba(255,255,255,0.97)" }}
               aria-label="Menu mobile"
             >

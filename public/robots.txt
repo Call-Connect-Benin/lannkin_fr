@@ -8,4 +8,3 @@ Host: https://lannkin.ca
 
 # Sitemaps
 Sitemap: https://lannkin.ca/sitemap.xml
-Sitemap: https://lannkin.ca/server-sitemap.xml

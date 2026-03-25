@@ -55,7 +55,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
 
         {/* Price */}
         <div className="flex items-baseline gap-1">
-          <span className="font-heading text-4xl font-bold text-white">
+          <span className="font-heading text-3xl font-bold text-white sm:text-4xl">
             {formatPrice(price)}
           </span>
           {priceUnit === "month" && (

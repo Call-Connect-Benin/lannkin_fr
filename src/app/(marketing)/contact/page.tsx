@@ -51,7 +51,7 @@ export default function ContactPage() {
 
       {/* ─── Halo accent ─── */}
       <div
-        className="pointer-events-none absolute right-[28%] top-1/2 h-[580px] w-[580px] -translate-y-1/2 rounded-full blur-[120px]"
+        className="pointer-events-none absolute right-[28%] top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full blur-[120px] sm:h-[580px] sm:w-[580px]"
         style={{ backgroundColor: "rgba(73, 143, 109, 0.08)" }}
         aria-hidden
       />

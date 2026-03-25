@@ -118,7 +118,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               <input type="text" {...register("website")} className="hidden" tabIndex={-1} autoComplete="off" />
 
               {/* Prénom + Nom */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div>
                   <input
                     type="text"
@@ -150,7 +150,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               </div>
 
               {/* Email + Téléphone */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div>
                   <input
                     type="email"

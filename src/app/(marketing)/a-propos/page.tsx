@@ -133,7 +133,7 @@ export default function AProposPage() {
 
         {/* Halo */}
         <div
-          className="pointer-events-none absolute right-1/3 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
+          className="pointer-events-none absolute right-1/3 top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
           style={{ backgroundColor: "rgba(73,143,109,0.08)" }}
           aria-hidden
         />
@@ -573,7 +573,7 @@ export default function AProposPage() {
           </div>
         </div>
         <div
-          className="pointer-events-none absolute right-[28%] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full blur-[120px]"
+          className="pointer-events-none absolute right-[28%] top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-y-1/2 rounded-full blur-[120px]"
           style={{ backgroundColor: "rgba(73,143,109,0.07)" }}
           aria-hidden
         />

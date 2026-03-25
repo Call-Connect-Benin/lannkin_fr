@@ -66,7 +66,7 @@ export function ExitIntentPopup() {
             {/* Accent stripe top */}
             <div className="h-1 w-full bg-accent" />
 
-            <div className="p-8">
+            <div className="p-5 sm:p-8">
               <button
                 onClick={() => setVisible(false)}
                 className="absolute right-4 top-4 rounded-lg p-1 text-muted transition-colors hover:text-white"
