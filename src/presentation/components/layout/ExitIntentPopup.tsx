@@ -11,12 +11,15 @@ export function ExitIntentPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem("exitPopupShown")) return;
+    let storage: Storage | null = null;
+    try { storage = window.localStorage; } catch { /* private mode / blocked */ }
+
+    if (storage?.getItem("exitPopupShown")) return;
 
     const show = () => {
-      if (localStorage.getItem("exitPopupShown")) return;
+      if (storage?.getItem("exitPopupShown")) return;
       setVisible(true);
-      localStorage.setItem("exitPopupShown", "1");
+      try { storage?.setItem("exitPopupShown", "1"); } catch { /* ignore */ }
     };
 
     let ready = false;

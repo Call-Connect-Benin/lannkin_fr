@@ -21,17 +21,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-      document.documentElement.setAttribute("data-theme", stored);
-    }
+    try {
+      const stored = localStorage.getItem("theme") as Theme | null;
+      if (stored === "light" || stored === "dark") {
+        setTheme(stored);
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    } catch { /* localStorage blocked */ }
   }, []);
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
-      localStorage.setItem("theme", next);
+      try { localStorage.setItem("theme", next); } catch { /* ignore */ }
       document.documentElement.setAttribute("data-theme", next);
       return next;
     });
