@@ -21,12 +21,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/agence-google-ads/",
-        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        destination: "/services/google-ads/",
         permanent: true,
       },
       {
         source: "/agence-google-ads",
-        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        destination: "/services/google-ads/",
         permanent: true,
       },
       {
@@ -52,12 +52,12 @@ const nextConfig: NextConfig = {
       // ─── Anciennes pages tarifs / Google Ads WordPress ─────────────────────
       {
         source: "/google-ads/",
-        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        destination: "/services/google-ads/",
         permanent: true,
       },
       {
         source: "/google-ads",
-        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        destination: "/services/google-ads/",
         permanent: true,
       },
       {
@@ -334,6 +334,28 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // ─── Anciennes pages légales WordPress ──────────────────────────────────
+      {
+        source: "/nos-conditions-generales-de-vente/",
+        destination: "/conditions-generales/",
+        permanent: true,
+      },
+      {
+        source: "/nos-conditions-generales-de-vente",
+        destination: "/conditions-generales/",
+        permanent: true,
+      },
+      // ─── Anciens articles blog (patterns génériques) ────────────────────────
+      {
+        source: "/comprendre-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/guide-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
       // ─── Catégories WordPress → nouvelles catégories blog ──────────────────
       {
         source: "/categorie/seo/",
