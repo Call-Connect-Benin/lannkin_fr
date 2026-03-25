@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
     }
 
     // --- Send email + Make webhook in parallel ---
-    const subject = `[Formulaire Conception] ${firstName} ${lastName} — ${category} / ${service}`;
+    const subject = `Formulaire de conception (${service}) : ${firstName} ${lastName}`;
 
     // Build Make FormData with text fields + files
     const makeForm = new FormData();
