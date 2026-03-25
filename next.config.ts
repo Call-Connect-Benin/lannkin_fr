@@ -242,12 +242,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/lp-:slug*/",
+        source: "/lp-:path*/",
         destination: "/ressources-gratuites/",
         permanent: true,
       },
       {
-        source: "/lp-:slug*",
+        source: "/lp-:path*",
         destination: "/ressources-gratuites/",
         permanent: true,
       },
@@ -283,27 +283,27 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/comment-generer-des-leads-qualifies-:slug*/",
+        source: "/comment-generer-des-leads-qualifies-:path*/",
         destination: "/blog/marketing-digital/",
         permanent: true,
       },
       {
-        source: "/comment-:slug*/",
+        source: "/comment-:path*/",
         destination: "/blog/",
         permanent: true,
       },
       {
-        source: "/les-:slug*/",
+        source: "/les-:path*/",
         destination: "/blog/",
         permanent: true,
       },
       {
-        source: "/la-:slug*/",
+        source: "/la-:path*/",
         destination: "/blog/",
         permanent: true,
       },
       {
-        source: "/le-:slug*/",
+        source: "/le-:path*/",
         destination: "/blog/",
         permanent: true,
       },
@@ -353,45 +353,45 @@ const nextConfig: NextConfig = {
       // Note: :slug dans Next.js ne capture pas les underscores correctement dans certains cas
       // On utilise un pattern basé sur une regex pour couvrir tous les caractères (tirets, underscores, etc.)
       {
-        source: "/categorie/:slug*/",
+        source: "/categorie/:path*/",
         destination: "/blog/",
         permanent: true,
       },
       {
-        source: "/categorie/:slug*",
+        source: "/categorie/:path*",
         destination: "/blog/",
         permanent: true,
       },
       // ─── Patterns WordPress génériques ─────────────────────────────────────
       // Tags WordPress
       {
-        source: "/tag/:slug*/",
+        source: "/tag/:path*/",
         destination: "/blog/",
         permanent: true,
       },
       {
-        source: "/tag/:slug*",
+        source: "/tag/:path*",
         destination: "/blog/",
         permanent: true,
       },
       // Auteurs WordPress
       {
-        source: "/author/:slug*/",
+        source: "/author/:path*/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/author/:slug*",
+        source: "/author/:path*",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/auteur/:slug*/",
+        source: "/auteur/:path*/",
         destination: "/",
         permanent: true,
       },
       {
-        source: "/auteur/:slug*",
+        source: "/auteur/:path*",
         destination: "/",
         permanent: true,
       },
