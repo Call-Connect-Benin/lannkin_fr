@@ -912,6 +912,7 @@ export function getHighlightedPlan(category: string): PricingPlan | undefined {
 
 export const PRICING_CATEGORIES = [
   { slug: "conception-web", name: "Conception Web", icon: "Monitor" },
+  { slug: "google-my-business", name: "Google My Business", icon: "MapPin" },
   { slug: "vibe-coding", name: "Vibe Coding & CMS IA", icon: "Sparkles" },
   { slug: "odoo", name: "Odoo", icon: "Building2" },
   { slug: "google-ads", name: "Google Ads", icon: "Target" },
@@ -919,7 +920,6 @@ export const PRICING_CATEGORIES = [
   { slug: "native-ads", name: "Native Ads", icon: "Newspaper" },
   { slug: "reseaux-sociaux", name: "Réseaux Sociaux", icon: "Share2" },
   { slug: "seo", name: "SEO", icon: "Search" },
-  { slug: "google-my-business", name: "Google My Business", icon: "MapPin" },
   { slug: "graphisme", name: "Graphisme", icon: "Palette" },
   { slug: "montage-video", name: "Montage Vidéo", icon: "Video" },
 ] as const;
