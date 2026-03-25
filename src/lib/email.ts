@@ -48,20 +48,24 @@ function separator() {
   return `<tr><td colspan="2" style="padding:0;height:1px;background:#e5e7eb;"></td></tr>`;
 }
 
-export function buildContactHtml(fields: Record<string, string | undefined>, title: string) {
+export function buildContactHtml(fields: Record<string, string | undefined>, title: string, { showBanner = true }: { showBanner?: boolean } = {}) {
   const entries = Object.entries(fields)
     .map(([k, v]) => k === "—" ? separator() : row(k, v))
     .join("");
+
+  const banner = showBanner
+    ? `<div style="background:#498f6d;padding:20px 24px;">
+        <h1 style="margin:0;color:#ffffff;font-size:18px;font-weight:700;">${title}</h1>
+        <p style="margin:4px 0 0;color:rgba(255,255,255,.8);font-size:13px;">lannkin.ca</p>
+      </div>`
+    : "";
 
   return `<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /></head>
 <body style="margin:0;padding:0;background:#f9fafb;font-family:Arial,sans-serif;">
   <div style="max-width:600px;margin:32px auto;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1);">
-    <div style="background:#498f6d;padding:20px 24px;">
-      <h1 style="margin:0;color:#ffffff;font-size:18px;font-weight:700;">${title}</h1>
-      <p style="margin:4px 0 0;color:rgba(255,255,255,.8);font-size:13px;">lannkin.ca</p>
-    </div>
+    ${banner}
     <div style="padding:24px;">
       <table style="width:100%;border-collapse:collapse;border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;">
         ${entries}
