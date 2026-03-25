@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Anciennes pages de services (WordPress) → nouvelle page services
+      // ─── Anciennes pages de services (WordPress) ───────────────────────────
       {
         source: "/agence-web/",
         destination: "/services/",
@@ -21,35 +21,35 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/agence-google-ads/",
-        destination: "/services/",
+        destination: "/services/google-ads/gestion-campagnes-google-ads/",
         permanent: true,
       },
       {
         source: "/agence-google-ads",
-        destination: "/services/",
+        destination: "/services/google-ads/gestion-campagnes-google-ads/",
         permanent: true,
       },
       {
         source: "/agence-seo/",
-        destination: "/services/",
+        destination: "/services/seo/optimisation-seo/",
         permanent: true,
       },
       {
         source: "/agence-seo",
-        destination: "/services/",
+        destination: "/services/seo/optimisation-seo/",
         permanent: true,
       },
       {
         source: "/agence-facebook-ads/",
-        destination: "/services/",
+        destination: "/services/reseaux-sociaux/gestion-facebook-ads/",
         permanent: true,
       },
       {
         source: "/agence-facebook-ads",
-        destination: "/services/",
+        destination: "/services/reseaux-sociaux/gestion-facebook-ads/",
         permanent: true,
       },
-      // Ancienne page graphisme
+      // ─── Ancienne page graphisme ────────────────────────────────────────────
       {
         source: "/graphisme/",
         destination: "/services/",
@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
         destination: "/services/",
         permanent: true,
       },
-      // Ancienne page formation (avec faute de frappe aussi)
+      // ─── Ancienne page formation ────────────────────────────────────────────
       {
         source: "/formation/",
         destination: "/services/",
@@ -81,6 +81,51 @@ const nextConfig: NextConfig = {
         destination: "/services/",
         permanent: true,
       },
+      // ─── Pages WordPress identifiées en 404 ────────────────────────────────
+      // Ancien article de blog
+      {
+        source: "/pourquoi-une-compagnie-doit-avoir-un-site-web/",
+        destination: "/blog/conception-web/",
+        permanent: true,
+      },
+      {
+        source: "/pourquoi-une-compagnie-doit-avoir-un-site-web",
+        destination: "/blog/conception-web/",
+        permanent: true,
+      },
+      // Ancien pack/offre → tarifs
+      {
+        source: "/pack-smart-business/",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/pack-smart-business",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      // Ancienne page de devis
+      {
+        source: "/demande-de-soumission/",
+        destination: "/devis-gratuit/",
+        permanent: true,
+      },
+      {
+        source: "/demande-de-soumission",
+        destination: "/devis-gratuit/",
+        permanent: true,
+      },
+      // Ancienne page de test WordPress
+      {
+        source: "/new-home-page/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/new-home-page",
+        destination: "/",
+        permanent: true,
+      },
       // Ancienne page home WordPress
       {
         source: "/home/",
@@ -90,6 +135,287 @@ const nextConfig: NextConfig = {
       {
         source: "/home",
         destination: "/",
+        permanent: true,
+      },
+      // ─── Anciennes pages de service WordPress ───────────────────────────────
+      {
+        source: "/conception-de-site-web/",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/conception-de-site-web",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-google-ads/",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-google-ads",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-seo/",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-seo",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-reseaux-sociaux/",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-reseaux-sociaux",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-facebook-ads/",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/service-facebook-ads",
+        destination: "/services/",
+        permanent: true,
+      },
+      // ─── Portfolio / réalisations ────────────────────────────────────────────
+      {
+        source: "/portfolio/",
+        destination: "/realisations/",
+        permanent: true,
+      },
+      {
+        source: "/portfolio",
+        destination: "/realisations/",
+        permanent: true,
+      },
+      // ─── Souscription / inscription ──────────────────────────────────────────
+      {
+        source: "/souscription/",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/souscription",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/inscription/",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/inscription",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      // ─── Landing pages / ressources téléchargeables ──────────────────────────
+      {
+        source: "/lp-liste-de-100-produits-gagnant-en-dropshipping/",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      {
+        source: "/lp-liste-de-100-produits-gagnant-en-dropshipping",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      {
+        source: "/lp-liste-de-100-produits-gagnant-en-dropshipping-v2/",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      {
+        source: "/lp-liste-de-100-produits-gagnant-en-dropshipping-v2",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      {
+        source: "/lp-:slug*/",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      {
+        source: "/lp-:slug*",
+        destination: "/ressources-gratuites/",
+        permanent: true,
+      },
+      // ─── Anciens articles de blog WordPress ──────────────────────────────────
+      {
+        source: "/lessentiel-a-savoir-de-la-loi-25-lannkin/",
+        destination: "/blog/marketing-digital/",
+        permanent: true,
+      },
+      {
+        source: "/lessentiel-a-savoir-de-la-loi-25-lannkin",
+        destination: "/blog/marketing-digital/",
+        permanent: true,
+      },
+      {
+        source: "/30-astuces-pour-exploser-votre-rentabilite-sur-google-ads/",
+        destination: "/blog/google-ads/",
+        permanent: true,
+      },
+      {
+        source: "/30-astuces-pour-exploser-votre-rentabilite-sur-google-ads",
+        destination: "/blog/google-ads/",
+        permanent: true,
+      },
+      {
+        source: "/maximisez-votre-visibilite-grace-au-seo/",
+        destination: "/blog/seo/",
+        permanent: true,
+      },
+      {
+        source: "/maximisez-votre-visibilite-grace-au-seo",
+        destination: "/blog/seo/",
+        permanent: true,
+      },
+      {
+        source: "/comment-generer-des-leads-qualifies-:slug*/",
+        destination: "/blog/marketing-digital/",
+        permanent: true,
+      },
+      {
+        source: "/comment-:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/les-:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/la-:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/le-:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+
+      // ─── Catégories WordPress → nouvelles catégories blog ──────────────────
+      {
+        source: "/categorie/seo/",
+        destination: "/blog/seo/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/google-ads/",
+        destination: "/blog/google-ads/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/facebook-ads/",
+        destination: "/blog/facebook-ads/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/reseaux-sociaux/",
+        destination: "/blog/reseaux-sociaux/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/conception-web/",
+        destination: "/blog/conception-web/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/marketing-digital/",
+        destination: "/blog/marketing-digital/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/google-my-business/",
+        destination: "/blog/google-my-business/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/intelligence-artificielle/",
+        destination: "/blog/intelligence-artificielle/",
+        permanent: true,
+      },
+      // Toutes les autres catégories WordPress → blog général
+      // Note: :slug dans Next.js ne capture pas les underscores correctement dans certains cas
+      // On utilise un pattern basé sur une regex pour couvrir tous les caractères (tirets, underscores, etc.)
+      {
+        source: "/categorie/:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/categorie/:slug*",
+        destination: "/blog/",
+        permanent: true,
+      },
+      // ─── Patterns WordPress génériques ─────────────────────────────────────
+      // Tags WordPress
+      {
+        source: "/tag/:slug*/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/tag/:slug*",
+        destination: "/blog/",
+        permanent: true,
+      },
+      // Auteurs WordPress
+      {
+        source: "/author/:slug*/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/author/:slug*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/auteur/:slug*/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/auteur/:slug*",
+        destination: "/",
+        permanent: true,
+      },
+      // Feed RSS WordPress
+      {
+        source: "/feed/",
+        destination: "/",
+        permanent: true,
+      },
+      // Pages de pagination WordPress
+      {
+        source: "/page/:number/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      // Archives WordPress par date
+      {
+        source: "/:year(\\d{4})/:month(\\d{2})/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/:year(\\d{4})/",
+        destination: "/blog/",
         permanent: true,
       },
     ];
