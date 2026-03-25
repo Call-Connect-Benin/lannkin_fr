@@ -49,6 +49,37 @@ const nextConfig: NextConfig = {
         destination: "/services/reseaux-sociaux/gestion-facebook-ads/",
         permanent: true,
       },
+      // ─── Anciennes pages tarifs / Google Ads WordPress ─────────────────────
+      {
+        source: "/google-ads/",
+        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        permanent: true,
+      },
+      {
+        source: "/google-ads",
+        destination: "/services/google-ads/gestion-campagnes-google-ads/",
+        permanent: true,
+      },
+      {
+        source: "/nos-tarifs/",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/nos-tarifs",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/nos-tarifs-v2/",
+        destination: "/tarifs/",
+        permanent: true,
+      },
+      {
+        source: "/nos-tarifs-v2",
+        destination: "/tarifs/",
+        permanent: true,
+      },
       // ─── Ancienne page graphisme ────────────────────────────────────────────
       {
         source: "/graphisme/",
