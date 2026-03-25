@@ -356,6 +356,41 @@ const nextConfig: NextConfig = {
         destination: "/blog/",
         permanent: true,
       },
+      {
+        source: "/creer-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/optimiser-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/pourquoi-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/tutoriel-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/astuces-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/meilleur-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/meilleurs-:path(.*)",
+        destination: "/blog/",
+        permanent: true,
+      },
       // ─── Catégories WordPress → nouvelles catégories blog ──────────────────
       {
         source: "/categorie/seo/",
