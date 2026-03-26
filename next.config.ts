@@ -157,6 +157,26 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/new-home/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/new-home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/maitriser-les-campagnes-demande-gen-de-google-ads-votre-guide-ultime/",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/maitriser-les-campagnes-demande-gen-de-google-ads-votre-guide-ultime",
+        destination: "/blog/",
+        permanent: true,
+      },
       // Ancienne page home WordPress
       {
         source: "/home/",
@@ -171,12 +191,12 @@ const nextConfig: NextConfig = {
       // ─── Anciennes pages de service WordPress ───────────────────────────────
       {
         source: "/conception-de-site-web/",
-        destination: "/services/",
+        destination: "/services/conception-web/",
         permanent: true,
       },
       {
         source: "/conception-de-site-web",
-        destination: "/services/",
+        destination: "/services/conception-web/",
         permanent: true,
       },
       {
