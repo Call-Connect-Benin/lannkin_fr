@@ -13,7 +13,6 @@ import {
   SECTORS_PREVIEW,
   BLOG_PREVIEW,
   CTA_SECTION,
-  ECOSYSTEM,
 } from "@/data/homepage";
 import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWidget";
 import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
@@ -473,11 +472,11 @@ export default function HomePage() {
               Certifications &amp; partenariats
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
+            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
+            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto brightness-0 invert" />
+            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
           </div>
         </Container>
       </section>
@@ -752,48 +751,6 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           12. ÉCOSYSTÈME
       ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {ECOSYSTEM.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#FFFFFF" }}>
-              {ECOSYSTEM.title}
-            </h2>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {ECOSYSTEM.sites.map((site) => (
-              <a
-                key={site.name}
-                href={site.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
-                style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
-              >
-                <div
-                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={site.icon} className="h-5 w-5" />
-                </div>
-                <div className="font-heading font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#FFFFFF" }}>
-                  {site.name}
-                </div>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-                  {site.description}
-                </p>
-                <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.22)" }} />
-              </a>
-            ))}
-          </div>
-        </Container>
-      </section>
 
     </main>
   );
