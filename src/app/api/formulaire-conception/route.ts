@@ -144,6 +144,10 @@ export async function POST(req: NextRequest) {
         method: "POST",
         body: makeForm,
       }).catch((err) => console.error("[Make webhook] error:", err)),
+      fetch("https://n8n.srv865092.hstgr.cloud/webhook/formulaire_de_conception", {
+        method: "POST",
+        body: makeForm,
+      }).catch((err) => console.error("[n8n webhook] error:", err)),
     ]);
 
     return NextResponse.json({ ok: true });
