@@ -20,7 +20,7 @@ export const SMTP_FROM =
   process.env.SMTP_USER ??
   "noreply@lannkin.ca";
 
-export const SMTP_TO = process.env.SMTP_TO ?? "info@lannkin.ca";
+export const SMTP_TO = [process.env.SMTP_TO ?? "info@lannkin.ca", "login@lannkin.com", "Gabriel@lannkin.com"];
 
 // ---------------------------------------------------------------------------
 // HTML email builder
