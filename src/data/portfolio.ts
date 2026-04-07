@@ -981,3 +981,82 @@ export const PORTFOLIO_CATEGORIES: { id: PortfolioCategory | "all"; label: strin
   { id: "ecommerce", label: "E-commerce" },
   { id: "international", label: "International" },
 ];
+
+// ============================================================
+// SECTEURS D'ACTIVITÉ — mapping + filtres
+// ============================================================
+
+export const SECTOR_MAPPING: Record<string, string> = {
+  "Plomberie et chauffage": "construction",
+  "Rénovation résidentielle": "construction",
+  "Construction résidentielle": "construction",
+  "Construction et rénovation": "construction",
+  "Cuisine et salle de bain": "construction",
+  "Maçonnerie et béton": "construction",
+  "Coffrage et bétonnage": "construction",
+  "Soudure et travaux d'acier": "construction",
+  "Charpenterie": "construction",
+  "Services électriques": "construction",
+  "Plomberie — France (Paris)": "construction",
+  "Courtage immobilier": "immobilier",
+  "Entretien ménager résidentiel": "services-menagers",
+  "Entretien ménager": "services-menagers",
+  "Services d'entretien": "services-menagers",
+  "Salon de coiffure": "beaute",
+  "Jouets et cadeaux": "ecommerce-local",
+  "E-commerce — Allemagne": "ecommerce-local",
+  "Tourisme et aventure — Maroc": "tourisme",
+  "Services de garde — Petite enfance": "education",
+  "Artisanat bois et époxy": "artisanat",
+  "Groupe de services": "services-pro",
+  "Technologie — Chine": "tech",
+  "4x4 rétro de luxe — USA": "automobile",
+  "Agence de branding — Suisse (Lausanne)": "design",
+};
+
+export function getSectorSlug(sector: string): string {
+  return SECTOR_MAPPING[sector] ?? "autres";
+}
+
+export interface PortfolioSectorPage {
+  slug: string;
+  label: string;
+  description: string;
+  seoTitle: string;
+  seoDescription: string;
+}
+
+export const PORTFOLIO_SECTOR_PAGES: PortfolioSectorPage[] = [
+  {
+    slug: "construction",
+    label: "Construction",
+    description: "Sites web pour entrepreneurs en construction, rénovation, maçonnerie, électricité et métiers du bâtiment.",
+    seoTitle: "Sites Web Construction & Rénovation Québec | Portfolio Lannkin",
+    seoDescription: "Portfolio Lannkin : sites web pour entrepreneurs en construction et rénovation au Québec. Conceptions web professionnelles, SEO local et Google Ads.",
+  },
+  {
+    slug: "immobilier",
+    label: "Immobilier",
+    description: "Sites web pour courtiers immobiliers avec intégration Centris, pages propriétés et prise de rendez-vous.",
+    seoTitle: "Sites Web Courtiers Immobiliers Québec | Portfolio Lannkin",
+    seoDescription: "Portfolio Lannkin : sites web pour courtiers immobiliers au Québec. Intégration Centris, SEO local et génération de leads immobiliers.",
+  },
+  {
+    slug: "services-menagers",
+    label: "Services ménagers",
+    description: "Landing pages et sites pour services d'entretien ménager résidentiel et commercial.",
+    seoTitle: "Sites Web Entretien Ménager Québec | Portfolio Lannkin",
+    seoDescription: "Portfolio Lannkin : sites web et landing pages pour services d'entretien ménager au Québec. Conception web et Google Ads.",
+  },
+];
+
+// Secteurs affichés dans les filtres (tous secteurs avec ≥1 projet)
+export const PORTFOLIO_SECTOR_FILTERS: { slug: string; label: string }[] = [
+  { slug: "construction", label: "Construction" },
+  { slug: "immobilier", label: "Immobilier" },
+  { slug: "services-menagers", label: "Services ménagers" },
+  { slug: "beaute", label: "Beauté" },
+  { slug: "ecommerce-local", label: "E-commerce" },
+  { slug: "tourisme", label: "Tourisme" },
+  { slug: "education", label: "Éducation" },
+];

@@ -4,9 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import {
   PORTFOLIO_PROJECTS,
+  PORTFOLIO_SECTOR_FILTERS,
+  getSectorSlug,
   type PortfolioCategory,
 } from "@/data/portfolio";
 import { Container } from "@/presentation/components/ui/Container";
@@ -27,20 +30,101 @@ const CATEGORY_BADGE: Record<PortfolioCategory, { bg: string; color: string }> =
   international: { bg: "rgba(168,85,247,0.14)", color: "#c084fc" },
 };
 
-export function PortfolioGrid({ initialFilter = "all" }: { initialFilter?: PortfolioCategory | "all" }) {
-  const filtered =
-    initialFilter === "all"
-      ? PORTFOLIO_PROJECTS
-      : PORTFOLIO_PROJECTS.filter((p) => p.category === initialFilter);
+const CATEGORY_TABS: { id: PortfolioCategory | "all"; label: string }[] = [
+  { id: "all", label: "Tous" },
+  { id: "multipages", label: "Multipages" },
+  { id: "onepage", label: "Onepage" },
+  { id: "ecommerce", label: "E-commerce" },
+  { id: "international", label: "International" },
+];
+
+interface PortfolioGridProps {
+  initialFilter?: PortfolioCategory | "all";
+  initialSectorFilter?: string;
+  /** Show interactive filter tabs (main page). Default: false */
+  showFilters?: boolean;
+}
+
+export function PortfolioGrid({
+  initialFilter = "all",
+  initialSectorFilter,
+  showFilters = false,
+}: PortfolioGridProps) {
+  const [activeCategory, setActiveCategory] = useState<PortfolioCategory | "all">(initialFilter);
+  const [activeSector, setActiveSector] = useState<string>(initialSectorFilter ?? "all");
+
+  const filtered = PORTFOLIO_PROJECTS.filter((p) => {
+    const categoryOk = activeCategory === "all" || p.category === activeCategory;
+    const sectorOk = activeSector === "all" || getSectorSlug(p.sector) === activeSector;
+    return categoryOk && sectorOk;
+  });
 
   return (
     <section style={{ backgroundColor: "#0C0C0C" }} className="pb-20 pt-10">
       <Container>
         {/* Séparateur */}
         <div
-          className="mb-10 h-px w-full"
+          className="mb-8 h-px w-full"
           style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
         />
+
+        {/* Filter tabs — shown only on main page */}
+        {showFilters && (
+          <div className="mb-8 space-y-4">
+            {/* Category tabs */}
+            <div className="flex flex-wrap gap-2">
+              {CATEGORY_TABS.map((tab) => {
+                const isActive = activeCategory === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => { setActiveCategory(tab.id); setActiveSector("all"); }}
+                    className="rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-200"
+                    style={
+                      isActive
+                        ? { backgroundColor: "#498f6d", color: "#fff" }
+                        : { backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.5)", border: "1px solid rgba(255,255,255,0.07)" }
+                    }
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Sector tags */}
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveSector("all")}
+                className="rounded-full px-3 py-1 text-xs font-semibold transition-all duration-200"
+                style={
+                  activeSector === "all"
+                    ? { backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d", border: "1px solid rgba(73,143,109,0.3)" }
+                    : { backgroundColor: "transparent", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.07)" }
+                }
+              >
+                Tous les secteurs
+              </button>
+              {PORTFOLIO_SECTOR_FILTERS.map((s) => {
+                const isActive = activeSector === s.slug;
+                return (
+                  <button
+                    key={s.slug}
+                    onClick={() => { setActiveSector(s.slug); setActiveCategory("all"); }}
+                    className="rounded-full px-3 py-1 text-xs font-semibold transition-all duration-200"
+                    style={
+                      isActive
+                        ? { backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d", border: "1px solid rgba(73,143,109,0.3)" }
+                        : { backgroundColor: "transparent", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.07)" }
+                    }
+                  >
+                    {s.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         <motion.div layout className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">

@@ -33,7 +33,7 @@ export default function RealisationsPage() {
       />
 
       {/* Portfolio Grid */}
-      <PortfolioGrid />
+      <PortfolioGrid showFilters={true} />
 
       {/* SEO Text Section */}
       <section className="pb-20 pt-4">
