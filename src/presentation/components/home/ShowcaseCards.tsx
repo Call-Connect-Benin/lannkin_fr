@@ -6,12 +6,12 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CLIENT_SCREENSHOTS = [
-  "/images/andleikaygarderie24h.ca_(iPhone 14 Pro Max).png",
-  "/images/lesartisansmarceau.fr_(iPhone 14 Pro Max) (3).png",
-  "/images/rotho.com_fr(iPhone 14 Pro Max).png",
-  "/images/www.christianolivierducharme.com_(iPhone 14 Pro Max).png",
-  "/images/www.metalplus.ca_(iPhone 14 Pro Max).png",
-  "/images/www.myriamechicsalon.ca_(iPhone 14 Pro Max).png",
+  "/images/screenshots/andleikay.webp",
+  "/images/screenshots/artisans-marceau.webp",
+  "/images/screenshots/rotho.webp",
+  "/images/screenshots/christian-ducharme.webp",
+  "/images/screenshots/metal-plus.webp",
+  "/images/screenshots/myriame-salon.webp",
 ];
 
 function PhoneCarousel() {
