@@ -18,6 +18,7 @@ import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWid
 import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
 import { Container } from "@/presentation/components/ui/Container";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
+import ShowcaseCards from "@/presentation/components/home/ShowcaseCards";
 
 
 export const metadata: Metadata = {
@@ -349,6 +350,11 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════
+          6b. SHOWCASE CARDS (style Shopify Partners)
+      ═══════════════════════════════════════════════════════ */}
+      <ShowcaseCards />
+
+      {/* ═══════════════════════════════════════════════════════
           7. TESTIMONIALS
       ═══════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
@@ -472,11 +478,11 @@ export default function HomePage() {
               Certifications &amp; partenariats
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
+            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-facebook-partner.png" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
+            <img src="/images/badges/badge-facebook-partner.webp" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-shopify-partner.png" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto" />
+            <img src="/images/badges/badge-shopify-partner.webp" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
           </div>
         </Container>
       </section>
