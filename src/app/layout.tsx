@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 
-
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
 import FloatingContact from "@/presentation/components/layout/FloatingContact";
