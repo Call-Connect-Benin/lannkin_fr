@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
-import { Analytics } from "@vercel/analytics/react";
+
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
 import FloatingContact from "@/presentation/components/layout/FloatingContact";
@@ -162,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <FloatingContact />
-        <Analytics />
+
       </body>
     </html>
   );
