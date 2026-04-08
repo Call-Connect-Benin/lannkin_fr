@@ -180,17 +180,26 @@ function MarketingVisual() {
 function StatsCard() {
   return (
     <div className="flex flex-col justify-between h-full p-6">
-      {/* Pending payout style card — floats */}
+      {/* Main metric card — dark, integrated */}
       <motion.div
-        className="rounded-xl bg-white p-5 shadow-lg max-w-[260px]"
+        className="rounded-xl p-5 max-w-[260px]"
+        style={{
+          backgroundColor: "rgba(255,255,255,0.06)",
+          border: "1px solid rgba(255,255,255,0.10)",
+        }}
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <p className="text-xs text-gray-500 border-b border-dashed border-gray-200 pb-2 mb-3">
+        <p
+          className="text-xs font-medium pb-2 mb-3"
+          style={{ color: "rgba(255,255,255,0.40)", borderBottom: "1px dashed rgba(255,255,255,0.10)" }}
+        >
           Résultats clients
         </p>
-        <p className="font-heading text-3xl font-bold text-gray-900">+1 000</p>
-        <p className="text-sm text-gray-500 mt-1">projets livrés depuis 2015</p>
+        <p className="font-heading text-3xl font-bold text-white">+1 000</p>
+        <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>
+          projets livrés depuis 2015
+        </p>
       </motion.div>
 
       {/* Stats badges — each floats at its own pace */}

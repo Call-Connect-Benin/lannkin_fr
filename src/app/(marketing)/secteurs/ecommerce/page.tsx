@@ -1,14 +1,33 @@
 import type { Metadata } from "next";
 
+import { getSectorBySlug } from "@/data/sectors";
+import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
+
 export const metadata: Metadata = {
-  title: "Agence E-Commerce Québec | Lannkin",
-  description: "Agence e-commerce au Québec. SEO, publicité et optimisation des conversions pour boutiques en ligne. Devis gratuit.",
+  title: "Agence E-Commerce Laval & Montréal | Shopify, Google Shopping, SEO | Lannkin",
+  description:
+    "Agence e-commerce certifiée Shopify Partner à Laval. Google Shopping, Facebook Shops, SEO produit, optimisation du taux de conversion. Faites croître votre boutique en ligne.",
+  keywords: [
+    "agence ecommerce laval",
+    "shopify partner montréal",
+    "google shopping québec",
+    "seo ecommerce laval",
+    "agence web ecommerce québec",
+    "optimisation taux conversion boutique en ligne",
+  ],
+  alternates: { canonical: "/secteurs/ecommerce/" },
 };
 
-export default function EcommerceEnLignePage() {
-  return (
-    <main>
-      <h1>Ecommerce En Ligne</h1>
-    </main>
-  );
+const BENEFITS = [
+  "Shopify Partner certifié — création, migration et optimisation de boutiques performantes",
+  "Google Shopping et Performance Max configurés pour maximiser votre ROAS dès le premier mois",
+  "Remarketing dynamique pour relancer les paniers abandonnés et augmenter le taux de retour",
+  "SEO produit et catégories pour générer du trafic organique durable sans dépendre de la pub",
+  "Tracking complet : GA4, Meta Pixel, Shopify Analytics — visibilité totale sur vos performances",
+  "Stratégies email marketing et automatisation post-achat pour fidéliser vos clients",
+];
+
+export default function EcommercePage() {
+  const sector = getSectorBySlug("ecommerce")!;
+  return <SectorPageTemplate sector={sector} benefits={BENEFITS} />;
 }
