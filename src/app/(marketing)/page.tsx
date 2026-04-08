@@ -473,16 +473,38 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 pt-10" style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}>
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.50)" }}>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 pt-10" style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}>
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.40)" }}>
               Certifications &amp; partenariats
             </span>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-facebook-partner.webp" alt="Meta Business Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badges/badge-shopify-partner.webp" alt="Shopify Partner" loading="lazy" decoding="async" className="h-12 w-auto rounded-lg" />
+            {/* Google Partner */}
+            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)" }}>
+              <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+                <path fill="#4285F4" d="M45.5 24.5c0-1.5-.1-3-.4-4.5H24v8.5h12.1c-.5 2.7-2 5-4.3 6.5v5.4h7c4.1-3.8 6.7-9.4 6.7-15.9z"/>
+                <path fill="#34A853" d="M24 46c6.1 0 11.2-2 14.9-5.5l-7-5.4c-2 1.3-4.5 2.1-7.9 2.1-6.1 0-11.2-4.1-13.1-9.6H3.6v5.6C7.3 41.1 15 46 24 46z"/>
+                <path fill="#FBBC05" d="M10.9 27.6A14.8 14.8 0 0 1 10.9 20.4V14.8H3.6A22 22 0 0 0 2 24c0 3.5.8 6.8 2.3 9.7l7.6-6.1z"/>
+                <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.6-6.6C35.2 2.5 30 0 24 0 15 0 7.3 4.9 3.6 12.2l7.3 5.6C12.8 12.6 17.9 9.5 24 9.5z"/>
+              </svg>
+              <span className="text-sm font-semibold text-white">Google Partner</span>
+            </div>
+            {/* Meta Business Partner */}
+            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)" }}>
+              <svg width="22" height="14" viewBox="0 0 60 38" aria-hidden="true" fill="none">
+                <path d="M30 18.3C27 11.5 22.5 7 17.5 7 10.6 7 5 14.2 5 23c0 5.3 2.3 9 5.5 9 2.4 0 4.5-1.6 7.5-6.5l2.2-3.8c2.2-3.8 4.7-6 7.3-6.3C27.5 15.9 28.7 17 30 18.3z" fill="#0866FF"/>
+                <path d="M30 18.3c1.3-1.3 2.5-2.4 3.5-3C36 15.8 38.5 18 40.8 21.7l2.2 3.8c3 4.9 5.1 6.5 7.5 6.5 3.2 0 5.5-3.7 5.5-9 0-8.8-5.6-16-12.5-16-5 0-9.5 4.5-12.5 11.3z" fill="#0866FF"/>
+                <path d="M22.5 29.5C20 34.5 17.5 37 13.5 37c-5 0-8.5-5-8.5-14 0-8.8 5.6-16 12.5-16 5 0 9.5 4.5 12.5 11.3C30 18.3 33 11.5 42.5 7 49.4 7 55 14.2 55 23c0 9-3.5 14-8.5 14-4 0-6.5-2.5-9-7.5" stroke="#0866FF" strokeWidth="0" fill="#0866FF"/>
+              </svg>
+              <span className="text-sm font-semibold text-white">Meta Business Partner</span>
+            </div>
+            {/* Shopify Partners */}
+            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)" }}>
+              <svg width="18" height="20" viewBox="0 0 50 57" aria-hidden="true" fill="none">
+                <path d="M42.8 10.8c0-.3-.3-.5-.6-.5l-4.4-.4-.3-.3C36.1 8.2 34 7.5 32 7c-.4-1.2-1-2.3-1.8-3.2C28.8 2.2 27.2 1.5 25.4 1.5c-.1 0-.3 0-.4.1-.1-.1-.2-.2-.3-.3-1.1-1-2.5-1.3-4.1-.8-3.2 1-6.3 3.8-8.8 8.2-.8 1.5-1.5 3.1-2 4.7l-7.2 2.2c-2.1.7-2.2.7-2.4 2.7L.2 45.7 34.3 52 50 48.4 42.8 10.8z" fill="#95BF47"/>
+                <path d="M32 7c-.4-1.2-1-2.3-1.8-3.2C28.8 2.2 27.2 1.5 25.4 1.5c-.1 0-.3 0-.4.1V52l8.9-2.4L42.2 11.3l-4.4-.4L32 7z" fill="#5E8E3E"/>
+                <path d="M25 14.8l-2.2 6.6s-2-1-4.3-1c-3.4 0-3.6 2.2-3.6 2.7 0 3 7.7 4.1 7.7 11 0 5.4-3.5 8.9-8.1 8.9-5.6 0-8.4-3.5-8.4-3.5l1.5-4.9s2.9 2.5 5.4 2.5c1.6 0 2.3-1.3 2.3-2.2 0-3.9-6.3-4.1-6.3-10.4 0-5.3 3.8-10.5 11.6-10.5 3 0 4.4.9 4.4.9z" fill="#FFF"/>
+              </svg>
+              <span className="text-sm font-semibold text-white">Shopify Partners</span>
+            </div>
           </div>
         </Container>
       </section>

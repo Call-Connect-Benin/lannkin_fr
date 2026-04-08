@@ -113,6 +113,70 @@ const FLOAT_VARIANTS = [
   { duration: 6 },
 ];
 
+const MARKETING_METRICS = [
+  { platform: "Google Ads", metric: "ROAS", value: "6.8×", change: "+2.1×", color: "#4285F4" },
+  { platform: "Meta Ads", metric: "CPL", value: "4,20 $", change: "−38%", color: "#0866FF" },
+  { platform: "SEO", metric: "Top 3", value: "87 %", change: "+34 pts", color: "#498f6d" },
+];
+
+function MarketingVisual() {
+  return (
+    <div
+      className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5"
+      style={{ background: "linear-gradient(145deg, #070d16 0%, #0d1b2a 100%)" }}
+    >
+      {/* Platform header row */}
+      <div className="mb-1 flex items-center gap-2">
+        {/* Google G */}
+        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#4285F4" d="M45.5 24.5c0-1.5-.1-3-.4-4.5H24v8.5h12.1c-.5 2.7-2 5-4.3 6.5v5.4h7c4.1-3.8 6.7-9.4 6.7-15.9z"/>
+          <path fill="#34A853" d="M24 46c6.1 0 11.2-2 14.9-5.5l-7-5.4c-2 1.3-4.5 2.1-7.9 2.1-6.1 0-11.2-4.1-13.1-9.6H3.6v5.6C7.3 41.1 15 46 24 46z"/>
+          <path fill="#FBBC05" d="M10.9 27.6A14.8 14.8 0 0 1 10.9 20.4V14.8H3.6A22 22 0 0 0 2 24c0 3.5.8 6.8 2.3 9.7l7.6-6.1z" />
+          <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.6-6.6C35.2 2.5 30 0 24 0 15 0 7.3 4.9 3.6 12.2l7.3 5.6C12.8 12.6 17.9 9.5 24 9.5z"/>
+        </svg>
+        <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>·</span>
+        {/* Meta M */}
+        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#0866FF" d="M6.2 30.8c0 3.8 2.4 6.2 6.2 6.2 1.8 0 3.3-.5 4.5-1.6L24 28.6l7.1 6.8c1.2 1.1 2.7 1.6 4.5 1.6 3.8 0 6.2-2.4 6.2-6.2 0-1.9-.7-3.6-2-4.9L24 11.4 8 25.9c-1.3 1.3-2 3-2 4.9z"/>
+        </svg>
+        <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>·</span>
+        {/* SEO text */}
+        <span className="rounded px-1.5 py-0.5 text-[10px] font-bold" style={{ backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d" }}>SEO</span>
+      </div>
+
+      {/* Metric cards */}
+      {MARKETING_METRICS.map((m, i) => (
+        <motion.div
+          key={m.platform}
+          className="w-full max-w-[220px] rounded-xl px-4 py-3"
+          style={{
+            backgroundColor: "rgba(255,255,255,0.04)",
+            border: `1px solid ${m.color}40`,
+          }}
+          animate={{ y: [0, -(5 + i * 3), 0] }}
+          transition={{ duration: 4 + i * 1.2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-[10px] font-medium uppercase tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>
+                {m.platform}
+              </p>
+              <p className="font-heading text-xl font-bold text-white leading-tight">{m.value}</p>
+              <p className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>{m.metric}</p>
+            </div>
+            <span
+              className="rounded-full px-2 py-1 text-xs font-semibold"
+              style={{ backgroundColor: `${m.color}18`, color: m.color }}
+            >
+              {m.change}
+            </span>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
 function StatsCard() {
   return (
     <div className="flex flex-col justify-between h-full p-6">
@@ -202,20 +266,7 @@ export default function ShowcaseCards() {
               >
                 {/* Visual area */}
                 <div className="relative aspect-square overflow-hidden">
-                  {card.type === "video" && (
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      disablePictureInPicture
-                      disableRemotePlayback
-                      preload="metadata"
-                    >
-                      <source src="/images/video_1774625640841105.mp4" type="video/mp4" />
-                    </video>
-                  )}
+                  {card.type === "video" && <MarketingVisual />}
                   {card.type === "phone" && <PhoneCarousel />}
                   {card.type === "stats" && <StatsCard />}
                   {/* Inner shadow for depth */}
