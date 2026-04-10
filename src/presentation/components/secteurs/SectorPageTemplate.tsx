@@ -28,6 +28,19 @@ const SERVICE_META: Record<string, { label: string; desc: string }> = {
 };
 
 // ---------------------------------------------------------------------------
+// Mapping secteur → page réalisations dédiée
+// ---------------------------------------------------------------------------
+
+const SECTOR_REALISATIONS: Record<string, string> = {
+  "immobilier":    "/realisations/immobilier/",
+  "construction":  "/realisations/construction/",
+  "beaute":        "/realisations/beaute/",
+  "ecommerce":     "/realisations/ecommerce/",
+  "education":     "/realisations/education/",
+  "tourisme":      "/realisations/tourisme/",
+};
+
+// ---------------------------------------------------------------------------
 // Props
 // ---------------------------------------------------------------------------
 
@@ -41,6 +54,8 @@ interface SectorPageTemplateProps {
 // ---------------------------------------------------------------------------
 
 export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps) {
+  const realisationsHref = SECTOR_REALISATIONS[sector.slug] ?? "/realisations/";
+
   return (
     <main>
       {/* ── Hero ─────────────────────────────────────────────────── */}
@@ -83,7 +98,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/realisations/">
+              <Link href={realisationsHref}>
                 <Button variant="secondary" size="lg">
                   Voir nos réalisations
                 </Button>
@@ -235,7 +250,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/realisations/">
+              <Link href={realisationsHref}>
                 <Button variant="secondary" size="lg">
                   Voir nos projets
                 </Button>
