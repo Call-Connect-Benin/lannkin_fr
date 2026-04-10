@@ -1051,12 +1051,12 @@ export const PORTFOLIO_SECTOR_PAGES: PortfolioSectorPage[] = [
 ];
 
 // Secteurs affichés dans les filtres (tous secteurs avec ≥1 projet)
-export const PORTFOLIO_SECTOR_FILTERS: { slug: string; label: string }[] = [
-  { slug: "construction", label: "Construction" },
-  { slug: "immobilier", label: "Immobilier" },
-  { slug: "services-menagers", label: "Services ménagers" },
-  { slug: "beaute", label: "Beauté" },
-  { slug: "ecommerce-local", label: "E-commerce" },
-  { slug: "tourisme", label: "Tourisme" },
-  { slug: "education", label: "Éducation" },
+export const PORTFOLIO_SECTOR_FILTERS: { slug: string; label: string; href: string }[] = [
+  { slug: "construction",    label: "Construction",      href: "/realisations/construction/" },
+  { slug: "immobilier",      label: "Immobilier",        href: "/realisations/immobilier/" },
+  { slug: "services-menagers", label: "Services ménagers", href: "/realisations/services-menagers/" },
+  { slug: "beaute",          label: "Beauté",            href: "/realisations/beaute/" },
+  { slug: "ecommerce-local", label: "E-commerce",        href: "/realisations/ecommerce-local/" },
+  { slug: "tourisme",        label: "Tourisme",          href: "/realisations/tourisme/" },
+  { slug: "education",       label: "Éducation",         href: "/realisations/education/" },
 ];
