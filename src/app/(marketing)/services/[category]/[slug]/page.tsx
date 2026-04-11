@@ -10,6 +10,7 @@ import {
 import { Container, Card, Badge, Button } from "@/presentation/components/ui";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
 import { Breadcrumb, InternalLinks } from "@/presentation/components/seo";
+import { ShopifyCaseStudies } from "@/presentation/components/seo/ShopifyCaseStudies";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 const HUB_PARALLAX_IMAGES: Record<string, string> = {
@@ -151,6 +152,56 @@ export default async function ServiceSubPage({ params }: PageProps) {
           </Container>
         </div>
       </section>
+
+      {/* Shopify case studies */}
+      {slug === "site-shopify" && <ShopifyCaseStudies />}
+
+      {/* 3D case study — Montecarlo Designs (on all sites-immersifs-3d sub-pages) */}
+      {category === "sites-immersifs-3d" && (
+        <section className="py-16">
+          <Container>
+            <div className="glass rounded-2xl overflow-hidden lg:flex">
+              <div className="relative aspect-[16/10] lg:aspect-auto lg:w-2/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/services/conception de site web/shopify/rendu3Dmonaco.webp"
+                  alt="Rendu 3D Blender — Montecarlo Designs Monaco"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-6 lg:flex lg:w-3/5 lg:flex-col lg:justify-center lg:p-10">
+                <p className="mb-2 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
+                  Étude de cas 3D
+                </p>
+                <h3 className="font-heading text-2xl font-bold text-white">
+                  Montecarlo Designs — Mobilier de luxe à Monaco
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
+                  Modélisation 3D complète de tables en marbre avec Blender, intégration
+                  WebGL/GLB pour le SEO Google, et e-commerce premium. Un projet qui
+                  illustre la puissance de la 3D pour le e-commerce de luxe.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    href="/realisations/montecarlo-designs/"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent/80"
+                  >
+                    Voir le projet
+                    <span aria-hidden>&rarr;</span>
+                  </Link>
+                  <Link
+                    href="/services/sites-immersifs-3d/"
+                    className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-white"
+                  >
+                    Nos services 3D
+                    <span aria-hidden>&rarr;</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Related services */}
       {relatedServices.length > 0 && (

@@ -264,6 +264,192 @@ const onePageProjects: PortfolioProject[] = [
 
 const ecommerceProjects: PortfolioProject[] = [
   {
+    id: "etilik-wear",
+    slug: "etilik-wear",
+    name: "Etilik Wear",
+    client: "Etilik Wear",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Mode — E-commerce Shopify",
+    year: 2024,
+    shortDescription:
+      "E-commerce Shopify accompagné pour atteindre plus de 30 000 CAD/mois de chiffre d'affaires grâce à une stratégie marketing complète.",
+    description:
+      "Accompagnement e-commerce complet pour Etilik Wear, boutique Shopify de mode. Stratégie marketing digitale intégrée (Facebook Ads, Google Ads, SEO), optimisation du tunnel de conversion et refonte du design pour atteindre un chiffre d'affaires récurrent de plus de 30 000 CAD par mois.",
+    services: ["Conception Web", "Facebook Ads", "Google Ads", "SEO"],
+    technologies: ["Shopify", "Klaviyo", "Google Analytics 4", "Meta Ads"],
+    results: [
+      "+30 000 CAD/mois de chiffre d'affaires",
+      "Tunnel de conversion optimisé",
+      "Campagnes publicitaires ROI-positives",
+      "Croissance e-commerce soutenue",
+    ],
+    challenge:
+      "Faire décoller les ventes d'un e-commerce Shopify de mode dans un marché très compétitif au Canada.",
+    solution:
+      "Stratégie marketing 360° combinant publicité ciblée, optimisation Shopify et email marketing pour créer un flux de revenus récurrent.",
+    seoTitle: "E-commerce Shopify Mode | Etilik Wear — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : accompagnement e-commerce Shopify pour Etilik Wear. +30 000 CAD/mois de chiffre d'affaires.",
+    externalUrl: "https://www.etilik-wear.com/",
+    previewImage: "/images/services/conception de site web/shopify/etilik.png",
+  },
+  {
+    id: "khaven-swim",
+    slug: "khaven-swim",
+    name: "Khaven Swim",
+    client: "Khaven Swim",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Mode maillots — E-commerce Shopify",
+    year: 2023,
+    shortDescription:
+      "E-commerce Shopify ayant généré plus de 150 000 $ CAD grâce à notre stratégie marketing complète en 2023.",
+    description:
+      "Accompagnement e-commerce et stratégie marketing complète pour Khaven Swim, marque de maillots de bain sur Shopify. Gestion des campagnes publicitaires (Facebook Ads, Instagram Ads), optimisation du site et stratégie de contenu ayant permis de générer plus de 150 000 $ CAD de ventes en 2023.",
+    services: ["Facebook Ads", "Google Ads", "Conception Web", "SEO"],
+    technologies: ["Shopify", "Meta Ads", "Google Analytics 4", "Klaviyo"],
+    results: [
+      "+150 000 $ CAD générés en 2023",
+      "Stratégie marketing ROI-positive",
+      "Croissance soutenue des ventes en ligne",
+      "Notoriété de marque renforcée",
+    ],
+    challenge:
+      "Générer un volume de ventes significatif pour une marque de maillots dans un marché saisonnier et compétitif.",
+    solution:
+      "Stratégie marketing intégrée avec publicités ciblées, optimisation du tunnel de conversion Shopify et relance automatisée des paniers abandonnés.",
+    seoTitle: "Khaven Swim — E-commerce Shopify | Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : +150 000 $ CAD générés en 2023 pour Khaven Swim. Stratégie e-commerce Shopify complète.",
+    externalUrl: "https://khaven.com/",
+    previewImage: "/images/services/conception de site web/shopify/khaven.png",
+  },
+  {
+    id: "kosmopellis",
+    slug: "kosmopellis",
+    name: "Kosmopellis",
+    client: "Kosmopellis",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Cosmétiques — E-commerce Shopify",
+    year: 2024,
+    shortDescription:
+      "E-commerce Shopify créé et optimisé à chaque étage pour maximiser la conversion : upsells, bundles, landing pages produit.",
+    description:
+      "Création complète d'une boutique Shopify pour Kosmopellis, marque de cosmétiques. Optimisation conversion à tous les niveaux : pages produits avant/après, stratégie d'upsell de packs intégrée au checkout, landing pages produit haute conversion et architecture de catalogue pensée pour maximiser le panier moyen.",
+    services: ["Conception Web", "SEO", "Facebook Ads", "Google Ads"],
+    technologies: ["Shopify", "Liquid", "Klaviyo", "Google Analytics 4"],
+    results: [
+      "Boutique Shopify optimisée pour la conversion",
+      "Stratégie d'upsell et bundles au checkout",
+      "Pages produits avec landing page dédiée",
+      "Panier moyen augmenté significativement",
+    ],
+    challenge:
+      "Créer une boutique Shopify de cosmétiques qui convertit dans un marché saturé, avec un panier moyen élevé.",
+    solution:
+      "Architecture Shopify pensée conversion : pages produits type landing page, upsells au checkout, bundles stratégiques et parcours client optimisé du premier clic à la confirmation de commande.",
+    seoTitle: "Kosmopellis — Shopify Cosmétiques | Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : création e-commerce Shopify pour Kosmopellis. Optimisation conversion, upsells, landing pages produit.",
+    externalUrl: "https://kosmopellis.fr/",
+    previewImage: "/images/services/conception de site web/shopify/kosmopellis.png",
+  },
+  {
+    id: "biocenter",
+    slug: "biocenter",
+    name: "Bio Center",
+    client: "Bio Center",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Produits bio — Marketplace",
+    year: 2024,
+    shortDescription:
+      "Marketplace e-commerce française de produits bio : soins, bien-être et alimentation. Accompagnement SEO et Google Ads.",
+    description:
+      "Accompagnement digital pour Bio Center, marketplace e-commerce française proposant une large gamme de produits bio : soins, bien-être, alimentation et compléments. Stratégie SEO pour un catalogue volumineux et campagnes Google Ads pour maximiser la visibilité et les ventes.",
+    services: ["SEO", "Google Ads", "Conception Web"],
+    technologies: ["Shopify", "Google Shopping", "Google Analytics 4", "Search Console"],
+    results: [
+      "Visibilité SEO renforcée sur un large catalogue",
+      "Campagnes Google Ads rentables",
+      "Trafic organique en croissance",
+      "Ventes en ligne optimisées",
+    ],
+    challenge:
+      "Positionner une marketplace bio avec un catalogue très large face aux géants du e-commerce.",
+    solution:
+      "Stratégie SEO technique pour un catalogue volumineux combinée à des campagnes Google Shopping ciblées par catégorie de produits.",
+    seoTitle: "Marketplace Bio E-commerce | Bio Center — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : accompagnement SEO et Google Ads pour Bio Center, marketplace e-commerce de produits bio en France.",
+    externalUrl: "https://biocenter.fr/",
+    previewImage: "/images/services/conception de site web/shopify/biocenter.png",
+  },
+  {
+    id: "kway-canada",
+    slug: "kway-canada",
+    name: "K-Way Canada",
+    client: "K-Way Canada",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Mode outdoor — E-commerce",
+    year: 2024,
+    shortDescription:
+      "Accompagnement e-commerce et SEO pour K-Way Canada, marque iconique de vêtements outdoor.",
+    description:
+      "Accompagnement sur la partie e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements imperméables. Optimisation du référencement naturel, stratégie de contenu et amélioration de l'expérience d'achat en ligne pour le marché canadien.",
+    services: ["SEO", "Conception Web", "Google Ads"],
+    technologies: ["Shopify", "Google Analytics 4", "Search Console"],
+    results: [
+      "Référencement naturel optimisé au Canada",
+      "Expérience e-commerce améliorée",
+      "Visibilité accrue sur les mots-clés stratégiques",
+      "Trafic organique en hausse",
+    ],
+    challenge:
+      "Renforcer la présence digitale d'une marque mondiale sur le marché canadien spécifique.",
+    solution:
+      "Stratégie SEO adaptée au marché canadien bilingue avec optimisation e-commerce et contenu ciblé.",
+    seoTitle: "E-commerce K-Way Canada | SEO & Shopify — Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : accompagnement e-commerce et SEO pour K-Way Canada. Optimisation Shopify marché canadien.",
+    externalUrl: "https://kwaycanada.com/",
+    previewImage: "/images/services/conception de site web/shopify/kway.png",
+  },
+  {
+    id: "ironmeals",
+    slug: "ironmeals",
+    name: "Iron Meals",
+    client: "Iron Meals",
+    category: "ecommerce",
+    categoryLabel: "E-commerce",
+    sector: "Alimentation sportive — E-commerce Shopify",
+    year: 2024,
+    shortDescription:
+      "Refonte Shopify et publicité pour Iron Meals, e-commerce de repas en abonnement pour sportifs.",
+    description:
+      "Refonte complète de la boutique Shopify et gestion des campagnes publicitaires pour Iron Meals, e-commerce de repas préparés en abonnement pour sportifs. Optimisation du tunnel d'abonnement, landing pages dédiées et stratégie publicitaire multicanal.",
+    services: ["Conception Web", "Facebook Ads", "Google Ads"],
+    technologies: ["Shopify", "Shopify Subscriptions", "Meta Ads", "Google Analytics 4"],
+    results: [
+      "Boutique Shopify entièrement refondue",
+      "Tunnel d'abonnement optimisé",
+      "Campagnes publicitaires performantes",
+      "Acquisition de nouveaux abonnés",
+    ],
+    challenge:
+      "Convertir des visiteurs en abonnés récurrents pour un service de repas sportifs dans un marché de niche.",
+    solution:
+      "Refonte Shopify axée sur le modèle d'abonnement avec landing pages dédiées et publicité ciblée vers les communautés fitness.",
+    seoTitle: "Iron Meals — E-commerce Shopify | Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : refonte Shopify et publicité pour Iron Meals. E-commerce repas en abonnement pour sportifs.",
+    externalUrl: "https://ironmeals.ca/",
+    previewImage: "/images/services/conception de site web/shopify/ironmeals.png",
+  },
+  {
     id: "le-coffre-a-jouets",
     slug: "le-coffre-a-jouets",
     name: "Le Coffre à Jouets",
@@ -456,6 +642,68 @@ const internationalProjects: PortfolioProject[] = [
     seoDescription: "Réalisation Lannkin : stratégie digitale e-commerce pour Rotho, marque de produits ménagers en Allemagne.",
     externalUrl: "https://rotho.com/",
     previewImage: "/images/portfolio/rotho-ecommerce-allemagne.webp",
+  },
+  {
+    id: "montecarlo-designs",
+    slug: "montecarlo-designs",
+    name: "Montecarlo Designs",
+    client: "Montecarlo Designs",
+    category: "international",
+    categoryLabel: "International",
+    sector: "Mobilier de luxe — Monaco",
+    year: 2024,
+    shortDescription:
+      "E-commerce de meubles de luxe basé à Monaco avec modélisation 3D complète des tables en marbre et intégration WebGL/GLB pour le SEO.",
+    description:
+      "Création de la boutique e-commerce pour Montecarlo Designs, marque de mobilier de luxe basée à Monaco. Énorme travail de modélisation 3D de toutes les tables en marbre avec Blender, intégration des modèles au format WebGL/GLB pour le SEO Google (modèles 3D indexables), et développement d'une expérience d'achat premium à l'image de la marque.",
+    services: ["Conception Web", "Modélisation 3D", "SEO", "Google Ads"],
+    technologies: ["Shopify", "Blender", "WebGL", "GLB/glTF", "Three.js"],
+    results: [
+      "Modélisation 3D complète du catalogue en marbre",
+      "Modèles 3D intégrés en SEO via format GLB",
+      "Expérience e-commerce premium",
+      "Positionnement luxe établi en ligne",
+    ],
+    challenge:
+      "Communiquer le prestige et la qualité de meubles en marbre haut de gamme via un e-commerce, sans visite physique du showroom à Monaco.",
+    solution:
+      "Modélisation 3D photoréaliste de chaque pièce avec Blender, intégration WebGL interactive sur le site et utilisation du format GLB indexable par Google pour un avantage SEO unique.",
+    seoTitle: "Montecarlo Designs — Mobilier 3D Monaco | Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : e-commerce Montecarlo Designs, mobilier de luxe Monaco. Modélisation 3D Blender, WebGL, SEO GLB.",
+    externalUrl: "https://montecarlo-designs.com/",
+    previewImage: "/images/services/conception de site web/shopify/montecarlo.png",
+  },
+  {
+    id: "montaigne-optique",
+    slug: "montaigne-optique",
+    name: "Montaigne Optique",
+    client: "Montaigne Optique",
+    category: "international",
+    categoryLabel: "International",
+    sector: "Lunettes de luxe — France (Paris)",
+    year: 2024,
+    shortDescription:
+      "E-commerce WordPress pour une boutique de lunettes de grandes marques de luxe, Avenue Montaigne à Paris.",
+    description:
+      "Développement d'un e-commerce WordPress pour Montaigne Optique, opticien de luxe situé Avenue Montaigne à Paris, à côté des Champs-Élysées. Catalogue de lunettes de grandes marques de luxe, expérience d'achat premium et optimisation SEO sur le marché parisien haut de gamme.",
+    services: ["Conception Web", "SEO", "Google Ads"],
+    technologies: ["WordPress", "WooCommerce", "Elementor Pro", "Google Analytics 4"],
+    results: [
+      "E-commerce premium opérationnel",
+      "Positionnement luxe Avenue Montaigne établi",
+      "Référencement local Paris optimisé",
+      "Expérience d'achat en ligne haut de gamme",
+    ],
+    challenge:
+      "Créer un e-commerce à la hauteur du prestige d'une adresse Avenue Montaigne pour des lunettes de grandes marques de luxe.",
+    solution:
+      "E-commerce WordPress/WooCommerce avec design premium, photographie produit haut de gamme et SEO local ciblant le marché parisien du luxe.",
+    seoTitle: "Montaigne Optique Paris — Lunettes Luxe | Portfolio Lannkin",
+    seoDescription:
+      "Portfolio Lannkin : e-commerce pour Montaigne Optique, opticien de luxe Avenue Montaigne Paris. WordPress, WooCommerce, SEO.",
+    externalUrl: "https://montaigneoptique.com/",
+    previewImage: "/images/services/conception de site web/shopify/montaigne.png",
   },
 ];
 
@@ -1012,6 +1260,15 @@ export const SECTOR_MAPPING: Record<string, string> = {
   "Technologie — Chine": "tech",
   "4x4 rétro de luxe — USA": "automobile",
   "Agence de branding — Suisse (Lausanne)": "design",
+  // E-commerce Shopify & international (ajout 2026)
+  "Mode — E-commerce Shopify": "ecommerce-local",
+  "Mode maillots — E-commerce Shopify": "ecommerce-local",
+  "Cosmétiques — E-commerce Shopify": "ecommerce-local",
+  "Produits bio — Marketplace": "ecommerce-local",
+  "Mode outdoor — E-commerce": "ecommerce-local",
+  "Alimentation sportive — E-commerce Shopify": "ecommerce-local",
+  "Mobilier de luxe — Monaco": "ecommerce-local",
+  "Lunettes de luxe — France (Paris)": "ecommerce-local",
 };
 
 export function getSectorSlug(sector: string): string {

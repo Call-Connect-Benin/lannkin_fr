@@ -148,14 +148,14 @@ const siteWordpress: ServicePageContent = {
 // --------------------------------------------------
 const siteShopify: ServicePageContent = {
   slug: "site-shopify",
-  heroTitle: "Création de boutique Shopify à Laval et Montréal",
+  heroTitle: "Agence web Shopify à Laval et Montréal — Votre boutique e-commerce sur mesure",
   heroSubtitle:
-    "Lancez votre boutique en ligne avec Shopify, la plateforme e-commerce #1 au Canada. Thèmes personnalisés, apps stratégiques et développement Liquid sur mesure.",
+    "LANNKIN, votre agence web Shopify au Québec. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
   sections: [
     {
-      title: "Pourquoi Shopify pour votre boutique en ligne au Québec?",
+      title: "Pourquoi choisir LANNKIN comme agence web Shopify au Québec?",
       content:
-        "Shopify est une entreprise canadienne basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. La plateforme offre une infrastructure robuste, un écosystème d'applications riche et un système de paiement intégré (Shopify Payments) parfaitement adapté au marché canadien. LANNKIN est votre partenaire Shopify de confiance à Laval et Montréal.",
+        "Shopify est une entreprise canadienne basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
         "Configuration multilingue français/anglais pour le Québec",

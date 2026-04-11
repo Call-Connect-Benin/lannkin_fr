@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ArrowLeft, ArrowRight, Check, ExternalLink, TrendingUp } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
@@ -243,6 +244,301 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
               {/* Notre solution */}
               <ContentBlock title="Notre solution" body={project.solution} />
+
+              {/* Kosmopellis — contenu spécifique conversion */}
+              {project.slug === "kosmopellis" && (
+                <div className="space-y-8">
+                  <div>
+                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                      Stratégie de conversion Shopify
+                    </h2>
+                    <div
+                      className="h-px w-8 mb-4"
+                      style={{ background: "linear-gradient(to right, rgba(73,143,109,0.5), transparent)" }}
+                    />
+                    <p className="leading-relaxed text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      Pour Kosmopellis, nous avons travaillé chaque étape du parcours d&apos;achat pour maximiser
+                      la conversion. Des pages produits repensées comme de véritables landing pages, une stratégie
+                      d&apos;upsell de packs intégrée directement au checkout Shopify, et une architecture de
+                      catalogue pensée pour augmenter le panier moyen. Chaque détail a été optimisé : visuels
+                      avant/après, preuves sociales, bundles stratégiques et call-to-action testés.
+                    </p>
+                  </div>
+
+                  {/* Avant/Après pages produits */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      Avant / Après — Pages produits optimisées
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <Image
+                        src="/images/services/conception de site web/shopify/kosmopellis-a.png"
+                        alt="Kosmopellis — avant/après pages produits optimisées"
+                        width={1200}
+                        height={675}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
+                      Refonte complète des pages produits avec visuels avant/après, preuves sociales et structure de landing page.
+                    </p>
+                  </div>
+
+                  {/* Upsell checkout */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      Stratégie d&apos;upsell de packs au checkout
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <Image
+                        src="/images/services/conception de site web/shopify/kosmopellis-upsells.png"
+                        alt="Kosmopellis — upsell de packs intégrés au checkout Shopify"
+                        width={1200}
+                        height={675}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
+                      Intégration d&apos;upsells de packs directement dans le checkout Shopify pour augmenter le panier moyen.
+                    </p>
+                  </div>
+
+                  {/* Landing page produit */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      Landing pages produit haute conversion
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      Nous avons vraiment travaillé la partie &laquo;&nbsp;landing page&nbsp;&raquo; pour chaque produit clé.
+                      Chaque fiche produit est conçue comme une page de vente autonome avec storytelling, bénéfices, preuves
+                      sociales et call-to-action optimisés.
+                    </p>
+                    <a
+                      href="https://kosmopellis.fr/products/cure-visage-complet"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:brightness-110"
+                      style={{ color: "#498f6d" }}
+                    >
+                      Voir un exemple de page produit
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+
+                  {/* Liens services internes */}
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href="/services/conception-web/site-shopify/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Agence web Shopify
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      href="/services/seo/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      SEO & Référencement
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      href="/services/facebook-ads/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Facebook Ads
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Montecarlo Designs — contenu spécifique 3D */}
+              {project.slug === "montecarlo-designs" && (
+                <div className="space-y-8">
+                  <div>
+                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                      Modélisation 3D et rendus Blender
+                    </h2>
+                    <div
+                      className="h-px w-8 mb-4"
+                      style={{ background: "linear-gradient(to right, rgba(73,143,109,0.5), transparent)" }}
+                    />
+                    <p className="leading-relaxed text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      Chaque table en marbre du catalogue Montecarlo Designs a été entièrement modélisée en 3D avec
+                      Blender. Ce ne sont pas des rendus IA — c&apos;est un travail de modélisation 3D photoréaliste
+                      artisanal. Les modèles sont exportés au format GLB/glTF, un format que Google indexe et
+                      affiche directement dans les résultats de recherche, offrant un avantage SEO unique.
+                    </p>
+                  </div>
+
+                  {/* Rendu 3D */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      Rendu 3D réalisé avec Blender
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <Image
+                        src="/images/services/conception de site web/shopify/rendu3Dmonaco.webp"
+                        alt="Rendu 3D Blender — table en marbre Montecarlo Designs"
+                        width={1200}
+                        height={675}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
+                      Rendu 3D photoréaliste entièrement réalisé avec Blender — aucune intelligence artificielle utilisée.
+                    </p>
+                  </div>
+
+                  {/* SEO GLB */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      SEO 3D — Format WebGL/GLB indexable par Google
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <Image
+                        src="/images/services/conception de site web/shopify/montecarloglb.png"
+                        alt="Montecarlo Designs — modèles 3D GLB indexés par Google en SEO"
+                        width={1200}
+                        height={675}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
+                      Le format WebGL/GLB permet à Google d&apos;indexer les modèles 3D directement dans les résultats de recherche — un avantage SEO considérable.
+                    </p>
+                  </div>
+
+                  {/* Boutique Monaco */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      La boutique à Monaco
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <Image
+                        src="/images/services/conception de site web/shopify/monacoboutique.png"
+                        alt="Façade de la boutique Montecarlo Designs à Monaco"
+                        width={1200}
+                        height={675}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Vidéo Loom */}
+                  <div>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                      Présentation du projet en vidéo
+                    </h3>
+                    <div
+                      className="overflow-hidden rounded-2xl"
+                      style={{ position: "relative", paddingBottom: "64.98%", height: 0, border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <iframe
+                        src="https://www.loom.com/embed/eda0796b3cd04b789299b1eb2bbef965"
+                        className="border-0"
+                        allowFullScreen
+                        style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Liens vers pages 3D */}
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href="/services/sites-immersifs-3d/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Sites Immersifs 3D
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      href="/services/conception-web/site-shopify/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Agence web Shopify
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Montaigne Optique — lien WordPress */}
+              {project.slug === "montaigne-optique" && (
+                <div>
+                  <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                    E-commerce WordPress
+                  </h2>
+                  <div
+                    className="h-px w-8 mb-4"
+                    style={{ background: "linear-gradient(to right, rgba(73,143,109,0.5), transparent)" }}
+                  />
+                  <p className="leading-relaxed text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
+                    Pour Montaigne Optique, nous avons développé un e-commerce sur WordPress avec WooCommerce,
+                    la solution idéale pour un catalogue de lunettes de grandes marques avec gestion avancée
+                    des variantes (montures, verres, couleurs).
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link
+                      href="/services/conception-web/site-wordpress/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Nos services WordPress
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      href="/services/seo/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      SEO & Référencement
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      href="/services/google-ads/"
+                      className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                    >
+                      Google Ads
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                  {/* Facade */}
+                  <div
+                    className="mt-6 overflow-hidden rounded-2xl"
+                    style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+                  >
+                    <Image
+                      src="/images/services/conception de site web/shopify/montaigneoptique.png"
+                      alt="Façade de Montaigne Optique, Avenue Montaigne Paris"
+                      width={1200}
+                      height={675}
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Technologies */}
               <div>

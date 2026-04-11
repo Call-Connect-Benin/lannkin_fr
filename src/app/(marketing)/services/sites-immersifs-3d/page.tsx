@@ -5,6 +5,7 @@ import {
   Box,
   CheckCircle2,
   Code2,
+  ExternalLink,
   Eye,
   Film,
   FolderOpen,
@@ -13,6 +14,7 @@ import {
   Sparkles,
   Store,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { getSubServices } from "@/data/services";
@@ -266,6 +268,91 @@ export default function SitesImmersifs3dPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* Case Study — Montecarlo Designs */}
+      <section className="py-24">
+        <Container>
+          <div className="mb-12">
+            <p className="mb-3 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
+              Étude de cas 3D
+            </p>
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Montecarlo Designs — Mobilier de luxe en 3D
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg text-[#CCCCCC]">
+              Modélisation 3D complète de tables en marbre avec Blender pour un
+              e-commerce de mobilier de luxe basé à Monaco. Intégration WebGL/GLB
+              pour un avantage SEO unique.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Rendu 3D */}
+            <div className="overflow-hidden rounded-2xl border border-white/[0.06]">
+              <Image
+                src="/images/services/conception de site web/shopify/rendu3Dmonaco.webp"
+                alt="Rendu 3D Blender — table en marbre Montecarlo Designs Monaco"
+                width={800}
+                height={500}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* Détails */}
+            <div className="flex flex-col justify-center space-y-6">
+              <div className="glass rounded-xl p-6">
+                <h3 className="mb-2 font-heading text-lg font-semibold text-white">
+                  Modélisation 3D Blender
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Chaque table en marbre a été modélisée en 3D photoréaliste avec
+                  Blender — aucune IA utilisée. Un travail artisanal de modélisation
+                  qui permet une visualisation fidèle des produits en ligne.
+                </p>
+              </div>
+
+              <div className="glass rounded-xl p-6">
+                <h3 className="mb-2 font-heading text-lg font-semibold text-white">
+                  SEO 3D — Format GLB indexable
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Les modèles 3D sont exportés au format WebGL/GLB, que Google
+                  indexe et affiche directement dans les résultats de recherche. Un
+                  avantage SEO considérable pour le e-commerce de luxe.
+                </p>
+                <div className="mt-4 overflow-hidden rounded-xl border border-white/[0.06]">
+                  <Image
+                    src="/images/services/conception de site web/shopify/montecarloglb.png"
+                    alt="Modèle 3D GLB indexé par Google — Montecarlo Designs"
+                    width={600}
+                    height={340}
+                    className="w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/realisations/montecarlo-designs/"
+                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all hover:brightness-110"
+                >
+                  Voir le projet complet
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="https://montecarlo-designs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-muted transition-colors hover:text-white"
+                >
+                  Visiter le site
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
