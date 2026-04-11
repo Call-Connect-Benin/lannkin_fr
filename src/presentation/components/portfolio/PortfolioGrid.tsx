@@ -175,7 +175,7 @@ export function PortfolioGrid({
               })}
             </div>
 
-            {/* Sector tags */}
+            {/* Sector tags — rendered as <Link> for SEO crawlability */}
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setActiveSector("all")}
@@ -188,23 +188,16 @@ export function PortfolioGrid({
               >
                 Tous les secteurs
               </button>
-              {PORTFOLIO_SECTOR_FILTERS.map((s) => {
-                const isActive = activeSector === s.slug;
-                return (
-                  <button
-                    key={s.slug}
-                    onClick={() => { setActiveSector(s.slug); setActiveCategory("all"); }}
-                    className="rounded-full px-3 py-1 text-xs font-semibold transition-all duration-200"
-                    style={
-                      isActive
-                        ? { backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d", border: "1px solid rgba(73,143,109,0.3)" }
-                        : { backgroundColor: "transparent", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.07)" }
-                    }
-                  >
-                    {s.label}
-                  </button>
-                );
-              })}
+              {PORTFOLIO_SECTOR_FILTERS.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={s.href}
+                  className="rounded-full px-3 py-1 text-xs font-semibold transition-all duration-200"
+                  style={{ backgroundColor: "transparent", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.07)" }}
+                >
+                  {s.label}
+                </Link>
+              ))}
             </div>
           </div>
         )}
