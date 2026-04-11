@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle, Send } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, History, Send, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -12,9 +12,12 @@ import {
   contactFormSchema,
   type ContactFormData,
 } from "@/domain/entities/contact-form";
+import { clearDraft, DRAFT_KEYS, loadDraft, saveDraft } from "@/lib/form-draft";
 import { cn } from "@/lib/utils";
 import { Button } from "@/presentation/components/ui";
 import { useFormSubmit } from "@/presentation/hooks";
+
+const DRAFT_KEY = DRAFT_KEYS.devisGratuit;
 
 const devisExtensionSchema = z.object({
   urgency: z.enum(["normal", "urgent", "tres-urgent"]),
@@ -117,6 +120,11 @@ export function DevisForm() {
   const [direction, setDirection] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [draftRestored, setDraftRestored] = useState(false);
+
+  // Draft persistence
+  const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasRestoredRef = useRef(false);
 
   const {
     register,
@@ -124,9 +132,47 @@ export function DevisForm() {
     formState: { errors, isSubmitting },
     trigger,
     reset,
+    watch,
   } = useForm<DevisFormData>({
     resolver: zodResolver(devisFormSchema),
   });
+
+  // ── Restore draft on mount ──
+  useEffect(() => {
+    const draft = loadDraft<Partial<DevisFormData>>(DRAFT_KEY);
+    if (draft && Object.keys(draft).length > 0) {
+      reset(draft as DevisFormData);
+      setDraftRestored(true);
+    }
+    hasRestoredRef.current = true;
+  }, [reset]);
+
+  // ── Save on change (debounced) ──
+  useEffect(() => {
+    const subscription = watch((values) => {
+      if (!hasRestoredRef.current) return;
+      if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+      saveTimeoutRef.current = setTimeout(() => {
+        saveDraft(DRAFT_KEY, values);
+      }, 400);
+    });
+    return () => subscription.unsubscribe();
+  }, [watch]);
+
+  // ── Cleanup debounce on unmount ──
+  useEffect(() => {
+    return () => {
+      if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+    };
+  }, []);
+
+  // ── Manual clear ──
+  const handleClearDraft = () => {
+    clearDraft(DRAFT_KEY);
+    reset({} as DevisFormData);
+    setDraftRestored(false);
+    setStep(1);
+  };
 
   const goToStep2 = async () => {
     const valid = await trigger([
@@ -164,6 +210,8 @@ export function DevisForm() {
     });
 
     if (result.ok) {
+      clearDraft(DRAFT_KEY);
+      setDraftRestored(false);
       setIsSubmitted(true);
       reset();
     } else {
@@ -206,6 +254,34 @@ export function DevisForm() {
 
   return (
     <div>
+      {/* ── Brouillon restauré — banner ── */}
+      {draftRestored && (
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#498f6d]/30 bg-[#498f6d]/[0.06] px-4 py-3">
+          <div className="flex items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#498f6d]/15">
+              <History className="h-4 w-4 text-[#498f6d]" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">
+                Brouillon restauré
+              </p>
+              <p className="text-xs text-white/50">
+                Vos informations ont été récupérées. Elles sont sauvegardées
+                automatiquement pendant votre saisie.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={handleClearDraft}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-white/70 transition-all hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
+          >
+            <X className="h-3.5 w-3.5" />
+            Effacer
+          </button>
+        </div>
+      )}
+
       {/* Step indicator */}
       <div className="flex items-center gap-3 mb-8">
         <div
