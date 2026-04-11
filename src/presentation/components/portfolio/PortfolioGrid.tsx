@@ -11,6 +11,7 @@ import {
   PORTFOLIO_SECTOR_FILTERS,
   getSectorSlug,
   type PortfolioCategory,
+  type PortfolioProject,
 } from "@/data/portfolio";
 import { Container } from "@/presentation/components/ui/Container";
 
@@ -37,6 +38,88 @@ const CATEGORY_TABS: { id: PortfolioCategory | "all"; label: string }[] = [
   { id: "ecommerce", label: "E-commerce" },
   { id: "international", label: "International" },
 ];
+
+// Map nom de service (générique) → href de hub /services/{slug}/
+// Utilisé comme fallback quand on n'a pas de sous-service plus précis.
+const SERVICE_HREF_MAP: Record<string, string> = {
+  "Conception Web": "/services/conception-web/",
+  "SEO": "/services/seo/",
+  "Google Ads": "/services/google-ads/",
+  "Facebook Ads": "/services/facebook-ads/",
+  "TikTok Ads": "/services/tiktok-ads/",
+  "LinkedIn Ads": "/services/linkedin-ads/",
+  "Bing Ads": "/services/bing-ads/",
+  "Amazon Ads": "/services/amazon-ads/",
+  "Native Ads": "/services/native-ads/",
+  "Graphisme": "/services/graphisme/",
+  "Modélisation 3D": "/services/sites-immersifs-3d/",
+  "Montage Vidéo": "/services/montage-video/",
+  "Google My Business": "/services/google-my-business/",
+  "Vibe Coding": "/services/vibe-coding/",
+  "Odoo": "/services/odoo/",
+  "Lead Generation": "/services/lead-generation/",
+};
+
+interface ServiceTag {
+  label: string;
+  href: string | null;
+}
+
+/**
+ * Résout le tag "Conception Web" vers la sous-page la plus précise possible
+ * en analysant les technologies du projet.
+ */
+function resolveConceptionWebTag(project: PortfolioProject): ServiceTag {
+  const techs = project.technologies.map((t) => t.toLowerCase());
+
+  if (techs.some((t) => t.includes("shopify"))) {
+    return { label: "Shopify", href: "/services/conception-web/site-shopify/" };
+  }
+  if (techs.some((t) => /next\.?js/.test(t))) {
+    return { label: "Next.js", href: "/services/conception-web/site-nextjs/" };
+  }
+  if (techs.some((t) => /sanity|strapi|contentful/.test(t))) {
+    return { label: "Headless CMS", href: "/services/conception-web/site-headless-cms/" };
+  }
+  if (techs.some((t) => /wordpress|woocommerce|elementor/.test(t))) {
+    return { label: "WordPress", href: "/services/conception-web/site-wordpress/" };
+  }
+  return { label: "Conception Web", href: "/services/conception-web/" };
+}
+
+/**
+ * Résout "Modélisation 3D" vers la sous-page 3D la plus précise.
+ */
+function resolveModelisation3dTag(project: PortfolioProject): ServiceTag {
+  const techs = project.technologies.map((t) => t.toLowerCase());
+
+  if (techs.some((t) => /webgl|glb|gltf/.test(t))) {
+    return { label: "WebGL / GLB", href: "/services/sites-immersifs-3d/experience-webgl/" };
+  }
+  if (techs.some((t) => /three\.?js|r3f|react three fiber/.test(t))) {
+    return { label: "Three.js", href: "/services/sites-immersifs-3d/site-threejs/" };
+  }
+  if (techs.some((t) => t.includes("blender"))) {
+    return { label: "Modélisation 3D", href: "/services/sites-immersifs-3d/" };
+  }
+  return { label: "Modélisation 3D", href: "/services/sites-immersifs-3d/" };
+}
+
+/**
+ * Transforme le nom générique d'un service en tag contextuel (label + href précis).
+ */
+function resolveServiceTag(serviceName: string, project: PortfolioProject): ServiceTag {
+  if (serviceName === "Conception Web") {
+    return resolveConceptionWebTag(project);
+  }
+  if (serviceName === "Modélisation 3D") {
+    return resolveModelisation3dTag(project);
+  }
+  return {
+    label: serviceName,
+    href: SERVICE_HREF_MAP[serviceName] ?? null,
+  };
+}
 
 interface PortfolioGridProps {
   initialFilter?: PortfolioCategory | "all";
@@ -141,9 +224,13 @@ export function PortfolioGrid({
                   className="group relative flex flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
                   style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.06)" }}
                 >
-                  {/* Preview image */}
+                  {/* Preview image — cliquable vers la page projet */}
                   {project.previewImage && (
-                    <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-xl">
+                    <Link
+                      href={`/realisations/${project.slug}/`}
+                      aria-label={`Voir le projet ${project.name}`}
+                      className="relative mb-4 block aspect-video w-full overflow-hidden rounded-xl"
+                    >
                       <Image
                         src={project.previewImage}
                         alt={`Preview ${project.name}`}
@@ -152,17 +239,19 @@ export function PortfolioGrid({
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         style={{ opacity: 0.85 }}
                       />
-                    </div>
+                    </Link>
                   )}
 
                   {/* Category badge + year */}
                   <div className="mb-3.5 flex items-center justify-between">
-                    <span
-                      className="rounded-full px-2.5 py-0.5 font-mono text-xs font-semibold"
+                    <Link
+                      href={`/realisations/${project.category}/`}
+                      aria-label={`Voir toutes les réalisations ${project.categoryLabel}`}
+                      className="rounded-full px-2.5 py-0.5 font-mono text-xs font-semibold transition-all duration-200 hover:brightness-125"
                       style={{ backgroundColor: badge.bg, color: badge.color }}
                     >
                       {project.categoryLabel}
-                    </span>
+                    </Link>
                     <span className="text-xs" style={{ color: "rgba(255,255,255,0.28)" }}>
                       {project.year}
                     </span>
@@ -189,20 +278,39 @@ export function PortfolioGrid({
                       {project.shortDescription}
                     </p>
 
-                    {/* Service tags */}
+                    {/* Service tags — enrichis selon la tech du projet, cliquables vers la sous-page la plus précise */}
                     <div className="mt-4 flex flex-wrap gap-1.5">
-                      {project.services.slice(0, 3).map((s) => (
-                        <span
-                          key={s}
-                          className="rounded-md px-2 py-0.5 text-xs"
-                          style={{
-                            border: "1px solid rgba(255,255,255,0.07)",
-                            color: "rgba(255,255,255,0.38)",
-                          }}
-                        >
-                          {s}
-                        </span>
-                      ))}
+                      {project.services.slice(0, 3).map((s) => {
+                        const tag = resolveServiceTag(s, project);
+                        if (tag.href) {
+                          return (
+                            <Link
+                              key={s}
+                              href={tag.href}
+                              aria-label={`Voir le service ${tag.label}`}
+                              className="rounded-md px-2 py-0.5 text-xs transition-all duration-200 hover:border-[rgba(73,143,109,0.40)] hover:text-[#498f6d]"
+                              style={{
+                                border: "1px solid rgba(255,255,255,0.10)",
+                                color: "rgba(255,255,255,0.50)",
+                              }}
+                            >
+                              {tag.label}
+                            </Link>
+                          );
+                        }
+                        return (
+                          <span
+                            key={s}
+                            className="rounded-md px-2 py-0.5 text-xs"
+                            style={{
+                              border: "1px solid rgba(255,255,255,0.07)",
+                              color: "rgba(255,255,255,0.38)",
+                            }}
+                          >
+                            {tag.label}
+                          </span>
+                        );
+                      })}
                     </div>
 
                     {/* Key result */}
@@ -222,7 +330,7 @@ export function PortfolioGrid({
                     <div className="mt-4 flex items-center gap-4">
                       <Link
                         href={`/realisations/${project.slug}/`}
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200 hover:text-[#498f6d]"
                         style={{ color: "rgba(255,255,255,0.55)" }}
                       >
                         Voir le projet
@@ -233,8 +341,8 @@ export function PortfolioGrid({
                           href={project.externalUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm transition-colors duration-200"
-                          style={{ color: "rgba(255,255,255,0.25)" }}
+                          className="inline-flex items-center gap-1.5 text-sm transition-colors duration-200 hover:text-white"
+                          style={{ color: "rgba(255,255,255,0.40)" }}
                         >
                           Visiter
                           <ExternalLink className="h-3 w-3" />

@@ -70,7 +70,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
   };
 
   return (
-    <div className="rounded-2xl border border-[#FFFFFF]/[0.1] bg-[#1A1A1A]/90 p-6">
+    <div className="rounded-2xl border border-[#FFFFFF]/[0.1] bg-[#1A1A1A]/90 p-4 sm:p-6">
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div

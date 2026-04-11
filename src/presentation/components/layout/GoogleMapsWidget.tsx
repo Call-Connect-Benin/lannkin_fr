@@ -10,7 +10,7 @@ export function GoogleMapsWidget({ variant = "dark" }: GoogleMapsWidgetProps) {
 
   return (
     <Link
-      href="https://www.google.com/maps/search/LANNKIN%20S.A"
+      href="https://maps.app.goo.gl/7CQ7sDqHJsbV7oZG7"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200"

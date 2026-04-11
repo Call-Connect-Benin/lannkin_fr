@@ -87,9 +87,9 @@ export default function DevisGratuitPage() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
 
             {/* Form — 2/3 */}
-            <div className="lg:col-span-2">
+            <div className="-mx-4 sm:mx-0 lg:col-span-2">
               <div
-                className="rounded-2xl p-6 lg:p-8"
+                className="rounded-2xl p-4 sm:p-6 lg:p-8"
                 style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
               >
                 <DevisForm />

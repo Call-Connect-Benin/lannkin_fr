@@ -66,19 +66,23 @@ export default function HomePage() {
 
             {/* Copie */}
             <div className="lg:col-span-7">
-              <div
-                className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              <a
+                href="https://maps.app.goo.gl/7CQ7sDqHJsbV7oZG7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 transition-colors hover:brightness-110"
                 style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
+                aria-label="Voir Lannkin sur Google Maps"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: "#498f6d" }} />
                   <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
                 </span>
                 <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>{HERO.badge}</span>
-              </div>
+              </a>
 
               <h1
-                className="mt-2 font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
+                className="mt-2 font-heading text-[2rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]"
                 style={{ color: "#FFFFFF" }}
               >
                 On fait grandir les{" "}
@@ -90,10 +94,10 @@ export default function HomePage() {
                 {HERO.subtitle}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-row flex-wrap gap-3 sm:gap-4">
                 <Link
                   href={HERO.cta.primary.href}
-                  className="inline-flex items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110 sm:px-7 sm:py-3.5"
                   style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
                 >
                   {HERO.cta.primary.label}
@@ -101,7 +105,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href={HERO.cta.secondary.href}
-                  className="inline-flex items-center gap-2 rounded-xl border px-7 py-3.5 text-sm font-medium transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3 text-sm font-medium transition-colors sm:px-7 sm:py-3.5"
                   style={{ borderColor: "rgba(255,255,255,0.18)", color: "rgba(255,255,255,0.75)" }}
                 >
                   {HERO.cta.secondary.label}
@@ -127,9 +131,9 @@ export default function HomePage() {
             </div>
 
             {/* Formulaire */}
-            <div className="lg:col-span-5">
+            <div className="-mx-4 sm:mx-0 lg:col-span-5">
               <div
-                className="rounded-2xl p-6 lg:p-8"
+                className="rounded-2xl p-4 sm:p-6 lg:p-8"
                 style={{ backgroundColor: "#141414", border: "1px solid rgba(255,255,255,0.10)" }}
               >
                 <LeadCaptureForm

@@ -117,7 +117,7 @@ const LOCAL_BUSINESS_JSONLD = {
     worstRating: "1",
   },
   sameAs: [
-    "https://www.google.com/maps/search/LANNKIN%20S.A",
+    "https://maps.app.goo.gl/7CQ7sDqHJsbV7oZG7",
     "https://www.facebook.com/lannkin",
     "https://www.instagram.com/lannkin",
     "https://www.linkedin.com/company/lannkin",
