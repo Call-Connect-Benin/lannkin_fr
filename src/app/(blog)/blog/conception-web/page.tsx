@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Conception Web | Lannkin",
+  title: "Blog Conception Web | Ekolink",
   description: "Articles et guides sur la conception web. Tendances, bonnes pratiques et technologies pour créer des sites performants.",
 };
 

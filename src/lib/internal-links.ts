@@ -791,9 +791,9 @@ const CROSS_COCON_LINKS: Record<string, InternalLink[]> = {
       type: "cross-cocon",
     },
     {
-      href: "/zone/agence-traffic-laval/",
-      label: "Agence Traffic à Laval",
-      anchor: "agence traffic Laval",
+      href: "/zone/agence-traffic-paris/",
+      label: "Agence Traffic à Paris",
+      anchor: "agence traffic Paris",
       type: "cross-cocon",
     },
   ],
@@ -968,20 +968,20 @@ const SERVICE_SECTORS: Partial<Record<ServiceSlug, string[]>> = {
 };
 
 // ============================================================
-// DEFAULT ZONES — Always link to Laval
+// DEFAULT ZONES — Always link to Paris
 // ============================================================
 
 const DEFAULT_ZONES: InternalLink[] = [
   {
-    href: "/zone/agence-web-laval/",
-    label: "Agence web à Laval",
-    anchor: "agence web Laval",
+    href: "/zone/agence-web-paris/",
+    label: "Agence web à Paris",
+    anchor: "agence web Paris",
     type: "zone",
   },
   {
-    href: "/zone/agence-marketing-laval/",
-    label: "Agence marketing à Laval",
-    anchor: "agence marketing Laval",
+    href: "/zone/agence-marketing-paris/",
+    label: "Agence marketing à Paris",
+    anchor: "agence marketing Paris",
     type: "zone",
   },
 ];
@@ -1006,7 +1006,7 @@ const CTA_LINKS: InternalLink[] = [
 ];
 
 // ============================================================
-// PAID MEDIA SERVICES — Link to /zone/agence-traffic-laval/
+// PAID MEDIA SERVICES — Link to /zone/agence-traffic-paris/
 // ============================================================
 
 const PAID_MEDIA_SERVICES: ServiceSlug[] = [
@@ -1195,12 +1195,12 @@ export function getInternalLinks(
     }
   }
 
-  // 7. Paid media → Traffic Laval
+  // 7. Paid media → Traffic Paris
   if (serviceSlug && PAID_MEDIA_SERVICES.includes(serviceSlug)) {
     addLink({
-      href: "/zone/agence-traffic-laval/",
-      label: "Agence Traffic à Laval",
-      anchor: "agence traffic Laval",
+      href: "/zone/agence-traffic-paris/",
+      label: "Agence Traffic à Paris",
+      anchor: "agence traffic Paris",
       type: "zone",
     });
   }

@@ -25,9 +25,9 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Target",
     image: "/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp",
     relatedServices: ["google-ads"],
-    metaTitle: "Blog Google Ads | Guides & Stratégies | Lannkin",
+    metaTitle: "Blog Google Ads | Guides & Stratégies | Ekolink",
     metaDescription:
-      "Articles et guides Google Ads par Lannkin. Stratégies Search, Display, Shopping, YouTube. Conseils d'optimisation et scripts anti-fraude.",
+      "Articles et guides Google Ads par Ekolink. Stratégies Search, Display, Shopping, YouTube. Conseils d'optimisation et scripts anti-fraude.",
     color: "#4285F4",
   },
   {
@@ -38,7 +38,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Facebook",
     image: "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
     relatedServices: ["facebook-ads", "tiktok-ads"],
-    metaTitle: "Blog Facebook Ads | Stratégies Meta | Lannkin",
+    metaTitle: "Blog Facebook Ads | Stratégies Meta | Ekolink",
     metaDescription:
       "Articles Facebook Ads et Instagram Ads. Stratégies de ciblage, optimisation créatifs, Pixel Meta et retargeting avancé.",
     color: "#1877F2",
@@ -51,10 +51,10 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Search",
     image: "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
     relatedServices: ["seo", "google-my-business"],
-    metaTitle: "Blog SEO | Référencement Naturel | Lannkin",
+    metaTitle: "Blog SEO | Référencement Naturel | Ekolink",
     metaDescription:
       "Articles SEO et référencement naturel. Guides backlinks, maillage interne, SEO local et technique. Améliorez votre positionnement Google.",
-    color: "#498f6d",
+    color: "#fff",
   },
   {
     slug: "conception-web",
@@ -64,7 +64,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Monitor",
     image: "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
     relatedServices: ["conception-web", "developpement-saas"],
-    metaTitle: "Blog Conception Web | Design & Développement | Lannkin",
+    metaTitle: "Blog Conception Web | Design & Développement | Ekolink",
     metaDescription:
       "Articles conception web, design UX/UI, WordPress, Shopify et Next.js. Tendances et bonnes pratiques développement web.",
     color: "#85353e",
@@ -77,7 +77,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Brain",
     image: "/images/rendu3D/rendu3d-orbite-planete-fond-rouge.webp",
     relatedServices: ["intelligence-artificielle", "vibe-coding"],
-    metaTitle: "Blog IA | Intelligence Artificielle pour PME | Lannkin",
+    metaTitle: "Blog IA | Intelligence Artificielle pour PME | Ekolink",
     metaDescription:
       "Articles sur l'IA pour les entreprises. Agents IA, chatbots, automatisation, RAG et prompt engineering. L'IA accessible aux PME.",
     color: "#FF6B6B",
@@ -90,7 +90,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "ShoppingCart",
     image: "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
     relatedServices: ["conception-web", "google-ads", "facebook-ads"],
-    metaTitle: "Blog E-commerce | Stratégies de Vente en Ligne | Lannkin",
+    metaTitle: "Blog E-commerce | Stratégies de Vente en Ligne | Ekolink",
     metaDescription:
       "Articles e-commerce, Shopify, WooCommerce. Optimisation conversions, Google Shopping et stratégies de croissance boutique en ligne.",
     color: "#FF9F43",
@@ -109,7 +109,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
       "snapchat-ads",
       "pinterest-ads",
     ],
-    metaTitle: "Blog Réseaux Sociaux | Stratégies Social Media | Lannkin",
+    metaTitle: "Blog Réseaux Sociaux | Stratégies Social Media | Ekolink",
     metaDescription:
       "Articles réseaux sociaux, TikTok, LinkedIn, Snapchat, Pinterest. Stratégies community management et croissance social media.",
     color: "#E91E63",
@@ -122,7 +122,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "MapPin",
     image: "/images/rendu3D/rendu3d-cube-vert-macro.webp",
     relatedServices: ["google-my-business", "seo"],
-    metaTitle: "Blog Google My Business | SEO Local | Lannkin",
+    metaTitle: "Blog Google My Business | SEO Local | Ekolink",
     metaDescription:
       "Articles Google My Business et SEO local. Optimisation fiche GMB, gestion avis, Google Maps et stratégie de visibilité locale.",
     color: "#34A853",
@@ -135,7 +135,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Palette",
     image: "/images/rendu3D/rendu3d-rouge-vert-dramatic.webp",
     relatedServices: ["graphisme"],
-    metaTitle: "Blog Graphisme | Branding & Identité Visuelle | Lannkin",
+    metaTitle: "Blog Graphisme | Branding & Identité Visuelle | Ekolink",
     metaDescription:
       "Articles graphisme, création de logo et identité visuelle. Tendances design, branding et communication visuelle pour entreprises.",
     color: "#9B59B6",
@@ -144,13 +144,13 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     slug: "marketing-digital",
     name: "Marketing Digital",
     description:
-      "Actualités et stratégies marketing digital. Growth hacking, email marketing, analytics, CRO et tendances du marché québécois.",
+      "Actualités et stratégies marketing digital. Growth hacking, email marketing, analytics, CRO et tendances du marché français.",
     icon: "TrendingUp",
     image: "/images/rendu3D/rendu3d-cubes-verts-logo-lk.webp",
     relatedServices: ["lead-generation", "google-ads", "seo"],
-    metaTitle: "Blog Marketing Digital | Stratégies & Tendances | Lannkin",
+    metaTitle: "Blog Marketing Digital | Stratégies & Tendances | Ekolink",
     metaDescription:
-      "Articles marketing digital, growth hacking, email marketing et analytics. Stratégies de croissance pour PME québécoises.",
+      "Articles marketing digital, growth hacking, email marketing et analytics. Stratégies de croissance pour PME françaises.",
     color: "#2ECC71",
   },
   {
@@ -161,7 +161,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Sparkles",
     image: "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp",
     relatedServices: ["vibe-coding", "conception-web"],
-    metaTitle: "Blog Vibe Coding | CMS IA & Développement | Lannkin",
+    metaTitle: "Blog Vibe Coding | CMS IA & Développement | Ekolink",
     metaDescription:
       "Articles vibe coding, Lovable, Bolt, Cursor, Claude Code. Tutoriels et comparatifs des outils de développement assisté par IA.",
     color: "#00D4FF",
@@ -174,7 +174,7 @@ export const BLOG_CATEGORIES: BlogCategoryData[] = [
     icon: "Building2",
     image: "/images/rendu3D/rendu3d-trio-cubes-flottants.webp",
     relatedServices: ["odoo"],
-    metaTitle: "Blog Odoo | ERP, CRM & E-commerce | Lannkin",
+    metaTitle: "Blog Odoo | ERP, CRM & E-commerce | Ekolink",
     metaDescription:
       "Articles Odoo, implantation ERP, CRM et e-commerce. Guides migration, personnalisation et bonnes pratiques Odoo pour PME.",
     color: "#714B67",

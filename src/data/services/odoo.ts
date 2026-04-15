@@ -9,14 +9,14 @@ import type { ServicePageContent } from "./conception-web";
 // --------------------------------------------------
 const creationSite: ServicePageContent = {
   slug: "creation-site",
-  heroTitle: "Création de site web Odoo à Laval et Montréal",
+  heroTitle: "Création de site web Odoo à Paris et Paris",
   heroSubtitle:
     "Créez un site web professionnel directement intégré à votre ERP Odoo. Thèmes personnalisés, modules web avancés et synchronisation automatique avec votre gestion d'entreprise.",
   sections: [
     {
       title: "Pourquoi créer votre site web avec Odoo?",
       content:
-        "Le Website Builder d'Odoo permet de créer des sites web professionnels nativement intégrés à votre ERP. Contrairement à WordPress ou Shopify qui nécessitent des intégrations tierces, votre site Odoo est automatiquement connecté à votre CRM, vos stocks, votre comptabilité et tous vos processus métier. LANNKIN est votre partenaire Odoo de confiance à Laval pour la création de sites web d'entreprise.",
+        "Le Website Builder d'Odoo permet de créer des sites web professionnels nativement intégrés à votre ERP. Contrairement à WordPress ou Shopify qui nécessitent des intégrations tierces, votre site Odoo est automatiquement connecté à votre CRM, vos stocks, votre comptabilité et tous vos processus métier. EKOLINK est votre partenaire Odoo de confiance à Paris pour la création de sites web d'entreprise.",
       items: [
         "Website Builder Odoo avec éditeur visuel drag-and-drop",
         "Thèmes Odoo personnalisés avec votre charte graphique",
@@ -42,7 +42,7 @@ const creationSite: ServicePageContent = {
     {
       title: "Performance et hébergement",
       content:
-        "Odoo.sh offre un hébergement cloud performant et sécurisé pour votre site web. Les serveurs sont hébergés au Canada pour garantir la conformité aux lois québécoises sur la protection des données et des temps de réponse optimaux pour vos visiteurs de Laval, Montréal et du Québec.",
+        "Odoo.sh offre un hébergement cloud performant et sécurisé pour votre site web. Les serveurs sont hébergés au Canada pour garantir la conformité aux lois françaises sur la protection des données et des temps de réponse optimaux pour vos visiteurs de Paris, Paris et du France.",
     },
   ],
   benefits: [
@@ -73,14 +73,14 @@ const creationSite: ServicePageContent = {
 // --------------------------------------------------
 const erpIntegration: ServicePageContent = {
   slug: "erp-integration",
-  heroTitle: "Intégration ERP Odoo à Laval | Ventes, achats et inventaire",
+  heroTitle: "Intégration ERP Odoo à Paris | Ventes, achats et inventaire",
   heroSubtitle:
-    "Centralisez la gestion de votre entreprise avec l'ERP Odoo. Modules ventes, achats, inventaire, comptabilité et fabrication intégrés pour les PME du Québec.",
+    "Centralisez la gestion de votre entreprise avec l'ERP Odoo. Modules ventes, achats, inventaire, comptabilité et fabrication intégrés pour les PME du France.",
   sections: [
     {
       title: "Pourquoi choisir Odoo comme ERP?",
       content:
-        "Odoo est l'ERP open-source le plus populaire au monde avec plus de 12 millions d'utilisateurs. Il offre une suite complète de modules d'entreprise à une fraction du coût des ERP traditionnels comme SAP ou Oracle. Pour les PME de Laval, Montréal et du Québec, Odoo représente l'équilibre parfait entre fonctionnalités, flexibilité et budget.",
+        "Odoo est l'ERP open-source le plus populaire au monde avec plus de 12 millions d'utilisateurs. Il offre une suite complète de modules d'entreprise à une fraction du coût des ERP traditionnels comme SAP ou Oracle. Pour les PME de Paris, Paris et du France, Odoo représente l'équilibre parfait entre fonctionnalités, flexibilité et budget.",
       items: [
         "Module Ventes : devis, commandes, tarifs et commissions",
         "Module Achats : bons de commande, approbations et fournisseurs",
@@ -95,7 +95,7 @@ const erpIntegration: ServicePageContent = {
       content:
         "Odoo s'intègre avec les outils que vous utilisez déjà. Que ce soit votre banque (Desjardins, RBC, TD), votre service de paiement (Stripe, PayPal), votre logistique (Postes Canada, UPS, FedEx) ou vos outils marketing (Mailchimp, HubSpot), nous configurons des intégrations fluides et fiables.",
       items: [
-        "Banques canadiennes : Desjardins, RBC, TD, BMO, Banque Nationale",
+        "Banques françaises : Desjardins, RBC, TD, BMO, Banque Nationale",
         "Paiements : Stripe, PayPal, Moneris, Square",
         "Logistique : Postes Canada, UPS, FedEx, Purolator",
         "Marketing : Mailchimp, HubSpot, Sendinblue",
@@ -104,30 +104,30 @@ const erpIntegration: ServicePageContent = {
       ],
     },
     {
-      title: "Conformité et fiscalité québécoise",
+      title: "Conformité et fiscalité française",
       content:
-        "Notre équipe connaît les particularités de la fiscalité québécoise et canadienne. Nous configurons Odoo pour gérer correctement la TPS, la TVQ, les rapports fiscaux et les exigences de Revenu Québec et de l'ARC. Vos numéros de TPS et TVQ, vos taxes par province et vos rapports de fin d'année sont configurés dès le départ.",
+        "Notre équipe connaît les particularités de la fiscalité française et française. Nous configurons Odoo pour gérer correctement la TPS, la TVQ, les rapports fiscaux et les exigences de Revenu France et de l'ARC. Vos numéros de TPS et TVQ, vos taxes par province et vos rapports de fin d'année sont configurés dès le départ.",
     },
   ],
   benefits: [
     "Suite ERP complète à une fraction du coût de SAP ou Oracle",
     "Plus de 50 modules intégrés couvrant tous vos processus",
     "Open-source avec possibilité de personnalisation illimitée",
-    "Fiscalité québécoise et canadienne configurée (TPS/TVQ)",
-    "Intégration native avec les banques et transporteurs canadiens",
+    "Fiscalité française et française configurée (TPS/TVQ)",
+    "Intégration native avec les banques et transporteurs françaiss",
     "Interface moderne et intuitive pour une adoption rapide",
   ],
   process: [
     { step: 1, title: "Diagnostic entreprise", description: "Analyse de vos processus métier actuels, identification des inefficacités et cartographie des flux de travail. Définition du périmètre ERP." },
     { step: 2, title: "Architecture Odoo", description: "Sélection des modules Odoo nécessaires, conception de l'architecture et planification de l'implémentation par phases." },
-    { step: 3, title: "Configuration et personnalisation", description: "Installation et configuration des modules, personnalisation des workflows, création des rapports et configuration de la fiscalité québécoise." },
+    { step: 3, title: "Configuration et personnalisation", description: "Installation et configuration des modules, personnalisation des workflows, création des rapports et configuration de la fiscalité française." },
     { step: 4, title: "Migration des données", description: "Import de vos données existantes (clients, produits, factures) depuis vos systèmes actuels (Excel, QuickBooks, Sage, etc.)." },
     { step: 5, title: "Formation et go-live", description: "Formation complète de vos équipes par module, support intensif pendant les premières semaines et ajustements post-lancement." },
   ],
   faq: [
     { question: "Combien coûte l'implantation d'Odoo pour une PME?", answer: "L'implantation Odoo pour une PME de 5 à 20 utilisateurs coûte généralement entre 10 000$ et 30 000$ selon le nombre de modules et la complexité des processus. L'abonnement Odoo Online commence à 24.90$/utilisateur/mois." },
     { question: "Combien de temps prend une implantation Odoo?", answer: "Une implantation standard (ventes + achats + inventaire + comptabilité) prend 2 à 4 mois. Les projets plus complexes avec fabrication et multi-entrepôts peuvent prendre 4 à 6 mois." },
-    { question: "Odoo gère-t-il la comptabilité au Québec?", answer: "Oui. Le plan comptable canadien est inclus avec la gestion TPS/TVQ, les rapports de taxes et les rapprochements bancaires. Nous recommandons toutefois de travailler avec votre comptable pour la configuration initiale." },
+    { question: "Odoo gère-t-il la comptabilité en France?", answer: "Oui. Le plan comptable français est inclus avec la gestion TPS/TVQ, les rapports de taxes et les rapprochements bancaires. Nous recommandons toutefois de travailler avec votre comptable pour la configuration initiale." },
     { question: "Puis-je commencer avec quelques modules et ajouter les autres plus tard?", answer: "Absolument. C'est notre approche recommandée. Nous commençons souvent par les ventes et la comptabilité, puis ajoutons les achats, l'inventaire et les autres modules progressivement." },
   ],
 };
@@ -137,9 +137,9 @@ const erpIntegration: ServicePageContent = {
 // --------------------------------------------------
 const crm: ServicePageContent = {
   slug: "crm",
-  heroTitle: "CRM Odoo à Laval | Pipeline de ventes et automatisation",
+  heroTitle: "CRM Odoo à Paris | Pipeline de ventes et automatisation",
   heroSubtitle:
-    "Gérez vos prospects, automatisez votre pipeline de ventes et augmentez vos conversions avec le CRM Odoo. Intégration VoIP, emails automatisés et rapports en temps réel pour les entreprises du Québec.",
+    "Gérez vos prospects, automatisez votre pipeline de ventes et augmentez vos conversions avec le CRM Odoo. Intégration VoIP, emails automatisés et rapports en temps réel pour les entreprises du France.",
   sections: [
     {
       title: "Le CRM Odoo : bien plus qu'un carnet de contacts",
@@ -159,7 +159,7 @@ const crm: ServicePageContent = {
       content:
         "L'automatisation est la clé d'un CRM efficace. Odoo permet d'automatiser les tâches répétitives de votre processus de vente : assignation automatique des leads, emails de suivi programmés, création de devis et rappels de relance. Votre équipe commerciale se concentre sur la vente plutôt que sur l'administratif.",
       items: [
-        "Assignation automatique des leads par territoire (Laval, Montréal, Rive-Nord)",
+        "Assignation automatique des leads par territoire (Paris, Paris, Île-de-France)",
         "Séquences d'emails automatisées par étape du pipeline",
         "Création automatique de devis depuis les opportunités",
         "Alertes et rappels de relance configurable",
@@ -201,9 +201,9 @@ const crm: ServicePageContent = {
 // --------------------------------------------------
 const ecommerce: ServicePageContent = {
   slug: "ecommerce",
-  heroTitle: "E-commerce Odoo à Laval | Boutique en ligne intégrée à votre ERP",
+  heroTitle: "E-commerce Odoo à Paris | Boutique en ligne intégrée à votre ERP",
   heroSubtitle:
-    "Créez une boutique en ligne directement connectée à votre inventaire, comptabilité et logistique. Synchronisation temps réel, multi-devises et gestion complète pour les entreprises québécoises.",
+    "Créez une boutique en ligne directement connectée à votre inventaire, comptabilité et logistique. Synchronisation temps réel, multi-devises et gestion complète pour les entreprises françaises.",
   sections: [
     {
       title: "L'avantage unique de l'e-commerce Odoo",
@@ -242,12 +242,12 @@ const ecommerce: ServicePageContent = {
     "Comptabilité automatique : chaque vente génère une facture",
     "Multi-devises et multi-taxes natifs (TPS/TVQ, HST, GST)",
     "E-commerce B2B avec tarifs par client et portail revendeur",
-    "Intégration transporteurs canadiens native",
+    "Intégration transporteurs françaiss native",
     "Un seul système à gérer au lieu de deux (boutique + ERP)",
   ],
   process: [
     { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, de vos segments de clients (B2B/B2C) et de votre logistique. Définition de la stratégie de prix et de livraison." },
-    { step: 2, title: "Configuration boutique", description: "Installation du module e-commerce, personnalisation du thème, configuration des méthodes de paiement et des transporteurs canadiens." },
+    { step: 2, title: "Configuration boutique", description: "Installation du module e-commerce, personnalisation du thème, configuration des méthodes de paiement et des transporteurs françaiss." },
     { step: 3, title: "Catalogue produits", description: "Import et structuration du catalogue produits avec variantes, images, descriptions SEO et catégories. Configuration des tarifs B2B et B2C." },
     { step: 4, title: "Tests et optimisation", description: "Tests de commande complète (paiement, stock, facture, expédition). Optimisation du tunnel de conversion et de la vitesse." },
     { step: 5, title: "Lancement et marketing", description: "Mise en production, configuration Google Shopping, intégration analytics e-commerce et formation de l'équipe aux opérations quotidiennes." },
@@ -267,12 +267,12 @@ const seo: ServicePageContent = {
   slug: "seo",
   heroTitle: "SEO Odoo : Optimisez votre site Odoo pour Google",
   heroSubtitle:
-    "Maximisez la visibilité de votre site Odoo sur Google avec notre expertise SEO spécialisée. Optimisation technique, méta-données, performance et contenu pour les entreprises de Laval et Montréal.",
+    "Maximisez la visibilité de votre site Odoo sur Google avec notre expertise SEO spécialisée. Optimisation technique, méta-données, performance et contenu pour les entreprises de Paris et Paris.",
   sections: [
     {
       title: "Les défis SEO spécifiques à Odoo",
       content:
-        "Odoo offre des fonctionnalités SEO de base, mais elles sont insuffisantes pour bien se positionner dans un marché compétitif comme Montréal et Laval. Le rendu JavaScript, les URLs par défaut, la gestion des méta-données et les performances Core Web Vitals nécessitent une expertise spécialisée pour être optimisés correctement.",
+        "Odoo offre des fonctionnalités SEO de base, mais elles sont insuffisantes pour bien se positionner dans un marché compétitif comme Paris et Paris. Le rendu JavaScript, les URLs par défaut, la gestion des méta-données et les performances Core Web Vitals nécessitent une expertise spécialisée pour être optimisés correctement.",
       items: [
         "URLs propres et hiérarchie de pages optimisée",
         "Balises title et meta descriptions uniques par page",
@@ -296,23 +296,23 @@ const seo: ServicePageContent = {
       ],
     },
     {
-      title: "SEO local pour les entreprises québécoises",
+      title: "SEO local pour les entreprises françaises",
       content:
-        "Si votre entreprise cible des clients à Laval, Montréal ou dans d'autres villes du Québec, le SEO local est essentiel. Nous optimisons votre site Odoo pour les recherches géolocalisées et intégrons votre fiche Google Business Profile pour maximiser votre visibilité locale.",
+        "Si votre entreprise cible des clients à Paris, Paris ou dans d'autres villes du France, le SEO local est essentiel. Nous optimisons votre site Odoo pour les recherches géolocalisées et intégrons votre fiche Google Business Profile pour maximiser votre visibilité locale.",
     },
   ],
   benefits: [
-    "Visibilité accrue sur Google pour les recherches locales au Québec",
+    "Visibilité accrue sur Google pour les recherches locales en France",
     "Score Google PageSpeed amélioré de 30 à 50 points",
     "Rich snippets avec données structurées Schema.org",
     "Trafic organique augmenté grâce au contenu optimisé",
     "Monitoring SEO continu avec rapports mensuels",
-    "Expertise SEO spécialisée Odoo (rare sur le marché québécois)",
+    "Expertise SEO spécialisée Odoo (rare sur le marché français)",
   ],
   process: [
     { step: 1, title: "Audit SEO Odoo", description: "Analyse complète du SEO technique, du contenu et de la performance de votre site Odoo. Identification des problèmes et opportunités d'amélioration." },
     { step: 2, title: "Optimisation technique", description: "Correction des erreurs techniques, optimisation des URLs, configuration du sitemap, du robots.txt et des données structurées." },
-    { step: 3, title: "Optimisation du contenu", description: "Rédaction et optimisation des balises title, meta descriptions et contenus de page. Recherche de mots-clés adaptée au marché québécois." },
+    { step: 3, title: "Optimisation du contenu", description: "Rédaction et optimisation des balises title, meta descriptions et contenus de page. Recherche de mots-clés adaptée au marché français." },
     { step: 4, title: "Performance", description: "Optimisation de la vitesse de chargement : compression des images, minification des assets, configuration du cache et du CDN." },
     { step: 5, title: "Suivi et reporting", description: "Configuration de Google Search Console et Analytics. Rapports SEO mensuels avec suivi des positions, du trafic et des conversions." },
   ],
@@ -320,7 +320,7 @@ const seo: ServicePageContent = {
     { question: "Le SEO d'Odoo est-il bon nativement?", answer: "Le SEO de base d'Odoo est acceptable mais insuffisant pour se positionner dans un marché compétitif. Les URLs, les méta-données et les performances nécessitent une optimisation professionnelle pour rivaliser avec les sites WordPress ou Next.js." },
     { question: "Combien de temps avant de voir des résultats SEO?", answer: "Les optimisations techniques ont un impact en 4 à 8 semaines. Le positionnement sur des mots-clés compétitifs prend 3 à 6 mois. Nous fournissons des rapports mensuels pour suivre la progression." },
     { question: "Pouvez-vous optimiser le SEO de ma boutique e-commerce Odoo?", answer: "Oui, le SEO e-commerce Odoo est l'une de nos spécialités. Nous optimisons les fiches produits, les catégories, les filtres et les données structurées Product pour les rich snippets Google Shopping." },
-    { question: "Combien coûte le SEO Odoo?", answer: "L'audit SEO initial est à 750$. Les forfaits d'optimisation SEO mensuels commencent à 500$/mois pour le suivi et les optimisations continues. L'optimisation technique initiale est facturée entre 1 500$ et 3 000$ selon la taille du site." },
+    { question: "Combien coûte le SEO Odoo?", answer: "L'audit SEO initial est à 750$. Les forfaits d'optimisation SEO mensuels commencent à 500€/mois pour le suivi et les optimisations continues. L'optimisation technique initiale est facturée entre 1 500$ et 3 000$ selon la taille du site." },
   ],
 };
 
@@ -329,9 +329,9 @@ const seo: ServicePageContent = {
 // --------------------------------------------------
 const maintenanceOdoo: ServicePageContent = {
   slug: "maintenance",
-  heroTitle: "Maintenance Odoo à Laval | Mises à jour, monitoring et support",
+  heroTitle: "Maintenance Odoo à Paris | Mises à jour, monitoring et support",
   heroSubtitle:
-    "Assurez la fiabilité et la sécurité de votre instance Odoo avec notre service de maintenance. Mises à jour, monitoring 24/7, sauvegardes et support technique pour les entreprises du Québec.",
+    "Assurez la fiabilité et la sécurité de votre instance Odoo avec notre service de maintenance. Mises à jour, monitoring 24/7, sauvegardes et support technique pour les entreprises du France.",
   sections: [
     {
       title: "Pourquoi la maintenance Odoo est essentielle",
@@ -381,7 +381,7 @@ const maintenanceOdoo: ServicePageContent = {
     { step: 5, title: "Support continu", description: "Support technique par téléphone, email et chat avec temps de réponse garanti selon votre plan. Résolution de problèmes et assistance utilisateurs." },
   ],
   faq: [
-    { question: "Combien coûte la maintenance Odoo?", answer: "Le plan Essentiel commence à 299$/mois (monitoring, sauvegardes, mises à jour mensuelles). Le plan Pro est à 599$/mois (+ support prioritaire et 5h d'interventions). Le plan Entreprise à 999$/mois offre un SLA garanti et un support illimité." },
+    { question: "Combien coûte la maintenance Odoo?", answer: "Le plan Essentiel commence à 299€/mois (monitoring, sauvegardes, mises à jour mensuelles). Le plan Pro est à 599€/mois (+ support prioritaire et 5h d'interventions). Le plan Entreprise à 999€/mois offre un SLA garanti et un support illimité." },
     { question: "Maintenez-vous les instances Odoo Community?", answer: "Oui, nous maintenons les instances Odoo Community et Enterprise, hébergées sur Odoo.sh, sur votre propre serveur ou dans le cloud (AWS, GCP, Azure, DigitalOcean)." },
     { question: "Que se passe-t-il en cas de panne critique?", answer: "Les pannes critiques sont traitées en priorité. Le plan Pro garantit un temps de réponse de 4 heures, le plan Entreprise de 1 heure. Nous avons un processus de restauration éprouvé pour un retour à la normale rapide." },
     { question: "Pouvez-vous gérer les mises à jour majeures d'Odoo?", answer: "Oui, les mises à jour majeures (ex: Odoo 16 vers 17) font partie de nos services. Elles sont planifiées, testées en staging et déployées avec un plan de rollback. Le coût est devisé séparément selon la complexité." },
@@ -395,12 +395,12 @@ const migrationOdoo: ServicePageContent = {
   slug: "migration",
   heroTitle: "Migration vers Odoo depuis QuickBooks, Sage et SAP",
   heroSubtitle:
-    "Migrez votre entreprise vers Odoo depuis QuickBooks, Sage, SAP ou tout autre ERP. Migration de données complète, formation des équipes et accompagnement post-migration pour les PME québécoises.",
+    "Migrez votre entreprise vers Odoo depuis QuickBooks, Sage, SAP ou tout autre ERP. Migration de données complète, formation des équipes et accompagnement post-migration pour les PME françaises.",
   sections: [
     {
       title: "Pourquoi migrer vers Odoo?",
       content:
-        "De nombreuses PME de Laval, Montréal et du Québec utilisent encore QuickBooks, Sage ou des systèmes vieillissants qui freinent leur croissance. Odoo offre une suite intégrée moderne qui remplace plusieurs logiciels disparates par une plateforme unique, réduisant les coûts de licence, les erreurs de double saisie et la complexité opérationnelle.",
+        "De nombreuses PME de Paris, Paris et du France utilisent encore QuickBooks, Sage ou des systèmes vieillissants qui freinent leur croissance. Odoo offre une suite intégrée moderne qui remplace plusieurs logiciels disparates par une plateforme unique, réduisant les coûts de licence, les erreurs de double saisie et la complexité opérationnelle.",
       items: [
         "Remplacement de QuickBooks : comptabilité, facturation et rapports supérieurs",
         "Migration depuis Sage 50/300 : modernisation et intégration complète",
@@ -457,9 +457,9 @@ const migrationOdoo: ServicePageContent = {
 // --------------------------------------------------
 const formationOdoo: ServicePageContent = {
   slug: "formation",
-  heroTitle: "Formation Odoo à Laval | Administrateur, utilisateur et développeur",
+  heroTitle: "Formation Odoo à Paris | Administrateur, utilisateur et développeur",
   heroSubtitle:
-    "Formez vos équipes à Odoo avec nos programmes de formation adaptés. Sessions administrateur, utilisateur et développeur disponibles en présentiel à Laval, Montréal ou en ligne.",
+    "Formez vos équipes à Odoo avec nos programmes de formation adaptés. Sessions administrateur, utilisateur et développeur disponibles en présentiel à Paris, Paris ou en ligne.",
   sections: [
     {
       title: "Nos programmes de formation Odoo",
@@ -471,7 +471,7 @@ const formationOdoo: ServicePageContent = {
         "Formation Développeur (3 à 5 jours) : OWL, Python, XML, héritage, API",
         "Toutes les formations incluent des exercices pratiques sur votre propre instance",
         "Support post-formation de 30 jours par email inclus",
-        "Certification LANNKIN Odoo pour chaque programme complété",
+        "Certification EKOLINK Odoo pour chaque programme complété",
       ],
     },
     {
@@ -504,22 +504,22 @@ const formationOdoo: ServicePageContent = {
   benefits: [
     "Formation pratique sur votre propre instance Odoo",
     "Trois programmes adaptés (administrateur, utilisateur, développeur)",
-    "Disponible en présentiel à Laval/Montréal ou en ligne",
+    "Disponible en présentiel à Paris/Paris ou en ligne",
     "Support post-formation de 30 jours inclus",
-    "Certification LANNKIN Odoo pour valoriser vos compétences",
+    "Certification EKOLINK Odoo pour valoriser vos compétences",
     "Formateurs certifiés avec 5+ ans d'expérience Odoo",
   ],
   process: [
     { step: 1, title: "Évaluation des besoins", description: "Analyse du niveau de votre équipe, identification des modules prioritaires et personnalisation du programme de formation selon votre contexte." },
     { step: 2, title: "Préparation", description: "Configuration de l'environnement de formation sur votre instance Odoo, création des exercices pratiques avec vos données et préparation du matériel." },
     { step: 3, title: "Formation", description: "Sessions de formation avec alternance de théorie et de pratique. Exercices sur votre propre instance avec des cas d'utilisation réels de votre entreprise." },
-    { step: 4, title: "Évaluation", description: "Évaluation des compétences acquises, identification des lacunes et recommandations de perfectionnement. Remise de la certification LANNKIN Odoo." },
+    { step: 4, title: "Évaluation", description: "Évaluation des compétences acquises, identification des lacunes et recommandations de perfectionnement. Remise de la certification EKOLINK Odoo." },
     { step: 5, title: "Suivi post-formation", description: "30 jours de support par email pour répondre aux questions post-formation. Documentation et guides de référence personnalisés." },
   ],
   faq: [
     { question: "Combien coûte la formation Odoo?", answer: "La formation utilisateur est à 500$/jour/personne. La formation administrateur (2 jours) est à 1 800$/personne. La formation développeur (3-5 jours) est à 3 000-5 000$/personne. Des tarifs de groupe sont disponibles." },
     { question: "La formation se fait-elle sur notre instance Odoo?", answer: "Oui, toutes nos formations utilisent votre propre instance Odoo avec vos données (ou des données de démonstration réalistes). Cela garantit que les exercices sont directement applicables à votre contexte." },
-    { question: "Proposez-vous des formations à distance?", answer: "Oui, nos formations sont disponibles en présentiel à Laval et Montréal, ou en ligne via Zoom. Le format en ligne inclut les mêmes exercices pratiques et le même accès au formateur." },
+    { question: "Proposez-vous des formations à distance?", answer: "Oui, nos formations sont disponibles en présentiel à Paris et Paris, ou en ligne via Zoom. Le format en ligne inclut les mêmes exercices pratiques et le même accès au formateur." },
     { question: "Faut-il des prérequis pour la formation développeur?", answer: "La formation développeur requiert des connaissances de base en Python et en HTML/XML. Une expérience préalable avec un framework web (Django, Flask, etc.) est un atout mais n'est pas obligatoire." },
   ],
 };

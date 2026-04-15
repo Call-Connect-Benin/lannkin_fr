@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Boutique E-commerce Laval & Québec | Portfolio Lannkin",
+  title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
   description:
-    "Portfolio Lannkin : boutiques en ligne pour commerces locaux québécois. Shopify, WooCommerce, vente en ligne locale — SEO e-commerce et Google Shopping.",
+    "Portfolio Ekolink : boutiques en ligne pour commerces locaux français. Shopify, WooCommerce, vente en ligne locale — SEO e-commerce et Google Shopping.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/ecommerce-local/",
+    canonical: "https://ekolink.fr/realisations/ecommerce-local/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsEcommerceLocalPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Boutiques en ligne — Commerce local"
-        description="Lannkin conçoit des boutiques en ligne performantes pour les commerces locaux québécois : Shopify, WooCommerce, vente locale et livraison en région. SEO e-commerce et intégration Google Shopping inclus."
+        description="Ekolink conçoit des boutiques en ligne performantes pour les commerces locaux français : Shopify, WooCommerce, vente locale et livraison en région. SEO e-commerce et intégration Google Shopping inclus."
         stats={[
           { value: `${count} projets`, label: "e-commerce locaux" },
           { value: "+420 %", label: "de revenus (client réel)" },
@@ -56,14 +56,14 @@ export default function RealisationsEcommerceLocalPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Boutique en ligne pour commerce local au Québec
+              Boutique en ligne pour commerce local en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Vendre en ligne n&apos;est plus réservé aux grandes marques. Lannkin aide les commerces
-              locaux québécois à lancer leur boutique en ligne avec Shopify ou WooCommerce : catalogue
+              Vendre en ligne n&apos;est plus réservé aux grandes marques. Ekolink aide les commerces
+              locaux français à lancer leur boutique en ligne avec Shopify ou WooCommerce : catalogue
               produits, paiement sécurisé, livraison locale et intégration Google Shopping pour
               apparaître dans les résultats d&apos;achat. Nous accompagnons les petits et moyens
-              commerces à travers Laval, Montréal et partout au Québec.
+              commerces à travers Paris, Paris et partout en France.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link

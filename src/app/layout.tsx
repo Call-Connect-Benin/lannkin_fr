@@ -30,41 +30,41 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lannkin.ca"),
+  metadataBase: new URL("https://ekolink.fr"),
   title: {
-    default: "Lannkin | Agence Marketing Digital & Développement Web à Laval",
-    template: "%s | Lannkin",
+    default: "Ekolink | Agence Marketing Digital & Développement Web à Paris",
+    template: "%s | Ekolink",
   },
   description:
-    "Agence marketing digital et développement web à Laval, Québec. "
+    "Agence marketing digital et développement web à Paris, France. "
     + "Google Ads, SEO, Facebook Ads, conception web, IA, 3D. "
     + "+10 ans d'expérience, certifié Google Partner.",
   keywords: [
-    "agence marketing digital laval",
-    "développement web laval",
-    "google ads laval",
-    "seo laval",
-    "agence web montréal",
-    "marketing digital québec",
+    "agence marketing digital paris",
+    "développement web paris",
+    "google ads paris",
+    "seo paris",
+    "agence web paris",
+    "marketing digital france",
   ],
-  authors: [{ name: "Lannkin S.A." }],
-  creator: "Lannkin S.A.",
-  publisher: "Lannkin S.A.",
+  authors: [{ name: "Ekolink S.A.S." }],
+  creator: "Ekolink S.A.S.",
+  publisher: "Ekolink S.A.S.",
   openGraph: {
     type: "website",
     locale: "fr_CA",
-    url: "https://lannkin.ca",
-    siteName: "Lannkin",
-    title: "Lannkin | Agence Marketing Digital & Développement Web à Laval",
+    url: "https://ekolink.fr",
+    siteName: "Ekolink",
+    title: "Ekolink | Agence Marketing Digital & Développement Web à Paris",
     description:
-      "Agence marketing digital et développement web à Laval, Québec. "
+      "Agence marketing digital et développement web à Paris, France. "
       + "Google Ads, SEO, Facebook Ads, conception web, IA, 3D.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lannkin | Agence Marketing Digital & Développement Web",
+    title: "Ekolink | Agence Marketing Digital & Développement Web",
     description:
-      "Agence marketing digital et développement web à Laval, Québec.",
+      "Agence marketing digital et développement web à Paris, France.",
   },
   robots: {
     index: true,
@@ -78,36 +78,38 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/logo-lannkin-2026.svg",
-    apple: "/images/logo-lannkin-2026.svg",
+    icon: "/images/logo-ekolink-2026.svg",
+    apple: "/images/logo-ekolink-2026.svg",
   },
   alternates: {
-    canonical: "https://lannkin.ca",
+    canonical: "https://ekolink.fr",
   },
 };
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Lannkin S.A.",
-  alternateName: "Agence web Lannkin",
-  url: "https://lannkin.ca",
-  logo: "https://lannkin.ca/images/logo-lannkin-2026.svg",
-  image: "https://lannkin.ca/images/logo-lannkin-2026.svg",
+  name: "Ekolink S.A.S.",
+  alternateName: "Agence web Ekolink",
+  url: "https://ekolink.fr",
+  logo: "https://ekolink.fr/images/logo-ekolink-2026.svg",
+  image: "https://ekolink.fr/images/logo-ekolink-2026.svg",
   description:
-    "Agence marketing digital et développement web à Laval, Québec. Google Ads, SEO, Facebook Ads, conception web, IA et 3D.",
+    "Agence marketing digital et développement web à Paris, France. Google Ads, SEO, Facebook Ads, conception web, IA et 3D.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Laval",
-    addressRegion: "QC",
-    addressCountry: "CA",
+    addressLocality: "Paris",
+    addressRegion: "Île-de-France",
+    addressCountry: "FR",
+    streetAddress: "7 Rue Vulpian",
+    postalCode: "75013",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 45.5733,
-    longitude: -73.6921,
+    latitude: 48.8278,
+    longitude: 2.3468,
   },
-  telephone: "+1-438-944-6129",
+  telephone: "+33-1-00-00-00-00",
   priceRange: "$$",
   aggregateRating: {
     "@type": "AggregateRating",
@@ -117,10 +119,10 @@ const LOCAL_BUSINESS_JSONLD = {
     worstRating: "1",
   },
   sameAs: [
-    "https://maps.app.goo.gl/7CQ7sDqHJsbV7oZG7",
-    "https://www.facebook.com/lannkin",
-    "https://www.instagram.com/lannkin",
-    "https://www.linkedin.com/company/lannkin",
+    "https://www.google.com/maps/search/?api=1&query=7+Rue+Vulpian+75013+Paris",
+    "https://www.facebook.com/ekolink",
+    "https://www.instagram.com/ekolink",
+    "https://www.linkedin.com/company/ekolink",
   ],
 };
 
@@ -131,7 +133,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="fr-CA"
+      lang="fr-FR"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >

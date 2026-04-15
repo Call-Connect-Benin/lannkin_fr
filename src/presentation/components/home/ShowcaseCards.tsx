@@ -123,7 +123,7 @@ function MarketingVisual() {
   return (
     <div
       className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5"
-      style={{ background: "linear-gradient(145deg, #070d16 0%, #0d1b2a 100%)" }}
+      style={{ background: "linear-gradient(145deg, #f7f5f0 0%, #ede9e1 100%)" }}
     >
       {/* Platform header row */}
       <div className="mb-1 flex items-center gap-2">
@@ -134,14 +134,14 @@ function MarketingVisual() {
           <path fill="#FBBC05" d="M10.9 27.6A14.8 14.8 0 0 1 10.9 20.4V14.8H3.6A22 22 0 0 0 2 24c0 3.5.8 6.8 2.3 9.7l7.6-6.1z" />
           <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.6-6.6C35.2 2.5 30 0 24 0 15 0 7.3 4.9 3.6 12.2l7.3 5.6C12.8 12.6 17.9 9.5 24 9.5z"/>
         </svg>
-        <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>·</span>
+        <span className="text-xs font-medium" style={{ color: "rgba(45,45,45,0.4)" }}>·</span>
         {/* Meta M */}
         <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
           <path fill="#0866FF" d="M6.2 30.8c0 3.8 2.4 6.2 6.2 6.2 1.8 0 3.3-.5 4.5-1.6L24 28.6l7.1 6.8c1.2 1.1 2.7 1.6 4.5 1.6 3.8 0 6.2-2.4 6.2-6.2 0-1.9-.7-3.6-2-4.9L24 11.4 8 25.9c-1.3 1.3-2 3-2 4.9z"/>
         </svg>
-        <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>·</span>
+        <span className="text-xs font-medium" style={{ color: "rgba(45,45,45,0.4)" }}>·</span>
         {/* SEO text */}
-        <span className="rounded px-1.5 py-0.5 text-[10px] font-bold" style={{ backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d" }}>SEO</span>
+        <span className="rounded px-1.5 py-0.5 text-[10px] font-bold" style={{ backgroundColor: "rgba(73,143,109,0.15)", color: "#498f6d" }}>SEO</span>
       </div>
 
       {/* Metric cards */}
@@ -150,19 +150,19 @@ function MarketingVisual() {
           key={m.platform}
           className="w-full max-w-[220px] rounded-xl px-4 py-3"
           style={{
-            backgroundColor: "rgba(255,255,255,0.04)",
-            border: `1px solid ${m.color}40`,
+            backgroundColor: "#ffffff",
+            border: `1px solid ${m.color}30`,
           }}
           animate={{ y: [0, -(5 + i * 3), 0] }}
           transition={{ duration: 4 + i * 1.2, repeat: Infinity, ease: "easeInOut" }}
         >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] font-medium uppercase tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>
+              <p className="text-[10px] font-medium uppercase tracking-wide" style={{ color: "rgba(45,45,45,0.5)" }}>
                 {m.platform}
               </p>
-              <p className="font-heading text-xl font-bold text-white leading-tight">{m.value}</p>
-              <p className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>{m.metric}</p>
+              <p className="font-heading text-xl font-bold text-[#2d2d2d] leading-tight">{m.value}</p>
+              <p className="text-[10px]" style={{ color: "rgba(45,45,45,0.45)" }}>{m.metric}</p>
             </div>
             <span
               className="rounded-full px-2 py-1 text-xs font-semibold"
@@ -184,20 +184,21 @@ function StatsCard() {
       <motion.div
         className="rounded-xl p-5 max-w-[260px]"
         style={{
-          backgroundColor: "rgba(255,255,255,0.06)",
-          border: "1px solid rgba(255,255,255,0.10)",
+          backgroundColor: "#ffffff",
+          border: "1px solid rgba(45,45,45,0.10)",
+          boxShadow: "0 4px 12px rgba(45,45,45,0.04)",
         }}
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <p
           className="text-xs font-medium pb-2 mb-3"
-          style={{ color: "rgba(255,255,255,0.40)", borderBottom: "1px dashed rgba(255,255,255,0.10)" }}
+          style={{ color: "rgba(45,45,45,0.55)", borderBottom: "1px dashed rgba(45,45,45,0.15)" }}
         >
           Résultats clients
         </p>
-        <p className="font-heading text-3xl font-bold text-white">+1 000</p>
-        <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>
+        <p className="font-heading text-3xl font-bold text-[#2d2d2d]">+1 000</p>
+        <p className="text-sm mt-1" style={{ color: "rgba(45,45,45,0.55)" }}>
           projets livrés depuis 2015
         </p>
       </motion.div>
@@ -208,11 +209,11 @@ function StatsCard() {
           <motion.div
             key={stat.label}
             className="flex items-center justify-between rounded-lg px-4 py-2"
-            style={{ backgroundColor: "rgba(73,143,109,0.08)", border: "1px solid rgba(73,143,109,0.15)" }}
+            style={{ backgroundColor: "#ffffff", border: "1px solid rgba(73,143,109,0.25)" }}
             animate={{ y: [0, i === 1 ? -12 : -8, 0] }}
             transition={{ duration: FLOAT_VARIANTS[i]?.duration ?? 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <span className="text-sm text-white/70">{stat.label}</span>
+            <span className="text-sm text-[#2d2d2d]/75">{stat.label}</span>
             <span className="font-heading font-bold" style={{ color: "#498f6d" }}>{stat.value}</span>
           </motion.div>
         ))}
@@ -223,23 +224,23 @@ function StatsCard() {
 
 const CARDS = [
   {
-    title: "Marketing Digital",
+    title: "Acquisition digitale",
     description:
-      "Google Ads, SEO, réseaux sociaux — des stratégies data-driven qui génèrent du trafic qualifié et maximisent votre retour sur investissement.",
+      "Google Ads, référencement, réseaux sociaux : des stratégies pilotées par la donnée pour attirer un trafic qualifié et maximiser votre rentabilité.",
     href: "/services/",
     type: "video" as const,
   },
   {
-    title: "Sites clients",
+    title: "Réalisations sur-mesure",
     description:
-      "Des réalisations sur mesure pour des entreprises de tous secteurs. Chaque site est conçu pour performer et générer des résultats concrets.",
+      "Des sites bâtis au cas par cas, adaptés à chaque secteur. Chaque projet est pensé pour convertir et faire croître votre activité.",
     href: "/realisations/",
     type: "phone" as const,
   },
   {
-    title: "Résultats mesurables",
+    title: "Performance mesurée",
     description:
-      "Google Ads, SEO, réseaux sociaux — des stratégies qui génèrent un ROI concret. +1 000 projets livrés depuis 2015.",
+      "Google Ads, SEO, social media : chaque action se traduit en chiffres. Plus de 1 000 projets livrés depuis 2015.",
     href: "/tarifs/",
     type: "stats" as const,
   },
@@ -252,10 +253,10 @@ export default function ShowcaseCards() {
         {/* Section header */}
         <div className="mb-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#498f6d" }}>
-            Ce qu&apos;on fait
+            Notre terrain de jeu
           </p>
-          <h2 className="font-heading mt-2 text-3xl font-bold text-white lg:text-4xl">
-            Des résultats concrets pour votre entreprise
+          <h2 className="font-heading mt-2 text-3xl font-bold text-[#2d2d2d] lg:text-4xl">
+            Un impact tangible sur votre activité
           </h2>
         </div>
 
@@ -270,29 +271,29 @@ export default function ShowcaseCards() {
             >
               <Link
                 href={card.href}
-                className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(73,143,109,0.08)]"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(73,143,109,0.12)]"
+                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
               >
                 {/* Visual area */}
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden" style={{ backgroundColor: "#f7f5f0" }}>
                   {card.type === "video" && <MarketingVisual />}
                   {card.type === "phone" && <PhoneCarousel />}
                   {card.type === "stats" && <StatsCard />}
                   {/* Inner shadow for depth */}
-                  <div className="pointer-events-none absolute inset-0 rounded-t-2xl shadow-[0px_1px_0px_0px_rgba(255,255,255,0.05)_inset]" />
+                  <div className="pointer-events-none absolute inset-0 rounded-t-2xl shadow-[0px_1px_0px_0px_rgba(45,45,45,0.05)_inset]" />
                 </div>
 
                 {/* Text area */}
                 <div className="p-5 lg:p-6">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-heading text-lg font-bold text-white transition-colors group-hover:text-[#498f6d]">
+                    <h3 className="font-heading text-lg font-bold text-[#2d2d2d] transition-colors group-hover:text-[#498f6d]">
                       {card.title}
                     </h3>
                     <ArrowRight
-                      className="h-4 w-4 text-white/50 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#498f6d]"
+                      className="h-4 w-4 text-[#2d2d2d]/50 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#498f6d]"
                     />
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.7)" }}>
                     {card.description}
                   </p>
                 </div>

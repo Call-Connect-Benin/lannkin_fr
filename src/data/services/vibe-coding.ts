@@ -9,14 +9,14 @@ import type { ServicePageContent } from "./conception-web";
 // --------------------------------------------------
 const lovable: ServicePageContent = {
   slug: "lovable",
-  heroTitle: "Lovable : Créez votre site web avec l'IA à Laval",
+  heroTitle: "Lovable : Créez votre site web avec l'IA à Paris",
   heroSubtitle:
-    "Lovable transforme vos idées en sites web fonctionnels grâce à l'intelligence artificielle. Prototypage ultra-rapide, itérations instantanées et déploiement en quelques minutes pour les entreprises du Québec.",
+    "Lovable transforme vos idées en sites web fonctionnels grâce à l'intelligence artificielle. Prototypage ultra-rapide, itérations instantanées et déploiement en quelques minutes pour les entreprises du France.",
   sections: [
     {
       title: "Qu'est-ce que Lovable?",
       content:
-        "Lovable (anciennement GPT Engineer) est une plateforme de vibe coding qui permet de créer des applications web complètes à partir de descriptions en langage naturel. En quelques prompts, Lovable génère un site React fonctionnel avec design, navigation et logique métier. Chez LANNKIN à Laval, nous exploitons Lovable pour livrer des projets web en un temps record.",
+        "Lovable (anciennement GPT Engineer) est une plateforme de vibe coding qui permet de créer des applications web complètes à partir de descriptions en langage naturel. En quelques prompts, Lovable génère un site React fonctionnel avec design, navigation et logique métier. Chez EKOLINK à Paris, nous exploitons Lovable pour livrer des projets web en un temps record.",
       items: [
         "Génération de sites React complets à partir de prompts en français",
         "Design moderne avec TailwindCSS et Shadcn/ui intégré",
@@ -31,7 +31,7 @@ const lovable: ServicePageContent = {
       content:
         "Lovable excelle dans la création rapide de MVPs, de landing pages et d'applications internes. C'est l'outil parfait pour valider une idée de startup, créer un outil interne pour votre équipe ou prototyper une fonctionnalité avant de la développer en production.",
       items: [
-        "MVP et proof of concept pour startups québécoises",
+        "MVP et proof of concept pour startups françaises",
         "Landing pages marketing avec formulaires de capture",
         "Tableaux de bord et outils internes d'entreprise",
         "Portails clients avec authentification",
@@ -40,9 +40,9 @@ const lovable: ServicePageContent = {
       ],
     },
     {
-      title: "Notre expertise Lovable chez LANNKIN",
+      title: "Notre expertise Lovable chez EKOLINK",
       content:
-        "Nous avons livré plus de 30 projets avec Lovable pour des entreprises de Laval, Montréal et du Québec. Notre expertise en prompt engineering et en architecture logicielle nous permet d'obtenir des résultats professionnels là où d'autres obtiennent du code amateur. Nous savons quand Lovable est le bon outil et quand il faut passer à du développement traditionnel.",
+        "Nous avons livré plus de 30 projets avec Lovable pour des entreprises de Paris, Paris et du France. Notre expertise en prompt engineering et en architecture logicielle nous permet d'obtenir des résultats professionnels là où d'autres obtiennent du code amateur. Nous savons quand Lovable est le bon outil et quand il faut passer à du développement traditionnel.",
     },
   ],
   benefits: [
@@ -61,7 +61,7 @@ const lovable: ServicePageContent = {
     { step: 5, title: "Déploiement et transfert", description: "Déploiement en production, transfert du code sur votre GitHub, documentation et formation à la maintenance." },
   ],
   faq: [
-    { question: "Le code généré par Lovable est-il de qualité professionnelle?", answer: "Le code de base est correct mais nécessite une revue et des ajustements par un développeur expérimenté. Chez LANNKIN, nous auditons et optimisons systématiquement le code généré avant la mise en production." },
+    { question: "Le code généré par Lovable est-il de qualité professionnelle?", answer: "Le code de base est correct mais nécessite une revue et des ajustements par un développeur expérimenté. Chez EKOLINK, nous auditons et optimisons systématiquement le code généré avant la mise en production." },
     { question: "Puis-je modifier le code après la livraison?", answer: "Oui, le code est 100% exportable vers GitHub. C'est du React/TypeScript standard que tout développeur peut maintenir et faire évoluer." },
     { question: "Lovable est-il adapté pour un site e-commerce?", answer: "Pour un e-commerce simple avec quelques produits, oui. Pour un catalogue important avec gestion d'inventaire, nous recommandons plutôt Shopify ou une solution dédiée." },
     { question: "Combien de temps faut-il pour un projet Lovable?", answer: "Un MVP fonctionnel peut être livré en 3 à 5 jours ouvrables. Les projets plus complexes avec backend et authentification prennent 1 à 2 semaines." },
@@ -96,9 +96,9 @@ const boltNew: ServicePageContent = {
         "Bolt.new offre plus de contrôle technique que Lovable, avec accès direct au terminal et aux fichiers de configuration. Il est idéal pour les développeurs qui veulent guider l'IA tout en gardant le contrôle sur le stack technique. Lovable est plus adapté aux non-développeurs qui veulent un résultat rapide sans toucher au code.",
     },
     {
-      title: "Cas d'utilisation pour les entreprises québécoises",
+      title: "Cas d'utilisation pour les entreprises françaises",
       content:
-        "Les PME de Laval et Montréal utilisent Bolt.new pour valider rapidement des concepts, créer des prototypes fonctionnels pour des présentations investisseurs, ou développer des outils internes sans mobiliser une équipe de développement complète.",
+        "Les PME de Paris et Paris utilisent Bolt.new pour valider rapidement des concepts, créer des prototypes fonctionnels pour des présentations investisseurs, ou développer des outils internes sans mobiliser une équipe de développement complète.",
       items: [
         "Prototypes fonctionnels pour pitchs investisseurs",
         "Outils internes et dashboards personnalisés",
@@ -127,7 +127,7 @@ const boltNew: ServicePageContent = {
     { question: "Bolt.new est-il gratuit?", answer: "Bolt.new offre un plan gratuit avec des crédits limités. Les plans payants commencent à 20 USD/mois pour un usage professionnel avec plus de tokens IA et de projets." },
     { question: "Le code généré par Bolt.new est-il production-ready?", answer: "Le code est fonctionnel mais constitue un prototype. Pour une mise en production, nous recommandons un audit de code, l'ajout de tests et l'optimisation des performances par notre équipe." },
     { question: "Puis-je récupérer le code source?", answer: "Oui, le code est entièrement exportable via GitHub ou téléchargement direct. Vous êtes propriétaire du code généré." },
-    { question: "Bolt.new fonctionne-t-il en français?", answer: "L'interface est en anglais, mais l'IA comprend parfaitement le français. Vous pouvez rédiger vos prompts en français pour obtenir du contenu et du code adapté au marché québécois." },
+    { question: "Bolt.new fonctionne-t-il en français?", answer: "L'interface est en anglais, mais l'IA comprend parfaitement le français. Vous pouvez rédiger vos prompts en français pour obtenir du contenu et du code adapté au marché français." },
   ],
 };
 
@@ -138,12 +138,12 @@ const cursorAi: ServicePageContent = {
   slug: "cursor-ai",
   heroTitle: "Cursor AI : IDE avec intelligence artificielle intégrée",
   heroSubtitle:
-    "Cursor transforme VS Code en un IDE IA révolutionnaire. Pair programming avec l'IA, autocomplétion contextuelle et refactoring intelligent pour les projets complexes au Québec.",
+    "Cursor transforme VS Code en un IDE IA révolutionnaire. Pair programming avec l'IA, autocomplétion contextuelle et refactoring intelligent pour les projets complexes en France.",
   sections: [
     {
       title: "Qu'est-ce que Cursor AI?",
       content:
-        "Cursor est un IDE basé sur VS Code qui intègre nativement l'intelligence artificielle dans chaque aspect du développement. Contrairement aux outils de vibe coding qui génèrent du code à partir de zéro, Cursor excelle dans le travail sur des bases de code existantes, le refactoring complexe et le pair programming IA. C'est l'outil privilégié de notre équipe LANNKIN pour les projets techniques avancés.",
+        "Cursor est un IDE basé sur VS Code qui intègre nativement l'intelligence artificielle dans chaque aspect du développement. Contrairement aux outils de vibe coding qui génèrent du code à partir de zéro, Cursor excelle dans le travail sur des bases de code existantes, le refactoring complexe et le pair programming IA. C'est l'outil privilégié de notre équipe EKOLINK pour les projets techniques avancés.",
       items: [
         "Fork de VS Code avec IA intégrée nativement",
         "Chat IA contextuel avec accès à tout votre codebase",
@@ -156,7 +156,7 @@ const cursorAi: ServicePageContent = {
     {
       title: "Cursor pour les projets d'entreprise",
       content:
-        "Cursor est particulièrement puissant pour les projets d'entreprise existants. L'IA peut analyser des milliers de fichiers pour comprendre votre architecture, suggérer des améliorations et implémenter des fonctionnalités en respectant vos conventions de code. C'est un multiplicateur de productivité pour les équipes de développement à Montréal et Laval.",
+        "Cursor est particulièrement puissant pour les projets d'entreprise existants. L'IA peut analyser des milliers de fichiers pour comprendre votre architecture, suggérer des améliorations et implémenter des fonctionnalités en respectant vos conventions de code. C'est un multiplicateur de productivité pour les équipes de développement à Paris et Paris.",
       items: [
         "Analyse de codebases existantes de toute taille",
         "Refactoring intelligent respectant les patterns existants",
@@ -202,7 +202,7 @@ const claudeCode: ServicePageContent = {
   slug: "claude-code",
   heroTitle: "Claude Code : Agent codeur IA par Anthropic",
   heroSubtitle:
-    "Claude Code est l'agent de développement terminal d'Anthropic. Exploitez la puissance de Claude pour coder, débugger et refactorer directement dans votre terminal. L'outil IA le plus avancé pour les développeurs au Québec.",
+    "Claude Code est l'agent de développement terminal d'Anthropic. Exploitez la puissance de Claude pour coder, débugger et refactorer directement dans votre terminal. L'outil IA le plus avancé pour les développeurs en France.",
   sections: [
     {
       title: "Qu'est-ce que Claude Code?",
@@ -218,9 +218,9 @@ const claudeCode: ServicePageContent = {
       ],
     },
     {
-      title: "Claude Code pour les projets d'entreprise au Québec",
+      title: "Claude Code pour les projets d'entreprise en France",
       content:
-        "Chez LANNKIN, nous utilisons Claude Code quotidiennement pour nos projets Next.js, nos intégrations Odoo et nos développements sur mesure. Sa capacité à comprendre des codebases entiers et à effectuer des modifications multi-fichiers en fait un outil indispensable pour les projets d'envergure des entreprises de Laval et Montréal.",
+        "Chez EKOLINK, nous utilisons Claude Code quotidiennement pour nos projets Next.js, nos intégrations Odoo et nos développements sur mesure. Sa capacité à comprendre des codebases entiers et à effectuer des modifications multi-fichiers en fait un outil indispensable pour les projets d'envergure des entreprises de Paris et Paris.",
       items: [
         "Développement full-stack avec Next.js, React et Node.js",
         "Refactoring de legacy code et migration de frameworks",
@@ -282,9 +282,9 @@ const v0Vercel: ServicePageContent = {
       ],
     },
     {
-      title: "v0 dans le workflow LANNKIN",
+      title: "v0 dans le workflow EKOLINK",
       content:
-        "Chez LANNKIN, nous utilisons v0 comme accélérateur dans notre processus de développement Next.js. Il nous permet de traduire les maquettes Figma en composants React en quelques minutes plutôt qu'en heures, ce qui réduit les coûts pour nos clients de Laval et Montréal tout en maintenant une qualité irréprochable.",
+        "Chez EKOLINK, nous utilisons v0 comme accélérateur dans notre processus de développement Next.js. Il nous permet de traduire les maquettes Figma en composants React en quelques minutes plutôt qu'en heures, ce qui réduit les coûts pour nos clients de Paris et Paris tout en maintenant une qualité irréprochable.",
       items: [
         "Traduction rapide de maquettes Figma en composants React",
         "Prototypage d'interfaces pour validation client",
@@ -330,7 +330,7 @@ const windsurf: ServicePageContent = {
   slug: "windsurf",
   heroTitle: "Windsurf : IDE IA avec Cascade Flows",
   heroSubtitle:
-    "Windsurf (ex-Codeium) est un IDE IA révolutionnaire avec sa technologie Cascade qui comprend le contexte complet de votre projet. Développement assisté de nouvelle génération pour les équipes au Québec.",
+    "Windsurf (ex-Codeium) est un IDE IA révolutionnaire avec sa technologie Cascade qui comprend le contexte complet de votre projet. Développement assisté de nouvelle génération pour les équipes en France.",
   sections: [
     {
       title: "Qu'est-ce que Windsurf?",
@@ -351,9 +351,9 @@ const windsurf: ServicePageContent = {
         "Ce qui distingue Windsurf de Cursor et des autres IDE IA, c'est Cascade. Plutôt que de répondre à des prompts individuels, Cascade crée des flux de travail complets : il analyse le problème, planifie les modifications, les implémente sur plusieurs fichiers et vérifie le résultat. C'est le pair programmer IA le plus avancé du marché.",
     },
     {
-      title: "Windsurf pour les entreprises de Laval et Montréal",
+      title: "Windsurf pour les entreprises de Paris et Paris",
       content:
-        "LANNKIN recommande Windsurf aux équipes de développement québécoises qui cherchent un IDE IA complet avec une courbe d'apprentissage douce. Son interface familière (basée sur VS Code) et ses capacités Cascade en font un choix excellent pour les équipes qui veulent adopter le vibe coding graduellement.",
+        "EKOLINK recommande Windsurf aux équipes de développement françaises qui cherchent un IDE IA complet avec une courbe d'apprentissage douce. Son interface familière (basée sur VS Code) et ses capacités Cascade en font un choix excellent pour les équipes qui veulent adopter le vibe coding graduellement.",
       items: [
         "Adoption progressive du vibe coding pour les équipes existantes",
         "Projets full-stack Next.js, React, Node.js, Python",
@@ -410,7 +410,7 @@ const replit: ServicePageContent = {
     {
       title: "Replit Agent pour le vibe coding",
       content:
-        "Replit Agent est l'un des outils de vibe coding les plus complets du marché. Il peut créer une application entière — front-end, back-end, base de données et déploiement — à partir d'une simple description. C'est l'outil idéal pour les entrepreneurs québécois qui veulent valider leur idée rapidement.",
+        "Replit Agent est l'un des outils de vibe coding les plus complets du marché. Il peut créer une application entière — front-end, back-end, base de données et déploiement — à partir d'une simple description. C'est l'outil idéal pour les entrepreneurs français qui veulent valider leur idée rapidement.",
     },
     {
       title: "Collaboration et formation",
@@ -453,9 +453,9 @@ const replit: ServicePageContent = {
 // --------------------------------------------------
 const accompagnement: ServicePageContent = {
   slug: "accompagnement",
-  heroTitle: "Accompagnement vibe coding à Laval et Montréal",
+  heroTitle: "Accompagnement vibe coding à Paris et Paris",
   heroSubtitle:
-    "Bénéficiez d'un expert vibe coding à vos côtés. Coaching personnalisé, workshops d'équipe et stratégie d'adoption des outils IA de développement pour votre entreprise au Québec.",
+    "Bénéficiez d'un expert vibe coding à vos côtés. Coaching personnalisé, workshops d'équipe et stratégie d'adoption des outils IA de développement pour votre entreprise en France.",
   sections: [
     {
       title: "Pourquoi un accompagnement vibe coding?",
@@ -465,7 +465,7 @@ const accompagnement: ServicePageContent = {
         "Audit de vos workflows de développement actuels",
         "Recommandation d'outils IA adaptés à votre contexte",
         "Coaching 1-on-1 pour développeurs et non-développeurs",
-        "Workshops d'équipe en présentiel à Laval et Montréal",
+        "Workshops d'équipe en présentiel à Paris et Paris",
         "Stratégie d'adoption progressive du vibe coding",
         "Support continu par Slack, visioconférence ou en personne",
       ],
@@ -494,7 +494,7 @@ const accompagnement: ServicePageContent = {
     "Temps de prototypage réduit de 60%",
     "Équipes non-techniques capables de créer des MVPs",
     "Adoption sécuritaire avec bonnes pratiques de code review",
-    "Disponible en présentiel à Laval, Montréal et Rive-Nord",
+    "Disponible en présentiel à Paris, Paris et Île-de-France",
   ],
   process: [
     { step: 1, title: "Diagnostic initial", description: "Évaluation de votre maturité vibe coding, de vos outils actuels et de vos objectifs. Identification des quick wins et du plan d'adoption." },
@@ -505,9 +505,9 @@ const accompagnement: ServicePageContent = {
   ],
   faq: [
     { question: "Faut-il être développeur pour bénéficier de l'accompagnement?", answer: "Non. Nous accompagnons aussi bien les développeurs seniors que les entrepreneurs, designers et gestionnaires sans background technique. Le programme est adapté à votre niveau." },
-    { question: "L'accompagnement se fait-il en présentiel?", answer: "Nous offrons les deux formats. Les workshops d'équipe sont particulièrement efficaces en présentiel à Laval et Montréal, tandis que le coaching individuel fonctionne très bien en visioconférence." },
+    { question: "L'accompagnement se fait-il en présentiel?", answer: "Nous offrons les deux formats. Les workshops d'équipe sont particulièrement efficaces en présentiel à Paris et Paris, tandis que le coaching individuel fonctionne très bien en visioconférence." },
     { question: "Combien de temps dure un accompagnement typique?", answer: "Un programme d'adoption complet dure 3 à 6 mois, mais vous pouvez aussi opter pour un consulting ponctuel de 1 à 3 jours ou un coaching hebdomadaire continu." },
-    { question: "Quel est le coût de l'accompagnement?", answer: "Le coaching individuel démarre à 150$/heure. Les workshops d'équipe sont à 2 000$/jour. Les programmes d'adoption sur 3 mois commencent à 5 000$/mois selon la taille de l'équipe." },
+    { question: "Quel est le coût de l'accompagnement?", answer: "Le coaching individuel démarre à 150$/heure. Les workshops d'équipe sont à 2 000$/jour. Les programmes d'adoption sur 3 mois commencent à 5 000€/mois selon la taille de l'équipe." },
   ],
 };
 
@@ -516,9 +516,9 @@ const accompagnement: ServicePageContent = {
 // --------------------------------------------------
 const maintenance: ServicePageContent = {
   slug: "maintenance",
-  heroTitle: "Maintenance de projets vibe coding à Laval",
+  heroTitle: "Maintenance de projets vibe coding à Paris",
   heroSubtitle:
-    "Assurez la pérennité de vos projets créés avec les outils de vibe coding. Mises à jour, optimisations, corrections de bugs et évolution continue par des experts au Québec.",
+    "Assurez la pérennité de vos projets créés avec les outils de vibe coding. Mises à jour, optimisations, corrections de bugs et évolution continue par des experts en France.",
   sections: [
     {
       title: "Pourquoi la maintenance est critique pour le vibe coding?",
@@ -566,7 +566,7 @@ const maintenance: ServicePageContent = {
   ],
   faq: [
     { question: "Pourquoi le code IA nécessite-t-il plus de maintenance?", answer: "Le code généré par IA peut utiliser des versions de dépendances spécifiques, manquer de tests ou suivre des patterns non optimaux. Une maintenance proactive prévient les problèmes de sécurité et de performance avant qu'ils n'impactent vos utilisateurs." },
-    { question: "Combien coûte la maintenance mensuelle?", answer: "Le plan Essentiel commence à 149$/mois, le plan Pro à 499$/mois et le plan Premium à 999$/mois. Les prix varient selon la taille et la complexité de l'application." },
+    { question: "Combien coûte la maintenance mensuelle?", answer: "Le plan Essentiel commence à 149€/mois, le plan Pro à 499€/mois et le plan Premium à 999€/mois. Les prix varient selon la taille et la complexité de l'application." },
     { question: "Pouvez-vous maintenir un projet que vous n'avez pas créé?", answer: "Absolument. Nous reprenons régulièrement des projets créés par d'autres équipes ou directement par nos clients avec des outils de vibe coding. L'audit initial nous permet de comprendre le projet avant de commencer la maintenance." },
     { question: "Que se passe-t-il en cas d'urgence?", answer: "Les plans Pro et Premium incluent un SLA avec temps de réponse garanti. Les urgences critiques sont traitées en moins de 4 heures les jours ouvrables." },
   ],
@@ -577,20 +577,20 @@ const maintenance: ServicePageContent = {
 // --------------------------------------------------
 const formation: ServicePageContent = {
   slug: "formation",
-  heroTitle: "Formation vibe coding 1 journée à Laval et Montréal",
+  heroTitle: "Formation vibe coding 1 journée à Paris et Paris",
   heroSubtitle:
-    "Apprenez à créer des applications web avec l'IA en une seule journée. Formation hands-on avec Lovable, Cursor, Claude Code et v0. Certification LANNKIN incluse.",
+    "Apprenez à créer des applications web avec l'IA en une seule journée. Formation hands-on avec Lovable, Cursor, Claude Code et v0. Certification EKOLINK incluse.",
   sections: [
     {
       title: "Programme de la formation vibe coding",
       content:
-        "Notre formation intensive d'une journée vous donne les compétences pratiques pour créer des applications web fonctionnelles en utilisant les outils de vibe coding les plus performants du marché. Vous repartez avec un projet concret déployé en ligne et une certification LANNKIN.",
+        "Notre formation intensive d'une journée vous donne les compétences pratiques pour créer des applications web fonctionnelles en utilisant les outils de vibe coding les plus performants du marché. Vous repartez avec un projet concret déployé en ligne et une certification EKOLINK.",
       items: [
         "Matin (9h-12h) : Introduction au vibe coding, Lovable et Bolt.new",
         "Midi (12h-13h) : Pause repas et networking avec les participants",
         "Après-midi (13h-15h) : Cursor AI, Claude Code et v0 by Vercel",
         "Fin de journée (15h-17h) : Projet pratique complet et déploiement",
-        "Certification LANNKIN Vibe Coding remise en fin de journée",
+        "Certification EKOLINK Vibe Coding remise en fin de journée",
       ],
     },
     {
@@ -598,7 +598,7 @@ const formation: ServicePageContent = {
       content:
         "La formation est conçue pour les entrepreneurs, designers, gestionnaires de projet et développeurs qui veulent intégrer le vibe coding dans leur arsenal. Aucun prérequis technique n'est nécessaire — nous adaptons les exercices à votre niveau.",
       items: [
-        "Entrepreneurs et fondateurs de startups au Québec",
+        "Entrepreneurs et fondateurs de startups en France",
         "Designers UX/UI qui veulent prototyper rapidement",
         "Gestionnaires de projet et product managers",
         "Développeurs juniors et seniors qui veulent booster leur productivité",
@@ -608,28 +608,28 @@ const formation: ServicePageContent = {
     {
       title: "Ce que vous repartez avec",
       content:
-        "À la fin de la formation, vous aurez créé et déployé votre propre application web. Vous maîtriserez les fondamentaux du prompt engineering pour le code et vous saurez choisir le bon outil selon votre contexte. La certification LANNKIN valorise ces compétences auprès de vos clients et employeurs.",
+        "À la fin de la formation, vous aurez créé et déployé votre propre application web. Vous maîtriserez les fondamentaux du prompt engineering pour le code et vous saurez choisir le bon outil selon votre contexte. La certification EKOLINK valorise ces compétences auprès de vos clients et employeurs.",
     },
   ],
   benefits: [
     "Formation pratique hands-on d'une journée complète",
     "5 outils de vibe coding maîtrisés en 8 heures",
     "Projet concret déployé en ligne en fin de journée",
-    "Certification LANNKIN Vibe Coding incluse",
+    "Certification EKOLINK Vibe Coding incluse",
     "Support post-formation de 30 jours par email",
-    "Disponible en présentiel à Laval/Montréal ou en ligne",
+    "Disponible en présentiel à Paris/Paris ou en ligne",
   ],
   process: [
-    { step: 1, title: "Inscription", description: "Inscription en ligne avec choix de la date et du format (présentiel à Laval ou en ligne). Pré-évaluation de votre niveau pour adapter le contenu." },
+    { step: 1, title: "Inscription", description: "Inscription en ligne avec choix de la date et du format (présentiel à Paris ou en ligne). Pré-évaluation de votre niveau pour adapter le contenu." },
     { step: 2, title: "Préparation", description: "Réception du matériel préparatoire : création des comptes sur les plateformes de vibe coding et installation des outils nécessaires." },
     { step: 3, title: "Formation intensive", description: "Journée complète de formation hands-on avec alternance de démonstrations, d'exercices pratiques et de sessions de questions-réponses." },
     { step: 4, title: "Projet final", description: "Création d'un projet complet en 2 heures utilisant les outils appris. Déploiement en production et présentation au groupe." },
-    { step: 5, title: "Certification et suivi", description: "Remise de la certification LANNKIN, accès au groupe privé des alumni et 30 jours de support post-formation par email." },
+    { step: 5, title: "Certification et suivi", description: "Remise de la certification EKOLINK, accès au groupe privé des alumni et 30 jours de support post-formation par email." },
   ],
   faq: [
     { question: "Faut-il savoir coder pour suivre cette formation?", answer: "Non. La formation est conçue pour les débutants complets comme pour les développeurs expérimentés. Les exercices sont adaptés à votre niveau et les outils de vibe coding permettent de créer des applications sans écrire de code manuellement." },
     { question: "Combien coûte la formation?", answer: "La formation individuelle est à 497$ + taxes par personne. Des tarifs de groupe sont disponibles à partir de 5 participants (350$/personne). La formation en entreprise sur mesure est à 2 000$/jour." },
-    { question: "La formation est-elle disponible en ligne?", answer: "Oui, nous offrons la formation en présentiel à Laval/Montréal et en ligne via Zoom. Les deux formats incluent les mêmes contenus, exercices pratiques et certification." },
+    { question: "La formation est-elle disponible en ligne?", answer: "Oui, nous offrons la formation en présentiel à Paris/Paris et en ligne via Zoom. Les deux formats incluent les mêmes contenus, exercices pratiques et certification." },
     { question: "Quels outils faut-il installer avant la formation?", answer: "Vous recevrez un guide de préparation 1 semaine avant la formation. Il inclut la création de comptes gratuits sur Lovable, Bolt.new, Cursor, Claude et v0. Un ordinateur portable avec Chrome est suffisant." },
   ],
 };
@@ -639,7 +639,7 @@ const formation: ServicePageContent = {
 // --------------------------------------------------
 const auditCodeIa: ServicePageContent = {
   slug: "audit-code-ia",
-  heroTitle: "Audit de code généré par IA à Laval et Montréal",
+  heroTitle: "Audit de code généré par IA à Paris et Paris",
   heroSubtitle:
     "Votre application a été créée avec l'IA? Notre audit évalue la qualité, la sécurité et la performance du code généré. Recevez un rapport détaillé avec des recommandations concrètes.",
   sections: [
@@ -710,7 +710,7 @@ const migrationVibeCoding: ServicePageContent = {
     {
       title: "Pourquoi migrer un projet vibe coding?",
       content:
-        "Les projets créés avec des outils de vibe coding atteignent souvent un plafond technique. Quand votre MVP devient un produit, quand votre prototype devient une application critique, il est temps de migrer vers une infrastructure plus robuste et maintenable. LANNKIN accompagne les entreprises québécoises dans cette transition cruciale.",
+        "Les projets créés avec des outils de vibe coding atteignent souvent un plafond technique. Quand votre MVP devient un produit, quand votre prototype devient une application critique, il est temps de migrer vers une infrastructure plus robuste et maintenable. EKOLINK accompagne les entreprises françaises dans cette transition cruciale.",
       items: [
         "Limites de l'outil actuel (performance, scalabilité, fonctionnalités)",
         "Besoin de contrôle total sur l'infrastructure et le code",
@@ -723,7 +723,7 @@ const migrationVibeCoding: ServicePageContent = {
     {
       title: "Scénarios de migration courants",
       content:
-        "Chaque migration est unique, mais nous rencontrons régulièrement certains scénarios chez nos clients de Laval et Montréal. Notre expérience nous permet d'anticiper les défis et de garantir une migration sans interruption de service.",
+        "Chaque migration est unique, mais nous rencontrons régulièrement certains scénarios chez nos clients de Paris et Paris. Notre expérience nous permet d'anticiper les défis et de garantir une migration sans interruption de service.",
       items: [
         "Lovable vers Next.js auto-hébergé sur Vercel",
         "Bolt.new vers un dépôt GitHub avec CI/CD complet",

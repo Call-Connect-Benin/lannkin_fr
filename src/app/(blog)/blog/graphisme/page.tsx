@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Graphisme | Lannkin",
+  title: "Blog Graphisme | Ekolink",
   description: "Articles et guides en graphisme. Tendances design, branding et conseils pour une identité visuelle impactante.",
 };
 

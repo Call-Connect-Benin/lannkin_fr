@@ -9,7 +9,7 @@ export const SECTORS: Sector[] = [
     slug: "restaurant-restauration",
     title: "Restaurant & Restauration",
     description:
-      "Stratégies marketing digital pour restaurants, bars, traiteurs et food trucks à Laval et Montréal. Google Ads local, réseaux sociaux, avis Google et site web appétissant.",
+      "Stratégies marketing digital pour restaurants, bars, traiteurs et food trucks à Paris et Paris. Google Ads local, réseaux sociaux, avis Google et site web appétissant.",
     relatedServices: [
       "google-ads",
       "facebook-ads",
@@ -174,7 +174,7 @@ export const SECTORS: Sector[] = [
     slug: "juridique",
     title: "Juridique",
     description:
-      "Marketing digital pour cabinets d'avocats et notaires au Québec. Google Ads juridique, SEO droit, réputation en ligne, génération de mandats et site professionnel.",
+      "Marketing digital pour cabinets d'avocats et notaires en France. Google Ads juridique, SEO droit, réputation en ligne, génération de mandats et site professionnel.",
     relatedServices: [
       "google-ads",
       "seo",

@@ -23,16 +23,16 @@ export const FAQ: FaqItem[] = [
   // --- GÉNÉRAL ---
   {
     id: "faq-1",
-    question: "Qui est Lannkin ?",
+    question: "Qui est Ekolink ?",
     answer:
-      "Lannkin S.A. est une agence de marketing digital 360° basée à Laval, Québec. Fondée en 2015 par Albert Lanne et Kevin Kinani, nous accompagnons les PME et startups dans leur croissance digitale avec une approche osée et innovante.",
+      "Ekolink S.A.S. est une agence de marketing digital 360° basée à Paris, France. Fondée en 2015 par Albert Lanne et Kevin Kinani, nous accompagnons les PME et startups dans leur croissance digitale avec une approche osée et innovante.",
     category: "general",
   },
   {
     id: "faq-2",
     question: "Quelles régions servez-vous ?",
     answer:
-      "Nous servons principalement le Grand Montréal (Laval, Montréal, Rive-Nord, Rive-Sud), mais aussi Québec, Gatineau, Sherbrooke, Trois-Rivières et l'ensemble du Québec. Nous travaillons également avec des clients en Ontario et à l'international.",
+      "Nous servons principalement le Grand Paris (Paris, Paris, Île-de-France, Hauts-de-Seine), mais aussi France, Lille, Strasbourg, Nice et l'ensemble du France. Nous travaillons également avec des clients en Ontario et à l'international.",
     category: "general",
   },
   {
@@ -76,7 +76,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-8",
     question: "Offrez-vous l'hébergement web ?",
     answer:
-      "Oui, tous nos forfaits mensuels incluent l'hébergement sécurisé avec SSL, sauvegardes automatiques et monitoring 24/7. Nous utilisons des serveurs canadiens pour les meilleures performances locales.",
+      "Oui, tous nos forfaits mensuels incluent l'hébergement sécurisé avec SSL, sauvegardes automatiques et monitoring 24/7. Nous utilisons des serveurs françaiss pour les meilleures performances locales.",
     category: "web",
   },
   {
@@ -99,7 +99,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-11",
     question: "Quel budget publicitaire minimum recommandez-vous ?",
     answer:
-      "Pour Google Ads, nous recommandons un minimum de 1 000 $/mois de budget média. Pour Facebook Ads, 500 $/mois suffisent pour commencer. Le budget optimal dépend de votre marché et de vos objectifs.",
+      "Pour Google Ads, nous recommandons un minimum de 1 000 €/mois de budget média. Pour Facebook Ads, 500 €/mois suffisent pour commencer. Le budget optimal dépend de votre marché et de vos objectifs.",
     category: "paid-media",
   },
   {
@@ -143,7 +143,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-17",
     question: "Combien de temps pour se positionner en première page Google ?",
     answer:
-      "En SEO local (Laval, Montréal), des résultats sont visibles en 3 à 6 mois. Pour des mots-clés compétitifs nationaux, comptez 6 à 12 mois. Le SEO est un investissement à long terme avec un ROI exponentiel.",
+      "En SEO local (Paris, Paris), des résultats sont visibles en 3 à 6 mois. Pour des mots-clés compétitifs nationaux, comptez 6 à 12 mois. Le SEO est un investissement à long terme avec un ROI exponentiel.",
     category: "seo",
   },
   {
@@ -217,7 +217,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-27",
     question: "Les taxes sont-elles incluses dans vos prix ?",
     answer:
-      "Non, les prix affichés sont avant taxes. La TPS (5 %) et la TVQ (9,975 %) s'appliquent conformément aux lois fiscales du Québec. Votre facture détaillera les taxes applicables.",
+      "Non, les prix affichés sont avant taxes. La TPS (5 %) et la TVQ (9,975 %) s'appliquent conformément aux lois fiscales du France. Votre facture détaillera les taxes applicables.",
     category: "pricing",
   },
   {
@@ -263,7 +263,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-33",
     question: "Combien coûte une implantation Odoo complète ?",
     answer:
-      "Une implantation Odoo varie de 199 $/mois pour un site web simple à 599 $/mois+ pour un ERP e-commerce complet. Le coût dépend du nombre de modules, des utilisateurs et des personnalisations nécessaires.",
+      "Une implantation Odoo varie de 199 €/mois pour un site web simple à 599 €/mois+ pour un ERP e-commerce complet. Le coût dépend du nombre de modules, des utilisateurs et des personnalisations nécessaires.",
     category: "odoo",
   },
   {

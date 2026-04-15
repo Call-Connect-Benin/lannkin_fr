@@ -8,7 +8,7 @@ import https from "https";
 import http from "http";
 import sharp from "sharp";
 
-const WP_API = "https://www.lannkin.ca/wp-json/wp/v2";
+const WP_API = "https://www.ekolink.fr/wp-json/wp/v2";
 const BLOG_DIR = path.resolve("content/blog");
 const IMAGES_DIR = path.resolve("public/images/blog");
 const DELAY_MS = 3000; // 3 secondes entre chaque requête
@@ -26,7 +26,7 @@ function downloadFile(url) {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
         "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
         "Accept-Language": "fr-CA,fr;q=0.9,en;q=0.8",
-        "Referer": "https://www.lannkin.ca/blog/",
+        "Referer": "https://www.ekolink.fr/blog/",
       },
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
@@ -60,7 +60,7 @@ function extractImages(html) {
   let match;
   while ((match = imgRegex.exec(html)) !== null) {
     const url = match[1];
-    if (url.includes("lannkin.ca/wp-content/uploads")) {
+    if (url.includes("ekolink.fr/wp-content/uploads")) {
       images.push(url);
     }
   }
@@ -225,7 +225,7 @@ async function updateMdx(posts) {
     const words = content.split(/\s+/).length;
     const readTime = `${Math.max(1, Math.ceil(words / 200))} min`;
 
-    const frontMatter = `---\ntitle: "${title.replace(/"/g, '\\"')}"\nexcerpt: "${excerpt.replace(/"/g, '\\"')}"\ndate: "${date}"\ncategory: "${category}"\ntags: []\nauthor: "Équipe Lannkin"\nreadTime: "${readTime}"\n---`;
+    const frontMatter = `---\ntitle: "${title.replace(/"/g, '\\"')}"\nexcerpt: "${excerpt.replace(/"/g, '\\"')}"\ndate: "${date}"\ncategory: "${category}"\ntags: []\nauthor: "Équipe Ekolink"\nreadTime: "${readTime}"\n---`;
 
     fs.writeFileSync(mdxPath, `${frontMatter}\n\n${content}\n`, "utf-8");
   }

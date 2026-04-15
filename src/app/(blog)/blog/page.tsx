@@ -8,16 +8,16 @@ import { formatDate, getAllPosts } from "@/lib/blog";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Blog Marketing Digital Québec | Lannkin",
+  title: "Blog Marketing Digital France | Ekolink",
   description:
-    "Conseils SEO, tendances web et guides marketing digital au Québec. Articles par les experts Lannkin sur le SEO, Google Ads, IA et développement web.",
+    "Conseils SEO, tendances web et guides marketing digital en France. Articles par les experts Ekolink sur le SEO, Google Ads, IA et développement web.",
 };
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
 
       {/* ═══════════════════════════════════════════════════════
           HERO
@@ -65,19 +65,19 @@ export default function BlogPage() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
               style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
             >
-              <BookOpen className="h-3.5 w-3.5" style={{ color: "#498f6d" }} />
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+              <BookOpen className="h-3.5 w-3.5" style={{ color: "#fff" }} />
+              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
                 {BLOG_CATEGORIES.length} catégories · Mis à jour régulièrement
               </span>
             </div>
 
             <h1
               className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               Le{" "}
-              <span style={{ color: "#498f6d" }}>blog</span>{" "}
-              Lannkin
+              <span style={{ color: "#fff" }}>blog</span>{" "}
+              Ekolink
             </h1>
 
             <div
@@ -107,10 +107,10 @@ export default function BlogPage() {
         />
         <Container>
           <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#fff" }}>
               À la une
             </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#FFFFFF" }}>
+            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#fff" }}>
               Derniers articles
             </h2>
           </div>
@@ -136,7 +136,7 @@ export default function BlogPage() {
                   <div className="mb-4 flex items-center gap-3">
                     <span
                       className="rounded-full px-2.5 py-0.5 font-mono text-xs font-medium"
-                      style={{ backgroundColor: "rgba(73,143,109,0.14)", color: "#498f6d" }}
+                      style={{ backgroundColor: "rgba(73,143,109,0.14)", color: "#fff" }}
                     >
                       {post.category}
                     </span>
@@ -146,7 +146,7 @@ export default function BlogPage() {
                   </div>
                   <h3
                     className="font-heading text-base font-semibold leading-snug transition-colors group-hover:text-[#498f6d]"
-                    style={{ color: "#FFFFFF" }}
+                    style={{ color: "#fff" }}
                   >
                     {post.title}
                   </h3>
@@ -162,7 +162,7 @@ export default function BlogPage() {
                     </span>
                     <span
                       className="inline-flex items-center gap-1 text-xs font-medium opacity-0 transition-all duration-200 group-hover:opacity-100"
-                      style={{ color: "#498f6d" }}
+                      style={{ color: "#fff" }}
                     >
                       Lire l&apos;article
                       <ArrowRight className="h-3 w-3" />
@@ -214,10 +214,10 @@ export default function BlogPage() {
 
         <Container className="relative z-10">
           <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#fff" }}>
               Explorer par catégorie
             </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#FFFFFF" }}>
+            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#fff" }}>
               Trouvez ce qui vous intéresse
             </h2>
           </div>
@@ -248,7 +248,7 @@ export default function BlogPage() {
                 <div className="p-5 pt-0">
                   <h3
                     className="font-heading text-base font-semibold transition-colors group-hover:text-[#498f6d]"
-                    style={{ color: "#FFFFFF" }}
+                    style={{ color: "#fff" }}
                   >
                     {cat.name}
                   </h3>
@@ -260,7 +260,7 @@ export default function BlogPage() {
                   </p>
                   <div
                     className="mt-4 inline-flex items-center gap-1 text-xs font-medium opacity-0 transition-all duration-200 group-hover:opacity-100"
-                    style={{ color: "#498f6d" }}
+                    style={{ color: "#fff" }}
                   >
                     Voir les articles
                     <ArrowRight className="h-3 w-3" />
@@ -299,7 +299,7 @@ export default function BlogPage() {
             </div>
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               Ne manquez rien
             </h2>
@@ -314,7 +314,7 @@ export default function BlogPage() {
               <Link
                 href="/contact/"
                 className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 S&apos;abonner au blog
                 <ArrowRight className="h-4 w-4" />

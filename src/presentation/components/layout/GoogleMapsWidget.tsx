@@ -5,12 +5,12 @@ interface GoogleMapsWidgetProps {
   variant?: "dark" | "light";
 }
 
-export function GoogleMapsWidget({ variant = "dark" }: GoogleMapsWidgetProps) {
+export function GoogleMapsWidget({ variant = "light" }: GoogleMapsWidgetProps) {
   const isDark = variant === "dark";
 
   return (
     <Link
-      href="https://maps.app.goo.gl/7CQ7sDqHJsbV7oZG7"
+      href="https://www.google.com/maps/search/?api=1&query=7+Rue+Vulpian+75013+Paris"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200"
@@ -18,7 +18,7 @@ export function GoogleMapsWidget({ variant = "dark" }: GoogleMapsWidgetProps) {
         border: isDark ? "1px solid rgba(255,255,255,0.15)" : "1px solid rgba(0,0,0,0.10)",
         backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.03)",
       }}
-      aria-label="Voir Lannkin sur Google Maps — 4,9 étoiles (54 avis)"
+      aria-label="Voir Ekolink sur Google Maps — 4,9 étoiles (54 avis)"
     >
         {/* Google G */}
         <div
@@ -35,7 +35,7 @@ export function GoogleMapsWidget({ variant = "dark" }: GoogleMapsWidgetProps) {
 
         <div className="flex flex-col">
           <span className="text-xs font-semibold" style={{ color: isDark ? "#FFFFFF" : "#1A1A1A" }}>
-            Agence web Lannkin
+            Agence web Ekolink
           </span>
           <div className="flex items-center gap-1">
             <div className="flex" aria-label="4,9 étoiles sur 5">

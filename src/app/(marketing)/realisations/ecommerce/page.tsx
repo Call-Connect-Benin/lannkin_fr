@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Boutique E-commerce Laval & Québec | Portfolio Lannkin",
+  title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
   description:
-    "Agence e-commerce à Laval : création de boutiques en ligne Shopify, WooCommerce et sur mesure. Portfolio de réalisations e-commerce au Québec et au Canada. Devis gratuit.",
+    "Agence e-commerce à Paris : création de boutiques en ligne Shopify, WooCommerce et sur mesure. Portfolio de réalisations e-commerce en France et au Canada. Devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/ecommerce/",
+    canonical: "https://ekolink.fr/realisations/ecommerce/",
   },
   openGraph: {
-    title: "Création Boutique E-commerce Laval & Québec | Portfolio Lannkin",
+    title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
     description:
-      "Découvrez nos réalisations e-commerce à Laval et au Québec : Shopify, WooCommerce, boutiques B2B. +420 % de revenus pour nos clients e-commerce.",
-    url: "https://lannkin.ca/realisations/ecommerce/",
+      "Découvrez nos réalisations e-commerce à Paris et en France : Shopify, WooCommerce, boutiques B2B. +420 % de revenus pour nos clients e-commerce.",
+    url: "https://ekolink.fr/realisations/ecommerce/",
   },
 };
 
@@ -28,7 +28,7 @@ const ecommerceCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "ecommerc
 const WHY_US = [
   "Shopify Partner certifié — thèmes sur mesure en Liquid",
   "Intégration Google Shopping & Meta Catalogue",
-  "SEO e-commerce pour le marché québécois et canadien",
+  "SEO e-commerce pour le marché français et français",
   "Optimisation du taux de conversion (A/B testing)",
   "Automatisation marketing : Klaviyo, Mailchimp, Omnisend",
   "Support et maintenance post-lancement inclus",
@@ -39,8 +39,8 @@ export default function RealisationsEcommercePage() {
     <main>
       <RealisationsBanner
         currentCategory="ecommerce"
-        title="Création de boutiques e-commerce à Laval"
-        description="Shopify, WooCommerce ou sur mesure — notre agence e-commerce de Laval crée des boutiques en ligne performantes pour les entreprises québécoises et canadiennes qui veulent vendre plus."
+        title="Création de boutiques e-commerce à Paris"
+        description="Shopify, WooCommerce ou sur mesure — notre agence e-commerce de Paris crée des boutiques en ligne performantes pour les entreprises françaises qui veulent vendre plus."
         stats={[
           { value: "+420 %", label: "de revenus e-commerce (client réel)" },
           { value: `${ecommerceCount} projets`, label: "e-commerce livrés" },
@@ -68,18 +68,18 @@ export default function RealisationsEcommercePage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Agence e-commerce à Laval — Créer votre boutique en ligne au Québec
+              Agence e-commerce à Paris — Créer votre boutique en ligne en France
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="text-sm leading-relaxed text-muted space-y-4">
                 <p>
-                  Lannkin est une <strong className="text-white">agence e-commerce basée à Laval, Québec</strong>.
-                  Depuis plus de 10 ans, nous concevons des boutiques en ligne pour les entreprises québécoises
-                  et canadiennes qui souhaitent vendre leurs produits sur internet — au Québec, au Canada
+                  Ekolink est une <strong className="text-white">agence e-commerce basée à Paris, France</strong>.
+                  Depuis plus de 10 ans, nous concevons des boutiques en ligne pour les entreprises françaises
+                  et françaises qui souhaitent vendre leurs produits sur internet — en France, au Canada
                   ou à l&apos;international.
                 </p>
                 <p>
-                  Que vous cherchiez à <strong className="text-white">créer une boutique en ligne à Laval</strong>,
+                  Que vous cherchiez à <strong className="text-white">créer une boutique en ligne à Paris</strong>,
                   à migrer votre site existant vers Shopify, ou à optimiser votre e-commerce pour augmenter
                   vos conversions, notre équipe maîtrise l&apos;ensemble des outils et plateformes :
                   Shopify, Shopify Plus, WooCommerce, Next.js Commerce.
@@ -106,13 +106,13 @@ export default function RealisationsEcommercePage() {
             {/* Local SEO block */}
             <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
               <h2 className="font-heading text-xl font-bold text-white">
-                Création e-commerce Laval, Montréal, Rive-Nord — Notre zone de service
+                Création e-commerce Paris, Paris, Île-de-France — Notre zone de service
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                Basée à <strong className="text-white">Laval (Québec)</strong>, notre agence accompagne
-                les entreprises de la grande région de Montréal dans leur transformation digitale :
-                Laval, Montréal, Rive-Nord (Terrebonne, Blainville, Boisbriand, Sainte-Thérèse),
-                Rive-Sud (Brossard, Longueuil, Saint-Hubert) et partout au Canada.
+                Basée à <strong className="text-white">Paris (France)</strong>, notre agence accompagne
+                les entreprises de la grande région de Paris dans leur transformation digitale :
+                Paris, Paris, Île-de-France (Versailles, Boulogne, Neuilly, Saint-Germain),
+                Hauts-de-Seine (Créteil, Nanterre, Vincennes) et partout au Canada.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 Nos boutiques e-commerce sont livrées avec une <strong className="text-white">stratégie

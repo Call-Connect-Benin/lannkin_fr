@@ -4,9 +4,9 @@ import { PRICING_NATIVE_ADS } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Native Ads | Lannkin",
+  title: "Tarifs Native Ads | Ekolink",
   description:
-    "Publicité native dès 250$. Taboola, Outbrain et Traffic Factory. Gestion à 750$/mois, Premium multi-plateformes à 1 450$/mois.",
+    "Publicité native dès 250$. Taboola, Outbrain et Traffic Factory. Gestion à 750€/mois, Premium multi-plateformes à 1 450€/mois.",
 };
 
 export default function TarifsNativeAdsPage() {

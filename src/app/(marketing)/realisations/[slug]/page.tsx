@@ -45,7 +45,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
   const bg3d = CATEGORY_3D[project.category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp";
 
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
 
       {/* ═══════════════════════════════════════════════════════
           HERO
@@ -105,7 +105,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               <div className="mb-5 flex flex-wrap items-center gap-2.5">
                 <span
                   className="rounded-full px-3 py-1 font-mono text-xs font-semibold"
-                  style={{ backgroundColor: "rgba(73,143,109,0.18)", color: "#498f6d" }}
+                  style={{ backgroundColor: "rgba(73,143,109,0.18)", color: "#fff" }}
                 >
                   {project.categoryLabel}
                 </span>
@@ -119,7 +119,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
               <h1
                 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3rem] lg:leading-tight"
-                style={{ color: "#FFFFFF" }}
+                style={{ color: "#fff" }}
               >
                 {project.name}
               </h1>
@@ -161,7 +161,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110 self-start"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 <ExternalLink className="h-4 w-4" />
                 Visiter le site
@@ -249,7 +249,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {project.slug === "kosmopellis" && (
                 <div className="space-y-8">
                   <div>
-                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#fff" }}>
                       Stratégie de conversion Shopify
                     </h2>
                     <div
@@ -267,7 +267,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Avant/Après pages produits */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       Avant / Après — Pages produits optimisées
                     </h3>
                     <div
@@ -289,7 +289,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Upsell checkout */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       Stratégie d&apos;upsell de packs au checkout
                     </h3>
                     <div
@@ -311,7 +311,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Landing page produit */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       Landing pages produit haute conversion
                     </h3>
                     <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
@@ -324,7 +324,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-3 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:brightness-110"
-                      style={{ color: "#498f6d" }}
+                      style={{ color: "#fff" }}
                     >
                       Voir un exemple de page produit
                       <ExternalLink className="h-3.5 w-3.5" />
@@ -336,7 +336,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/conception-web/site-shopify/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Agence web Shopify
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -344,7 +344,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/seo/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       SEO & Référencement
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -352,7 +352,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/facebook-ads/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Facebook Ads
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -365,7 +365,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {project.slug === "montecarlo-designs" && (
                 <div className="space-y-8">
                   <div>
-                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                    <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#fff" }}>
                       Modélisation 3D et rendus Blender
                     </h2>
                     <div
@@ -382,7 +382,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Rendu 3D */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       Rendu 3D réalisé avec Blender
                     </h3>
                     <div
@@ -404,7 +404,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* SEO GLB */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       SEO 3D — Format WebGL/GLB indexable par Google
                     </h3>
                     <div
@@ -426,7 +426,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Boutique Monaco */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       La boutique à Monaco
                     </h3>
                     <div
@@ -445,7 +445,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
 
                   {/* Vidéo Loom */}
                   <div>
-                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#FFFFFF" }}>
+                    <h3 className="mb-3 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                       Présentation du projet en vidéo
                     </h3>
                     <div
@@ -466,7 +466,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/sites-immersifs-3d/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Sites Immersifs 3D
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -474,7 +474,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/conception-web/site-shopify/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Agence web Shopify
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -486,7 +486,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {/* Montaigne Optique — lien WordPress */}
               {project.slug === "montaigne-optique" && (
                 <div>
-                  <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                  <h2 className="mb-3 font-heading text-lg font-bold" style={{ color: "#fff" }}>
                     E-commerce WordPress
                   </h2>
                   <div
@@ -502,7 +502,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/conception-web/site-wordpress/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Nos services WordPress
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -510,7 +510,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/seo/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       SEO & Référencement
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -518,7 +518,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <Link
                       href="/services/google-ads/"
                       className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#498f6d" }}
+                      style={{ border: "1px solid rgba(73,143,109,0.3)", color: "#fff" }}
                     >
                       Google Ads
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -544,7 +544,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               <div>
                 <h2
                   className="mb-4 font-heading text-lg font-bold"
-                  style={{ color: "#FFFFFF" }}
+                  style={{ color: "#fff" }}
                 >
                   Technologies utilisées
                 </h2>
@@ -580,11 +580,11 @@ export default async function PortfolioProjectPage({ params }: Props) {
                 <div className="mb-5 flex items-center gap-2.5">
                   <div
                     className="flex h-8 w-8 items-center justify-center rounded-lg"
-                    style={{ backgroundColor: "rgba(73,143,109,0.15)", color: "#498f6d" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.15)", color: "#fff" }}
                   >
                     <TrendingUp className="h-4 w-4" />
                   </div>
-                  <h3 className="font-heading font-bold" style={{ color: "#FFFFFF" }}>
+                  <h3 className="font-heading font-bold" style={{ color: "#fff" }}>
                     Résultats obtenus
                   </h3>
                 </div>
@@ -593,7 +593,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     <li key={result} className="flex items-start gap-3">
                       <span
                         className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full"
-                        style={{ backgroundColor: "rgba(73,143,109,0.18)", color: "#498f6d" }}
+                        style={{ backgroundColor: "rgba(73,143,109,0.18)", color: "#fff" }}
                       >
                         <Check className="h-3 w-3" />
                       </span>
@@ -610,7 +610,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                 className="rounded-2xl p-6"
                 style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.06)" }}
               >
-                <h3 className="mb-2 font-heading font-bold" style={{ color: "#FFFFFF" }}>
+                <h3 className="mb-2 font-heading font-bold" style={{ color: "#fff" }}>
                   Un projet similaire ?
                 </h3>
                 <p className="mb-5 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
@@ -620,7 +620,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                 <Link
                   href="/devis-gratuit/"
                   className="flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                  style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                  style={{ backgroundColor: "#498f6d", color: "#fff" }}
                 >
                   Devis gratuit
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -639,7 +639,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                 className="rounded-2xl p-6"
                 style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.06)" }}
               >
-                <h3 className="mb-4 font-heading font-bold" style={{ color: "#FFFFFF" }}>
+                <h3 className="mb-4 font-heading font-bold" style={{ color: "#fff" }}>
                   Détails du projet
                 </h3>
                 <dl className="space-y-3">
@@ -675,18 +675,18 @@ export default async function PortfolioProjectPage({ params }: Props) {
         />
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+            <h2 className="font-heading text-lg font-bold" style={{ color: "#fff" }}>
               {project.categoryLabel === "Multipages" && (
-                <>Site web multipage pour {project.sector} — réalisation Lannkin</>
+                <>Site web multipage pour {project.sector} — réalisation Ekolink</>
               )}
               {project.categoryLabel === "Onepage" && (
-                <>Landing page et site onepage pour {project.sector} — réalisation Lannkin</>
+                <>Landing page et site onepage pour {project.sector} — réalisation Ekolink</>
               )}
               {project.categoryLabel === "E-commerce" && (
-                <>Boutique e-commerce {project.sector} — réalisation Lannkin</>
+                <>Boutique e-commerce {project.sector} — réalisation Ekolink</>
               )}
               {project.categoryLabel === "International" && (
-                <>Projet international {project.sector} — réalisation Lannkin</>
+                <>Projet international {project.sector} — réalisation Ekolink</>
               )}
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.38)" }}>
@@ -695,17 +695,17 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {project.categoryLabel === "Onepage" && "création de landing pages et sites onepage"}{" "}
               {project.categoryLabel === "E-commerce" && "développement de boutiques e-commerce"}{" "}
               {project.categoryLabel === "International" && "développement de solutions internationales"}{" "}
-              pour des entreprises québécoises.{" "}
-              <Link href="/" style={{ color: "#498f6d" }} className="underline-offset-2 hover:underline">
-                Lannkin, agence web à Laval
+              pour des entreprises françaises.{" "}
+              <Link href="/" style={{ color: "#fff" }} className="underline-offset-2 hover:underline">
+                Ekolink, agence web à Paris
               </Link>
               , conçoit des sites web performants qui génèrent des résultats concrets : plus de
               trafic organique, plus de leads et plus de ventes.
             </p>
             <p className="mt-3 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.38)" }}>
               Vous avez un projet web similaire ? Contactez notre{" "}
-              <Link href="/" style={{ color: "#498f6d" }} className="underline-offset-2 hover:underline">
-                agence web à Laval
+              <Link href="/" style={{ color: "#fff" }} className="underline-offset-2 hover:underline">
+                agence web à Paris
               </Link>{" "}
               pour une consultation gratuite. Nous analysons votre marché, votre concurrence et
               vos objectifs pour vous proposer la solution digitale la plus adaptée à votre budget.
@@ -724,9 +724,9 @@ export default async function PortfolioProjectPage({ params }: Props) {
             style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent)" }}
           />
           <Container>
-            <h2 className="mb-8 font-heading text-xl font-bold" style={{ color: "#FFFFFF" }}>
+            <h2 className="mb-8 font-heading text-xl font-bold" style={{ color: "#fff" }}>
               Autres réalisations —{" "}
-              <span style={{ color: "#498f6d" }}>{project.categoryLabel}</span>
+              <span style={{ color: "#fff" }}>{project.categoryLabel}</span>
             </h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((rel) => (
@@ -756,7 +756,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
                   </p>
                   <h3
                     className="font-heading font-bold transition-colors group-hover:text-[#498f6d]"
-                    style={{ color: "#FFFFFF" }}
+                    style={{ color: "#fff" }}
                   >
                     {rel.name}
                   </h3>
@@ -767,13 +767,13 @@ export default async function PortfolioProjectPage({ params }: Props) {
                     {rel.shortDescription}
                   </p>
                   {rel.results[0] && (
-                    <p className="mt-3 text-xs font-semibold" style={{ color: "#498f6d" }}>
+                    <p className="mt-3 text-xs font-semibold" style={{ color: "#fff" }}>
                       {rel.results[0]}
                     </p>
                   )}
                   <div
                     className="mt-4 inline-flex items-center gap-1 text-xs font-medium opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-                    style={{ color: "#498f6d" }}
+                    style={{ color: "#fff" }}
                   >
                     Voir le projet <ArrowRight className="h-3 w-3" />
                   </div>
@@ -794,7 +794,7 @@ function ContentBlock({ title, body }: { title: string; body: string }) {
     <div>
       <h2
         className="mb-3 font-heading text-lg font-bold"
-        style={{ color: "#FFFFFF" }}
+        style={{ color: "#fff" }}
       >
         {title}
       </h2>

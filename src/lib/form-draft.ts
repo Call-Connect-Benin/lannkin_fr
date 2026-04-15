@@ -11,8 +11,8 @@ const TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 type DraftEnvelope<T> = { data: T; savedAt: number };
 
 export const DRAFT_KEYS = {
-  formulaireConception: "lannkin:draft:formulaire-conception",
-  devisGratuit: "lannkin:draft:devis-gratuit",
+  formulaireConception: "ekolink:draft:formulaire-conception",
+  devisGratuit: "ekolink:draft:devis-gratuit",
 } as const;
 
 export function loadDraft<T>(key: string): T | null {

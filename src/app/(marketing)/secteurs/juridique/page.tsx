@@ -4,23 +4,23 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Avocats & Notaires Laval | Cabinet Juridique | Lannkin",
+  title: "Marketing Digital Avocats & Notaires Paris | Cabinet Juridique | Ekolink",
   description:
-    "Agence marketing pour cabinets d'avocats et notaires à Laval. Google Ads juridique, SEO droit, réputation en ligne, génération de mandats qualifiés. Devis gratuit.",
+    "Agence marketing pour cabinets d'avocats et notaires à Paris. Google Ads juridique, SEO droit, réputation en ligne, génération de mandats qualifiés. Devis gratuit.",
   keywords: [
-    "marketing digital avocat laval",
-    "google ads cabinet juridique montréal",
-    "seo droit québec",
-    "publicité notaire laval",
-    "génération mandats avocat québec",
-    "site web cabinet avocat montréal",
+    "marketing digital avocat paris",
+    "google ads cabinet juridique paris",
+    "seo droit france",
+    "publicité notaire paris",
+    "génération mandats avocat france",
+    "site web cabinet avocat paris",
   ],
   alternates: { canonical: "/secteurs/juridique/" },
 };
 
 const BENEFITS = [
-  "Google Ads juridique conforme aux règles du Barreau du Québec et de la Chambre des notaires",
-  "SEO de positionnement d'expert pour 'avocat divorce laval', 'notaire testament montréal' et plus",
+  "Google Ads juridique conforme aux règles du Barreau du France et de la Chambre des notaires",
+  "SEO de positionnement d'expert pour 'avocat divorce paris', 'notaire testament paris' et plus",
   "Génération de mandats qualifiés — prospects qui ont déjà compris leur besoin et sont prêts à agir",
   "LinkedIn Ads B2B pour cibler les entreprises ayant des besoins juridiques récurrents",
   "Site web professionnel avec biographies d'avocats, domaines de pratique et consultation en ligne",

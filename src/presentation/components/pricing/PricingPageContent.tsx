@@ -38,9 +38,9 @@ const cardVariants = {
 };
 
 function formatPrice(price: number): string {
-  return new Intl.NumberFormat("fr-CA", {
+  return new Intl.NumberFormat("fr-FR", {
     style: "currency",
-    currency: "CAD",
+    currency: "EUR",
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(price);
@@ -85,20 +85,20 @@ export function PricingPageContent({
   const FALLBACK_LINK = "/devis-gratuit/";
 
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       {/* Hero — parallax 3D, compact 2-col */}
       <section className="parallax-section relative overflow-hidden py-12 lg:py-16">
-        <ParallaxBg src={parallaxImage} overlay={0.65} />
+        <ParallaxBg src={parallaxImage} overlay={0.85} />
         <div className="relative z-10">
           <Container>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
 
               {/* Left — Title + subtitle */}
               <div className="flex-1">
-                <h1 style={{ color: "#FFFFFF" }} className="font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                <h1 className="font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl lg:text-5xl">
                   {title}
                 </h1>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "#DDDDDD" }}>
+                <p className="mt-4 text-base leading-relaxed text-[#2d2d2d]/70">
                   {subtitle}
                 </p>
                 <a
@@ -112,32 +112,45 @@ export function PricingPageContent({
 
               {/* Right — Reassurance card */}
               <div className="shrink-0 lg:w-72">
-                <div className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
+                <div
+                  className="rounded-2xl p-5"
+                  style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
+                >
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                    <div
+                      className="flex items-center gap-3 rounded-xl px-4 py-3"
+                      style={{ backgroundColor: "#f7f5f0", border: "1px solid rgba(45,45,45,0.06)" }}
+                    >
                       <span className="text-xl">⭐</span>
                       <div>
-                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>4,9 / 5 sur Google</p>
-                        <p className="text-xs" style={{ color: "#CCCCCC" }}>54+ avis vérifiés</p>
+                        <p className="text-sm font-bold text-[#2d2d2d]">4,95 / 5 sur Google</p>
+                        <p className="text-xs text-[#2d2d2d]/65">Avis clients vérifiés</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                    <div
+                      className="flex items-center gap-3 rounded-xl px-4 py-3"
+                      style={{ backgroundColor: "#f7f5f0", border: "1px solid rgba(45,45,45,0.06)" }}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src="/images/badges/badge-google-partner.svg" alt="Google Partner" className="h-8 w-8 shrink-0" />
                       <div>
-                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>Google Partner</p>
-                        <p className="text-xs" style={{ color: "#CCCCCC" }}>Certifié depuis 2015</p>
+                        <p className="text-sm font-bold text-[#2d2d2d]">Google Partner</p>
+                        <p className="text-xs text-[#2d2d2d]/65">Certifié depuis 2015</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3">
+                    <div
+                      className="flex items-center gap-3 rounded-xl px-4 py-3"
+                      style={{ backgroundColor: "#f7f5f0", border: "1px solid rgba(45,45,45,0.06)" }}
+                    >
                       <span className="text-xl">◆</span>
                       <div>
-                        <p className="text-sm font-bold" style={{ color: "#FFFFFF" }}>+10 ans d&apos;expérience</p>
-                        <p className="text-xs" style={{ color: "#CCCCCC" }}>100k+$/mois de budgets gérés</p>
+                        <p className="text-sm font-bold text-[#2d2d2d]">Plus de 10 ans d&apos;expérience</p>
+                        <p className="text-xs text-[#2d2d2d]/65">100 k€+/mois de budgets pilotés</p>
                       </div>
                     </div>
                   </div>
-                  <p className="mt-3 text-center text-xs" style={{ color: "#AAAAAA" }}>
-                    Prix en CAD, avant taxes
+                  <p className="mt-3 text-center text-xs text-[#2d2d2d]/55">
+                    Prix en euros, TVA non incluse
                   </p>
                 </div>
               </div>

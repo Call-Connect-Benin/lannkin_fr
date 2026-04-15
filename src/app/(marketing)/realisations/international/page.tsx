@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Agence Web Internationale Laval Canada | Portfolio Projets Internationaux Lannkin",
+  title: "Agence Web Internationale Paris | Portfolio Projets Internationaux Ekolink",
   description:
-    "Agence web bilingue à Laval (Canada) : création de sites web et stratégies digitales pour les entreprises internationales. France, Suisse, USA, Maroc. Portfolio et devis.",
+    "Agence web bilingue à Paris (France) : création de sites web et stratégies digitales pour les entreprises internationales. France, Suisse, USA, Maroc. Portfolio et devis.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/international/",
+    canonical: "https://ekolink.fr/realisations/international/",
   },
   openGraph: {
-    title: "Agence Web Internationale Laval Canada | Portfolio Lannkin",
+    title: "Agence Web Internationale Paris | Portfolio Ekolink",
     description:
-      "Portfolio international de Lannkin : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web canadienne bilingue.",
-    url: "https://lannkin.ca/realisations/international/",
+      "Portfolio international de Ekolink : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web française bilingue.",
+    url: "https://ekolink.fr/realisations/international/",
   },
 };
 
@@ -39,8 +39,8 @@ export default function RealisationsInternationalPage() {
     <main>
       <RealisationsBanner
         currentCategory="international"
-        title="Agence web internationale basée au Canada"
-        description="De Laval à Paris, de Montréal à Lausanne — notre agence web canadienne accompagne les entreprises d'Europe, des États-Unis, du Maroc et du Canada dans leur présence digitale internationale."
+        title="Agence web internationale basée en France"
+        description="De Paris à Lausanne — notre agence web française accompagne les entreprises d'Europe, des États-Unis, du Maroc et du Canada dans leur présence digitale internationale."
         stats={[
           { value: "40+ pays", label: "clients générés via nos sites" },
           { value: `${internationalCount} projets`, label: "internationaux livrés" },
@@ -68,24 +68,24 @@ export default function RealisationsInternationalPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Agence web canadienne pour projets internationaux — Laval, Québec
+              Agence web française pour projets internationaux — Paris, France
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="text-sm leading-relaxed text-muted space-y-4">
                 <p>
-                  Lannkin est une <strong className="text-white">agence web bilingue basée à Laval, Canada</strong>,
+                  Ekolink est une <strong className="text-white">agence web bilingue basée à Paris, France</strong>,
                   avec une expertise reconnue pour les projets web internationaux. Notre équipe maîtrise
                   le SEO en français, anglais et allemand, et comprend les spécificités de chaque marché :
                   Google France, Google Suisse, Google Maroc, Google.com pour le marché américain.
                 </p>
                 <p>
                   Pour les <strong className="text-white">entreprises françaises, européennes ou américaines</strong>
-                  {" "}qui souhaitent faire appel à une agence web au Canada, Lannkin offre un avantage
-                  unique : des tarifs compétitifs en dollars canadiens, une expertise technique de premier
+                  {" "}qui souhaitent faire appel à une agence web en France, Ekolink offre un avantage
+                  unique : des tarifs compétitifs en euros, une expertise technique de premier
                   niveau et une compréhension culturelle des marchés francophones et anglophones.
                 </p>
                 <p>
-                  Pour les <strong className="text-white">entreprises québécoises et canadiennes</strong>
+                  Pour les <strong className="text-white">entreprises françaises</strong>
                   {" "}qui veulent percer à l&apos;international, nous créons des sites web adaptés aux
                   marchés cibles avec SEO international, hébergement optimisé et campagnes publicitaires
                   multilingues.
@@ -111,7 +111,7 @@ export default function RealisationsInternationalPage() {
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { flag: "🇨🇦", title: "Canada", desc: "Québec, Ontario, Alberta — SEO .ca et campagnes bilingues" },
+                  { flag: "🇨🇦", title: "Canada", desc: "France, Ontario, Alberta — SEO .ca et campagnes bilingues" },
                   { flag: "🇫🇷", title: "France", desc: "Paris, Lyon, Marseille — SEO Google.fr, RGPD" },
                   { flag: "🇨🇭", title: "Suisse", desc: "Suisse romande et alémanique — .ch, multilingue" },
                   { flag: "🇲🇦", title: "Maroc", desc: "Casablanca, Agadir — tourisme, commerce, B2B" },

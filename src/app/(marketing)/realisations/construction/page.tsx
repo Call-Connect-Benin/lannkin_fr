@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Construction & Rénovation Québec | Portfolio Lannkin",
+  title: "Sites Web Construction & Rénovation France | Portfolio Ekolink",
   description:
-    "Portfolio Lannkin : sites web pour entrepreneurs en construction, rénovation, plomberie, maçonnerie et métiers du bâtiment au Québec. SEO local et Google Ads.",
+    "Portfolio Ekolink : sites web pour entrepreneurs en construction, rénovation, plomberie, maçonnerie et métiers du bâtiment en France. SEO local et Google Ads.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/construction/",
+    canonical: "https://ekolink.fr/realisations/construction/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsConstructionPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Construction & Rénovation"
-        description="De l'entrepreneur général au maître électricien, Lannkin conçoit des sites web qui génèrent des demandes de soumission et dominent le SEO local pour les métiers du bâtiment au Québec."
+        description="De l'entrepreneur général au maître électricien, Ekolink conçoit des sites web qui génèrent des demandes de soumission et dominent le SEO local pour les métiers du bâtiment en France."
         stats={[
           { value: `${count} projets`, label: "dans le bâtiment" },
           { value: "+187 %", label: "de leads (client rénovation)" },
@@ -56,12 +56,12 @@ export default function RealisationsConstructionPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Agence web pour entrepreneurs en construction au Québec
+              Agence web pour entrepreneurs en construction en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
               La construction est l&apos;un des secteurs les plus compétitifs en ligne : chaque
               entrepreneur cherche à apparaître en premier sur Google lorsqu&apos;un propriétaire
-              tape « entrepreneur rénovation [ville] ». Lannkin conçoit des sites web pensés pour
+              tape « entrepreneur rénovation [ville] ». Ekolink conçoit des sites web pensés pour
               ce marché — avec des pages services détaillées, des galeries de réalisations
               convaincantes et des formulaires de soumission optimisés pour convertir.
             </p>

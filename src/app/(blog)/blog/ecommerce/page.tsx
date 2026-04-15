@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Ecommerce | Lannkin",
+  title: "Blog Ecommerce | Ekolink",
   description: "Articles et guides e-commerce. Stratégies de vente en ligne, optimisation et tendances du commerce électronique.",
 };
 

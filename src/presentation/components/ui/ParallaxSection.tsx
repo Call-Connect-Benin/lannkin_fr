@@ -26,7 +26,7 @@ export function ParallaxBg({ src, overlay = 0.6 }: ParallaxBgProps) {
       />
       <div
         className="absolute inset-0 z-0"
-        style={{ backgroundColor: "#0A0A0A", opacity: overlay }}
+        style={{ backgroundColor: "#f7f5f0", opacity: overlay }}
         aria-hidden="true"
       />
     </>

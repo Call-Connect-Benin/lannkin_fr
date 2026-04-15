@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Seo | Lannkin",
+  title: "Blog Seo | Ekolink",
   description: "Articles et guides SEO. Techniques, stratégies et actualités du référencement naturel pour améliorer votre visibilité.",
 };
 

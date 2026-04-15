@@ -117,7 +117,7 @@ const inputCls =
 const textareaCls = cn(inputCls, "min-h-[110px] resize-y leading-relaxed");
 const selectCls = cn(
   inputCls,
-  "appearance-none pr-10 [&>option]:bg-[#141414] [&>option]:text-white"
+  "appearance-none pr-10 [&>option]:bg-surface [&>option]:text-white"
 );
 const labelCls = "block text-sm font-medium text-white/85 mb-2";
 
@@ -596,17 +596,17 @@ export default function FormulaireConceptionPage() {
             Merci, c&apos;est bien reçu.
           </h1>
           <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-md">
-            Votre demande a été transmise à notre équipe. Un expert LANNKIN vous
+            Votre demande a été transmise à notre équipe. Un expert EKOLINK vous
             rappelle sous <strong className="text-white">24 h ouvrables</strong>{" "}
-            (lun-ven, 9 h à 17 h 30, heure du Québec).
+            (lun-ven, 9 h à 17 h 30, heure de Paris).
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="tel:+14389446129"
+              href="tel:+33100000000"
               className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.06] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:border-accent hover:bg-accent/10"
             >
               <Phone className="h-4 w-4 text-accent" />
-              +1 438 944 6129
+              +33 1 00 00 00 00
             </a>
             <a
               href="/"
@@ -651,7 +651,7 @@ export default function FormulaireConceptionPage() {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 mb-5 backdrop-blur-sm">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
-              Démarrage de projet · Canada
+              Démarrage de projet · France
             </span>
           </div>
           <h1 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-white leading-[1.05] mb-4">
@@ -679,7 +679,7 @@ export default function FormulaireConceptionPage() {
             </div>
             <div className="flex items-center gap-1.5">
               <span className="text-base">🍁</span>
-              <span>Fait au Québec</span>
+              <span>Fait en France</span>
             </div>
           </div>
         </div>
@@ -872,7 +872,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="companyAddress"
-                    placeholder="Ex. : 123 rue Principale, Montréal, QC H2X 1Y4"
+                    placeholder="Ex. : 123 rue Principale, Paris, QC H2X 1Y4"
                     className={inputCls}
                   />
                 </div>
@@ -902,7 +902,7 @@ export default function FormulaireConceptionPage() {
                 <textarea
                   name="cities"
                   required
-                  placeholder="Ex. : Montréal, Laval, Québec, Trois-Rivières"
+                  placeholder="Ex. : Paris, Paris, France, Nice"
                   className={textareaCls}
                 />
               </div>
@@ -1102,7 +1102,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="targetZone"
-                    placeholder="Ex. : Montréal, Laval, Québec"
+                    placeholder="Ex. : Paris, Paris, France"
                     className={inputCls}
                   />
                 </div>
@@ -1111,7 +1111,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="excludeZone"
-                    placeholder="Ex. : hors Canada"
+                    placeholder="Ex. : hors France"
                     className={inputCls}
                   />
                 </div>
@@ -1138,7 +1138,7 @@ export default function FormulaireConceptionPage() {
                 <Lbl>Audience cible (âge, sexe, lieu, langue)</Lbl>
                 <textarea
                   name="targetAudience"
-                  placeholder="Ex. : hommes/femmes 30-50 ans, Montréal, bilingues…"
+                  placeholder="Ex. : hommes/femmes 30-50 ans, Paris, bilingues…"
                   className={textareaCls}
                 />
               </div>
@@ -1323,7 +1323,7 @@ export default function FormulaireConceptionPage() {
                 <input
                   type="text"
                   name="companyAddress"
-                  placeholder="Ex. : Montréal, QC, H2X 1Y4"
+                  placeholder="Ex. : Paris, QC, H2X 1Y4"
                   className={inputCls}
                 />
               </div>
@@ -1423,7 +1423,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="companyAddress"
-                    placeholder="Ex. : 123 rue Principale, Montréal, QC H2X 1Y4"
+                    placeholder="Ex. : 123 rue Principale, Paris, QC H2X 1Y4"
                     className={inputCls}
                   />
                 </div>
@@ -1564,7 +1564,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="companyAddress"
-                    placeholder="Ex. : 123 rue Principale, Montréal, QC H2X 1Y4"
+                    placeholder="Ex. : 123 rue Principale, Paris, QC H2X 1Y4"
                     className={inputCls}
                   />
                 </div>
@@ -1599,7 +1599,7 @@ export default function FormulaireConceptionPage() {
                   <textarea
                     name="cities"
                     required
-                    placeholder="Ex. : Montréal, Laval, Québec"
+                    placeholder="Ex. : Paris, Paris, France"
                     className={textareaCls}
                   />
                 </div>
@@ -1729,7 +1729,7 @@ export default function FormulaireConceptionPage() {
             </button>
             <p className="text-xs text-white/40">
               En soumettant ce formulaire, vous acceptez d&apos;être contacté par
-              LANNKIN. Vos données restent hébergées au Canada.
+              EKOLINK. Vos données restent hébergées en France.
             </p>
           </div>
         </form>
@@ -1740,11 +1740,11 @@ export default function FormulaireConceptionPage() {
             Une question ? Appelez-nous directement :
           </p>
           <a
-            href="tel:+14389446129"
+            href="tel:+33100000000"
             className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:border-accent hover:bg-accent/10"
           >
             <Phone className="h-4 w-4 text-accent" />
-            +1 438 944 6129
+            +33 1 00 00 00 00
             <span className="text-xs text-white/40">· Lun-Ven 9h-17h30</span>
           </a>
         </div>

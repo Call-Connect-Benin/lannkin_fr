@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { AuditGoogleAdsLP } from "./AuditGoogleAdsLP";
 
 export const metadata: Metadata = {
-  title: "Audit Google Ads gratuit : Détectez vos clics frauduleux | Lannkin",
+  title: "Audit Google Ads gratuit : Détectez vos clics frauduleux | Ekolink",
   description:
     "Découvrez combien vous perdez en clics frauduleux sur Google Ads. "
     + "Notre audit gratuit analyse 90 jours de données et identifie les clics robots, "

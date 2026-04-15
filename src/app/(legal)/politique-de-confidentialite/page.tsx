@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Politique De Confidentialité | Lannkin",
-  description: "Politique de confidentialité de Lannkin. Découvrez comment nous protégeons vos données personnelles.",
+  title: "Politique De Confidentialité | Ekolink",
+  description: "Politique de confidentialité de Ekolink. Découvrez comment nous protégeons vos données personnelles.",
 };
 
 export default function PolitiqueDeConfidentialitePage() {

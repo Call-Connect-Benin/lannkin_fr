@@ -7,17 +7,17 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Contacter Agence Web Laval | Lannkin",
+  title: "Contacter Agence Web Paris | Ekolink",
   description:
-    "Contactez notre agence web à Laval. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Lannkin.",
-  alternates: { canonical: "https://lannkin.ca/contact/" },
+    "Contactez notre agence web à Paris. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Ekolink.",
+  alternates: { canonical: "https://ekolink.fr/contact/" },
 };
 
 export default function ContactPage() {
   return (
     <main
       className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden"
-      style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}
+      style={{ backgroundColor: "#0C0C0C", color: "#fff" }}
     >
       {/* ─── Image 3D à droite, fondue en diagonale ─── */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -75,15 +75,15 @@ export default function ContactPage() {
                   style={{ backgroundColor: "#498f6d" }}
                 />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
                 En ligne — réponse en moins de 2 min
               </span>
             </div>
 
             <h1 className="mt-6 font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#FFFFFF" }}>
+              style={{ color: "#fff" }}>
               Parlons de votre{" "}
-              <span style={{ color: "#498f6d" }}>projet</span>
+              <span style={{ color: "#fff" }}>projet</span>
             </h1>
 
             {/* Ligne décorative */}
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 >
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
                   >
                     <Phone className="h-4 w-4" />
                   </span>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                 >
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
                   >
                     <Mail className="h-4 w-4" />
                   </span>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                 <div className="inline-flex items-center gap-3.5">
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
                   >
                     <MapPin className="h-4 w-4" />
                   </span>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                       Localisation
                     </p>
                     <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.80)" }}>
-                      Laval, Québec, Canada
+                      Paris, France
                     </p>
                   </div>
                 </div>

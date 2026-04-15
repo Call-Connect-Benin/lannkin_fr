@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Site Web Multipage Laval & Québec | Portfolio Lannkin",
+  title: "Création Site Web Multipage Paris & France | Portfolio Ekolink",
   description:
-    "Agence web à Laval spécialisée en sites multipages : vitrine, PME, entreprise. Conception web professionnelle au Québec. Portfolio de réalisations, devis gratuit.",
+    "Agence web à Paris spécialisée en sites multipages : vitrine, PME, entreprise. Conception web professionnelle en France. Portfolio de réalisations, devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/multipages/",
+    canonical: "https://ekolink.fr/realisations/multipages/",
   },
   openGraph: {
-    title: "Création Site Web Multipage Laval & Québec | Portfolio Lannkin",
+    title: "Création Site Web Multipage Paris & France | Portfolio Ekolink",
     description:
-      "Sites web multipages pour PME et entreprises à Laval et au Québec. Conception web professionnelle, SEO local et résultats mesurables. +187 % de leads pour nos clients.",
-    url: "https://lannkin.ca/realisations/multipages/",
+      "Sites web multipages pour PME et entreprises à Paris et en France. Conception web professionnelle, SEO local et résultats mesurables. +187 % de leads pour nos clients.",
+    url: "https://ekolink.fr/realisations/multipages/",
   },
 };
 
@@ -31,7 +31,7 @@ const INCLUS = [
   "Pages services, équipe, blogue et contact",
   "Formulaires de contact avec CRM ou courriel",
   "Vitesse de chargement < 2 s (PageSpeed 90+)",
-  "Hébergement canadien ou international au choix",
+  "Hébergement français ou international au choix",
 ];
 
 export default function RealisationsMultipagesPage() {
@@ -39,10 +39,10 @@ export default function RealisationsMultipagesPage() {
     <main>
       <RealisationsBanner
         currentCategory="multipages"
-        title="Création de sites web multipages à Laval"
-        description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Laval conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises du Québec et de la Rive-Nord."
+        title="Création de sites web multipages à Paris"
+        description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Paris conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises du France et de la Île-de-France."
         stats={[
-          { value: "+187 %", label: "de leads qualifiés (client Laval)" },
+          { value: "+187 %", label: "de leads qualifiés (client Paris)" },
           { value: `${multiPagesCount} projets`, label: "multipages livrés" },
           { value: "Google Partner", label: "SEO certifié depuis 2015" },
         ]}
@@ -68,26 +68,26 @@ export default function RealisationsMultipagesPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Agence web à Laval — Conception de sites multipages pour PME québécoises
+              Agence web à Paris — Conception de sites multipages pour PME françaises
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="text-sm leading-relaxed text-muted space-y-4">
                 <p>
-                  Un <strong className="text-white">site web multipage à Laval</strong> est la solution
+                  Un <strong className="text-white">site web multipage à Paris</strong> est la solution
                   idéale pour les PME, professionnels et entreprises locales qui veulent une présence web
                   complète. Contrairement à une simple page, un site multipage permet de détailler chaque
                   service, de présenter votre équipe, de publier un blogue et d&apos;optimiser chaque page
                   sur des mots-clés locaux différents.
                 </p>
                 <p>
-                  Notre <strong className="text-white">agence web de Laval</strong> conçoit des sites
+                  Notre <strong className="text-white">agence web de Paris</strong> conçoit des sites
                   vitrine et multipages pour toutes les industries : concessionnaires auto, cliniques de
                   santé, entrepreneurs en construction, cabinets de services professionnels, restaurants,
                   cuisinistes, et bien plus.
                 </p>
                 <p>
                   Chaque site est pensé pour <strong className="text-white">dominer le SEO local</strong> :
-                  ciblage géographique Laval, Rive-Nord, Montréal, balisage Schema local, et intégration
+                  ciblage géographique Paris, Île-de-France, Paris, balisage Schema local, et intégration
                   Google My Business pour maximiser la visibilité dans la recherche locale.
                 </p>
               </div>
@@ -107,17 +107,17 @@ export default function RealisationsMultipagesPage() {
             {/* Local SEO block */}
             <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
               <h2 className="font-heading text-xl font-bold text-white">
-                Conception web Laval, Rive-Nord, Montréal — Votre site web qui génère des leads
+                Conception web Paris, Île-de-France, Paris — Votre site web qui génère des leads
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                Fondée à <strong className="text-white">Laval (Québec)</strong> en 2015, Lannkin conçoit
-                des sites web pour les entreprises de la région : Laval, Boisbriand, Blainville,
-                Terrebonne, Sainte-Thérèse, Repentigny, Montréal et partout en province.
+                Fondée à <strong className="text-white">Paris (France)</strong> en 2015, Ekolink conçoit
+                des sites web pour les entreprises de la région : Paris, Neuilly, Boulogne,
+                Versailles, Saint-Germain, Repentigny, Paris et partout en province.
                 Nos sites multipages sont développés avec les technologies les plus performantes
                 (Next.js, WordPress) et optimisés pour la recherche locale.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                Un <strong className="text-white">site vitrine multipage à Laval</strong> n&apos;est
+                Un <strong className="text-white">site vitrine multipage à Paris</strong> n&apos;est
                 pas seulement une carte de visite en ligne — c&apos;est un outil de génération de leads.
                 Nous configurons chaque site avec un formulaire de contact optimisé, un suivi des
                 conversions Google Analytics 4 et une stratégie SEO locale pour attirer des clients

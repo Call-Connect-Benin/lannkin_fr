@@ -9,10 +9,10 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Agence Web Laval Québec | À Propos | Lannkin",
+  title: "Agence Web Paris France | À Propos | Ekolink",
   description:
-    "Agence web à Laval, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME au Canada, France et Suisse. Découvrez l'équipe Lannkin.",
-  alternates: { canonical: "https://lannkin.ca/a-propos/" },
+    "Agence web à Paris, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME en France et Suisse. Découvrez l'équipe Ekolink.",
+  alternates: { canonical: "https://ekolink.fr/a-propos/" },
 };
 
 // ---------------------------------------------------------------------------
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
 
 const OFFICES = [
   {
-    country: "LANNKIN CANADA",
+    country: "EKOLINK CANADA",
     image: "/images/a-propos/Canada-e1556023963820-2500x1406-1-850x560.jpg.webp",
-    alt: "Skyline de Toronto — Lannkin Canada",
+    alt: "Skyline de Toronto — Ekolink France",
   },
   {
-    country: "LANNKIN FRANCE",
+    country: "EKOLINK FRANCE",
     image: "/images/a-propos/shutterstock_667548661v2-1024x683-1.webp",
-    alt: "Tour Eiffel à Paris — Lannkin France",
+    alt: "Tour Eiffel à Paris — Ekolink France",
   },
   {
-    country: "LANNKIN SUISSE",
+    country: "EKOLINK SUISSE",
     image: "/images/a-propos/suisse-paysage-ville.webp",
-    alt: "Paysage de ville suisse — Lannkin Suisse",
+    alt: "Paysage de ville suisse — Ekolink Suisse",
   },
 ];
 
@@ -50,7 +50,7 @@ const AD_CHANNELS = [
       { label: "Propeller Ads", href: "/services/native-ads/" },
     ],
     icon: Globe,
-    color: "#498f6d",
+    color: "#fff",
   },
   {
     category: "Campagnes SEA",
@@ -99,7 +99,7 @@ const RD_SCRIPTS = [
 
 export default function AProposPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
 
       {/* ─── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden pb-16 pt-12">
@@ -151,17 +151,17 @@ export default function AProposPage() {
                 />
                 <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
-                Fondée en 2015 · Laval, Québec
+              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+                Fondée en 2015 · Paris, France
               </span>
             </div>
 
             <h1
               className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               À Propos —{" "}
-              <span style={{ color: "#498f6d" }}>Lannkin</span>
+              <span style={{ color: "#fff" }}>Ekolink</span>
             </h1>
 
             <div
@@ -173,7 +173,7 @@ export default function AProposPage() {
               className="mt-5 max-w-xl text-base leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
-              L&apos;agence web au service des TPE et PME francophones. Canada, France, Suisse —
+              L&apos;agence web au service des TPE et PME francophones. France, Suisse, Canada —
               une expertise internationale, un accompagnement de proximité.
             </p>
 
@@ -182,10 +182,10 @@ export default function AProposPage() {
               {[
                 { value: "2015", label: "Année de fondation" },
                 { value: "+10 ans", label: "D'expérience" },
-                { value: "3 pays", label: "Canada · France · Suisse" },
+                { value: "3 pays", label: "France · Suisse · Canada" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>
+                  <p className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
                     {stat.value}
                   </p>
                   <p className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>
@@ -206,10 +206,10 @@ export default function AProposPage() {
         />
         <Container>
           <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#fff" }}>
               Présence internationale
             </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#FFFFFF" }}>
+            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#fff" }}>
               3 pays, 1 vision
             </h2>
           </div>
@@ -230,7 +230,7 @@ export default function AProposPage() {
                     style={{ opacity: 0.75 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent" />
-                  <p className="absolute bottom-3 left-4 font-heading text-base font-bold" style={{ color: "#FFFFFF" }}>
+                  <p className="absolute bottom-3 left-4 font-heading text-base font-bold" style={{ color: "#fff" }}>
                     {office.country}
                   </p>
                 </div>
@@ -242,7 +242,7 @@ export default function AProposPage() {
                       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
                       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                     </svg>
-                    <span className="text-xs font-semibold" style={{ color: "#498f6d" }}>
+                    <span className="text-xs font-semibold" style={{ color: "#fff" }}>
                       Certification Google Ads
                     </span>
                   </div>
@@ -292,10 +292,10 @@ export default function AProposPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
-              Lannkin, l&apos;agence web au service des{" "}
-              <span style={{ color: "#498f6d" }}>TPE et PME francophones</span>
+              Ekolink, l&apos;agence web au service des{" "}
+              <span style={{ color: "#fff" }}>TPE et PME francophones</span>
             </h2>
             <div
               className="mx-auto mt-5 h-px w-14"
@@ -305,7 +305,7 @@ export default function AProposPage() {
               className="mt-6 text-base leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
-              Lannkin, basée à Laval et dans tous les pays francophones, accompagne les TPE et PME
+              Ekolink, basée à Paris et dans tous les pays francophones, accompagne les TPE et PME
               avec des stratégies marketing globales et création de site web sur-mesure. Grâce à
               notre expertise internationale, nous vous offrons des solutions adaptées à chaque
               business, vous donnant une longueur d&apos;avance sur vos concurrents, avec
@@ -316,7 +316,7 @@ export default function AProposPage() {
               <Link
                 href="/contact/"
                 className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Contactez-nous
                 <ArrowRight className="h-4 w-4" />
@@ -337,34 +337,34 @@ export default function AProposPage() {
             <div>
               <span
                 className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider"
-                style={{ color: "#498f6d" }}
+                style={{ color: "#fff" }}
               >
                 Notre histoire
               </span>
               <h2
                 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-                style={{ color: "#FFFFFF" }}
+                style={{ color: "#fff" }}
               >
                 Albert Lanne et Kevin Kinani fondent{" "}
-                <span style={{ color: "#498f6d" }}>Lanne et Kinani associés</span>
+                <span style={{ color: "#fff" }}>Lanne et Kinani associés</span>
               </h2>
               <div className="mt-6 space-y-5" style={{ color: "rgba(255,255,255,0.55)" }}>
                 <p className="text-sm leading-relaxed">
-                  <strong style={{ color: "#FFFFFF" }}>Albert Lanne</strong>, expert en marketing et
+                  <strong style={{ color: "#fff" }}>Albert Lanne</strong>, expert en marketing et
                   stratégie d&apos;acquisition, excelle dans les environnements très concurrentiels.
                   Il gère de gros volumes de demandes et crée des tunnels avec un marketing 360°.
                 </p>
                 <p className="text-sm leading-relaxed">
-                  <strong style={{ color: "#FFFFFF" }}>Kevin Kinani</strong>, quant à lui, excelle
+                  <strong style={{ color: "#fff" }}>Kevin Kinani</strong>, quant à lui, excelle
                   dans les scripts, le growth hacking, la cybersécurité et l&apos;automatisation.
                   Il a mis en place des scripts propriétaires grâce à un pôle de recherche et
                   développement, offrant des solutions techniques innovantes qui optimisent les
                   performances et la sécurité des projets.
                 </p>
                 <p className="text-sm leading-relaxed">
-                  Ensemble, leur vision est claire : Lannkin, c&apos;est l&apos;assurance de vous
+                  Ensemble, leur vision est claire : Ekolink, c&apos;est l&apos;assurance de vous
                   propulser en tête de votre marché en{" "}
-                  <strong style={{ color: "#FFFFFF" }}>1ʳᵉ position sur Google</strong> avec des
+                  <strong style={{ color: "#fff" }}>1ʳᵉ position sur Google</strong> avec des
                   stratégies éprouvées, portées par des experts dans chaque domaine, pour des
                   résultats concrets et durables.
                 </p>
@@ -373,7 +373,7 @@ export default function AProposPage() {
                 <Link
                   href="/services/"
                   className="inline-flex items-center gap-2 rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                  style={{ borderColor: "#498f6d", color: "#498f6d" }}
+                  style={{ borderColor: "#498f6d", color: "#fff" }}
                 >
                   Nos services
                   <ArrowRight className="h-4 w-4" />
@@ -413,17 +413,17 @@ export default function AProposPage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               Se démarquer, c&apos;est choisir une agence qui vous offre{" "}
-              <span style={{ color: "#498f6d" }}>plus que les agences classiques</span>
+              <span style={{ color: "#fff" }}>plus que les agences classiques</span>
             </h2>
             <p
               className="mt-5 text-base leading-relaxed"
               style={{ color: "rgba(255,255,255,0.50)" }}
             >
               Alors que la plupart des agences web se concentrent uniquement sur Google et Facebook
-              Ads, nous allons bien plus loin. Lannkin vous offre une gamme élargie de services et
+              Ads, nous allons bien plus loin. Ekolink vous offre une gamme élargie de services et
               l&apos;accès à des régies publicitaires premium.
             </p>
           </div>
@@ -441,7 +441,7 @@ export default function AProposPage() {
                 >
                   <channel.icon className="h-5 w-5" style={{ color: channel.color }} />
                 </div>
-                <h3 className="font-heading text-base font-bold" style={{ color: "#FFFFFF" }}>
+                <h3 className="font-heading text-base font-bold" style={{ color: "#fff" }}>
                   {channel.category}
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
@@ -450,7 +450,7 @@ export default function AProposPage() {
                 <ul className="mt-4 space-y-2">
                   {channel.platforms.map((platform) => (
                     <li key={platform.label} className="flex items-center gap-2">
-                      <CheckCircle className="h-3.5 w-3.5 shrink-0" style={{ color: "#498f6d" }} />
+                      <CheckCircle className="h-3.5 w-3.5 shrink-0" style={{ color: "#fff" }} />
                       <Link
                         href={platform.href}
                         className="text-xs transition-colors hover:underline"
@@ -469,7 +469,7 @@ export default function AProposPage() {
             <Link
               href="/devis-gratuit/"
               className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-              style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+              style={{ backgroundColor: "#498f6d", color: "#fff" }}
             >
               Je me lance !
               <ArrowRight className="h-4 w-4" />
@@ -488,16 +488,16 @@ export default function AProposPage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <span
               className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider"
-              style={{ color: "#498f6d" }}
+              style={{ color: "#fff" }}
             >
               Pôle Recherche &amp; Développement
             </span>
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
-              Lannkin : l&apos;innovation au cœur de votre{" "}
-              <span style={{ color: "#498f6d" }}>performance digitale</span>
+              Ekolink : l&apos;innovation au cœur de votre{" "}
+              <span style={{ color: "#fff" }}>performance digitale</span>
             </h2>
             <p
               className="mt-5 text-base leading-relaxed"
@@ -528,7 +528,7 @@ export default function AProposPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-lg font-bold" style={{ color: "#FFFFFF" }}>
+                  <h3 className="font-heading text-lg font-bold" style={{ color: "#fff" }}>
                     {script.title}
                   </h3>
                   <p
@@ -593,17 +593,17 @@ export default function AProposPage() {
                   />
                   <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
                 </span>
-                <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+                <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
                   En ligne — réponse en moins de 2 min
                 </span>
               </div>
 
               <h2
                 className="mt-6 font-heading text-4xl font-bold tracking-tight"
-                style={{ color: "#FFFFFF" }}
+                style={{ color: "#fff" }}
               >
                 Travaillons{" "}
-                <span style={{ color: "#498f6d" }}>ensemble</span>
+                <span style={{ color: "#fff" }}>ensemble</span>
               </h2>
               <div
                 className="mt-5 h-px w-14"
@@ -621,13 +621,13 @@ export default function AProposPage() {
                 {[
                   { icon: Phone, label: "Téléphone", value: SITE_CONFIG.phone, href: `tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}` },
                   { icon: Mail, label: "Email", value: SITE_CONFIG.email, href: `mailto:${SITE_CONFIG.email}` },
-                  { icon: MapPin, label: "Localisation", value: "Laval, Québec, Canada" },
+                  { icon: MapPin, label: "Localisation", value: "Paris, France" },
                 ].map(({ icon: Icon, label, value, href }) => {
                   const inner = (
                     <>
                       <span
                         className="flex h-10 w-10 items-center justify-center rounded-xl"
-                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
                       >
                         <Icon className="h-4 w-4" />
                       </span>

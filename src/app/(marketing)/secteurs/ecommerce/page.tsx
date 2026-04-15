@@ -4,15 +4,15 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Agence E-Commerce Laval & Montréal | Shopify, Google Shopping, SEO | Lannkin",
+  title: "Agence E-Commerce Paris & Paris | Shopify, Google Shopping, SEO | Ekolink",
   description:
-    "Agence e-commerce certifiée Shopify Partner à Laval. Google Shopping, Facebook Shops, SEO produit, optimisation du taux de conversion. Faites croître votre boutique en ligne.",
+    "Agence e-commerce certifiée Shopify Partner à Paris. Google Shopping, Facebook Shops, SEO produit, optimisation du taux de conversion. Faites croître votre boutique en ligne.",
   keywords: [
-    "agence ecommerce laval",
-    "shopify partner montréal",
-    "google shopping québec",
-    "seo ecommerce laval",
-    "agence web ecommerce québec",
+    "agence ecommerce paris",
+    "shopify partner paris",
+    "google shopping france",
+    "seo ecommerce paris",
+    "agence web ecommerce france",
     "optimisation taux conversion boutique en ligne",
   ],
   alternates: { canonical: "/secteurs/ecommerce/" },

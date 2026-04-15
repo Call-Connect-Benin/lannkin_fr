@@ -141,17 +141,17 @@ body::before {
 
 @layer utilities {
   .glass {
-    background: rgba(20, 20, 20, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(45, 45, 45, 0.08);
   }
 
   .glass-dark {
-    background: rgba(10, 10, 10, 0.6);
+    background: rgba(237, 233, 225, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(45, 45, 45, 0.08);
   }
 
   .glow {
@@ -192,10 +192,10 @@ body::before {
 /* ===== PARALLAX DARK SECTIONS ===== */
 
 .parallax-section {
-  color: #FFFFFF;
+  color: #2d2d2d;
 }
 
 .parallax-section .glass {
-  background: rgba(10, 10, 10, 0.6);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(45, 45, 45, 0.08);
 }

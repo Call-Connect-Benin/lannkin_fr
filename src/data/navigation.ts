@@ -186,19 +186,19 @@ export const NAV_TARIFS: MegaMenuItem = {
         {
           label: "Conception Web",
           href: "/tarifs/conception-web/",
-          description: "À partir de 99 $/mois",
+          description: "À partir de 99 €/mois",
           icon: "Monitor",
         },
         {
           label: "Vibe Coding & CMS IA",
           href: "/tarifs/vibe-coding/",
-          description: "À partir de 149 $/mois",
+          description: "À partir de 149 €/mois",
           icon: "Sparkles",
         },
         {
           label: "Odoo",
           href: "/tarifs/odoo/",
-          description: "À partir de 199 $/mois",
+          description: "À partir de 199 €/mois",
           icon: "Building2",
         },
       ],
@@ -227,7 +227,7 @@ export const NAV_TARIFS: MegaMenuItem = {
         {
           label: "Réseaux Sociaux",
           href: "/tarifs/reseaux-sociaux/",
-          description: "À partir de 500 $/mois",
+          description: "À partir de 500 €/mois",
           icon: "Share2",
         },
       ],
@@ -244,7 +244,7 @@ export const NAV_TARIFS: MegaMenuItem = {
         {
           label: "Google My Business",
           href: "/tarifs/google-my-business/",
-          description: "À partir de 50 $/mois",
+          description: "À partir de 50 €/mois",
           icon: "MapPin",
         },
         {

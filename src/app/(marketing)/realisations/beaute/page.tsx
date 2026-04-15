@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Salon Coiffure & Beauté Québec | Portfolio Lannkin",
+  title: "Sites Web Salon Coiffure & Beauté France | Portfolio Ekolink",
   description:
-    "Portfolio Lannkin : sites web pour salons de coiffure, instituts de beauté, spas et esthétiques au Québec. Réservation en ligne, SEO local et Google Ads beauté.",
+    "Portfolio Ekolink : sites web pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, SEO local et Google Ads beauté.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/beaute/",
+    canonical: "https://ekolink.fr/realisations/beaute/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsBeautePage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Beauté & Bien-être"
-        description="Lannkin conçoit des sites web élégants pour salons de coiffure, instituts de beauté, spas et esthétiques au Québec. Réservation en ligne, galeries photos et SEO local pour attirer de nouveaux clients."
+        description="Ekolink conçoit des sites web élégants pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, galeries photos et SEO local pour attirer de nouveaux clients."
         stats={[
           { value: `${count} projets`, label: "dans la beauté" },
           { value: "Réservation", label: "en ligne intégrée" },
@@ -56,10 +56,10 @@ export default function RealisationsBeautePage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Agence web pour salons de beauté au Québec
+              Agence web pour salons de beauté en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Dans le secteur de la beauté, votre site web est votre vitrine. Lannkin crée des sites
+              Dans le secteur de la beauté, votre site web est votre vitrine. Ekolink crée des sites
               web modernes et élégants pour salons de coiffure, instituts d&apos;esthétique, spas et
               cliniques de beauté. Nous intégrons des systèmes de réservation en ligne, des galeries
               photos professionnelles et une stratégie SEO locale pour que vos clients vous trouvent

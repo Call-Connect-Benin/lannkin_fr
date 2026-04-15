@@ -3,7 +3,7 @@ import puppeteer from "puppeteer";
 async function extractUrls() {
   const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox"] });
   const page = await browser.newPage();
-  await page.goto("https://www.lannkin.ca/portfolio/", { waitUntil: "networkidle2", timeout: 30000 });
+  await page.goto("https://www.ekolink.fr/portfolio/", { waitUntil: "networkidle2", timeout: 30000 });
   await new Promise((r) => setTimeout(r, 5000));
 
   // Get full page HTML structure to understand the layout
@@ -11,12 +11,12 @@ async function extractUrls() {
     return document.body.innerHTML.substring(0, 50000);
   });
 
-  // Look for all external links (non-lannkin)
+  // Look for all external links (non-ekolink)
   const externalLinks = await page.evaluate(() => {
     const anchors = document.querySelectorAll("a");
     return [...anchors]
       .map((a) => ({ text: a.textContent.trim().substring(0, 100), href: a.href }))
-      .filter((l) => !l.href.includes("lannkin.ca") && !l.href.includes("mailto") && l.href.startsWith("http"));
+      .filter((l) => !l.href.includes("ekolink.fr") && !l.href.includes("mailto") && l.href.startsWith("http"));
   });
 
   console.log("=== LIENS EXTERNES ===");

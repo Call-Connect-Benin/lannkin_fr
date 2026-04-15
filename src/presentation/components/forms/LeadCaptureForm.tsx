@@ -25,7 +25,7 @@ const leadCaptureSchema = z.object({
 type LeadCaptureData = z.infer<typeof leadCaptureSchema>;
 
 const inputClasses =
-  "w-full bg-[#FFFFFF]/[0.06] border border-[#FFFFFF]/[0.12] rounded-lg px-3 py-2.5 text-sm text-[#FFFFFF] placeholder:text-[#FFFFFF]/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-200";
+  "w-full bg-[#f7f5f0] border border-[#2d2d2d]/15 rounded-lg px-3 py-2.5 text-sm text-[#2d2d2d] placeholder:text-[#2d2d2d]/45 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-200";
 
 const errorClasses = "text-red-400 text-xs mt-1";
 
@@ -70,7 +70,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
   };
 
   return (
-    <div className="rounded-2xl border border-[#FFFFFF]/[0.1] bg-[#1A1A1A]/90 p-4 sm:p-6">
+    <div className="rounded-2xl border border-[#2d2d2d]/10 bg-white p-4 sm:p-6">
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div
@@ -91,7 +91,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-[#FFFFFF] font-semibold text-lg"
+              className="text-[#2d2d2d] font-semibold text-lg"
             >
               Merci !
             </motion.p>
@@ -99,17 +99,17 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-[#FFFFFF]/60 text-sm mt-1"
+              className="text-[#2d2d2d]/65 text-sm mt-1"
             >
               Nous vous contacterons sous 24h.
             </motion.p>
           </motion.div>
         ) : (
           <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <h4 className="font-semibold text-base mb-0.5" style={{ color: "#FFFFFF" }}>
+            <h4 className="font-semibold text-base mb-0.5" style={{ color: "#2d2d2d" }}>
               {title}
             </h4>
-            <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.55)" }}>
+            <p className="text-sm mb-5" style={{ color: "rgba(45,45,45,0.65)" }}>
               {subtitle}
             </p>
 

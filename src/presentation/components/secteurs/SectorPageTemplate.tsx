@@ -70,7 +70,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               className="mb-5 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-widest"
               style={{
                 backgroundColor: "rgba(73,143,109,0.12)",
-                color: "#498f6d",
+                color: "#fff",
                 border: "1px solid rgba(73,143,109,0.20)",
               }}
             >
@@ -80,8 +80,8 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
 
             <h1 className="font-heading text-4xl font-bold leading-tight text-white lg:text-5xl xl:text-6xl">
               Marketing digital pour{" "}
-              <span style={{ color: "#498f6d" }}>{sector.title}</span>{" "}
-              à Laval &amp; Montréal
+              <span style={{ color: "#fff" }}>{sector.title}</span>{" "}
+              à Paris &amp; Paris
             </h1>
 
             <p
@@ -140,7 +140,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   </p>
                   <span
                     className="mt-3 inline-flex items-center gap-1 text-xs font-medium"
-                    style={{ color: "#498f6d" }}
+                    style={{ color: "#fff" }}
                   >
                     En savoir plus <ArrowRight className="h-3 w-3" />
                   </span>
@@ -151,16 +151,16 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
         </Container>
       </section>
 
-      {/* ── Pourquoi Lannkin ─────────────────────────────────────── */}
+      {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
         <Container>
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
             <div>
               <p
                 className="mb-3 text-sm font-semibold uppercase tracking-widest"
-                style={{ color: "#498f6d" }}
+                style={{ color: "#fff" }}
               >
-                Pourquoi Lannkin
+                Pourquoi Ekolink
               </p>
               <h2 className="font-heading text-3xl font-bold text-white">
                 Notre expertise dans le secteur {sector.title}
@@ -169,7 +169,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                 className="mt-4 text-base leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.55)" }}
               >
-                Depuis 2015, nous avons accompagné des centaines d'entreprises à Laval et Montréal.
+                Depuis 2015, nous avons accompagné des centaines d'entreprises à Paris et Paris.
                 Notre approche data-driven s'adapte aux spécificités de chaque secteur.
               </p>
 
@@ -190,7 +190,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   >
                     <p
                       className="font-heading text-2xl font-bold"
-                      style={{ color: "#498f6d" }}
+                      style={{ color: "#fff" }}
                     >
                       {s.value}
                     </p>
@@ -207,7 +207,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                 <li key={benefit} className="flex items-start gap-3">
                   <CheckCircle
                     className="mt-0.5 h-5 w-5 shrink-0"
-                    style={{ color: "#498f6d" }}
+                    style={{ color: "#fff" }}
                   />
                   <span
                     className="text-sm leading-relaxed"

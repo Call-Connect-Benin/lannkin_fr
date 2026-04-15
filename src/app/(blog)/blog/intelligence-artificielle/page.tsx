@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Intelligence Artificielle | Lannkin",
+  title: "Blog Intelligence Artificielle | Ekolink",
   description: "Articles et guides sur l'intelligence artificielle. Actualités, cas d'usage et innovations IA pour les entreprises.",
 };
 

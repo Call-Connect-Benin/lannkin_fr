@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Reseaux Sociaux | Lannkin",
+  title: "Blog Reseaux Sociaux | Ekolink",
   description: "Articles et guides sur les réseaux sociaux. Stratégies de community management et tendances social media.",
 };
 

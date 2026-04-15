@@ -60,7 +60,7 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
 
   if (!service) {
-    return { title: "Service introuvable | Lannkin" };
+    return { title: "Service introuvable | Ekolink" };
   }
 
   return {
@@ -72,6 +72,46 @@ export async function generateMetadata({
     },
   };
 }
+
+// ---------------------------------------------------------------------------
+// Static content (shared across all sub-service pages)
+// ---------------------------------------------------------------------------
+
+const BENEFITS = [
+  {
+    icon: "Target",
+    title: "Cadré sur vos objectifs",
+    description: "On part de vos priorités business, pas d'un gabarit générique.",
+  },
+  {
+    icon: "Zap",
+    title: "Exécution rapide",
+    description: "Des cycles courts, des livrables concrets à chaque étape.",
+  },
+  {
+    icon: "MessageSquare",
+    title: "Interlocuteur unique",
+    description: "Un expert dédié qui porte votre dossier de bout en bout.",
+  },
+];
+
+const PROCESS_STEPS = [
+  {
+    num: "01",
+    title: "Audit express",
+    description: "On analyse l'existant, on écoute vos enjeux et on détecte les angles morts.",
+  },
+  {
+    num: "02",
+    title: "Plan d'action",
+    description: "Une feuille de route claire : livrables, budget, calendrier et KPIs partagés.",
+  },
+  {
+    num: "03",
+    title: "Exécution & suivi",
+    description: "On met en œuvre, on mesure et on ajuste en continu. Vous gardez la main.",
+  },
+];
 
 // ---------------------------------------------------------------------------
 // Page component
@@ -115,7 +155,7 @@ export default async function ServiceSubPage({ params }: PageProps) {
   };
 
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       {/* Breadcrumb */}
       <Container className="pt-8">
         <Breadcrumb currentPath={currentPath} />
@@ -125,7 +165,7 @@ export default async function ServiceSubPage({ params }: PageProps) {
       <section className="parallax-section relative overflow-hidden py-16 lg:py-24">
         <ParallaxBg
           src={HUB_PARALLAX_IMAGES[service.parentSlug ?? category] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"}
-          overlay={0.62}
+          overlay={0.85}
         />
         <div className="relative z-10">
           <Container>
@@ -133,7 +173,7 @@ export default async function ServiceSubPage({ params }: PageProps) {
               {parentHub && (
                 <Link
                   href={`/services/${parentHub.slug}/`}
-                  className="mb-4 inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+                  className="mb-4 inline-flex items-center gap-2 text-sm text-[#2d2d2d]/70 transition-colors hover:text-accent"
                 >
                   <span aria-hidden>&larr;</span>
                   {parentHub.name}
@@ -142,15 +182,83 @@ export default async function ServiceSubPage({ params }: PageProps) {
               <Badge variant="default" size="sm" className="mb-6">
                 <LucideIcon name={service.icon} className="h-5 w-5" />
               </Badge>
-              <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl lg:text-6xl">
                 {service.name}
               </h1>
-              <p className="mt-6 text-lg leading-relaxed sm:text-xl" style={{ color: "#DDDDDD" }}>
+              <p className="mt-6 text-lg leading-relaxed sm:text-xl" style={{ color: "rgba(45,45,45,0.75)" }}>
                 {service.shortDescription}
               </p>
             </div>
           </Container>
         </div>
+      </section>
+
+      {/* Bénéfices */}
+      <section className="py-16">
+        <Container>
+          <div className="mb-10 text-center">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+              Ce que vous y gagnez
+            </p>
+            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
+              Un accompagnement taillé pour votre projet.
+            </h2>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-3">
+            {BENEFITS.map((b) => (
+              <div
+                key={b.title}
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
+              >
+                <div
+                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                >
+                  <LucideIcon name={b.icon} className="h-5 w-5" />
+                </div>
+                <h3 className="font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>{b.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
+                  {b.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Process */}
+      <section className="py-16">
+        <Container>
+          <div className="mb-10 text-center">
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
+              Comment on démarre
+            </p>
+            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
+              Trois étapes, zéro flou.
+            </h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {PROCESS_STEPS.map((step) => (
+              <div
+                key={step.num}
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
+              >
+                <div
+                  className="font-heading text-3xl font-bold tabular-nums"
+                  style={{ color: "rgba(73,143,109,0.35)" }}
+                >
+                  {step.num}
+                </div>
+                <h3 className="mt-2 font-heading text-lg font-bold" style={{ color: "#2d2d2d" }}>{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
       </section>
 
       {/* Shopify case studies */}
@@ -173,10 +281,10 @@ export default async function ServiceSubPage({ params }: PageProps) {
                 <p className="mb-2 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
                   Étude de cas 3D
                 </p>
-                <h3 className="font-heading text-2xl font-bold text-white">
+                <h3 className="font-heading text-2xl font-bold text-[#2d2d2d]">
                   Montecarlo Designs — Mobilier de luxe à Monaco
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/70">
                   Modélisation 3D complète de tables en marbre avec Blender, intégration
                   WebGL/GLB pour le SEO Google, et e-commerce premium. Un projet qui
                   illustre la puissance de la 3D pour le e-commerce de luxe.
@@ -191,7 +299,7 @@ export default async function ServiceSubPage({ params }: PageProps) {
                   </Link>
                   <Link
                     href="/services/sites-immersifs-3d/"
-                    className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-white"
+                    className="inline-flex items-center gap-1.5 text-sm text-[#2d2d2d]/70 transition-colors hover:text-[#2d2d2d]"
                   >
                     Nos services 3D
                     <span aria-hidden>&rarr;</span>
@@ -207,8 +315,8 @@ export default async function ServiceSubPage({ params }: PageProps) {
       {relatedServices.length > 0 && (
         <section className="py-16">
           <Container>
-            <h2 className="mb-8 font-heading text-2xl font-bold text-white">
-              Services connexes
+            <h2 className="mb-8 font-heading text-2xl font-bold text-[#2d2d2d]">
+              Pour aller plus loin
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedServices.map((related) => {
@@ -220,10 +328,10 @@ export default async function ServiceSubPage({ params }: PageProps) {
                     <div className="mb-3 text-accent">
                       <LucideIcon name={related.icon} className="h-6 w-6" />
                     </div>
-                    <h3 className="mb-2 font-heading text-lg font-semibold text-white">
+                    <h3 className="mb-2 font-heading text-lg font-semibold text-[#2d2d2d]">
                       {related.name}
                     </h3>
-                    <p className="text-sm leading-relaxed text-muted">
+                    <p className="text-sm leading-relaxed text-[#2d2d2d]/70">
                       {related.shortDescription}
                     </p>
                   </Card>
@@ -238,15 +346,15 @@ export default async function ServiceSubPage({ params }: PageProps) {
       {service.relatedSectors.length > 0 && (
         <section className="py-16">
           <Container>
-            <h2 className="mb-8 font-heading text-2xl font-bold text-white">
-              Secteurs d&apos;activite
+            <h2 className="mb-8 font-heading text-2xl font-bold text-[#2d2d2d]">
+              Secteurs accompagnés
             </h2>
             <div className="flex flex-wrap gap-3">
               {service.relatedSectors.map((sectorSlug) => (
                 <Link
                   key={sectorSlug}
                   href={`/secteurs/${sectorSlug}/`}
-                  className="rounded-lg border border-white/10 px-4 py-2 text-sm text-muted transition-colors hover:border-accent/40 hover:text-accent"
+                  className="rounded-lg border border-[#2d2d2d]/[0.10] px-4 py-2 text-sm text-[#2d2d2d]/70 transition-colors hover:border-accent/40 hover:text-accent"
                 >
                   {sectorLabels[sectorSlug] ?? sectorSlug}
                 </Link>
@@ -260,11 +368,12 @@ export default async function ServiceSubPage({ params }: PageProps) {
       <section className="py-16">
         <Container size="md">
           <div className="glass rounded-2xl p-8 text-center sm:p-12">
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Besoin d&apos;un expert en {service.name.toLowerCase()}&nbsp;?
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
+              On parle de votre projet {service.name.toLowerCase()}&nbsp;?
             </h2>
-            <p className="mt-4 text-muted">
-              Contactez notre equipe pour un devis gratuit et personnalise.
+            <p className="mt-4 text-[#2d2d2d]/70">
+              Recevez sous 24h une proposition claire et personnalisée. Sans engagement,
+              sans discours commercial — juste des réponses concrètes à vos questions.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               {service.pricingLink ? (
@@ -273,15 +382,15 @@ export default async function ServiceSubPage({ params }: PageProps) {
                   variant="primary"
                   size="lg"
                 >
-                  Voir les tarifs
+                  Découvrir les tarifs
                 </Button>
               ) : (
                 <Button href="/devis-gratuit/" variant="primary" size="lg">
-                  Devis gratuit
+                  Obtenir mon devis
                 </Button>
               )}
               <Button href="/contact/" variant="secondary" size="lg">
-                Nous contacter
+                Prendre contact
               </Button>
             </div>
           </div>

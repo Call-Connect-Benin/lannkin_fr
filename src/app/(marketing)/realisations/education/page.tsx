@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Éducation & Garde d'Enfants Québec | Portfolio Lannkin",
+  title: "Sites Web Éducation & Garde d'Enfants France | Portfolio Ekolink",
   description:
-    "Portfolio Lannkin : sites web pour garderies, CPE, écoles privées et services éducatifs au Québec. Inscription en ligne, calendriers et SEO local pour le secteur de l'éducation.",
+    "Portfolio Ekolink : sites web pour garderies, CPE, écoles privées et services éducatifs en France. Inscription en ligne, calendriers et SEO local pour le secteur de l'éducation.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/education/",
+    canonical: "https://ekolink.fr/realisations/education/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsEducationPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Éducation & Petite enfance"
-        description="Lannkin conçoit des sites web rassurants et professionnels pour garderies, CPE, services de garde et établissements éducatifs au Québec. Inscription en ligne, calendriers et présentation de l'équipe."
+        description="Ekolink conçoit des sites web rassurants et professionnels pour garderies, CPE, services de garde et établissements éducatifs en France. Inscription en ligne, calendriers et présentation de l'équipe."
         stats={[
           { value: `${count} projets`, label: "en éducation" },
           { value: "Inscription", label: "en ligne intégrée" },
@@ -56,12 +56,12 @@ export default function RealisationsEducationPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Site web pour garderie et services éducatifs au Québec
+              Site web pour garderie et services éducatifs en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Les parents choisissent une garderie ou un CPE en partie grâce à son site web. Lannkin
+              Les parents choisissent une garderie ou un CPE en partie grâce à son site web. Ekolink
               crée des sites web chaleureux et professionnels pour les services de garde et
-              établissements éducatifs québécois : présentation de l&apos;équipe, galeries photos,
+              établissements éducatifs français : présentation de l&apos;équipe, galeries photos,
               formulaires d&apos;inscription en ligne et calendriers d&apos;activités. Nous
               optimisons également votre présence sur Google pour que les parents de votre quartier
               vous trouvent facilement.

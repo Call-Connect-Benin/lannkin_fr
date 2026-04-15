@@ -26,7 +26,7 @@ const PIE_DATA = [
   { label: "Zone ciblée", val: 62, color: "#2b8a3e" },
   { label: "Hors zone - Robot", val: 22, color: "#e03131" },
   { label: "Hors zone - Suspect", val: 11, color: "#e67700" },
-  { label: "Hors zone - Inconnu", val: 5, color: "#9ca3af" },
+  { label: "Hors zone - Inconnu", val: 5, color: "#6b7280" },
 ];
 
 /* ─── HELPERS ─── */
@@ -224,20 +224,20 @@ export function AuditGoogleAdsLP() {
       {/* ── TOPBAR ── */}
       <nav className="topbar">
         <div className="tb-l">
-          <div className="tb-logo">LANNKIN<span>.</span>{" "}
+          <div className="tb-logo">EKOLINK<span>.</span>{" "}
             <span style={{ fontSize: 10, fontWeight: 500, color: "var(--text4)", letterSpacing: 0, marginLeft: 2 }}>
-              Fait au Québec
+              Fait en France
             </span>
           </div>
           <div className="tb-sep" />
           <div className="tb-stat"><div className="tb-dot" />Anomalies détectées</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <a href="tel:+14389446129" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text2)", textDecoration: "none", fontWeight: 600 }}>
+          <a href="tel:+33100000000" style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text2)", textDecoration: "none", fontWeight: 600 }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" strokeWidth="2" strokeLinecap="round">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
             </svg>
-            <span style={{ color: "var(--text)" }}>+1 438 944 6129</span>
+            <span style={{ color: "var(--text)" }}>+33 1 00 00 00 00</span>
             <span style={{ color: "var(--text4)", fontWeight: 400, fontSize: 10 }}>&middot; Conseiller dispo 9h-17h30</span>
           </a>
           <button className="tb-btn" onClick={scrollToForm}>Lancer l&apos;audit</button>
@@ -272,10 +272,10 @@ export function AuditGoogleAdsLP() {
             <div style={{ fontSize: 14, fontWeight: 700, color: "var(--red)", marginBottom: 4 }}>Certains de nos clients ont récupéré plus de 5 000$</div>
             <div style={{ fontSize: 12, color: "var(--text2)" }}>En clics frauduleux remboursés par Google grâce à notre procédure d&apos;audit et nos dossiers de preuves.</div>
           </div>
-          <a href="tel:+14389446129" style={{ display: "block", background: "var(--red)", color: "#fff", padding: 14, borderRadius: 10, fontSize: 15, fontWeight: 700, textDecoration: "none", marginBottom: 10 }}>
-            Appelez-nous : +1 438 944 6129
+          <a href="tel:+33100000000" style={{ display: "block", background: "var(--red)", color: "#fff", padding: 14, borderRadius: 10, fontSize: 15, fontWeight: 700, textDecoration: "none", marginBottom: 10 }}>
+            Appelez-nous : +33 1 00 00 00 00
           </a>
-          <div style={{ fontSize: 11, color: "var(--text4)", marginBottom: 16 }}>Lun-Ven, 9h à 17h30 (heure du Québec)</div>
+          <div style={{ fontSize: 11, color: "var(--text4)", marginBottom: 16 }}>Lun-Ven, 9h à 17h30 (heure de Paris)</div>
           <div style={{ fontSize: 13, color: "var(--text3)", cursor: "pointer", textDecoration: "underline" }} onClick={() => setExitPopup(false)}>
             Non merci, continuer la navigation
           </div>
@@ -327,10 +327,10 @@ export function AuditGoogleAdsLP() {
             <div className="fd">
               <label>Budget mensuel Google Ads</label>
               <div className="opts" data-n="budget" data-t="single">
-                <div className="op" data-v="500"><div className="ck" />Moins de 500$/mois</div>
-                <div className="op" data-v="2000"><div className="ck" />500$ - 2 000$/mois</div>
-                <div className="op" data-v="5000"><div className="ck" />2 000$ - 5 000$/mois</div>
-                <div className="op" data-v="10000"><div className="ck" />5 000$ - 10 000$/mois</div>
+                <div className="op" data-v="500"><div className="ck" />Moins de 500€/mois</div>
+                <div className="op" data-v="2000"><div className="ck" />500$ - 2 000€/mois</div>
+                <div className="op" data-v="5000"><div className="ck" />2 000$ - 5 000€/mois</div>
+                <div className="op" data-v="10000"><div className="ck" />5 000$ - 10 000€/mois</div>
                 <div className="op" data-v="20000"><div className="ck" />10 000$+ /mois</div>
               </div>
             </div>
@@ -429,7 +429,7 @@ export function AuditGoogleAdsLP() {
             <div style={{ fontSize: 40 }}>&#10003;</div>
             <h3>Rapport en cours de génération !</h3>
             <p>
-              Un expert Google Ads senior LANNKIN va vous <strong style={{ color: "var(--blue)" }}>appeler</strong> pour vous présenter vos résultats :<br /><br />
+              Un expert Google Ads senior EKOLINK va vous <strong style={{ color: "var(--blue)" }}>appeler</strong> pour vous présenter vos résultats :<br /><br />
               - Le rapport complet des clics hors zone<br />
               - Les montants exacts récupérables<br />
               - Le dossier de remboursement Google<br /><br />
@@ -438,8 +438,8 @@ export function AuditGoogleAdsLP() {
             <div style={{ marginTop: 20, padding: 16, background: "var(--bluea)", border: "1px solid var(--blueb)", borderRadius: 10 }}>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--blue)", marginBottom: 6 }}>Vous voulez le rapport Excel complet maintenant ?</div>
               <div style={{ fontSize: 12, color: "var(--text3)", marginBottom: 12 }}>Appelez-nous pour recevoir immédiatement votre export détaillé avec tous les clics frauduleux identifiés.</div>
-              <a href="tel:+14389446129" style={{ display: "inline-block", background: "var(--blue)", color: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: "none" }}>+1 438 944 6129</a>
-              <div style={{ fontSize: 10, color: "var(--text4)", marginTop: 6 }}>Lun-Ven, 9h à 17h30 (heure du Québec)</div>
+              <a href="tel:+33100000000" style={{ display: "inline-block", background: "var(--blue)", color: "#fff", padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: "none" }}>+33 1 00 00 00 00</a>
+              <div style={{ fontSize: 10, color: "var(--text4)", marginTop: 6 }}>Lun-Ven, 9h à 17h30 (heure de Paris)</div>
             </div>
           </div>
         </div>
@@ -549,17 +549,17 @@ export function AuditGoogleAdsLP() {
 
       {/* ── FULL WIDTH: CAS RÉEL ── */}
       <div className="full-section">
-        <div className="slbl red">CAS RÉEL - AUDIT CLIENT LANNKIN</div>
+        <div className="slbl red">CAS RÉEL - AUDIT CLIENT EKOLINK</div>
         <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 18 }}>Voici ce que notre audit révèle sur un vrai compte</div>
         <div className="case-wrap case-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
           <div style={{ overflow: "hidden", borderRight: "1px solid var(--bd)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://www.lannkin.ca/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <img src="https://www.ekolink.fr/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
           <div className="case-caption" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 10, color: "var(--text)" }}>Voici un exemple de rapport Excel que vous recevrez</div>
             <p style={{ fontSize: 13, color: "var(--text2)", lineHeight: 1.7, marginBottom: 14 }}>
-              Ce client ciblait uniquement le <span className="red">Québec et l&apos;Ontario (Canada)</span>. Notre script d&apos;export a révélé des dizaines de clics provenant de <span className="red">Tunisie</span> (Tunis, Sousse, Nabeul, Ben Arous, Sfax, Monastir, Kairouan) et d&apos;<span className="red">Ukraine</span> (Zaporizhzhia).
+              Ce client ciblait uniquement le <span className="red">France et l&apos;Ontario (Canada)</span>. Notre script d&apos;export a révélé des dizaines de clics provenant de <span className="red">Tunisie</span> (Tunis, Sousse, Nabeul, Ben Arous, Sfax, Monastir, Kairouan) et d&apos;<span className="red">Ukraine</span> (Zaporizhzhia).
             </p>
             <p style={{ fontSize: 13, color: "var(--text2)", lineHeight: 1.7, marginBottom: 16 }}>
               Tous ces clics ont été facturés par Google, zéro chance de conversion. En nous contactant, vous recevez un <strong>rapport complet encore plus détaillé</strong> avec l&apos;ensemble des données exploitables pour votre demande de remboursement.
@@ -602,11 +602,11 @@ export function AuditGoogleAdsLP() {
         <div className="sec-in">
           <div className="stag red">LE PROBLÈME</div>
           <div className="sh">Google vous facture des clics qui <span style={{ color: "var(--red)" }}>ne convertiront jamais</span></div>
-          <div className="sp">Vous ciblez Montréal, mais des clics arrivent de Tunisie ou d&apos;Ukraine. Des robots et du trafic invalide que Google ne filtre pas, et votre budget en fait les frais.</div>
+          <div className="sp">Vous ciblez Paris, mais des clics arrivent de Tunisie ou d&apos;Ukraine. Des robots et du trafic invalide que Google ne filtre pas, et votre budget en fait les frais.</div>
           <div className="g3">
             <div className="gc"><div className="gc-icon">&#128200;</div><h3>Clics hors zone</h3><p>Google diffuse vos annonces à des utilisateurs situés en dehors de vos zones ciblées. Des clics facturés, zéro conversion.</p></div>
             <div className="gc"><div className="gc-icon">&#129302;</div><h3>Trafic robot</h3><p>Des bots cliquent depuis des pays que vous ne ciblez pas. Google n&apos;en détecte qu&apos;une partie. Les bloqueurs d&apos;IP sont limités à 500 adresses.</p></div>
-            <div className="gc"><div className="gc-icon">&#128184;</div><h3>Budget gaspillé en silence</h3><p>Sans audit, ces fuites passent inaperçues. Sur 5 000$/mois, ça représente 500$ à 2 000$ perdus par trimestre.</p></div>
+            <div className="gc"><div className="gc-icon">&#128184;</div><h3>Budget gaspillé en silence</h3><p>Sans audit, ces fuites passent inaperçues. Sur 5 000€/mois, ça représente 500$ à 2 000$ perdus par trimestre.</p></div>
           </div>
         </div>
       </section>
@@ -616,7 +616,7 @@ export function AuditGoogleAdsLP() {
           <div><div className="sv-n">73%</div><div className="sv-l">Des comptes ont des clics hors zone</div></div>
           <div><div className="sv-n">18%</div><div className="sv-l">Du budget moyen gaspillé</div></div>
           <div><div className="sv-n">500</div><div className="sv-l">IP max bloquables (limite Google)</div></div>
-          <div><div className="sv-n">200+</div><div className="sv-l">Comptes audités par LANNKIN</div></div>
+          <div><div className="sv-n">200+</div><div className="sv-l">Comptes audités par EKOLINK</div></div>
         </div>
       </div>
 
@@ -635,8 +635,8 @@ export function AuditGoogleAdsLP() {
 
       <section className="sec alt">
         <div className="sec-in">
-          <div className="stag green">POURQUOI LANNKIN</div>
-          <div className="sh">Une agence <span style={{ color: "var(--green)" }}>Google Ads senior</span> basée à Laval</div>
+          <div className="stag green">POURQUOI EKOLINK</div>
+          <div className="sh">Une agence <span style={{ color: "var(--green)" }}>Google Ads senior</span> basée à Paris</div>
           <div className="sp">+10 ans d&apos;expérience, Google Partner, et une expertise particulière auprès des artisans et commerces locaux. Nous savons exactement où chercher les fuites que les autres ne voient pas.</div>
           <div className="g3">
             <div className="gc"><div className="gc-icon">&#128170;</div><h3>Spécialistes artisans &amp; locaux</h3><p>Nous travaillons beaucoup avec les artisans, commerces locaux et PME. On connaît vos enjeux et vos budgets, chaque dollar compte.</p></div>
@@ -644,13 +644,13 @@ export function AuditGoogleAdsLP() {
             <div className="gc"><div className="gc-icon">&#9889;</div><h3>Scripts propriétaires</h3><p>Des scripts d&apos;extraction avancés pour croiser données géo, mots-clés et clics, impossible à faire manuellement à cette échelle.</p></div>
           </div>
           <div style={{ marginTop: 24, borderRadius: 14, overflow: "hidden", border: "1px solid var(--bd)" }}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.5!2d-73.7493!3d45.5617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9234f4b2ed699%3A0x7d9c8d4b0e5f1a2c!2s1555%20Boul.%20de%20l%27Avenir%2C%20Laval%2C%20QC%20H7S%202N5!5e0!3m2!1sfr!2sca!4v1700000000000!5m2!1sfr!2sca" width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="LANNKIN - Laval, Québec" />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.9!2d2.3468!3d48.8278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b4a4e8b8a1%3A0x1!2s7%20Rue%20Vulpian%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="EKOLINK - Paris, France" />
             <div style={{ padding: "14px 18px", background: "var(--bg)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
               <div>
-                <div style={{ fontSize: 14, fontWeight: 700 }}>LANNKIN S.A. - Laval, Québec</div>
-                <div style={{ fontSize: 12, color: "var(--text3)" }}>306-1555 boul. de l&apos;Avenir, Laval (Québec) H7S2N5, Canada</div>
+                <div style={{ fontSize: 14, fontWeight: 700 }}>EKOLINK S.A.S. - Paris, France</div>
+                <div style={{ fontSize: 12, color: "var(--text3)" }}>7 Rue Vulpian, 75013 Paris, France</div>
               </div>
-              <a href="tel:+14389446129" style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--blue)", color: "#fff", padding: "8px 18px", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>+1 438 944 6129</a>
+              <a href="tel:+33100000000" style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--blue)", color: "#fff", padding: "8px 18px", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>+33 1 00 00 00 00</a>
             </div>
           </div>
         </div>
@@ -662,19 +662,19 @@ export function AuditGoogleAdsLP() {
         <p>En 2 minutes, découvrez combien vous perdez et combien vous pouvez récupérer via la procédure officielle Google.</p>
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginBottom: 16 }}>
           <button className="cta-big" onClick={scrollToForm}>Lancer mon audit gratuit</button>
-          <a href="tel:+14389446129" className="cta-big" style={{ background: "var(--blue)" }}>Appeler un conseiller</a>
+          <a href="tel:+33100000000" className="cta-big" style={{ background: "var(--blue)" }}>Appeler un conseiller</a>
           <a href="#contactForm" className="cta-big" style={{ background: "var(--green)" }}>Prendre rendez-vous</a>
         </div>
-        <div style={{ fontSize: 12, color: "var(--text4)", position: "relative", zIndex: 1 }}>Conseiller disponible du lundi au vendredi, 9h à 17h30 (heure du Québec)</div>
+        <div style={{ fontSize: 12, color: "var(--text4)", position: "relative", zIndex: 1 }}>Conseiller disponible du lundi au vendredi, 9h à 17h30 (heure de Paris)</div>
       </section>
 
       {/* ── CONTACT FORM ── */}
-      <section className="sec" id="contactForm" style={{ background: "#fff" }}>
+      <section className="sec" id="contactForm" style={{ background: "#0C0C0C" }}>
         <div className="sec-in" style={{ maxWidth: 640 }}>
           <div className="stag blue" style={{ justifyContent: "center" }}>CONTACT</div>
           <div style={{ textAlign: "center", marginBottom: 32 }}>
             <div className="sh" style={{ textAlign: "center" }}>Une question ? <span style={{ color: "var(--blue)" }}>Contactez-nous</span></div>
-            <p style={{ fontSize: 14, color: "var(--text3)" }}>Remplissez le formulaire ou appelez-nous au <a href="tel:+14389446129" style={{ color: "var(--blue)", fontWeight: 700, textDecoration: "none" }}>+1 438 944 6129</a></p>
+            <p style={{ fontSize: 14, color: "var(--text3)" }}>Remplissez le formulaire ou appelez-nous au <a href="tel:+33100000000" style={{ color: "var(--blue)", fontWeight: 700, textDecoration: "none" }}>+33 1 00 00 00 00</a></p>
           </div>
           {!contactSent ? (
             <>
@@ -684,7 +684,7 @@ export function AuditGoogleAdsLP() {
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
                 <input className="lp-inp" placeholder="Email" id="cf_email" />
-                <input className="lp-inp" placeholder="Téléphone (+1 XXX XXX XXXX)" id="cf_phone" />
+                <input className="lp-inp" placeholder="Téléphone (+33 X XX XX XX XX)" id="cf_phone" />
               </div>
               <div style={{ marginBottom: 12 }}>
                 <input className="lp-inp" placeholder="Société" id="cf_company" />
@@ -708,17 +708,17 @@ export function AuditGoogleAdsLP() {
       <footer className="lp-footer">
         <div className="footer-inner">
           <div className="ft-col">
-            <h4>LANNKIN S.A.</h4>
-            <p>NEQ : 1179695284</p>
-            <p>306-1555 boul. de l&apos;Avenir</p>
-            <p>Laval (Québec) H7S2N5</p>
-            <p>Canada</p>
+            <h4>EKOLINK S.A.S.</h4>
+            <p>SIRET : 000 000 000 00000</p>
+            <p>7 Rue Vulpian</p>
+            <p>75013 Paris</p>
+            <p>France</p>
           </div>
           <div className="ft-col">
             <h4>Contact</h4>
-            <a href="mailto:info@lannkin.ca">info@lannkin.ca</a>
-            <a href="tel:+14389446129">+1 438 944 6129</a>
-            <p style={{ marginTop: 6, fontSize: 11, color: "var(--text4)" }}>Lun-Ven, 9h à 17h30 (heure du Québec)</p>
+            <a href="mailto:info@ekolink.fr">info@ekolink.fr</a>
+            <a href="tel:+33100000000">+33 1 00 00 00 00</a>
+            <p style={{ marginTop: 6, fontSize: 11, color: "var(--text4)" }}>Lun-Ven, 9h à 17h30 (heure de Paris)</p>
           </div>
           <div className="ft-col">
             <h4>Services</h4>
@@ -728,7 +728,7 @@ export function AuditGoogleAdsLP() {
             <a href="/services/seo/">SEO</a>
           </div>
         </div>
-        <div className="ft-bottom"><span className="ft-copy">&copy; 2026 LANNKIN S.A. - Tous droits réservés - Canada</span></div>
+        <div className="ft-bottom"><span className="ft-copy">&copy; 2026 EKOLINK S.A. - Tous droits réservés - France</span></div>
       </footer>
     </div>
   );

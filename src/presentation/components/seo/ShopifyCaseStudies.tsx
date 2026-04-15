@@ -160,7 +160,7 @@ export function ShopifyCaseStudies() {
                     <span
                       key={tag}
                       className="rounded-full border px-2 py-0.5 text-[10px] font-medium"
-                      style={{ borderColor: "rgba(73,143,109,0.25)", color: "#498f6d" }}
+                      style={{ borderColor: "rgba(73,143,109,0.25)", color: "#fff" }}
                     >
                       {tag}
                     </span>

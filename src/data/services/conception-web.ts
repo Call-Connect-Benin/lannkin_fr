@@ -21,27 +21,27 @@ export interface ServicePageContent {
 // --------------------------------------------------
 const siteVitrine: ServicePageContent = {
   slug: "site-vitrine",
-  heroTitle: "Création de site vitrine professionnel à Laval et Montréal",
+  heroTitle: "Création de site vitrine professionnel à Paris et Paris",
   heroSubtitle:
-    "Présentez votre entreprise avec un site vitrine moderne, rapide et optimisé pour le référencement. Attirez plus de clients à Laval, Montréal et partout au Québec.",
+    "Présentez votre entreprise avec un site vitrine moderne, rapide et optimisé pour le référencement. Attirez plus de clients à Paris, Paris et partout en France.",
   sections: [
     {
       title: "Qu'est-ce qu'un site vitrine?",
       content:
-        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez LANNKIN, nous concevons des sites vitrines sur mesure pour les entreprises de Laval, Montréal et de la Rive-Nord qui souhaitent affirmer leur crédibilité en ligne.",
+        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez EKOLINK, nous concevons des sites vitrines sur mesure pour les entreprises de Paris, Paris et de la Île-de-France qui souhaitent affirmer leur crédibilité en ligne.",
       items: [
         "Pages de présentation de l'entreprise et de l'équipe",
         "Catalogue de services avec appels à l'action stratégiques",
         "Formulaire de contact et intégration calendrier de rendez-vous",
         "Témoignages clients et études de cas",
         "Blog intégré pour le marketing de contenu",
-        "Optimisation SEO locale pour Laval et Montréal",
+        "Optimisation SEO locale pour Paris et Paris",
       ],
     },
     {
       title: "Pourquoi choisir un site vitrine sur mesure?",
       content:
-        "Les templates génériques ne suffisent plus pour se démarquer dans le marché québécois compétitif. Un site vitrine conçu sur mesure par LANNKIN est optimisé pour votre industrie, votre clientèle cible et les moteurs de recherche. Nous utilisons les dernières technologies (Next.js, TailwindCSS) pour garantir des temps de chargement ultra-rapides et une expérience mobile irréprochable.",
+        "Les templates génériques ne suffisent plus pour se démarquer dans le marché français compétitif. Un site vitrine conçu sur mesure par EKOLINK est optimisé pour votre industrie, votre clientèle cible et les moteurs de recherche. Nous utilisons les dernières technologies (Next.js, TailwindCSS) pour garantir des temps de chargement ultra-rapides et une expérience mobile irréprochable.",
     },
     {
       title: "Technologies et performance",
@@ -59,20 +59,20 @@ const siteVitrine: ServicePageContent = {
   benefits: [
     "Crédibilité professionnelle renforcée auprès de vos prospects",
     "Génération de leads qualifiés 24/7 grâce aux formulaires optimisés",
-    "Visibilité accrue sur Google pour les recherches locales à Laval et Montréal",
+    "Visibilité accrue sur Google pour les recherches locales à Paris et Paris",
     "Temps de chargement inférieur à 2 secondes sur mobile",
     "Design unique adapté à votre image de marque",
     "Support technique continu et mises à jour régulières",
   ],
   process: [
-    { step: 1, title: "Découverte et stratégie", description: "Analyse de vos objectifs, de votre clientèle cible et de la concurrence dans votre marché au Québec. Définition de l'arborescence et des fonctionnalités clés." },
+    { step: 1, title: "Découverte et stratégie", description: "Analyse de vos objectifs, de votre clientèle cible et de la concurrence dans votre marché en France. Définition de l'arborescence et des fonctionnalités clés." },
     { step: 2, title: "Maquettes et design", description: "Création de maquettes haute fidélité dans Figma. Révisions illimitées jusqu'à validation complète du design responsive." },
     { step: 3, title: "Développement", description: "Intégration pixel-perfect avec Next.js ou WordPress. Optimisation des performances, du SEO technique et de l'accessibilité." },
     { step: 4, title: "Tests et lancement", description: "Tests multi-navigateurs, responsive, performance et SEO. Migration DNS et mise en production avec surveillance proactive." },
     { step: 5, title: "Support continu", description: "Maintenance mensuelle, mises à jour de sécurité, rapports de performance et support technique prioritaire." },
   ],
   faq: [
-    { question: "Combien coûte un site vitrine à Laval?", answer: "Nos sites vitrines démarrent à 99$/mois avec notre formule d'abonnement, ou à partir de 2 500$ en projet forfaitaire. Le prix varie selon le nombre de pages, les fonctionnalités et le niveau de personnalisation souhaité." },
+    { question: "Combien coûte un site vitrine à Paris?", answer: "Nos sites vitrines démarrent à 99€/mois avec notre formule d'abonnement, ou à partir de 2 500$ en projet forfaitaire. Le prix varie selon le nombre de pages, les fonctionnalités et le niveau de personnalisation souhaité." },
     { question: "En combien de temps mon site vitrine sera-t-il prêt?", answer: "Un site vitrine standard est livré en 3 à 4 semaines. Les projets plus complexes avec des fonctionnalités avancées peuvent prendre 6 à 8 semaines." },
     { question: "Mon site sera-t-il visible sur Google?", answer: "Absolument. Chaque site vitrine est livré avec une optimisation SEO technique complète : balises méta, données structurées, sitemap XML, Core Web Vitals optimisés et inscription Google Search Console." },
     { question: "Puis-je modifier le contenu moi-même?", answer: "Oui, nous intégrons un système de gestion de contenu (CMS) intuitif qui vous permet de modifier textes, images et pages en toute autonomie, sans connaissance technique." },
@@ -84,14 +84,14 @@ const siteVitrine: ServicePageContent = {
 // --------------------------------------------------
 const siteWordpress: ServicePageContent = {
   slug: "site-wordpress",
-  heroTitle: "Création de site WordPress sur mesure à Laval",
+  heroTitle: "Création de site WordPress sur mesure à Paris",
   heroSubtitle:
-    "Exploitez la puissance de WordPress avec un site entièrement personnalisé. Thèmes custom, plugins optimisés et administration simplifiée pour votre entreprise au Québec.",
+    "Exploitez la puissance de WordPress avec un site entièrement personnalisé. Thèmes custom, plugins optimisés et administration simplifiée pour votre entreprise en France.",
   sections: [
     {
       title: "Pourquoi choisir WordPress pour votre site web?",
       content:
-        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez LANNKIN, nous développons des sites WordPress sur mesure pour les entreprises de Laval, Montréal et du Québec qui veulent un site performant et facile à gérer.",
+        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez EKOLINK, nous développons des sites WordPress sur mesure pour les entreprises de Paris, Paris et du France qui veulent un site performant et facile à gérer.",
       items: [
         "Thèmes WordPress custom développés sur mesure pour votre marque",
         "Sélection rigoureuse de plugins premium (SEO, sécurité, cache, formulaires)",
@@ -136,10 +136,10 @@ const siteWordpress: ServicePageContent = {
     { step: 5, title: "Lancement et maintenance", description: "Mise en production, vérification SEO, configuration des sauvegardes et début du plan de maintenance mensuel." },
   ],
   faq: [
-    { question: "WordPress est-il encore pertinent en 2025?", answer: "Absolument. WordPress reste le CMS le plus utilisé au monde et continue d'évoluer avec Gutenberg, le Full Site Editing et une API REST puissante. Pour la majorité des PME au Québec, c'est le choix optimal en termes de rapport qualité/prix." },
+    { question: "WordPress est-il encore pertinent en 2025?", answer: "Absolument. WordPress reste le CMS le plus utilisé au monde et continue d'évoluer avec Gutenberg, le Full Site Editing et une API REST puissante. Pour la majorité des PME en France, c'est le choix optimal en termes de rapport qualité/prix." },
     { question: "Mon site WordPress sera-t-il rapide?", answer: "Oui. Nous optimisons chaque site avec un hébergement performant, un système de cache avancé, l'optimisation des images et un CDN. Nos sites WordPress atteignent régulièrement un score PageSpeed supérieur à 85." },
     { question: "Puis-je passer de WordPress à une autre technologie plus tard?", answer: "Oui. Nous concevons vos contenus de manière structurée, ce qui facilite une migration future vers Next.js, Shopify ou tout autre plateforme si vos besoins évoluent." },
-    { question: "Incluez-vous la maintenance WordPress?", answer: "Nous offrons des plans de maintenance mensuels à partir de 79$/mois incluant les mises à jour, sauvegardes, monitoring de sécurité et support technique prioritaire." },
+    { question: "Incluez-vous la maintenance WordPress?", answer: "Nous offrons des plans de maintenance mensuels à partir de 79€/mois incluant les mises à jour, sauvegardes, monitoring de sécurité et support technique prioritaire." },
   ],
 };
 
@@ -148,17 +148,17 @@ const siteWordpress: ServicePageContent = {
 // --------------------------------------------------
 const siteShopify: ServicePageContent = {
   slug: "site-shopify",
-  heroTitle: "Agence web Shopify à Laval et Montréal — Votre boutique e-commerce sur mesure",
+  heroTitle: "Agence web Shopify à Paris et Paris — Votre boutique e-commerce sur mesure",
   heroSubtitle:
-    "LANNKIN, votre agence web Shopify au Québec. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
+    "EKOLINK, votre agence web Shopify en France. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
   sections: [
     {
-      title: "Pourquoi choisir LANNKIN comme agence web Shopify au Québec?",
+      title: "Pourquoi choisir EKOLINK comme agence web Shopify en France?",
       content:
-        "Shopify est une entreprise canadienne basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
+        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, EKOLINK accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
-        "Configuration multilingue français/anglais pour le Québec",
+        "Configuration multilingue français/anglais pour le France",
         "Shopify Payments avec taxes TPS/TVQ automatiques",
         "Intégration apps essentielles : avis clients, upsell, email marketing",
         "Shopify POS pour la vente en magasin (point de vente)",
@@ -185,7 +185,7 @@ const siteShopify: ServicePageContent = {
     },
   ],
   benefits: [
-    "Plateforme canadienne avec support en français et devise CAD native",
+    "Plateforme française avec support en français et devise CAD native",
     "Hébergement inclus avec certificat SSL et conformité PCI DSS",
     "Plus de 8 000 applications dans le Shopify App Store",
     "Shopify Payments élimine les frais de passerelle tiers",
@@ -193,15 +193,15 @@ const siteShopify: ServicePageContent = {
     "Mises à jour automatiques de la plateforme sans temps d'arrêt",
   ],
   process: [
-    { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, étude de la concurrence québécoise, définition de la stratégie de prix et de livraison (Postes Canada, Purolator)." },
+    { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, étude de la concurrence française, définition de la stratégie de prix et de livraison (Postes Canada, Purolator)." },
     { step: 2, title: "Design de la boutique", description: "Maquettes Figma de la page d'accueil, pages collection, fiches produit et panier. Design axé sur la conversion mobile." },
     { step: 3, title: "Développement Shopify", description: "Installation et personnalisation du thème Liquid, configuration des apps, import du catalogue produits et setup des taxes TPS/TVQ." },
     { step: 4, title: "Tests et optimisation", description: "Tests de commande complète, vérification des paiements, optimisation de la vitesse et du SEO e-commerce." },
     { step: 5, title: "Lancement et formation", description: "Mise en ligne, formation à l'interface admin Shopify, configuration des rapports de vente et du suivi analytique." },
   ],
   faq: [
-    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par LANNKIN commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
-    { question: "Shopify gère-t-il les taxes québécoises?", answer: "Oui, Shopify calcule automatiquement la TPS et la TVQ pour les ventes au Québec, ainsi que les taxes provinciales pour le reste du Canada et les taxes internationales." },
+    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par EKOLINK commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
+    { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify calcule automatiquement la TPS et la TVQ pour les ventes en France, ainsi que les taxes provinciales pour le reste du Canada et les taxes internationales." },
     { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir les marchés francophone et anglophone du Canada." },
     { question: "Comment migrer ma boutique WooCommerce vers Shopify?", answer: "Nous utilisons des outils de migration spécialisés pour transférer vos produits, clients, commandes et redirections SEO de WooCommerce vers Shopify sans perte de données ni de référencement." },
   ],
@@ -212,14 +212,14 @@ const siteShopify: ServicePageContent = {
 // --------------------------------------------------
 const siteNextjs: ServicePageContent = {
   slug: "site-nextjs",
-  heroTitle: "Développement Next.js 15 à Laval | Sites ultra-performants",
+  heroTitle: "Développement Next.js 15 à Paris | Sites ultra-performants",
   heroSubtitle:
-    "Propulsez votre site web avec Next.js 15, le framework React de référence. Server-Side Rendering, génération statique et performances inégalées pour votre entreprise au Québec.",
+    "Propulsez votre site web avec Next.js 15, le framework React de référence. Server-Side Rendering, génération statique et performances inégalées pour votre entreprise en France.",
   sections: [
     {
       title: "Qu'est-ce que Next.js et pourquoi c'est supérieur?",
       content:
-        "Next.js est le framework React développé par Vercel qui propulse les sites de Nike, Netflix, TikTok et des milliers d'entreprises. Il combine le rendu côté serveur (SSR), la génération statique (SSG) et le rendu incrémental (ISR) pour offrir les meilleures performances possibles. Chez LANNKIN, nous sommes spécialisés en Next.js 15 avec App Router, Server Components et les dernières innovations React.",
+        "Next.js est le framework React développé par Vercel qui propulse les sites de Nike, Netflix, TikTok et des milliers d'entreprises. Il combine le rendu côté serveur (SSR), la génération statique (SSG) et le rendu incrémental (ISR) pour offrir les meilleures performances possibles. Chez EKOLINK, nous sommes spécialisés en Next.js 15 avec App Router, Server Components et les dernières innovations React.",
       items: [
         "Next.js 15 avec App Router et React Server Components",
         "Server-Side Rendering (SSR) pour un SEO optimal",
@@ -266,7 +266,7 @@ const siteNextjs: ServicePageContent = {
   faq: [
     { question: "Quand choisir Next.js plutôt que WordPress?", answer: "Next.js est idéal quand vous avez besoin de performances maximales, d'une interface utilisateur riche et interactive, ou d'une application web complexe (dashboard, SaaS, plateforme). WordPress reste excellent pour les sites de contenu simples avec un budget limité." },
     { question: "Next.js est-il bon pour le SEO?", answer: "Excellent. Le Server-Side Rendering de Next.js génère du HTML côté serveur, ce qui permet à Google d'indexer parfaitement votre contenu. Combiné aux metadata API et aux sitemaps dynamiques, c'est la solution technique optimale pour le SEO." },
-    { question: "Combien coûte un site Next.js?", answer: "Les projets Next.js démarrent à 5 000$ pour un site vitrine performant et peuvent atteindre 25 000$+ pour des applications web complexes. L'hébergement sur Vercel commence à 0$/mois (plan gratuit) jusqu'à 20$/mois (plan Pro)." },
+    { question: "Combien coûte un site Next.js?", answer: "Les projets Next.js démarrent à 5 000$ pour un site vitrine performant et peuvent atteindre 25 000$+ pour des applications web complexes. L'hébergement sur Vercel commence à 0€/mois (plan gratuit) jusqu'à 20€/mois (plan Pro)." },
     { question: "Puis-je gérer le contenu sans être développeur?", answer: "Absolument. Nous intégrons un headless CMS (Sanity, Contentful ou Strapi) qui offre une interface d'administration intuitive pour gérer votre contenu sans toucher au code." },
   ],
 };
@@ -276,14 +276,14 @@ const siteNextjs: ServicePageContent = {
 // --------------------------------------------------
 const siteHeadlessCms: ServicePageContent = {
   slug: "site-headless-cms",
-  heroTitle: "Headless CMS : Sanity, Strapi et Contentful à Laval",
+  heroTitle: "Headless CMS : Sanity, Strapi et Contentful à Paris",
   heroSubtitle:
-    "Adoptez une architecture découplée avec un headless CMS. Flexibilité totale, performance maximale et expérience éditoriale optimale pour vos équipes au Québec.",
+    "Adoptez une architecture découplée avec un headless CMS. Flexibilité totale, performance maximale et expérience éditoriale optimale pour vos équipes en France.",
   sections: [
     {
       title: "Qu'est-ce qu'un headless CMS?",
       content:
-        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. LANNKIN accompagne les entreprises de Laval et Montréal dans l'adoption de cette architecture moderne.",
+        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. EKOLINK accompagne les entreprises de Paris et Paris dans l'adoption de cette architecture moderne.",
       items: [
         "Sanity.io : CMS headless en temps réel avec Studio personnalisable",
         "Strapi : CMS headless open-source auto-hébergé (Node.js)",
@@ -296,7 +296,7 @@ const siteHeadlessCms: ServicePageContent = {
     {
       title: "Avantages de l'architecture découplée",
       content:
-        "L'architecture headless offre des avantages considérables pour les entreprises qui publient du contenu régulièrement ou qui ont besoin de distribuer leur contenu sur plusieurs canaux. C'est la solution privilégiée par les grandes entreprises technologiques et de plus en plus adoptée par les PME québécoises.",
+        "L'architecture headless offre des avantages considérables pour les entreprises qui publient du contenu régulièrement ou qui ont besoin de distribuer leur contenu sur plusieurs canaux. C'est la solution privilégiée par les grandes entreprises technologiques et de plus en plus adoptée par les PME françaises.",
       items: [
         "Performance : pages pré-rendues servies depuis un CDN global",
         "Sécurité : pas de base de données exposée sur le front-end",
@@ -340,7 +340,7 @@ const siteHeadlessCms: ServicePageContent = {
 // --------------------------------------------------
 const refonteSiteWeb: ServicePageContent = {
   slug: "refonte-site-web",
-  heroTitle: "Refonte de site web à Laval | Modernisez votre présence en ligne",
+  heroTitle: "Refonte de site web à Paris | Modernisez votre présence en ligne",
   heroSubtitle:
     "Votre site web est lent, dépassé ou ne génère pas assez de leads? Notre service de refonte complète transforme votre site en un outil de croissance performant, sans perdre votre référencement.",
   sections: [
@@ -360,7 +360,7 @@ const refonteSiteWeb: ServicePageContent = {
     {
       title: "Préservation du référencement lors de la refonte",
       content:
-        "La plus grande crainte lors d'une refonte est la perte de positionnement SEO. Chez LANNKIN, nous appliquons un protocole strict de préservation SEO qui inclut l'audit complet de votre référencement actuel, le mapping de toutes les URLs, la mise en place de redirections 301 et le suivi post-lancement avec Google Search Console.",
+        "La plus grande crainte lors d'une refonte est la perte de positionnement SEO. Chez EKOLINK, nous appliquons un protocole strict de préservation SEO qui inclut l'audit complet de votre référencement actuel, le mapping de toutes les URLs, la mise en place de redirections 301 et le suivi post-lancement avec Google Search Console.",
       items: [
         "Audit SEO complet avant la refonte (positions, backlinks, trafic)",
         "Mapping exhaustif de toutes les URLs avec redirections 301",

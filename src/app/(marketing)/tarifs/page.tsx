@@ -7,14 +7,14 @@ import { Container } from "@/presentation/components/ui/Container";
 import { TarifsFilterable } from "@/presentation/components/tarifs/TarifsFilterable";
 
 export const metadata: Metadata = {
-  title: "Tarifs Agence Web Québec | Lannkin",
+  title: "Tarifs Agence Web France | Ekolink",
   description:
-    "Tarifs transparents : site web, SEO, Google Ads, Meta Ads et graphisme dès 50$/mois. Comparez nos forfaits marketing digital. Prix clairs, sans surprise.",
+    "Tarifs transparents : site web, SEO, Google Ads, Meta Ads et graphisme dès 50€/mois. Comparez nos forfaits marketing digital. Prix clairs, sans surprise.",
 };
 
 export default function TarifsPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
 
       {/* ═══════════════════════════════════════════════════════
           HERO
@@ -45,12 +45,12 @@ export default function TarifsPage() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
               style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
             >
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
                 {PRICING_CATEGORIES.length} catégories · Pas de frais cachés
               </span>
             </div>
-            <h1 className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]" style={{ color: "#FFFFFF" }}>
-              Tarifs <span style={{ color: "#498f6d" }}>transparents</span>
+            <h1 className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]" style={{ color: "#fff" }}>
+              Tarifs <span style={{ color: "#fff" }}>transparents</span>
             </h1>
             <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
             <p className="mt-5 max-w-lg text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
@@ -58,7 +58,7 @@ export default function TarifsPage() {
               Activez les filtres pour voir uniquement les services qui vous intéressent.
             </p>
             <p className="mt-2 text-xs" style={{ color: "rgba(255,255,255,0.28)" }}>
-              Tous les prix sont en dollars canadiens (CAD), avant taxes.
+              Tous les prix sont en euros (CAD), avant taxes.
             </p>
           </div>
         </Container>
@@ -98,7 +98,7 @@ export default function TarifsPage() {
               border: "1px solid rgba(73,143,109,0.18)",
             }}
           >
-            <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl" style={{ color: "#FFFFFF" }}>
+            <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl" style={{ color: "#fff" }}>
               Besoin d&apos;un forfait sur mesure ?
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed sm:text-base" style={{ color: "rgba(255,255,255,0.52)" }}>
@@ -109,7 +109,7 @@ export default function TarifsPage() {
               <Link
                 href="/devis-gratuit/"
                 className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110 sm:px-8 sm:py-3.5"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Demander un devis gratuit
                 <ArrowRight className="h-4 w-4" />

@@ -5,7 +5,7 @@ import { Container } from "@/presentation/components/ui/Container";
 import { MerciContent } from "@/presentation/components/checkout/MerciContent";
 
 export const metadata: Metadata = {
-  title: "Merci pour votre achat | Lannkin",
+  title: "Merci pour votre achat | Ekolink",
   description:
     "Votre paiement a été confirmé. Découvrez nos services complémentaires.",
   robots: { index: false, follow: false },

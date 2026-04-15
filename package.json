@@ -1,8 +1,8 @@
 {
-  "name": "lannkin-ca",
+  "name": "ekolink-fr",
   "version": "1.0.0",
   "private": true,
-  "description": "Lannkin.ca — Agence marketing digital & développement web",
+  "description": "Ekolink.fr — Agence marketing digital & développement web",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,12 +13,16 @@
     "postbuild": "next-sitemap"
   },
   "keywords": [],
-  "author": "Lannkin S.A.",
+  "author": "Ekolink S.A.S.",
   "license": "UNLICENSED",
   "packageManager": "pnpm@10.30.3",
   "pnpm": {
     "onlyBuiltDependencies": [
       "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "puppeteer",
+      "sharp"
     ]
   },
   "dependencies": {
@@ -27,7 +31,6 @@
     "@react-three/fiber": "^9.5.0",
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/postcss": "^4.2.1",
-
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.4",
     "gray-matter": "^4.0.3",

@@ -299,12 +299,12 @@ const nextConfig: NextConfig = {
       },
       // ─── Anciens articles de blog WordPress ──────────────────────────────────
       {
-        source: "/lessentiel-a-savoir-de-la-loi-25-lannkin/",
+        source: "/lessentiel-a-savoir-de-la-loi-25-ekolink/",
         destination: "/blog/marketing-digital/",
         permanent: true,
       },
       {
-        source: "/lessentiel-a-savoir-de-la-loi-25-lannkin",
+        source: "/lessentiel-a-savoir-de-la-loi-25-ekolink",
         destination: "/blog/marketing-digital/",
         permanent: true,
       },

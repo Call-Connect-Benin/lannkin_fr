@@ -4,9 +4,9 @@ import { PRICING_GOOGLE_ADS } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Google Ads | Lannkin",
+  title: "Tarifs Google Ads | Ekolink",
   description:
-    "Gestion Google Ads dès 250$. Tags à 250$, Medium à 500$/mois, Premium à 750$/mois. Search, Display, Shopping et YouTube.",
+    "Gestion Google Ads dès 250$. Tags à 250$, Medium à 500€/mois, Premium à 750€/mois. Search, Display, Shopping et YouTube.",
 };
 
 export default function TarifsGoogleAdsPage() {
@@ -18,7 +18,7 @@ export default function TarifsGoogleAdsPage() {
       serviceHref="/services/google-ads/"
       parallaxImage="/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp"
       youtubeIds={["7-roIfvYlz4", "8x2GnzA-IWA", "-jGUN3meqpo"]}
-      youtubeTitle="Apprenez Google Ads avec Lannkin"
+      youtubeTitle="Apprenez Google Ads avec Ekolink"
     />
   );
 }

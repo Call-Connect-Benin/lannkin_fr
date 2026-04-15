@@ -1,5 +1,5 @@
 // ============================================================
-// PORTFOLIO — Réalisations Lannkin
+// PORTFOLIO — Réalisations Ekolink
 // ============================================================
 
 export type PortfolioCategory = "multipages" | "onepage" | "ecommerce" | "international";
@@ -44,7 +44,7 @@ const multiPagesProjects: PortfolioProject[] = [
     shortDescription:
       "Site web multipage pour une entreprise de plomberie et chauffage avec pages services, galerie de réalisations et formulaire de contact.",
     description:
-      "Conception d'un site web multipage professionnel pour Plomberies LB, entreprise spécialisée en plomberie et chauffage au Québec. Architecture multipage avec pages services détaillées, galerie de réalisations, formulaire de contact et optimisation SEO local pour dominer les recherches locales.",
+      "Conception d'un site web multipage professionnel pour Plomberies LB, entreprise spécialisée en plomberie et chauffage en France. Architecture multipage avec pages services détaillées, galerie de réalisations, formulaire de contact et optimisation SEO local pour dominer les recherches locales.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
@@ -57,9 +57,9 @@ const multiPagesProjects: PortfolioProject[] = [
       "Se démarquer dans un marché compétitif de la plomberie en ligne et générer des demandes de service directement via le web.",
     solution:
       "Site multipage optimisé pour le SEO local avec pages services détaillées, galerie photo et formulaire de demande de service en ligne.",
-    seoTitle: "Site Web Plomberie Québec | Plomberies LB — Portfolio Lannkin",
+    seoTitle: "Site Web Plomberie France | Plomberies LB — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web multipage pour Plomberies LB. Conception web plomberie Québec, SEO local et Google Ads.",
+      "Portfolio Ekolink : site web multipage pour Plomberies LB. Conception web plomberie France, SEO local et Google Ads.",
     externalUrl: "https://www.plomberieslb.ca/",
     previewImage: "/images/portfolio/plomberie-slb.webp",
   },
@@ -88,9 +88,9 @@ const multiPagesProjects: PortfolioProject[] = [
       "Valoriser un savoir-faire artisanal de qualité face à des concurrents mieux établis en ligne et générer des soumissions qualifiées.",
     solution:
       "Site multipage avec galerie photo immersive, contenu SEO local et formulaire de soumission simplifié pour convertir les visiteurs en clients.",
-    seoTitle: "Site Web Entrepreneur Rénovation Québec | Réno St-Georges — Portfolio Lannkin",
+    seoTitle: "Site Web Entrepreneur Rénovation France | Réno St-Georges — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web multipage pour Réno St-Georges. Conception web entrepreneur rénovation résidentielle Québec.",
+      "Portfolio Ekolink : site web multipage pour Réno St-Georges. Conception web entrepreneur rénovation résidentielle France.",
     externalUrl: "https://www.renostgeorges.ca/",
     previewImage: "/images/portfolio/reno-st-georges.webp",
   },
@@ -119,9 +119,9 @@ const multiPagesProjects: PortfolioProject[] = [
       "Concevoir un site qui reflète la diversité des services du groupe tout en maintenant une identité visuelle cohérente et une navigation simple.",
     solution:
       "Architecture multipage modulaire avec navigation par secteur, identité visuelle unifiée et contenu SEO spécifique à chaque division du groupe.",
-    seoTitle: "Site Web Groupe de Services Québec | Groupe Larivière — Portfolio Lannkin",
+    seoTitle: "Site Web Groupe de Services France | Groupe Larivière — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web multipage pour le Groupe Larivière. Conception web institutionnelle Québec, navigation multi-services.",
+      "Portfolio Ekolink : site web multipage pour le Groupe Larivière. Conception web institutionnelle France, navigation multi-services.",
     externalUrl: "https://www.groupelariviere.ca/fr",
     previewImage: "/images/portfolio/groupe-lariviere.webp",
   },
@@ -137,7 +137,7 @@ const multiPagesProjects: PortfolioProject[] = [
     shortDescription:
       "Site web multipage pour un entrepreneur général en construction résidentielle avec galerie projets et demande de soumission.",
     description:
-      "Réalisation du site web multipage de Constructeurs de Qualité, entrepreneur général en construction résidentielle au Québec. Présentation des projets réalisés (maisons neuves, extensions, rénovations majeures), pages services détaillées, formulaire de soumission et optimisation SEO locale.",
+      "Réalisation du site web multipage de Constructeurs de Qualité, entrepreneur général en construction résidentielle en France. Présentation des projets réalisés (maisons neuves, extensions, rénovations majeures), pages services détaillées, formulaire de soumission et optimisation SEO locale.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
     results: [
@@ -150,9 +150,9 @@ const multiPagesProjects: PortfolioProject[] = [
       "Établir une présence digitale crédible dans un secteur de la construction où la réputation et les réalisations sont déterminantes.",
     solution:
       "Site multipage mettant en avant les réalisations photographiées avec contenu SEO local et formulaire de soumission optimisé.",
-    seoTitle: "Site Web Entrepreneur Général Construction Québec | Constructeurs de Qualité — Portfolio Lannkin",
+    seoTitle: "Site Web Entrepreneur Général Construction France | Constructeurs de Qualité — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle Québec.",
+      "Portfolio Ekolink : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle France.",
     externalUrl: "https://www.constructeursdequalite.ca/",
     previewImage: "/images/portfolio/constructeurs-de-qualite.webp",
   },
@@ -175,7 +175,7 @@ const onePageProjects: PortfolioProject[] = [
     shortDescription:
       "Landing page haute conversion pour une entreprise d'entretien ménager résidentiel avec formulaire de réservation et témoignages clients.",
     description:
-      "Conception d'une landing page optimisée pour la conversion pour Nettoyage Idéal, service d'entretien ménager résidentiel au Québec. Page unique avec présentation des services, grille tarifaire, témoignages clients, galerie avant/après et formulaire de réservation en ligne intégré.",
+      "Conception d'une landing page optimisée pour la conversion pour Nettoyage Idéal, service d'entretien ménager résidentiel en France. Page unique avec présentation des services, grille tarifaire, témoignages clients, galerie avant/après et formulaire de réservation en ligne intégré.",
     services: ["Conception Web", "Google Ads", "Facebook Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
@@ -188,9 +188,9 @@ const onePageProjects: PortfolioProject[] = [
       "Se démarquer dans un marché compétitif de l'entretien ménager et convertir rapidement les visiteurs en clients réguliers.",
     solution:
       "Landing page focalisée sur la conversion avec preuve sociale forte, offre claire et formulaire de réservation simplifié en quelques clics.",
-    seoTitle: "Site Web Entretien Ménager Québec | Nettoyage Idéal — Portfolio Lannkin",
+    seoTitle: "Site Web Entretien Ménager France | Nettoyage Idéal — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel Québec, Google Ads et Facebook Ads.",
+      "Portfolio Ekolink : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel France, Google Ads et Facebook Ads.",
     externalUrl: "https://www.nettoyageideal.com/",
     previewImage: "/images/portfolio/nettoyage-ideal.webp",
   },
@@ -219,9 +219,9 @@ const onePageProjects: PortfolioProject[] = [
       "Établir rapidement une présence digitale crédible pour attirer de nouveaux clients résidentiels et commerciaux.",
     solution:
       "Landing page efficace avec preuve sociale, offres claires et formulaire de soumission pour convertir les visiteurs en clients.",
-    seoTitle: "Site Web Entretien Ménager Québec | Nettoyage Leblanc — Portfolio Lannkin",
+    seoTitle: "Site Web Entretien Ménager France | Nettoyage Leblanc — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : landing page pour Nettoyage Leblanc. Entretien ménager résidentiel et commercial Québec.",
+      "Portfolio Ekolink : landing page pour Nettoyage Leblanc. Entretien ménager résidentiel et commercial France.",
     externalUrl: "https://www.nettoyageleblanc.ca/",
     previewImage: "/images/portfolio/nettoyage-leblanc.webp",
   },
@@ -237,7 +237,7 @@ const onePageProjects: PortfolioProject[] = [
     shortDescription:
       "Landing page moderne pour un service d'entretien ménager résidentiel avec réservation en ligne et présentation des forfaits.",
     description:
-      "Réalisation d'une landing page moderne pour Ture Beau Ménage, service d'entretien résidentiel au Québec. Design épuré mettant en avant les forfaits, le processus de service, les témoignages et un formulaire de réservation simplifié pour convertir les visiteurs.",
+      "Réalisation d'une landing page moderne pour Ture Beau Ménage, service d'entretien résidentiel en France. Design épuré mettant en avant les forfaits, le processus de service, les témoignages et un formulaire de réservation simplifié pour convertir les visiteurs.",
     services: ["Conception Web", "Google Ads", "SEO"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
@@ -250,9 +250,9 @@ const onePageProjects: PortfolioProject[] = [
       "Lancer rapidement un nouveau service d'entretien ménager et acquérir les premiers clients avec un budget marketing maîtrisé.",
     solution:
       "Landing page conversion-first combinée à des campagnes Google Ads géolocalisées pour générer des réservations dès le lancement.",
-    seoTitle: "Site Web Entretien Ménager Résidentiel | Ture Beau Ménage — Portfolio Lannkin",
+    seoTitle: "Site Web Entretien Ménager Résidentiel | Ture Beau Ménage — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : landing page pour Ture Beau Ménage. Entretien ménager résidentiel Québec, Google Ads et conception web.",
+      "Portfolio Ekolink : landing page pour Ture Beau Ménage. Entretien ménager résidentiel France, Google Ads et conception web.",
     externalUrl: "https://www.turebeaumenage.com/",
     previewImage: "/images/portfolio/ture-beau-menage.webp",
   },
@@ -288,9 +288,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Faire décoller les ventes d'un e-commerce Shopify de mode dans un marché très compétitif au Canada.",
     solution:
       "Stratégie marketing 360° combinant publicité ciblée, optimisation Shopify et email marketing pour créer un flux de revenus récurrent.",
-    seoTitle: "E-commerce Shopify Mode | Etilik Wear — Portfolio Lannkin",
+    seoTitle: "E-commerce Shopify Mode | Etilik Wear — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : accompagnement e-commerce Shopify pour Etilik Wear. +30 000 CAD/mois de chiffre d'affaires.",
+      "Portfolio Ekolink : accompagnement e-commerce Shopify pour Etilik Wear. +30 000 CAD/mois de chiffre d'affaires.",
     externalUrl: "https://www.etilik-wear.com/",
     previewImage: "/images/services/conception de site web/shopify/etilik.png",
   },
@@ -319,9 +319,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Générer un volume de ventes significatif pour une marque de maillots dans un marché saisonnier et compétitif.",
     solution:
       "Stratégie marketing intégrée avec publicités ciblées, optimisation du tunnel de conversion Shopify et relance automatisée des paniers abandonnés.",
-    seoTitle: "Khaven Swim — E-commerce Shopify | Portfolio Lannkin",
+    seoTitle: "Khaven Swim — E-commerce Shopify | Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : +150 000 $ CAD générés en 2023 pour Khaven Swim. Stratégie e-commerce Shopify complète.",
+      "Portfolio Ekolink : +150 000 $ CAD générés en 2023 pour Khaven Swim. Stratégie e-commerce Shopify complète.",
     externalUrl: "https://khaven.com/",
     previewImage: "/images/services/conception de site web/shopify/khaven.png",
   },
@@ -350,9 +350,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Créer une boutique Shopify de cosmétiques qui convertit dans un marché saturé, avec un panier moyen élevé.",
     solution:
       "Architecture Shopify pensée conversion : pages produits type landing page, upsells au checkout, bundles stratégiques et parcours client optimisé du premier clic à la confirmation de commande.",
-    seoTitle: "Kosmopellis — Shopify Cosmétiques | Portfolio Lannkin",
+    seoTitle: "Kosmopellis — Shopify Cosmétiques | Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : création e-commerce Shopify pour Kosmopellis. Optimisation conversion, upsells, landing pages produit.",
+      "Portfolio Ekolink : création e-commerce Shopify pour Kosmopellis. Optimisation conversion, upsells, landing pages produit.",
     externalUrl: "https://kosmopellis.fr/",
     previewImage: "/images/services/conception de site web/shopify/kosmopellis.png",
   },
@@ -381,9 +381,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Positionner une marketplace bio avec un catalogue très large face aux géants du e-commerce.",
     solution:
       "Stratégie SEO technique pour un catalogue volumineux combinée à des campagnes Google Shopping ciblées par catégorie de produits.",
-    seoTitle: "Marketplace Bio E-commerce | Bio Center — Portfolio Lannkin",
+    seoTitle: "Marketplace Bio E-commerce | Bio Center — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : accompagnement SEO et Google Ads pour Bio Center, marketplace e-commerce de produits bio en France.",
+      "Portfolio Ekolink : accompagnement SEO et Google Ads pour Bio Center, marketplace e-commerce de produits bio en France.",
     externalUrl: "https://biocenter.fr/",
     previewImage: "/images/services/conception de site web/shopify/biocenter.png",
   },
@@ -399,7 +399,7 @@ const ecommerceProjects: PortfolioProject[] = [
     shortDescription:
       "Accompagnement e-commerce et SEO pour K-Way Canada, marque iconique de vêtements outdoor.",
     description:
-      "Accompagnement sur la partie e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements imperméables. Optimisation du référencement naturel, stratégie de contenu et amélioration de l'expérience d'achat en ligne pour le marché canadien.",
+      "Accompagnement sur la partie e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements imperméables. Optimisation du référencement naturel, stratégie de contenu et amélioration de l'expérience d'achat en ligne pour le marché français.",
     services: ["SEO", "Conception Web", "Google Ads"],
     technologies: ["Shopify", "Google Analytics 4", "Search Console"],
     results: [
@@ -409,12 +409,12 @@ const ecommerceProjects: PortfolioProject[] = [
       "Trafic organique en hausse",
     ],
     challenge:
-      "Renforcer la présence digitale d'une marque mondiale sur le marché canadien spécifique.",
+      "Renforcer la présence digitale d'une marque mondiale sur le marché français spécifique.",
     solution:
-      "Stratégie SEO adaptée au marché canadien bilingue avec optimisation e-commerce et contenu ciblé.",
-    seoTitle: "E-commerce K-Way Canada | SEO & Shopify — Portfolio Lannkin",
+      "Stratégie SEO adaptée au marché français bilingue avec optimisation e-commerce et contenu ciblé.",
+    seoTitle: "E-commerce K-Way Canada | SEO & Shopify — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : accompagnement e-commerce et SEO pour K-Way Canada. Optimisation Shopify marché canadien.",
+      "Portfolio Ekolink : accompagnement e-commerce et SEO pour K-Way Canada. Optimisation Shopify marché français.",
     externalUrl: "https://kwaycanada.com/",
     previewImage: "/images/services/conception de site web/shopify/kway.png",
   },
@@ -443,9 +443,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Convertir des visiteurs en abonnés récurrents pour un service de repas sportifs dans un marché de niche.",
     solution:
       "Refonte Shopify axée sur le modèle d'abonnement avec landing pages dédiées et publicité ciblée vers les communautés fitness.",
-    seoTitle: "Iron Meals — E-commerce Shopify | Portfolio Lannkin",
+    seoTitle: "Iron Meals — E-commerce Shopify | Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : refonte Shopify et publicité pour Iron Meals. E-commerce repas en abonnement pour sportifs.",
+      "Portfolio Ekolink : refonte Shopify et publicité pour Iron Meals. E-commerce repas en abonnement pour sportifs.",
     externalUrl: "https://ironmeals.ca/",
     previewImage: "/images/services/conception de site web/shopify/ironmeals.png",
   },
@@ -459,9 +459,9 @@ const ecommerceProjects: PortfolioProject[] = [
     sector: "Jouets et cadeaux",
     year: 2023,
     shortDescription:
-      "Boutique en ligne pour une boutique de jouets québécoise avec catalogue produits, paiement sécurisé et livraison au Canada.",
+      "Boutique en ligne pour une boutique de jouets française avec catalogue produits, paiement sécurisé et livraison au Canada.",
     description:
-      "Développement d'une boutique e-commerce pour Le Coffre à Jouets, détaillant québécois de jouets et cadeaux. Catalogue produits organisé par catégories et âges, fiche produit détaillée, panier et checkout optimisés, intégration de paiement sécurisé et gestion des expéditions au Canada.",
+      "Développement d'une boutique e-commerce pour Le Coffre à Jouets, détaillant français de jouets et cadeaux. Catalogue produits organisé par catégories et âges, fiche produit détaillée, panier et checkout optimisés, intégration de paiement sécurisé et gestion des expéditions au Canada.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WooCommerce", "WordPress", "Stripe", "WP Rocket"],
     results: [
@@ -474,9 +474,9 @@ const ecommerceProjects: PortfolioProject[] = [
       "Transition d'un modèle de vente physique vers le commerce en ligne tout en conservant l'expérience chaleureuse d'une boutique locale.",
     solution:
       "Boutique e-commerce WooCommerce avec design accueillant, navigation intuitive par catégorie d'âge et processus d'achat simplifié pour maximiser les conversions.",
-    seoTitle: "Boutique E-commerce Jouets Québec | Le Coffre à Jouets — Portfolio Lannkin",
+    seoTitle: "Boutique E-commerce Jouets France | Le Coffre à Jouets — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : e-commerce pour Le Coffre à Jouets. Boutique en ligne jouets et cadeaux Québec, WooCommerce et SEO.",
+      "Portfolio Ekolink : e-commerce pour Le Coffre à Jouets. Boutique en ligne jouets et cadeaux France, WooCommerce et SEO.",
     externalUrl: "https://lecoffreajouets.net/",
     previewImage: "/images/portfolio/coffre-a-jouets.webp",
   },
@@ -508,8 +508,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Attirer des touristes étrangers via le web dans un marché très concurrentiel.",
     solution: "Site multilingue optimisé pour le SEO international avec photos immersives.",
-    seoTitle: "Quad Venture Agadir — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : site web pour Quad Venture Agadir, Maroc. Conception web internationale.",
+    seoTitle: "Quad Venture Agadir — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : site web pour Quad Venture Agadir, Maroc. Conception web internationale.",
     externalUrl: "https://quadventure-agadir.com/",
     previewImage: "/images/portfolio/quadventure-agadir.webp",
   },
@@ -534,8 +534,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Percer les marchés occidentaux depuis la Chine avec une présence web crédible.",
     solution: "Site anglophone professionnel avec SEO technique optimisé pour Google (hors Chine).",
-    seoTitle: "All Touch Display Chine — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : e-commerce B2B pour All Touch Display, fabricant d'écrans tactiles en Chine.",
+    seoTitle: "All Touch Display Chine — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : e-commerce B2B pour All Touch Display, fabricant d'écrans tactiles en Chine.",
     externalUrl: "https://www.alltouchdisplay.com/",
     previewImage: "/images/portfolio/alltouchdisplay.webp",
   },
@@ -560,8 +560,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Se positionner sur Google dans le marché parisien de la plomberie, l'un des plus saturés en France.",
     solution: "Architecture SEO locale par arrondissement, contenu hyper-ciblé et campagnes Google Ads géolocalisées.",
-    seoTitle: "Les Artisans Marceau Paris — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : site SEO pour Les Artisans Marceau, plombier Paris. Top 5 Google marché ultra-compétitif.",
+    seoTitle: "Les Artisans Marceau Paris — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : site SEO pour Les Artisans Marceau, plombier Paris. Top 5 Google marché ultra-compétitif.",
     externalUrl: "https://www.lesartisansmarceau.fr/",
     previewImage: "/images/portfolio/artisans-marceau-paris.webp",
   },
@@ -586,8 +586,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Communiquer le prestige et l'exclusivité d'une marque de niche ultra-premium.",
     solution: "Site immersif avec photographie haut de gamme, animations fluides et copywriting orienté désirabilité.",
-    seoTitle: "Vigilante 4x4 USA — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : site web premium pour Vigilante 4x4, marque américaine de 4x4 rétro de luxe.",
+    seoTitle: "Vigilante 4x4 USA — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : site web premium pour Vigilante 4x4, marque américaine de 4x4 rétro de luxe.",
     externalUrl: "https://vigilante4x4.com/",
     previewImage: "/images/portfolio/vigilante-4x4.webp",
   },
@@ -612,8 +612,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Se démarquer dans un marché du design suisse très exigeant avec peu de budget publicitaire.",
     solution: "Site de portfolio immersif mettant en valeur le savoir-faire de l'agence avec SEO local suisse romand.",
-    seoTitle: "Essence Design Lausanne — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : site web pour Essence Design, agence de branding à Lausanne Suisse.",
+    seoTitle: "Essence Design Lausanne — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : site web pour Essence Design, agence de branding à Lausanne Suisse.",
     externalUrl: "https://www.essencedesign.com/",
     previewImage: "/images/portfolio/essence-design-lausanne.webp",
   },
@@ -638,8 +638,8 @@ const internationalProjects: PortfolioProject[] = [
     ],
     challenge: "Optimiser la présence digitale d'une marque établie sur les marchés germanophones.",
     solution: "SEO multilingue DE/FR/EN et campagnes Google Shopping structurées par marché géographique.",
-    seoTitle: "Rotho Allemagne — Portfolio International Lannkin",
-    seoDescription: "Réalisation Lannkin : stratégie digitale e-commerce pour Rotho, marque de produits ménagers en Allemagne.",
+    seoTitle: "Rotho Allemagne — Portfolio International Ekolink",
+    seoDescription: "Réalisation Ekolink : stratégie digitale e-commerce pour Rotho, marque de produits ménagers en Allemagne.",
     externalUrl: "https://rotho.com/",
     previewImage: "/images/portfolio/rotho-ecommerce-allemagne.webp",
   },
@@ -668,9 +668,9 @@ const internationalProjects: PortfolioProject[] = [
       "Communiquer le prestige et la qualité de meubles en marbre haut de gamme via un e-commerce, sans visite physique du showroom à Monaco.",
     solution:
       "Modélisation 3D photoréaliste de chaque pièce avec Blender, intégration WebGL interactive sur le site et utilisation du format GLB indexable par Google pour un avantage SEO unique.",
-    seoTitle: "Montecarlo Designs — Mobilier 3D Monaco | Lannkin",
+    seoTitle: "Montecarlo Designs — Mobilier 3D Monaco | Ekolink",
     seoDescription:
-      "Portfolio Lannkin : e-commerce Montecarlo Designs, mobilier de luxe Monaco. Modélisation 3D Blender, WebGL, SEO GLB.",
+      "Portfolio Ekolink : e-commerce Montecarlo Designs, mobilier de luxe Monaco. Modélisation 3D Blender, WebGL, SEO GLB.",
     externalUrl: "https://montecarlo-designs.com/",
     previewImage: "/images/services/conception de site web/shopify/montecarlo.png",
   },
@@ -699,9 +699,9 @@ const internationalProjects: PortfolioProject[] = [
       "Créer un e-commerce à la hauteur du prestige d'une adresse Avenue Montaigne pour des lunettes de grandes marques de luxe.",
     solution:
       "E-commerce WordPress/WooCommerce avec design premium, photographie produit haut de gamme et SEO local ciblant le marché parisien du luxe.",
-    seoTitle: "Montaigne Optique Paris — Lunettes Luxe | Portfolio Lannkin",
+    seoTitle: "Montaigne Optique Paris — Lunettes Luxe | Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : e-commerce pour Montaigne Optique, opticien de luxe Avenue Montaigne Paris. WordPress, WooCommerce, SEO.",
+      "Portfolio Ekolink : e-commerce pour Montaigne Optique, opticien de luxe Avenue Montaigne Paris. WordPress, WooCommerce, SEO.",
     externalUrl: "https://montaigneoptique.com/",
     previewImage: "/images/services/conception de site web/shopify/montaigne.png",
   },
@@ -722,7 +722,7 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Construction et rénovation",
     year: 2024,
     shortDescription:
-      "Site web multipage pour un entrepreneur général en construction et rénovation résidentielle au Québec.",
+      "Site web multipage pour un entrepreneur général en construction et rénovation résidentielle en France.",
     description:
       "Réalisation du site web multipage de Construction Fontes, entrepreneur général spécialisé en construction neuve et rénovation résidentielle. Portfolio de réalisations, pages services détaillées, formulaire de soumission gratuite et optimisation SEO locale pour attirer de nouveaux clients.",
     services: ["Conception Web", "SEO", "Google Ads"],
@@ -734,12 +734,12 @@ const additionalProjects: PortfolioProject[] = [
       "Meilleure visibilité Google locale",
     ],
     challenge:
-      "Établir une présence digitale crédible dans un secteur de la construction très compétitif au Québec.",
+      "Établir une présence digitale crédible dans un secteur de la construction très compétitif en France.",
     solution:
       "Site multipage mettant en avant les réalisations photographiées avec contenu SEO local et formulaire de soumission optimisé.",
-    seoTitle: "Site Web Entrepreneur Général Québec | Construction Fontes — Portfolio Lannkin",
+    seoTitle: "Site Web Entrepreneur Général France | Construction Fontes — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Construction Fontes. Entrepreneur général construction et rénovation résidentielle Québec.",
+      "Portfolio Ekolink : site web pour Construction Fontes. Entrepreneur général construction et rénovation résidentielle France.",
     externalUrl: "https://constructionfontes.com/",
     previewImage: "/images/portfolio/construction-fontes.webp",
   },
@@ -768,9 +768,9 @@ const additionalProjects: PortfolioProject[] = [
       "Inspirer et convaincre les clients de la qualité des réalisations avant la visite du showroom, dans un marché très visuel.",
     solution:
       "Site multipage axé sur la galerie photo haut de gamme avec parcours utilisateur simplifié menant à la prise de rendez-vous.",
-    seoTitle: "Site Web Cuisines Salles de Bain Québec | Cuisine Innovex — Portfolio Lannkin",
+    seoTitle: "Site Web Cuisines Salles de Bain France | Cuisine Innovex — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Cuisine Innovex. Cuisines et salles de bain sur mesure Québec, conception web et SEO.",
+      "Portfolio Ekolink : site web pour Cuisine Innovex. Cuisines et salles de bain sur mesure France, conception web et SEO.",
     externalUrl: "https://cuisineinnovex.com/",
     previewImage: "/images/portfolio/cuisine-innovex.webp",
   },
@@ -784,7 +784,7 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Maçonnerie et béton",
     year: 2024,
     shortDescription:
-      "Site web multipage pour une entreprise de maçonnerie spécialisée en briques, pierres et béton au Québec.",
+      "Site web multipage pour une entreprise de maçonnerie spécialisée en briques, pierres et béton en France.",
     description:
       "Réalisation du site web multipage de Maçonnerie Baka, entrepreneur spécialisé en travaux de maçonnerie : briques, pierres naturelles, béton décoratif et réparation. Galerie de réalisations avant/après, pages services détaillées et formulaire de soumission gratuite.",
     services: ["Conception Web", "SEO", "Google Ads"],
@@ -799,9 +799,9 @@ const additionalProjects: PortfolioProject[] = [
       "Se démarquer dans un secteur de la maçonnerie où les clients choisissent principalement sur la base de photos de réalisations et de recommandations.",
     solution:
       "Site multipage centré sur la galerie de travaux, avec témoignages clients et SEO local ciblant les propriétaires résidentiels de la région.",
-    seoTitle: "Site Web Maçonnerie Québec | Maçonnerie Baka — Portfolio Lannkin",
+    seoTitle: "Site Web Maçonnerie France | Maçonnerie Baka — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Maçonnerie Baka. Briques, pierres et béton décoratif Québec, conception web et SEO local.",
+      "Portfolio Ekolink : site web pour Maçonnerie Baka. Briques, pierres et béton décoratif France, conception web et SEO local.",
     externalUrl: "https://www.maconnerie-baka.com/",
     previewImage: "/images/portfolio/maconnerie-baka.webp",
   },
@@ -830,9 +830,9 @@ const additionalProjects: PortfolioProject[] = [
       "Bâtir la confiance auprès de clients résidentiels pour des projets de rénovation importants et coûteux.",
     solution:
       "Site multipage misant sur la preuve sociale (galerie + témoignages) et une navigation par type de projet pour guider les visiteurs vers la demande de soumission.",
-    seoTitle: "Site Web Rénovation Résidentielle Québec | Patrenov — Portfolio Lannkin",
+    seoTitle: "Site Web Rénovation Résidentielle France | Patrenov — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Patrenov. Rénovation résidentielle complète Québec, conception web et SEO local.",
+      "Portfolio Ekolink : site web pour Patrenov. Rénovation résidentielle complète France, conception web et SEO local.",
     externalUrl: "https://www.patrenov.com/",
     previewImage: "/images/portfolio/patrenov.webp",
   },
@@ -848,7 +848,7 @@ const additionalProjects: PortfolioProject[] = [
     shortDescription:
       "Landing page pour une entreprise de services d'entretien résidentiel et commercial avec forfaits et formulaire de réservation.",
     description:
-      "Conception d'une landing page optimisée pour SCS Entretien, service d'entretien ménager résidentiel et commercial au Québec. Présentation des forfaits, section témoignages clients, processus de service en 3 étapes et formulaire de demande de soumission en ligne.",
+      "Conception d'une landing page optimisée pour SCS Entretien, service d'entretien ménager résidentiel et commercial en France. Présentation des forfaits, section témoignages clients, processus de service en 3 étapes et formulaire de demande de soumission en ligne.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
     results: [
@@ -861,9 +861,9 @@ const additionalProjects: PortfolioProject[] = [
       "Générer rapidement des demandes de service dans un marché local de l'entretien très concurrentiel.",
     solution:
       "Landing page conversion-first avec offre claire, preuve sociale renforcée et formulaire de contact simplifié.",
-    seoTitle: "Site Web Services Entretien Québec | SCS Entretien — Portfolio Lannkin",
+    seoTitle: "Site Web Services Entretien France | SCS Entretien — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial Québec.",
+      "Portfolio Ekolink : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial France.",
     externalUrl: "https://www.scsentretien.ca/",
     previewImage: "/images/portfolio/scs-entretien.webp",
   },
@@ -879,22 +879,22 @@ const additionalProjects: PortfolioProject[] = [
     shortDescription:
       "Site web multipage pour un courtier immobilier avec intégration Centris, pages propriétés et prise de rendez-vous en ligne.",
     description:
-      "Réalisation d'un site web multipage pour Christian-Olivier Ducharme, courtier immobilier couvrant Montréal et Laval. Pages Acheter/Vendre, intégration Centris/MLS, galerie de propriétés, témoignages clients et formulaire de prise de rendez-vous en ligne.",
+      "Réalisation d'un site web multipage pour Christian-Olivier Ducharme, courtier immobilier couvrant Paris et Paris. Pages Acheter/Vendre, intégration Centris/MLS, galerie de propriétés, témoignages clients et formulaire de prise de rendez-vous en ligne.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "Centris"],
     results: [
       "Site professionnel avec intégration Centris",
       "Prise de rendez-vous en ligne opérationnelle",
-      "Visibilité locale Montréal et Laval améliorée",
+      "Visibilité locale Paris et Paris améliorée",
       "Image de marque personnelle renforcée",
     ],
     challenge:
       "Se démarquer dans un marché immobilier saturé de courtiers et établir une présence digitale qui inspire confiance.",
     solution:
-      "Site multipage professionnel avec intégration Centris, témoignages clients et contenu SEO local ciblant Montréal et Laval.",
-    seoTitle: "Site Web Courtier Immobilier Montréal | Christian-Olivier Ducharme — Portfolio Lannkin",
+      "Site multipage professionnel avec intégration Centris, témoignages clients et contenu SEO local ciblant Paris et Paris.",
+    seoTitle: "Site Web Courtier Immobilier Paris | Christian-Olivier Ducharme — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Christian-Olivier Ducharme, courtier immobilier. Conception web immobilier Montréal et Laval.",
+      "Portfolio Ekolink : site web pour Christian-Olivier Ducharme, courtier immobilier. Conception web immobilier Paris et Paris.",
     externalUrl: "https://www.christianolivierducharme.com/",
     previewImage: "/images/portfolio/christian-olivier-ducharme.webp",
   },
@@ -923,9 +923,9 @@ const additionalProjects: PortfolioProject[] = [
       "Mettre en valeur un artisanat unique et convaincre les clients de la qualité des pièces sur mesure sans visite physique.",
     solution:
       "Site multipage axé sur la galerie photo haute résolution et le storytelling artisanal, avec SEO ciblant le Saguenay-Lac-Saint-Jean.",
-    seoTitle: "Site Web Artisan Bois Époxy Saguenay | Créations Boréales du Lac — Portfolio Lannkin",
+    seoTitle: "Site Web Artisan Bois Époxy Saguenay | Créations Boréales du Lac — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Créations Boréales du Lac. Tables bois et époxy sur mesure Saguenay, conception web et SEO.",
+      "Portfolio Ekolink : site web pour Créations Boréales du Lac. Tables bois et époxy sur mesure Saguenay, conception web et SEO.",
     externalUrl: "https://www.creationsborealesdulac.ca/",
     previewImage: "/images/portfolio/creations-boreales-du-lac.webp",
   },
@@ -954,9 +954,9 @@ const additionalProjects: PortfolioProject[] = [
       "Couvrir un vaste territoire en Abitibi-Témiscamingue et se positionner sur les recherches locales dans plusieurs villes.",
     solution:
       "Site multipage avec pages dédiées par région desservie et par service, optimisées pour le SEO local multirégion.",
-    seoTitle: "Site Web Coffrage Bétonnage Abitibi | Métal Plus — Portfolio Lannkin",
+    seoTitle: "Site Web Coffrage Bétonnage Abitibi | Métal Plus — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Métal Plus. Coffrage et bétonnage Abitibi-Témiscamingue, conception web et SEO local.",
+      "Portfolio Ekolink : site web pour Métal Plus. Coffrage et bétonnage Abitibi-Témiscamingue, conception web et SEO local.",
     externalUrl: "https://www.metalplus.ca/",
     previewImage: "/images/portfolio/metal-plus.webp",
   },
@@ -982,12 +982,12 @@ const additionalProjects: PortfolioProject[] = [
       "Visibilité locale améliorée dans plusieurs régions",
     ],
     challenge:
-      "Couvrir un large territoire (Trois-Rivières, Montréal, Longueuil, Mont-Tremblant) et attirer des projets diversifiés.",
+      "Couvrir un large territoire (Nice, Paris, Nanterre, Mont-Tremblant) et attirer des projets diversifiés.",
     solution:
       "Site multipage avec pages régions et services détaillées, mettant en avant les certifications et la polyvalence de l'entreprise.",
-    seoTitle: "Site Web Soudure Travaux Acier Québec | Installation L. Gagné — Portfolio Lannkin",
+    seoTitle: "Site Web Soudure Travaux Acier France | Installation L. Gagné — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Installation L. Gagné. Soudure mobile et travaux d'acier sur mesure Québec.",
+      "Portfolio Ekolink : site web pour Installation L. Gagné. Soudure mobile et travaux d'acier sur mesure France.",
     externalUrl: "https://installationlgagne.ca/",
     previewImage: "/images/portfolio/installation-lgagne.webp",
   },
@@ -1001,24 +1001,24 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Charpenterie",
     year: 2024,
     shortDescription:
-      "Site web multipage pour une entreprise de charpenterie haut de gamme à Montréal et Rive-Sud.",
+      "Site web multipage pour une entreprise de charpenterie haut de gamme à Paris et Hauts-de-Seine.",
     description:
-      "Conception d'un site web multipage pour Construction Véloce, spécialiste en charpenterie sur mesure à Montréal et Rive-Sud. Pages services (construction de charpente, rénovation, rénovation majeure), galerie de projets réalisés et formulaire de contact.",
+      "Conception d'un site web multipage pour Construction Véloce, spécialiste en charpenterie sur mesure à Paris et Hauts-de-Seine. Pages services (construction de charpente, rénovation, rénovation majeure), galerie de projets réalisés et formulaire de contact.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "Google Analytics 4", "Google Site Kit"],
     results: [
       "Image de marque haut de gamme établie en ligne",
       "Portfolio de charpentes sur mesure convaincant",
       "Leads qualifiés générés via le site",
-      "Positionnement SEO local Montréal et Rive-Sud",
+      "Positionnement SEO local Paris et Hauts-de-Seine",
     ],
     challenge:
       "Communiquer le positionnement haut de gamme et la qualité sans compromis dans un secteur de la construction souvent perçu comme générique.",
     solution:
       "Site multipage avec design professionnel, galerie photo mettant en valeur la qualité des charpentes et contenu SEO ciblé.",
-    seoTitle: "Site Web Charpenterie Montréal | Construction Véloce — Portfolio Lannkin",
+    seoTitle: "Site Web Charpenterie Paris | Construction Véloce — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Construction Véloce. Charpenterie haut de gamme Montréal et Rive-Sud.",
+      "Portfolio Ekolink : site web pour Construction Véloce. Charpenterie haut de gamme Paris et Hauts-de-Seine.",
     externalUrl: "https://constructionveloce.ca/",
     previewImage: "/images/portfolio/construction-veloce.webp",
   },
@@ -1047,9 +1047,9 @@ const additionalProjects: PortfolioProject[] = [
       "Rassurer les parents sur la qualité et la sécurité d'une garderie 24h et les convaincre d'inscrire leurs enfants.",
     solution:
       "Site multipage rassurant avec présentation détaillée des services, galerie photo chaleureuse et témoignages de parents satisfaits.",
-    seoTitle: "Site Web Garderie 24h Québec | Andleikay Garderie — Portfolio Lannkin",
+    seoTitle: "Site Web Garderie 24h France | Andleikay Garderie — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Andleikay Garderie 24h. Garderie avec horaires flexibles Québec, conception web bilingue.",
+      "Portfolio Ekolink : site web pour Andleikay Garderie 24h. Garderie avec horaires flexibles France, conception web bilingue.",
     externalUrl: "https://andleikaygarderie24h.ca/",
     previewImage: "/images/portfolio/andleikay-garderie-24h.webp",
   },
@@ -1063,24 +1063,24 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Construction et rénovation",
     year: 2024,
     shortDescription:
-      "Site web multipage bilingue pour un entrepreneur général en rénovation et restauration dans le Grand Montréal.",
+      "Site web multipage bilingue pour un entrepreneur général en rénovation et restauration dans le Grand Paris.",
     description:
-      "Réalisation d'un site web multipage bilingue (FR/EN) pour Kagalexo, entrepreneur général certifié RBQ et APCHQ spécialisé en rénovation résidentielle et commerciale, restauration de bâtiments patrimoniaux et inspections techniques dans le Grand Montréal.",
+      "Réalisation d'un site web multipage bilingue (FR/EN) pour Kagalexo, entrepreneur général certifié RBQ et APCHQ spécialisé en rénovation résidentielle et commerciale, restauration de bâtiments patrimoniaux et inspections techniques dans le Grand Paris.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
     results: [
       "Site bilingue professionnel établissant la crédibilité",
       "Certifications RBQ et APCHQ mises en avant",
       "Demandes de soumission en ligne opérationnelles",
-      "Référencement local Grand Montréal amélioré",
+      "Référencement local Grand Paris amélioré",
     ],
     challenge:
-      "Positionner Kagalexo comme guichet unique de confiance pour des projets de rénovation complexes dans le Grand Montréal.",
+      "Positionner Kagalexo comme guichet unique de confiance pour des projets de rénovation complexes dans le Grand Paris.",
     solution:
       "Site multipage bilingue mettant en avant l'approche un seul point de contact, les certifications et le portfolio de réalisations.",
-    seoTitle: "Site Web Entrepreneur Général Montréal | Kagalexo — Portfolio Lannkin",
+    seoTitle: "Site Web Entrepreneur Général Paris | Kagalexo — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Kagalexo. Rénovation et restauration Grand Montréal, conception web bilingue et SEO.",
+      "Portfolio Ekolink : site web pour Kagalexo. Rénovation et restauration Grand Paris, conception web bilingue et SEO.",
     externalUrl: "https://www.kagalexo.com/",
     previewImage: "/images/portfolio/kagalexo.webp",
   },
@@ -1094,7 +1094,7 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Services électriques",
     year: 2024,
     shortDescription:
-      "Site web multipage pour un maître électricien certifié RBQ desservant Montréal, Laval, Laurentides et Lanaudière.",
+      "Site web multipage pour un maître électricien certifié RBQ desservant Paris, Paris, Laurentides et Île-de-France.",
     description:
       "Conception d'un site web multipage pour DCG Électrique, maître électricien avec plus de 25 ans d'expérience. Pages services (filage, rénovation électrique, bornes de recharge, urgences 24/7), régions desservies et formulaire de contact.",
     services: ["Conception Web", "SEO", "Google Ads"],
@@ -1106,12 +1106,12 @@ const additionalProjects: PortfolioProject[] = [
       "Visibilité locale dans 4 régions",
     ],
     challenge:
-      "Couvrir quatre régions (Montréal, Laval, Laurentides, Lanaudière) et se positionner sur les recherches d'urgence électrique.",
+      "Couvrir quatre régions (Paris, Paris, Laurentides, Île-de-France) et se positionner sur les recherches d'urgence électrique.",
     solution:
       "Site multipage avec pages régions dédiées, CTA téléphonique proéminent pour les urgences et contenu SEO local multirégion.",
-    seoTitle: "Site Web Électricien Montréal Laval | DCG Électrique — Portfolio Lannkin",
+    seoTitle: "Site Web Électricien Paris Paris | DCG Électrique — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour DCG Électrique. Maître électricien Montréal, Laval, Laurentides et Lanaudière.",
+      "Portfolio Ekolink : site web pour DCG Électrique. Maître électricien Paris, Paris, Laurentides et Île-de-France.",
     externalUrl: "https://www.dcgelectrique.ca/",
     previewImage: "/images/portfolio/dcg-electrique.webp",
   },
@@ -1125,24 +1125,24 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Courtage immobilier",
     year: 2024,
     shortDescription:
-      "Site web multipage pour un courtier immobilier Via Capitale Élite dans la région de Québec.",
+      "Site web multipage pour un courtier immobilier Via Capitale Élite dans la région de France.",
     description:
-      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de Québec/Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
+      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de France/Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WPForms"],
     results: [
       "Image de marque personnelle professionnelle",
       "Site vitrine mettant en avant l'expertise locale",
       "Prise de contact facilitée via formulaire",
-      "Référencement local région de Québec",
+      "Référencement local région de France",
     ],
     challenge:
-      "Établir une présence digitale personnelle distincte dans un marché immobilier compétitif à Québec.",
+      "Établir une présence digitale personnelle distincte dans un marché immobilier compétitif à Paris.",
     solution:
-      "Site multipage personnel avec témoignages clients, pages de services immobiliers et contenu SEO ciblant la région de Québec.",
-    seoTitle: "Site Web Courtier Immobilier Québec | Yves Baillargeon — Portfolio Lannkin",
+      "Site multipage personnel avec témoignages clients, pages de services immobiliers et contenu SEO ciblant la région de France.",
+    seoTitle: "Site Web Courtier Immobilier France | Yves Baillargeon — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site web pour Yves Baillargeon, courtier immobilier Via Capitale Élite, région de Québec.",
+      "Portfolio Ekolink : site web pour Yves Baillargeon, courtier immobilier Via Capitale Élite, région de France.",
     externalUrl: "https://www.yvesbaillargeon.ca/",
     previewImage: "/images/portfolio/yves-baillargeon.webp",
   },
@@ -1156,24 +1156,24 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Salon de coiffure",
     year: 2024,
     shortDescription:
-      "Site onepage pour un salon de coiffure à Sherbrooke avec présentation des services, réalisations et témoignages.",
+      "Site onepage pour un salon de coiffure à Strasbourg avec présentation des services, réalisations et témoignages.",
     description:
-      "Conception d'un site onepage pour Myriame Chic Salon, salon de coiffure à Sherbrooke. Sections À propos, services (coupes, colorations, soins capillaires), galerie de réalisations, témoignages clients et formulaire de contact.",
+      "Conception d'un site onepage pour Myriame Chic Salon, salon de coiffure à Strasbourg. Sections À propos, services (coupes, colorations, soins capillaires), galerie de réalisations, témoignages clients et formulaire de contact.",
     services: ["Conception Web", "SEO", "Réseaux Sociaux"],
     technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WP Rocket"],
     results: [
       "Site vitrine professionnel reflétant l'image du salon",
       "Galerie de réalisations coiffure inspirante",
       "Nouveaux clients acquis via le web",
-      "Référencement local Sherbrooke optimisé",
+      "Référencement local Strasbourg optimisé",
     ],
     challenge:
-      "Refléter l'ambiance et le style du salon en ligne pour attirer une clientèle locale à Sherbrooke.",
+      "Refléter l'ambiance et le style du salon en ligne pour attirer une clientèle locale à Strasbourg.",
     solution:
       "Site onepage avec design élégant, galerie de réalisations et témoignages pour convaincre les visiteurs de prendre rendez-vous.",
-    seoTitle: "Site Web Salon Coiffure Sherbrooke | Myriame Chic Salon — Portfolio Lannkin",
+    seoTitle: "Site Web Salon Coiffure Strasbourg | Myriame Chic Salon — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site onepage pour Myriame Chic Salon. Salon de coiffure Sherbrooke, conception web et SEO local.",
+      "Portfolio Ekolink : site onepage pour Myriame Chic Salon. Salon de coiffure Strasbourg, conception web et SEO local.",
     externalUrl: "https://www.myriamechicsalon.ca/",
     previewImage: "/images/portfolio/myriame-chic-salon.webp",
   },
@@ -1202,9 +1202,9 @@ const additionalProjects: PortfolioProject[] = [
       "Construire une marque personnelle digitale de confiance pour une courtière immobilière en début de carrière.",
     solution:
       "Site onepage avec storytelling personnel, blog pour le SEO et mise en avant de l'empathie et de la disponibilité.",
-    seoTitle: "Site Web Courtière Immobilière | Fenide Dieujuste — Portfolio Lannkin",
+    seoTitle: "Site Web Courtière Immobilière | Fenide Dieujuste — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Lannkin : site onepage pour Fenide Dieujuste, courtière immobilière. Conception web immobilier et SEO.",
+      "Portfolio Ekolink : site onepage pour Fenide Dieujuste, courtière immobilière. Conception web immobilier et SEO.",
     externalUrl: "https://www.fenidedieujuste.com/",
     previewImage: "/images/portfolio/fenide-dieujuste.webp",
   },
@@ -1288,22 +1288,22 @@ export const PORTFOLIO_SECTOR_PAGES: PortfolioSectorPage[] = [
     slug: "construction",
     label: "Construction",
     description: "Sites web pour entrepreneurs en construction, rénovation, maçonnerie, électricité et métiers du bâtiment.",
-    seoTitle: "Sites Web Construction & Rénovation Québec | Portfolio Lannkin",
-    seoDescription: "Portfolio Lannkin : sites web pour entrepreneurs en construction et rénovation au Québec. Conceptions web professionnelles, SEO local et Google Ads.",
+    seoTitle: "Sites Web Construction & Rénovation France | Portfolio Ekolink",
+    seoDescription: "Portfolio Ekolink : sites web pour entrepreneurs en construction et rénovation en France. Conceptions web professionnelles, SEO local et Google Ads.",
   },
   {
     slug: "immobilier",
     label: "Immobilier",
     description: "Sites web pour courtiers immobiliers avec intégration Centris, pages propriétés et prise de rendez-vous.",
-    seoTitle: "Sites Web Courtiers Immobiliers Québec | Portfolio Lannkin",
-    seoDescription: "Portfolio Lannkin : sites web pour courtiers immobiliers au Québec. Intégration Centris, SEO local et génération de leads immobiliers.",
+    seoTitle: "Sites Web Courtiers Immobiliers France | Portfolio Ekolink",
+    seoDescription: "Portfolio Ekolink : sites web pour courtiers immobiliers en France. Intégration Centris, SEO local et génération de leads immobiliers.",
   },
   {
     slug: "services-menagers",
     label: "Services ménagers",
     description: "Landing pages et sites pour services d'entretien ménager résidentiel et commercial.",
-    seoTitle: "Sites Web Entretien Ménager Québec | Portfolio Lannkin",
-    seoDescription: "Portfolio Lannkin : sites web et landing pages pour services d'entretien ménager au Québec. Conception web et Google Ads.",
+    seoTitle: "Sites Web Entretien Ménager France | Portfolio Ekolink",
+    seoDescription: "Portfolio Ekolink : sites web et landing pages pour services d'entretien ménager en France. Conception web et Google Ads.",
   },
 ];
 

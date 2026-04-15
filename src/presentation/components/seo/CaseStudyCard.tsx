@@ -38,7 +38,7 @@ export function CaseStudyCard({
     >
       {/* Header */}
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium"
-        style={{ borderColor: "rgba(73,143,109,0.3)", color: "#498f6d" }}>
+        style={{ borderColor: "rgba(73,143,109,0.3)", color: "#fff" }}>
         {industry}
       </div>
       <h3 className="font-heading text-xl font-bold text-white">{title}</h3>

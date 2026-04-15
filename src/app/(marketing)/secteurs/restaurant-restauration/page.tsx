@@ -4,22 +4,22 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Restaurant & Restauration Laval | Google Ads, Réseaux Sociaux | Lannkin",
+  title: "Marketing Digital Restaurant & Restauration Paris | Google Ads, Réseaux Sociaux | Ekolink",
   description:
-    "Agence marketing spécialisée restauration à Laval. Google Ads local, gestion réseaux sociaux, avis Google, site web avec menu et réservation. Remplissez vos tables. Devis gratuit.",
+    "Agence marketing spécialisée restauration à Paris. Google Ads local, gestion réseaux sociaux, avis Google, site web avec menu et réservation. Remplissez vos tables. Devis gratuit.",
   keywords: [
-    "marketing digital restaurant laval",
-    "google ads restaurant montréal",
-    "réseaux sociaux restauration québec",
-    "seo restaurant laval",
+    "marketing digital restaurant paris",
+    "google ads restaurant paris",
+    "réseaux sociaux restauration france",
+    "seo restaurant paris",
     "gestion avis google restaurant",
-    "site web restaurant montréal",
+    "site web restaurant paris",
   ],
   alternates: { canonical: "/secteurs/restaurant-restauration/" },
 };
 
 const BENEFITS = [
-  "Google Ads Local pour apparaître en premier sur 'restaurant laval', 'restaurant italien montréal-nord'",
+  "Google Ads Local pour apparaître en premier sur 'restaurant paris', 'restaurant italien paris-nord'",
   "Gestion de vos avis Google et TripAdvisor — réputation en ligne protégée et valorisée",
   "Réseaux sociaux food photography : contenus appétissants qui génèrent réservations et livraisons",
   "Site web avec menu interactif, réservation en ligne et commande directe (sans commission externe)",

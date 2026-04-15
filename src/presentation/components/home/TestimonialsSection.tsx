@@ -8,13 +8,13 @@ export function TestimonialsSection() {
         <div className="mb-10 text-center">
           <p
             className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider"
-            style={{ color: "#498f6d" }}
+            style={{ color: "#fff" }}
           >
             {TESTIMONIALS.badge}
           </p>
           <h2
             className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-            style={{ color: "#FFFFFF" }}
+            style={{ color: "#fff" }}
           >
             {TESTIMONIALS.title}
           </h2>
@@ -42,7 +42,7 @@ export function TestimonialsSection() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div>
-                <div className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>
+                <div className="text-sm font-semibold" style={{ color: "#fff" }}>
                   {testimonial.name}
                 </div>
                 <div className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>

@@ -25,7 +25,7 @@ const cardVariants = {
 };
 
 const CATEGORY_BADGE: Record<PortfolioCategory, { bg: string; color: string }> = {
-  multipages: { bg: "rgba(73,143,109,0.14)", color: "#498f6d" },
+  multipages: { bg: "rgba(73,143,109,0.14)", color: "#fff" },
   onepage: { bg: "rgba(133,53,62,0.14)", color: "#85353e" },
   ecommerce: { bg: "rgba(59,130,246,0.14)", color: "#60a5fa" },
   international: { bg: "rgba(168,85,247,0.14)", color: "#c084fc" },
@@ -182,7 +182,7 @@ export function PortfolioGrid({
                 className="rounded-full px-3 py-1 text-xs font-semibold transition-all duration-200"
                 style={
                   activeSector === "all"
-                    ? { backgroundColor: "rgba(73,143,109,0.2)", color: "#498f6d", border: "1px solid rgba(73,143,109,0.3)" }
+                    ? { backgroundColor: "rgba(73,143,109,0.2)", color: "#fff", border: "1px solid rgba(73,143,109,0.3)" }
                     : { backgroundColor: "transparent", color: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.07)" }
                 }
               >
@@ -260,7 +260,7 @@ export function PortfolioGrid({
                     </p>
                     <h2
                       className="font-heading text-base font-bold transition-colors group-hover:text-[#498f6d]"
-                      style={{ color: "#FFFFFF" }}
+                      style={{ color: "#fff" }}
                     >
                       {project.name}
                     </h2>
@@ -312,7 +312,7 @@ export function PortfolioGrid({
                         className="mt-4 border-t pt-4 text-xs font-semibold"
                         style={{
                           borderColor: "rgba(255,255,255,0.06)",
-                          color: "#498f6d",
+                          color: "#fff",
                         }}
                       >
                         {project.results[0]}

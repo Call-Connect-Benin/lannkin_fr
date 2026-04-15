@@ -16,7 +16,7 @@ export function Breadcrumb({ currentPath }: BreadcrumbProps) {
   return (
     <nav aria-label="Fil d'Ariane" className="py-4">
       <ol
-        className="flex flex-wrap items-center gap-1 text-sm text-muted"
+        className="flex flex-wrap items-center gap-1 text-sm text-[#2d2d2d]/65"
         itemScope
         itemType="https://schema.org/BreadcrumbList"
       >
@@ -29,10 +29,10 @@ export function Breadcrumb({ currentPath }: BreadcrumbProps) {
             itemType="https://schema.org/ListItem"
           >
             {index > 0 && (
-              <ChevronRight className="h-3 w-3 text-muted" aria-hidden />
+              <ChevronRight className="h-3 w-3 text-[#2d2d2d]/65" aria-hidden />
             )}
             {index === crumbs.length - 1 ? (
-              <span className="text-white" itemProp="name">
+              <span className="font-semibold text-[#2d2d2d]" itemProp="name">
                 {crumb.label}
               </span>
             ) : (

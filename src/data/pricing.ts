@@ -1,7 +1,7 @@
 import type { PricingPlan } from "@/domain/entities/pricing";
 
 // ============================================================
-// TARIFS — Toutes les offres Lannkin avec liens Stripe
+// TARIFS — Toutes les offres Ekolink avec liens Stripe
 // ============================================================
 
 // --- CONCEPTION WEB ---

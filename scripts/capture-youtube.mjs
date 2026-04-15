@@ -8,8 +8,8 @@ if (!fs.existsSync(DEST)) fs.mkdirSync(DEST, { recursive: true });
 
 const channels = [
   { slug: "albert-lanne-ads", url: "https://www.youtube.com/@AlbertLanneAds" },
-  { slug: "lannkin-france", url: "https://www.youtube.com/@LannkinFrance" },
-  { slug: "lannkin-canada", url: "https://www.youtube.com/@LannkinCanada" },
+  { slug: "ekolink-france", url: "https://www.youtube.com/@EkolinkFrance" },
+  { slug: "ekolink-canada", url: "https://www.youtube.com/@EkolinkCanada" },
 ];
 
 const browser = await puppeteer.launch({

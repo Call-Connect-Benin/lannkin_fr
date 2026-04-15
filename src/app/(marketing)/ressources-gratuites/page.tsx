@@ -6,10 +6,10 @@ import Link from "next/link";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Ressources Marketing Digital Gratuites | Lannkin",
+  title: "Ressources Marketing Digital Gratuites | Ekolink",
   description:
-    "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Lannkin pour booster votre croissance en ligne.",
-  alternates: { canonical: "https://lannkin.ca/ressources-gratuites/" },
+    "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Ekolink pour booster votre croissance en ligne.",
+  alternates: { canonical: "https://ekolink.fr/ressources-gratuites/" },
 };
 
 // ─── Données des ressources ───────────────────────────────────────────────────
@@ -42,7 +42,7 @@ const RESOURCES: Resource[] = [
   {
     type: "ebook",
     label: "Ebook PDF",
-    title: "Guide SEO Local Québec 2025",
+    title: "Guide SEO Local France 2025",
     description:
       "Tout ce qu'il faut savoir pour dominer les résultats de recherche dans votre ville : Google Business Profile, citations locales, avis clients et contenu géo-ciblé.",
     href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
@@ -116,7 +116,7 @@ const RESOURCES: Resource[] = [
   {
     type: "ebook",
     label: "Ebook PDF",
-    title: "Collection Ebooks Lannkin",
+    title: "Collection Ebooks Ekolink",
     description:
       "Accédez à tous nos ebooks et guides PDF sur le marketing digital : SEO, Google Ads, réseaux sociaux et plus encore.",
     href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
@@ -138,29 +138,29 @@ const RESOURCES: Resource[] = [
   {
     type: "video",
     label: "Chaîne YouTube",
-    title: "Lannkin France",
+    title: "Ekolink France",
     description:
       "Conseils marketing digital, tutoriels et analyses pour le marché français.",
-    href: "https://www.youtube.com/@LannkinFrance",
-    image: "/images/ressources/lannkin-france.webp",
+    href: "https://www.youtube.com/@EkolinkFrance",
+    image: "/images/ressources/ekolink-france.webp",
     tag: "Disponible",
     available: true,
   },
   {
     type: "video",
     label: "Chaîne YouTube",
-    title: "Lannkin Canada",
+    title: "Ekolink France",
     description:
-      "Stratégies web, marketing digital et croissance pour les entreprises canadiennes.",
-    href: "https://www.youtube.com/@LannkinCanada",
-    image: "/images/ressources/lannkin-canada.webp",
+      "Stratégies web, marketing digital et croissance pour les entreprises françaises.",
+    href: "https://www.youtube.com/@EkolinkFrance",
+    image: "/images/ressources/ekolink-canada.webp",
     tag: "Disponible",
     available: true,
   },
 ];
 
 const TYPE_CONFIG: Record<ResourceType, { icon: React.ElementType; color: string; bg: string }> = {
-  outil: { icon: Gauge, color: "#498f6d", bg: "rgba(73,143,109,0.12)" },
+  outil: { icon: Gauge, color: "#fff", bg: "rgba(73,143,109,0.12)" },
   ebook: { icon: BookOpen, color: "#7C6CF0", bg: "rgba(124,108,240,0.12)" },
   formation: { icon: GraduationCap, color: "#E88C3A", bg: "rgba(232,140,58,0.12)" },
   video: { icon: Youtube, color: "#FF0000", bg: "rgba(255,0,0,0.12)" },
@@ -170,7 +170,7 @@ const TYPE_CONFIG: Record<ResourceType, { icon: React.ElementType; color: string
 
 export default function RessourcesGratuitesPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#FFFFFF" }}>
+    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
 
       {/* ═══════════════════════════════════════════════════════
           HERO — dark + 3D background
@@ -228,17 +228,17 @@ export default function RessourcesGratuitesPage() {
                   style={{ backgroundColor: "#498f6d" }}
                 />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
                 100 % gratuit — sans engagement
               </span>
             </div>
 
             <h1
               className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               Ressources{" "}
-              <span style={{ color: "#498f6d" }}>gratuites</span>
+              <span style={{ color: "#fff" }}>gratuites</span>
             </h1>
 
             <div
@@ -265,7 +265,7 @@ export default function RessourcesGratuitesPage() {
                 <div key={stat.label}>
                   <p
                     className="font-heading text-3xl font-bold"
-                    style={{ color: "#498f6d" }}
+                    style={{ color: "#fff" }}
                   >
                     {stat.value}
                   </p>
@@ -354,7 +354,7 @@ export default function RessourcesGratuitesPage() {
           >
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#FFFFFF" }}
+              style={{ color: "#fff" }}
             >
               Vous avez un projet ?
             </h2>
@@ -369,7 +369,7 @@ export default function RessourcesGratuitesPage() {
               <Link
                 href="/contact/"
                 className="inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+                style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Parler à un expert
                 <ArrowRight className="h-4 w-4" />
@@ -407,7 +407,7 @@ function ResourceSection({
       <div className="mb-8">
         <h2
           className="font-heading text-2xl font-bold tracking-tight sm:text-3xl"
-          style={{ color: "#FFFFFF" }}
+          style={{ color: "#fff" }}
         >
           {title}
         </h2>
@@ -458,7 +458,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
             className="rounded-full px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider"
             style={
               resource.available
-                ? { backgroundColor: "rgba(73,143,109,0.25)", color: "#498f6d" }
+                ? { backgroundColor: "rgba(73,143,109,0.25)", color: "#fff" }
                 : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.35)" }
             }
           >
@@ -496,7 +496,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         {resource.available ? (
           <span
             className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5"
-            style={{ color: "#498f6d" }}
+            style={{ color: "#fff" }}
           >
             Accéder gratuitement
             <ArrowRight className="h-3.5 w-3.5" />

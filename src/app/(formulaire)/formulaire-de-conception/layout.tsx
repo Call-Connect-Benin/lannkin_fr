@@ -4,9 +4,9 @@ import { Footer } from "@/presentation/components/layout/Footer";
 import { Header } from "@/presentation/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "Formulaire de conception | Lannkin",
+  title: "Formulaire de conception | Ekolink",
   description:
-    "Démarrez votre projet avec Lannkin en quelques minutes. Un questionnaire guidé, pensé pour les entreprises canadiennes.",
+    "Démarrez votre projet avec Ekolink en quelques minutes. Un questionnaire guidé, pensé pour les entreprises françaises.",
   robots: {
     index: false,
     follow: false,

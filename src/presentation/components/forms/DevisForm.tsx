@@ -91,12 +91,12 @@ const projectTypeOptions = [
 ] as const;
 
 const inputClasses =
-  "w-full bg-white/[0.07] border border-white/[0.12] rounded-lg px-4 py-2.5 text-white placeholder:text-white/40 focus:outline-none focus:border-[#498f6d] focus:ring-2 focus:ring-[#498f6d]/20 transition-all duration-200 text-sm";
+  "w-full bg-[#f7f5f0] border border-[#2d2d2d]/15 rounded-lg px-4 py-2.5 text-[#2d2d2d] placeholder:text-[#2d2d2d]/45 focus:outline-none focus:border-[#498f6d] focus:ring-2 focus:ring-[#498f6d]/20 transition-all duration-200 text-sm";
 
 const selectClasses =
-  "w-full bg-white/[0.07] border border-white/[0.12] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#498f6d] focus:ring-2 focus:ring-[#498f6d]/20 transition-all duration-200 appearance-none text-sm [&>option]:bg-[#1a1a1a] [&>option]:text-white";
+  "w-full bg-[#f7f5f0] border border-[#2d2d2d]/15 rounded-lg px-4 py-2.5 text-[#2d2d2d] focus:outline-none focus:border-[#498f6d] focus:ring-2 focus:ring-[#498f6d]/20 transition-all duration-200 appearance-none text-sm [&>option]:bg-[#ede9e1] [&>option]:text-[#2d2d2d]";
 
-const labelClasses = "block text-sm font-medium text-white/80 mb-1";
+const labelClasses = "block text-sm font-medium text-[#2d2d2d]/80 mb-1";
 
 const errorClasses = "text-red-600 text-xs mt-1";
 
@@ -233,10 +233,10 @@ export function DevisForm() {
         >
           <CheckCircle className="h-16 w-16 text-[#498f6d] mb-4" />
         </motion.div>
-        <h3 className="text-2xl font-semibold text-white mb-2">
+        <h3 className="text-2xl font-semibold text-[#2d2d2d] mb-2">
           Demande de devis envoyée !
         </h3>
-        <p className="text-white/50 mb-6">
+        <p className="text-[#2d2d2d]/55 mb-6">
           Nous analyserons votre projet et vous contacterons sous 24h.
         </p>
         <Button
@@ -262,10 +262,10 @@ export function DevisForm() {
               <History className="h-4 w-4 text-[#498f6d]" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-[#2d2d2d]">
                 Brouillon restauré
               </p>
-              <p className="text-xs text-white/50">
+              <p className="text-xs text-[#2d2d2d]/55">
                 Vos informations ont été récupérées. Elles sont sauvegardées
                 automatiquement pendant votre saisie.
               </p>
@@ -274,7 +274,7 @@ export function DevisForm() {
           <button
             type="button"
             onClick={handleClearDraft}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-white/70 transition-all hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-[#2d2d2d]/15 bg-[#f7f5f0] px-3 py-1.5 text-xs font-semibold text-[#2d2d2d]/75 transition-all hover:border-[#2d2d2d]/25 hover:bg-[#ede9e1] hover:text-[#2d2d2d]"
           >
             <X className="h-3.5 w-3.5" />
             Effacer
@@ -289,7 +289,7 @@ export function DevisForm() {
             "flex items-center justify-center w-8 h-8 rounded-full text-sm font-semibold transition-colors duration-300",
             step >= 1
               ? "bg-[#498f6d] text-white"
-              : "bg-white/10 text-white/30"
+              : "bg-[#ede9e1] text-[#2d2d2d]/40"
           )}
         >
           1
@@ -297,7 +297,7 @@ export function DevisForm() {
         <div
           className={cn(
             "h-0.5 flex-1 rounded transition-colors duration-300",
-            step >= 2 ? "bg-[#498f6d]" : "bg-white/10"
+            step >= 2 ? "bg-[#498f6d]" : "bg-[#ede9e1]"
           )}
         />
         <div
@@ -305,7 +305,7 @@ export function DevisForm() {
             "flex items-center justify-center w-8 h-8 rounded-full text-sm font-semibold transition-colors duration-300",
             step >= 2
               ? "bg-[#498f6d] text-white"
-              : "bg-white/10 text-white/30"
+              : "bg-[#ede9e1] text-[#2d2d2d]/40"
           )}
         >
           2
@@ -325,7 +325,7 @@ export function DevisForm() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="space-y-5"
             >
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-[#2d2d2d] mb-4">
                 Vos informations
               </h3>
 
@@ -509,7 +509,7 @@ export function DevisForm() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="space-y-5"
             >
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-[#2d2d2d] mb-4">
                 Détails du projet
               </h3>
 

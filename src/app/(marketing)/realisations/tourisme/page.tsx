@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Tourisme & Hôtellerie Québec | Portfolio Lannkin",
+  title: "Sites Web Tourisme & Hôtellerie France | Portfolio Ekolink",
   description:
-    "Portfolio Lannkin : sites web pour agences de voyages, hébergements touristiques, pourvoiries et activités de plein air au Québec. Réservation en ligne et SEO tourisme.",
+    "Portfolio Ekolink : sites web pour agences de voyages, hébergements touristiques, pourvoiries et activités de plein air en France. Réservation en ligne et SEO tourisme.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/tourisme/",
+    canonical: "https://ekolink.fr/realisations/tourisme/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsTourismePage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Tourisme & Aventure"
-        description="Lannkin crée des sites web immersifs pour le secteur touristique : agences de voyages, pourvoiries, hébergements et activités de plein air. Réservation en ligne, galeries et SEO pour attirer des voyageurs du monde entier."
+        description="Ekolink crée des sites web immersifs pour le secteur touristique : agences de voyages, pourvoiries, hébergements et activités de plein air. Réservation en ligne, galeries et SEO pour attirer des voyageurs du monde entier."
         stats={[
           { value: `${count} projets`, label: "en tourisme" },
           { value: "Réservation", label: "en ligne intégrée" },
@@ -59,7 +59,7 @@ export default function RealisationsTourismePage() {
               Site web pour le secteur touristique — Se démarquer en ligne
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Le tourisme est un secteur où la première impression est décisive. Lannkin conçoit des
+              Le tourisme est un secteur où la première impression est décisive. Ekolink conçoit des
               sites web visuellement captivants pour les opérateurs touristiques : agences de
               voyages, pourvoiries, hébergements et activités d&apos;aventure. Intégration de
               calendriers de disponibilité, réservation en ligne, galeries photos immersives et

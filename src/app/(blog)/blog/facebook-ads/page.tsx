@@ -8,7 +8,7 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Blog Facebook Ads | Stratégies Meta | Lannkin",
+  title: "Blog Facebook Ads | Stratégies Meta | Ekolink",
   description:
     "Articles et guides Facebook Ads et Instagram Ads. Stratégies de ciblage, optimisation créatifs, Pixel Meta, retargeting avancé et API Conversions.",
 };
@@ -27,16 +27,16 @@ const FACEBOOK_ADS_ARTICLES = [
     slug: "ciblage-facebook-ads-audiences-personnalisees-similaires",
     title: "Ciblage Facebook Ads : audiences personnalisées vs similaires",
     excerpt:
-      "Construisez des audiences personnalisées efficaces depuis vos données CRM et créez des Lookalike Audiences pour toucher de nouveaux prospects qualifiés au Québec.",
+      "Construisez des audiences personnalisées efficaces depuis vos données CRM et créez des Lookalike Audiences pour toucher de nouveaux prospects qualifiés en France.",
     readTime: "8 min",
     tags: ["Ciblage", "Audiences", "Lookalike"],
     difficulty: "Débutant",
   },
   {
     slug: "budget-facebook-ads-pme-quebec",
-    title: "Budget Facebook Ads : combien investir pour une PME québécoise ?",
+    title: "Budget Facebook Ads : combien investir pour une PME française ?",
     excerpt:
-      "Comment allouer votre budget Meta Ads selon votre industrie, vos objectifs et la taille de votre audience cible au Québec. Exemples de campagnes réelles inclus.",
+      "Comment allouer votre budget Meta Ads selon votre industrie, vos objectifs et la taille de votre audience cible en France. Exemples de campagnes réelles inclus.",
     readTime: "6 min",
     tags: ["Budget", "PME", "ROI"],
     difficulty: "Débutant",
@@ -45,7 +45,7 @@ const FACEBOOK_ADS_ARTICLES = [
     slug: "meilleurs-formats-publicitaires-meta-ads-2026",
     title: "Les meilleurs formats publicitaires Meta en 2026",
     excerpt:
-      "Reels Ads, Stories, Collection, Carrousel ou Lead Gen — quel format choisir selon votre objectif ? Comparatif basé sur les benchmarks québécois du marché.",
+      "Reels Ads, Stories, Collection, Carrousel ou Lead Gen — quel format choisir selon votre objectif ? Comparatif basé sur les benchmarks français du marché.",
     readTime: "9 min",
     tags: ["Créatifs", "Formats", "Reels"],
     difficulty: "Intermédiaire",
@@ -252,7 +252,7 @@ export default function BlogFacebookAdsPage() {
                   Vous gérez vos Meta Ads ?
                 </h3>
                 <p className="mt-2 text-sm text-muted">
-                  Lannkin gère des comptes Facebook Ads dès 500$/mois. Ciblage
+                  Ekolink gère des comptes Facebook Ads dès 500€/mois. Ciblage
                   avancé, créatifs et reporting inclus.
                 </p>
                 <Link

@@ -8,9 +8,9 @@ import { getHubBySlug } from "@/data/services";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital par Secteur | Lannkin",
+  title: "Marketing Digital par Secteur | Ekolink",
   description:
-    "Marketing digital adapté à votre secteur : restaurant, immobilier, santé, construction, e-commerce et plus. Expertise sectorielle à Laval et au Québec.",
+    "Marketing digital adapté à votre secteur : restaurant, immobilier, santé, construction, e-commerce et plus. Expertise sectorielle à Paris et en France.",
 };
 
 export default function SecteursPage() {

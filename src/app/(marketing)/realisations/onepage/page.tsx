@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Landing Page & Site Onepage Laval | Portfolio Lannkin",
+  title: "Création Landing Page & Site Onepage Paris | Portfolio Ekolink",
   description:
-    "Agence landing page à Laval : conception de sites onepage et pages de destination à fort taux de conversion pour PME québécoises. Devis gratuit.",
+    "Agence landing page à Paris : conception de sites onepage et pages de destination à fort taux de conversion pour PME françaises. Devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.ca/realisations/onepage/",
+    canonical: "https://ekolink.fr/realisations/onepage/",
   },
   openGraph: {
-    title: "Création Landing Page & Site Onepage Laval | Portfolio Lannkin",
+    title: "Création Landing Page & Site Onepage Paris | Portfolio Ekolink",
     description:
-      "Landing pages et sites onepage à fort taux de conversion pour Laval et le Québec. Taux de conversion moyen : 7,8 %. Portfolio et devis gratuit.",
-    url: "https://lannkin.ca/realisations/onepage/",
+      "Landing pages et sites onepage à fort taux de conversion pour Paris et le France. Taux de conversion moyen : 7,8 %. Portfolio et devis gratuit.",
+    url: "https://ekolink.fr/realisations/onepage/",
   },
 };
 
@@ -39,8 +39,8 @@ export default function RealisationsOnepagePage() {
     <main>
       <RealisationsBanner
         currentCategory="onepage"
-        title="Landing pages & sites onepage à Laval"
-        description="Des pages de destination qui convertissent — notre agence crée des sites onepage et landing pages pour les entreprises québécoises qui veulent générer des leads et des ventes rapidement."
+        title="Landing pages & sites onepage à Paris"
+        description="Des pages de destination qui convertissent — notre agence crée des sites onepage et landing pages pour les entreprises françaises qui veulent générer des leads et des ventes rapidement."
         stats={[
           { value: "7,8 %", label: "taux de conversion (vs 2,5 % industrie)" },
           { value: `${onePageCount} projets`, label: "onepage & landing pages livrés" },
@@ -68,26 +68,26 @@ export default function RealisationsOnepagePage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
-              Création de landing pages et sites onepage à Laval, Québec
+              Création de landing pages et sites onepage à Paris, France
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="text-sm leading-relaxed text-muted space-y-4">
                 <p>
-                  Une <strong className="text-white">landing page à Laval</strong> est la solution
+                  Une <strong className="text-white">landing page à Paris</strong> est la solution
                   la plus rapide et la plus rentable pour tester un produit, lancer un service ou
                   générer des leads avec Google Ads ou Facebook Ads. Contrairement à un site complet,
                   une page de destination est conçue avec un seul objectif : convertir le visiteur
                   en prospect ou en client.
                 </p>
                 <p>
-                  Notre agence de <strong className="text-white">création de sites onepage au Québec</strong>
+                  Notre agence de <strong className="text-white">création de sites onepage en France</strong>
                   {" "}combine copywriting persuasif, design épuré et optimisation technique pour créer
                   des pages qui performent. Nos landing pages affichent des taux de conversion bien
                   au-dessus de la moyenne de l&apos;industrie.
                 </p>
                 <p>
-                  Que vous soyez une <strong className="text-white">entreprise locale à Laval</strong>,
-                  une startup québécoise ou une PME cherchant à lancer une campagne publicitaire,
+                  Que vous soyez une <strong className="text-white">entreprise locale à Paris</strong>,
+                  une startup française ou une PME cherchant à lancer une campagne publicitaire,
                   nous créons votre page de destination en 5 à 10 jours ouvrables.
                 </p>
               </div>
@@ -107,12 +107,12 @@ export default function RealisationsOnepagePage() {
             {/* CTA Block */}
             <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
               <h2 className="font-heading text-xl font-bold text-white">
-                Landing page Laval — Combinez publicité et page de destination pour un ROI maximal
+                Landing page Paris — Combinez publicité et page de destination pour un ROI maximal
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 La combinaison <strong className="text-white">Google Ads + landing page optimisée</strong>
-                {" "}est la stratégie la plus efficace pour acquérir des clients rapidement à Laval et
-                dans la grande région de Montréal. Nos clients voient souvent un retour positif dès
+                {" "}est la stratégie la plus efficace pour acquérir des clients rapidement à Paris et
+                dans la grande région de Paris. Nos clients voient souvent un retour positif dès
                 le premier mois de campagne, grâce à nos pages conçues spécifiquement pour chaque
                 source de trafic publicitaire.
               </p>
@@ -120,7 +120,7 @@ export default function RealisationsOnepagePage() {
                 Nous gérons tout : conception de la landing page, rédaction du contenu, configuration
                 des campagnes Google Ads et Meta Ads, suivi des conversions et optimisation continue.
                 Une solution <strong className="text-white">clé en main</strong> pour les entrepreneurs
-                et PME du Québec.
+                et PME du France.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link

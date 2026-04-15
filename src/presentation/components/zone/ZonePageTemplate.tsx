@@ -29,21 +29,21 @@ const SERVICE_META: Record<string, { label: string; desc: string }> = {
   "montage-video":             { label: "Montage Vidéo",             desc: "Contenus vidéo professionnels pour vos campagnes" },
 };
 
-const WHY_LANNKIN = [
+const WHY_EKOLINK = [
   {
     title: "Certifié Google Partner",
     desc: "Expertise Google Ads validée officiellement. Votre budget géré par des spécialistes certifiés.",
   },
   {
     title: "+10 ans d'expérience",
-    desc: "Depuis 2015, nous accompagnons les PME québécoises dans leur croissance digitale.",
+    desc: "Depuis 2015, nous accompagnons les PME françaises dans leur croissance digitale.",
   },
   {
     title: "Scripts anti-fraude propriétaires",
     desc: "Nos scripts bloquent les clics frauduleux en temps réel et protègent votre budget.",
   },
   {
-    title: "+100K$/mois de budget géré",
+    title: "+100K€/mois de budget géré",
     desc: "Un volume qui nous permet de négocier les meilleurs CPM et d'accéder aux bêtas en avant-première.",
   },
   {
@@ -57,12 +57,12 @@ const WHY_LANNKIN = [
 ];
 
 const NEARBY_ZONES = [
-  { name: "Laval",     href: "/zone/agence-web-laval/",      detail: "Siège social" },
-  { name: "Montréal",  href: "/zone/agence-web-montreal/",   detail: "Grand Montréal" },
-  { name: "Rive-Nord", href: "/zone/agence-web-rive-nord/",  detail: "Terrebonne, Blainville" },
-  { name: "Rive-Sud",  href: "/zone/agence-web-rive-sud/",   detail: "Longueuil, Brossard" },
-  { name: "Québec",    href: "/zone/agence-web-quebec/",     detail: "Capitale-Nationale" },
-  { name: "Gatineau",  href: "/zone/agence-web-gatineau/",   detail: "Outaouais" },
+  { name: "Paris",      href: "/zone/agence-web-paris/",       detail: "Siège social" },
+  { name: "Lyon",       href: "/zone/agence-web-lyon/",        detail: "Auvergne-Rhône-Alpes" },
+  { name: "Marseille",  href: "/zone/agence-web-marseille/",   detail: "PACA" },
+  { name: "Toulouse",   href: "/zone/agence-web-toulouse/",    detail: "Occitanie" },
+  { name: "Nantes",     href: "/zone/agence-web-nantes/",      detail: "Pays de la Loire" },
+  { name: "Lille",      href: "/zone/agence-web-lille/",       detail: "Hauts-de-France" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -79,7 +79,7 @@ interface ZonePageTemplateProps {
 
 export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
   const currentPath = `/zone/${zone.slug}/`;
-  const isLaval = zone.city === "Laval";
+  const isParis = zone.city === "Paris";
 
   return (
     <main className="min-h-screen">
@@ -91,9 +91,9 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="max-w-4xl">
-          <div className="mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium" style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }}>
+          <div className="mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium" style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#fff" }}>
             <MapPin className="h-3.5 w-3.5" />
-            {zone.city}, Québec
+            {zone.city}, France
           </div>
           <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             {zone.title}
@@ -116,7 +116,7 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
           </div>
           <div className="mt-6 flex flex-wrap gap-5 text-sm" style={{ color: "rgba(255,255,255,0.40)" }}>
             <span className="flex items-center gap-1.5">
-              <Star className="h-3.5 w-3.5" style={{ color: "#498f6d" }} /> 4.95 / 5 — 54 avis Google
+              <Star className="h-3.5 w-3.5" style={{ color: "#fff" }} /> 4.95 / 5 — 54 avis Google
             </span>
             <span>Certifié Google Partner</span>
             <span>Sans engagement</span>
@@ -134,9 +134,9 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
             Nos services à {zone.city}
           </h2>
           <p className="mb-10 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
-            {isLaval
-              ? "Basés à Laval depuis 2015, nous proposons une gamme complète de services marketing digital pour les entreprises de la région."
-              : `Depuis notre siège à Laval, nous desservons les entreprises de ${zone.city} avec une expertise 360° en marketing digital.`}
+            {isParis
+              ? "Basés à Paris depuis 2015, nous proposons une gamme complète de services marketing digital pour les entreprises de la région."
+              : `Depuis notre siège à Paris, nous desservons les entreprises de ${zone.city} avec une expertise 360° en marketing digital.`}
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {zone.relatedServices.map((slug) => {
@@ -155,7 +155,7 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
                   <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
                     {meta.desc}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium" style={{ color: "#498f6d" }}>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium" style={{ color: "#fff" }}>
                     En savoir plus <ArrowRight className="h-3 w-3" />
                   </span>
                 </Link>
@@ -165,24 +165,24 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
         </Container>
       </section>
 
-      {/* ── Pourquoi Lannkin ─────────────────────────────────────── */}
+      {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
       <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <Container>
           <h2 className="font-heading mb-3 text-3xl font-bold text-white">
-            Pourquoi choisir Lannkin à {zone.city} ?
+            Pourquoi choisir Ekolink à {zone.city} ?
           </h2>
           <p className="mb-10 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
-            Plus de 10 ans d&apos;expertise au service des entreprises québécoises.
+            Plus de 10 ans d&apos;expertise au service des entreprises françaises.
           </p>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {WHY_LANNKIN.map((item) => (
+            {WHY_EKOLINK.map((item) => (
               <div
                 key={item.title}
                 className="rounded-xl p-5"
                 style={{ backgroundColor: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
               >
                 <div className="mb-2 flex items-start gap-2">
-                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#498f6d" }} />
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#fff" }} />
                   <h3 className="font-heading text-base font-semibold text-white">{item.title}</h3>
                 </div>
                 <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
@@ -204,7 +204,7 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
             Zone de service
           </h2>
           <p className="mb-8 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
-            Basés à Laval, nous desservons l&apos;ensemble du Québec.
+            Basés à Paris, nous desservons l&apos;ensemble du France.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {NEARBY_ZONES.map((z) => (
@@ -264,13 +264,13 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Lannkin S.A.",
+            name: "Ekolink S.A.S.",
             description: zone.description,
-            url: `https://lannkin.ca/zone/${zone.slug}/`,
+            url: `https://ekolink.fr/zone/${zone.slug}/`,
             telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Laval",
+              addressLocality: "Paris",
               addressRegion: "QC",
               addressCountry: "CA",
             },
@@ -281,8 +281,8 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
             },
             areaServed: [
               { "@type": "City", name: zone.city },
-              { "@type": "City", name: "Laval" },
-              { "@type": "City", name: "Montréal" },
+              { "@type": "City", name: "Paris" },
+              { "@type": "City", name: "Paris" },
             ],
           }),
         }}

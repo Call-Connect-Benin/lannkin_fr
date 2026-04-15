@@ -122,15 +122,15 @@ export function RealisationsBanner({
             />
             <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
           </span>
-          <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
-            {getCategoryCount(currentCategory)} projet{getCategoryCount(currentCategory) > 1 ? "s" : ""} · Laval, Québec
+          <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+            {getCategoryCount(currentCategory)} projet{getCategoryCount(currentCategory) > 1 ? "s" : ""} · Paris, France
           </span>
         </div>
 
         {/* Title */}
         <h1
           className="max-w-2xl font-heading text-4xl font-bold tracking-tight sm:text-5xl"
-          style={{ color: "#FFFFFF" }}
+          style={{ color: "#fff" }}
         >
           {title}
         </h1>
@@ -154,7 +154,7 @@ export function RealisationsBanner({
           <div className="mt-8 flex flex-wrap gap-8">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>
+                <p className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
                   {stat.value}
                 </p>
                 <p className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
@@ -182,7 +182,7 @@ export function RealisationsBanner({
                 )}
                 style={
                   isActive
-                    ? { backgroundColor: "#498f6d", color: "#FFFFFF" }
+                    ? { backgroundColor: "#498f6d", color: "#fff" }
                     : {
                         backgroundColor: "rgba(255,255,255,0.05)",
                         color: "rgba(255,255,255,0.55)",

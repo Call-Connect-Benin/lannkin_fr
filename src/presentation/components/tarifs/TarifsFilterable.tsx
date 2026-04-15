@@ -74,7 +74,7 @@ export function TarifsFilterable() {
           <p className="text-[10px] font-semibold uppercase tracking-wider sm:text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
             {hasSelection ? "Votre combo" : "Filtrer par service"}
             {hasSelection && (
-              <span className="ml-2 font-mono normal-case tracking-normal" style={{ color: "#498f6d" }}>
+              <span className="ml-2 font-mono normal-case tracking-normal" style={{ color: "#fff" }}>
                 {selected.size} sélectionné{selected.size > 1 ? "s" : ""}
               </span>
             )}
@@ -151,15 +151,15 @@ export function TarifsFilterable() {
             >
               <div
                 className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl"
-                style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
               >
                 <LucideIcon name={cat.icon} className="h-5 w-5" />
               </div>
-              <h2 className="font-heading text-lg font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#FFFFFF" }}>
+              <h2 className="font-heading text-lg font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#fff" }}>
                 {cat.name}
               </h2>
               {priceRange && (
-                <p className="mt-2 font-heading text-base font-semibold" style={{ color: "#498f6d" }}>
+                <p className="mt-2 font-heading text-base font-semibold" style={{ color: "#fff" }}>
                   {priceRange}
                 </p>
               )}
@@ -176,7 +176,7 @@ export function TarifsFilterable() {
                   {highlighted.priceUnit === "month" ? "/mois" : ""}
                 </p>
               )}
-              <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold opacity-0 transition-all duration-200 group-hover:opacity-100" style={{ color: "#498f6d" }}>
+              <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold opacity-0 transition-all duration-200 group-hover:opacity-100" style={{ color: "#fff" }}>
                 Voir les forfaits
                 <ArrowRight className="h-3 w-3" />
               </div>

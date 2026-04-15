@@ -4,16 +4,16 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Tourisme & Hôtellerie Québec | Hôtels, Attraits | Lannkin",
+  title: "Marketing Digital Tourisme & Hôtellerie France | Hôtels, Attraits | Ekolink",
   description:
-    "Agence marketing tourisme à Laval et Montréal. Google Hotel Ads, Facebook Ads tourisme, SEO voyage, site de réservation directe. Augmentez vos réservations. Devis gratuit.",
+    "Agence marketing tourisme à Paris et Paris. Google Hotel Ads, Facebook Ads tourisme, SEO voyage, site de réservation directe. Augmentez vos réservations. Devis gratuit.",
   keywords: [
-    "marketing digital tourisme québec",
-    "google hotel ads montréal",
-    "facebook ads hôtels laval",
-    "seo voyage québec",
+    "marketing digital tourisme france",
+    "google hotel ads paris",
+    "facebook ads hôtels paris",
+    "seo voyage france",
     "réservation directe hôtel site web",
-    "agence marketing attrait touristique montréal",
+    "agence marketing attrait touristique paris",
   ],
   alternates: { canonical: "/secteurs/tourisme/" },
 };
@@ -22,7 +22,7 @@ const BENEFITS = [
   "Google Hotel Ads et Google Maps pour apparaître en premier face aux OTAs (Booking, Expedia)",
   "Site de réservation directe sans commission — récupérez les marges perdues sur les plateformes",
   "Facebook et Instagram Ads avec visuels immersifs pour susciter l'envie et la réservation directe",
-  "SEO voyage pour capter le trafic organique à forte intention : 'hôtel laval', 'week-end laurentides'",
+  "SEO voyage pour capter le trafic organique à forte intention : 'hôtel paris', 'week-end laurentides'",
   "Campagnes saisonnières adaptées aux pics touristiques et aux offres de dernière minute",
   "Gestion de la e-réputation : TripAdvisor, Google, Booking — avis positifs amplifiés",
 ];

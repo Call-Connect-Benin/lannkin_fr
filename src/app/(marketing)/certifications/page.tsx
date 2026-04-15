@@ -7,9 +7,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Agence Certifiée Google Partner Laval | Lannkin",
+  title: "Agence Certifiée Google Partner Paris | Ekolink",
   description:
-    "Lannkin : agence certifiée Google Partner, Meta Partner et Shopify Partner à Laval. Certifications en marketing digital et développement web au Québec.",
+    "Ekolink : agence certifiée Google Partner, Meta Partner et Shopify Partner à Paris. Certifications en marketing digital et développement web en France.",
 };
 
 const PARTNERS = [
@@ -19,7 +19,7 @@ const PARTNERS = [
     badge: "🔵",
     badgeImg: "/images/badges/badge-google-partner.svg",
     description:
-      "Certifiée Google Partner, Lannkin démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
+      "Certifiée Google Partner, Ekolink démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
     certifications: [
       "Google Ads Search",
       "Google Ads Display",
@@ -49,7 +49,7 @@ const PARTNERS = [
     name: "Shopify Partner",
     badge: "🟢",
     description:
-      "En tant que Shopify Partner, Lannkin crée et optimise des boutiques e-commerce performantes pour ses clients. Nous maîtrisons Shopify, Shopify Plus, le langage Liquid et les intégrations tierces.",
+      "En tant que Shopify Partner, Ekolink crée et optimise des boutiques e-commerce performantes pour ses clients. Nous maîtrisons Shopify, Shopify Plus, le langage Liquid et les intégrations tierces.",
     certifications: [
       "Shopify Partner Program",
       "Shopify — Business Fundamentals",
@@ -79,11 +79,11 @@ export default function CertificationsPage() {
         <div className="relative z-10">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl" style={{ color: "#FFFFFF" }}>
+              <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl" style={{ color: "#fff" }}>
                 Nos Certifications
               </h1>
               <p className="mt-5 text-lg leading-relaxed" style={{ color: "#DDDDDD" }}>
-                Google Partner, Meta Business Partner, Shopify Partner — Lannkin est certifiée par
+                Google Partner, Meta Business Partner, Shopify Partner — Ekolink est certifiée par
                 les plus grandes plateformes digitales pour garantir des résultats à la hauteur de
                 vos ambitions.
               </p>
@@ -108,7 +108,7 @@ export default function CertificationsPage() {
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-4 font-heading text-2xl font-bold text-white sm:text-3xl text-center">
-              Découvrez Lannkin en vidéo
+              Découvrez Ekolink en vidéo
             </h2>
             <p className="mb-8 text-center text-muted">
               Une présentation de notre agence, notre équipe et notre façon de travailler.
@@ -120,7 +120,7 @@ export default function CertificationsPage() {
                 allowFullScreen
                 loading="lazy"
                 className="absolute inset-0 h-full w-full"
-                title="Présentation Lannkin"
+                title="Présentation Ekolink"
               />
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function CertificationsPage() {
                   <div className="relative aspect-video">
                     <iframe
                       src={`https://www.youtube.com/embed/${id}`}
-                      title="Vidéo Lannkin"
+                      title="Vidéo Ekolink"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       loading="lazy"
@@ -251,7 +251,7 @@ export default function CertificationsPage() {
                 href="/a-propos/"
                 className="rounded-lg border border-white/10 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/30 hover:text-accent"
               >
-                À propos de Lannkin
+                À propos de Ekolink
               </Link>
             </div>
           </div>

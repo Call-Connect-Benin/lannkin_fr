@@ -4,7 +4,7 @@ import { PRICING_MONTAGE_VIDEO, VIDEO_OPTIONS } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Montage Vidéo | Lannkin",
+  title: "Tarifs Montage Vidéo | Ekolink",
   description:
     "Montage vidéo professionnel dès 119$/vidéo. YouTube, TikTok, Shorts, Reels, corporate. Script, voix-off, effets inclus. Packs et abonnements illimités disponibles.",
 };
@@ -61,20 +61,20 @@ export default function TarifsMontageVideoPage() {
         {/* Instagram + TikTok */}
         <div className="mt-4 flex flex-wrap gap-3">
           <a
-            href="https://www.instagram.com/lannkinassociates/"
+            href="https://www.instagram.com/ekolink/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-lg border border-[#E1306C]/20 bg-[#E1306C]/5 px-4 py-2 text-sm font-semibold text-[#E1306C] transition-opacity hover:opacity-80"
           >
-            📷 @lannkinassociates sur Instagram
+            📷 @ekolink sur Instagram
           </a>
           <a
-            href="https://tiktok.com/@albertdelannkin"
+            href="https://tiktok.com/@ekolink"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg border border-[#1A1A1A]/10 bg-[#1A1A1A]/5 px-4 py-2 text-sm font-semibold text-[#1A1A1A] transition-opacity hover:opacity-80"
+            className="flex items-center gap-2 rounded-lg border border-[#1A1A1A]/10 bg-surface-light/5 px-4 py-2 text-sm font-semibold text-[#1A1A1A] transition-opacity hover:opacity-80"
           >
-            🎵 @albertdelannkin sur TikTok
+            🎵 @ekolink sur TikTok
           </a>
         </div>
 

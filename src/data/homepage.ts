@@ -4,25 +4,25 @@
 
 // --- 1. HERO ---
 export const HERO = {
-  badge: "Agence marketing digital · Laval, Québec",
-  title: "On fait grandir les PME québécoises sur le web.",
+  badge: "Marketing digital à Paris · 100% indépendant",
+  title: "On accélère la croissance digitale des PME françaises.",
   subtitle:
-    "Site web, Google Ads, SEO, réseaux sociaux, IA — une seule agence locale pour tout votre marketing digital. Des résultats concrets, des prix transparents.",
+    "Conception web, publicité en ligne, référencement, social media et intelligence artificielle réunis sous un même toit. Une équipe parisienne dédiée, un pilotage transparent et des performances mesurables dès le premier mois.",
   cta: {
-    primary: { label: "Devis gratuit", href: "/devis-gratuit/" },
-    secondary: { label: "Voir nos services", href: "/services/" },
+    primary: { label: "Recevoir mon devis", href: "/devis-gratuit/" },
+    secondary: { label: "Découvrir nos expertises", href: "/services/" },
   },
   stats: [
-    { value: "+10", label: "ans d'expertise" },
-    { value: "100K$+", label: "budget pub/mois géré" },
-    { value: "4.95", label: "étoiles Google" },
-    { value: "20+", label: "services spécialisés" },
+    { value: "+10", label: "années d'expérience" },
+    { value: "100K€+", label: "pilotés chaque mois" },
+    { value: "4,95/5", label: "note Google" },
+    { value: "20+", label: "spécialités couvertes" },
   ],
 } as const;
 
 // --- 2. LOGOS / CERTIFICATIONS ---
 export const CERTIFICATIONS = {
-  title: "Certifiés par les plus grands",
+  title: "Certifiés par les plus grandes plateformes",
   items: [
     { name: "Google Partner", logo: "/images/certifications/google-partner.svg" },
     { name: "Microsoft Advertising Partner", logo: "/images/certifications/microsoft-partner.svg" },
@@ -32,10 +32,10 @@ export const CERTIFICATIONS = {
 
 // --- 3. SERVICES OVERVIEW ---
 export const SERVICES_OVERVIEW = {
-  badge: "Nos services",
-  title: "Une expertise 360° pour chaque besoin.",
+  badge: "Nos expertises",
+  title: "Une vision 360° pour votre écosystème digital.",
   subtitle:
-    "20 pôles de compétences. Du site web à l'IA, du Google Ads au graphisme — on couvre tout votre écosystème digital.",
+    "Vingt pôles de compétences réunis au même endroit : du site sur-mesure à l'IA générative, en passant par la publicité digitale et l'identité visuelle.",
   categories: [
     {
       title: "Web & Développement",
@@ -60,7 +60,7 @@ export const SERVICES_OVERVIEW = {
       ],
     },
     {
-      title: "SEO & Créatif",
+      title: "SEO & Création",
       icon: "Search",
       services: [
         { name: "SEO", href: "/services/seo/", icon: "Search" },
@@ -71,52 +71,52 @@ export const SERVICES_OVERVIEW = {
       ],
     },
   ],
-  cta: { label: "Voir tous les services", href: "/services/" },
+  cta: { label: "Explorer l'ensemble de nos services", href: "/services/" },
 } as const;
 
 // --- 4. STATS / CHIFFRES ---
 export const STATS = {
-  badge: "En chiffres",
-  title: "Des résultats, pas des promesses.",
+  badge: "Les chiffres parlent",
+  title: "Des performances concrètes, pas des promesses en l'air.",
   items: [
-    { value: "100K$+", label: "budget publicitaire géré par mois", icon: "DollarSign" },
-    { value: "54", label: "avis Google 5 étoiles", icon: "Star" },
-    { value: "10+", label: "années d'expertise", icon: "Calendar" },
-    { value: "20", label: "pôles de compétences", icon: "Layers" },
-    { value: "3", label: "certifications majeures", icon: "Award" },
-    { value: "100%", label: "satisfaction client", icon: "Heart" },
+    { value: "100K€+", label: "investissement média piloté / mois", icon: "Euro" },
+    { value: "54", label: "recommandations clients 5 étoiles", icon: "Star" },
+    { value: "10+", label: "années sur le terrain", icon: "Calendar" },
+    { value: "20", label: "domaines d'intervention", icon: "Layers" },
+    { value: "3", label: "certifications officielles", icon: "Award" },
+    { value: "100%", label: "clients satisfaits", icon: "Heart" },
   ],
 } as const;
 
-// --- 5. POURQUOI LANNKIN ---
-export const WHY_LANNKIN = {
-  badge: "Pourquoi Lannkin ?",
-  title: "L'agence qui pense comme une startup.",
+// --- 5. POURQUOI EKOLINK ---
+export const WHY_EKOLINK = {
+  badge: "Pourquoi nous choisir ?",
+  title: "L'agilité d'une startup, la rigueur d'une agence.",
   subtitle:
-    "On n'est pas une agence corporate. On est une équipe de passionnés qui combine créativité, tech et data pour des résultats concrets.",
+    "Loin des modèles corporate figés, nous sommes une équipe soudée qui conjugue créativité, technologie et analyse de données pour livrer des résultats tangibles.",
   points: [
     {
-      title: "Expertise multi-plateforme",
+      title: "Maîtrise multi-canaux",
       description:
-        "Google, Meta, TikTok, LinkedIn, Native Ads, SEO — on maîtrise toutes les plateformes. Un seul interlocuteur pour tout votre marketing digital.",
+        "Google, Meta, TikTok, LinkedIn, Native Ads, SEO : nous pilotons toutes les plateformes publicitaires. Un interlocuteur unique pour orchestrer l'ensemble de votre visibilité.",
       icon: "Zap",
     },
     {
-      title: "Tech de pointe",
+      title: "Technologies avancées",
       description:
-        "Vibe coding, IA générative, Three.js, headless CMS. On utilise les technologies les plus avancées pour vous donner un avantage compétitif.",
+        "Vibe coding, IA générative, Three.js, CMS headless : nous tirons parti des outils les plus récents pour vous offrir un temps d'avance sur la concurrence.",
       icon: "Cpu",
     },
     {
-      title: "Transparence totale",
+      title: "Visibilité sans filtre",
       description:
-        "Reporting détaillé, accès à vos comptes, pas de contrat prison. Vous savez exactement où va chaque dollar de votre budget.",
+        "Reporting détaillé, accès direct à vos comptes, aucune clause piège. Vous suivez précisément l'usage de chaque euro investi.",
       icon: "Eye",
     },
     {
-      title: "ROI obsédés",
+      title: "Focus sur la performance",
       description:
-        "Chaque action est mesurée. Scripts anti-fraude propriétaires, A/B testing systématique, et optimisation continue pour maximiser votre retour.",
+        "Chaque levier est tracké. Scripts anti-fraude internes, tests A/B permanents et optimisations continues pour maximiser votre rentabilité.",
       icon: "TrendingUp",
     },
   ],
@@ -124,13 +124,13 @@ export const WHY_LANNKIN = {
 
 // --- 6. SERVICES PHARES (Feature cards) ---
 export const FEATURED_SERVICES = {
-  badge: "Services phares",
-  title: "Nos expertises qui font la différence.",
+  badge: "Nos services phares",
+  title: "Les expertises qui créent la différence.",
   services: [
     {
       title: "Google Ads",
       description:
-        "Campagnes Search, Display, Shopping, YouTube avec scripts anti-fraude propriétaires. ROI moyen de 4x pour nos clients.",
+        "Search, Display, Shopping et YouTube orchestrés avec nos scripts anti-fraude maison. Un retour sur investissement multiplié par 4 en moyenne.",
       href: "/services/google-ads/",
       icon: "Target",
       stat: { value: "4x", label: "ROI moyen" },
@@ -138,7 +138,7 @@ export const FEATURED_SERVICES = {
     {
       title: "Vibe Coding & CMS IA",
       description:
-        "Sites et apps créés avec l'IA (Lovable, Bolt, Cursor). 3x plus rapide, 50 % moins cher que le développement traditionnel.",
+        "Sites et applications générés avec l'IA (Lovable, Bolt, Cursor) : livraison 3x plus rapide et économie de 50 % par rapport au développement classique.",
       href: "/services/vibe-coding/",
       icon: "Sparkles",
       stat: { value: "3x", label: "plus rapide" },
@@ -146,7 +146,7 @@ export const FEATURED_SERVICES = {
     {
       title: "SEO Local",
       description:
-        "Dominez Google dans votre marché local. Stratégie complète : technique, contenu, backlinks et Google Business Profile.",
+        "Prenez la tête de Google sur votre zone. Stratégie complète : technique, contenu, backlinks et fiche Google Business Profile.",
       href: "/services/seo/",
       icon: "Search",
       stat: { value: "Top 3", label: "en 6 mois" },
@@ -154,7 +154,7 @@ export const FEATURED_SERVICES = {
     {
       title: "Intelligence Artificielle",
       description:
-        "Agents IA, chatbots, automatisation et RAG. L'IA au service de votre productivité et de l'expérience client.",
+        "Agents IA, chatbots, automatisations et RAG sur-mesure. L'IA mise au service de votre productivité et de l'expérience client.",
       href: "/services/intelligence-artificielle/",
       icon: "Brain",
       stat: { value: "40%", label: "gain de productivité" },
@@ -164,43 +164,43 @@ export const FEATURED_SERVICES = {
 
 // --- 7. TESTIMONIALS ---
 export const TESTIMONIALS = {
-  badge: "Témoignages",
-  title: "Ce que nos clients disent de nous.",
-  subtitle: "4.95 étoiles sur Google · 54 avis vérifiés",
+  badge: "Avis clients",
+  title: "La voix de nos partenaires.",
+  subtitle: "Note de 4,95 sur Google · 54 avis authentifiés",
   items: [
     {
       name: "Marie Dupont",
       company: "Restaurant Le Gourmet",
       sector: "Restauration",
       quote:
-        "Lannkin a transformé notre visibilité en ligne. Nos réservations ont augmenté de 300 % en 3 mois grâce à Google Ads et notre fiche Google.",
+        "Grâce à Ekolink, notre présence en ligne a pris une toute autre dimension. En trois mois, nos réservations ont triplé grâce aux campagnes Google Ads et à notre fiche Business.",
       rating: 5,
       avatar: "/images/testimonials/avatar-1.jpg",
     },
     {
-      name: "Jean-François Tremblay",
-      company: "Immobilier JFT",
+      name: "Antoine Morel",
+      company: "Morel Immobilier",
       sector: "Immobilier",
       quote:
-        "Équipe réactive et résultats au rendez-vous. Notre site est maintenant en première page Google pour nos mots-clés principaux.",
+        "Un accompagnement humain, des retours rapides et des performances au rendez-vous. Notre site ressort désormais en première page Google sur nos requêtes stratégiques.",
       rating: 5,
       avatar: "/images/testimonials/avatar-2.jpg",
     },
     {
-      name: "Sophie Lavoie",
-      company: "Clinique Esthétique Éclat",
+      name: "Sophie Renaud",
+      company: "Clinique Éclat Paris",
       sector: "Beauté",
       quote:
-        "Le combo site web + Instagram Ads a été un game changer. On a doublé notre clientèle en 6 mois. Merci à toute l'équipe !",
+        "L'alliance site vitrine et campagnes Instagram a bouleversé notre croissance. Notre clientèle a doublé en six mois. Bravo à toute l'équipe !",
       rating: 5,
       avatar: "/images/testimonials/avatar-3.jpg",
     },
     {
-      name: "Marc Bélanger",
-      company: "Construction MB",
+      name: "Marc Leroy",
+      company: "Bâtir Pro",
       sector: "Construction",
       quote:
-        "Avant Lannkin, on avait zéro présence en ligne. Maintenant, 80 % de nos nouveaux contrats viennent de Google. Investissement incroyable.",
+        "Avant notre collaboration, nous étions invisibles sur le web. Aujourd'hui, 80 % de nos nouveaux chantiers proviennent de Google. Un investissement qui change la donne.",
       rating: 5,
       avatar: "/images/testimonials/avatar-4.jpg",
     },
@@ -209,28 +209,28 @@ export const TESTIMONIALS = {
 
 // --- 8. PRICING PREVIEW ---
 export const PRICING_PREVIEW = {
-  badge: "Tarifs",
-  title: "Des forfaits transparents pour chaque budget.",
+  badge: "Nos tarifs",
+  title: "Des offres claires, pensées pour chaque budget.",
   subtitle:
-    "Pas de contrat prison, pas de frais cachés. Nos prix sont clairs et nos résultats mesurables.",
+    "Aucune clause piège, aucun frais caché. Une tarification lisible et des résultats que l'on peut mesurer.",
   featured: [
     {
-      name: "Site Web Launch",
-      price: "99 $/mois",
-      description: "Site vitrine responsive avec hébergement et SSL",
+      name: "Site Launch",
+      price: "99 €/mois",
+      description: "Site vitrine responsive, hébergement et certificat SSL inclus",
       href: "/tarifs/conception-web/",
     },
     {
       name: "Google Ads Medium",
-      price: "500 $/mois",
-      description: "Gestion campagnes avec optimisation et reporting",
+      price: "500 €/mois",
+      description: "Pilotage de campagnes avec optimisation continue et reporting mensuel",
       href: "/tarifs/google-ads/",
       highlighted: true,
     },
     {
-      name: "SEO Backlinks",
-      price: "400 $/mois",
-      description: "10 backlinks qualité et netlinking stratégique",
+      name: "SEO Netlinking",
+      price: "400 €/mois",
+      description: "10 backlinks qualitatifs et stratégie de netlinking ciblée",
       href: "/tarifs/seo/",
     },
   ],
@@ -239,10 +239,10 @@ export const PRICING_PREVIEW = {
 
 // --- 9. SECTORS ---
 export const SECTORS_PREVIEW = {
-  badge: "Secteurs d'activité",
-  title: "On parle votre langage.",
+  badge: "Secteurs d'expertise",
+  title: "On connaît vos enjeux.",
   subtitle:
-    "Chaque industrie a ses défis. Notre expertise sectorielle nous permet de créer des stratégies sur mesure pour votre marché.",
+    "Chaque secteur a ses codes et ses défis. Notre connaissance métier nous permet de bâtir des stratégies taillées pour votre marché.",
   featured: [
     { name: "Restaurant", href: "/secteurs/restaurant-restauration/", icon: "UtensilsCrossed" },
     { name: "Immobilier", href: "/secteurs/immobilier/", icon: "Home" },
@@ -251,61 +251,61 @@ export const SECTORS_PREVIEW = {
     { name: "E-commerce", href: "/secteurs/ecommerce/", icon: "ShoppingCart" },
     { name: "Services pro", href: "/secteurs/services-professionnels/", icon: "Briefcase" },
   ],
-  cta: { label: "Tous les secteurs", href: "/secteurs/" },
+  cta: { label: "Voir tous les secteurs", href: "/secteurs/" },
 } as const;
 
 // --- 10. BLOG / RESOURCES PREVIEW ---
 export const BLOG_PREVIEW = {
   badge: "Ressources gratuites",
-  title: "Guides et outils pour entrepreneurs.",
+  title: "Guides et outils pour entrepreneurs exigeants.",
   subtitle:
-    "Guides pratiques, calculateurs, templates et stratégies pour développer votre entreprise en ligne. Gratuit, sans inscription.",
+    "Guides actionnables, calculateurs, modèles et tactiques pour faire décoller votre activité en ligne. En accès libre, sans formulaire.",
   resources: [
     {
-      name: "Guide Google Ads pour PME",
-      description: "Comment lancer vos premières campagnes publicitaires et obtenir un ROI positif.",
+      name: "Le guide Google Ads des PME",
+      description: "Méthode pas à pas pour lancer vos campagnes et générer un retour sur investissement rentable.",
       href: "/ressources-gratuites/",
       icon: "Target",
       type: "Guide",
     },
     {
-      name: "Audit SEO gratuit",
-      description: "Analysez votre site web et identifiez les opportunités de croissance organique.",
+      name: "Audit SEO offert",
+      description: "Diagnostic complet de votre site et identification des axes de croissance organique.",
       href: "/ressources-gratuites/",
       icon: "Search",
       type: "Outil",
     },
     {
-      name: "Template site vitrine",
-      description: "Checklist complète pour créer un site web professionnel qui convertit.",
+      name: "Modèle site vitrine",
+      description: "Check-list détaillée pour concevoir un site web pro qui transforme les visiteurs en clients.",
       href: "/ressources-gratuites/",
       icon: "FileCode",
       type: "Template",
     },
     {
-      name: "Calculateur ROI publicité",
-      description: "Estimez le retour sur investissement de vos campagnes publicitaires.",
+      name: "Simulateur ROI publicitaire",
+      description: "Projetez la rentabilité de vos campagnes avant d'engager le moindre euro.",
       href: "/ressources-gratuites/",
       icon: "TrendingUp",
       type: "Outil",
     },
   ],
-  cta: { label: "Toutes les ressources", href: "/ressources-gratuites/" },
+  cta: { label: "Découvrir toutes les ressources", href: "/ressources-gratuites/" },
 } as const;
 
 // --- 11. CTA SECTION ---
 export const CTA_SECTION = {
-  title: "Prêt à propulser votre business ?",
+  title: "Prêt à accélérer votre activité ?",
   subtitle:
-    "Obtenez un devis gratuit personnalisé en 24 heures. Pas d'engagement, pas de bullshit — juste des résultats.",
+    "Recevez sous 24h un devis gratuit adapté à vos besoins. Pas d'engagement, pas de discours creux : uniquement des résultats à la clé.",
   cta: {
-    primary: { label: "Demander un devis gratuit", href: "/devis-gratuit/" },
-    secondary: { label: "Nous contacter", href: "/contact/" },
+    primary: { label: "Obtenir mon devis", href: "/devis-gratuit/" },
+    secondary: { label: "Prendre contact", href: "/contact/" },
   },
   trust: [
-    "Devis gratuit en 24h",
-    "Aucun engagement",
-    "Équipe certifiée Google & Meta",
+    "Devis sous 24h",
+    "Sans engagement",
+    "Partenaires certifiés Google & Meta",
   ],
 } as const;
 
@@ -315,8 +315,8 @@ export const ECOSYSTEM = {
   title: "Un réseau de sites spécialisés.",
   sites: [
     {
-      name: "lannkin.com",
-      url: "https://lannkin.com",
+      name: "ekolink.com",
+      url: "https://ekolink.com",
       description: "Version internationale — développement web et CMS IA pour clients anglophones et internationaux.",
       icon: "Globe",
     },
@@ -335,6 +335,116 @@ export const ECOSYSTEM = {
   ],
 } as const;
 
+// --- 13. PAID LANDSCAPE — Réglementation payée ---
+export const PAID_LANDSCAPE = {
+  badge: "Paysage publicitaire",
+  title: "Chaque levier payant a ses codes.",
+  subtitle:
+    "Native, SEA, Social Ads : trois écosystèmes complémentaires que nous orchestrons selon vos objectifs, votre budget et la maturité de votre marché.",
+  categories: [
+    {
+      name: "Native Ads",
+      tagline: "CPC faible, volume massif, tunnel affiné",
+      description:
+        "Des coûts d'acquisition réduits à très grande échelle, en contrepartie d'un entonnoir de conversion bien travaillé pour qualifier le trafic.",
+      icon: "Newspaper",
+      platforms: [
+        { name: "Taboola", logo: "/images/ads-platforms/taboola.svg" },
+        { name: "Outbrain", logo: "/images/ads-platforms/outbrain.svg" },
+        { name: "Criteo", logo: "/images/ads-platforms/criteo.svg" },
+        { name: "Propeller Ads", logo: "/images/ads-platforms/propeller.svg" },
+      ],
+    },
+    {
+      name: "Campagnes SEA",
+      tagline: "Forte intention d'achat, concurrence intense",
+      description:
+        "Captez les utilisateurs au moment où ils cherchent activement. Une stratégie de mots-clés et d'enchères maîtrisée fait toute la différence.",
+      icon: "Target",
+      platforms: [
+        { name: "Google Ads", logo: "/images/ads-platforms/google-ads.svg" },
+        { name: "Microsoft Ads", logo: "/images/ads-platforms/microsoft-ads.svg" },
+      ],
+    },
+    {
+      name: "Marketing des médias sociaux",
+      tagline: "CPC élevé, bonne offre indispensable",
+      description:
+        "Du volume, de la créativité et un ciblage précis : une combinaison gagnante quand votre proposition de valeur est travaillée en amont.",
+      icon: "Share2",
+      platforms: [
+        { name: "TikTok", logo: "/images/ads-platforms/tiktok.svg" },
+        { name: "LinkedIn", logo: "/images/ads-platforms/linkedin.svg" },
+        { name: "Facebook", logo: "/images/ads-platforms/facebook.svg" },
+        { name: "Instagram", logo: "/images/ads-platforms/instagram.svg" },
+      ],
+    },
+  ],
+} as const;
+
+// --- 14. NATIVE ADS EXPERTISE ---
+export const NATIVE_ADS = {
+  badge: "Expertise Native Ads",
+  title: "On maîtrise le Native Ads et la génération de leads.",
+  subtitle:
+    "Des campagnes pensées pour allier précision du ciblage et efficacité des résultats. Attirer, convertir, fidéliser : une méthode rodée sur les plus grandes plateformes.",
+  bullets: [
+    "Stratégies multi-plateformes (Taboola, Outbrain, Criteo)",
+    "Tunnels de conversion optimisés en continu",
+    "Reporting granulaire et scoring de leads",
+    "Scripts anti-fraude propriétaires",
+  ],
+  cta: { label: "Parler de votre projet", href: "/contact/" },
+  trustedBy: [
+    { name: "La Maison du Lead" },
+    { name: "Richard Partners" },
+  ],
+} as const;
+
+// --- 15. SHORT-FORM VIDEO ---
+export const SHORT_FORM_VIDEO = {
+  badge: "Nouveau",
+  title: "Le format court qui propulse votre visibilité.",
+  subtitle:
+    "Un service dédié à la production de vidéos courtes, calibrées pour les algorithmes actuels des réseaux sociaux et les nouvelles exigences du SEO vidéo.",
+  features: [
+    {
+      title: "Production rapide",
+      description: "Un rythme de diffusion soutenu, sans sacrifier la qualité narrative.",
+      icon: "Video",
+    },
+    {
+      title: "Formats natifs",
+      description: "Reels, Shorts, TikTok : chaque vidéo est pensée pour sa plateforme.",
+      icon: "Smartphone",
+    },
+    {
+      title: "SEO vidéo",
+      description: "Titres, vignettes et mots-clés optimisés pour maximiser la découvrabilité.",
+      icon: "Search",
+    },
+  ],
+  platforms: ["TikTok", "Instagram Reels", "YouTube Shorts", "LinkedIn Video"],
+  cta: { label: "Découvrir l'offre vidéo", href: "/services/montage-video/" },
+} as const;
+
+// --- 16. COMMUNITY (YouTube / Discord) ---
+export const COMMUNITY = {
+  badge: "Rejoignez-nous",
+  title: "Bien plus qu'une agence : une communauté.",
+  subtitle:
+    "Ekolink partage ses astuces, ses méthodes et ses retours d'expérience. Abonnez-vous à notre chaîne YouTube pour les cas pratiques, et rejoignez notre Discord pour échanger en direct avec l'équipe et d'autres entrepreneurs.",
+  cta: {
+    youtube: { label: "S'abonner sur YouTube", href: "https://youtube.com/@ekolink" },
+    discord: { label: "Rejoindre le Discord", href: "#" },
+  },
+  stats: [
+    { value: "Hebdo", label: "Nouveaux contenus" },
+    { value: "Live Q&A", label: "Chaque mois" },
+    { value: "Gratuit", label: "Accès libre" },
+  ],
+} as const;
+
 // ============================================================
 // Agrégation pour export
 // ============================================================
@@ -344,7 +454,7 @@ export const HOMEPAGE = {
   certifications: CERTIFICATIONS,
   servicesOverview: SERVICES_OVERVIEW,
   stats: STATS,
-  whyLannkin: WHY_LANNKIN,
+  whyEkolink: WHY_EKOLINK,
   featuredServices: FEATURED_SERVICES,
   testimonials: TESTIMONIALS,
   pricingPreview: PRICING_PREVIEW,
@@ -352,4 +462,8 @@ export const HOMEPAGE = {
   blogPreview: BLOG_PREVIEW,
   ctaSection: CTA_SECTION,
   ecosystem: ECOSYSTEM,
+  paidLandscape: PAID_LANDSCAPE,
+  nativeAds: NATIVE_ADS,
+  shortFormVideo: SHORT_FORM_VIDEO,
+  community: COMMUNITY,
 } as const;

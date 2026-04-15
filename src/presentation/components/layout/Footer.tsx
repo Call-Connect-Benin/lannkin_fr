@@ -71,9 +71,9 @@ const columnVariants = {
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 border-t border-white/[0.06]">
-      {/* Glass background */}
-      <div className="glass rounded-t-2xl">
+    <footer className="relative" style={{ backgroundColor: "#f7f5f0" }}>
+      {/* Light cream background */}
+      <div className="rounded-t-2xl">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Top section: Logo + columns */}
           <motion.div
@@ -81,7 +81,7 @@ export function Footer() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid gap-12 pb-12 pt-16 lg:grid-cols-6"
+            className="grid gap-12 pb-12 pt-8 lg:grid-cols-6"
           >
             {/* Brand column */}
             <motion.div variants={columnVariants} className="lg:col-span-2">
@@ -93,7 +93,7 @@ export function Footer() {
                   className="h-7 w-auto"
                 />
               </Link>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#2d2d2d]/75">
                 Agence de marketing digital et de
                 d&eacute;veloppement web au Qu&eacute;bec. Nous
                 accompagnons les entreprises dans leur croissance
@@ -111,7 +111,7 @@ export function Footer() {
                     aria-label={label}
                     className={cn(
                       "inline-flex h-9 w-9 items-center justify-center rounded-lg",
-                      "bg-white/[0.05] text-muted transition-all duration-200",
+                      "bg-[#2d2d2d]/[0.05] text-[#2d2d2d]/70 transition-all duration-200",
                       "hover:bg-accent/10 hover:text-accent"
                     )}
                   >
@@ -124,7 +124,7 @@ export function Footer() {
               <div className="mt-5">
                 <a
                   href={`tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}`}
-                  className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 text-sm text-[#2d2d2d]/75 transition-colors hover:text-accent"
                 >
                   <Phone className="h-4 w-4 shrink-0 text-accent" />
                   {SITE_CONFIG.phone}
@@ -148,7 +148,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-muted transition-colors duration-150 hover:text-white"
+                        className="text-sm text-[#2d2d2d]/75 transition-colors duration-150 hover:text-[#2d2d2d]"
                       >
                         {link.label}
                       </Link>
@@ -160,7 +160,7 @@ export function Footer() {
           </motion.div>
 
           {/* Bottom bar */}
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 text-xs text-muted sm:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-[#2d2d2d]/70 sm:flex-row">
             <p>
               &copy; {SITE_CONFIG.founded}&ndash;2026{" "}
               {SITE_CONFIG.legalName} &middot; NEQ {SITE_CONFIG.neq} &middot;
@@ -169,14 +169,14 @@ export function Footer() {
             <p>
               <Link
                 href="/politique-de-confidentialite/"
-                className="transition-colors hover:text-white"
+                className="transition-colors hover:text-[#2d2d2d]"
               >
                 Confidentialit&eacute;
               </Link>
               <span className="mx-2">&middot;</span>
               <Link
                 href="/conditions-generales/"
-                className="transition-colors hover:text-white"
+                className="transition-colors hover:text-[#2d2d2d]"
               >
                 Conditions
               </Link>
