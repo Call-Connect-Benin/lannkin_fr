@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <main
       className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden"
-      style={{ backgroundColor: "#0C0C0C", color: "#fff" }}
+      style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}
     >
       {/* ─── Image 3D à droite, fondue en diagonale ─── */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -27,7 +27,7 @@ export default function ContactPage() {
             src="/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp"
             alt=""
             className="h-full w-full object-cover object-center"
-            style={{ opacity: 0.28 }}
+            style={{ opacity: 0.13 }}
             fetchPriority="high"
           />
           {/* Coupe diagonale */}
@@ -35,7 +35,7 @@ export default function ContactPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(105deg, #0C0C0C 20%, rgba(12,12,12,0.6) 42%, transparent 62%)",
+                "linear-gradient(105deg, #f7f5f0 20%, rgba(247,245,240,0.6) 42%, transparent 62%)",
             }}
           />
           {/* Fondu haut/bas */}
@@ -43,7 +43,7 @@ export default function ContactPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, #0C0C0C 0%, transparent 18%, transparent 82%, #0C0C0C 100%)",
+                "linear-gradient(to bottom, #f7f5f0 0%, transparent 18%, transparent 82%, #f7f5f0 100%)",
             }}
           />
         </div>
@@ -75,15 +75,15 @@ export default function ContactPage() {
                   style={{ backgroundColor: "#498f6d" }}
                 />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#2d2d2d" }}>
                 En ligne — réponse en moins de 2 min
               </span>
             </div>
 
             <h1 className="mt-6 font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#fff" }}>
+              style={{ color: "#2d2d2d" }}>
               Parlons de votre{" "}
-              <span style={{ color: "#fff" }}>projet</span>
+              <span style={{ color: "#2d2d2d" }}>projet</span>
             </h1>
 
             {/* Ligne décorative */}
@@ -92,7 +92,7 @@ export default function ContactPage() {
               style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }}
             />
 
-            <p className="mt-5 max-w-[380px] text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.60)" }}>
+            <p className="mt-5 max-w-[380px] text-base leading-relaxed" style={{ color: "#6B7280" }}>
               Une idée ? Un problème à résoudre ? On vous accompagne, sans
               engagement, de la première conversation jusqu&apos;au lancement.
             </p>
@@ -106,15 +106,15 @@ export default function ContactPage() {
                 >
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#2d2d2d" }}
                   >
                     <Phone className="h-4 w-4" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#6B7280" }}>
                       Téléphone
                     </p>
-                    <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.80)" }}>
+                    <p className="text-sm font-medium" style={{ color: "#2d2d2d" }}>
                       {SITE_CONFIG.phone}
                     </p>
                   </div>
@@ -127,15 +127,15 @@ export default function ContactPage() {
                 >
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#2d2d2d" }}
                   >
                     <Mail className="h-4 w-4" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#6B7280" }}>
                       Email
                     </p>
-                    <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.80)" }}>
+                    <p className="text-sm font-medium" style={{ color: "#2d2d2d" }}>
                       {SITE_CONFIG.email}
                     </p>
                   </div>
@@ -145,15 +145,15 @@ export default function ContactPage() {
                 <div className="inline-flex items-center gap-3.5">
                   <span
                     className="flex h-10 w-10 items-center justify-center rounded-xl"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
+                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#2d2d2d" }}
                   >
                     <MapPin className="h-4 w-4" />
                   </span>
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#6B7280" }}>
                       Localisation
                     </p>
-                    <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.80)" }}>
+                    <p className="text-sm font-medium" style={{ color: "#2d2d2d" }}>
                       Paris, France
                     </p>
                   </div>

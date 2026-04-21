@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0A",
+  themeColor: "#f7f5f0",
   width: "device-width",
   initialScale: 1,
 };
@@ -152,7 +152,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-screen bg-black text-white antialiased" suppressHydrationWarning>
+      <body className="min-h-screen bg-[#f7f5f0] antialiased" suppressHydrationWarning>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MF8XDTS"

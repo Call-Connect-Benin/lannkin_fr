@@ -902,7 +902,7 @@ export default function FormulaireConceptionPage() {
                 <textarea
                   name="cities"
                   required
-                  placeholder="Ex. : Paris, Paris, France, Nice"
+                  placeholder="Ex. : Paris, Lyon, Nice"
                   className={textareaCls}
                 />
               </div>
@@ -1102,7 +1102,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="targetZone"
-                    placeholder="Ex. : Paris, Paris, France"
+                    placeholder="Ex. : Paris, Île-de-France"
                     className={inputCls}
                   />
                 </div>
@@ -1599,7 +1599,7 @@ export default function FormulaireConceptionPage() {
                   <textarea
                     name="cities"
                     required
-                    placeholder="Ex. : Paris, Paris, France"
+                    placeholder="Ex. : Paris, Île-de-France"
                     className={textareaCls}
                   />
                 </div>

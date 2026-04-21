@@ -63,7 +63,7 @@ export function ExitIntentPopup() {
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.92, y: 24, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/[0.06] bg-surface shadow-2xl"
+            className="relative w-full max-w-md overflow-hidden rounded-2xl border border-[rgba(45,45,45,0.10)] bg-surface shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Accent stripe top */}

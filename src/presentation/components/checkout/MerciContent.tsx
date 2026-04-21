@@ -129,9 +129,9 @@ export function MerciContent() {
       <section className="py-20">
         <Container>
           <div className="mx-auto max-w-2xl animate-pulse space-y-6 text-center">
-            <div className="mx-auto h-16 w-16 rounded-full bg-white/10" />
-            <div className="mx-auto h-8 w-64 rounded bg-white/10" />
-            <div className="mx-auto h-4 w-96 rounded bg-white/10" />
+            <div className="mx-auto h-16 w-16 rounded-full bg-[rgba(45,45,45,0.08)]" />
+            <div className="mx-auto h-8 w-64 rounded bg-[rgba(45,45,45,0.08)]" />
+            <div className="mx-auto h-4 w-96 rounded bg-[rgba(45,45,45,0.08)]" />
           </div>
         </Container>
       </section>
@@ -148,14 +148,14 @@ export function MerciContent() {
               <CheckCircle className="h-8 w-8 text-accent" />
             </div>
 
-            <h1 className="font-heading text-3xl font-bold text-white sm:text-4xl">
+            <h1 className="font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
               Merci{session?.customerName ? `, ${session.customerName}` : ""} !
             </h1>
 
             {session?.planName && (
               <p className="mt-4 text-lg text-muted">
                 Votre paiement pour{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-[#2d2d2d]">
                   {session.planName}
                 </span>{" "}
                 a été confirmé.
@@ -165,7 +165,7 @@ export function MerciContent() {
             {session?.customerEmail && (
               <p className="mt-2 text-sm text-muted">
                 Un courriel de confirmation a été envoyé à{" "}
-                <span className="text-white">{session.customerEmail}</span>.
+                <span className="text-[#2d2d2d]">{session.customerEmail}</span>.
               </p>
             )}
 
@@ -179,7 +179,7 @@ export function MerciContent() {
 
       {/* Upsell Section */}
       {upsells.length > 0 && session?.customerId && (
-        <section className="border-t border-white/[0.06] bg-surface-light py-16 lg:py-20">
+        <section className="border-t border-[rgba(45,45,45,0.10)] bg-surface-light py-16 lg:py-20">
           <Container>
             <div className="mx-auto max-w-4xl">
               <div className="mb-10 text-center">
@@ -187,12 +187,12 @@ export function MerciContent() {
                   <Sparkles className="h-4 w-4" />
                   Offre spéciale
                 </div>
-                <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+                <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
                   Complétez votre forfait
                 </h2>
                 <p className="mt-3 text-muted">
                   Services complémentaires recommandés pour{" "}
-                  <span className="text-white">{session.planName}</span>.
+                  <span className="text-[#2d2d2d]">{session.planName}</span>.
                   Paiement immédiat sans re-saisir votre carte.
                 </p>
               </div>
@@ -222,7 +222,7 @@ export function MerciContent() {
                         "relative flex flex-col rounded-2xl border p-6 transition-all duration-300",
                         isCompleted
                           ? "border-accent/30 bg-accent/5"
-                          : "border-white/[0.06] bg-surface hover:border-accent/20",
+                          : "border-[rgba(45,45,45,0.10)] bg-surface hover:border-accent/20",
                       )}
                     >
                       {offer.highlight && !isCompleted && (
@@ -235,7 +235,7 @@ export function MerciContent() {
                         <Icon className="h-5 w-5 text-accent" />
                       </div>
 
-                      <h3 className="font-heading text-lg font-bold text-white">
+                      <h3 className="font-heading text-lg font-bold text-[#2d2d2d]">
                         {offer.name}
                       </h3>
                       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
@@ -263,7 +263,7 @@ export function MerciContent() {
                             ? "cursor-default bg-accent/20 text-accent"
                             : offer.highlight
                               ? "bg-accent text-on-accent hover:brightness-110"
-                              : "border border-white/10 text-white hover:border-accent/30 hover:text-accent",
+                              : "border border-[rgba(45,45,45,0.10)] text-[#2d2d2d] hover:border-accent/30 hover:text-accent",
                           isProcessing && "cursor-wait opacity-50",
                         )}
                       >
@@ -294,7 +294,7 @@ export function MerciContent() {
       )}
 
       {/* Footer CTA */}
-      <section className="border-t border-white/[0.06] bg-surface py-12">
+      <section className="border-t border-[rgba(45,45,45,0.10)] bg-surface py-12">
         <Container>
           <div className="mx-auto max-w-xl text-center">
             <p className="text-muted">Des questions ?</p>
@@ -308,7 +308,7 @@ export function MerciContent() {
               </Link>
               <Link
                 href="/tarifs/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:border-accent/30 hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-lg border border-[rgba(45,45,45,0.10)] px-5 py-2.5 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/30 hover:text-accent"
               >
                 Voir tous les services
               </Link>

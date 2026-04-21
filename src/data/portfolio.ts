@@ -1094,7 +1094,7 @@ const additionalProjects: PortfolioProject[] = [
     sector: "Services électriques",
     year: 2024,
     shortDescription:
-      "Site web multipage pour un maître électricien certifié RBQ desservant Paris, Paris, Laurentides et Île-de-France.",
+      "Site web multipage pour un maître électricien certifié RBQ desservant Paris, les Laurentides et l'Île-de-France.",
     description:
       "Conception d'un site web multipage pour DCG Électrique, maître électricien avec plus de 25 ans d'expérience. Pages services (filage, rénovation électrique, bornes de recharge, urgences 24/7), régions desservies et formulaire de contact.",
     services: ["Conception Web", "SEO", "Google Ads"],
@@ -1106,12 +1106,12 @@ const additionalProjects: PortfolioProject[] = [
       "Visibilité locale dans 4 régions",
     ],
     challenge:
-      "Couvrir quatre régions (Paris, Paris, Laurentides, Île-de-France) et se positionner sur les recherches d'urgence électrique.",
+      "Couvrir plusieurs zones de service (Paris, Laurentides, Île-de-France) et se positionner sur les recherches d'urgence électrique.",
     solution:
       "Site multipage avec pages régions dédiées, CTA téléphonique proéminent pour les urgences et contenu SEO local multirégion.",
     seoTitle: "Site Web Électricien Paris Paris | DCG Électrique — Portfolio Ekolink",
     seoDescription:
-      "Portfolio Ekolink : site web pour DCG Électrique. Maître électricien Paris, Paris, Laurentides et Île-de-France.",
+      "Portfolio Ekolink : site web pour DCG Électrique. Maître électricien à Paris, dans les Laurentides et en Île-de-France.",
     externalUrl: "https://www.dcgelectrique.ca/",
     previewImage: "/images/portfolio/dcg-electrique.webp",
   },
@@ -1127,7 +1127,7 @@ const additionalProjects: PortfolioProject[] = [
     shortDescription:
       "Site web multipage pour un courtier immobilier Via Capitale Élite dans la région de France.",
     description:
-      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de France/Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
+      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de Québec et Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
     services: ["Conception Web", "SEO", "Google Ads"],
     technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WPForms"],
     results: [

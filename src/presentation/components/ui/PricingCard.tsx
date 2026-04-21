@@ -37,7 +37,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
           "border-accent/30",
           "shadow-[0_0_40px_rgba(73,143,109,0.12)]",
         ],
-        !highlighted && "border-white/5",
+        !highlighted && "border-[rgba(45,45,45,0.10)]",
         className
       )}
     >
@@ -49,13 +49,13 @@ export function PricingCard({ plan, className }: PricingCardProps) {
       {/* Header */}
       <div className="relative mb-6">
         <div className="mb-4 flex items-center gap-3">
-          <h3 className="font-heading text-xl font-bold text-white">{name}</h3>
+          <h3 className="font-heading text-xl font-bold text-[#2d2d2d]">{name}</h3>
           {highlighted && <Badge size="sm">Populaire</Badge>}
         </div>
 
         {/* Price */}
         <div className="flex items-baseline gap-1">
-          <span className="font-heading text-3xl font-bold text-white sm:text-4xl">
+          <span className="font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
             {formatPrice(price)}
           </span>
           {priceUnit === "month" && (
@@ -72,7 +72,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
       </div>
 
       {/* Divider */}
-      <div className="mb-6 h-px bg-white/10" />
+      <div className="mb-6 h-px bg-[rgba(45,45,45,0.10)]" />
 
       {/* Features */}
       <ul className="relative mb-8 flex-1 space-y-3">
@@ -82,7 +82,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
               className="mt-0.5 h-4 w-4 shrink-0 text-accent"
               aria-hidden="true"
             />
-            <span className="text-white/80">{feature}</span>
+            <span className="text-[#2d2d2d]/80">{feature}</span>
           </li>
         ))}
       </ul>

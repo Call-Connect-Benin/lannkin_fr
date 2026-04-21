@@ -43,7 +43,7 @@ export function SectionHeader({
         </div>
       )}
 
-      <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+      <h2 className="font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl lg:text-5xl">
         {title}
       </h2>
 

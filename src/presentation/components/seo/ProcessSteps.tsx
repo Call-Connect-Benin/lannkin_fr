@@ -26,7 +26,7 @@ const stepVariants = {
 export function ProcessSteps({ title, steps, className }: ProcessStepsProps) {
   return (
     <section className={cn("py-16", className)}>
-      <h2 className="mb-10 font-heading text-3xl font-bold tracking-tight text-white lg:text-4xl">
+      <h2 className="mb-10 font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] lg:text-4xl">
         {title}
       </h2>
 
@@ -45,8 +45,8 @@ export function ProcessSteps({ title, steps, className }: ProcessStepsProps) {
             <div className="absolute -left-8 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
               {i + 1}
             </div>
-            <div className="rounded-xl border border-white/[0.06] bg-surface/50 px-6 py-5">
-              <h3 className="font-heading text-lg font-semibold text-white">
+            <div className="rounded-xl border border-[rgba(45,45,45,0.10)] bg-white px-6 py-5">
+              <h3 className="font-heading text-lg font-semibold text-[#2d2d2d]">
                 {step.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

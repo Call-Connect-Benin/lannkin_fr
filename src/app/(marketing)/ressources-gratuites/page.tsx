@@ -138,11 +138,11 @@ const RESOURCES: Resource[] = [
   {
     type: "video",
     label: "Chaîne YouTube",
-    title: "Ekolink France",
+    title: "Ekolink Canada",
     description:
-      "Conseils marketing digital, tutoriels et analyses pour le marché français.",
+      "Stratégies web, marketing digital et croissance pour les entreprises canadiennes.",
     href: "https://www.youtube.com/@EkolinkFrance",
-    image: "/images/ressources/ekolink-france.webp",
+    image: "/images/ressources/lannkin-canada.webp",
     tag: "Disponible",
     available: true,
   },
@@ -151,16 +151,16 @@ const RESOURCES: Resource[] = [
     label: "Chaîne YouTube",
     title: "Ekolink France",
     description:
-      "Stratégies web, marketing digital et croissance pour les entreprises françaises.",
+      "Conseils marketing digital, tutoriels et analyses pour le marché français.",
     href: "https://www.youtube.com/@EkolinkFrance",
-    image: "/images/ressources/ekolink-canada.webp",
+    image: "/images/ressources/lannkin-france.webp",
     tag: "Disponible",
     available: true,
   },
 ];
 
 const TYPE_CONFIG: Record<ResourceType, { icon: React.ElementType; color: string; bg: string }> = {
-  outil: { icon: Gauge, color: "#fff", bg: "rgba(73,143,109,0.12)" },
+  outil: { icon: Gauge, color: "#498f6d", bg: "rgba(73,143,109,0.12)" },
   ebook: { icon: BookOpen, color: "#7C6CF0", bg: "rgba(124,108,240,0.12)" },
   formation: { icon: GraduationCap, color: "#E88C3A", bg: "rgba(232,140,58,0.12)" },
   video: { icon: Youtube, color: "#FF0000", bg: "rgba(255,0,0,0.12)" },
@@ -170,12 +170,12 @@ const TYPE_CONFIG: Record<ResourceType, { icon: React.ElementType; color: string
 
 export default function RessourcesGratuitesPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
 
       {/* ═══════════════════════════════════════════════════════
           HERO — dark + 3D background
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
+      <section className="relative overflow-hidden pb-8 pt-10 sm:pb-12 sm:pt-14 lg:pb-16 lg:pt-20">
 
         {/* Image 3D en fond, côté droit en diagonale */}
         <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -185,20 +185,20 @@ export default function RessourcesGratuitesPage() {
               src="/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp"
               alt=""
               className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
+              style={{ opacity: 0.13 }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(108deg, #0C0C0C 18%, rgba(12,12,12,0.65) 40%, transparent 62%)",
+                  "linear-gradient(108deg, #f7f5f0 18%, rgba(247,245,240,0.65) 40%, transparent 62%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to bottom, #0C0C0C 0%, transparent 20%, transparent 80%, #0C0C0C 100%)",
+                  "linear-gradient(to bottom, #f7f5f0 0%, transparent 20%, transparent 80%, #f7f5f0 100%)",
               }}
             />
           </div>
@@ -211,11 +211,202 @@ export default function RessourcesGratuitesPage() {
           aria-hidden
         />
 
-        <Container className="relative z-10 py-20 lg:py-28">
-          <div className="max-w-2xl">
+        <Container className="relative z-10">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_360px] lg:items-end">
+            <div
+              className="rounded-[2rem] border px-6 py-8 shadow-[0_24px_80px_rgba(73,143,109,0.08)] sm:px-8 sm:py-10 lg:px-10"
+              style={{
+                borderColor: "rgba(45,45,45,0.08)",
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.78), rgba(255,255,255,0.52))",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div
+                className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+                style={{ borderColor: "rgba(73,143,109,0.30)", backgroundColor: "rgba(73,143,109,0.10)" }}
+              >
+                <span className="relative flex h-2 w-2">
+                  <span
+                    className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                    style={{ backgroundColor: "#498f6d" }}
+                  />
+                  <span
+                    className="relative inline-flex h-2 w-2 rounded-full"
+                    style={{ backgroundColor: "#498f6d" }}
+                  />
+                </span>
+                <span
+                  className="font-mono text-xs font-medium uppercase tracking-[0.24em]"
+                  style={{ color: "#2d2d2d" }}
+                >
+                  100 % gratuit, sans engagement
+                </span>
+              </div>
+
+              <div className="max-w-3xl">
+                <p
+                  className="font-mono text-xs uppercase tracking-[0.28em]"
+                  style={{ color: "rgba(73,143,109,0.9)" }}
+                >
+                  Bibliothèque marketing
+                </p>
+
+                <h1
+                  className="mt-4 font-heading text-5xl font-bold tracking-tight sm:text-[3.6rem] sm:leading-[0.98] lg:text-[4.35rem]"
+                  style={{ color: "#2d2d2d" }}
+                >
+                  Des ressources utiles,
+                  <br className="hidden sm:block" /> vraiment prêtes à l&apos;emploi.
+                </h1>
+
+                <p
+                  className="mt-6 max-w-2xl text-lg leading-relaxed sm:text-[1.15rem]"
+                  style={{ color: "#5f6b63" }}
+                >
+                  Outils pratiques, checklists, ebooks et contenus de formation pour accélérer
+                  votre présence en ligne sans passer par un tunnel de capture.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#outils"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                  style={{ backgroundColor: "#498f6d", color: "#f7f5f0" }}
+                >
+                  Explorer les ressources
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#youtube"
+                  className="inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-colors duration-200"
+                  style={{
+                    borderColor: "rgba(45,45,45,0.10)",
+                    backgroundColor: "rgba(255,255,255,0.56)",
+                    color: "#2d2d2d",
+                  }}
+                >
+                  Voir les contenus vidéo
+                  <Youtube className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                {[
+                  { value: "9", label: "ressources déjà disponibles" },
+                  { value: "2", label: "nouvelles sorties prévues" },
+                  { value: "0 $", label: "barrière d'entrée" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-[1.5rem] border px-5 py-4"
+                    style={{
+                      borderColor: "rgba(45,45,45,0.08)",
+                      backgroundColor: "rgba(255,255,255,0.55)",
+                    }}
+                  >
+                    <p className="font-heading text-3xl font-bold" style={{ color: "#2d2d2d" }}>
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-sm leading-6" style={{ color: "#6B7280" }}>
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <div
+                className="rounded-[2rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  background:
+                    "linear-gradient(160deg, rgba(255,255,255,0.75), rgba(237,233,225,0.72))",
+                  boxShadow: "0 20px 60px rgba(45,45,45,0.06)",
+                }}
+              >
+                <div
+                  className="inline-flex rounded-2xl p-3"
+                  style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                >
+                  <BookOpen className="h-5 w-5" />
+                </div>
+                <p
+                  className="mt-5 font-mono text-[11px] uppercase tracking-[0.26em]"
+                  style={{ color: "#7a847d" }}
+                >
+                  Lecture rapide
+                </p>
+                <h2 className="mt-3 text-2xl font-semibold tracking-tight" style={{ color: "#2d2d2d" }}>
+                  Un hero plus utile qu&apos;un simple bandeau.
+                </h2>
+                <p className="mt-3 text-sm leading-7" style={{ color: "#6B7280" }}>
+                  Chaque bloc met en avant un bénéfice clair, une porte d&apos;entrée concrète
+                  et les formats les plus utiles pour vos prochains chantiers marketing.
+                </p>
+              </div>
+
+              <div
+                className="rounded-[2rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  backgroundColor: "rgba(255,255,255,0.62)",
+                }}
+              >
+                <p
+                  className="font-mono text-[11px] uppercase tracking-[0.26em]"
+                  style={{ color: "#7a847d" }}
+                >
+                  Ce que vous trouverez
+                </p>
+                <div className="mt-5 space-y-4">
+                  {[
+                    {
+                      icon: Gauge,
+                      title: "Outils concrets",
+                      text: "Audits, calculateurs et checklists actionnables.",
+                    },
+                    {
+                      icon: GraduationCap,
+                      title: "Formats pédagogiques",
+                      text: "Guides, ebooks et bases de formation pour aller plus vite.",
+                    },
+                    {
+                      icon: Lock,
+                      title: "Accès libre",
+                      text: "Pas d'abonnement, pas d'espace membre obligatoire.",
+                    },
+                  ].map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div key={item.title} className="flex items-start gap-3">
+                        <div
+                          className="mt-0.5 rounded-2xl p-2.5"
+                          style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                        >
+                          <Icon className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold" style={{ color: "#2d2d2d" }}>
+                            {item.title}
+                          </p>
+                          <p className="mt-1 text-sm leading-6" style={{ color: "#6B7280" }}>
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
             {/* Badge */}
             <div
-              className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              className="hidden mb-6 items-center gap-2 rounded-full border px-3.5 py-1.5"
               style={{ borderColor: "rgba(73,143,109,0.30)", backgroundColor: "rgba(73,143,109,0.10)" }}
             >
               <span className="relative flex h-2 w-2">
@@ -228,27 +419,27 @@ export default function RessourcesGratuitesPage() {
                   style={{ backgroundColor: "#498f6d" }}
                 />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#2d2d2d" }}>
                 100 % gratuit — sans engagement
               </span>
             </div>
 
             <h1
-              className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#fff" }}
+              className="hidden font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
+              style={{ color: "#2d2d2d" }}
             >
               Ressources{" "}
-              <span style={{ color: "#fff" }}>gratuites</span>
+              <span style={{ color: "#2d2d2d" }}>gratuites</span>
             </h1>
 
             <div
-              className="mt-5 h-px w-14"
+              className="hidden mt-5 h-px w-14"
               style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }}
             />
 
             <p
-              className="mt-5 text-lg leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.60)" }}
+              className="hidden mt-5 text-lg leading-relaxed"
+              style={{ color: "#6B7280" }}
             >
               Outils pratiques, ebooks et formations pour développer votre
               présence en ligne. Créés par notre équipe, disponibles sans
@@ -256,7 +447,7 @@ export default function RessourcesGratuitesPage() {
             </p>
 
             {/* Stats rapides */}
-            <div className="mt-10 flex flex-wrap gap-8">
+            <div className="hidden mt-10 flex-wrap gap-8">
               {[
                 { value: "9", label: "ressources disponibles" },
                 { value: "2", label: "ressources à venir" },
@@ -265,11 +456,11 @@ export default function RessourcesGratuitesPage() {
                 <div key={stat.label}>
                   <p
                     className="font-heading text-3xl font-bold"
-                    style={{ color: "#fff" }}
+                    style={{ color: "#2d2d2d" }}
                   >
                     {stat.value}
                   </p>
-                  <p className="mt-0.5 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+                  <p className="mt-0.5 text-sm" style={{ color: "#6B7280" }}>
                     {stat.label}
                   </p>
                 </div>
@@ -286,7 +477,7 @@ export default function RessourcesGratuitesPage() {
         {/* Ligne de séparation subtile */}
         <div
           className="mb-16 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
         />
 
         <Container>
@@ -339,7 +530,7 @@ export default function RessourcesGratuitesPage() {
             />
             <div
               className="absolute inset-0"
-              style={{ background: "linear-gradient(to right, transparent, #0C0C0C)" }}
+              style={{ background: "linear-gradient(to right, transparent, #f7f5f0)" }}
             />
           </div>
         </div>
@@ -354,13 +545,13 @@ export default function RessourcesGratuitesPage() {
           >
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#fff" }}
+              style={{ color: "#2d2d2d" }}
             >
               Vous avez un projet ?
             </h2>
             <p
               className="mx-auto mt-4 max-w-xl text-base leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.55)" }}
+              style={{ color: "#6B7280" }}
             >
               Ces ressources vous ont aidé ? Discutons de votre stratégie
               marketing — consultation gratuite, sans engagement.
@@ -377,7 +568,7 @@ export default function RessourcesGratuitesPage() {
               <Link
                 href="/tarifs/"
                 className="inline-flex items-center gap-2 rounded-lg border px-8 py-3.5 text-sm font-medium transition-colors"
-                style={{ borderColor: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.70)" }}
+                style={{ borderColor: "rgba(45,45,45,0.18)", color: "#6B7280" }}
               >
                 Voir nos tarifs
               </Link>
@@ -407,18 +598,18 @@ function ResourceSection({
       <div className="mb-8">
         <h2
           className="font-heading text-2xl font-bold tracking-tight sm:text-3xl"
-          style={{ color: "#fff" }}
+          style={{ color: "#2d2d2d" }}
         >
           {title}
         </h2>
-        <p className="mt-2 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+        <p className="mt-2 text-sm" style={{ color: "#6B7280" }}>
           {description}
         </p>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {resources.map((resource) => (
-          <ResourceCard key={resource.title} resource={resource} />
+        {resources.map((resource, index) => (
+          <ResourceCard key={`${id}-${resource.href ?? "local"}-${resource.title}-${index}`} resource={resource} />
         ))}
       </div>
     </div>
@@ -436,7 +627,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
       {/* Image 3D miniature */}
       <div
         className="relative mb-5 h-36 overflow-hidden rounded-lg"
-        style={{ backgroundColor: "#161616" }}
+        style={{ backgroundColor: "#e5e0d8" }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -449,7 +640,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to top, rgba(22,22,22,0.6) 0%, transparent 40%)",
+            background: "linear-gradient(to top, rgba(229,224,216,0.6) 0%, transparent 40%)",
           }}
         />
         {/* Tag coin supérieur droit */}
@@ -458,8 +649,8 @@ function ResourceCard({ resource }: { resource: Resource }) {
             className="rounded-full px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider"
             style={
               resource.available
-                ? { backgroundColor: "rgba(73,143,109,0.25)", color: "#fff" }
-                : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.35)" }
+                ? { backgroundColor: "rgba(73,143,109,0.18)", color: "#2d2d2d" }
+                : { backgroundColor: "rgba(45,45,45,0.08)", color: "#6B7280" }
             }
           >
             {resource.tag}
@@ -480,13 +671,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
       {/* Contenu */}
       <h3
         className="font-heading text-base font-semibold leading-snug transition-colors"
-        style={{ color: resource.available ? "#FFFFFF" : "rgba(255,255,255,0.55)" }}
+        style={{ color: resource.available ? "#2d2d2d" : "#6B7280" }}
       >
         {resource.title}
       </h3>
       <p
         className="mt-2.5 flex-1 text-sm leading-relaxed"
-        style={{ color: "rgba(255,255,255,0.42)" }}
+        style={{ color: "#6B7280" }}
       >
         {resource.description}
       </p>
@@ -496,7 +687,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         {resource.available ? (
           <span
             className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5"
-            style={{ color: "#fff" }}
+            style={{ color: "#498f6d" }}
           >
             Accéder gratuitement
             <ArrowRight className="h-3.5 w-3.5" />
@@ -504,7 +695,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         ) : (
           <span
             className="inline-flex items-center gap-1.5 text-sm"
-            style={{ color: "rgba(255,255,255,0.25)" }}
+            style={{ color: "#6B7280" }}
           >
             <Lock className="h-3 w-3" />
             Bientôt disponible
@@ -515,10 +706,10 @@ function ResourceCard({ resource }: { resource: Resource }) {
   );
 
   const cardStyle = {
-    backgroundColor: "#111111",
+    backgroundColor: "#ede9e1",
     border: resource.available
-      ? "1px solid rgba(73,143,109,0.15)"
-      : "1px solid rgba(255,255,255,0.05)",
+      ? "1px solid rgba(73,143,109,0.20)"
+      : "1px solid rgba(45,45,45,0.08)",
   };
 
   const hoverClass =

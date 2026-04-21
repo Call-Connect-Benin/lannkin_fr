@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
+let cachedPosts: BlogPostMeta[] | null = null;
 
 export interface BlogPost {
   slug: string;
@@ -25,14 +26,29 @@ function ensureBlogDir() {
   return fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
 }
 
+function readFrontmatterChunk(filePath: string, chunkSize = 16 * 1024): string {
+  const fd = fs.openSync(filePath, "r");
+
+  try {
+    const buffer = Buffer.alloc(chunkSize);
+    const bytesRead = fs.readSync(fd, buffer, 0, chunkSize, 0);
+    return buffer.toString("utf8", 0, bytesRead);
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+
 export function getAllPosts(): BlogPostMeta[] {
+  if (cachedPosts) return cachedPosts;
+
   const files = ensureBlogDir();
 
-  return files
+  cachedPosts = files
     .map((filename) => {
       const slug = filename.replace(/\.(mdx|md)$/, "");
-      const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
-      const { data } = matter(raw);
+      const filePath = path.join(BLOG_DIR, filename);
+      const rawFrontmatter = readFrontmatterChunk(filePath);
+      const { data } = matter(rawFrontmatter);
 
       return {
         slug,
@@ -47,6 +63,8 @@ export function getAllPosts(): BlogPostMeta[] {
       } satisfies BlogPostMeta;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return cachedPosts;
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
@@ -82,5 +100,6 @@ export function formatDate(iso: string): string {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 }

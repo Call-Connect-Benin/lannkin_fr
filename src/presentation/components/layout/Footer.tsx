@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Facebook, Globe, Instagram, Linkedin, Phone, Youtube } from "lucide-react";
 import Link from "next/link";
 
@@ -45,30 +42,6 @@ const FOOTER_SECTIONS = [
   FOOTER_NAVIGATION.legal,
 ] as const;
 
-// ---------------------------------------------------------------------------
-// Animation variants
-// ---------------------------------------------------------------------------
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.08 },
-  },
-};
-
-const columnVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const },
-  },
-};
-
-// ---------------------------------------------------------------------------
-// Footer
-// ---------------------------------------------------------------------------
-
 export function Footer() {
   return (
     <footer className="relative" style={{ backgroundColor: "#f7f5f0" }}>
@@ -76,15 +49,9 @@ export function Footer() {
       <div className="rounded-t-2xl">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Top section: Logo + columns */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid gap-12 pb-12 pt-8 lg:grid-cols-6"
-          >
+          <div className="grid gap-12 pb-12 pt-8 lg:grid-cols-6">
             {/* Brand column */}
-            <motion.div variants={columnVariants} className="lg:col-span-2">
+            <div className="lg:col-span-2">
               <Link href="/" className="inline-flex items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -135,11 +102,11 @@ export function Footer() {
               <div className="mt-3">
                 <GoogleMapsWidget />
               </div>
-            </motion.div>
+            </div>
 
             {/* Navigation columns */}
             {FOOTER_SECTIONS.map((section) => (
-              <motion.div key={section.title} variants={columnVariants}>
+              <div key={section.title}>
                 <h3 className="mb-4 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
                   {section.title}
                 </h3>
@@ -155,9 +122,9 @@ export function Footer() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Bottom bar */}
           <div className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-[#2d2d2d]/70 sm:flex-row">

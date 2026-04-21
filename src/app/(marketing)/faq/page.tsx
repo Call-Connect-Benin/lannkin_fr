@@ -115,12 +115,12 @@ function AccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-white/[0.06] last:border-0">
+    <div className="last:border-0" style={{ borderBottom: "1px solid rgba(45,45,45,0.08)" }}>
       <button
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-heading text-base font-semibold text-white sm:text-lg">{q}</span>
+        <span className="font-heading text-base font-semibold text-[#2d2d2d] sm:text-lg">{q}</span>
         <ChevronDown
           className={`h-5 w-5 shrink-0 text-accent transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
@@ -130,7 +130,7 @@ function AccordionItem({
           isOpen ? "max-h-96 pb-5 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="leading-relaxed text-muted">{a}</p>
+        <p className="leading-relaxed text-[#6B7280]">{a}</p>
       </div>
     </div>
   );
@@ -140,7 +140,7 @@ export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       {/* Hero */}
       <section className="parallax-section relative overflow-hidden py-16 lg:py-20">
         <ParallaxBg
@@ -153,11 +153,11 @@ export default function FaqPage() {
               <span className="mb-4 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-xs font-medium text-accent">
                 {FAQ_ITEMS.length} questions répondues
               </span>
-              <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl lg:text-6xl">
                 Questions{" "}
                 <span className="text-accent">fréquentes</span>
               </h1>
-              <p className="mt-6 text-lg leading-relaxed" style={{ color: "#DDDDDD" }}>
+              <p className="mt-6 text-lg leading-relaxed" style={{ color: "#6B7280" }}>
                 Tout ce que vous devez savoir sur nos sites web en abonnement,
                 nos services marketing et notre façon de travailler.
               </p>
@@ -198,16 +198,16 @@ export default function FaqPage() {
       </section>
 
       {/* YouTube CTA */}
-      <section className="border-t border-white/5 py-20">
+      <section className="py-20" style={{ borderTop: "1px solid rgba(45,45,45,0.08)" }}>
         <Container size="md">
           <div className="glass rounded-2xl p-8 text-center sm:p-12">
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-500/10">
               <YoutubeSvg className="h-8 w-8 text-red-500" />
             </div>
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
               Vous avez encore des questions ?
             </h2>
-            <p className="mt-4 text-lg text-muted">
+            <p className="mt-4 text-lg text-[#6B7280]">
               On répond à vos questions en vidéo sur notre chaîne YouTube.
               Tutoriels Google Ads, conseils SEO, stratégies marketing — tout y est.
             </p>
@@ -220,7 +220,7 @@ export default function FaqPage() {
               <YoutubeSvg className="h-6 w-6" />
               Voir la chaîne YouTube
             </a>
-            <p className="mt-4 text-sm text-muted">
+            <p className="mt-4 text-sm text-[#6B7280]">
               Ou{" "}
               <a
                 href="/contact/"

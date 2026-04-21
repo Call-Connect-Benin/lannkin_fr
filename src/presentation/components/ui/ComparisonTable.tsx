@@ -75,14 +75,14 @@ export function ComparisonTable({
                 rowIndex % 2 === 0 && "bg-surface/50",
               )}
             >
-              <td className="border-b border-surface-light px-4 py-3 font-body text-white">
+              <td className="border-b border-surface-light px-4 py-3 font-body text-[#2d2d2d]">
                 {row.label}
               </td>
               {row.values.map((value, colIndex) => (
                 <td
                   key={`${row.label}-${colIndex}`}
                   className={cn(
-                    "border-b border-surface-light px-4 py-3 text-center text-white",
+                    "border-b border-surface-light px-4 py-3 text-center text-[#2d2d2d]",
                     highlightColumn !== undefined &&
                       colIndex + 1 === highlightColumn &&
                       "border-x-2 border-accent bg-accent/5",

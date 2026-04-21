@@ -42,7 +42,7 @@ const creationSite: ServicePageContent = {
     {
       title: "Performance et hébergement",
       content:
-        "Odoo.sh offre un hébergement cloud performant et sécurisé pour votre site web. Les serveurs sont hébergés au Canada pour garantir la conformité aux lois françaises sur la protection des données et des temps de réponse optimaux pour vos visiteurs de Paris, Paris et du France.",
+        "Odoo.sh offre un hébergement cloud performant et sécurisé pour votre site web. L'infrastructure est configurée pour répondre aux exigences de sécurité, de disponibilité et de conformité utiles aux entreprises françaises, avec de bons temps de réponse pour vos visiteurs à Paris, en Île-de-France et partout en France.",
     },
   ],
   benefits: [
@@ -51,7 +51,7 @@ const creationSite: ServicePageContent = {
     "Portail client avec accès aux devis, factures et commandes",
     "Multilingue natif sans plugin additionnel",
     "Un seul fournisseur pour le site web et l'ERP",
-    "Hébergement Odoo.sh performant avec serveurs au Canada",
+    "Hébergement Odoo.sh performant avec infrastructure adaptée aux entreprises françaises",
   ],
   process: [
     { step: 1, title: "Analyse des besoins", description: "Étude de vos objectifs web, de votre flux de travail Odoo existant et des modules web nécessaires. Définition de l'arborescence et des fonctionnalités." },
@@ -75,12 +75,12 @@ const erpIntegration: ServicePageContent = {
   slug: "erp-integration",
   heroTitle: "Intégration ERP Odoo à Paris | Ventes, achats et inventaire",
   heroSubtitle:
-    "Centralisez la gestion de votre entreprise avec l'ERP Odoo. Modules ventes, achats, inventaire, comptabilité et fabrication intégrés pour les PME du France.",
+    "Centralisez la gestion de votre entreprise avec l'ERP Odoo. Modules ventes, achats, inventaire, comptabilité et fabrication intégrés pour les PME en France.",
   sections: [
     {
       title: "Pourquoi choisir Odoo comme ERP?",
       content:
-        "Odoo est l'ERP open-source le plus populaire au monde avec plus de 12 millions d'utilisateurs. Il offre une suite complète de modules d'entreprise à une fraction du coût des ERP traditionnels comme SAP ou Oracle. Pour les PME de Paris, Paris et du France, Odoo représente l'équilibre parfait entre fonctionnalités, flexibilité et budget.",
+        "Odoo est l'ERP open-source le plus populaire au monde avec plus de 12 millions d'utilisateurs. Il offre une suite complète de modules d'entreprise à une fraction du coût des ERP traditionnels comme SAP ou Oracle. Pour les PME à Paris, en Île-de-France et partout en France, Odoo représente l'équilibre parfait entre fonctionnalités, flexibilité et budget.",
       items: [
         "Module Ventes : devis, commandes, tarifs et commissions",
         "Module Achats : bons de commande, approbations et fournisseurs",
@@ -93,11 +93,11 @@ const erpIntegration: ServicePageContent = {
     {
       title: "Intégration avec vos outils existants",
       content:
-        "Odoo s'intègre avec les outils que vous utilisez déjà. Que ce soit votre banque (Desjardins, RBC, TD), votre service de paiement (Stripe, PayPal), votre logistique (Postes Canada, UPS, FedEx) ou vos outils marketing (Mailchimp, HubSpot), nous configurons des intégrations fluides et fiables.",
+        "Odoo s'intègre avec les outils que vous utilisez déjà. Que ce soit votre banque, votre service de paiement (Stripe, PayPal), votre logistique (UPS, FedEx, Chronopost, Colissimo) ou vos outils marketing (Mailchimp, HubSpot), nous configurons des intégrations fluides et fiables.",
       items: [
-        "Banques françaises : Desjardins, RBC, TD, BMO, Banque Nationale",
+        "Banques : synchronisation et import bancaire selon votre établissement",
         "Paiements : Stripe, PayPal, Moneris, Square",
-        "Logistique : Postes Canada, UPS, FedEx, Purolator",
+        "Logistique : UPS, FedEx, Chronopost, Colissimo",
         "Marketing : Mailchimp, HubSpot, Sendinblue",
         "E-commerce : Shopify, Amazon, eBay (synchronisation bidirectionnelle)",
         "Productivité : Google Workspace, Microsoft 365, Slack",
@@ -106,15 +106,15 @@ const erpIntegration: ServicePageContent = {
     {
       title: "Conformité et fiscalité française",
       content:
-        "Notre équipe connaît les particularités de la fiscalité française et française. Nous configurons Odoo pour gérer correctement la TPS, la TVQ, les rapports fiscaux et les exigences de Revenu France et de l'ARC. Vos numéros de TPS et TVQ, vos taxes par province et vos rapports de fin d'année sont configurés dès le départ.",
+        "Notre équipe connaît les particularités de la fiscalité française. Nous configurons Odoo pour gérer correctement la TVA, les journaux comptables, les rapports fiscaux et les exigences de votre cadre comptable. Vos règles de taxe, vos taux et vos modèles de documents sont configurés dès le départ.",
     },
   ],
   benefits: [
     "Suite ERP complète à une fraction du coût de SAP ou Oracle",
     "Plus de 50 modules intégrés couvrant tous vos processus",
     "Open-source avec possibilité de personnalisation illimitée",
-    "Fiscalité française et française configurée (TPS/TVQ)",
-    "Intégration native avec les banques et transporteurs françaiss",
+    "Fiscalité française configurée (TVA, journaux, rapports)",
+    "Intégration native avec vos outils de paiement, de logistique et de gestion",
     "Interface moderne et intuitive pour une adoption rapide",
   ],
   process: [
@@ -127,7 +127,7 @@ const erpIntegration: ServicePageContent = {
   faq: [
     { question: "Combien coûte l'implantation d'Odoo pour une PME?", answer: "L'implantation Odoo pour une PME de 5 à 20 utilisateurs coûte généralement entre 10 000$ et 30 000$ selon le nombre de modules et la complexité des processus. L'abonnement Odoo Online commence à 24.90$/utilisateur/mois." },
     { question: "Combien de temps prend une implantation Odoo?", answer: "Une implantation standard (ventes + achats + inventaire + comptabilité) prend 2 à 4 mois. Les projets plus complexes avec fabrication et multi-entrepôts peuvent prendre 4 à 6 mois." },
-    { question: "Odoo gère-t-il la comptabilité en France?", answer: "Oui. Le plan comptable français est inclus avec la gestion TPS/TVQ, les rapports de taxes et les rapprochements bancaires. Nous recommandons toutefois de travailler avec votre comptable pour la configuration initiale." },
+    { question: "Odoo gère-t-il la comptabilité en France?", answer: "Oui. Odoo peut être configuré pour le cadre comptable français, la TVA, les rapports de taxes et les rapprochements bancaires. Nous recommandons toutefois de travailler avec votre comptable pour la configuration initiale." },
     { question: "Puis-je commencer avec quelques modules et ajouter les autres plus tard?", answer: "Absolument. C'est notre approche recommandée. Nous commençons souvent par les ventes et la comptabilité, puis ajoutons les achats, l'inventaire et les autres modules progressivement." },
   ],
 };
@@ -139,7 +139,7 @@ const crm: ServicePageContent = {
   slug: "crm",
   heroTitle: "CRM Odoo à Paris | Pipeline de ventes et automatisation",
   heroSubtitle:
-    "Gérez vos prospects, automatisez votre pipeline de ventes et augmentez vos conversions avec le CRM Odoo. Intégration VoIP, emails automatisés et rapports en temps réel pour les entreprises du France.",
+    "Gérez vos prospects, automatisez votre pipeline de ventes et augmentez vos conversions avec le CRM Odoo. Intégration VoIP, emails automatisés et rapports en temps réel pour les entreprises en France.",
   sections: [
     {
       title: "Le CRM Odoo : bien plus qu'un carnet de contacts",
@@ -159,7 +159,7 @@ const crm: ServicePageContent = {
       content:
         "L'automatisation est la clé d'un CRM efficace. Odoo permet d'automatiser les tâches répétitives de votre processus de vente : assignation automatique des leads, emails de suivi programmés, création de devis et rappels de relance. Votre équipe commerciale se concentre sur la vente plutôt que sur l'administratif.",
       items: [
-        "Assignation automatique des leads par territoire (Paris, Paris, Île-de-France)",
+        "Assignation automatique des leads par territoire (Paris, Île-de-France, France)",
         "Séquences d'emails automatisées par étape du pipeline",
         "Création automatique de devis depuis les opportunités",
         "Alertes et rappels de relance configurable",
@@ -226,7 +226,7 @@ const ecommerce: ServicePageContent = {
         "Catalogue produits avec variantes (taille, couleur, etc.)",
         "Panier d'achat et checkout optimisé pour la conversion",
         "Paiement en ligne (Stripe, PayPal, Moneris)",
-        "Calcul automatique TPS/TVQ et taxes provinciales",
+        "Calcul automatique de la TVA et des taxes applicables",
         "Tarification par segment de clients (B2B, B2C, VIP)",
         "Intégration transporteurs (Postes Canada, UPS, FedEx, Purolator)",
       ],
@@ -240,14 +240,14 @@ const ecommerce: ServicePageContent = {
   benefits: [
     "Inventaire synchronisé en temps réel : zéro survente",
     "Comptabilité automatique : chaque vente génère une facture",
-    "Multi-devises et multi-taxes natifs (TPS/TVQ, HST, GST)",
+    "Multi-devises et multi-taxes natifs",
     "E-commerce B2B avec tarifs par client et portail revendeur",
-    "Intégration transporteurs françaiss native",
+    "Intégration native avec les transporteurs et solutions logistiques",
     "Un seul système à gérer au lieu de deux (boutique + ERP)",
   ],
   process: [
     { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, de vos segments de clients (B2B/B2C) et de votre logistique. Définition de la stratégie de prix et de livraison." },
-    { step: 2, title: "Configuration boutique", description: "Installation du module e-commerce, personnalisation du thème, configuration des méthodes de paiement et des transporteurs françaiss." },
+    { step: 2, title: "Configuration boutique", description: "Installation du module e-commerce, personnalisation du thème, configuration des méthodes de paiement et des transporteurs." },
     { step: 3, title: "Catalogue produits", description: "Import et structuration du catalogue produits avec variantes, images, descriptions SEO et catégories. Configuration des tarifs B2B et B2C." },
     { step: 4, title: "Tests et optimisation", description: "Tests de commande complète (paiement, stock, facture, expédition). Optimisation du tunnel de conversion et de la vitesse." },
     { step: 5, title: "Lancement et marketing", description: "Mise en production, configuration Google Shopping, intégration analytics e-commerce et formation de l'équipe aux opérations quotidiennes." },
@@ -298,7 +298,7 @@ const seo: ServicePageContent = {
     {
       title: "SEO local pour les entreprises françaises",
       content:
-        "Si votre entreprise cible des clients à Paris, Paris ou dans d'autres villes du France, le SEO local est essentiel. Nous optimisons votre site Odoo pour les recherches géolocalisées et intégrons votre fiche Google Business Profile pour maximiser votre visibilité locale.",
+        "Si votre entreprise cible des clients à Paris, en Île-de-France ou dans d'autres villes de France, le SEO local est essentiel. Nous optimisons votre site Odoo pour les recherches géolocalisées et intégrons votre fiche Google Business Profile pour maximiser votre visibilité locale.",
     },
   ],
   benefits: [
@@ -331,7 +331,7 @@ const maintenanceOdoo: ServicePageContent = {
   slug: "maintenance",
   heroTitle: "Maintenance Odoo à Paris | Mises à jour, monitoring et support",
   heroSubtitle:
-    "Assurez la fiabilité et la sécurité de votre instance Odoo avec notre service de maintenance. Mises à jour, monitoring 24/7, sauvegardes et support technique pour les entreprises du France.",
+    "Assurez la fiabilité et la sécurité de votre instance Odoo avec notre service de maintenance. Mises à jour, monitoring 24/7, sauvegardes et support technique pour les entreprises en France.",
   sections: [
     {
       title: "Pourquoi la maintenance Odoo est essentielle",
@@ -400,7 +400,7 @@ const migrationOdoo: ServicePageContent = {
     {
       title: "Pourquoi migrer vers Odoo?",
       content:
-        "De nombreuses PME de Paris, Paris et du France utilisent encore QuickBooks, Sage ou des systèmes vieillissants qui freinent leur croissance. Odoo offre une suite intégrée moderne qui remplace plusieurs logiciels disparates par une plateforme unique, réduisant les coûts de licence, les erreurs de double saisie et la complexité opérationnelle.",
+        "De nombreuses PME à Paris, en Île-de-France et partout en France utilisent encore QuickBooks, Sage ou des systèmes vieillissants qui freinent leur croissance. Odoo offre une suite intégrée moderne qui remplace plusieurs logiciels disparates par une plateforme unique, réduisant les coûts de licence, les erreurs de double saisie et la complexité opérationnelle.",
       items: [
         "Remplacement de QuickBooks : comptabilité, facturation et rapports supérieurs",
         "Migration depuis Sage 50/300 : modernisation et intégration complète",
@@ -459,7 +459,7 @@ const formationOdoo: ServicePageContent = {
   slug: "formation",
   heroTitle: "Formation Odoo à Paris | Administrateur, utilisateur et développeur",
   heroSubtitle:
-    "Formez vos équipes à Odoo avec nos programmes de formation adaptés. Sessions administrateur, utilisateur et développeur disponibles en présentiel à Paris, Paris ou en ligne.",
+    "Formez vos équipes à Odoo avec nos programmes de formation adaptés. Sessions administrateur, utilisateur et développeur disponibles en présentiel à Paris ou en ligne.",
   sections: [
     {
       title: "Nos programmes de formation Odoo",

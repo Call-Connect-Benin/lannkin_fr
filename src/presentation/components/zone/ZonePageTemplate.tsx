@@ -91,14 +91,14 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="max-w-4xl">
-          <div className="mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium" style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#fff" }}>
+          <div className="mb-5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium" style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#2d2d2d" }}>
             <MapPin className="h-3.5 w-3.5" />
             {zone.city}, France
           </div>
-          <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl lg:text-6xl">
             {zone.title}
           </h1>
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.60)" }}>
+          <p className="mb-8 max-w-2xl text-lg leading-relaxed" style={{ color: "#6B7280" }}>
             {zone.description}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -114,9 +114,9 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
               </Button>
             </Link>
           </div>
-          <div className="mt-6 flex flex-wrap gap-5 text-sm" style={{ color: "rgba(255,255,255,0.40)" }}>
+          <div className="mt-6 flex flex-wrap gap-5 text-sm" style={{ color: "#6B7280" }}>
             <span className="flex items-center gap-1.5">
-              <Star className="h-3.5 w-3.5" style={{ color: "#fff" }} /> 4.95 / 5 — 54 avis Google
+              <Star className="h-3.5 w-3.5" style={{ color: "#498f6d" }} /> 4.95 / 5 — 54 avis Google
             </span>
             <span>Certifié Google Partner</span>
             <span>Sans engagement</span>
@@ -127,13 +127,13 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       {/* ── Services ─────────────────────────────────────────────── */}
       <section
         className="py-16 lg:py-24"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(26,26,26,0.50)" }}
+        style={{ borderTop: "1px solid rgba(45,45,45,0.10)", backgroundColor: "#ede9e1" }}
       >
         <Container>
-          <h2 className="font-heading mb-3 text-3xl font-bold text-white">
+          <h2 className="font-heading mb-3 text-3xl font-bold text-[#2d2d2d]">
             Nos services à {zone.city}
           </h2>
-          <p className="mb-10 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+          <p className="mb-10 max-w-2xl text-base" style={{ color: "#6B7280" }}>
             {isParis
               ? "Basés à Paris depuis 2015, nous proposons une gamme complète de services marketing digital pour les entreprises de la région."
               : `Depuis notre siège à Paris, nous desservons les entreprises de ${zone.city} avec une expertise 360° en marketing digital.`}
@@ -147,15 +147,15 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
                   key={slug}
                   href={`/services/${slug}/`}
                   className="group rounded-xl border p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#498f6d]/30"
-                  style={{ backgroundColor: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}
+                  style={{ backgroundColor: "#ffffff", borderColor: "rgba(45,45,45,0.10)" }}
                 >
-                  <p className="font-semibold text-white transition-colors group-hover:text-[#498f6d]">
+                  <p className="font-semibold text-[#2d2d2d] transition-colors group-hover:text-[#498f6d]">
                     {meta.label}
                   </p>
-                  <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+                  <p className="mt-1 text-sm" style={{ color: "#6B7280" }}>
                     {meta.desc}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium" style={{ color: "#fff" }}>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium" style={{ color: "#498f6d" }}>
                     En savoir plus <ArrowRight className="h-3 w-3" />
                   </span>
                 </Link>
@@ -166,12 +166,12 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       </section>
 
       {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
-          <h2 className="font-heading mb-3 text-3xl font-bold text-white">
+          <h2 className="font-heading mb-3 text-3xl font-bold text-[#2d2d2d]">
             Pourquoi choisir Ekolink à {zone.city} ?
           </h2>
-          <p className="mb-10 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
+          <p className="mb-10 max-w-2xl text-base" style={{ color: "#6B7280" }}>
             Plus de 10 ans d&apos;expertise au service des entreprises françaises.
           </p>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -179,13 +179,13 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
               <div
                 key={item.title}
                 className="rounded-xl p-5"
-                style={{ backgroundColor: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
               >
                 <div className="mb-2 flex items-start gap-2">
-                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#fff" }} />
-                  <h3 className="font-heading text-base font-semibold text-white">{item.title}</h3>
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#498f6d" }} />
+                  <h3 className="font-heading text-base font-semibold text-[#2d2d2d]">{item.title}</h3>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>
                   {item.desc}
                 </p>
               </div>
@@ -197,14 +197,14 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       {/* ── Zones desservies ─────────────────────────────────────── */}
       <section
         className="py-16 lg:py-24"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(26,26,26,0.50)" }}
+        style={{ borderTop: "1px solid rgba(45,45,45,0.10)", backgroundColor: "#ede9e1" }}
       >
         <Container>
-          <h2 className="font-heading mb-3 text-3xl font-bold text-white">
+          <h2 className="font-heading mb-3 text-3xl font-bold text-[#2d2d2d]">
             Zone de service
           </h2>
-          <p className="mb-8 max-w-2xl text-base" style={{ color: "rgba(255,255,255,0.50)" }}>
-            Basés à Paris, nous desservons l&apos;ensemble du France.
+          <p className="mb-8 max-w-2xl text-base" style={{ color: "#6B7280" }}>
+            Basés à Paris, nous desservons l&apos;ensemble de la France.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {NEARBY_ZONES.map((z) => (
@@ -212,10 +212,10 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
                 key={z.href}
                 href={z.href}
                 className="rounded-lg p-4 text-center transition-colors hover:border-[#498f6d]/30"
-                style={{ border: "1px solid rgba(255,255,255,0.07)", backgroundColor: "rgba(255,255,255,0.02)" }}
+                style={{ border: "1px solid rgba(45,45,45,0.10)", backgroundColor: "#ffffff" }}
               >
-                <span className="block font-heading font-semibold text-white">{z.name}</span>
-                <span className="mt-0.5 block text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>{z.detail}</span>
+                <span className="block font-heading font-semibold text-[#2d2d2d]">{z.name}</span>
+                <span className="mt-0.5 block text-xs" style={{ color: "#6B7280" }}>{z.detail}</span>
               </Link>
             ))}
           </div>
@@ -223,21 +223,21 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
       </section>
 
       {/* ── Témoignages ──────────────────────────────────────────── */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <TestimonialsSection />
       </div>
 
       {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
           <div
             className="rounded-2xl p-10 text-center"
             style={{ backgroundColor: "rgba(73,143,109,0.07)", border: "1px solid rgba(73,143,109,0.15)" }}
           >
-            <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
               Prêt à développer votre présence à {zone.city} ?
             </h2>
-            <p className="mx-auto mt-4 max-w-md text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
+            <p className="mx-auto mt-4 max-w-md text-base" style={{ color: "#6B7280" }}>
               Devis gratuit sous 24h — Certifié Google Partner — Sans engagement.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

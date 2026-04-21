@@ -21,21 +21,21 @@ export interface ServicePageContent {
 // --------------------------------------------------
 const siteVitrine: ServicePageContent = {
   slug: "site-vitrine",
-  heroTitle: "Création de site vitrine professionnel à Paris et Paris",
+  heroTitle: "Création de site vitrine professionnel à Paris",
   heroSubtitle:
-    "Présentez votre entreprise avec un site vitrine moderne, rapide et optimisé pour le référencement. Attirez plus de clients à Paris, Paris et partout en France.",
+    "Présentez votre entreprise avec un site vitrine moderne, rapide et optimisé pour le référencement. Attirez plus de clients à Paris, en Île-de-France et partout en France.",
   sections: [
     {
       title: "Qu'est-ce qu'un site vitrine?",
       content:
-        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez EKOLINK, nous concevons des sites vitrines sur mesure pour les entreprises de Paris, Paris et de la Île-de-France qui souhaitent affirmer leur crédibilité en ligne.",
+        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez EKOLINK, nous concevons des sites vitrines sur mesure pour les entreprises de Paris et d'Île-de-France qui souhaitent affirmer leur crédibilité en ligne.",
       items: [
         "Pages de présentation de l'entreprise et de l'équipe",
         "Catalogue de services avec appels à l'action stratégiques",
         "Formulaire de contact et intégration calendrier de rendez-vous",
         "Témoignages clients et études de cas",
         "Blog intégré pour le marketing de contenu",
-        "Optimisation SEO locale pour Paris et Paris",
+        "Optimisation SEO locale pour Paris et l'Île-de-France",
       ],
     },
     {
@@ -59,7 +59,7 @@ const siteVitrine: ServicePageContent = {
   benefits: [
     "Crédibilité professionnelle renforcée auprès de vos prospects",
     "Génération de leads qualifiés 24/7 grâce aux formulaires optimisés",
-    "Visibilité accrue sur Google pour les recherches locales à Paris et Paris",
+    "Visibilité accrue sur Google pour les recherches locales à Paris et en Île-de-France",
     "Temps de chargement inférieur à 2 secondes sur mobile",
     "Design unique adapté à votre image de marque",
     "Support technique continu et mises à jour régulières",
@@ -91,7 +91,7 @@ const siteWordpress: ServicePageContent = {
     {
       title: "Pourquoi choisir WordPress pour votre site web?",
       content:
-        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez EKOLINK, nous développons des sites WordPress sur mesure pour les entreprises de Paris, Paris et du France qui veulent un site performant et facile à gérer.",
+        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez EKOLINK, nous développons des sites WordPress sur mesure pour les entreprises de Paris, d'Île-de-France et de toute la France qui veulent un site performant et facile à gérer.",
       items: [
         "Thèmes WordPress custom développés sur mesure pour votre marque",
         "Sélection rigoureuse de plugins premium (SEO, sécurité, cache, formulaires)",
@@ -148,7 +148,7 @@ const siteWordpress: ServicePageContent = {
 // --------------------------------------------------
 const siteShopify: ServicePageContent = {
   slug: "site-shopify",
-  heroTitle: "Agence web Shopify à Paris et Paris — Votre boutique e-commerce sur mesure",
+  heroTitle: "Agence web Shopify à Paris — Votre boutique e-commerce sur mesure",
   heroSubtitle:
     "EKOLINK, votre agence web Shopify en France. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
   sections: [
@@ -159,7 +159,7 @@ const siteShopify: ServicePageContent = {
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
         "Configuration multilingue français/anglais pour le France",
-        "Shopify Payments avec taxes TPS/TVQ automatiques",
+        "Shopify Payments avec configuration des taxes adaptée à votre marché",
         "Intégration apps essentielles : avis clients, upsell, email marketing",
         "Shopify POS pour la vente en magasin (point de vente)",
         "Migration depuis WooCommerce, Wix, Squarespace ou Etsy",
@@ -195,13 +195,13 @@ const siteShopify: ServicePageContent = {
   process: [
     { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, étude de la concurrence française, définition de la stratégie de prix et de livraison (Postes Canada, Purolator)." },
     { step: 2, title: "Design de la boutique", description: "Maquettes Figma de la page d'accueil, pages collection, fiches produit et panier. Design axé sur la conversion mobile." },
-    { step: 3, title: "Développement Shopify", description: "Installation et personnalisation du thème Liquid, configuration des apps, import du catalogue produits et setup des taxes TPS/TVQ." },
+    { step: 3, title: "Développement Shopify", description: "Installation et personnalisation du thème Liquid, configuration des apps, import du catalogue produits et paramétrage des taxes selon votre marché." },
     { step: 4, title: "Tests et optimisation", description: "Tests de commande complète, vérification des paiements, optimisation de la vitesse et du SEO e-commerce." },
     { step: 5, title: "Lancement et formation", description: "Mise en ligne, formation à l'interface admin Shopify, configuration des rapports de vente et du suivi analytique." },
   ],
   faq: [
     { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par EKOLINK commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
-    { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify calcule automatiquement la TPS et la TVQ pour les ventes en France, ainsi que les taxes provinciales pour le reste du Canada et les taxes internationales." },
+    { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify permet de configurer la TVA pour les ventes en France, ainsi que les autres taxes applicables selon votre marché et vos zones de vente." },
     { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir les marchés francophone et anglophone du Canada." },
     { question: "Comment migrer ma boutique WooCommerce vers Shopify?", answer: "Nous utilisons des outils de migration spécialisés pour transférer vos produits, clients, commandes et redirections SEO de WooCommerce vers Shopify sans perte de données ni de référencement." },
   ],
@@ -283,7 +283,7 @@ const siteHeadlessCms: ServicePageContent = {
     {
       title: "Qu'est-ce qu'un headless CMS?",
       content:
-        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. EKOLINK accompagne les entreprises de Paris et Paris dans l'adoption de cette architecture moderne.",
+        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. EKOLINK accompagne les entreprises de Paris et d'Île-de-France dans l'adoption de cette architecture moderne.",
       items: [
         "Sanity.io : CMS headless en temps réel avec Studio personnalisable",
         "Strapi : CMS headless open-source auto-hébergé (Node.js)",

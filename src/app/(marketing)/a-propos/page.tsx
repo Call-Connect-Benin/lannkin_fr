@@ -23,7 +23,7 @@ const OFFICES = [
   {
     country: "EKOLINK CANADA",
     image: "/images/a-propos/Canada-e1556023963820-2500x1406-1-850x560.jpg.webp",
-    alt: "Skyline de Toronto — Ekolink France",
+    alt: "Skyline de Toronto — Ekolink Canada",
   },
   {
     country: "EKOLINK FRANCE",
@@ -50,7 +50,7 @@ const AD_CHANNELS = [
       { label: "Propeller Ads", href: "/services/native-ads/" },
     ],
     icon: Globe,
-    color: "#fff",
+    color: "#498f6d",
   },
   {
     category: "Campagnes SEA",
@@ -99,10 +99,10 @@ const RD_SCRIPTS = [
 
 export default function AProposPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C", color: "#fff" }}>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
 
       {/* ─── HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden pb-16 pt-12">
+      <section className="relative overflow-hidden pb-12 pt-10 sm:pb-14 sm:pt-14 lg:pb-16 lg:pt-20">
 
         {/* 3D background — rocket cubes côté droit */}
         <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -112,20 +112,20 @@ export default function AProposPage() {
               src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
               alt=""
               className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
+              style={{ opacity: 0.13 }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(108deg, #0C0C0C 16%, rgba(12,12,12,0.7) 38%, transparent 60%)",
+                  "linear-gradient(108deg, #f7f5f0 16%, rgba(247,245,240,0.7) 38%, transparent 60%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to bottom, #0C0C0C 0%, transparent 18%, transparent 82%, #0C0C0C 100%)",
+                  "linear-gradient(to bottom, #f7f5f0 0%, transparent 18%, transparent 82%, #f7f5f0 100%)",
               }}
             />
           </div>
@@ -139,9 +139,166 @@ export default function AProposPage() {
         />
 
         <Container className="relative z-10">
-          <div className="max-w-2xl">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_360px] lg:items-end">
             <div
-              className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+              className="rounded-[2rem] border px-6 py-8 shadow-[0_24px_80px_rgba(73,143,109,0.08)] sm:px-8 sm:py-10 lg:px-10"
+              style={{
+                borderColor: "rgba(45,45,45,0.08)",
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.8), rgba(255,255,255,0.54))",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div
+                className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
+                style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
+              >
+                <span className="relative flex h-2 w-2">
+                  <span
+                    className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                    style={{ backgroundColor: "#498f6d" }}
+                  />
+                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
+                </span>
+                <span className="font-mono text-xs font-medium uppercase tracking-[0.22em]" style={{ color: "#2d2d2d" }}>
+                  Fondée en 2015 · Paris, France
+                </span>
+              </div>
+
+              <div className="max-w-3xl">
+                <p
+                  className="font-mono text-xs uppercase tracking-[0.28em]"
+                  style={{ color: "rgba(73,143,109,0.9)" }}
+                >
+                  Agence indépendante
+                </p>
+
+                <h1
+                  className="mt-4 font-heading text-5xl font-bold tracking-tight sm:text-[3.6rem] sm:leading-[0.98] lg:text-[4.25rem]"
+                  style={{ color: "#2d2d2d" }}
+                >
+                  Une agence de croissance
+                  <br className="hidden sm:block" /> pensée pour les PME.
+                </h1>
+
+                <p
+                  className="mt-6 max-w-2xl text-lg leading-relaxed sm:text-[1.1rem]"
+                  style={{ color: "#5f6b63" }}
+                >
+                  Ekolink accompagne les entreprises francophones avec une approche directe:
+                  acquisition, conception web, automatisation et pilotage marketing dans un cadre
+                  exigeant mais lisible.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/devis-gratuit/"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                  style={{ backgroundColor: "#498f6d", color: "#f7f5f0" }}
+                >
+                  Démarrer un projet
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/realisations/"
+                  className="inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition-colors duration-200"
+                  style={{
+                    borderColor: "rgba(45,45,45,0.10)",
+                    backgroundColor: "rgba(255,255,255,0.56)",
+                    color: "#2d2d2d",
+                  }}
+                >
+                  Voir les réalisations
+                </Link>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                {[
+                  { value: "2015", label: "année de fondation" },
+                  { value: "+10 ans", label: "d'expérience cumulée" },
+                  { value: "3 pays", label: "France · Suisse · Canada" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-[1.5rem] border px-5 py-4"
+                    style={{
+                      borderColor: "rgba(45,45,45,0.08)",
+                      backgroundColor: "rgba(255,255,255,0.55)",
+                    }}
+                  >
+                    <p className="font-heading text-3xl font-bold" style={{ color: "#2d2d2d" }}>
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-sm leading-6" style={{ color: "#6B7280" }}>
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <div
+                className="rounded-[2rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  background:
+                    "linear-gradient(160deg, rgba(255,255,255,0.75), rgba(237,233,225,0.72))",
+                  boxShadow: "0 20px 60px rgba(45,45,45,0.06)",
+                }}
+              >
+                <p
+                  className="font-mono text-[11px] uppercase tracking-[0.26em]"
+                  style={{ color: "#7a847d" }}
+                >
+                  Positionnement
+                </p>
+                <h2 className="mt-3 text-2xl font-semibold tracking-tight" style={{ color: "#2d2d2d" }}>
+                  Une agence compacte, pas une usine à production.
+                </h2>
+                <p className="mt-3 text-sm leading-7" style={{ color: "#6B7280" }}>
+                  Nous privilégions les mandats où la stratégie, l'exécution et la qualité du
+                  suivi comptent davantage que le volume.
+                </p>
+              </div>
+
+              <div
+                className="rounded-[2rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  backgroundColor: "rgba(255,255,255,0.62)",
+                }}
+              >
+                <p
+                  className="font-mono text-[11px] uppercase tracking-[0.26em]"
+                  style={{ color: "#7a847d" }}
+                >
+                  Ce que cela change
+                </p>
+                <div className="mt-5 space-y-4">
+                  {[
+                    "Conseil plus direct et recommandations plus nettes.",
+                    "Moins de couches, donc plus de réactivité sur les projets.",
+                    "Une logique orientée résultats avant les effets de présentation.",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div
+                        className="mt-0.5 rounded-2xl p-2.5"
+                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                      >
+                        <CheckCircle className="h-4 w-4" />
+                      </div>
+                      <p className="text-sm leading-6" style={{ color: "#6B7280" }}>
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div
+              className="hidden mb-6 items-center gap-2 rounded-full border px-3.5 py-1.5"
               style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
             >
               <span className="relative flex h-2 w-2">
@@ -151,44 +308,44 @@ export default function AProposPage() {
                 />
                 <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
               </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+              <span className="font-mono text-xs font-medium" style={{ color: "#2d2d2d" }}>
                 Fondée en 2015 · Paris, France
               </span>
             </div>
 
             <h1
-              className="font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
-              style={{ color: "#fff" }}
+              className="hidden font-heading text-5xl font-bold tracking-tight lg:text-[3.5rem] lg:leading-[1.05]"
+              style={{ color: "#2d2d2d" }}
             >
               À Propos —{" "}
-              <span style={{ color: "#fff" }}>Ekolink</span>
+              <span style={{ color: "#2d2d2d" }}>Ekolink</span>
             </h1>
 
             <div
-              className="mt-5 h-px w-14"
+              className="hidden mt-5 h-px w-14"
               style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }}
             />
 
             <p
-              className="mt-5 max-w-xl text-base leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.55)" }}
+              className="hidden mt-5 max-w-xl text-base leading-relaxed"
+              style={{ color: "#6B7280" }}
             >
               L&apos;agence web au service des TPE et PME francophones. France, Suisse, Canada —
               une expertise internationale, un accompagnement de proximité.
             </p>
 
             {/* Stats */}
-            <div className="mt-10 flex flex-wrap gap-8">
+            <div className="hidden mt-10 flex-wrap gap-8">
               {[
                 { value: "2015", label: "Année de fondation" },
                 { value: "+10 ans", label: "D'expérience" },
                 { value: "3 pays", label: "France · Suisse · Canada" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
+                  <p className="font-heading text-2xl font-bold" style={{ color: "#2d2d2d" }}>
                     {stat.value}
                   </p>
-                  <p className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>
+                  <p className="mt-0.5 text-xs" style={{ color: "#6B7280" }}>
                     {stat.label}
                   </p>
                 </div>
@@ -202,14 +359,14 @@ export default function AProposPage() {
       <section className="pb-20 pt-4">
         <div
           className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
         />
         <Container>
           <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#fff" }}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#6B7280" }}>
               Présence internationale
             </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#fff" }}>
+            <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#2d2d2d" }}>
               3 pays, 1 vision
             </h2>
           </div>
@@ -218,7 +375,7 @@ export default function AProposPage() {
               <div
                 key={office.country}
                 className="group overflow-hidden rounded-2xl"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#ede9e1", border: "1px solid rgba(45,45,45,0.10)" }}
               >
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
@@ -230,7 +387,7 @@ export default function AProposPage() {
                     style={{ opacity: 0.75 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent" />
-                  <p className="absolute bottom-3 left-4 font-heading text-base font-bold" style={{ color: "#fff" }}>
+                  <p className="absolute bottom-3 left-4 font-heading text-base font-bold" style={{ color: "#ffffff" }}>
                     {office.country}
                   </p>
                 </div>
@@ -242,7 +399,7 @@ export default function AProposPage() {
                       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
                       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                     </svg>
-                    <span className="text-xs font-semibold" style={{ color: "#fff" }}>
+                    <span className="text-xs font-semibold" style={{ color: "#2d2d2d" }}>
                       Certification Google Ads
                     </span>
                   </div>
@@ -251,7 +408,7 @@ export default function AProposPage() {
                       <span
                         key={cert}
                         className="rounded px-2.5 py-1 text-xs"
-                        style={{ border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.50)" }}
+                        style={{ border: "1px solid rgba(45,45,45,0.12)", color: "#6B7280" }}
                       >
                         {cert}
                       </span>
@@ -278,7 +435,7 @@ export default function AProposPage() {
             />
             <div
               className="absolute inset-0"
-              style={{ background: "linear-gradient(to left, transparent, #0C0C0C 55%)" }}
+              style={{ background: "linear-gradient(to left, transparent, #f7f5f0 55%)" }}
             />
           </div>
         </div>
@@ -292,10 +449,10 @@ export default function AProposPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#fff" }}
+              style={{ color: "#2d2d2d" }}
             >
               Ekolink, l&apos;agence web au service des{" "}
-              <span style={{ color: "#fff" }}>TPE et PME francophones</span>
+              <span style={{ color: "#2d2d2d" }}>TPE et PME francophones</span>
             </h2>
             <div
               className="mx-auto mt-5 h-px w-14"
@@ -303,7 +460,7 @@ export default function AProposPage() {
             />
             <p
               className="mt-6 text-base leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.55)" }}
+              style={{ color: "#6B7280" }}
             >
               Ekolink, basée à Paris et dans tous les pays francophones, accompagne les TPE et PME
               avec des stratégies marketing globales et création de site web sur-mesure. Grâce à
@@ -330,32 +487,226 @@ export default function AProposPage() {
       <section className="pb-20">
         <div
           className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
         />
         <Container>
-          <div className="mx-auto max-w-2xl">
-            <div>
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_360px] lg:items-start">
+            <div
+              className="relative overflow-hidden rounded-[2rem] border p-8 shadow-[0_24px_70px_rgba(45,45,45,0.08)] sm:p-10"
+              style={{
+                borderColor: "rgba(45,45,45,0.08)",
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.9), rgba(247,245,240,0.96))",
+              }}
+            >
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-32"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(73,143,109,0.08), rgba(73,143,109,0))",
+                }}
+                aria-hidden
+              />
+              <div className="relative">
+                <span
+                  className="mb-4 inline-flex rounded-full border px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.32em]"
+                  style={{
+                    borderColor: "rgba(73,143,109,0.18)",
+                    backgroundColor: "rgba(255,255,255,0.72)",
+                    color: "#6B7280",
+                  }}
+                >
+                  Notre histoire
+                </span>
+                <h2
+                  className="max-w-3xl font-heading text-3xl font-bold tracking-tight sm:text-4xl"
+                  style={{ color: "#2d2d2d" }}
+                >
+                  Deux expertises complémentaires, une même exigence de résultat.
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-8" style={{ color: "#6B7280" }}>
+                  Lanne et Kinani associés est née de la rencontre entre une culture acquisition
+                  très orientée performance et une approche technique pensée pour durer.
+                </p>
+
+                <div className="mt-8 grid gap-4 lg:grid-cols-2">
+                  <article
+                    className="rounded-[1.6rem] border p-6"
+                    style={{
+                      borderColor: "rgba(45,45,45,0.08)",
+                      backgroundColor: "rgba(255,255,255,0.72)",
+                    }}
+                  >
+                    <div
+                      className="mb-4 inline-flex rounded-2xl p-3"
+                      style={{ backgroundColor: "rgba(73,143,109,0.10)" }}
+                    >
+                      <Zap className="h-5 w-5" style={{ color: "#498f6d" }} />
+                    </div>
+                    <p
+                      className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em]"
+                      style={{ color: "#9CA3AF" }}
+                    >
+                      Acquisition
+                    </p>
+                    <h3 className="mt-3 text-xl font-semibold" style={{ color: "#2d2d2d" }}>
+                      Albert Lanne
+                    </h3>
+                    <p className="mt-3 text-sm leading-7" style={{ color: "#6B7280" }}>
+                      Expert en marketing et stratégie d&apos;acquisition, il conçoit des dispositifs
+                      capables de performer dans des environnements concurrentiels, avec des tunnels
+                      solides et un marketing 360 pensé pour convertir.
+                    </p>
+                  </article>
+
+                  <article
+                    className="rounded-[1.6rem] border p-6"
+                    style={{
+                      borderColor: "rgba(45,45,45,0.08)",
+                      backgroundColor: "rgba(255,255,255,0.72)",
+                    }}
+                  >
+                    <div
+                      className="mb-4 inline-flex rounded-2xl p-3"
+                      style={{ backgroundColor: "rgba(133,53,62,0.08)" }}
+                    >
+                      <Shield className="h-5 w-5" style={{ color: "#85353e" }} />
+                    </div>
+                    <p
+                      className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em]"
+                      style={{ color: "#9CA3AF" }}
+                    >
+                      Technique
+                    </p>
+                    <h3 className="mt-3 text-xl font-semibold" style={{ color: "#2d2d2d" }}>
+                      Kevin Kinani
+                    </h3>
+                    <p className="mt-3 text-sm leading-7" style={{ color: "#6B7280" }}>
+                      Spécialiste des scripts, de l&apos;automatisation, du growth hacking et de la
+                      cybersécurité, il structure la couche technique avec une logique R&amp;D pour
+                      rendre les projets plus robustes, plus rapides et plus sûrs.
+                    </p>
+                  </article>
+                </div>
+
+                <div
+                  className="mt-6 rounded-[1.6rem] border p-6"
+                  style={{
+                    borderColor: "rgba(45,45,45,0.08)",
+                    backgroundColor: "rgba(237,233,225,0.65)",
+                  }}
+                >
+                  <p
+                    className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em]"
+                    style={{ color: "#9CA3AF" }}
+                  >
+                    Vision commune
+                  </p>
+                  <p className="mt-3 text-sm leading-7" style={{ color: "#6B7280" }}>
+                    Ensemble, ils ont construit une agence qui vise des résultats concrets et
+                    durables : des stratégies éprouvées, des expertises pointues et une ambition
+                    simple pour les clients, gagner en visibilité, en demandes qualifiées et en
+                    parts de marché.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link
+                    href="/services/"
+                    className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
+                    style={{ backgroundColor: "#498f6d" }}
+                  >
+                    Découvrir nos services
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/realisations/"
+                    className="inline-flex items-center gap-2 rounded-xl border px-6 py-3 text-sm font-semibold transition-colors duration-200"
+                    style={{ borderColor: "rgba(45,45,45,0.10)", color: "#2d2d2d" }}
+                  >
+                    Voir nos réalisations
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div
+                className="rounded-[1.8rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  backgroundColor: "rgba(255,255,255,0.82)",
+                }}
+              >
+                <p
+                  className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em]"
+                  style={{ color: "#9CA3AF" }}
+                >
+                  Ce que l&apos;on réunit
+                </p>
+                <div className="mt-5 space-y-4">
+                  {[
+                    "Marketing de performance",
+                    "Automatisation et scripts propriétaires",
+                    "Cybersécurité et fiabilité technique",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span
+                        className="mt-0.5 inline-flex rounded-full p-1"
+                        style={{ backgroundColor: "rgba(73,143,109,0.12)" }}
+                      >
+                        <CheckCircle className="h-4 w-4" style={{ color: "#498f6d" }} />
+                      </span>
+                      <p className="text-sm leading-6" style={{ color: "#4B5563" }}>
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="rounded-[1.8rem] border p-6"
+                style={{
+                  borderColor: "rgba(45,45,45,0.08)",
+                  backgroundColor: "rgba(237,233,225,0.7)",
+                }}
+              >
+                <p
+                  className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em]"
+                  style={{ color: "#9CA3AF" }}
+                >
+                  Promesse
+                </p>
+                <p className="mt-4 text-base leading-7" style={{ color: "#2d2d2d" }}>
+                  Une agence indépendante capable d&apos;aligner stratégie, production et performance
+                  sans perdre la qualité d&apos;exécution.
+                </p>
+              </div>
+            </div>
+
+            <div className="hidden">
               <span
                 className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider"
-                style={{ color: "#fff" }}
+                style={{ color: "#6B7280" }}
               >
                 Notre histoire
               </span>
               <h2
                 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-                style={{ color: "#fff" }}
+                style={{ color: "#2d2d2d" }}
               >
                 Albert Lanne et Kevin Kinani fondent{" "}
-                <span style={{ color: "#fff" }}>Lanne et Kinani associés</span>
+                <span style={{ color: "#2d2d2d" }}>Lanne et Kinani associés</span>
               </h2>
-              <div className="mt-6 space-y-5" style={{ color: "rgba(255,255,255,0.55)" }}>
+              <div className="mt-6 space-y-5" style={{ color: "#6B7280" }}>
                 <p className="text-sm leading-relaxed">
-                  <strong style={{ color: "#fff" }}>Albert Lanne</strong>, expert en marketing et
+                  <strong style={{ color: "#2d2d2d" }}>Albert Lanne</strong>, expert en marketing et
                   stratégie d&apos;acquisition, excelle dans les environnements très concurrentiels.
                   Il gère de gros volumes de demandes et crée des tunnels avec un marketing 360°.
                 </p>
                 <p className="text-sm leading-relaxed">
-                  <strong style={{ color: "#fff" }}>Kevin Kinani</strong>, quant à lui, excelle
+                  <strong style={{ color: "#2d2d2d" }}>Kevin Kinani</strong>, quant à lui, excelle
                   dans les scripts, le growth hacking, la cybersécurité et l&apos;automatisation.
                   Il a mis en place des scripts propriétaires grâce à un pôle de recherche et
                   développement, offrant des solutions techniques innovantes qui optimisent les
@@ -364,7 +715,7 @@ export default function AProposPage() {
                 <p className="text-sm leading-relaxed">
                   Ensemble, leur vision est claire : Ekolink, c&apos;est l&apos;assurance de vous
                   propulser en tête de votre marché en{" "}
-                  <strong style={{ color: "#fff" }}>1ʳᵉ position sur Google</strong> avec des
+                  <strong style={{ color: "#2d2d2d" }}>1ʳᵉ position sur Google</strong> avec des
                   stratégies éprouvées, portées par des experts dans chaque domaine, pour des
                   résultats concrets et durables.
                 </p>
@@ -373,7 +724,7 @@ export default function AProposPage() {
                 <Link
                   href="/services/"
                   className="inline-flex items-center gap-2 rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                  style={{ borderColor: "#498f6d", color: "#fff" }}
+                  style={{ borderColor: "#498f6d", color: "#498f6d" }}
                 >
                   Nos services
                   <ArrowRight className="h-4 w-4" />
@@ -399,7 +750,7 @@ export default function AProposPage() {
             />
             <div
               className="absolute inset-0"
-              style={{ background: "linear-gradient(to right, transparent, #0C0C0C 60%)" }}
+              style={{ background: "linear-gradient(to right, transparent, #f7f5f0 60%)" }}
             />
           </div>
         </div>
@@ -413,14 +764,14 @@ export default function AProposPage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#fff" }}
+              style={{ color: "#2d2d2d" }}
             >
               Se démarquer, c&apos;est choisir une agence qui vous offre{" "}
-              <span style={{ color: "#fff" }}>plus que les agences classiques</span>
+              <span style={{ color: "#2d2d2d" }}>plus que les agences classiques</span>
             </h2>
             <p
               className="mt-5 text-base leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.50)" }}
+              style={{ color: "#6B7280" }}
             >
               Alors que la plupart des agences web se concentrent uniquement sur Google et Facebook
               Ads, nous allons bien plus loin. Ekolink vous offre une gamme élargie de services et
@@ -433,7 +784,7 @@ export default function AProposPage() {
               <div
                 key={channel.category}
                 className="rounded-2xl p-6"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#ede9e1", border: "1px solid rgba(45,45,45,0.10)" }}
               >
                 <div
                   className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
@@ -441,20 +792,20 @@ export default function AProposPage() {
                 >
                   <channel.icon className="h-5 w-5" style={{ color: channel.color }} />
                 </div>
-                <h3 className="font-heading text-base font-bold" style={{ color: "#fff" }}>
+                <h3 className="font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>
                   {channel.category}
                 </h3>
-                <p className="mt-2 text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.40)" }}>
+                <p className="mt-2 text-xs leading-relaxed" style={{ color: "#6B7280" }}>
                   {channel.description}
                 </p>
                 <ul className="mt-4 space-y-2">
                   {channel.platforms.map((platform) => (
                     <li key={platform.label} className="flex items-center gap-2">
-                      <CheckCircle className="h-3.5 w-3.5 shrink-0" style={{ color: "#fff" }} />
+                      <CheckCircle className="h-3.5 w-3.5 shrink-0" style={{ color: "#498f6d" }} />
                       <Link
                         href={platform.href}
                         className="text-xs transition-colors hover:underline"
-                        style={{ color: "rgba(255,255,255,0.60)" }}
+                        style={{ color: "#6B7280" }}
                       >
                         {platform.label}
                       </Link>
@@ -482,26 +833,26 @@ export default function AProposPage() {
       <section className="pb-20">
         <div
           className="mb-14 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent)" }}
+          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
         />
         <Container>
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <span
               className="mb-3 inline-block font-mono text-xs font-semibold uppercase tracking-wider"
-              style={{ color: "#fff" }}
+              style={{ color: "#6B7280" }}
             >
               Pôle Recherche &amp; Développement
             </span>
             <h2
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#fff" }}
+              style={{ color: "#2d2d2d" }}
             >
               Ekolink : l&apos;innovation au cœur de votre{" "}
-              <span style={{ color: "#fff" }}>performance digitale</span>
+              <span style={{ color: "#2d2d2d" }}>performance digitale</span>
             </h2>
             <p
               className="mt-5 text-base leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.50)" }}
+              style={{ color: "#6B7280" }}
             >
               Notre pôle R&amp;D n&apos;est pas juste un plus — c&apos;est l&apos;assurance que vos
               campagnes publicitaires bénéficient des dernières avancées technologiques.
@@ -513,11 +864,11 @@ export default function AProposPage() {
               <div
                 key={script.title}
                 className="overflow-hidden rounded-2xl"
-                style={{ backgroundColor: "#111111", border: "1px solid rgba(255,255,255,0.07)" }}
+                style={{ backgroundColor: "#ede9e1", border: "1px solid rgba(45,45,45,0.10)" }}
               >
                 <div
                   className="relative h-52 w-full"
-                  style={{ backgroundColor: "#141414" }}
+                  style={{ backgroundColor: "#e5e0d8" }}
                 >
                   <Image
                     src={script.image}
@@ -528,12 +879,12 @@ export default function AProposPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-lg font-bold" style={{ color: "#fff" }}>
+                  <h3 className="font-heading text-lg font-bold" style={{ color: "#2d2d2d" }}>
                     {script.title}
                   </h3>
                   <p
                     className="mt-3 text-sm leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.48)" }}
+                    style={{ color: "#6B7280" }}
                   >
                     {script.description}
                   </p>
@@ -554,20 +905,20 @@ export default function AProposPage() {
               src="/images/rendu3D/rendu3d-rocket-launch-fond-vert.webp"
               alt=""
               className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
+              style={{ opacity: 0.13 }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(105deg, #0C0C0C 20%, rgba(12,12,12,0.6) 42%, transparent 62%)",
+                  "linear-gradient(105deg, #f7f5f0 20%, rgba(247,245,240,0.6) 42%, transparent 62%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to bottom, #0C0C0C 0%, transparent 18%, transparent 82%, #0C0C0C 100%)",
+                  "linear-gradient(to bottom, #f7f5f0 0%, transparent 18%, transparent 82%, #f7f5f0 100%)",
               }}
             />
           </div>
@@ -593,17 +944,17 @@ export default function AProposPage() {
                   />
                   <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
                 </span>
-                <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+                <span className="font-mono text-xs font-medium" style={{ color: "#2d2d2d" }}>
                   En ligne — réponse en moins de 2 min
                 </span>
               </div>
 
               <h2
                 className="mt-6 font-heading text-4xl font-bold tracking-tight"
-                style={{ color: "#fff" }}
+                style={{ color: "#2d2d2d" }}
               >
                 Travaillons{" "}
-                <span style={{ color: "#fff" }}>ensemble</span>
+                <span style={{ color: "#2d2d2d" }}>ensemble</span>
               </h2>
               <div
                 className="mt-5 h-px w-14"
@@ -611,7 +962,7 @@ export default function AProposPage() {
               />
               <p
                 className="mt-5 max-w-[380px] text-base leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.55)" }}
+                style={{ color: "#6B7280" }}
               >
                 Vous avez un projet, une question ou simplement envie de discuter ? Notre équipe
                 vous répond rapidement, sans engagement.
@@ -627,15 +978,15 @@ export default function AProposPage() {
                     <>
                       <span
                         className="flex h-10 w-10 items-center justify-center rounded-xl"
-                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#fff" }}
+                        style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#2d2d2d" }}
                       >
                         <Icon className="h-4 w-4" />
                       </span>
                       <div>
-                        <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.30)" }}>
+                        <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "#6B7280" }}>
                           {label}
                         </p>
-                        <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.75)" }}>
+                        <p className="text-sm font-medium" style={{ color: "#2d2d2d" }}>
                           {value}
                         </p>
                       </div>

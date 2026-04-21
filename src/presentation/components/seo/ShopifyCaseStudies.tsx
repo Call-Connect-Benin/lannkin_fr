@@ -116,7 +116,7 @@ export function ShopifyCaseStudies() {
           <p className="mb-3 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
             Études de cas e-commerce
           </p>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl">
             Des boutiques Shopify qui génèrent des résultats
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
@@ -135,7 +135,7 @@ export function ShopifyCaseStudies() {
               whileInView="visible"
               viewport={{ once: true, margin: "-40px" }}
               variants={cardVariants}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-surface/50 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.08)]"
+              className="group relative overflow-hidden rounded-2xl border border-[rgba(45,45,45,0.10)] bg-surface/50 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.08)]"
             >
               {/* Image */}
               <div className="relative aspect-[16/10] overflow-hidden">
@@ -160,13 +160,13 @@ export function ShopifyCaseStudies() {
                     <span
                       key={tag}
                       className="rounded-full border px-2 py-0.5 text-[10px] font-medium"
-                      style={{ borderColor: "rgba(73,143,109,0.25)", color: "#fff" }}
+                      style={{ borderColor: "rgba(73,143,109,0.25)", color: "#2d2d2d" }}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h3 className="font-heading text-lg font-bold text-white">{study.name}</h3>
+                <h3 className="font-heading text-lg font-bold text-[#2d2d2d]">{study.name}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted line-clamp-3">
                   {study.description}
                 </p>
@@ -182,7 +182,7 @@ export function ShopifyCaseStudies() {
                     href={study.externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-white"
+                    className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-[#2d2d2d]"
                   >
                     Visiter
                     <ExternalLink className="h-3 w-3" />

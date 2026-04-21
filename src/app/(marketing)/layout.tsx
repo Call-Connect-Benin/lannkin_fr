@@ -8,11 +8,11 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div suppressHydrationWarning>
       <Header />
       <div className="pt-16">{children}</div>
       <Footer />
       <ExitIntentPopup />
-    </>
+    </div>
   );
 }

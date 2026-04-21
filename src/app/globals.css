@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
-/* Phone input dark theme */
+/* Phone input light theme */
 .phone-input-dark .PhoneInputInput {
   background: transparent;
-  color: white;
+  color: #2d2d2d;
   border: none;
   outline: none;
 }
 .phone-input-dark .PhoneInputCountrySelect {
-  background: #1a1a1a;
-  color: white;
+  background: #f7f5f0;
+  color: #2d2d2d;
 }
 .phone-input-dark .PhoneInputCountryIcon {
   border: none;
   box-shadow: none;
 }
 
-/* Select dropdown dark theme */
+/* Select dropdown light theme */
 select option {
-  background: #1a1a1a;
-  color: white;
+  background: #f7f5f0;
+  color: #2d2d2d;
 }
 
 /* ===== DESIGN TOKENS ===== */
 
 @theme {
-  /* Colors — Dark theme */
-  --color-black: #0C0C0C;
-  --color-surface: #141414;
-  --color-surface-light: #1A1A1A;
+  /* Colors — Light theme */
+  --color-black: #f7f5f0;
+  --color-surface: #ede9e1;
+  --color-surface-light: #e8e4db;
   --color-accent: #498f6d;
   --color-accent-secondary: #85353e;
-  --color-paper: #0C0C0C;
+  --color-paper: #f7f5f0;
   --color-white: #FFFFFF;
-  --color-muted: #9CA3AF;
+  --color-muted: #6B7280;
   --color-danger: #DC2626;
   --color-on-accent: #FFFFFF;
 
@@ -117,8 +117,8 @@ select option {
 
   body {
     font-family: var(--font-body);
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: #f7f5f0;
+    color: #2d2d2d;
   }
 }
 
@@ -167,7 +167,7 @@ body::before {
 
 ::selection {
   background-color: rgba(73, 143, 109, 0.3);
-  color: #FFFFFF;
+  color: #2d2d2d;
 }
 
 /* ===== SCROLLBAR ===== */
@@ -177,16 +177,16 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #141414;
+  background: #ede9e1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #b5b0a8;
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #8a8480;
 }
 
 /* ===== PARALLAX DARK SECTIONS ===== */

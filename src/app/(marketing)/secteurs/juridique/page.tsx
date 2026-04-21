@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const BENEFITS = [
-  "Google Ads juridique conforme aux règles du Barreau du France et de la Chambre des notaires",
+  "Google Ads juridique conforme aux règles du Barreau et des ordres professionnels concernés",
   "SEO de positionnement d'expert pour 'avocat divorce paris', 'notaire testament paris' et plus",
   "Génération de mandats qualifiés — prospects qui ont déjà compris leur besoin et sont prêts à agir",
   "LinkedIn Ads B2B pour cibler les entreprises ayant des besoins juridiques récurrents",

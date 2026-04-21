@@ -82,13 +82,13 @@ export function HeroVideoScroll({ children }: { children: React.ReactNode }) {
         <canvas
           ref={canvasRef}
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ backgroundColor: "#0C0C0C" }}
+          style={{ backgroundColor: "#f7f5f0" }}
         />
 
-        {/* Dark overlay that intensifies as content appears */}
+        {/* Light overlay */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(12, 12, 12, 0.3)" }}
+          style={{ backgroundColor: "rgba(247, 245, 240, 0.3)" }}
         />
 
         {/* Hero content fading in */}

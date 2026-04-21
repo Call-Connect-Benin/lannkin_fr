@@ -8,11 +8,11 @@ export default function GlobalError({
 }) {
   return (
     <html lang="fr-CA">
-      <body className="flex min-h-screen flex-col items-center justify-center gap-6 bg-black px-4 text-center">
-        <h2 className="text-2xl font-bold text-white">
+      <body className="flex min-h-screen flex-col items-center justify-center gap-6 bg-[#f7f5f0] px-4 text-center">
+        <h2 className="text-2xl font-bold text-[#2d2d2d]">
           Une erreur est survenue
         </h2>
-        <p className="max-w-md text-gray-400">
+        <p className="max-w-md text-[#6b7280]">
           Nous nous excusons pour ce désagrément. Veuillez réessayer.
         </p>
         <button

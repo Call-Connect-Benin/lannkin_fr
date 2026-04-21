@@ -36,7 +36,7 @@ const WHY_US = [
 
 export default function RealisationsEcommercePage() {
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       <RealisationsBanner
         currentCategory="ecommerce"
         title="Création de boutiques e-commerce à Paris"
@@ -49,11 +49,11 @@ export default function RealisationsEcommercePage() {
       />
 
       {/* Separator */}
-      <div id="projets" className="border-t border-accent/20 bg-surface">
+      <div id="projets" className="border-t border-accent/20" style={{ backgroundColor: "#ede9e1" }}>
         <Container>
           <div className="flex items-center justify-between py-3">
-            <p className="text-xs text-muted">Nos réalisations e-commerce</p>
-            <Link href="/realisations/" className="text-xs text-muted hover:text-accent transition-colors">
+            <p className="text-xs text-[#6B7280]">Nos réalisations e-commerce</p>
+            <Link href="/realisations/" className="text-xs text-[#6B7280] hover:text-accent transition-colors">
               ← Voir tous les projets
             </Link>
           </div>
@@ -64,39 +64,39 @@ export default function RealisationsEcommercePage() {
       <PortfolioGrid initialFilter="ecommerce" />
 
       {/* SEO Content Section */}
-      <section className="bg-surface-light py-16 lg:py-20">
+      <section className="py-16 lg:py-20" style={{ backgroundColor: "#f7f5f0" }}>
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
               Agence e-commerce à Paris — Créer votre boutique en ligne en France
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
-              <div className="text-sm leading-relaxed text-muted space-y-4">
+              <div className="space-y-4 text-sm leading-relaxed text-[#6B7280]">
                 <p>
-                  Ekolink est une <strong className="text-white">agence e-commerce basée à Paris, France</strong>.
+                  Ekolink est une <strong className="text-[#2d2d2d]">agence e-commerce basée à Paris, France</strong>.
                   Depuis plus de 10 ans, nous concevons des boutiques en ligne pour les entreprises françaises
                   et françaises qui souhaitent vendre leurs produits sur internet — en France, au Canada
                   ou à l&apos;international.
                 </p>
                 <p>
-                  Que vous cherchiez à <strong className="text-white">créer une boutique en ligne à Paris</strong>,
+                  Que vous cherchiez à <strong className="text-[#2d2d2d]">créer une boutique en ligne à Paris</strong>,
                   à migrer votre site existant vers Shopify, ou à optimiser votre e-commerce pour augmenter
                   vos conversions, notre équipe maîtrise l&apos;ensemble des outils et plateformes :
                   Shopify, Shopify Plus, WooCommerce, Next.js Commerce.
                 </p>
                 <p>
-                  Nos boutiques en ligne sont conçues pour <strong className="text-white">performer sur Google</strong> :
+                  Nos boutiques en ligne sont conçues pour <strong className="text-[#2d2d2d]">performer sur Google</strong> :
                   structure SEO e-commerce, pages produits optimisées, données structurées Product schema,
                   intégration Google Shopping et stratégies Google Ads avec suivi précis des conversions.
                 </p>
               </div>
               <div>
-                <h3 className="mb-4 font-semibold text-white">Ce qui est inclus dans nos projets e-commerce :</h3>
+                <h3 className="mb-4 font-semibold text-[#2d2d2d]">Ce qui est inclus dans nos projets e-commerce :</h3>
                 <ul className="space-y-2">
                   {WHY_US.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span className="text-sm text-muted">{item}</span>
+                      <span className="text-sm text-[#6B7280]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -104,18 +104,18 @@ export default function RealisationsEcommercePage() {
             </div>
 
             {/* Local SEO block */}
-            <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
-              <h2 className="font-heading text-xl font-bold text-white">
-                Création e-commerce Paris, Paris, Île-de-France — Notre zone de service
+            <div className="mt-10 rounded-2xl border p-8" style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}>
+              <h2 className="font-heading text-xl font-bold text-[#2d2d2d]">
+                Création e-commerce à Paris et en Île-de-France — Notre zone de service
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                Basée à <strong className="text-white">Paris (France)</strong>, notre agence accompagne
+              <p className="mt-4 text-sm leading-relaxed text-[#6B7280]">
+                Basée à <strong className="text-[#2d2d2d]">Paris (France)</strong>, notre agence accompagne
                 les entreprises de la grande région de Paris dans leur transformation digitale :
-                Paris, Paris, Île-de-France (Versailles, Boulogne, Neuilly, Saint-Germain),
+                Paris et l'Île-de-France (Versailles, Boulogne, Neuilly, Saint-Germain),
                 Hauts-de-Seine (Créteil, Nanterre, Vincennes) et partout au Canada.
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                Nos boutiques e-commerce sont livrées avec une <strong className="text-white">stratégie
+              <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
+                Nos boutiques e-commerce sont livrées avec une <strong className="text-[#2d2d2d]">stratégie
                 d&apos;acquisition complète</strong> : SEO local, Google Shopping, campagnes Facebook/Instagram Ads
                 et automatisation par courriel. L&apos;objectif est simple : générer des ventes dès le
                 lancement, pas seulement un beau site.
@@ -130,7 +130,8 @@ export default function RealisationsEcommercePage() {
                 </Link>
                 <Link
                   href="/tarifs/conception-web/"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/30 hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold text-[#2d2d2d] transition-all duration-200 hover:border-accent/30 hover:text-accent"
+                  style={{ borderColor: "rgba(45,45,45,0.10)", backgroundColor: "rgba(255,255,255,0.64)" }}
                 >
                   Voir les tarifs
                 </Link>
@@ -141,19 +142,22 @@ export default function RealisationsEcommercePage() {
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <Link
                 href="/realisations/multipages/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Sites multipages
               </Link>
               <Link
                 href="/realisations/onepage/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Sites onepage
               </Link>
               <Link
                 href="/realisations/international/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Projets internationaux
               </Link>

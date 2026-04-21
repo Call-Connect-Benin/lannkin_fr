@@ -11,7 +11,7 @@ const lovable: ServicePageContent = {
   slug: "lovable",
   heroTitle: "Lovable : Créez votre site web avec l'IA à Paris",
   heroSubtitle:
-    "Lovable transforme vos idées en sites web fonctionnels grâce à l'intelligence artificielle. Prototypage ultra-rapide, itérations instantanées et déploiement en quelques minutes pour les entreprises du France.",
+    "Lovable transforme vos idées en sites web fonctionnels grâce à l'intelligence artificielle. Prototypage ultra-rapide, itérations instantanées et déploiement en quelques minutes pour les entreprises en France.",
   sections: [
     {
       title: "Qu'est-ce que Lovable?",
@@ -42,7 +42,7 @@ const lovable: ServicePageContent = {
     {
       title: "Notre expertise Lovable chez EKOLINK",
       content:
-        "Nous avons livré plus de 30 projets avec Lovable pour des entreprises de Paris, Paris et du France. Notre expertise en prompt engineering et en architecture logicielle nous permet d'obtenir des résultats professionnels là où d'autres obtiennent du code amateur. Nous savons quand Lovable est le bon outil et quand il faut passer à du développement traditionnel.",
+        "Nous avons livré plus de 30 projets avec Lovable pour des entreprises à Paris, en Île-de-France et partout en France. Notre expertise en prompt engineering et en architecture logicielle nous permet d'obtenir des résultats professionnels là où d'autres obtiennent du code amateur. Nous savons quand Lovable est le bon outil et quand il faut passer à du développement traditionnel.",
     },
   ],
   benefits: [
@@ -494,7 +494,7 @@ const accompagnement: ServicePageContent = {
     "Temps de prototypage réduit de 60%",
     "Équipes non-techniques capables de créer des MVPs",
     "Adoption sécuritaire avec bonnes pratiques de code review",
-    "Disponible en présentiel à Paris, Paris et Île-de-France",
+    "Disponible en présentiel à Paris et en Île-de-France",
   ],
   process: [
     { step: 1, title: "Diagnostic initial", description: "Évaluation de votre maturité vibe coding, de vos outils actuels et de vos objectifs. Identification des quick wins et du plan d'adoption." },

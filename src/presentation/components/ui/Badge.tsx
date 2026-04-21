@@ -8,7 +8,7 @@ const variants = {
   default: "bg-accent/15 text-accent border border-accent/20",
   secondary:
     "bg-accent-secondary/15 text-accent-secondary border border-accent-secondary/20",
-  outline: "bg-transparent text-white border border-white/20",
+  outline: "bg-transparent text-[#2d2d2d] border border-[rgba(45,45,45,0.25)]",
   muted: "bg-muted/15 text-muted border border-muted/20",
 } as const;
 

@@ -59,7 +59,7 @@ export function RealisationsBanner({
   return (
     <section
       className="relative overflow-hidden pb-14 pt-10"
-      style={{ backgroundColor: "#0C0C0C" }}
+      style={{ backgroundColor: "#f7f5f0" }}
     >
       {/* 3D background diagonal */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -69,20 +69,20 @@ export function RealisationsBanner({
             src={bg3d}
             alt=""
             className="h-full w-full object-cover object-center"
-            style={{ opacity: 0.20 }}
+            style={{ opacity: 0.13 }}
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(108deg, #0C0C0C 16%, rgba(12,12,12,0.7) 38%, transparent 60%)",
+                "linear-gradient(108deg, #f7f5f0 16%, rgba(247,245,240,0.7) 38%, transparent 60%)",
             }}
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, #0C0C0C 0%, transparent 20%, transparent 80%, #0C0C0C 100%)",
+                "linear-gradient(to bottom, #f7f5f0 0%, transparent 20%, transparent 80%, #f7f5f0 100%)",
             }}
           />
         </div>
@@ -100,13 +100,13 @@ export function RealisationsBanner({
         {currentCategory !== "tous" && (
           <nav
             className="mb-5 flex items-center gap-2 text-sm"
-            style={{ color: "rgba(255,255,255,0.35)" }}
+            style={{ color: "rgba(45,45,45,0.45)" }}
           >
-            <Link href="/realisations/" className="transition-colors hover:text-white" style={{ color: "inherit" }}>
+            <Link href="/realisations/" className="transition-colors hover:text-[#2d2d2d]" style={{ color: "inherit" }}>
               Réalisations
             </Link>
             <span>/</span>
-            <span style={{ color: "rgba(255,255,255,0.65)" }}>{title}</span>
+            <span style={{ color: "rgba(45,45,45,0.75)" }}>{title}</span>
           </nav>
         )}
 
@@ -122,7 +122,7 @@ export function RealisationsBanner({
             />
             <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
           </span>
-          <span className="font-mono text-xs font-medium" style={{ color: "#fff" }}>
+          <span className="font-mono text-xs font-medium" style={{ color: "#2d2d2d" }}>
             {getCategoryCount(currentCategory)} projet{getCategoryCount(currentCategory) > 1 ? "s" : ""} · Paris, France
           </span>
         </div>
@@ -130,7 +130,7 @@ export function RealisationsBanner({
         {/* Title */}
         <h1
           className="max-w-2xl font-heading text-4xl font-bold tracking-tight sm:text-5xl"
-          style={{ color: "#fff" }}
+          style={{ color: "#2d2d2d" }}
         >
           {title}
         </h1>
@@ -144,7 +144,7 @@ export function RealisationsBanner({
         {/* Description */}
         <p
           className="mt-4 max-w-xl text-base leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.55)" }}
+          style={{ color: "#6B7280" }}
         >
           {description}
         </p>
@@ -154,10 +154,10 @@ export function RealisationsBanner({
           <div className="mt-8 flex flex-wrap gap-8">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
+                <p className="font-heading text-2xl font-bold" style={{ color: "#2d2d2d" }}>
                   {stat.value}
                 </p>
-                <p className="mt-0.5 text-xs" style={{ color: "rgba(255,255,255,0.38)" }}>
+                <p className="mt-0.5 text-xs" style={{ color: "#6B7280" }}>
                   {stat.label}
                 </p>
               </div>
@@ -168,7 +168,7 @@ export function RealisationsBanner({
         {/* Filtres catégories */}
         <div
           className="mt-10 flex flex-wrap gap-2 border-t pt-6"
-          style={{ borderColor: "rgba(255,255,255,0.07)" }}
+          style={{ borderColor: "rgba(45,45,45,0.10)" }}
         >
           {CATEGORIES.map((cat) => {
             const count = getCategoryCount(cat.slug);
@@ -184,9 +184,9 @@ export function RealisationsBanner({
                   isActive
                     ? { backgroundColor: "#498f6d", color: "#fff" }
                     : {
-                        backgroundColor: "rgba(255,255,255,0.05)",
-                        color: "rgba(255,255,255,0.55)",
-                        border: "1px solid rgba(255,255,255,0.08)",
+                        backgroundColor: "rgba(45,45,45,0.05)",
+                        color: "#6B7280",
+                        border: "1px solid rgba(45,45,45,0.10)",
                       }
                 }
               >

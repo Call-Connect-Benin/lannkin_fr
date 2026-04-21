@@ -61,7 +61,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section
         className="pb-20 pt-28"
-        style={{ background: "linear-gradient(145deg, #070d16 0%, #0d1b2a 65%, #111 100%)" }}
+        style={{ background: "linear-gradient(145deg, #ede9e1 0%, #e8e4db 65%, #f7f5f0 100%)" }}
       >
         <Container>
           <div className="max-w-3xl">
@@ -70,7 +70,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               className="mb-5 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-widest"
               style={{
                 backgroundColor: "rgba(73,143,109,0.12)",
-                color: "#fff",
+                color: "#2d2d2d",
                 border: "1px solid rgba(73,143,109,0.20)",
               }}
             >
@@ -78,15 +78,15 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               Secteur — {sector.title}
             </div>
 
-            <h1 className="font-heading text-4xl font-bold leading-tight text-white lg:text-5xl xl:text-6xl">
+            <h1 className="font-heading text-4xl font-bold leading-tight text-[#2d2d2d] lg:text-5xl xl:text-6xl">
               Marketing digital pour{" "}
-              <span style={{ color: "#fff" }}>{sector.title}</span>{" "}
+              <span style={{ color: "#498f6d" }}>{sector.title}</span>{" "}
               à Paris &amp; Paris
             </h1>
 
             <p
               className="mt-6 text-lg leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.65)" }}
+              style={{ color: "#6B7280" }}
             >
               {sector.description}
             </p>
@@ -109,12 +109,12 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
       </section>
 
       {/* ── Services recommandés ──────────────────────────────────── */}
-      <section className="py-16" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+      <section className="py-16" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
-          <h2 className="font-heading mb-2 text-2xl font-bold text-white">
+          <h2 className="font-heading mb-2 text-2xl font-bold text-[#2d2d2d]">
             Services recommandés pour {sector.title}
           </h2>
-          <p className="mb-8 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+          <p className="mb-8 text-sm" style={{ color: "#6B7280" }}>
             Nos experts sélectionnent les leviers les plus rentables pour votre secteur.
           </p>
 
@@ -128,19 +128,19 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   href={`/services/${slug}/`}
                   className="group rounded-xl p-5 transition-all duration-200 hover:-translate-y-0.5"
                   style={{
-                    backgroundColor: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    backgroundColor: "#ffffff",
+                    border: "1px solid rgba(45,45,45,0.10)",
                   }}
                 >
-                  <p className="font-semibold text-white transition-colors group-hover:text-[#498f6d]">
+                  <p className="font-semibold text-[#2d2d2d] transition-colors group-hover:text-[#498f6d]">
                     {meta.label}
                   </p>
-                  <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+                  <p className="mt-1 text-sm" style={{ color: "#6B7280" }}>
                     {meta.desc}
                   </p>
                   <span
                     className="mt-3 inline-flex items-center gap-1 text-xs font-medium"
-                    style={{ color: "#fff" }}
+                    style={{ color: "#498f6d" }}
                   >
                     En savoir plus <ArrowRight className="h-3 w-3" />
                   </span>
@@ -152,22 +152,22 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
       </section>
 
       {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
-      <section className="py-16" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+      <section className="py-16" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
             <div>
               <p
                 className="mb-3 text-sm font-semibold uppercase tracking-widest"
-                style={{ color: "#fff" }}
+                style={{ color: "#498f6d" }}
               >
                 Pourquoi Ekolink
               </p>
-              <h2 className="font-heading text-3xl font-bold text-white">
+              <h2 className="font-heading text-3xl font-bold text-[#2d2d2d]">
                 Notre expertise dans le secteur {sector.title}
               </h2>
               <p
                 className="mt-4 text-base leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.55)" }}
+                style={{ color: "#6B7280" }}
               >
                 Depuis 2015, nous avons accompagné des centaines d'entreprises à Paris et Paris.
                 Notre approche data-driven s'adapte aux spécificités de chaque secteur.
@@ -190,11 +190,11 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                   >
                     <p
                       className="font-heading text-2xl font-bold"
-                      style={{ color: "#fff" }}
+                      style={{ color: "#2d2d2d" }}
                     >
                       {s.value}
                     </p>
-                    <p className="mt-1 text-xs" style={{ color: "rgba(255,255,255,0.50)" }}>
+                    <p className="mt-1 text-xs" style={{ color: "#6B7280" }}>
                       {s.label}
                     </p>
                   </div>
@@ -207,11 +207,11 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                 <li key={benefit} className="flex items-start gap-3">
                   <CheckCircle
                     className="mt-0.5 h-5 w-5 shrink-0"
-                    style={{ color: "#fff" }}
+                    style={{ color: "#498f6d" }}
                   />
                   <span
                     className="text-sm leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.75)" }}
+                    style={{ color: "#2d2d2d" }}
                   >
                     {benefit}
                   </span>
@@ -223,12 +223,12 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
       </section>
 
       {/* ── Témoignages ──────────────────────────────────────────── */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+      <div style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <TestimonialsSection />
       </div>
 
       {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section className="py-16" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+      <section className="py-16" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
           <div
             className="rounded-2xl p-10 text-center"
@@ -237,10 +237,10 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               border: "1px solid rgba(73,143,109,0.15)",
             }}
           >
-            <h2 className="font-heading text-3xl font-bold text-white">
+            <h2 className="font-heading text-3xl font-bold text-[#2d2d2d]">
               Prêt à développer votre activité {sector.title} ?
             </h2>
-            <p className="mx-auto mt-4 max-w-md text-base" style={{ color: "rgba(255,255,255,0.60)" }}>
+            <p className="mx-auto mt-4 max-w-md text-base" style={{ color: "#6B7280" }}>
               Devis gratuit sous 24h — Certifiés Google Partner — Sans engagement.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

@@ -148,7 +148,7 @@ export default function AgenceTrafficParisPage() {
           <span className="mb-4 inline-block rounded-full bg-[#498f6d]/10 px-4 py-1.5 font-mono text-sm text-[#498f6d]">
             Paris, France
           </span>
-          <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl lg:text-6xl">
             Agence Traffic à Paris
           </h1>
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-[#888888]">
@@ -175,9 +175,9 @@ export default function AgenceTrafficParisPage() {
       </section>
 
       {/* Services d'acquisition de trafic */}
-      <section className="border-t border-white/5 bg-surface-light/50 py-16 lg:py-24">
+      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.08)", backgroundColor: "#f7f5f0" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 font-heading text-3xl font-bold text-white">
+          <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d]">
             Nos services d&apos;acquisition de trafic
           </h2>
           <p className="mb-12 max-w-2xl text-[#888888]">
@@ -190,9 +190,10 @@ export default function AgenceTrafficParisPage() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="glass group rounded-xl border border-white/5 p-6 transition-all hover:border-[#498f6d]/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.05)]"
+                className="group rounded-xl border p-6 transition-all hover:border-[#498f6d]/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.05)]"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}
               >
-                <h3 className="mb-2 font-heading text-lg font-semibold text-white transition-colors group-hover:text-[#498f6d]">
+                <h3 className="mb-2 font-heading text-lg font-semibold text-[#2d2d2d] transition-colors group-hover:text-[#498f6d]">
                   {service.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-[#888888]">
@@ -211,7 +212,7 @@ export default function AgenceTrafficParisPage() {
             <span className="mb-4 inline-block rounded-full bg-[#85353e]/10 px-4 py-1.5 font-mono text-sm text-[#85353e]">
               Expertise exclusive
             </span>
-            <h2 className="mb-4 font-heading text-3xl font-bold text-white">
+            <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d]">
               {TRAFFIC_FACTORY_SECTION.title}
             </h2>
             <p className="mb-8 max-w-3xl text-[#888888]">
@@ -219,7 +220,7 @@ export default function AgenceTrafficParisPage() {
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
               {TRAFFIC_FACTORY_SECTION.advantages.map((adv) => (
-                <li key={adv} className="flex items-start gap-3 text-white">
+                <li key={adv} className="flex items-start gap-3 text-[#2d2d2d]">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#498f6d]" />
                   {adv}
                 </li>
@@ -238,22 +239,23 @@ export default function AgenceTrafficParisPage() {
       </section>
 
       {/* Pourquoi Ekolink à Paris */}
-      <section className="border-t border-white/5 bg-surface-light/50 py-16 lg:py-24">
+      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.08)", backgroundColor: "#ede9e1" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 font-heading text-3xl font-bold text-white">
+          <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d]">
             Pourquoi choisir Ekolink pour votre trafic à Paris ?
           </h2>
           <p className="mb-12 max-w-2xl text-[#888888]">
             Plus de 10 ans d&apos;expertise en acquisition de trafic web pour
-            les entreprises de Paris, Paris et du France.
+            les entreprises de Paris, d'Île-de-France et de toute la France.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {WHY_LAVAL.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-white/5 bg-[#2A2A2A]/30 p-6"
+                className="rounded-xl border p-6"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}
               >
-                <h3 className="mb-2 font-heading text-lg font-semibold text-white">
+                <h3 className="mb-2 font-heading text-lg font-semibold text-[#2d2d2d]">
                   {item.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[#888888]">
@@ -268,12 +270,12 @@ export default function AgenceTrafficParisPage() {
       {/* Zone de service */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 font-heading text-3xl font-bold text-white">
+          <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d]">
             Zone de service
           </h2>
           <p className="mb-8 max-w-2xl text-[#888888]">
             Basés à Paris, nous desservons l&apos;ensemble du Grand Paris et
-            du France pour vos campagnes d&apos;acquisition de trafic.
+            de toute la France pour vos campagnes d&apos;acquisition de trafic.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -301,9 +303,10 @@ export default function AgenceTrafficParisPage() {
               <Link
                 key={z.href}
                 href={z.href}
-                className="rounded-lg border border-white/5 bg-[#2A2A2A]/30 p-4 transition-colors hover:border-[#498f6d]/20"
+                className="rounded-lg border p-4 transition-colors hover:border-[#498f6d]/20"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}
               >
-                <span className="font-heading font-semibold text-white">
+                <span className="font-heading font-semibold text-[#2d2d2d]">
                   {z.name}
                 </span>
                 <span className="mt-1 block text-sm text-[#888888]">
@@ -316,9 +319,9 @@ export default function AgenceTrafficParisPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/5 bg-surface-light/50 py-16 lg:py-24">
+      <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.08)", backgroundColor: "#f7f5f0" }}>
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-4 font-heading text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
             Prêt à générer plus de trafic qualifié ?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-[#888888]">

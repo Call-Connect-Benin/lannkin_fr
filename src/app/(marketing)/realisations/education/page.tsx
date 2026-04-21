@@ -21,7 +21,7 @@ const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "educ
 
 export default function RealisationsEducationPage() {
   return (
-    <main style={{ backgroundColor: "#0C0C0C" }}>
+    <main style={{ backgroundColor: "#f7f5f0" }}>
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Éducation & Petite enfance"
@@ -33,16 +33,16 @@ export default function RealisationsEducationPage() {
         ]}
       />
 
-      <div className="border-t border-white/[0.06]">
+      <div className="border-t border-[#2d2d2d]/[0.08]">
         <Container>
           <div className="flex items-center justify-between py-3">
-            <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+            <p className="text-xs" style={{ color: "#6B7280" }}>
               Réalisations — Éducation & Petite enfance
             </p>
             <Link
               href="/realisations/"
               className="text-xs transition-colors hover:text-[#498f6d]"
-              style={{ color: "rgba(255,255,255,0.35)" }}
+              style={{ color: "#6B7280" }}
             >
               ← Voir tous les projets
             </Link>
@@ -55,10 +55,10 @@ export default function RealisationsEducationPage() {
       <section className="pb-20 pt-4">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
               Site web pour garderie et services éducatifs en France
             </h2>
-            <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+            <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
               Les parents choisissent une garderie ou un CPE en partie grâce à son site web. Ekolink
               crée des sites web chaleureux et professionnels pour les services de garde et
               établissements éducatifs français : présentation de l&apos;équipe, galeries photos,
@@ -78,14 +78,14 @@ export default function RealisationsEducationPage() {
               <Link
                 href="/realisations/tourisme/"
                 className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-semibold transition-all duration-200"
-                style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+                style={{ borderColor: "rgba(45,45,45,0.18)", color: "#6B7280" }}
               >
                 → Tourisme
               </Link>
               <Link
                 href="/realisations/construction/"
                 className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-semibold transition-all duration-200"
-                style={{ borderColor: "rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.60)" }}
+                style={{ borderColor: "rgba(45,45,45,0.18)", color: "#6B7280" }}
               >
                 → Construction
               </Link>

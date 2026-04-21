@@ -15,7 +15,7 @@ export default function GlobalError({
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center gap-6 px-4 text-center">
-      <h2 className="font-heading text-2xl font-bold text-white">
+      <h2 className="font-heading text-2xl font-bold text-[#2d2d2d]">
         Une erreur est survenue
       </h2>
       <p className="max-w-md text-muted">

@@ -36,7 +36,7 @@ const INCLUS = [
 
 export default function RealisationsInternationalPage() {
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       <RealisationsBanner
         currentCategory="international"
         title="Agence web internationale basée en France"
@@ -49,11 +49,11 @@ export default function RealisationsInternationalPage() {
       />
 
       {/* Separator */}
-      <div id="projets" className="border-t border-accent/20 bg-surface">
+      <div id="projets" className="border-t border-accent/20" style={{ backgroundColor: "#ede9e1" }}>
         <Container>
           <div className="flex items-center justify-between py-3">
-            <p className="text-xs text-muted">Nos réalisations — projets internationaux</p>
-            <Link href="/realisations/" className="text-xs text-muted hover:text-accent transition-colors">
+            <p className="text-xs text-[#6B7280]">Nos réalisations — projets internationaux</p>
+            <Link href="/realisations/" className="text-xs text-[#6B7280] hover:text-accent transition-colors">
               ← Voir tous les projets
             </Link>
           </div>
@@ -64,40 +64,40 @@ export default function RealisationsInternationalPage() {
       <PortfolioGrid initialFilter="international" />
 
       {/* SEO Content Section */}
-      <section className="bg-surface-light py-16 lg:py-20">
+      <section className="py-16 lg:py-20" style={{ backgroundColor: "#f7f5f0" }}>
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
               Agence web française pour projets internationaux — Paris, France
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
-              <div className="text-sm leading-relaxed text-muted space-y-4">
+              <div className="space-y-4 text-sm leading-relaxed text-[#6B7280]">
                 <p>
-                  Ekolink est une <strong className="text-white">agence web bilingue basée à Paris, France</strong>,
+                  Ekolink est une <strong className="text-[#2d2d2d]">agence web bilingue basée à Paris, France</strong>,
                   avec une expertise reconnue pour les projets web internationaux. Notre équipe maîtrise
                   le SEO en français, anglais et allemand, et comprend les spécificités de chaque marché :
                   Google France, Google Suisse, Google Maroc, Google.com pour le marché américain.
                 </p>
                 <p>
-                  Pour les <strong className="text-white">entreprises françaises, européennes ou américaines</strong>
+                  Pour les <strong className="text-[#2d2d2d]">entreprises françaises, européennes ou américaines</strong>
                   {" "}qui souhaitent faire appel à une agence web en France, Ekolink offre un avantage
                   unique : des tarifs compétitifs en euros, une expertise technique de premier
                   niveau et une compréhension culturelle des marchés francophones et anglophones.
                 </p>
                 <p>
-                  Pour les <strong className="text-white">entreprises françaises</strong>
+                  Pour les <strong className="text-[#2d2d2d]">entreprises françaises</strong>
                   {" "}qui veulent percer à l&apos;international, nous créons des sites web adaptés aux
                   marchés cibles avec SEO international, hébergement optimisé et campagnes publicitaires
                   multilingues.
                 </p>
               </div>
               <div>
-                <h3 className="mb-4 font-semibold text-white">Nos services pour projets internationaux :</h3>
+                <h3 className="mb-4 font-semibold text-[#2d2d2d]">Nos services pour projets internationaux :</h3>
                 <ul className="space-y-2">
                   {INCLUS.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span className="text-sm text-muted">{item}</span>
+                      <span className="text-sm text-[#6B7280]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -105,8 +105,8 @@ export default function RealisationsInternationalPage() {
             </div>
 
             {/* Markets block */}
-            <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
-              <h2 className="font-heading text-xl font-bold text-white">
+            <div className="mt-10 rounded-2xl border p-8" style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}>
+              <h2 className="font-heading text-xl font-bold text-[#2d2d2d]">
                 Marchés internationaux couverts par notre agence
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -118,10 +118,14 @@ export default function RealisationsInternationalPage() {
                   { flag: "🇺🇸", title: "États-Unis", desc: "Google.com, campagnes USD, marché anglophone" },
                   { flag: "🇩🇪", title: "Europe DACH", desc: "Allemagne, Autriche — e-commerce, Google Shopping" },
                 ].map((market) => (
-                  <div key={market.title} className="rounded-xl border border-white/[0.06] p-4">
+                  <div
+                    key={market.title}
+                    className="rounded-xl border p-4"
+                    style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(237,233,225,0.62)" }}
+                  >
                     <p className="text-lg">{market.flag}</p>
-                    <p className="mt-1 font-semibold text-white text-sm">{market.title}</p>
-                    <p className="mt-1 text-xs text-muted">{market.desc}</p>
+                    <p className="mt-1 text-sm font-semibold text-[#2d2d2d]">{market.title}</p>
+                    <p className="mt-1 text-xs text-[#6B7280]">{market.desc}</p>
                   </div>
                 ))}
               </div>
@@ -140,19 +144,22 @@ export default function RealisationsInternationalPage() {
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <Link
                 href="/realisations/multipages/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Sites multipages
               </Link>
               <Link
                 href="/realisations/ecommerce/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Boutiques e-commerce
               </Link>
               <Link
                 href="/realisations/onepage/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Sites onepage
               </Link>

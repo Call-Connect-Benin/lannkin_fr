@@ -36,11 +36,11 @@ const INCLUS = [
 
 export default function RealisationsMultipagesPage() {
   return (
-    <main>
+    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
       <RealisationsBanner
         currentCategory="multipages"
         title="Création de sites web multipages à Paris"
-        description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Paris conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises du France et de la Île-de-France."
+        description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Paris conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises d'Île-de-France et de toute la France."
         stats={[
           { value: "+187 %", label: "de leads qualifiés (client Paris)" },
           { value: `${multiPagesCount} projets`, label: "multipages livrés" },
@@ -49,11 +49,11 @@ export default function RealisationsMultipagesPage() {
       />
 
       {/* Separator */}
-      <div id="projets" className="border-t border-accent/20 bg-surface">
+      <div id="projets" className="border-t border-accent/20" style={{ backgroundColor: "#ede9e1" }}>
         <Container>
           <div className="flex items-center justify-between py-3">
-            <p className="text-xs text-muted">Nos réalisations — sites multipages</p>
-            <Link href="/realisations/" className="text-xs text-muted hover:text-accent transition-colors">
+            <p className="text-xs text-[#6B7280]">Nos réalisations — sites multipages</p>
+            <Link href="/realisations/" className="text-xs text-[#6B7280] hover:text-accent transition-colors">
               ← Voir tous les projets
             </Link>
           </div>
@@ -64,40 +64,40 @@ export default function RealisationsMultipagesPage() {
       <PortfolioGrid initialFilter="multipages" />
 
       {/* SEO Content Section */}
-      <section className="bg-surface-light py-16 lg:py-20">
+      <section className="py-16 lg:py-20" style={{ backgroundColor: "#f7f5f0" }}>
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
               Agence web à Paris — Conception de sites multipages pour PME françaises
             </h2>
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
-              <div className="text-sm leading-relaxed text-muted space-y-4">
+              <div className="space-y-4 text-sm leading-relaxed text-[#6B7280]">
                 <p>
-                  Un <strong className="text-white">site web multipage à Paris</strong> est la solution
+                  Un <strong className="text-[#2d2d2d]">site web multipage à Paris</strong> est la solution
                   idéale pour les PME, professionnels et entreprises locales qui veulent une présence web
                   complète. Contrairement à une simple page, un site multipage permet de détailler chaque
                   service, de présenter votre équipe, de publier un blogue et d&apos;optimiser chaque page
                   sur des mots-clés locaux différents.
                 </p>
                 <p>
-                  Notre <strong className="text-white">agence web de Paris</strong> conçoit des sites
+                  Notre <strong className="text-[#2d2d2d]">agence web de Paris</strong> conçoit des sites
                   vitrine et multipages pour toutes les industries : concessionnaires auto, cliniques de
                   santé, entrepreneurs en construction, cabinets de services professionnels, restaurants,
                   cuisinistes, et bien plus.
                 </p>
                 <p>
-                  Chaque site est pensé pour <strong className="text-white">dominer le SEO local</strong> :
-                  ciblage géographique Paris, Île-de-France, Paris, balisage Schema local, et intégration
+                  Chaque site est pensé pour <strong className="text-[#2d2d2d]">dominer le SEO local</strong> :
+                  ciblage géographique Paris, Île-de-France, balisage Schema local, et intégration
                   Google My Business pour maximiser la visibilité dans la recherche locale.
                 </p>
               </div>
               <div>
-                <h3 className="mb-4 font-semibold text-white">Inclus dans chaque site multipage :</h3>
+                <h3 className="mb-4 font-semibold text-[#2d2d2d]">Inclus dans chaque site multipage :</h3>
                 <ul className="space-y-2">
                   {INCLUS.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                      <span className="text-sm text-muted">{item}</span>
+                      <span className="text-sm text-[#6B7280]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -105,19 +105,19 @@ export default function RealisationsMultipagesPage() {
             </div>
 
             {/* Local SEO block */}
-            <div className="mt-10 rounded-2xl border border-white/[0.06] bg-surface p-8">
-              <h2 className="font-heading text-xl font-bold text-white">
-                Conception web Paris, Île-de-France, Paris — Votre site web qui génère des leads
+            <div className="mt-10 rounded-2xl border p-8" style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.72)" }}>
+              <h2 className="font-heading text-xl font-bold text-[#2d2d2d]">
+                Conception web à Paris et en Île-de-France — Votre site web qui génère des leads
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                Fondée à <strong className="text-white">Paris (France)</strong> en 2015, Ekolink conçoit
+              <p className="mt-4 text-sm leading-relaxed text-[#6B7280]">
+                Fondée à <strong className="text-[#2d2d2d]">Paris (France)</strong> en 2015, Ekolink conçoit
                 des sites web pour les entreprises de la région : Paris, Neuilly, Boulogne,
                 Versailles, Saint-Germain, Repentigny, Paris et partout en province.
                 Nos sites multipages sont développés avec les technologies les plus performantes
                 (Next.js, WordPress) et optimisés pour la recherche locale.
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                Un <strong className="text-white">site vitrine multipage à Paris</strong> n&apos;est
+              <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
+                Un <strong className="text-[#2d2d2d]">site vitrine multipage à Paris</strong> n&apos;est
                 pas seulement une carte de visite en ligne — c&apos;est un outil de génération de leads.
                 Nous configurons chaque site avec un formulaire de contact optimisé, un suivi des
                 conversions Google Analytics 4 et une stratégie SEO locale pour attirer des clients
@@ -133,7 +133,8 @@ export default function RealisationsMultipagesPage() {
                 </Link>
                 <Link
                   href="/tarifs/conception-web/"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/30 hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold text-[#2d2d2d] transition-all duration-200 hover:border-accent/30 hover:text-accent"
+                  style={{ borderColor: "rgba(45,45,45,0.10)", backgroundColor: "rgba(255,255,255,0.64)" }}
                 >
                   Voir les tarifs
                 </Link>
@@ -144,19 +145,22 @@ export default function RealisationsMultipagesPage() {
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <Link
                 href="/realisations/ecommerce/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Boutiques e-commerce
               </Link>
               <Link
                 href="/realisations/onepage/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Sites onepage
               </Link>
               <Link
                 href="/realisations/international/"
-                className="rounded-xl border border-white/[0.06] bg-surface p-4 text-sm font-semibold text-white transition-all hover:border-accent/20 hover:text-accent"
+                className="rounded-xl border p-4 text-sm font-semibold text-[#2d2d2d] transition-all hover:border-accent/20 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.08)", backgroundColor: "rgba(255,255,255,0.7)" }}
               >
                 → Projets internationaux
               </Link>

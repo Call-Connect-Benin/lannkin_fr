@@ -63,7 +63,7 @@ export function TechStack({
               sizes="40px"
             />
           </div>
-          <span className="text-center font-body text-sm text-white">
+          <span className="text-center font-body text-sm text-[#2d2d2d]">
             {item.name}
           </span>
           {item.category && (

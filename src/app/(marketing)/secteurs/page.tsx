@@ -23,11 +23,11 @@ export default function SecteursPage() {
             <span className="mb-4 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 font-mono text-xs font-medium text-accent">
               {SECTORS.length} secteurs
             </span>
-            <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl lg:text-6xl">
               Expertise{" "}
               <span className="text-accent">sectorielle</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted">
+            <p className="mt-6 text-lg leading-relaxed text-[#6B7280]">
               Chaque industrie a ses réalités. Nous adaptons nos stratégies
               marketing digital aux spécificités de votre secteur pour des
               résultats concrets et mesurables.
@@ -42,7 +42,8 @@ export default function SecteursPage() {
               </Link>
               <Link
                 href="/services/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-surface px-6 py-3 text-base font-medium text-white transition-colors hover:border-accent/40 hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-lg border px-6 py-3 text-base font-medium text-[#2d2d2d] transition-colors hover:border-accent/40 hover:text-accent"
+                style={{ borderColor: "rgba(45,45,45,0.10)", backgroundColor: "rgba(255,255,255,0.68)" }}
               >
                 Voir nos services
               </Link>
@@ -52,7 +53,7 @@ export default function SecteursPage() {
       </section>
 
       {/* Sectors Grid */}
-      <section className="border-t border-white/5 bg-surface-light py-20 lg:py-28">
+      <section className="py-20 lg:py-28" style={{ borderTop: "1px solid rgba(45,45,45,0.08)", backgroundColor: "#f7f5f0" }}>
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SECTORS.map((sector) => {
@@ -67,10 +68,10 @@ export default function SecteursPage() {
                   href={`/secteurs/${sector.slug}/`}
                   className="group glass rounded-xl p-8 transition-all duration-300 hover:border-accent/20 hover:shadow-[0_0_30px_rgba(73,143,109,0.06)]"
                 >
-                  <h3 className="font-heading text-xl font-semibold text-white transition-colors group-hover:text-accent">
+                  <h3 className="font-heading text-xl font-semibold text-[#2d2d2d] transition-colors group-hover:text-accent">
                     {sector.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                  <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
                     {sector.description}
                   </p>
                   {relatedHubs.length > 0 && (
@@ -86,7 +87,7 @@ export default function SecteursPage() {
                         ) : null
                       )}
                       {sector.relatedServices.length > 3 && (
-                        <span className="rounded-full border border-white/10 px-2.5 py-0.5 text-xs text-muted">
+                        <span className="rounded-full border px-2.5 py-0.5 text-xs text-[#6B7280]" style={{ borderColor: "rgba(45,45,45,0.10)", backgroundColor: "rgba(255,255,255,0.66)" }}>
                           +{sector.relatedServices.length - 3}
                         </span>
                       )}
@@ -107,10 +108,10 @@ export default function SecteursPage() {
       <section className="py-20">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl">
               Votre secteur n&apos;est pas listé?
             </h2>
-            <p className="mt-4 text-lg text-muted">
+            <p className="mt-4 text-lg text-[#6B7280]">
               Nous travaillons avec tous les secteurs d&apos;activité.
               Contactez-nous pour discuter de vos objectifs et obtenir une
               stratégie sur mesure.

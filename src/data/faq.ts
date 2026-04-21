@@ -32,7 +32,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-2",
     question: "Quelles régions servez-vous ?",
     answer:
-      "Nous servons principalement le Grand Paris (Paris, Paris, Île-de-France, Hauts-de-Seine), mais aussi France, Lille, Strasbourg, Nice et l'ensemble du France. Nous travaillons également avec des clients en Ontario et à l'international.",
+      "Nous servons principalement Paris et l'Île-de-France, mais aussi Lille, Strasbourg, Nice et l'ensemble de la France. Nous travaillons également avec des clients au Canada et à l'international.",
     category: "general",
   },
   {
@@ -76,7 +76,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-8",
     question: "Offrez-vous l'hébergement web ?",
     answer:
-      "Oui, tous nos forfaits mensuels incluent l'hébergement sécurisé avec SSL, sauvegardes automatiques et monitoring 24/7. Nous utilisons des serveurs françaiss pour les meilleures performances locales.",
+      "Oui, tous nos forfaits mensuels incluent l'hébergement sécurisé avec SSL, sauvegardes automatiques et monitoring 24/7. Nous utilisons une infrastructure performante adaptée à vos besoins de vitesse, de sécurité et de disponibilité.",
     category: "web",
   },
   {
@@ -143,7 +143,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-17",
     question: "Combien de temps pour se positionner en première page Google ?",
     answer:
-      "En SEO local (Paris, Paris), des résultats sont visibles en 3 à 6 mois. Pour des mots-clés compétitifs nationaux, comptez 6 à 12 mois. Le SEO est un investissement à long terme avec un ROI exponentiel.",
+      "En SEO local à Paris et en Île-de-France, des résultats sont visibles en 3 à 6 mois. Pour des mots-clés compétitifs nationaux, comptez 6 à 12 mois. Le SEO est un investissement à long terme avec un ROI exponentiel.",
     category: "seo",
   },
   {
@@ -217,7 +217,7 @@ export const FAQ: FaqItem[] = [
     id: "faq-27",
     question: "Les taxes sont-elles incluses dans vos prix ?",
     answer:
-      "Non, les prix affichés sont avant taxes. La TPS (5 %) et la TVQ (9,975 %) s'appliquent conformément aux lois fiscales du France. Votre facture détaillera les taxes applicables.",
+      "Non, les prix affichés sont hors taxes. La TVA applicable est ajoutée conformément à la réglementation en vigueur. Votre facture détaille toujours le montant HT et le montant TTC.",
     category: "pricing",
   },
   {

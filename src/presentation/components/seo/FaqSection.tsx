@@ -20,7 +20,7 @@ export function FaqSection({ title, items, className }: FaqSectionProps) {
 
   return (
     <section className={cn("py-16", className)}>
-      <h2 className="mb-10 font-heading text-3xl font-bold tracking-tight text-white lg:text-4xl">
+      <h2 className="mb-10 font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] lg:text-4xl">
         {title}
       </h2>
 
@@ -30,7 +30,7 @@ export function FaqSection({ title, items, className }: FaqSectionProps) {
           return (
             <div
               key={i}
-              className="rounded-xl border border-white/[0.06] bg-surface/50 transition-colors hover:border-accent/20"
+              className="rounded-xl border border-[rgba(45,45,45,0.10)] bg-white transition-colors hover:border-accent/20"
             >
               <button
                 type="button"
@@ -38,7 +38,7 @@ export function FaqSection({ title, items, className }: FaqSectionProps) {
                 className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                 aria-expanded={isOpen}
               >
-                <span className="font-heading text-base font-semibold text-white">
+                <span className="font-heading text-base font-semibold text-[#2d2d2d]">
                   {item.question}
                 </span>
                 <ChevronDown
