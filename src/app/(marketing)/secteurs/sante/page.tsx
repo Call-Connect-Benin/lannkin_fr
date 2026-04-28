@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Santé Paris & Paris | Cliniques, Dentistes, Pharmacies | Ekolink",
+  title: "Marketing Digital Santé Paris & Paris | Cliniques, Dentistes, Pharmacies | Lannkin",
   description:
     "Agence marketing spécialisée santé à Paris. Google Ads médical, SEO clinique, gestion avis patients. Conforme RAMQ & Collège des médecins. Devis gratuit.",
   keywords: [

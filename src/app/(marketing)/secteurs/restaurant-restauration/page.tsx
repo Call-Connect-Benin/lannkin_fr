@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Restaurant & Restauration Paris | Google Ads, Réseaux Sociaux | Ekolink",
+  title: "Marketing Digital Restaurant & Restauration Paris | Google Ads, Réseaux Sociaux | Lannkin",
   description:
     "Agence marketing spécialisée restauration à Paris. Google Ads local, gestion réseaux sociaux, avis Google, site web avec menu et réservation. Remplissez vos tables. Devis gratuit.",
   keywords: [

@@ -4,7 +4,7 @@ import { PRICING_SEO } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs SEO | Ekolink",
+  title: "Tarifs SEO | Lannkin",
   description:
     "Référencement naturel dès 300$. Audit SEO, backlinks à 400€/mois, maillage interne à 500€/mois. Dominez les résultats Google.",
 };
@@ -18,7 +18,7 @@ export default function TarifsSeoPage() {
       serviceHref="/services/seo/"
       parallaxImage="/images/rendu3D/rendu3d-cube-vert-macro.webp"
       youtubeIds={["1owrwmEiPIg"]}
-      youtubeTitle="Comprendre le SEO avec Ekolink"
+      youtubeTitle="Comprendre le SEO avec Lannkin"
     />
   );
 }

@@ -8,7 +8,7 @@ import { InternalLinks } from "@/presentation/components/seo/InternalLinks";
 const zone = getZoneBySlug("agence-traffic-paris");
 
 export const metadata: Metadata = {
-  title: "Agence Traffic à Paris | Acquisition de Trafic Web | Ekolink",
+  title: "Agence Traffic à Paris | Acquisition de Trafic Web | Lannkin",
   description:
     "Experts en acquisition de trafic web à Paris. Google Ads, Facebook Ads, Native Ads (Taboola, Outbrain, Traffic Factory), SEO et stratégie multi-canal. Devis gratuit.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "gestion campagnes publicitaires paris",
   ],
   alternates: {
-    canonical: "https://ekolink.fr/zone/agence-traffic-paris/",
+    canonical: "https://lannkin.fr/zone/agence-traffic-paris/",
   },
 };
 
@@ -88,7 +88,7 @@ const TRAFFIC_SERVICES = [
 const TRAFFIC_FACTORY_SECTION = {
   title: "Traffic Factory — Notre Expertise Exclusive",
   description:
-    "Ekolink est une des rares agences en France à maîtriser Traffic Factory, la régie publicitaire native premium. Avec des milliards d'impressions mensuelles sur des sites premium, Traffic Factory offre un reach massif à des CPM compétitifs.",
+    "Lannkin est une des rares agences en France à maîtriser Traffic Factory, la régie publicitaire native premium. Avec des milliards d'impressions mensuelles sur des sites premium, Traffic Factory offre un reach massif à des CPM compétitifs.",
   advantages: [
     "Accès à un inventaire premium de +100 millions de visiteurs/jour",
     "Ciblage géographique précis (ville, région, pays)",
@@ -99,7 +99,7 @@ const TRAFFIC_FACTORY_SECTION = {
   ],
 };
 
-const WHY_LAVAL = [
+const WHY_PARIS = [
   {
     title: "Siège social à Paris",
     description:
@@ -238,18 +238,18 @@ export default function AgenceTrafficParisPage() {
         </div>
       </section>
 
-      {/* Pourquoi Ekolink à Paris */}
+      {/* Pourquoi Lannkin à Paris */}
       <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.08)", backgroundColor: "#ede9e1" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 font-heading text-3xl font-bold text-[#2d2d2d]">
-            Pourquoi choisir Ekolink pour votre trafic à Paris ?
+            Pourquoi choisir Lannkin pour votre trafic à Paris ?
           </h2>
           <p className="mb-12 max-w-2xl text-[#888888]">
             Plus de 10 ans d&apos;expertise en acquisition de trafic web pour
             les entreprises de Paris, d'Île-de-France et de toute la France.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {WHY_LAVAL.map((item) => (
+            {WHY_PARIS.map((item) => (
               <div
                 key={item.title}
                 className="rounded-xl border p-6"
@@ -358,9 +358,9 @@ export default function AgenceTrafficParisPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Ekolink S.A.S.",
+            name: "Lannkin S.A.S.",
             description: zone?.description,
-            url: "https://ekolink.fr/zone/agence-traffic-paris/",
+            url: "https://lannkin.fr/zone/agence-traffic-paris/",
             telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",

@@ -23,7 +23,7 @@ import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 import { HeroVideoScroll } from "@/presentation/components/hero/HeroVideoScroll";
 
 export const metadata: Metadata = {
-  title: "Sites Immersifs 3D | Three.js WebGL React Three Fiber | EKOLINK Paris",
+  title: "Sites Immersifs 3D | Three.js WebGL React Three Fiber | LANNKIN Paris",
   description:
     "Agence parisienne spécialisée en web 3D. Three.js, WebGL, React Three Fiber. Configurateurs, visites virtuelles, portfolios interactifs. Devis sous 24h.",
 };

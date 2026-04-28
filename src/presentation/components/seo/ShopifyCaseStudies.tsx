@@ -67,10 +67,10 @@ const SHOPIFY_CASE_STUDIES: CaseStudy[] = [
     tags: ["E-commerce", "SEO", "Google Ads"],
   },
   {
-    name: "K-Way Canada",
+    name: "K-Way",
     slug: "kway-canada",
     description:
-      "Accompagnement e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements outdoor.",
+      "Accompagnement e-commerce et SEO pour K-Way, la marque iconique de vêtements outdoor.",
     result: "SEO e-commerce optimisé",
     image: "/images/services/conception de site web/shopify/kway.png",
     externalUrl: "https://kwaycanada.com/",
@@ -120,7 +120,7 @@ export function ShopifyCaseStudies() {
             Des boutiques Shopify qui génèrent des résultats
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-            Découvrez comment notre agence web Shopify accompagne des e-commerces au Canada et à
+            Découvrez comment notre agence web Shopify accompagne des e-commerces en France et à
             l&apos;international pour atteindre leurs objectifs de vente.
           </p>
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Vibe Coding | Ekolink",
+  title: "Blog Vibe Coding | Lannkin",
   description: "Articles et guides sur le vibe coding. Actualités, tutoriels et outils de développement assisté par l'IA.",
 };
 

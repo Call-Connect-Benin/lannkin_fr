@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Automobile Paris & Paris | Concessionnaires, Garages | Ekolink",
+  title: "Marketing Digital Automobile Paris & Paris | Concessionnaires, Garages | Lannkin",
   description:
     "Agence marketing automobile à Paris. Google Ads véhicules, inventaire en ligne, SEO local, retargeting dynamique pour concessionnaires et garages. Devis gratuit.",
   keywords: [

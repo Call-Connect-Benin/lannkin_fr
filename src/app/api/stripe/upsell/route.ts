@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
     if (paymentMethods.data.length === 0) {
       // Fallback: create a new Checkout Session
       const origin =
-        process.env.NEXT_PUBLIC_SITE_URL ?? "https://ekolink.fr";
+        process.env.NEXT_PUBLIC_SITE_URL ?? "https://lannkin.fr";
       const session = await getStripe().checkout.sessions.create({
         mode: priceUnit === "month" ? "subscription" : "payment",
         customer: customerId,

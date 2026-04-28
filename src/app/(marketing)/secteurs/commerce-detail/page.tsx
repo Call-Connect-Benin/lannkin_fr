@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Commerce de Détail Paris | Boutiques, Magasins | Ekolink",
+  title: "Marketing Digital Commerce de Détail Paris | Boutiques, Magasins | Lannkin",
   description:
     "Agence marketing commerce de détail à Paris. Stratégies omnicanal, Google Shopping, Facebook Shops, SEO local pour boutiques et magasins. Devis gratuit.",
   keywords: [

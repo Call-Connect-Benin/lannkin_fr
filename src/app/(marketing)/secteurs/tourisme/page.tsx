@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Tourisme & Hôtellerie France | Hôtels, Attraits | Ekolink",
+  title: "Marketing Digital Tourisme & Hôtellerie France | Hôtels, Attraits | Lannkin",
   description:
     "Agence marketing tourisme à Paris et Paris. Google Hotel Ads, Facebook Ads tourisme, SEO voyage, site de réservation directe. Augmentez vos réservations. Devis gratuit.",
   keywords: [

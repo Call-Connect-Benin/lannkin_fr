@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Immobilier Paris & Paris | Courtiers, Agents | Ekolink",
+  title: "Marketing Digital Immobilier Paris & Paris | Courtiers, Agents | Lannkin",
   description:
     "Agence marketing immobilier à Paris. Génération de leads acheteurs et vendeurs, Facebook Ads ciblés, SEO local. Stratégies data-driven pour courtiers. Devis gratuit.",
   keywords: [

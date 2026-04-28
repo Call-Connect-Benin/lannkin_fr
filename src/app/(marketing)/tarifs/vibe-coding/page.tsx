@@ -4,7 +4,7 @@ import { PRICING_VIBE_CODING } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Vibe Coding & CMS IA | Ekolink",
+  title: "Tarifs Vibe Coding & CMS IA | Lannkin",
   description:
     "Développement IA dès 149€/mois. Lovable, Bolt, Cursor et Claude Code. Formation vibe coding à 500$. Apps web sur mesure.",
 };

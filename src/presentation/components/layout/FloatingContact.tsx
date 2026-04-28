@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Phone, Mail, MessageCircle, X } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const WHATSAPP_URL = "https://web.whatsapp.com/send?phone=33617030308&text=";
-const EMAIL = "mailto:info@lannkin.ca";
-const PHONE = "tel:14389446129";
+const EMAIL = "mailto:info@lannkin.fr";
+const PHONE = `tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}`;
 
 export default function FloatingContact() {
   const [open, setOpen] = useState(false);

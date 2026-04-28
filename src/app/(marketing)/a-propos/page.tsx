@@ -9,10 +9,10 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Agence Web Paris France | À Propos | Ekolink",
+  title: "Agence Web Paris France | À Propos | Lannkin",
   description:
-    "Agence web à Paris, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME en France et Suisse. Découvrez l'équipe Ekolink.",
-  alternates: { canonical: "https://ekolink.fr/a-propos/" },
+    "Agence web à Paris, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME en France. Découvrez l'équipe Lannkin.",
+  alternates: { canonical: "https://lannkin.fr/a-propos/" },
 };
 
 // ---------------------------------------------------------------------------
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
 
 const OFFICES = [
   {
-    country: "EKOLINK CANADA",
-    image: "/images/a-propos/Canada-e1556023963820-2500x1406-1-850x560.jpg.webp",
-    alt: "Skyline de Toronto — Ekolink Canada",
-  },
-  {
-    country: "EKOLINK FRANCE",
+    country: "PARIS",
     image: "/images/a-propos/shutterstock_667548661v2-1024x683-1.webp",
-    alt: "Tour Eiffel à Paris — Ekolink France",
+    alt: "Paris - Lannkin France",
   },
   {
-    country: "EKOLINK SUISSE",
+    country: "ILE-DE-FRANCE",
+    image: "/images/a-propos/shutterstock_667548661v2-1024x683-1.webp",
+    alt: "Ile-de-France - Lannkin France",
+  },
+  {
+    country: "FRANCE",
     image: "/images/a-propos/suisse-paysage-ville.webp",
-    alt: "Paysage de ville suisse — Ekolink Suisse",
+    alt: "France - Lannkin France",
   },
 ];
 
@@ -185,7 +185,7 @@ export default function AProposPage() {
                   className="mt-6 max-w-2xl text-lg leading-relaxed sm:text-[1.1rem]"
                   style={{ color: "#5f6b63" }}
                 >
-                  Ekolink accompagne les entreprises francophones avec une approche directe:
+                  Lannkin accompagne les entreprises francophones avec une approche directe:
                   acquisition, conception web, automatisation et pilotage marketing dans un cadre
                   exigeant mais lisible.
                 </p>
@@ -217,7 +217,7 @@ export default function AProposPage() {
                 {[
                   { value: "2015", label: "année de fondation" },
                   { value: "+10 ans", label: "d'expérience cumulée" },
-                  { value: "3 pays", label: "France · Suisse · Canada" },
+                  { value: "France", label: "Paris · Ile-de-France · national" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -318,7 +318,7 @@ export default function AProposPage() {
               style={{ color: "#2d2d2d" }}
             >
               À Propos —{" "}
-              <span style={{ color: "#2d2d2d" }}>Ekolink</span>
+              <span style={{ color: "#2d2d2d" }}>Lannkin</span>
             </h1>
 
             <div
@@ -330,8 +330,8 @@ export default function AProposPage() {
               className="hidden mt-5 max-w-xl text-base leading-relaxed"
               style={{ color: "#6B7280" }}
             >
-              L&apos;agence web au service des TPE et PME francophones. France, Suisse, Canada —
-              une expertise internationale, un accompagnement de proximité.
+              L&apos;agence web au service des TPE et PME en France.
+              Une expertise locale, un accompagnement de proximité.
             </p>
 
             {/* Stats */}
@@ -339,7 +339,7 @@ export default function AProposPage() {
               {[
                 { value: "2015", label: "Année de fondation" },
                 { value: "+10 ans", label: "D'expérience" },
-                { value: "3 pays", label: "France · Suisse · Canada" },
+                { value: "France", label: "Paris · Ile-de-France · national" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-heading text-2xl font-bold" style={{ color: "#2d2d2d" }}>
@@ -367,7 +367,7 @@ export default function AProposPage() {
               Présence internationale
             </p>
             <h2 className="font-heading text-3xl font-bold tracking-tight" style={{ color: "#2d2d2d" }}>
-              3 pays, 1 vision
+              3 niveaux de proximit?, 1 vision
             </h2>
           </div>
           <div className="grid gap-5 sm:grid-cols-3">
@@ -451,7 +451,7 @@ export default function AProposPage() {
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
               style={{ color: "#2d2d2d" }}
             >
-              Ekolink, l&apos;agence web au service des{" "}
+              Lannkin, l&apos;agence web au service des{" "}
               <span style={{ color: "#2d2d2d" }}>TPE et PME francophones</span>
             </h2>
             <div
@@ -462,7 +462,7 @@ export default function AProposPage() {
               className="mt-6 text-base leading-relaxed"
               style={{ color: "#6B7280" }}
             >
-              Ekolink, basée à Paris et dans tous les pays francophones, accompagne les TPE et PME
+              Lannkin, basée à Paris et dans tous les pays francophones, accompagne les TPE et PME
               avec des stratégies marketing globales et création de site web sur-mesure. Grâce à
               notre expertise internationale, nous vous offrons des solutions adaptées à chaque
               business, vous donnant une longueur d&apos;avance sur vos concurrents, avec
@@ -713,7 +713,7 @@ export default function AProposPage() {
                   performances et la sécurité des projets.
                 </p>
                 <p className="text-sm leading-relaxed">
-                  Ensemble, leur vision est claire : Ekolink, c&apos;est l&apos;assurance de vous
+                  Ensemble, leur vision est claire : Lannkin, c&apos;est l&apos;assurance de vous
                   propulser en tête de votre marché en{" "}
                   <strong style={{ color: "#2d2d2d" }}>1ʳᵉ position sur Google</strong> avec des
                   stratégies éprouvées, portées par des experts dans chaque domaine, pour des
@@ -774,7 +774,7 @@ export default function AProposPage() {
               style={{ color: "#6B7280" }}
             >
               Alors que la plupart des agences web se concentrent uniquement sur Google et Facebook
-              Ads, nous allons bien plus loin. Ekolink vous offre une gamme élargie de services et
+              Ads, nous allons bien plus loin. Lannkin vous offre une gamme élargie de services et
               l&apos;accès à des régies publicitaires premium.
             </p>
           </div>
@@ -847,7 +847,7 @@ export default function AProposPage() {
               className="font-heading text-3xl font-bold tracking-tight sm:text-4xl"
               style={{ color: "#2d2d2d" }}
             >
-              Ekolink : l&apos;innovation au cœur de votre{" "}
+              Lannkin : l&apos;innovation au cœur de votre{" "}
               <span style={{ color: "#2d2d2d" }}>performance digitale</span>
             </h2>
             <p

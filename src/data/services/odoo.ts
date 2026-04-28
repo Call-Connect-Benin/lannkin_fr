@@ -16,7 +16,7 @@ const creationSite: ServicePageContent = {
     {
       title: "Pourquoi créer votre site web avec Odoo?",
       content:
-        "Le Website Builder d'Odoo permet de créer des sites web professionnels nativement intégrés à votre ERP. Contrairement à WordPress ou Shopify qui nécessitent des intégrations tierces, votre site Odoo est automatiquement connecté à votre CRM, vos stocks, votre comptabilité et tous vos processus métier. EKOLINK est votre partenaire Odoo de confiance à Paris pour la création de sites web d'entreprise.",
+        "Le Website Builder d'Odoo permet de créer des sites web professionnels nativement intégrés à votre ERP. Contrairement à WordPress ou Shopify qui nécessitent des intégrations tierces, votre site Odoo est automatiquement connecté à votre CRM, vos stocks, votre comptabilité et tous vos processus métier. LANNKIN est votre partenaire Odoo de confiance à Paris pour la création de sites web d'entreprise.",
       items: [
         "Website Builder Odoo avec éditeur visuel drag-and-drop",
         "Thèmes Odoo personnalisés avec votre charte graphique",
@@ -471,7 +471,7 @@ const formationOdoo: ServicePageContent = {
         "Formation Développeur (3 à 5 jours) : OWL, Python, XML, héritage, API",
         "Toutes les formations incluent des exercices pratiques sur votre propre instance",
         "Support post-formation de 30 jours par email inclus",
-        "Certification EKOLINK Odoo pour chaque programme complété",
+        "Certification LANNKIN Odoo pour chaque programme complété",
       ],
     },
     {
@@ -506,14 +506,14 @@ const formationOdoo: ServicePageContent = {
     "Trois programmes adaptés (administrateur, utilisateur, développeur)",
     "Disponible en présentiel à Paris/Paris ou en ligne",
     "Support post-formation de 30 jours inclus",
-    "Certification EKOLINK Odoo pour valoriser vos compétences",
+    "Certification LANNKIN Odoo pour valoriser vos compétences",
     "Formateurs certifiés avec 5+ ans d'expérience Odoo",
   ],
   process: [
     { step: 1, title: "Évaluation des besoins", description: "Analyse du niveau de votre équipe, identification des modules prioritaires et personnalisation du programme de formation selon votre contexte." },
     { step: 2, title: "Préparation", description: "Configuration de l'environnement de formation sur votre instance Odoo, création des exercices pratiques avec vos données et préparation du matériel." },
     { step: 3, title: "Formation", description: "Sessions de formation avec alternance de théorie et de pratique. Exercices sur votre propre instance avec des cas d'utilisation réels de votre entreprise." },
-    { step: 4, title: "Évaluation", description: "Évaluation des compétences acquises, identification des lacunes et recommandations de perfectionnement. Remise de la certification EKOLINK Odoo." },
+    { step: 4, title: "Évaluation", description: "Évaluation des compétences acquises, identification des lacunes et recommandations de perfectionnement. Remise de la certification LANNKIN Odoo." },
     { step: 5, title: "Suivi post-formation", description: "30 jours de support par email pour répondre aux questions post-formation. Documentation et guides de référence personnalisés." },
   ],
   faq: [

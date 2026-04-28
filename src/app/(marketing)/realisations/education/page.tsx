@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Éducation & Garde d'Enfants France | Portfolio Ekolink",
+  title: "Sites Web Éducation & Garde d'Enfants France | Portfolio Lannkin",
   description:
-    "Portfolio Ekolink : sites web pour garderies, CPE, écoles privées et services éducatifs en France. Inscription en ligne, calendriers et SEO local pour le secteur de l'éducation.",
+    "Portfolio Lannkin : sites web pour garderies, CPE, écoles privées et services éducatifs en France. Inscription en ligne, calendriers et SEO local pour le secteur de l'éducation.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/education/",
+    canonical: "https://lannkin.fr/realisations/education/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsEducationPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Éducation & Petite enfance"
-        description="Ekolink conçoit des sites web rassurants et professionnels pour garderies, CPE, services de garde et établissements éducatifs en France. Inscription en ligne, calendriers et présentation de l'équipe."
+        description="Lannkin conçoit des sites web rassurants et professionnels pour garderies, CPE, services de garde et établissements éducatifs en France. Inscription en ligne, calendriers et présentation de l'équipe."
         stats={[
           { value: `${count} projets`, label: "en éducation" },
           { value: "Inscription", label: "en ligne intégrée" },
@@ -59,7 +59,7 @@ export default function RealisationsEducationPage() {
               Site web pour garderie et services éducatifs en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
-              Les parents choisissent une garderie ou un CPE en partie grâce à son site web. Ekolink
+              Les parents choisissent une garderie ou un CPE en partie grâce à son site web. Lannkin
               crée des sites web chaleureux et professionnels pour les services de garde et
               établissements éducatifs français : présentation de l&apos;équipe, galeries photos,
               formulaires d&apos;inscription en ligne et calendriers d&apos;activités. Nous

@@ -11,7 +11,7 @@ export const ZONES: Zone[] = [
     region: "Île-de-France",
     title: "Agence Web à Paris",
     description:
-      "Votre agence web locale à Paris. Conception de sites web, SEO, Google Ads et marketing digital. Siège social d'Ekolink S.A.S., à votre service depuis 2015.",
+      "Votre agence web locale à Paris. Conception de sites web, SEO, Google Ads et marketing digital. Siège social d'Lannkin S.A.S., à votre service depuis 2015.",
     relatedServices: [
       "conception-web",
       "seo",
@@ -73,7 +73,7 @@ export const ZONES: Zone[] = [
     region: "Auvergne-Rhône-Alpes",
     title: "Agence Web à Lyon",
     description:
-      "Agence web à Lyon par Ekolink. Conception de sites web modernes, e-commerce, applications web et marketing digital pour entreprises lyonnaises.",
+      "Agence web à Lyon par Lannkin. Conception de sites web modernes, e-commerce, applications web et marketing digital pour entreprises lyonnaises.",
     relatedServices: [
       "conception-web",
       "seo",
@@ -166,7 +166,7 @@ export const ZONES: Zone[] = [
     region: "Pays de la Loire",
     title: "Agence Web à Nantes",
     description:
-      "Agence web à Nantes par Ekolink. Conception de sites web, SEO, Google Ads et marketing digital pour entreprises de la région nantaise.",
+      "Agence web à Nantes par Lannkin. Conception de sites web, SEO, Google Ads et marketing digital pour entreprises de la région nantaise.",
     relatedServices: [
       "conception-web",
       "seo",

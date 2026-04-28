@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Courtiers Immobiliers France | Portfolio Ekolink",
+  title: "Sites Web Courtiers Immobiliers France | Portfolio Lannkin",
   description:
-    "Portfolio Ekolink : sites web pour courtiers immobiliers en France. Intégration Centris/MLS, pages propriétés, prise de rendez-vous et SEO local immobilier.",
+    "Portfolio Lannkin : sites web pour courtiers immobiliers en France. Pages propriétés, prise de rendez-vous et SEO local immobilier.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/immobilier/",
+    canonical: "https://lannkin.fr/realisations/immobilier/",
   },
 };
 
@@ -25,10 +25,10 @@ export default function RealisationsImmobilierPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Courtage Immobilier"
-        description="Ekolink conçoit des sites web pour courtiers immobiliers en France : intégration Centris/MLS, pages achat/vente, témoignages et SEO local pour dominer votre marché."
+        description="Lannkin conçoit des sites web pour courtiers immobiliers en France : pages achat/vente, témoignages et SEO local pour dominer votre marché."
         stats={[
           { value: `${count} projets`, label: "en immobilier" },
-          { value: "Centris/MLS", label: "intégration native" },
+          { value: "Pages biens", label: "présentation claire" },
           { value: "SEO local", label: "par secteur et ville" },
         ]}
       />
@@ -60,8 +60,8 @@ export default function RealisationsImmobilierPage() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
               Dans le marché immobilier français, votre présence digitale est votre première
-              impression. Ekolink crée des sites web professionnels pour courtiers immobiliers
-              avec intégration Centris, pages dédiées par secteur géographique et stratégie SEO
+              impression. Lannkin crée des sites web professionnels pour courtiers immobiliers
+              avec pages dédiées par secteur géographique et stratégie SEO
               locale pour attirer acheteurs et vendeurs directement depuis Google.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

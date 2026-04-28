@@ -57,7 +57,7 @@ export function getAllPosts(): BlogPostMeta[] {
         date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
         category: data.category ?? "Général",
         tags: data.tags ?? [],
-        author: data.author ?? "Équipe Ekolink",
+        author: data.author ?? "Équipe Lannkin",
         readTime: data.readTime ?? "5 min",
         coverImage: data.coverImage,
       } satisfies BlogPostMeta;
@@ -82,7 +82,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
     category: data.category ?? "Général",
     tags: data.tags ?? [],
-    author: data.author ?? "Équipe Ekolink",
+    author: data.author ?? "Équipe Lannkin",
     readTime: data.readTime ?? "5 min",
     coverImage: data.coverImage,
     content,

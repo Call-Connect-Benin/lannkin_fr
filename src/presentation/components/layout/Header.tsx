@@ -1,12 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-
-
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import {
   isMegaMenu,
@@ -23,10 +22,12 @@ import { cn } from "@/lib/utils";
 
 function LogoImg({ className }: { className?: string }) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src="/images/logo-lannkin-2026.svg"
       alt="LANNKIN"
+      width={145}
+      height={32}
+      priority
       className={cn("h-8 w-auto", className)}
     />
   );
@@ -88,7 +89,7 @@ function MegaMenuPanel({ item }: MegaMenuPanelProps) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="fixed left-1/2 top-16 z-50 w-[calc(100vw-2rem)] max-w-5xl -translate-x-1/2 pt-2"
+      className="fixed left-1/2 top-[72px] z-50 w-[calc(100vw-2rem)] max-w-5xl -translate-x-1/2 pt-2"
       style={{ originY: 0 }}
     >
       <div className="rounded-xl border border-[#E5E5E5] bg-[#FFFFFF] p-6 shadow-2xl">
@@ -172,6 +173,7 @@ function DesktopNavItem({
         <Link
           href={item.href}
           className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200"
+          aria-expanded={isOpen}
           style={{ color: isActive ? "#498f6d" : "#1A1A1A" }}
         >
           {item.label}
@@ -194,6 +196,7 @@ function DesktopNavItem({
       href={item.href}
       {...("target" in item && item.target ? { target: item.target, rel: "noopener noreferrer" } : {})}
       className="px-3 py-2 text-sm font-medium transition-colors duration-200"
+      aria-current={isActive ? "page" : undefined}
       style={{ color: isActive ? "#498f6d" : "#1A1A1A" }}
     >
       {item.label}
@@ -254,15 +257,15 @@ export function Header() {
     <header
       className="fixed inset-x-0 top-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? "rgba(255,255,255,0.92)" : "#FFFFFF",
+        backgroundColor: scrolled ? "rgba(255,255,255,0.82)" : "rgba(255,255,255,0.7)",
         backdropFilter: scrolled ? "blur(24px)" : undefined,
         WebkitBackdropFilter: scrolled ? "blur(24px)" : undefined,
         borderBottom: "1px solid rgba(0,0,0,0.08)",
       }}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <LogoImg className="h-8" />
         </Link>
 
@@ -284,8 +287,9 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/devis-gratuit/"
-            className="hidden rounded-lg px-5 py-2 text-sm font-semibold shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110 lg:inline-flex"
+            className="hidden rounded-full px-5 py-2 text-sm font-semibold shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110 lg:inline-flex"
             style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
+            aria-label="Demander un devis gratuit"
           >
             Devis gratuit
           </Link>
@@ -313,7 +317,7 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 top-16 z-40 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 top-[72px] z-40 backdrop-blur-sm lg:hidden"
               style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
               onClick={() => setMobileOpen(false)}
             />
@@ -325,7 +329,7 @@ export function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed inset-y-0 right-0 top-16 z-50 flex w-[85vw] max-w-72 flex-col backdrop-blur-xl lg:hidden"
+              className="fixed inset-y-0 right-0 top-[72px] z-50 flex w-[85vw] max-w-72 flex-col backdrop-blur-xl lg:hidden"
               style={{ backgroundColor: "rgba(255,255,255,0.97)" }}
               aria-label="Menu mobile"
             >

@@ -1,336 +1,687 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Globe2,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  Video,
+  Zap,
+} from "lucide-react";
 
 import {
-  HERO,
-  SERVICES_OVERVIEW,
-  STATS,
-  WHY_EKOLINK,
-  FEATURED_SERVICES,
-  TESTIMONIALS,
-  PRICING_PREVIEW,
-  SECTORS_PREVIEW,
   BLOG_PREVIEW,
-  CTA_SECTION,
-  PAID_LANDSCAPE,
-  NATIVE_ADS,
-  SHORT_FORM_VIDEO,
   COMMUNITY,
+  CTA_SECTION,
+  FEATURED_SERVICES,
+  FOOTPRINT,
+  HERO,
+  NATIVE_ADS,
+  OFFERS_SPOTLIGHT,
+  PAID_LANDSCAPE,
+  PRICING_PREVIEW,
+  RND_SCRIPTS,
+  SECTORS_PREVIEW,
+  SHORT_FORM_VIDEO,
+  TESTIMONIALS,
+  WHY_LANNKIN,
 } from "@/data/homepage";
 import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWidget";
 import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
+import ShowcaseCards from "@/presentation/components/home/ShowcaseCards";
+import { Button } from "@/presentation/components/ui";
 import { Container } from "@/presentation/components/ui/Container";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
-import ShowcaseCards from "@/presentation/components/home/ShowcaseCards";
-
 
 export const metadata: Metadata = {
-  title: "Agence Marketing Digital Paris | Ekolink",
+  title: "Agence Marketing Digital Paris | Lannkin",
   description:
-    "Agence marketing digital basée à Paris. Référencement, Google Ads, création web et IA pour les PME françaises. Devis gratuit sous 24h, résultats mesurables. Parlons de votre projet avec Ekolink.",
+    "Agence marketing digital basee a Paris. Referencement, Google Ads, creation web et IA pour les PME francaises. Devis gratuit sous 24h, resultats mesurables. Parlons de votre projet avec Lannkin.",
 };
 
-export default function HomePage() {
-  return (
-    <main style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d" }}>
+const CLIENT_LOGOS = Array.from(
+  { length: 29 },
+  (_, i) => `logo-client-${String(i + 1).padStart(2, "0")}.png`,
+);
 
-      {/* ═══════════════════════════════════════════════════════
-          1. HERO
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-16 pt-12 lg:pt-20">
-        {/* 3D bg — diagonal right-side placement */}
+const QUICK_PROOFS = [
+  "Google Partner et expertises multi-plateformes",
+  "Offres express a partir de 200EUR",
+  "R&D interne pour scripts et optimisations",
+] as const;
+
+function SectionIntro({
+  badge,
+  title,
+  subtitle,
+  align = "left",
+  tone = "light",
+}: {
+  badge: string;
+  title: string;
+  subtitle?: string;
+  align?: "left" | "center";
+  tone?: "light" | "dark";
+}) {
+  const centered = align === "center";
+  const dark = tone === "dark";
+
+  return (
+    <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
+      <p
+        className="font-mono text-xs font-semibold uppercase tracking-[0.24em]"
+        style={{ color: dark ? "#7cc59f" : "#498f6d" }}
+      >
+        {badge}
+      </p>
+      <h2
+        className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl"
+        style={{ color: dark ? "#FFFFFF" : "#2d2d2d" }}
+      >
+        {title}
+      </h2>
+      {subtitle && (
+        <p
+          className="mt-4 text-base leading-relaxed sm:text-lg"
+          style={{ color: dark ? "rgba(255,255,255,0.74)" : "rgba(45,45,45,0.68)" }}
+        >
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function OfferCard({
+  title,
+  price,
+  description,
+  bullets,
+  href,
+  accent,
+}: (typeof OFFERS_SPOTLIGHT.items)[number]) {
+  const tones = {
+    green: {
+      card: "linear-gradient(145deg, rgba(73,143,109,0.14), rgba(73,143,109,0.04))",
+      pill: "rgba(73,143,109,0.12)",
+      border: "rgba(73,143,109,0.18)",
+    },
+    paper: {
+      card: "linear-gradient(145deg, rgba(255,255,255,0.92), rgba(237,233,225,0.7))",
+      pill: "rgba(45,45,45,0.06)",
+      border: "rgba(45,45,45,0.10)",
+    },
+    dark: {
+      card: "linear-gradient(145deg, rgba(45,45,45,0.98), rgba(45,45,45,0.88))",
+      pill: "rgba(255,255,255,0.1)",
+      border: "rgba(255,255,255,0.08)",
+    },
+  } as const;
+
+  const palette = tones[accent];
+  const dark = accent === "dark";
+
+  return (
+    <div
+      className="flex h-full flex-col rounded-[28px] p-6 shadow-[0_24px_80px_rgba(45,45,45,0.08)]"
+      style={{
+        background: palette.card,
+        border: `1px solid ${palette.border}`,
+        color: dark ? "#FFFFFF" : "#2d2d2d",
+      }}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p
+            className="inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
+            style={{
+              backgroundColor: palette.pill,
+              color: dark ? "rgba(255,255,255,0.85)" : "#498f6d",
+            }}
+          >
+            Offre immediate
+          </p>
+          <h3 className="mt-4 font-heading text-2xl font-bold">{title}</h3>
+        </div>
+        <div
+          className="rounded-2xl px-4 py-3 text-right"
+          style={{
+            backgroundColor: dark ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.75)",
+            border: `1px solid ${dark ? "rgba(255,255,255,0.08)" : "rgba(45,45,45,0.08)"}`,
+          }}
+        >
+          <div className="font-heading text-2xl font-bold">{price}</div>
+          <div className="text-xs uppercase tracking-[0.16em] opacity-60">Point d'entree</div>
+        </div>
+      </div>
+
+      <p className="mt-5 text-sm leading-relaxed opacity-82">{description}</p>
+
+      <div className="mt-6 space-y-2">
+        {bullets.map((bullet) => (
+          <div key={bullet} className="flex items-center gap-2 text-sm">
+            <span
+              className="flex h-5 w-5 items-center justify-center rounded-full"
+              style={{
+                backgroundColor: dark ? "rgba(255,255,255,0.12)" : "rgba(73,143,109,0.12)",
+              }}
+            >
+              <Check className="h-3.5 w-3.5" />
+            </span>
+            <span>{bullet}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-8">
+        <Button
+          href={href}
+          variant={dark ? "secondary" : "primary"}
+          size="sm"
+          className={dark ? "border-white/30 text-white hover:bg-white/10" : "w-full sm:w-auto"}
+        >
+          Voir le detail
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <main className="overflow-hidden bg-[#f7f5f0] text-[#2d2d2d]">
+      <section className="relative overflow-hidden border-b border-[#2d2d2d]/8 pb-20 pt-24 lg:pb-24 lg:pt-28">
         <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[62%]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(73,143,109,0.14),transparent_36%),radial-gradient(circle_at_80%_20%,rgba(133,53,62,0.08),transparent_28%)]" />
+          <div className="absolute right-[-12%] top-[-8%] h-[420px] w-[420px] rounded-full bg-[#498f6d]/10 blur-[120px]" />
+          <div className="absolute left-[-10%] top-[28%] h-[320px] w-[320px] rounded-full bg-[#85353e]/8 blur-[120px]" />
+          <div className="absolute bottom-[-120px] right-[8%] h-[520px] w-[520px] overflow-hidden rounded-full opacity-35">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
               alt=""
-              className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(108deg, #f7f5f0 16%, rgba(247,245,240,0.7) 38%, transparent 60%)" }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to bottom, #f7f5f0 0%, transparent 18%, transparent 82%, #f7f5f0 100%)" }}
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
-        <div
-          className="pointer-events-none absolute right-1/3 top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
-          style={{ backgroundColor: "rgba(73,143,109,0.08)" }}
-          aria-hidden
-        />
 
-        <Container className="relative z-10">
-          <div className="grid items-center gap-10 lg:grid-cols-12">
-
-            {/* Copie */}
-            <div className="lg:col-span-7">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=7+Rue+Vulpian+75013+Paris"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 transition-colors hover:brightness-110"
-                style={{ borderColor: "rgba(73,143,109,0.28)", backgroundColor: "rgba(73,143,109,0.09)" }}
-                aria-label="Voir Ekolink sur Google Maps"
-              >
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: "#498f6d" }} />
-                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
+        <Container className="relative z-10" size="xl">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.22fr)_minmax(360px,460px)] lg:items-start xl:grid-cols-[minmax(0,1.28fr)_minmax(380px,500px)]">
+            <div className="max-w-[46rem] xl:pr-4">
+              <div className="inline-flex flex-wrap items-center gap-3 rounded-full border border-[#498f6d]/20 bg-white/80 px-4 py-2 shadow-[0_12px_30px_rgba(45,45,45,0.05)] backdrop-blur">
+                <span className="flex h-2.5 w-2.5 rounded-full bg-[#498f6d]" />
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-[#498f6d]">
+                  {HERO.badge}
                 </span>
-                <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>{HERO.badge}</span>
-              </a>
+                <span className="hidden text-[#2d2d2d]/20 sm:inline">|</span>
+                <span className="text-xs font-medium text-[#2d2d2d]/60">
+                  Strategie locale, execution orientee resultats
+                </span>
+              </div>
 
-              <h1
-                className="mt-2 font-heading text-[2rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]"
-                style={{ color: "#2d2d2d" }}
-              >
-                On accélère la croissance digitale{" "}
-                des <span style={{ color: "#498f6d" }}>PME françaises</span>.
+              <h1 className="mt-7 max-w-4xl font-heading text-[2.85rem] font-bold leading-[0.95] tracking-[-0.04em] text-[#2d2d2d] sm:text-[4.2rem] xl:text-[5.1rem]">
+                L'agence qui rend votre
+                <span className="block text-[#498f6d]">croissance impossible a ignorer.</span>
               </h1>
-              <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-              <p className="mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
+
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#2d2d2d]/72 sm:text-xl">
                 {HERO.subtitle}
               </p>
 
-              <div className="mt-8 flex flex-row flex-wrap gap-3 sm:gap-4">
-                <Link
-                  href={HERO.cta.primary.href}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110 sm:px-7 sm:py-3.5"
-                  style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
-                >
-                  {HERO.cta.primary.label}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href={HERO.cta.secondary.href}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3 text-sm font-medium transition-colors sm:px-7 sm:py-3.5"
-                  style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.75)" }}
-                >
-                  {HERO.cta.secondary.label}
-                </Link>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {QUICK_PROOFS.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center gap-2 rounded-full border border-[#2d2d2d]/10 bg-white/70 px-4 py-2 text-sm text-[#2d2d2d]/70 backdrop-blur"
+                  >
+                    <Check className="h-4 w-4 text-[#498f6d]" />
+                    {item}
+                  </span>
+                ))}
               </div>
 
-              {/* Stats */}
-              <div
-                className="mt-10 grid grid-cols-2 gap-5 border-t pt-8 sm:grid-cols-4"
-                style={{ borderColor: "rgba(45,45,45,0.12)" }}
-              >
-                {HERO.stats.map((stat) => (
-                  <div key={stat.label}>
-                    <div className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{stat.value}</div>
-                    <div className="mt-0.5 text-xs" style={{ color: "rgba(45,45,45,0.55)" }}>{stat.label}</div>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Button href={HERO.cta.primary.href} size="lg">
+                  {HERO.cta.primary.label}
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+                <Button href={HERO.cta.secondary.href} variant="secondary" size="lg">
+                  {HERO.cta.secondary.label}
+                </Button>
+              </div>
+
+              <div className="mt-12 grid gap-4 sm:grid-cols-4">
+                {HERO.stats.map((stat, index) => (
+                  <div
+                    key={stat.label}
+                    className={`rounded-[24px] border p-4 shadow-[0_18px_35px_rgba(45,45,45,0.05)] ${
+                      index === 0 ? "sm:col-span-2" : ""
+                    }`}
+                    style={{
+                      background:
+                        index === 0
+                          ? "linear-gradient(145deg, rgba(73,143,109,0.12), rgba(255,255,255,0.9))"
+                          : "rgba(255,255,255,0.82)",
+                      borderColor: "rgba(45,45,45,0.08)",
+                    }}
+                  >
+                    <div className="font-heading text-3xl font-bold text-[#2d2d2d]">{stat.value}</div>
+                    <div className="mt-1 text-sm text-[#2d2d2d]/58">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 border-t pt-6" style={{ borderColor: "rgba(45,45,45,0.12)" }}>
+              <div className="mt-8">
                 <GoogleMapsWidget variant="light" />
               </div>
             </div>
 
-            {/* Formulaire */}
-            <div className="-mx-4 sm:mx-0 lg:col-span-5">
-              <LeadCaptureForm
-                title="Recevez votre devis sur-mesure"
-                subtitle="Une réponse personnalisée en moins de 24h par un expert de notre équipe."
-              />
-            </div>
+            <div className="relative lg:justify-self-end">
+              <div className="mx-auto w-full max-w-[500px] rounded-[32px] border border-[#2d2d2d]/10 bg-white/92 p-4 shadow-[0_30px_90px_rgba(45,45,45,0.12)] backdrop-blur sm:p-6">
+                <div className="mb-5 grid gap-3 sm:grid-cols-2">
+                  {OFFERS_SPOTLIGHT.items.slice(0, 2).map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-[22px] border border-[#2d2d2d]/8 bg-[#f7f5f0] p-4"
+                    >
+                      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#498f6d]">
+                        {item.title}
+                      </div>
+                      <div className="mt-2 font-heading text-2xl font-bold text-[#2d2d2d]">
+                        {item.price}
+                      </div>
+                      <div className="mt-2 text-xs leading-relaxed text-[#2d2d2d]/58">
+                        {item.bullets[0]}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
+                <LeadCaptureForm
+                  title="Recevez un plan d'action sur-mesure"
+                  subtitle="Parlez-nous de votre contexte. Un expert Lannkin vous recontacte avec une recommandation claire, un budget et un angle d'attaque."
+                />
+
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#498f6d]/10 px-3 py-1.5 text-xs font-medium text-[#498f6d]">
+                    <ShieldCheck className="h-3.5 w-3.5" />
+                    Sans engagement
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#2d2d2d]/6 px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/65">
+                    <Zap className="h-3.5 w-3.5 text-[#498f6d]" />
+                    Reponse humaine
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          2. LOGOS + BADGES
-      ═══════════════════════════════════════════════════════ */}
-      <section
-        className="relative overflow-hidden py-16"
-        style={{ backgroundColor: "#ede9e1" }}
-      >
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[55%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
-              alt=""
-              className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.28 }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(105deg, #ede9e1 20%, rgba(237,233,225,0.6) 42%, transparent 62%)" }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to bottom, #ede9e1 0%, transparent 18%, transparent 82%, #ede9e1 100%)" }}
-            />
-          </div>
-        </div>
-        <div
-          className="pointer-events-none absolute right-[30%] top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full blur-[120px]"
-          style={{ backgroundColor: "rgba(73, 143, 109, 0.07)" }}
-          aria-hidden
-        />
+      <section className="border-b border-[#2d2d2d]/8 py-20">
+        <Container size="xl">
+          <SectionIntro
+            badge={OFFERS_SPOTLIGHT.badge}
+            title={OFFERS_SPOTLIGHT.title}
+            subtitle={OFFERS_SPOTLIGHT.subtitle}
+          />
 
-        <Container className="relative z-10">
-          <div className="mb-10 flex justify-center">
-            <div
-              className="inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5"
-              style={{ borderColor: "rgba(73,143,109,0.30)", backgroundColor: "rgba(73,143,109,0.10)" }}
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: "#498f6d" }} />
-                <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: "#498f6d" }} />
-              </span>
-              <span className="font-mono text-xs font-medium" style={{ color: "#498f6d" }}>
-                Ils travaillent avec nous
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-4 gap-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-            {Array.from({ length: 29 }, (_, i) => `logo-client-${String(i + 1).padStart(2, "0")}.png`).map((file) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={file}
-                src={`/images/logo-client/${file}`}
-                alt=""
-                loading="lazy"
-                decoding="async"
-                className="h-14 w-full object-contain opacity-60 brightness-0 transition-all duration-300 hover:opacity-100"
-              />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {OFFERS_SPOTLIGHT.items.map((item) => (
+              <OfferCard key={item.title} {...item} />
             ))}
           </div>
+        </Container>
+      </section>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 pt-10" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(45,45,45,0.40)" }}>
-              Nos accréditations
-            </span>
-            {/* Google Partner */}
-            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(45,45,45,0.05)", border: "1px solid rgba(45,45,45,0.10)" }}>
-              <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-                <path fill="#4285F4" d="M45.5 24.5c0-1.5-.1-3-.4-4.5H24v8.5h12.1c-.5 2.7-2 5-4.3 6.5v5.4h7c4.1-3.8 6.7-9.4 6.7-15.9z"/>
-                <path fill="#34A853" d="M24 46c6.1 0 11.2-2 14.9-5.5l-7-5.4c-2 1.3-4.5 2.1-7.9 2.1-6.1 0-11.2-4.1-13.1-9.6H3.6v5.6C7.3 41.1 15 46 24 46z"/>
-                <path fill="#FBBC05" d="M10.9 27.6A14.8 14.8 0 0 1 10.9 20.4V14.8H3.6A22 22 0 0 0 2 24c0 3.5.8 6.8 2.3 9.7l7.6-6.1z"/>
-                <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.6-6.6C35.2 2.5 30 0 24 0 15 0 7.3 4.9 3.6 12.2l7.3 5.6C12.8 12.6 17.9 9.5 24 9.5z"/>
-              </svg>
-              <span className="text-sm font-semibold text-[#2d2d2d]">Google Partner</span>
+      <ShowcaseCards />
+
+      <section className="relative overflow-hidden border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute right-0 top-0 h-full w-[40%] opacity-25">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rendu3D/rendu3d-cubes-logo-lk-lateral.webp"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <Container className="relative z-10" size="xl">
+          <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <SectionIntro
+                badge={FOOTPRINT.badge}
+                title={FOOTPRINT.title}
+                subtitle={FOOTPRINT.subtitle}
+              />
+
+              <div className="mt-10 space-y-4">
+                {FOOTPRINT.markets.map((market) => (
+                  <div
+                    key={market.name}
+                    className="rounded-[26px] border border-[#2d2d2d]/8 bg-white/80 p-5 shadow-[0_18px_50px_rgba(45,45,45,0.06)]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                        <Globe2 className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading text-xl font-bold text-[#2d2d2d]">{market.name}</h3>
+                        <p className="mt-1 text-sm text-[#2d2d2d]/62">{market.focus}</p>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {market.points.map((point) => (
+                        <span
+                          key={point}
+                          className="rounded-full border border-[#2d2d2d]/8 bg-[#f7f5f0] px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/66"
+                        >
+                          {point}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            {/* Meta Business Partner */}
-            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(45,45,45,0.05)", border: "1px solid rgba(45,45,45,0.10)" }}>
-              <svg width="22" height="14" viewBox="0 0 60 38" aria-hidden="true" fill="none">
-                <path d="M30 18.3C27 11.5 22.5 7 17.5 7 10.6 7 5 14.2 5 23c0 5.3 2.3 9 5.5 9 2.4 0 4.5-1.6 7.5-6.5l2.2-3.8c2.2-3.8 4.7-6 7.3-6.3C27.5 15.9 28.7 17 30 18.3z" fill="#0866FF"/>
-                <path d="M30 18.3c1.3-1.3 2.5-2.4 3.5-3C36 15.8 38.5 18 40.8 21.7l2.2 3.8c3 4.9 5.1 6.5 7.5 6.5 3.2 0 5.5-3.7 5.5-9 0-8.8-5.6-16-12.5-16-5 0-9.5 4.5-12.5 11.3z" fill="#0866FF"/>
-                <path d="M22.5 29.5C20 34.5 17.5 37 13.5 37c-5 0-8.5-5-8.5-14 0-8.8 5.6-16 12.5-16 5 0 9.5 4.5 12.5 11.3C30 18.3 33 11.5 42.5 7 49.4 7 55 14.2 55 23c0 9-3.5 14-8.5 14-4 0-6.5-2.5-9-7.5" stroke="#0866FF" strokeWidth="0" fill="#0866FF"/>
-              </svg>
-              <span className="text-sm font-semibold text-[#2d2d2d]">Meta Business Partner</span>
-            </div>
-            {/* Shopify Partners */}
-            <div className="flex items-center gap-2 rounded-xl px-4 py-2.5" style={{ backgroundColor: "rgba(45,45,45,0.05)", border: "1px solid rgba(45,45,45,0.10)" }}>
-              <svg width="18" height="20" viewBox="0 0 50 57" aria-hidden="true" fill="none">
-                <path d="M42.8 10.8c0-.3-.3-.5-.6-.5l-4.4-.4-.3-.3C36.1 8.2 34 7.5 32 7c-.4-1.2-1-2.3-1.8-3.2C28.8 2.2 27.2 1.5 25.4 1.5c-.1 0-.3 0-.4.1-.1-.1-.2-.2-.3-.3-1.1-1-2.5-1.3-4.1-.8-3.2 1-6.3 3.8-8.8 8.2-.8 1.5-1.5 3.1-2 4.7l-7.2 2.2c-2.1.7-2.2.7-2.4 2.7L.2 45.7 34.3 52 50 48.4 42.8 10.8z" fill="#95BF47"/>
-                <path d="M32 7c-.4-1.2-1-2.3-1.8-3.2C28.8 2.2 27.2 1.5 25.4 1.5c-.1 0-.3 0-.4.1V52l8.9-2.4L42.2 11.3l-4.4-.4L32 7z" fill="#5E8E3E"/>
-                <path d="M25 14.8l-2.2 6.6s-2-1-4.3-1c-3.4 0-3.6 2.2-3.6 2.7 0 3 7.7 4.1 7.7 11 0 5.4-3.5 8.9-8.1 8.9-5.6 0-8.4-3.5-8.4-3.5l1.5-4.9s2.9 2.5 5.4 2.5c1.6 0 2.3-1.3 2.3-2.2 0-3.9-6.3-4.1-6.3-10.4 0-5.3 3.8-10.5 11.6-10.5 3 0 4.4.9 4.4.9z" fill="#FFF"/>
-              </svg>
-              <span className="text-sm font-semibold text-[#2d2d2d]">Shopify Partners</span>
+
+            <div>
+              <SectionIntro
+                badge={WHY_LANNKIN.badge}
+                title={WHY_LANNKIN.title}
+                subtitle={WHY_LANNKIN.subtitle}
+              />
+
+              <div className="mt-10 grid gap-5 sm:grid-cols-2">
+                {WHY_LANNKIN.points.map((point) => (
+                  <div
+                    key={point.title}
+                    className="rounded-[28px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_50px_rgba(45,45,45,0.06)]"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                      <LucideIcon name={point.icon} className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-5 font-heading text-xl font-bold text-[#2d2d2d]">
+                      {point.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/66">
+                      {point.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          3. STATS
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[45%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-diamant-cubes-flottants.webp"
-              alt=""
-              className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.09 }}
+      <section className="py-20">
+        <Container size="xl">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <SectionIntro
+              badge="Ils nous font confiance"
+              title="La preuve sociale merite plus qu'une simple ligne de logos."
+              subtitle="On garde la sobrie te de la charte, mais on donne plus de densite a la confiance: certifications visibles, references et signature premium."
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to left, transparent, #f7f5f0 60%)" }} />
+            <div className="flex flex-wrap gap-3">
+              {["Google Partner", "Meta Business Partner", "Shopify Partners"].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-[#2d2d2d]/8 bg-white px-4 py-2 text-sm font-medium text-[#2d2d2d]/70 shadow-[0_14px_26px_rgba(45,45,45,0.04)]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        <Container className="relative z-10">
-          <div className="mb-12 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {STATS.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {STATS.title}
-            </h2>
+
+          <div className="mt-10 rounded-[32px] border border-[#2d2d2d]/8 bg-[#2d2d2d] p-6 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-10">
+              {CLIENT_LOGOS.map((file) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={file}
+                  src={`/images/logo-client/${file}`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="h-14 w-full object-contain opacity-50 brightness-0 invert transition-all duration-300 hover:opacity-100"
+                />
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-            {STATS.items.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-heading text-3xl font-bold" style={{ color: "#498f6d" }}>{stat.value}</div>
-                <div className="mt-2 text-xs leading-relaxed" style={{ color: "rgba(45,45,45,0.55)" }}>{stat.label}</div>
+        </Container>
+      </section>
+
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+        <Container size="xl">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <SectionIntro
+              badge={RND_SCRIPTS.badge}
+              title={RND_SCRIPTS.title}
+              subtitle={RND_SCRIPTS.subtitle}
+            />
+
+            <div className="grid gap-5">
+              {RND_SCRIPTS.items.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="rounded-[30px] border border-[#2d2d2d]/8 bg-white/80 p-6 shadow-[0_20px_50px_rgba(45,45,45,0.06)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                      {index === 0 ? (
+                        <ShieldCheck className="h-5 w-5" />
+                      ) : index === 1 ? (
+                        <Target className="h-5 w-5" />
+                      ) : (
+                        <Sparkles className="h-5 w-5" />
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-2xl font-bold text-[#2d2d2d]">{item.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/68">{item.description}</p>
+                      <div className="mt-4 inline-flex rounded-full border border-[#2d2d2d]/10 bg-[#f7f5f0] px-3 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[#2d2d2d]/65">
+                        {item.result}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20">
+        <Container size="xl">
+          <SectionIntro
+            badge={FEATURED_SERVICES.badge}
+            title={FEATURED_SERVICES.title}
+            subtitle="Les offres les plus strategiques apparaissent tout de suite, avec une lecture orientee resultats plutot qu'une simple liste de services."
+          />
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {FEATURED_SERVICES.services.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group rounded-[30px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_55px_rgba(45,45,45,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(45,45,45,0.1)]"
+              >
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                      <LucideIcon name={service.icon} className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-5 font-heading text-2xl font-bold text-[#2d2d2d] group-hover:text-[#498f6d]">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#2d2d2d]/66">
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className="rounded-[24px] border border-[#2d2d2d]/8 bg-[#f7f5f0] px-4 py-3 text-right">
+                    <div className="font-heading text-2xl font-bold text-[#498f6d]">
+                      {service.stat.value}
+                    </div>
+                    <div className="mt-1 text-xs uppercase tracking-[0.18em] text-[#2d2d2d]/46">
+                      {service.stat.label}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+        <Container size="xl">
+          <SectionIntro
+            badge={PAID_LANDSCAPE.badge}
+            title={PAID_LANDSCAPE.title}
+            subtitle={PAID_LANDSCAPE.subtitle}
+            align="center"
+          />
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {PAID_LANDSCAPE.categories.map((category) => (
+              <div
+                key={category.name}
+                className="rounded-[30px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_50px_rgba(45,45,45,0.06)]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                  <LucideIcon name={category.icon} className="h-5 w-5" />
+                </div>
+                <h3 className="mt-5 font-heading text-2xl font-bold text-[#2d2d2d]">{category.name}</h3>
+                <p className="mt-2 text-sm font-medium text-[#498f6d]">{category.tagline}</p>
+                <p className="mt-4 text-sm leading-relaxed text-[#2d2d2d]/66">{category.description}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {category.platforms.map((platform) => (
+                    <span
+                      key={platform.name}
+                      className="rounded-full border border-[#2d2d2d]/8 bg-[#f7f5f0] px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/68"
+                    >
+                      {platform.name}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          4. TESTIMONIALS
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[40%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-flatlay-fond-vert.webp"
-              alt=""
-              className="h-full w-full object-cover"
-              style={{ opacity: 0.09 }}
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to left, transparent, #f7f5f0 55%)" }} />
+      <section className="py-20">
+        <Container size="xl">
+          <div className="grid gap-5 lg:grid-cols-2">
+            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_22px_60px_rgba(45,45,45,0.06)]">
+              <SectionIntro
+                badge={NATIVE_ADS.badge}
+                title={NATIVE_ADS.title}
+                subtitle={NATIVE_ADS.subtitle}
+              />
+              <div className="mt-8 space-y-3">
+                {NATIVE_ADS.bullets.map((bullet) => (
+                  <div key={bullet} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#498f6d]/10 text-[#498f6d]">
+                      <Check className="h-4 w-4" />
+                    </span>
+                    <span className="text-sm leading-relaxed text-[#2d2d2d]/68">{bullet}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {NATIVE_ADS.trustedBy.map((brand) => (
+                  <span
+                    key={brand.name}
+                    className="rounded-full border border-[#2d2d2d]/8 bg-[#f7f5f0] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-[#2d2d2d]/62"
+                  >
+                    {brand.name}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8">
+                <Button href={NATIVE_ADS.cta.href} size="md">
+                  {NATIVE_ADS.cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="rounded-[34px] border border-[#498f6d]/14 bg-[linear-gradient(145deg,rgba(73,143,109,0.12),rgba(255,255,255,0.96))] p-8 shadow-[0_22px_60px_rgba(45,45,45,0.06)]">
+              <SectionIntro
+                badge={SHORT_FORM_VIDEO.badge}
+                title={SHORT_FORM_VIDEO.title}
+                subtitle={SHORT_FORM_VIDEO.subtitle}
+              />
+              <div className="mt-8 grid gap-4">
+                {SHORT_FORM_VIDEO.features.map((feature) => (
+                  <div
+                    key={feature.title}
+                    className="rounded-[24px] border border-[#2d2d2d]/8 bg-white/80 p-5"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                        <LucideIcon name={feature.icon} className="h-4 w-4" />
+                      </div>
+                      <h3 className="font-heading text-lg font-bold text-[#2d2d2d]">{feature.title}</h3>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/68">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {SHORT_FORM_VIDEO.platforms.map((platform) => (
+                  <span
+                    key={platform}
+                    className="rounded-full bg-white px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/68 shadow-[0_10px_22px_rgba(45,45,45,0.04)]"
+                  >
+                    {platform}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8">
+                <Button href={SHORT_FORM_VIDEO.cta.href} variant="secondary" size="md">
+                  <Video className="h-4 w-4" />
+                  {SHORT_FORM_VIDEO.cta.label}
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-        <Container className="relative z-10">
-          <div className="mb-10 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {TESTIMONIALS.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {TESTIMONIALS.title}
-            </h2>
-            <p className="mt-3 text-sm" style={{ color: "rgba(45,45,45,0.55)" }}>{TESTIMONIALS.subtitle}</p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
+        </Container>
+      </section>
+
+      <section className="border-y border-[#2d2d2d]/8 bg-[#f7f5f0] py-20">
+        <Container size="xl">
+          <SectionIntro
+            badge={TESTIMONIALS.badge}
+            title={TESTIMONIALS.title}
+            subtitle={TESTIMONIALS.subtitle}
+            align="center"
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {TESTIMONIALS.items.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="rounded-2xl p-6"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
+                className="rounded-[30px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_50px_rgba(45,45,45,0.06)]"
               >
-                <div className="mb-4 flex items-center gap-0.5">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <span key={i} style={{ color: "#f59e0b" }}>★</span>
+                <div className="flex items-center gap-1 text-[#FBBC05]">
+                  {Array.from({ length: testimonial.rating }).map((_, index) => (
+                    <span key={`${testimonial.name}-${index}`}>★</span>
                   ))}
                 </div>
-                <p className="mb-5 text-sm italic leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div>
-                  <div className="text-sm font-semibold" style={{ color: "#2d2d2d" }}>{testimonial.name}</div>
-                  <div className="text-xs" style={{ color: "rgba(45,45,45,0.55)" }}>
+                <p className="mt-5 text-base leading-relaxed text-[#2d2d2d]/80">"{testimonial.quote}"</p>
+                <div className="mt-6 border-t border-[#2d2d2d]/8 pt-4">
+                  <div className="font-heading text-lg font-bold text-[#2d2d2d]">{testimonial.name}</div>
+                  <div className="text-sm text-[#2d2d2d]/55">
                     {testimonial.company} · {testimonial.sector}
                   </div>
                 </div>
@@ -340,645 +691,155 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          5. SERVICES PHARES
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {FEATURED_SERVICES.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {FEATURED_SERVICES.title}
-            </h2>
-            <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {FEATURED_SERVICES.services.map((svc) => (
-              <Link
-                key={svc.title}
-                href={svc.href}
-                className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                <div className="mb-5 flex items-start justify-between">
+      <section className="py-20">
+        <Container size="xl">
+          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+              <SectionIntro
+                badge={PRICING_PREVIEW.badge}
+                title={PRICING_PREVIEW.title}
+                subtitle={PRICING_PREVIEW.subtitle}
+              />
+              <div className="mt-8 space-y-4">
+                {PRICING_PREVIEW.featured.map((plan) => (
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-xl"
-                    style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
+                    key={plan.name}
+                    className={`rounded-[24px] border p-5 ${
+                      plan.highlighted ? "border-[#498f6d]/25 bg-[#498f6d]/8" : "border-[#2d2d2d]/8 bg-[#f7f5f0]"
+                    }`}
                   >
-                    <LucideIcon name={svc.icon} className="h-5 w-5" />
-                  </div>
-                  <div className="text-right">
-                    <div className="font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{svc.stat.value}</div>
-                    <div className="text-xs" style={{ color: "rgba(45,45,45,0.50)" }}>{svc.stat.label}</div>
-                  </div>
-                </div>
-                <h3 className="font-heading text-lg font-bold transition-colors group-hover:text-[#498f6d]" style={{ color: "#2d2d2d" }}>
-                  {svc.title}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>
-                  {svc.description}
-                </p>
-                <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.25)" }} />
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          6. PAID LANDSCAPE (Native / SEA / Social)
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {PAID_LANDSCAPE.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {PAID_LANDSCAPE.title}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {PAID_LANDSCAPE.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-5 lg:grid-cols-3">
-            {PAID_LANDSCAPE.categories.map((cat) => (
-              <div
-                key={cat.name}
-                className="flex flex-col rounded-2xl p-6"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
-              >
-                <div
-                  className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={cat.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-heading text-lg font-bold" style={{ color: "#2d2d2d" }}>{cat.name}</h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-                  {cat.tagline}
-                </p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.75)" }}>
-                  {cat.description}
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2 pt-5" style={{ borderTop: "1px solid rgba(45,45,45,0.08)" }}>
-                  {cat.platforms.map((p) => (
-                    <span
-                      key={p.name}
-                      className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
-                      style={{ backgroundColor: "#f7f5f0", color: "#2d2d2d", border: "1px solid rgba(45,45,45,0.08)" }}
-                    >
-                      {p.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          7. NATIVE ADS EXPERTISE
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-                {NATIVE_ADS.badge}
-              </p>
-              <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-                {NATIVE_ADS.title}
-              </h2>
-              <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-              <p className="mt-4 text-base leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
-                {NATIVE_ADS.subtitle}
-              </p>
-              <ul className="mt-6 space-y-3">
-                {NATIVE_ADS.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-sm" style={{ color: "rgba(45,45,45,0.80)" }}>
-                    <span
-                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
-                      style={{ backgroundColor: "rgba(73,143,109,0.14)", color: "#498f6d" }}
-                    >
-                      ✓
-                    </span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <Link
-                  href={NATIVE_ADS.cta.href}
-                  className="inline-flex items-center gap-2 rounded-xl px-7 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                  style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
-                >
-                  {NATIVE_ADS.cta.label}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-            <div
-              className="rounded-2xl p-8 lg:p-10"
-              style={{
-                background: "linear-gradient(135deg, rgba(73,143,109,0.06) 0%, rgba(73,143,109,0.02) 100%)",
-                border: "1px solid rgba(73,143,109,0.15)",
-              }}
-            >
-              <p className="font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "rgba(45,45,45,0.55)" }}>
-                Ils nous ont fait confiance
-              </p>
-              <div className="mt-5 space-y-4">
-                {NATIVE_ADS.trustedBy.map((c) => (
-                  <div
-                    key={c.name}
-                    className="flex items-center gap-4 rounded-xl p-4"
-                    style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.06)" }}
-                  >
-                    <div
-                      className="flex h-10 w-10 items-center justify-center rounded-full"
-                      style={{ backgroundColor: "rgba(73,143,109,0.14)", color: "#498f6d" }}
-                    >
-                      <LucideIcon name="Building2" className="h-5 w-5" />
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <h3 className="font-heading text-xl font-bold text-[#2d2d2d]">{plan.name}</h3>
+                        <p className="mt-2 text-sm text-[#2d2d2d]/65">{plan.description}</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <div className="font-heading text-2xl font-bold text-[#498f6d]">{plan.price}</div>
+                      </div>
                     </div>
-                    <span className="font-heading text-sm font-semibold" style={{ color: "#2d2d2d" }}>
-                      {c.name}
-                    </span>
                   </div>
                 ))}
               </div>
+              <div className="mt-8">
+                <Button href={PRICING_PREVIEW.cta.href} variant="secondary">
+                  {PRICING_PREVIEW.cta.label}
+                </Button>
+              </div>
             </div>
-          </div>
-        </Container>
-      </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          8. PRICING PREVIEW
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {PRICING_PREVIEW.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {PRICING_PREVIEW.title}
-            </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {PRICING_PREVIEW.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {PRICING_PREVIEW.featured.map((plan) => {
-              const highlighted = "highlighted" in plan && plan.highlighted;
-              return (
-                <Link
-                  key={plan.name}
-                  href={plan.href}
-                  className="group relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5"
-                  style={{
-                    backgroundColor: "#ffffff",
-                    border: highlighted ? "1px solid rgba(73,143,109,0.30)" : "1px solid rgba(45,45,45,0.07)",
-                    boxShadow: highlighted ? "0 0 30px rgba(73,143,109,0.08)" : undefined,
-                  }}
-                >
-                  {highlighted && (
-                    <span
-                      className="mb-3 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-semibold"
-                      style={{ backgroundColor: "rgba(73,143,109,0.14)", color: "#498f6d" }}
+            <div className="grid gap-5">
+              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-[#ede9e1] p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+                <SectionIntro
+                  badge={SECTORS_PREVIEW.badge}
+                  title={SECTORS_PREVIEW.title}
+                  subtitle={SECTORS_PREVIEW.subtitle}
+                />
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {SECTORS_PREVIEW.featured.map((sector) => (
+                    <Link
+                      key={sector.name}
+                      href={sector.href}
+                      className="group rounded-[22px] border border-[#2d2d2d]/8 bg-white p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(45,45,45,0.08)]"
                     >
-                      Populaire
-                    </span>
-                  )}
-                  <div className="font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>{plan.name}</div>
-                  <div className="mt-2 font-heading text-2xl font-bold" style={{ color: "#498f6d" }}>{plan.price}</div>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>{plan.description}</p>
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ border: "1px solid rgba(73,143,109,0.22)" }} />
-                </Link>
-              );
-            })}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href={PRICING_PREVIEW.cta.href}
-              className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.75)" }}
-            >
-              {PRICING_PREVIEW.cta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          7. POURQUOI EKOLINK
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 left-0 w-[45%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-cubes-lateral-angle-2.webp"
-              alt=""
-              className="h-full w-full object-cover object-right"
-              style={{ opacity: 0.10 }}
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent, #f7f5f0 60%)" }} />
-          </div>
-        </div>
-        <Container className="relative z-10">
-          <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {WHY_EKOLINK.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {WHY_EKOLINK.title}
-            </h2>
-            <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {WHY_EKOLINK.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {WHY_EKOLINK.points.map((point) => (
-              <div
-                key={point.title}
-                className="rounded-xl p-6"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                <div
-                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={point.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>{point.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>{point.description}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          10. SHOWCASE CARDS (style Shopify Partners)
-      ═══════════════════════════════════════════════════════ */}
-      <ShowcaseCards />
-
-      {/* ═══════════════════════════════════════════════════════
-          11. SHORT-FORM VIDEO
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10 text-center">
-            <span
-              className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider"
-              style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
-            >
-              ● {SHORT_FORM_VIDEO.badge}
-            </span>
-            <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {SHORT_FORM_VIDEO.title}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {SHORT_FORM_VIDEO.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {SHORT_FORM_VIDEO.features.map((feat) => (
-              <div
-                key={feat.title}
-                className="rounded-2xl p-6"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
-              >
-                <div
-                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(73,143,109,0.12)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={feat.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>{feat.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>{feat.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "rgba(45,45,45,0.50)" }}>
-              Plateformes couvertes
-            </span>
-            {SHORT_FORM_VIDEO.platforms.map((p) => (
-              <span
-                key={p}
-                className="inline-flex items-center rounded-full px-3.5 py-1.5 text-xs font-medium"
-                style={{ backgroundColor: "#ffffff", color: "#2d2d2d", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                {p}
-              </span>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href={SHORT_FORM_VIDEO.cta.href}
-              className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(45,45,45,0.18)", color: "#2d2d2d" }}
-            >
-              {SHORT_FORM_VIDEO.cta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          12. SECTEURS
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10 text-center">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {SECTORS_PREVIEW.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {SECTORS_PREVIEW.title}
-            </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {SECTORS_PREVIEW.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {SECTORS_PREVIEW.featured.map((sector) => (
-              <Link
-                key={sector.name}
-                href={sector.href}
-                className="group flex flex-col items-center gap-3 rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-0.5"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                <div
-                  className="flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={sector.icon} className="h-5 w-5" />
-                </div>
-                <span
-                  className="font-heading text-sm font-semibold transition-colors group-hover:text-[#498f6d]"
-                  style={{ color: "rgba(45,45,45,0.80)" }}
-                >
-                  {sector.name}
-                </span>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href={SECTORS_PREVIEW.cta.href}
-              className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.75)" }}
-            >
-              {SECTORS_PREVIEW.cta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          10. SERVICES OVERVIEW
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {SERVICES_OVERVIEW.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {SERVICES_OVERVIEW.title}
-            </h2>
-            <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {SERVICES_OVERVIEW.subtitle}
-            </p>
-          </div>
-
-          <div className="grid gap-5 lg:grid-cols-3">
-            {SERVICES_OVERVIEW.categories.map((cat) => (
-              <div
-                key={cat.title}
-                className="rounded-2xl p-6"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                <h3 className="mb-5 font-heading text-base font-bold" style={{ color: "#2d2d2d" }}>{cat.title}</h3>
-                <ul className="space-y-3">
-                  {cat.services.map((svc) => (
-                    <li key={svc.href}>
-                      <Link
-                        href={svc.href}
-                        className="flex items-center gap-2.5 text-sm transition-colors hover:text-[#498f6d]"
-                        style={{ color: "rgba(45,45,45,0.70)" }}
-                      >
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "rgba(73,143,109,0.55)" }} />
-                        {svc.name}
-                      </Link>
-                    </li>
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                        <LucideIcon name={sector.icon} className="h-4 w-4" />
+                      </div>
+                      <div className="mt-3 text-sm font-semibold text-[#2d2d2d] group-hover:text-[#498f6d]">
+                        {sector.name}
+                      </div>
+                    </Link>
                   ))}
-                </ul>
+                </div>
+                <div className="mt-8">
+                  <Button href={SECTORS_PREVIEW.cta.href} variant="secondary" size="sm">
+                    {SECTORS_PREVIEW.cta.label}
+                  </Button>
+                </div>
               </div>
-            ))}
-          </div>
 
-          <div className="mt-10 text-center">
-            <Link
-              href={SERVICES_OVERVIEW.cta.href}
-              className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.75)" }}
-            >
-              {SERVICES_OVERVIEW.cta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+                <SectionIntro
+                  badge={BLOG_PREVIEW.badge}
+                  title={BLOG_PREVIEW.title}
+                  subtitle={BLOG_PREVIEW.subtitle}
+                />
+                <div className="mt-8 grid gap-3">
+                  {BLOG_PREVIEW.resources.map((resource) => (
+                    <Link
+                      key={resource.name}
+                      href={resource.href}
+                      className="group rounded-[22px] border border-[#2d2d2d]/8 bg-[#f7f5f0] p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(45,45,45,0.08)]"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
+                          <LucideIcon name={resource.icon} className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <h3 className="font-heading text-lg font-bold text-[#2d2d2d] group-hover:text-[#498f6d]">
+                              {resource.name}
+                            </h3>
+                            <span className="rounded-full bg-white px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#498f6d]">
+                              {resource.type}
+                            </span>
+                          </div>
+                          <p className="mt-2 text-sm leading-relaxed text-[#2d2d2d]/66">
+                            {resource.description}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <Button href={BLOG_PREVIEW.cta.href} variant="secondary" size="sm">
+                    {BLOG_PREVIEW.cta.label}
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          11. RESSOURCES
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[40%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-trio-cubes-flottants.webp"
-              alt=""
-              className="h-full w-full object-cover"
-              style={{ opacity: 0.09 }}
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to left, transparent, #f7f5f0 55%)" }} />
-          </div>
-        </div>
-        <Container className="relative z-10">
-          <div className="mb-10">
-            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-              {BLOG_PREVIEW.badge}
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {BLOG_PREVIEW.title}
-            </h2>
-            <div className="mt-4 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
-            <p className="mt-4 max-w-xl text-base" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {BLOG_PREVIEW.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {BLOG_PREVIEW.resources.map((resource) => (
-              <Link
-                key={resource.name}
-                href={resource.href}
-                className="group flex gap-4 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5"
-                style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.10)" }}
-              >
-                <div
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-colors"
-                  style={{ backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }}
-                >
-                  <LucideIcon name={resource.icon} className="h-6 w-6" />
-                </div>
-                <div>
-                  <div className="mb-1.5 flex items-center gap-2">
-                    <span
-                      className="font-heading text-sm font-semibold transition-colors group-hover:text-[#498f6d]"
-                      style={{ color: "#2d2d2d" }}
-                    >
-                      {resource.name}
-                    </span>
-                    <span
-                      className="rounded-full px-2 py-0.5 text-xs font-medium"
-                      style={{ border: "1px solid rgba(73,143,109,0.25)", color: "#498f6d", backgroundColor: "rgba(73,143,109,0.08)" }}
-                    >
-                      {resource.type}
-                    </span>
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>
-                    {resource.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href={BLOG_PREVIEW.cta.href}
-              className="inline-flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-semibold transition-all"
-              style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.75)" }}
-            >
-              {BLOG_PREVIEW.cta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          15. COMMUNITY (YouTube & Discord)
-      ═══════════════════════════════════════════════════════ */}
-      <section className="pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <Container>
-          <div
-            className="mx-auto max-w-5xl rounded-2xl p-10 sm:p-14"
-            style={{
-              background: "linear-gradient(135deg, rgba(73,143,109,0.08) 0%, rgba(73,143,109,0.03) 100%)",
-              border: "1px solid rgba(73,143,109,0.18)",
-            }}
-          >
-            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+        <Container size="xl">
+          <div className="rounded-[36px] border border-[#498f6d]/16 bg-[linear-gradient(145deg,rgba(255,255,255,0.82),rgba(73,143,109,0.08))] p-8 shadow-[0_30px_70px_rgba(45,45,45,0.08)] sm:p-12">
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div>
-                <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: "#498f6d" }}>
-                  {COMMUNITY.badge}
-                </p>
-                <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-                  {COMMUNITY.title}
-                </h2>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "rgba(45,45,45,0.70)" }}>
-                  {COMMUNITY.subtitle}
-                </p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <a
+                <SectionIntro
+                  badge={COMMUNITY.badge}
+                  title={COMMUNITY.title}
+                  subtitle={COMMUNITY.subtitle}
+                />
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Button
                     href={COMMUNITY.cta.youtube.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                    style={{ backgroundColor: "#FF0000", color: "#FFFFFF" }}
+                    size="md"
+                    className="bg-[#FF0000] shadow-[0_0_20px_rgba(255,0,0,0.14)]"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
                     {COMMUNITY.cta.youtube.label}
-                  </a>
-                  <a
-                    href={COMMUNITY.cta.discord.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                    style={{ backgroundColor: "#5865F2", color: "#FFFFFF" }}
+                  </Button>
+                  <Button
+                    href="/ressources-gratuites/"
+                    variant="secondary"
+                    size="md"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
-                    </svg>
-                    {COMMUNITY.cta.discord.label}
-                  </a>
+                    Voir les ressources
+                  </Button>
                 </div>
               </div>
+
               <div className="grid grid-cols-3 gap-4">
-                {COMMUNITY.stats.map((s) => (
+                {COMMUNITY.stats.map((stat) => (
                   <div
-                    key={s.label}
-                    className="rounded-xl p-4 text-center"
-                    style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
+                    key={stat.label}
+                    className="rounded-[24px] border border-[#2d2d2d]/8 bg-white p-5 text-center shadow-[0_16px_36px_rgba(45,45,45,0.05)]"
                   >
-                    <div className="font-heading text-lg font-bold" style={{ color: "#498f6d" }}>{s.value}</div>
-                    <div className="mt-1 text-xs" style={{ color: "rgba(45,45,45,0.60)" }}>{s.label}</div>
+                    <div className="font-heading text-2xl font-bold text-[#498f6d]">{stat.value}</div>
+                    <div className="mt-2 text-xs uppercase tracking-[0.16em] text-[#2d2d2d]/55">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -987,72 +848,65 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          16. CTA FINAL
-      ═══════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden pb-10 pt-4 lg:pb-14">
-        <div
-          className="mb-8 h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)" }}
-        />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-y-0 right-0 w-[55%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp"
-              alt=""
-              className="h-full w-full object-cover object-center"
-              style={{ opacity: 0.22 }}
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(108deg, #f7f5f0 18%, rgba(247,245,240,0.65) 40%, transparent 62%)" }} />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, #f7f5f0 0%, transparent 20%, transparent 80%, #f7f5f0 100%)" }} />
-          </div>
-        </div>
-        <div
-          className="pointer-events-none absolute right-1/3 top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-y-1/2 rounded-full blur-[130px]"
-          style={{ backgroundColor: "rgba(73,143,109,0.07)" }}
-          aria-hidden
-        />
-        <Container className="relative z-10">
-          <div
-            className="mx-auto max-w-2xl rounded-2xl p-10 text-center sm:p-14"
-            style={{
-              background: "linear-gradient(135deg, rgba(73,143,109,0.09) 0%, rgba(73,143,109,0.03) 100%)",
-              border: "1px solid rgba(73,143,109,0.18)",
-            }}
+      <section className="py-20">
+        <Container size="xl">
+          <div className="relative overflow-hidden rounded-[36px] border border-[#498f6d]/20 px-8 py-12 shadow-[0_34px_90px_rgba(45,45,45,0.08)] sm:px-12"
+            style={{ background: "linear-gradient(135deg, rgba(73,143,109,0.10) 0%, rgba(255,255,255,0.95) 50%, rgba(237,233,225,0.90) 100%)" }}
           >
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: "#2d2d2d" }}>
-              {CTA_SECTION.title}
-            </h2>
-            <p className="mx-auto mt-4 max-w-md text-base leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>
-              {CTA_SECTION.subtitle}
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                href={CTA_SECTION.cta.primary.href}
-                className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:brightness-110"
-                style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
-              >
-                {CTA_SECTION.cta.primary.label}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href={CTA_SECTION.cta.secondary.href}
-                className="inline-flex items-center gap-2 rounded-xl border px-8 py-3.5 text-sm font-medium transition-colors"
-                style={{ borderColor: "rgba(45,45,45,0.18)", color: "rgba(45,45,45,0.70)" }}
-              >
-                {CTA_SECTION.cta.secondary.label}
-              </Link>
+            <div className="pointer-events-none absolute inset-0" aria-hidden>
+              <div className="absolute right-0 top-0 h-full w-[52%] opacity-60">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp"
+                  alt=""
+                  className="h-full w-full object-cover object-left"
+                />
+              </div>
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(247,245,240,1) 30%, rgba(247,245,240,0.4) 58%, transparent 80%)" }} />
             </div>
-            <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs" style={{ color: "rgba(45,45,45,0.55)" }}>
-              {CTA_SECTION.trust.map((item) => (
-                <span key={item}>✓ {item}</span>
-              ))}
+
+            <div className="relative z-10 max-w-3xl">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                {CTA_SECTION.title}
+              </p>
+              <h2 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#2d2d2d] sm:text-5xl">
+                Une direction claire, un plan commercial plus fort, et un site qui vend mieux.
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-[#2d2d2d]/68">
+                {CTA_SECTION.subtitle}
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button href={CTA_SECTION.cta.primary.href} size="lg">
+                  {CTA_SECTION.cta.primary.label}
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+                <Button
+                  href={CTA_SECTION.cta.secondary.href}
+                  variant="secondary"
+                  size="lg"
+                >
+                  {CTA_SECTION.cta.secondary.label}
+                </Button>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                {CTA_SECTION.trust.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center gap-2 rounded-full border border-[#2d2d2d]/10 bg-white/70 px-4 py-2 text-sm text-[#2d2d2d]/72"
+                  >
+                    <Check className="h-4 w-4 text-accent" />
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </section>
-
     </main>
   );
 }
+
+export default HomePage;

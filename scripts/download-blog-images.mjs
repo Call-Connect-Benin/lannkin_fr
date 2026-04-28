@@ -8,7 +8,7 @@ import https from "https";
 import http from "http";
 import sharp from "sharp";
 
-const WP_API = "https://www.ekolink.fr/wp-json/wp/v2";
+const WP_API = "https://www.lannkin.fr/wp-json/wp/v2";
 const BLOG_DIR = path.resolve("content/blog");
 const IMAGES_DIR = path.resolve("public/images/blog");
 
@@ -310,7 +310,7 @@ async function regenerateMdxWithImages(posts) {
       `date: "${date}"`,
       `category: "${category}"`,
       `tags: []`,
-      `author: "Équipe Ekolink"`,
+      `author: "Équipe Lannkin"`,
       `readTime: "${readTime}"`,
       "---",
     ].join("\n");

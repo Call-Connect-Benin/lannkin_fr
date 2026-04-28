@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
+import { SITE_CONFIG } from "@/lib/constants";
 import FloatingContact from "@/presentation/components/layout/FloatingContact";
 import "./globals.css";
 
@@ -30,10 +31,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ekolink.fr"),
+  metadataBase: new URL("https://lannkin.fr"),
   title: {
-    default: "Ekolink | Agence Marketing Digital & Développement Web à Paris",
-    template: "%s | Ekolink",
+    default: "Lannkin | Agence Marketing Digital & Développement Web à Paris",
+    template: "%s | Lannkin",
   },
   description:
     "Agence marketing digital et développement web à Paris, France. "
@@ -47,22 +48,22 @@ export const metadata: Metadata = {
     "agence web paris",
     "marketing digital france",
   ],
-  authors: [{ name: "Ekolink S.A.S." }],
-  creator: "Ekolink S.A.S.",
-  publisher: "Ekolink S.A.S.",
+  authors: [{ name: "Lannkin S.A.S." }],
+  creator: "Lannkin S.A.S.",
+  publisher: "Lannkin S.A.S.",
   openGraph: {
     type: "website",
-    locale: "fr_CA",
-    url: "https://ekolink.fr",
-    siteName: "Ekolink",
-    title: "Ekolink | Agence Marketing Digital & Développement Web à Paris",
+    locale: "fr_FR",
+    url: "https://lannkin.fr",
+    siteName: "Lannkin",
+    title: "Lannkin | Agence Marketing Digital & Développement Web à Paris",
     description:
       "Agence marketing digital et développement web à Paris, France. "
       + "Google Ads, SEO, Facebook Ads, conception web, IA, 3D.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ekolink | Agence Marketing Digital & Développement Web",
+    title: "Lannkin | Agence Marketing Digital & Développement Web",
     description:
       "Agence marketing digital et développement web à Paris, France.",
   },
@@ -78,22 +79,22 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/logo-ekolink-2026.svg",
-    apple: "/images/logo-ekolink-2026.svg",
+    icon: "/images/logo-lannkin-2026.svg",
+    apple: "/images/logo-lannkin-2026.svg",
   },
   alternates: {
-    canonical: "https://ekolink.fr",
+    canonical: "https://lannkin.fr",
   },
 };
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Ekolink S.A.S.",
-  alternateName: "Agence web Ekolink",
-  url: "https://ekolink.fr",
-  logo: "https://ekolink.fr/images/logo-ekolink-2026.svg",
-  image: "https://ekolink.fr/images/logo-ekolink-2026.svg",
+  name: "Lannkin S.A.S.",
+  alternateName: "Agence web Lannkin",
+  url: "https://lannkin.fr",
+  logo: "https://lannkin.fr/images/logo-lannkin-2026.svg",
+  image: "https://lannkin.fr/images/logo-lannkin-2026.svg",
   description:
     "Agence marketing digital et développement web à Paris, France. Google Ads, SEO, Facebook Ads, conception web, IA et 3D.",
   address: {
@@ -109,20 +110,20 @@ const LOCAL_BUSINESS_JSONLD = {
     latitude: 48.8278,
     longitude: 2.3468,
   },
-  telephone: "+33-1-00-00-00-00",
+  telephone: SITE_CONFIG.phone,
   priceRange: "$$",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "54",
+    ratingValue: String(SITE_CONFIG.stats.googleRating),
+    reviewCount: String(SITE_CONFIG.stats.googleReviews),
     bestRating: "5",
     worstRating: "1",
   },
   sameAs: [
     "https://www.google.com/maps/search/?api=1&query=7+Rue+Vulpian+75013+Paris",
-    "https://www.facebook.com/ekolink",
-    "https://www.instagram.com/ekolink",
-    "https://www.linkedin.com/company/ekolink",
+    "https://www.facebook.com/lannkin",
+    "https://www.instagram.com/lannkin",
+    "https://www.linkedin.com/company/lannkin",
   ],
 };
 
@@ -142,25 +143,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSONLD) }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MF8XDTS');`,
-          }}
-        />
       </head>
       <body className="min-h-screen bg-[#f7f5f0] antialiased" suppressHydrationWarning>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MF8XDTS"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         {children}
         <FloatingContact />
 

@@ -9,9 +9,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Nos expertises digitales a Paris | Ekolink",
+  title: "Nos expertises digitales a Paris | Lannkin",
   description:
-    "Conception web, SEO, Google Ads, Facebook Ads, IA, 3D immersive : explorez les expertises Ekolink et demandez une proposition sur-mesure.",
+    "Conception web, SEO, Google Ads, Facebook Ads, IA, 3D immersive : explorez les expertises Lannkin et demandez une proposition sur-mesure.",
 };
 
 const CATEGORY_LABELS: Record<string, string> = {

@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
+  title: "Création Boutique E-commerce Paris & France | Portfolio Lannkin",
   description:
-    "Portfolio Ekolink : boutiques en ligne pour commerces locaux français. Shopify, WooCommerce, vente en ligne locale — SEO e-commerce et Google Shopping.",
+    "Portfolio Lannkin : boutiques en ligne pour commerces locaux français. Shopify, WooCommerce, vente en ligne locale — SEO e-commerce et Google Shopping.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/ecommerce-local/",
+    canonical: "https://lannkin.fr/realisations/ecommerce-local/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsEcommerceLocalPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Boutiques en ligne — Commerce local"
-        description="Ekolink conçoit des boutiques en ligne performantes pour les commerces locaux français : Shopify, WooCommerce, vente locale et livraison en région. SEO e-commerce et intégration Google Shopping inclus."
+        description="Lannkin conçoit des boutiques en ligne performantes pour les commerces locaux français : Shopify, WooCommerce, vente locale et livraison en région. SEO e-commerce et intégration Google Shopping inclus."
         stats={[
           { value: `${count} projets`, label: "e-commerce locaux" },
           { value: "+420 %", label: "de revenus (client réel)" },
@@ -59,7 +59,7 @@ export default function RealisationsEcommerceLocalPage() {
               Boutique en ligne pour commerce local en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
-              Vendre en ligne n&apos;est plus réservé aux grandes marques. Ekolink aide les commerces
+              Vendre en ligne n&apos;est plus réservé aux grandes marques. Lannkin aide les commerces
               locaux français à lancer leur boutique en ligne avec Shopify ou WooCommerce : catalogue
               produits, paiement sécurisé, livraison locale et intégration Google Shopping pour
               apparaître dans les résultats d&apos;achat. Nous accompagnons les petits et moyens

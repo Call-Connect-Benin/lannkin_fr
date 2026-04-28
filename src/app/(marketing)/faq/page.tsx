@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   {
     category: "Sites web en abonnement",
     q: "C'est quoi un site web en abonnement ?",
-    a: "Au lieu de payer un gros montant en une seule fois (souvent 3 000 $ à 10 000 $), vous payez un abonnement mensuel abordable. Ekolink conçoit, héberge et maintient votre site web. Tant que vous êtes abonné, vous avez un site professionnel, rapide et à jour. Pas de surprise, pas d'investissement massif au départ.",
+    a: "Au lieu de payer un gros montant en une seule fois (souvent 3 000 $ à 10 000 $), vous payez un abonnement mensuel abordable. Lannkin conçoit, héberge et maintient votre site web. Tant que vous êtes abonné, vous avez un site professionnel, rapide et à jour. Pas de surprise, pas d'investissement massif au départ.",
   },
   {
     category: "Sites web en abonnement",
@@ -34,7 +34,7 @@ const FAQ_ITEMS = [
   {
     category: "Sites web en abonnement",
     q: "Est-ce que je possède le site si je m'abonne ?",
-    a: "Dans un modèle d'abonnement, Ekolink reste propriétaire du code et de l'hébergement tant que le contrat est actif. Si vous souhaitez posséder entièrement votre site, nous offrons aussi la création de site à l'achat unique. Contactez-nous pour explorer les deux options.",
+    a: "Dans un modèle d'abonnement, Lannkin reste propriétaire du code et de l'hébergement tant que le contrat est actif. Si vous souhaitez posséder entièrement votre site, nous offrons aussi la création de site à l'achat unique. Contactez-nous pour explorer les deux options.",
   },
   {
     category: "Sites web en abonnement",
@@ -55,18 +55,18 @@ const FAQ_ITEMS = [
   {
     category: "Tarifs & paiement",
     q: "Y a-t-il des frais cachés ?",
-    a: "Non. Le prix affiché est le prix tout inclus : hébergement, domaine (.com ou .ca), certificat SSL, mises à jour et support. La seule exception sont les licences de photos ou illustrations premium si vous en avez besoin — nous vous informons avant tout achat.",
+    a: "Non. Le prix affiché est le prix tout inclus : hébergement, domaine (.fr ou .com), certificat SSL, mises à jour et support. La seule exception sont les licences de photos ou illustrations premium si vous en avez besoin — nous vous informons avant tout achat.",
   },
   {
     category: "Tarifs & paiement",
-    q: "Acceptez-vous les cartes de crédit et Interac ?",
-    a: "Oui. Nous acceptons les paiements par carte de crédit (Visa, Mastercard), virement Interac et chèque d'entreprise. La facturation est mensuelle ou annuelle (avec rabais sur l'annuel).",
+    q: "Acceptez-vous les cartes et virements bancaires ?",
+    a: "Oui. Nous acceptons les paiements par carte bancaire (Visa, Mastercard), virement bancaire et prélèvement selon le forfait retenu. La facturation peut être mensuelle ou annuelle.",
   },
   // --- Services marketing ---
   {
     category: "Services marketing",
     q: "Faites-vous aussi la publicité (Google Ads, Facebook Ads) ?",
-    a: "Absolument. En plus des sites web, Ekolink est une agence Google Partner certifiée. Nous gérons des campagnes Google Ads, Facebook Ads, Instagram, TikTok et LinkedIn. Nous pouvons prendre en charge l'ensemble de votre présence numérique.",
+    a: "Absolument. En plus des sites web, Lannkin est une agence Google Partner certifiée. Nous gérons des campagnes Google Ads, Facebook Ads, Instagram, TikTok et LinkedIn. Nous pouvons prendre en charge l'ensemble de votre présence numérique.",
   },
   {
     category: "Services marketing",
@@ -76,12 +76,12 @@ const FAQ_ITEMS = [
   {
     category: "Services marketing",
     q: "Travaillez-vous avec des entreprises hors de Paris et Paris ?",
-    a: "Oui, nous travaillons avec des entreprises partout en France, au Canada et même à l'international. Toutes nos réunions peuvent se faire en visioconférence. Nos clients au Maroc, en France et en Europe témoignent de notre flexibilité géographique.",
+    a: "Oui, nous travaillons avec des entreprises partout en France. Toutes nos réunions peuvent se faire en visioconférence, ce qui nous permet d'accompagner aussi bien Paris que les autres grandes villes et régions.",
   },
   {
     category: "Services marketing",
     q: "Mon site sera-t-il bien référencé sur Google (SEO) ?",
-    a: "Chaque site livré par Ekolink inclut les bases du SEO technique : balises méta optimisées, structure URL propre, vitesse de chargement, responsive mobile et schema markup. Pour un SEO avancé (rédaction de contenu, netlinking, stratégie de mots-clés), nous proposons des forfaits SEO dédiés.",
+    a: "Chaque site livré par Lannkin inclut les bases du SEO technique : balises méta optimisées, structure URL propre, vitesse de chargement, responsive mobile et schema markup. Pour un SEO avancé (rédaction de contenu, netlinking, stratégie de mots-clés), nous proposons des forfaits SEO dédiés.",
   },
   // --- Technique ---
   {

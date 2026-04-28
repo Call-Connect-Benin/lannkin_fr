@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const hub = getHubBySlug(category);
 
   if (!hub) {
-    return { title: "Service introuvable | Ekolink" };
+    return { title: "Service introuvable | Lannkin" };
   }
 
   return {

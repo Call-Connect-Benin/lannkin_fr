@@ -677,16 +677,16 @@ export default async function PortfolioProjectPage({ params }: Props) {
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-lg font-bold" style={{ color: "#fff" }}>
               {project.categoryLabel === "Multipages" && (
-                <>Site web multipage pour {project.sector} — réalisation Ekolink</>
+                <>Site web multipage pour {project.sector} — réalisation Lannkin</>
               )}
               {project.categoryLabel === "Onepage" && (
-                <>Landing page et site onepage pour {project.sector} — réalisation Ekolink</>
+                <>Landing page et site onepage pour {project.sector} — réalisation Lannkin</>
               )}
               {project.categoryLabel === "E-commerce" && (
-                <>Boutique e-commerce {project.sector} — réalisation Ekolink</>
+                <>Boutique e-commerce {project.sector} — réalisation Lannkin</>
               )}
               {project.categoryLabel === "International" && (
-                <>Projet international {project.sector} — réalisation Ekolink</>
+                <>Projet international {project.sector} — réalisation Lannkin</>
               )}
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.38)" }}>
@@ -697,7 +697,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {project.categoryLabel === "International" && "développement de solutions internationales"}{" "}
               pour des entreprises françaises.{" "}
               <Link href="/" style={{ color: "#fff" }} className="underline-offset-2 hover:underline">
-                Ekolink, agence web à Paris
+                Lannkin, agence web à Paris
               </Link>
               , conçoit des sites web performants qui génèrent des résultats concrets : plus de
               trafic organique, plus de leads et plus de ventes.

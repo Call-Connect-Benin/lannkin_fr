@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Agence Web Internationale Paris | Portfolio Projets Internationaux Ekolink",
+  title: "Agence Web Internationale Paris | Portfolio Projets Internationaux Lannkin",
   description:
     "Agence web bilingue à Paris (France) : création de sites web et stratégies digitales pour les entreprises internationales. France, Suisse, USA, Maroc. Portfolio et devis.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/international/",
+    canonical: "https://lannkin.fr/realisations/international/",
   },
   openGraph: {
-    title: "Agence Web Internationale Paris | Portfolio Ekolink",
+    title: "Agence Web Internationale Paris | Portfolio Lannkin",
     description:
-      "Portfolio international de Ekolink : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web française bilingue.",
-    url: "https://ekolink.fr/realisations/international/",
+      "Portfolio international de Lannkin : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web française bilingue.",
+    url: "https://lannkin.fr/realisations/international/",
   },
 };
 
@@ -27,9 +27,9 @@ const internationalCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "inte
 
 const INCLUS = [
   "Sites web bilingues français/anglais",
-  "SEO international : Google.fr, Google.ca, Google.com",
+  "SEO international : Google.fr, Google.com, Google.de",
   "Hébergement selon la localisation cible (EU/CA/US)",
-  "Respect des normes RGPD (Europe) et LPRPDE (Canada)",
+  "Respect des normes RGPD et des bonnes pratiques internationales",
   "Traduction et localisation du contenu",
   "Campagnes Google Ads et Meta Ads internationales",
 ];
@@ -40,7 +40,7 @@ export default function RealisationsInternationalPage() {
       <RealisationsBanner
         currentCategory="international"
         title="Agence web internationale basée en France"
-        description="De Paris à Lausanne — notre agence web française accompagne les entreprises d'Europe, des États-Unis, du Maroc et du Canada dans leur présence digitale internationale."
+        description="De Paris à Lausanne — notre agence web française accompagne les entreprises d'Europe, des États-Unis et du Maroc dans leur présence digitale internationale."
         stats={[
           { value: "40+ pays", label: "clients générés via nos sites" },
           { value: `${internationalCount} projets`, label: "internationaux livrés" },
@@ -73,14 +73,14 @@ export default function RealisationsInternationalPage() {
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="space-y-4 text-sm leading-relaxed text-[#6B7280]">
                 <p>
-                  Ekolink est une <strong className="text-[#2d2d2d]">agence web bilingue basée à Paris, France</strong>,
+                  Lannkin est une <strong className="text-[#2d2d2d]">agence web bilingue basée à Paris, France</strong>,
                   avec une expertise reconnue pour les projets web internationaux. Notre équipe maîtrise
                   le SEO en français, anglais et allemand, et comprend les spécificités de chaque marché :
                   Google France, Google Suisse, Google Maroc, Google.com pour le marché américain.
                 </p>
                 <p>
                   Pour les <strong className="text-[#2d2d2d]">entreprises françaises, européennes ou américaines</strong>
-                  {" "}qui souhaitent faire appel à une agence web en France, Ekolink offre un avantage
+                  {" "}qui souhaitent faire appel à une agence web en France, Lannkin offre un avantage
                   unique : des tarifs compétitifs en euros, une expertise technique de premier
                   niveau et une compréhension culturelle des marchés francophones et anglophones.
                 </p>
@@ -110,9 +110,7 @@ export default function RealisationsInternationalPage() {
                 Marchés internationaux couverts par notre agence
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  { flag: "🇨🇦", title: "Canada", desc: "France, Ontario, Alberta — SEO .ca et campagnes bilingues" },
-                  { flag: "🇫🇷", title: "France", desc: "Paris, Lyon, Marseille — SEO Google.fr, RGPD" },
+                {[                  { flag: "🇫🇷", title: "France", desc: "Paris, Lyon, Marseille — SEO Google.fr, RGPD" },
                   { flag: "🇨🇭", title: "Suisse", desc: "Suisse romande et alémanique — .ch, multilingue" },
                   { flag: "🇲🇦", title: "Maroc", desc: "Casablanca, Agadir — tourisme, commerce, B2B" },
                   { flag: "🇺🇸", title: "États-Unis", desc: "Google.com, campagnes USD, marché anglophone" },

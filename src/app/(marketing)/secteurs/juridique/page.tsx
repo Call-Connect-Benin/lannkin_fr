@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Avocats & Notaires Paris | Cabinet Juridique | Ekolink",
+  title: "Marketing Digital Avocats & Notaires Paris | Cabinet Juridique | Lannkin",
   description:
     "Agence marketing pour cabinets d'avocats et notaires à Paris. Google Ads juridique, SEO droit, réputation en ligne, génération de mandats qualifiés. Devis gratuit.",
   keywords: [

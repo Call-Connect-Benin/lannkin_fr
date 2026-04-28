@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Services Professionnels Paris | Avocats, Comptables, Consultants | Ekolink",
+  title: "Marketing Digital Services Professionnels Paris | Avocats, Comptables, Consultants | Lannkin",
   description:
     "Agence marketing B2B à Paris. LinkedIn Ads, Google Ads services professionnels, lead generation qualifiée, site vitrine premium pour consultants et professionnels. Devis gratuit.",
   keywords: [

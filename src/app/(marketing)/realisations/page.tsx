@@ -9,9 +9,9 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Portfolio Agence Web Paris | Ekolink",
+  title: "Portfolio Agence Web Paris | Lannkin",
   description:
-    "Portfolio de l'agence web Ekolink a Paris. Sites vitrine, multipages, onepage et e-commerce. +10 ans d'experience, +50 projets livres en France.",
+    "Portfolio de l'agence web Lannkin a Paris. Sites vitrine, multipages, onepage et e-commerce. +10 ans d'experience, +50 projets livres en France.",
 };
 
 const multiPagesCount = PORTFOLIO_PROJECTS.filter((project) => project.category === "multipages").length;
@@ -117,10 +117,10 @@ export default function RealisationsPage() {
                   <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#2d2d2d]">
-                      Pourquoi confier votre projet web a Ekolink ?
+                      Pourquoi confier votre projet web a Lannkin ?
                     </h3>
                     <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#2d2d2d]/68 sm:text-base">
-                      Fondee a Paris, Ekolink accompagne les entreprises avec une
+                      Fondee a Paris, Lannkin accompagne les entreprises avec une
                       approche qui relie design, conversion, SEO et acquisition.
                       Chaque projet presente ici a ete pense pour produire un
                       resultat concret: plus de credibilite, plus de trafic,

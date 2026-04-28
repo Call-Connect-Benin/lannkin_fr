@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Salon Coiffure & Beauté France | Portfolio Ekolink",
+  title: "Sites Web Salon Coiffure & Beauté France | Portfolio Lannkin",
   description:
-    "Portfolio Ekolink : sites web pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, SEO local et Google Ads beauté.",
+    "Portfolio Lannkin : sites web pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, SEO local et Google Ads beauté.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/beaute/",
+    canonical: "https://lannkin.fr/realisations/beaute/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsBeautePage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Beauté & Bien-être"
-        description="Ekolink conçoit des sites web élégants pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, galeries photos et SEO local pour attirer de nouveaux clients."
+        description="Lannkin conçoit des sites web élégants pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, galeries photos et SEO local pour attirer de nouveaux clients."
         stats={[
           { value: `${count} projets`, label: "dans la beauté" },
           { value: "Réservation", label: "en ligne intégrée" },
@@ -59,7 +59,7 @@ export default function RealisationsBeautePage() {
               Agence web pour salons de beauté en France
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
-              Dans le secteur de la beauté, votre site web est votre vitrine. Ekolink crée des sites
+              Dans le secteur de la beauté, votre site web est votre vitrine. Lannkin crée des sites
               web modernes et élégants pour salons de coiffure, instituts d&apos;esthétique, spas et
               cliniques de beauté. Nous intégrons des systèmes de réservation en ligne, des galeries
               photos professionnelles et une stratégie SEO locale pour que vos clients vous trouvent

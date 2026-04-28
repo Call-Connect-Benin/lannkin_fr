@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { z } from "zod";
 
 import { cn } from "@/lib/utils";
@@ -123,6 +122,8 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                   <input
                     type="text"
                     placeholder="Prénom *"
+                    autoComplete="given-name"
+                    aria-label="Prénom"
                     className={cn(inputClasses, errors.firstName && "border-red-400/50")}
                     {...register("firstName")}
                   />
@@ -132,6 +133,8 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                   <input
                     type="text"
                     placeholder="Nom *"
+                    autoComplete="family-name"
+                    aria-label="Nom"
                     className={cn(inputClasses, errors.lastName && "border-red-400/50")}
                     {...register("lastName")}
                   />
@@ -144,6 +147,8 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                 <input
                   type="text"
                   placeholder="Entreprise / Société"
+                  autoComplete="organization"
+                  aria-label="Entreprise ou société"
                   className={inputClasses}
                   {...register("company")}
                 />
@@ -155,6 +160,9 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                   <input
                     type="email"
                     placeholder="Email *"
+                    autoComplete="email"
+                    inputMode="email"
+                    aria-label="Adresse email"
                     className={cn(inputClasses, errors.email && "border-red-400/50")}
                     {...register("email")}
                   />
@@ -164,6 +172,9 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                   <input
                     type="tel"
                     placeholder="Téléphone"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    aria-label="Téléphone"
                     className={inputClasses}
                     {...register("phone")}
                   />
@@ -175,6 +186,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
                 <textarea
                   placeholder="Décrivez votre projet en quelques mots *"
                   rows={3}
+                  aria-label="Description du projet"
                   className={cn(inputClasses, "resize-none", errors.message && "border-red-400/50")}
                   {...register("message")}
                 />

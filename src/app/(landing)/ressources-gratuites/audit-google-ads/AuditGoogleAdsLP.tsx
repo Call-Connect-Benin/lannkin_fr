@@ -224,7 +224,7 @@ export function AuditGoogleAdsLP() {
       {/* ── TOPBAR ── */}
       <nav className="topbar">
         <div className="tb-l">
-          <div className="tb-logo">EKOLINK<span>.</span>{" "}
+          <div className="tb-logo">LANNKIN<span>.</span>{" "}
             <span style={{ fontSize: 10, fontWeight: 500, color: "var(--text4)", letterSpacing: 0, marginLeft: 2 }}>
               Fait en France
             </span>
@@ -429,7 +429,7 @@ export function AuditGoogleAdsLP() {
             <div style={{ fontSize: 40 }}>&#10003;</div>
             <h3>Rapport en cours de génération !</h3>
             <p>
-              Un expert Google Ads senior EKOLINK va vous <strong style={{ color: "var(--blue)" }}>appeler</strong> pour vous présenter vos résultats :<br /><br />
+              Un expert Google Ads senior LANNKIN va vous <strong style={{ color: "var(--blue)" }}>appeler</strong> pour vous présenter vos résultats :<br /><br />
               - Le rapport complet des clics hors zone<br />
               - Les montants exacts récupérables<br />
               - Le dossier de remboursement Google<br /><br />
@@ -549,17 +549,17 @@ export function AuditGoogleAdsLP() {
 
       {/* ── FULL WIDTH: CAS RÉEL ── */}
       <div className="full-section">
-        <div className="slbl red">CAS RÉEL - AUDIT CLIENT EKOLINK</div>
+        <div className="slbl red">CAS RÉEL - AUDIT CLIENT LANNKIN</div>
         <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 18 }}>Voici ce que notre audit révèle sur un vrai compte</div>
         <div className="case-wrap case-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
           <div style={{ overflow: "hidden", borderRight: "1px solid var(--bd)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://www.ekolink.fr/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <img src="https://www.lannkin.fr/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
           <div className="case-caption" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 10, color: "var(--text)" }}>Voici un exemple de rapport Excel que vous recevrez</div>
             <p style={{ fontSize: 13, color: "var(--text2)", lineHeight: 1.7, marginBottom: 14 }}>
-              Ce client ciblait uniquement le <span className="red">France et l&apos;Ontario (Canada)</span>. Notre script d&apos;export a révélé des dizaines de clics provenant de <span className="red">Tunisie</span> (Tunis, Sousse, Nabeul, Ben Arous, Sfax, Monastir, Kairouan) et d&apos;<span className="red">Ukraine</span> (Zaporizhzhia).
+              Ce client ciblait uniquement le <span className="red">France m??tropolitaine</span>. Notre script d&apos;export a révélé des dizaines de clics provenant de <span className="red">Tunisie</span> (Tunis, Sousse, Nabeul, Ben Arous, Sfax, Monastir, Kairouan) et d&apos;<span className="red">Ukraine</span> (Zaporizhzhia).
             </p>
             <p style={{ fontSize: 13, color: "var(--text2)", lineHeight: 1.7, marginBottom: 16 }}>
               Tous ces clics ont été facturés par Google, zéro chance de conversion. En nous contactant, vous recevez un <strong>rapport complet encore plus détaillé</strong> avec l&apos;ensemble des données exploitables pour votre demande de remboursement.
@@ -616,7 +616,7 @@ export function AuditGoogleAdsLP() {
           <div><div className="sv-n">73%</div><div className="sv-l">Des comptes ont des clics hors zone</div></div>
           <div><div className="sv-n">18%</div><div className="sv-l">Du budget moyen gaspillé</div></div>
           <div><div className="sv-n">500</div><div className="sv-l">IP max bloquables (limite Google)</div></div>
-          <div><div className="sv-n">200+</div><div className="sv-l">Comptes audités par EKOLINK</div></div>
+          <div><div className="sv-n">200+</div><div className="sv-l">Comptes audités par LANNKIN</div></div>
         </div>
       </div>
 
@@ -635,7 +635,7 @@ export function AuditGoogleAdsLP() {
 
       <section className="sec alt">
         <div className="sec-in">
-          <div className="stag green">POURQUOI EKOLINK</div>
+          <div className="stag green">POURQUOI LANNKIN</div>
           <div className="sh">Une agence <span style={{ color: "var(--green)" }}>Google Ads senior</span> basée à Paris</div>
           <div className="sp">+10 ans d&apos;expérience, Google Partner, et une expertise particulière auprès des artisans et commerces locaux. Nous savons exactement où chercher les fuites que les autres ne voient pas.</div>
           <div className="g3">
@@ -644,10 +644,10 @@ export function AuditGoogleAdsLP() {
             <div className="gc"><div className="gc-icon">&#9889;</div><h3>Scripts propriétaires</h3><p>Des scripts d&apos;extraction avancés pour croiser données géo, mots-clés et clics, impossible à faire manuellement à cette échelle.</p></div>
           </div>
           <div style={{ marginTop: 24, borderRadius: 14, overflow: "hidden", border: "1px solid var(--bd)" }}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.9!2d2.3468!3d48.8278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b4a4e8b8a1%3A0x1!2s7%20Rue%20Vulpian%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="EKOLINK - Paris, France" />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.9!2d2.3468!3d48.8278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b4a4e8b8a1%3A0x1!2s7%20Rue%20Vulpian%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="LANNKIN - Paris, France" />
             <div style={{ padding: "14px 18px", background: "var(--bg)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
               <div>
-                <div style={{ fontSize: 14, fontWeight: 700 }}>EKOLINK S.A.S. - Paris, France</div>
+                <div style={{ fontSize: 14, fontWeight: 700 }}>LANNKIN S.A.S. - Paris, France</div>
                 <div style={{ fontSize: 12, color: "var(--text3)" }}>7 Rue Vulpian, 75013 Paris, France</div>
               </div>
               <a href="tel:+33100000000" style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--blue)", color: "#fff", padding: "8px 18px", borderRadius: 8, fontSize: 12, fontWeight: 700, textDecoration: "none" }}>+33 1 00 00 00 00</a>
@@ -708,7 +708,7 @@ export function AuditGoogleAdsLP() {
       <footer className="lp-footer">
         <div className="footer-inner">
           <div className="ft-col">
-            <h4>EKOLINK S.A.S.</h4>
+            <h4>LANNKIN S.A.S.</h4>
             <p>SIRET : 000 000 000 00000</p>
             <p>7 Rue Vulpian</p>
             <p>75013 Paris</p>
@@ -716,7 +716,7 @@ export function AuditGoogleAdsLP() {
           </div>
           <div className="ft-col">
             <h4>Contact</h4>
-            <a href="mailto:info@ekolink.fr">info@ekolink.fr</a>
+            <a href="mailto:info@lannkin.fr">info@lannkin.fr</a>
             <a href="tel:+33100000000">+33 1 00 00 00 00</a>
             <p style={{ marginTop: 6, fontSize: 11, color: "var(--text4)" }}>Lun-Ven, 9h à 17h30 (heure de Paris)</p>
           </div>
@@ -728,7 +728,7 @@ export function AuditGoogleAdsLP() {
             <a href="/services/seo/">SEO</a>
           </div>
         </div>
-        <div className="ft-bottom"><span className="ft-copy">&copy; 2026 EKOLINK S.A. - Tous droits réservés - France</span></div>
+        <div className="ft-bottom"><span className="ft-copy">&copy; 2026 LANNKIN S.A. - Tous droits réservés - France</span></div>
       </footer>
     </div>
   );

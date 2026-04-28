@@ -28,7 +28,7 @@ const siteVitrine: ServicePageContent = {
     {
       title: "Qu'est-ce qu'un site vitrine?",
       content:
-        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez EKOLINK, nous concevons des sites vitrines sur mesure pour les entreprises de Paris et d'Île-de-France qui souhaitent affirmer leur crédibilité en ligne.",
+        "Un site vitrine est une présence en ligne essentielle qui met en valeur votre entreprise, vos services et votre expertise. Contrairement à un site e-commerce, il se concentre sur la génération de contacts qualifiés (leads) plutôt que la vente directe. Chez LANNKIN, nous concevons des sites vitrines sur mesure pour les entreprises de Paris et d'Île-de-France qui souhaitent affirmer leur crédibilité en ligne.",
       items: [
         "Pages de présentation de l'entreprise et de l'équipe",
         "Catalogue de services avec appels à l'action stratégiques",
@@ -41,7 +41,7 @@ const siteVitrine: ServicePageContent = {
     {
       title: "Pourquoi choisir un site vitrine sur mesure?",
       content:
-        "Les templates génériques ne suffisent plus pour se démarquer dans le marché français compétitif. Un site vitrine conçu sur mesure par EKOLINK est optimisé pour votre industrie, votre clientèle cible et les moteurs de recherche. Nous utilisons les dernières technologies (Next.js, TailwindCSS) pour garantir des temps de chargement ultra-rapides et une expérience mobile irréprochable.",
+        "Les templates génériques ne suffisent plus pour se démarquer dans le marché français compétitif. Un site vitrine conçu sur mesure par LANNKIN est optimisé pour votre industrie, votre clientèle cible et les moteurs de recherche. Nous utilisons les dernières technologies (Next.js, TailwindCSS) pour garantir des temps de chargement ultra-rapides et une expérience mobile irréprochable.",
     },
     {
       title: "Technologies et performance",
@@ -91,7 +91,7 @@ const siteWordpress: ServicePageContent = {
     {
       title: "Pourquoi choisir WordPress pour votre site web?",
       content:
-        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez EKOLINK, nous développons des sites WordPress sur mesure pour les entreprises de Paris, d'Île-de-France et de toute la France qui veulent un site performant et facile à gérer.",
+        "WordPress propulse plus de 43% des sites web dans le monde. C'est le CMS le plus populaire pour une bonne raison : il offre une flexibilité inégalée, un écosystème de plugins riche et une communauté massive. Chez LANNKIN, nous développons des sites WordPress sur mesure pour les entreprises de Paris, d'Île-de-France et de toute la France qui veulent un site performant et facile à gérer.",
       items: [
         "Thèmes WordPress custom développés sur mesure pour votre marque",
         "Sélection rigoureuse de plugins premium (SEO, sécurité, cache, formulaires)",
@@ -150,12 +150,12 @@ const siteShopify: ServicePageContent = {
   slug: "site-shopify",
   heroTitle: "Agence web Shopify à Paris — Votre boutique e-commerce sur mesure",
   heroSubtitle:
-    "EKOLINK, votre agence web Shopify en France. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
+    "LANNKIN, votre agence web Shopify en France. Création de boutiques Shopify performantes, développement Liquid sur mesure et stratégie e-commerce complète pour propulser vos ventes en ligne.",
   sections: [
     {
-      title: "Pourquoi choisir EKOLINK comme agence web Shopify en France?",
+      title: "Pourquoi choisir LANNKIN comme agence web Shopify en France?",
       content:
-        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, EKOLINK accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
+        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
         "Configuration multilingue français/anglais pour le France",
@@ -200,7 +200,7 @@ const siteShopify: ServicePageContent = {
     { step: 5, title: "Lancement et formation", description: "Mise en ligne, formation à l'interface admin Shopify, configuration des rapports de vente et du suivi analytique." },
   ],
   faq: [
-    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par EKOLINK commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
+    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par LANNKIN commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
     { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify permet de configurer la TVA pour les ventes en France, ainsi que les autres taxes applicables selon votre marché et vos zones de vente." },
     { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir les marchés francophone et anglophone du Canada." },
     { question: "Comment migrer ma boutique WooCommerce vers Shopify?", answer: "Nous utilisons des outils de migration spécialisés pour transférer vos produits, clients, commandes et redirections SEO de WooCommerce vers Shopify sans perte de données ni de référencement." },
@@ -219,7 +219,7 @@ const siteNextjs: ServicePageContent = {
     {
       title: "Qu'est-ce que Next.js et pourquoi c'est supérieur?",
       content:
-        "Next.js est le framework React développé par Vercel qui propulse les sites de Nike, Netflix, TikTok et des milliers d'entreprises. Il combine le rendu côté serveur (SSR), la génération statique (SSG) et le rendu incrémental (ISR) pour offrir les meilleures performances possibles. Chez EKOLINK, nous sommes spécialisés en Next.js 15 avec App Router, Server Components et les dernières innovations React.",
+        "Next.js est le framework React développé par Vercel qui propulse les sites de Nike, Netflix, TikTok et des milliers d'entreprises. Il combine le rendu côté serveur (SSR), la génération statique (SSG) et le rendu incrémental (ISR) pour offrir les meilleures performances possibles. Chez LANNKIN, nous sommes spécialisés en Next.js 15 avec App Router, Server Components et les dernières innovations React.",
       items: [
         "Next.js 15 avec App Router et React Server Components",
         "Server-Side Rendering (SSR) pour un SEO optimal",
@@ -283,7 +283,7 @@ const siteHeadlessCms: ServicePageContent = {
     {
       title: "Qu'est-ce qu'un headless CMS?",
       content:
-        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. EKOLINK accompagne les entreprises de Paris et d'Île-de-France dans l'adoption de cette architecture moderne.",
+        "Un headless CMS sépare la gestion du contenu (back-end) de la présentation (front-end). Contrairement à WordPress qui lie les deux, un headless CMS expose votre contenu via une API, ce qui permet de l'afficher sur un site web Next.js, une application mobile, un kiosque digital ou tout autre canal. LANNKIN accompagne les entreprises de Paris et d'Île-de-France dans l'adoption de cette architecture moderne.",
       items: [
         "Sanity.io : CMS headless en temps réel avec Studio personnalisable",
         "Strapi : CMS headless open-source auto-hébergé (Node.js)",
@@ -360,7 +360,7 @@ const refonteSiteWeb: ServicePageContent = {
     {
       title: "Préservation du référencement lors de la refonte",
       content:
-        "La plus grande crainte lors d'une refonte est la perte de positionnement SEO. Chez EKOLINK, nous appliquons un protocole strict de préservation SEO qui inclut l'audit complet de votre référencement actuel, le mapping de toutes les URLs, la mise en place de redirections 301 et le suivi post-lancement avec Google Search Console.",
+        "La plus grande crainte lors d'une refonte est la perte de positionnement SEO. Chez LANNKIN, nous appliquons un protocole strict de préservation SEO qui inclut l'audit complet de votre référencement actuel, le mapping de toutes les URLs, la mise en place de redirections 301 et le suivi post-lancement avec Google Search Console.",
       items: [
         "Audit SEO complet avant la refonte (positions, backlinks, trafic)",
         "Mapping exhaustif de toutes les URLs avec redirections 301",

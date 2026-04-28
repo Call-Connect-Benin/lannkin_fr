@@ -4,7 +4,7 @@ import { PRICING_ODOO } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Odoo ERP & CRM | Ekolink",
+  title: "Tarifs Odoo ERP & CRM | Lannkin",
   description:
     "Intégration Odoo dès 199€/mois. Site web, ERP, CRM et e-commerce Odoo. Migration de données et formation incluses.",
 };

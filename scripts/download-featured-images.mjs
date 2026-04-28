@@ -7,7 +7,7 @@ import path from "path";
 import https from "https";
 import sharp from "sharp";
 
-const WP_API = "https://www.ekolink.fr/wp-json/wp/v2";
+const WP_API = "https://www.lannkin.fr/wp-json/wp/v2";
 const BLOG_DIR = path.resolve("content/blog");
 const IMAGES_DIR = path.resolve("public/images/blog");
 const DELAY_MS = 2000;
@@ -15,7 +15,7 @@ const DELAY_MS = 2000;
 const HEADERS = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
   "Accept": "application/json",
-  "Referer": "https://www.ekolink.fr/blog/",
+  "Referer": "https://www.lannkin.fr/blog/",
 };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -44,7 +44,7 @@ function downloadFile(url) {
       headers: {
         "User-Agent": HEADERS["User-Agent"],
         "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
-        "Referer": "https://www.ekolink.fr/blog/",
+        "Referer": "https://www.lannkin.fr/blog/",
       },
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {

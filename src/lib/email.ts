@@ -18,9 +18,9 @@ export const transporter = nodemailer.createTransport({
 export const SMTP_FROM =
   process.env.SMTP_FROM ??
   process.env.SMTP_USER ??
-  "noreply@ekolink.fr";
+  "noreply@lannkin.fr";
 
-export const SMTP_TO = [process.env.SMTP_TO ?? "info@ekolink.fr", "login@ekolink.com", "Gabriel@ekolink.com"];
+export const SMTP_TO = [process.env.SMTP_TO ?? "info@lannkin.fr", "login@lannkin.com", "Gabriel@lannkin.com"];
 
 // ---------------------------------------------------------------------------
 // HTML email builder
@@ -56,7 +56,7 @@ export function buildContactHtml(fields: Record<string, string | undefined>, tit
   const banner = showBanner
     ? `<div style="background:#498f6d;padding:20px 24px;">
         <h1 style="margin:0;color:#ffffff;font-size:18px;font-weight:700;">${title}</h1>
-        <p style="margin:4px 0 0;color:rgba(255,255,255,.8);font-size:13px;">ekolink.fr</p>
+        <p style="margin:4px 0 0;color:rgba(255,255,255,.8);font-size:13px;">lannkin.fr</p>
       </div>`
     : "";
 
@@ -72,7 +72,7 @@ export function buildContactHtml(fields: Record<string, string | undefined>, tit
       </table>
     </div>
     <div style="padding:12px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;font-size:11px;color:#9ca3af;">
-      Envoyé depuis ekolink.fr — Ne pas répondre à cet email, répondez directement au client.
+      Envoyé depuis lannkin.fr — Ne pas répondre à cet email, répondez directement au client.
     </div>
   </div>
 </body>

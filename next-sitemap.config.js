@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://ekolink.fr",
+  siteUrl: "https://lannkin.fr",
   generateRobotsTxt: true,
   trailingSlash: true,
   changefreq: "weekly",

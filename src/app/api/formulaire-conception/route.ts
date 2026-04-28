@@ -162,7 +162,7 @@ export async function POST(req: NextRequest) {
     }
     if (code === "EAUTH") {
       return NextResponse.json(
-        { error: "Erreur de configuration email. Veuillez nous contacter directement à info@ekolink.fr." },
+        { error: "Erreur de configuration email. Veuillez nous contacter directement à info@lannkin.fr." },
         { status: 503 },
       );
     }

@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Beauté & Esthétique Paris | Salons, Spas, Barbiers | Ekolink",
+  title: "Marketing Digital Beauté & Esthétique Paris | Salons, Spas, Barbiers | Lannkin",
   description:
     "Agence marketing beauté à Paris. Instagram Ads, booking en ligne, avis Google, identité de marque pour salons de coiffure, spas et esthéticiennes. Devis gratuit.",
   keywords: [

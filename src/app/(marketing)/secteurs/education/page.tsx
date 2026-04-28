@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Éducation & Formation Paris | Recrutement Étudiants | Ekolink",
+  title: "Marketing Digital Éducation & Formation Paris | Recrutement Étudiants | Lannkin",
   description:
     "Agence marketing spécialisée éducation à Paris. Google Ads formation, lead gen étudiants, LinkedIn Ads, site web avec inscription en ligne. Devis gratuit.",
   keywords: [

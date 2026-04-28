@@ -4,7 +4,7 @@ import { getZoneBySlug } from "@/data/zones";
 import { ZonePageTemplate } from "@/presentation/components/zone/ZonePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Agence Web Paris | Sites Web, SEO & Google Ads | Ekolink",
+  title: "Agence Web Paris | Sites Web, SEO & Google Ads | Lannkin",
   description:
     "Agence web à Paris certifiée Google Partner. Conception de sites web, SEO, Google Ads et marketing digital pour PME parisiennes depuis 2015. Devis gratuit en 24h.",
   keywords: [

@@ -4,7 +4,7 @@ import { PRICING_RESEAUX_SOCIAUX } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Réseaux Sociaux | Ekolink",
+  title: "Tarifs Réseaux Sociaux | Lannkin",
   description:
     "Publicité sociale dès 500€/mois. TikTok, LinkedIn, Snapchat et Pinterest Ads. Ciblage avancé et création de contenu inclus.",
 };

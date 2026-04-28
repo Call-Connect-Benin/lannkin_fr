@@ -29,7 +29,7 @@ const SERVICE_META: Record<string, { label: string; desc: string }> = {
   "montage-video":             { label: "Montage Vidéo",             desc: "Contenus vidéo professionnels pour vos campagnes" },
 };
 
-const WHY_EKOLINK = [
+const WHY_LANNKIN = [
   {
     title: "Certifié Google Partner",
     desc: "Expertise Google Ads validée officiellement. Votre budget géré par des spécialistes certifiés.",
@@ -165,17 +165,17 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
         </Container>
       </section>
 
-      {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
+      {/* ── Pourquoi Lannkin ─────────────────────────────────────── */}
       <section className="py-16 lg:py-24" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
           <h2 className="font-heading mb-3 text-3xl font-bold text-[#2d2d2d]">
-            Pourquoi choisir Ekolink à {zone.city} ?
+            Pourquoi choisir Lannkin à {zone.city} ?
           </h2>
           <p className="mb-10 max-w-2xl text-base" style={{ color: "#6B7280" }}>
             Plus de 10 ans d&apos;expertise au service des entreprises françaises.
           </p>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {WHY_EKOLINK.map((item) => (
+            {WHY_LANNKIN.map((item) => (
               <div
                 key={item.title}
                 className="rounded-xl p-5"
@@ -264,9 +264,9 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Ekolink S.A.S.",
+            name: "Lannkin S.A.S.",
             description: zone.description,
-            url: `https://ekolink.fr/zone/${zone.slug}/`,
+            url: `https://lannkin.fr/zone/${zone.slug}/`,
             telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Odoo | Ekolink",
+  title: "Blog Odoo | Lannkin",
   description: "Articles et guides sur Odoo. Tutoriels, bonnes pratiques et actualités de l'ERP open source Odoo.",
 };
 

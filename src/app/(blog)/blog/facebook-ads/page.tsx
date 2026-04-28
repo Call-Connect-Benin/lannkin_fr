@@ -8,7 +8,7 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Blog Facebook Ads | Stratégies Meta | Ekolink",
+  title: "Blog Facebook Ads | Stratégies Meta | Lannkin",
   description:
     "Articles et guides Facebook Ads et Instagram Ads. Stratégies de ciblage, optimisation créatifs, Pixel Meta, retargeting avancé et API Conversions.",
 };
@@ -254,7 +254,7 @@ export default function BlogFacebookAdsPage() {
                   Vous gérez vos Meta Ads ?
                 </h3>
                 <p className="mt-2 text-sm text-[#6B7280]">
-                  Ekolink gère des comptes Facebook Ads dès 500€/mois. Ciblage
+                  Lannkin gère des comptes Facebook Ads dès 500€/mois. Ciblage
                   avancé, créatifs et reporting inclus.
                 </p>
                 <Link

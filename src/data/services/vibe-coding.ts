@@ -16,7 +16,7 @@ const lovable: ServicePageContent = {
     {
       title: "Qu'est-ce que Lovable?",
       content:
-        "Lovable (anciennement GPT Engineer) est une plateforme de vibe coding qui permet de créer des applications web complètes à partir de descriptions en langage naturel. En quelques prompts, Lovable génère un site React fonctionnel avec design, navigation et logique métier. Chez EKOLINK à Paris, nous exploitons Lovable pour livrer des projets web en un temps record.",
+        "Lovable (anciennement GPT Engineer) est une plateforme de vibe coding qui permet de créer des applications web complètes à partir de descriptions en langage naturel. En quelques prompts, Lovable génère un site React fonctionnel avec design, navigation et logique métier. Chez LANNKIN à Paris, nous exploitons Lovable pour livrer des projets web en un temps record.",
       items: [
         "Génération de sites React complets à partir de prompts en français",
         "Design moderne avec TailwindCSS et Shadcn/ui intégré",
@@ -40,7 +40,7 @@ const lovable: ServicePageContent = {
       ],
     },
     {
-      title: "Notre expertise Lovable chez EKOLINK",
+      title: "Notre expertise Lovable chez LANNKIN",
       content:
         "Nous avons livré plus de 30 projets avec Lovable pour des entreprises à Paris, en Île-de-France et partout en France. Notre expertise en prompt engineering et en architecture logicielle nous permet d'obtenir des résultats professionnels là où d'autres obtiennent du code amateur. Nous savons quand Lovable est le bon outil et quand il faut passer à du développement traditionnel.",
     },
@@ -61,7 +61,7 @@ const lovable: ServicePageContent = {
     { step: 5, title: "Déploiement et transfert", description: "Déploiement en production, transfert du code sur votre GitHub, documentation et formation à la maintenance." },
   ],
   faq: [
-    { question: "Le code généré par Lovable est-il de qualité professionnelle?", answer: "Le code de base est correct mais nécessite une revue et des ajustements par un développeur expérimenté. Chez EKOLINK, nous auditons et optimisons systématiquement le code généré avant la mise en production." },
+    { question: "Le code généré par Lovable est-il de qualité professionnelle?", answer: "Le code de base est correct mais nécessite une revue et des ajustements par un développeur expérimenté. Chez LANNKIN, nous auditons et optimisons systématiquement le code généré avant la mise en production." },
     { question: "Puis-je modifier le code après la livraison?", answer: "Oui, le code est 100% exportable vers GitHub. C'est du React/TypeScript standard que tout développeur peut maintenir et faire évoluer." },
     { question: "Lovable est-il adapté pour un site e-commerce?", answer: "Pour un e-commerce simple avec quelques produits, oui. Pour un catalogue important avec gestion d'inventaire, nous recommandons plutôt Shopify ou une solution dédiée." },
     { question: "Combien de temps faut-il pour un projet Lovable?", answer: "Un MVP fonctionnel peut être livré en 3 à 5 jours ouvrables. Les projets plus complexes avec backend et authentification prennent 1 à 2 semaines." },
@@ -143,7 +143,7 @@ const cursorAi: ServicePageContent = {
     {
       title: "Qu'est-ce que Cursor AI?",
       content:
-        "Cursor est un IDE basé sur VS Code qui intègre nativement l'intelligence artificielle dans chaque aspect du développement. Contrairement aux outils de vibe coding qui génèrent du code à partir de zéro, Cursor excelle dans le travail sur des bases de code existantes, le refactoring complexe et le pair programming IA. C'est l'outil privilégié de notre équipe EKOLINK pour les projets techniques avancés.",
+        "Cursor est un IDE basé sur VS Code qui intègre nativement l'intelligence artificielle dans chaque aspect du développement. Contrairement aux outils de vibe coding qui génèrent du code à partir de zéro, Cursor excelle dans le travail sur des bases de code existantes, le refactoring complexe et le pair programming IA. C'est l'outil privilégié de notre équipe LANNKIN pour les projets techniques avancés.",
       items: [
         "Fork de VS Code avec IA intégrée nativement",
         "Chat IA contextuel avec accès à tout votre codebase",
@@ -220,7 +220,7 @@ const claudeCode: ServicePageContent = {
     {
       title: "Claude Code pour les projets d'entreprise en France",
       content:
-        "Chez EKOLINK, nous utilisons Claude Code quotidiennement pour nos projets Next.js, nos intégrations Odoo et nos développements sur mesure. Sa capacité à comprendre des codebases entiers et à effectuer des modifications multi-fichiers en fait un outil indispensable pour les projets d'envergure des entreprises de Paris et Paris.",
+        "Chez LANNKIN, nous utilisons Claude Code quotidiennement pour nos projets Next.js, nos intégrations Odoo et nos développements sur mesure. Sa capacité à comprendre des codebases entiers et à effectuer des modifications multi-fichiers en fait un outil indispensable pour les projets d'envergure des entreprises de Paris et Paris.",
       items: [
         "Développement full-stack avec Next.js, React et Node.js",
         "Refactoring de legacy code et migration de frameworks",
@@ -282,9 +282,9 @@ const v0Vercel: ServicePageContent = {
       ],
     },
     {
-      title: "v0 dans le workflow EKOLINK",
+      title: "v0 dans le workflow LANNKIN",
       content:
-        "Chez EKOLINK, nous utilisons v0 comme accélérateur dans notre processus de développement Next.js. Il nous permet de traduire les maquettes Figma en composants React en quelques minutes plutôt qu'en heures, ce qui réduit les coûts pour nos clients de Paris et Paris tout en maintenant une qualité irréprochable.",
+        "Chez LANNKIN, nous utilisons v0 comme accélérateur dans notre processus de développement Next.js. Il nous permet de traduire les maquettes Figma en composants React en quelques minutes plutôt qu'en heures, ce qui réduit les coûts pour nos clients de Paris et Paris tout en maintenant une qualité irréprochable.",
       items: [
         "Traduction rapide de maquettes Figma en composants React",
         "Prototypage d'interfaces pour validation client",
@@ -353,7 +353,7 @@ const windsurf: ServicePageContent = {
     {
       title: "Windsurf pour les entreprises de Paris et Paris",
       content:
-        "EKOLINK recommande Windsurf aux équipes de développement françaises qui cherchent un IDE IA complet avec une courbe d'apprentissage douce. Son interface familière (basée sur VS Code) et ses capacités Cascade en font un choix excellent pour les équipes qui veulent adopter le vibe coding graduellement.",
+        "LANNKIN recommande Windsurf aux équipes de développement françaises qui cherchent un IDE IA complet avec une courbe d'apprentissage douce. Son interface familière (basée sur VS Code) et ses capacités Cascade en font un choix excellent pour les équipes qui veulent adopter le vibe coding graduellement.",
       items: [
         "Adoption progressive du vibe coding pour les équipes existantes",
         "Projets full-stack Next.js, React, Node.js, Python",
@@ -579,18 +579,18 @@ const formation: ServicePageContent = {
   slug: "formation",
   heroTitle: "Formation vibe coding 1 journée à Paris et Paris",
   heroSubtitle:
-    "Apprenez à créer des applications web avec l'IA en une seule journée. Formation hands-on avec Lovable, Cursor, Claude Code et v0. Certification EKOLINK incluse.",
+    "Apprenez à créer des applications web avec l'IA en une seule journée. Formation hands-on avec Lovable, Cursor, Claude Code et v0. Certification LANNKIN incluse.",
   sections: [
     {
       title: "Programme de la formation vibe coding",
       content:
-        "Notre formation intensive d'une journée vous donne les compétences pratiques pour créer des applications web fonctionnelles en utilisant les outils de vibe coding les plus performants du marché. Vous repartez avec un projet concret déployé en ligne et une certification EKOLINK.",
+        "Notre formation intensive d'une journée vous donne les compétences pratiques pour créer des applications web fonctionnelles en utilisant les outils de vibe coding les plus performants du marché. Vous repartez avec un projet concret déployé en ligne et une certification LANNKIN.",
       items: [
         "Matin (9h-12h) : Introduction au vibe coding, Lovable et Bolt.new",
         "Midi (12h-13h) : Pause repas et networking avec les participants",
         "Après-midi (13h-15h) : Cursor AI, Claude Code et v0 by Vercel",
         "Fin de journée (15h-17h) : Projet pratique complet et déploiement",
-        "Certification EKOLINK Vibe Coding remise en fin de journée",
+        "Certification LANNKIN Vibe Coding remise en fin de journée",
       ],
     },
     {
@@ -608,14 +608,14 @@ const formation: ServicePageContent = {
     {
       title: "Ce que vous repartez avec",
       content:
-        "À la fin de la formation, vous aurez créé et déployé votre propre application web. Vous maîtriserez les fondamentaux du prompt engineering pour le code et vous saurez choisir le bon outil selon votre contexte. La certification EKOLINK valorise ces compétences auprès de vos clients et employeurs.",
+        "À la fin de la formation, vous aurez créé et déployé votre propre application web. Vous maîtriserez les fondamentaux du prompt engineering pour le code et vous saurez choisir le bon outil selon votre contexte. La certification LANNKIN valorise ces compétences auprès de vos clients et employeurs.",
     },
   ],
   benefits: [
     "Formation pratique hands-on d'une journée complète",
     "5 outils de vibe coding maîtrisés en 8 heures",
     "Projet concret déployé en ligne en fin de journée",
-    "Certification EKOLINK Vibe Coding incluse",
+    "Certification LANNKIN Vibe Coding incluse",
     "Support post-formation de 30 jours par email",
     "Disponible en présentiel à Paris/Paris ou en ligne",
   ],
@@ -624,7 +624,7 @@ const formation: ServicePageContent = {
     { step: 2, title: "Préparation", description: "Réception du matériel préparatoire : création des comptes sur les plateformes de vibe coding et installation des outils nécessaires." },
     { step: 3, title: "Formation intensive", description: "Journée complète de formation hands-on avec alternance de démonstrations, d'exercices pratiques et de sessions de questions-réponses." },
     { step: 4, title: "Projet final", description: "Création d'un projet complet en 2 heures utilisant les outils appris. Déploiement en production et présentation au groupe." },
-    { step: 5, title: "Certification et suivi", description: "Remise de la certification EKOLINK, accès au groupe privé des alumni et 30 jours de support post-formation par email." },
+    { step: 5, title: "Certification et suivi", description: "Remise de la certification LANNKIN, accès au groupe privé des alumni et 30 jours de support post-formation par email." },
   ],
   faq: [
     { question: "Faut-il savoir coder pour suivre cette formation?", answer: "Non. La formation est conçue pour les débutants complets comme pour les développeurs expérimentés. Les exercices sont adaptés à votre niveau et les outils de vibe coding permettent de créer des applications sans écrire de code manuellement." },
@@ -710,7 +710,7 @@ const migrationVibeCoding: ServicePageContent = {
     {
       title: "Pourquoi migrer un projet vibe coding?",
       content:
-        "Les projets créés avec des outils de vibe coding atteignent souvent un plafond technique. Quand votre MVP devient un produit, quand votre prototype devient une application critique, il est temps de migrer vers une infrastructure plus robuste et maintenable. EKOLINK accompagne les entreprises françaises dans cette transition cruciale.",
+        "Les projets créés avec des outils de vibe coding atteignent souvent un plafond technique. Quand votre MVP devient un produit, quand votre prototype devient une application critique, il est temps de migrer vers une infrastructure plus robuste et maintenable. LANNKIN accompagne les entreprises françaises dans cette transition cruciale.",
       items: [
         "Limites de l'outil actuel (performance, scalabilité, fonctionnalités)",
         "Besoin de contrôle total sur l'infrastructure et le code",

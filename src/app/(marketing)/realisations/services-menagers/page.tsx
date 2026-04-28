@@ -9,11 +9,11 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Sites Web Services Ménagers France | Portfolio Ekolink",
+  title: "Sites Web Services Ménagers France | Portfolio Lannkin",
   description:
-    "Portfolio Ekolink : sites web et landing pages pour services d'entretien ménager résidentiel et commercial en France. Conception web, Google Ads et SEO local.",
+    "Portfolio Lannkin : sites web et landing pages pour services d'entretien ménager résidentiel et commercial en France. Conception web, Google Ads et SEO local.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/services-menagers/",
+    canonical: "https://lannkin.fr/realisations/services-menagers/",
   },
 };
 
@@ -25,7 +25,7 @@ export default function RealisationsServicesMenagersPage() {
       <RealisationsBanner
         currentCategory="tous"
         title="Sites web — Services ménagers"
-        description="Ekolink crée des landing pages et sites web haute conversion pour les services d'entretien ménager résidentiel et commercial en France — avec formulaires de réservation et campagnes Google Ads."
+        description="Lannkin crée des landing pages et sites web haute conversion pour les services d'entretien ménager résidentiel et commercial en France — avec formulaires de réservation et campagnes Google Ads."
         stats={[
           { value: `${count} projets`, label: "en services ménagers" },
           { value: "Google Ads", label: "ROI-positif dès le lancement" },
@@ -60,7 +60,7 @@ export default function RealisationsServicesMenagersPage() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: "#6B7280" }}>
               Pour les services d&apos;entretien ménager, la clé est la conversion rapide : un
-              visiteur doit pouvoir demander une soumission en moins de 30 secondes. Ekolink
+              visiteur doit pouvoir demander une soumission en moins de 30 secondes. Lannkin
               conçoit des landing pages et sites web optimisés pour ce marché, combinés à des
               campagnes Google Ads géolocalisées pour générer des réservations dès le premier jour.
             </p>

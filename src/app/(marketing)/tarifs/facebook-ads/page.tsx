@@ -4,7 +4,7 @@ import { PRICING_FACEBOOK_ADS } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Facebook & Meta Ads | Ekolink",
+  title: "Tarifs Facebook & Meta Ads | Lannkin",
   description:
     "Publicité Meta dès 199€. Page Pro, Pixel, gestion Facebook et Instagram Ads. Standard à 500€/mois, Premium à 900€/mois.",
 };

@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const CLIENT_SCREENSHOTS = [
   "/images/screenshots/andleikay.webp",
@@ -15,10 +16,13 @@ const CLIENT_SCREENSHOTS = [
 ];
 
 function PhoneCarousel() {
+  const prefersReducedMotion = useReducedMotion();
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState(-1);
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
+
     const interval = setInterval(() => {
       setCurrent((p) => {
         setPrev(p);
@@ -26,7 +30,7 @@ function PhoneCarousel() {
       });
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
@@ -36,32 +40,28 @@ function PhoneCarousel() {
         className="absolute rounded-2xl overflow-hidden shadow-2xl w-[42%]"
         style={{ left: "-5%", top: "5%", transform: "rotate(-3deg)", opacity: 0.55, zIndex: 1 }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={CLIENT_SCREENSHOTS[0]} alt="" className="w-full h-auto" loading="lazy" />
+        <Image src={CLIENT_SCREENSHOTS[0]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Left front card — overlaps phone slightly */}
       <div
         className="absolute rounded-2xl overflow-hidden shadow-2xl w-[38%]"
         style={{ left: "2%", top: "25%", transform: "rotate(-1deg)", opacity: 0.7, zIndex: 3 }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={CLIENT_SCREENSHOTS[1]} alt="" className="w-full h-auto" loading="lazy" />
+        <Image src={CLIENT_SCREENSHOTS[1]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Right back card */}
       <div
         className="absolute rounded-2xl overflow-hidden shadow-2xl w-[42%]"
         style={{ right: "-5%", top: "3%", transform: "rotate(3deg)", opacity: 0.55, zIndex: 1 }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={CLIENT_SCREENSHOTS[2]} alt="" className="w-full h-auto" loading="lazy" />
+        <Image src={CLIENT_SCREENSHOTS[2]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Right front card — overlaps phone slightly */}
       <div
         className="absolute rounded-2xl overflow-hidden shadow-2xl w-[38%]"
         style={{ right: "2%", top: "22%", transform: "rotate(2deg)", opacity: 0.7, zIndex: 3 }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={CLIENT_SCREENSHOTS[3]} alt="" className="w-full h-auto" loading="lazy" />
+        <Image src={CLIENT_SCREENSHOTS[3]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
 
       {/* Center phone mockup — iPhone 16 Pro style */}
@@ -86,11 +86,12 @@ function PhoneCarousel() {
               animate={{ x }}
               transition={i === current || i === prev ? { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } : { duration: 0 }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={src}
                 alt={`Site client ${i + 1}`}
-                className="w-full h-full object-cover object-top"
+                width={540}
+                height={1170}
+                className="h-full w-full object-cover object-top"
               />
             </motion.div>
             );

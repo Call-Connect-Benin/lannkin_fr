@@ -9,9 +9,9 @@ import { formatDate, getAllPosts } from "@/lib/blog";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Blog Marketing Digital France | Ekolink",
+  title: "Blog Marketing Digital France | Lannkin",
   description:
-    "Conseils SEO, tendances web et guides marketing digital en France. Articles par les experts Ekolink sur le SEO, Google Ads, IA et developpement web.",
+    "Conseils SEO, tendances web et guides marketing digital en France. Articles par les experts Lannkin sur le SEO, Google Ads, IA et developpement web.",
 };
 
 const BLOG_STATS = [
@@ -75,7 +75,7 @@ export default function BlogPage() {
               </div>
 
               <h1 className="mt-6 font-heading text-5xl font-bold tracking-tight text-[#2d2d2d] lg:text-[4.2rem] lg:leading-[0.96]">
-                Le blog Ekolink, pense comme une
+                Le blog Lannkin, pense comme une
                 <span className="text-accent"> revue de travail</span>.
               </h1>
 

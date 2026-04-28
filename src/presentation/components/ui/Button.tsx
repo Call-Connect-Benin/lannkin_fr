@@ -65,6 +65,7 @@ export const Button = forwardRef<
 ) {
   const classes = cn(
     "inline-flex items-center justify-center font-body font-medium transition-colors duration-200 cursor-pointer select-none",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f7f5f0]",
     "disabled:opacity-50 disabled:pointer-events-none",
     variants[variant],
     sizes[size],

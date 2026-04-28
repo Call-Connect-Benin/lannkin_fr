@@ -23,16 +23,16 @@ export const FAQ: FaqItem[] = [
   // --- GÉNÉRAL ---
   {
     id: "faq-1",
-    question: "Qui est Ekolink ?",
+    question: "Qui est Lannkin ?",
     answer:
-      "Ekolink S.A.S. est une agence de marketing digital 360° basée à Paris, France. Fondée en 2015 par Albert Lanne et Kevin Kinani, nous accompagnons les PME et startups dans leur croissance digitale avec une approche osée et innovante.",
+      "Lannkin S.A.S. est une agence de marketing digital 360° basée à Paris, France. Fondée en 2015 par Albert Lanne et Kevin Kinani, nous accompagnons les PME et startups dans leur croissance digitale avec une approche osée et innovante.",
     category: "general",
   },
   {
     id: "faq-2",
     question: "Quelles régions servez-vous ?",
     answer:
-      "Nous servons principalement Paris et l'Île-de-France, mais aussi Lille, Strasbourg, Nice et l'ensemble de la France. Nous travaillons également avec des clients au Canada et à l'international.",
+      "Nous servons principalement Paris et l'Île-de-France, mais aussi Lille, Strasbourg, Nice et l'ensemble de la France.",
     category: "general",
   },
   {

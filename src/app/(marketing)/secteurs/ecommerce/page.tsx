@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Agence E-Commerce Paris & Paris | Shopify, Google Shopping, SEO | Ekolink",
+  title: "Agence E-Commerce Paris & Paris | Shopify, Google Shopping, SEO | Lannkin",
   description:
     "Agence e-commerce certifiée Shopify Partner à Paris. Google Shopping, Facebook Shops, SEO produit, optimisation du taux de conversion. Faites croître votre boutique en ligne.",
   keywords: [

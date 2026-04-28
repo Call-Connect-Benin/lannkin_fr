@@ -4,7 +4,7 @@ import { getZoneBySlug } from "@/data/zones";
 import { ZonePageTemplate } from "@/presentation/components/zone/ZonePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Agence Google Ads Paris | Certifié Google Partner | Ekolink",
+  title: "Agence Google Ads Paris | Certifié Google Partner | Lannkin",
   description:
     "Agence Google Ads certifiée à Paris. Campagnes Search, Display, Shopping, YouTube et Performance Max. Scripts anti-fraude propriétaires. Devis gratuit.",
   keywords: [

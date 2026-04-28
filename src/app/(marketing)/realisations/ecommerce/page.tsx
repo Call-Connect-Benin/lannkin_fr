@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
+  title: "Création Boutique E-commerce Paris & France | Portfolio Lannkin",
   description:
-    "Agence e-commerce à Paris : création de boutiques en ligne Shopify, WooCommerce et sur mesure. Portfolio de réalisations e-commerce en France et au Canada. Devis gratuit.",
+    "Agence e-commerce à Paris : création de boutiques en ligne Shopify, WooCommerce et sur mesure. Portfolio de réalisations e-commerce en France. Devis gratuit.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/ecommerce/",
+    canonical: "https://lannkin.fr/realisations/ecommerce/",
   },
   openGraph: {
-    title: "Création Boutique E-commerce Paris & France | Portfolio Ekolink",
+    title: "Création Boutique E-commerce Paris & France | Portfolio Lannkin",
     description:
       "Découvrez nos réalisations e-commerce à Paris et en France : Shopify, WooCommerce, boutiques B2B. +420 % de revenus pour nos clients e-commerce.",
-    url: "https://ekolink.fr/realisations/ecommerce/",
+    url: "https://lannkin.fr/realisations/ecommerce/",
   },
 };
 
@@ -73,10 +73,9 @@ export default function RealisationsEcommercePage() {
             <div className="mt-6 grid gap-8 sm:grid-cols-2">
               <div className="space-y-4 text-sm leading-relaxed text-[#6B7280]">
                 <p>
-                  Ekolink est une <strong className="text-[#2d2d2d]">agence e-commerce basée à Paris, France</strong>.
+                  Lannkin est une <strong className="text-[#2d2d2d]">agence e-commerce basée à Paris, France</strong>.
                   Depuis plus de 10 ans, nous concevons des boutiques en ligne pour les entreprises françaises
-                  et françaises qui souhaitent vendre leurs produits sur internet — en France, au Canada
-                  ou à l&apos;international.
+                  qui souhaitent vendre leurs produits sur internet partout en France.
                 </p>
                 <p>
                   Que vous cherchiez à <strong className="text-[#2d2d2d]">créer une boutique en ligne à Paris</strong>,
@@ -112,7 +111,7 @@ export default function RealisationsEcommercePage() {
                 Basée à <strong className="text-[#2d2d2d]">Paris (France)</strong>, notre agence accompagne
                 les entreprises de la grande région de Paris dans leur transformation digitale :
                 Paris et l'Île-de-France (Versailles, Boulogne, Neuilly, Saint-Germain),
-                Hauts-de-Seine (Créteil, Nanterre, Vincennes) et partout au Canada.
+                Hauts-de-Seine (Créteil, Nanterre, Vincennes) et partout en France.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
                 Nos boutiques e-commerce sont livrées avec une <strong className="text-[#2d2d2d]">stratégie

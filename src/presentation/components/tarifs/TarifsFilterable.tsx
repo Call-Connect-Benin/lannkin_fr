@@ -169,89 +169,69 @@ export function TarifsFilterable() {
               }}
             >
               <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-[3px] rounded-t-[1.75rem] bg-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                aria-hidden
+              />
+              <div
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden
                 style={{
                   background:
-                    "radial-gradient(circle at top right, rgba(73,143,109,0.10), transparent 34%), radial-gradient(circle at bottom left, rgba(133,53,62,0.05), transparent 28%)",
+                    "radial-gradient(circle at top right, rgba(73,143,109,0.08), transparent 34%), radial-gradient(circle at bottom left, rgba(133,53,62,0.04), transparent 28%)",
                 }}
               />
 
               <div className="relative z-10 flex h-full flex-col">
-                <div className="flex items-start justify-between gap-4">
-                  <div
-                    className="flex h-14 w-14 items-center justify-center rounded-2xl"
-                    style={{
-                      backgroundColor: "rgba(73,143,109,0.12)",
-                      color: "#2d2d2d",
-                    }}
-                  >
-                    <LucideIcon name={category.icon} className="h-6 w-6" />
+                <div className="flex items-start justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 transition-colors duration-200 group-hover:bg-accent/18">
+                    <LucideIcon name={category.icon} className="h-5 w-5 text-accent" />
                   </div>
-                  <div className="rounded-full border border-[rgba(45,45,45,0.10)] bg-white/90 px-3 py-1">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#2d2d2d]/62">
-                      0{index + 1}
-                    </span>
-                  </div>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#2d2d2d]/38">
+                    0{index + 1}
+                  </span>
                 </div>
 
-                <div className="mt-8">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#2d2d2d]/56">
-                    Categorie
-                  </p>
-                  <h2 className="mt-2 font-heading text-[1.75rem] font-bold leading-[1.08] text-[#2d2d2d] transition-colors group-hover:text-accent sm:text-[1.9rem]">
-                    {category.name}
-                  </h2>
+                <h2 className="mt-6 font-heading text-[1.65rem] font-bold leading-tight text-[#2d2d2d] transition-colors duration-200 group-hover:text-accent">
+                  {category.name}
+                </h2>
+
+                <div className="mt-3 flex items-baseline gap-2.5">
+                  <span className="font-heading text-[1.3rem] font-bold text-[#2d2d2d]">
+                    {priceRange}
+                  </span>
+                  <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-semibold text-accent">
+                    {planCount} offres
+                  </span>
                 </div>
 
-                <div className="mt-7 grid grid-cols-[1fr_auto] gap-4 rounded-2xl border border-[rgba(45,45,45,0.08)] bg-white/92 p-4 shadow-[0_10px_24px_rgba(45,45,45,0.04)]">
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#2d2d2d]/58">
-                      Fourchette
-                    </p>
-                    <p className="mt-2 font-heading text-[1.9rem] font-bold leading-none text-[#2d2d2d]">
-                      {priceRange}
-                    </p>
-                  </div>
-                  <div className="border-l border-[rgba(45,45,45,0.08)] pl-4">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#2d2d2d]/58">
-                      Offres
-                    </p>
-                    <p className="mt-2 text-2xl font-bold leading-none text-accent">
-                      {planCount}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-5 flex-1 rounded-2xl border border-[rgba(45,45,45,0.08)] bg-[#ede9e1]/88 p-4">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#2d2d2d]/58">
-                    Reco rapide
+                <div className="mt-5 flex-1 rounded-xl bg-[#ede9e1]/80 p-4">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#2d2d2d]/48">
+                    Recommande
                   </p>
                   {highlighted ? (
-                    <p className="mt-2 text-base leading-relaxed text-[#2d2d2d]/82">
+                    <p className="mt-2 text-sm leading-snug text-[#2d2d2d]/78">
                       <span className="font-semibold text-[#2d2d2d]">
                         {highlighted.name}
                       </span>
-                      {" "}a{" "}
+                      {" — "}
                       <span className="font-semibold text-accent">
                         {formatPrice(highlighted.price)}
+                        {highlighted.priceUnit === "month" ? "/mois" : ""}
                       </span>
-                      {highlighted.priceUnit === "month" ? "/mois" : ""}
                     </p>
                   ) : (
-                    <p className="mt-2 text-base leading-relaxed text-[#2d2d2d]/68">
-                      Ouvrez la categorie pour voir les forfaits detaillees et
-                      les options de conversion associees.
+                    <p className="mt-2 text-sm text-[#2d2d2d]/58">
+                      Voir les forfaits disponibles
                     </p>
                   )}
                 </div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-[rgba(45,45,45,0.08)] pt-4">
-                  <span className="text-base font-medium text-[#2d2d2d]/72">
-                    Voir le detail des forfaits
+                <div className="mt-5 flex items-center justify-between">
+                  <span className="text-sm font-medium text-[#2d2d2d]/55 transition-colors duration-200 group-hover:text-accent">
+                    Explorer les forfaits
                   </span>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-on-accent transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="h-4 w-4" />
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#2d2d2d]/6 text-[#2d2d2d]/55 transition-all duration-200 group-hover:translate-x-0.5 group-hover:bg-accent group-hover:text-white">
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
               </div>

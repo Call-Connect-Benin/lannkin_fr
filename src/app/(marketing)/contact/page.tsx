@@ -7,10 +7,10 @@ import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Contacter Agence Web Paris | Ekolink",
+  title: "Contacter Agence Web Paris | Lannkin",
   description:
-    "Contactez notre agence web à Paris. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Ekolink.",
-  alternates: { canonical: "https://ekolink.fr/contact/" },
+    "Contactez notre agence web à Paris. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Lannkin.",
+  alternates: { canonical: "https://lannkin.fr/contact/" },
 };
 
 export default function ContactPage() {

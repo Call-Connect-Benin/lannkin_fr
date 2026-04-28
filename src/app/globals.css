@@ -117,8 +117,16 @@ select option {
 
   body {
     font-family: var(--font-body);
-    background-color: #f7f5f0;
+    background:
+      radial-gradient(circle at top left, rgba(73, 143, 109, 0.05), transparent 22%),
+      radial-gradient(circle at top right, rgba(133, 53, 62, 0.035), transparent 18%),
+      #f7f5f0;
     color: #2d2d2d;
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgba(73, 143, 109, 0.65);
+    outline-offset: 2px;
   }
 }
 
@@ -161,6 +169,19 @@ body::before {
   .float {
     animation: float 3s ease-in-out infinite;
   }
+
+  .section-shell {
+    border: 1px solid rgba(45, 45, 45, 0.08);
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 24px 60px rgba(45, 45, 45, 0.06);
+  }
+
+  .mesh-panel {
+    background-image:
+      linear-gradient(rgba(45, 45, 45, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 45, 45, 0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
 }
 
 /* ===== SELECTION ===== */
@@ -198,4 +219,14 @@ body::before {
 .parallax-section .glass {
   background: rgba(255, 255, 255, 0.75);
   border-color: rgba(45, 45, 45, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body::before {
+    animation: none;
+  }
 }

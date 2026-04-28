@@ -4,7 +4,7 @@ import { getSectorBySlug } from "@/data/sectors";
 import { SectorPageTemplate } from "@/presentation/components/secteurs/SectorPageTemplate";
 
 export const metadata: Metadata = {
-  title: "Marketing Digital Construction & Rénovation Paris | Entrepreneurs, Électriciens | Ekolink",
+  title: "Marketing Digital Construction & Rénovation Paris | Entrepreneurs, Électriciens | Lannkin",
   description:
     "Agence marketing spécialisée construction à Paris. Google Ads local, génération de soumissions, SEO entrepreneur général, plombier, électricien. Devis gratuit.",
   keywords: [

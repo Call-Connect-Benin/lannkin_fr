@@ -151,7 +151,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
         </Container>
       </section>
 
-      {/* ── Pourquoi Ekolink ─────────────────────────────────────── */}
+      {/* ── Pourquoi Lannkin ─────────────────────────────────────── */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(45,45,45,0.10)" }}>
         <Container>
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
@@ -160,7 +160,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
                 className="mb-3 text-sm font-semibold uppercase tracking-widest"
                 style={{ color: "#498f6d" }}
               >
-                Pourquoi Ekolink
+                Pourquoi Lannkin
               </p>
               <h2 className="font-heading text-3xl font-bold text-[#2d2d2d]">
                 Notre expertise dans le secteur {sector.title}

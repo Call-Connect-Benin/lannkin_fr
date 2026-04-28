@@ -17,9 +17,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { DevisForm } from "@/presentation/components/forms/DevisForm";
 
 export const metadata: Metadata = {
-  title: "Devis Gratuit Site Web & Marketing | Ekolink",
+  title: "Devis Gratuit Site Web & Marketing | Lannkin",
   description:
-    "Chiffrons votre projet web ou marketing à Paris : retour personnalisé sous 24h, aucun engagement. Soumettez votre brief à l'équipe Ekolink.",
+    "Chiffrons votre projet web ou marketing à Paris : retour personnalisé sous 24h, aucun engagement. Soumettez votre brief à l'équipe Lannkin.",
 };
 
 const TRUST_POINTS = [
@@ -95,7 +95,7 @@ export default function DevisGratuitPage() {
             </h1>
             <div className="mt-5 h-px w-14" style={{ background: "linear-gradient(to right, rgba(73,143,109,0.7), transparent)" }} />
             <p className="mt-5 max-w-md text-base leading-relaxed" style={{ color: "rgba(45,45,45,0.65)" }}>
-              Partagez votre contexte en quelques minutes. Un expert Ekolink
+              Partagez votre contexte en quelques minutes. Un expert Lannkin
               analyse votre projet et revient vers vous avec une proposition
               sur-mesure — sans engagement, sans discours commercial.
             </p>

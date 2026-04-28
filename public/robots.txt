@@ -4,7 +4,7 @@ Allow: /
 Disallow: /api/
 
 # Host
-Host: https://ekolink.fr
+Host: https://lannkin.fr
 
 # Sitemaps
-Sitemap: https://ekolink.fr/sitemap.xml
+Sitemap: https://lannkin.fr/sitemap.xml

@@ -4,7 +4,7 @@ import { PRICING_CONCEPTION_WEB } from "@/data/pricing";
 import { PricingPageContent } from "@/presentation/components/pricing";
 
 export const metadata: Metadata = {
-  title: "Tarifs Conception Web | Ekolink",
+  title: "Tarifs Conception Web | Lannkin",
   description:
     "Sites web dès 99€/mois. Vitrine, multi-pages, e-commerce ou SEO MasterSite. Hébergement et SSL inclus. Prix transparents.",
 };

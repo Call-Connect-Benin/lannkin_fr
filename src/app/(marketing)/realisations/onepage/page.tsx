@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Landing Page & Site Onepage Paris | Portfolio Ekolink",
+  title: "Création Landing Page & Site Onepage Paris | Portfolio Lannkin",
   description:
     "Agence landing page à Paris : conception de sites onepage et pages de destination à fort taux de conversion pour PME françaises. Devis gratuit.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/onepage/",
+    canonical: "https://lannkin.fr/realisations/onepage/",
   },
   openGraph: {
-    title: "Création Landing Page & Site Onepage Paris | Portfolio Ekolink",
+    title: "Création Landing Page & Site Onepage Paris | Portfolio Lannkin",
     description:
       "Landing pages et sites onepage à fort taux de conversion pour Paris et le France. Taux de conversion moyen : 7,8 %. Portfolio et devis gratuit.",
-    url: "https://ekolink.fr/realisations/onepage/",
+    url: "https://lannkin.fr/realisations/onepage/",
   },
 };
 

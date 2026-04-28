@@ -4,7 +4,7 @@ import { getZoneBySlug } from "@/data/zones";
 import { ZonePageTemplate } from "@/presentation/components/zone/ZonePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Agence Web Île-de-France | Versailles, Boulogne, St-Jérôme | Ekolink",
+  title: "Agence Web Île-de-France | Versailles, Boulogne, St-Jérôme | Lannkin",
   description:
     "Agence web Île-de-France. Sites web, SEO et marketing digital pour Paris, Versailles, Boulogne, Saint-Denis et toute la Île-de-France. Devis gratuit.",
   keywords: ["agence web rive nord", "agence web terrebonne", "agence web blainville", "seo rive nord", "marketing digital rive nord"],

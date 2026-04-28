@@ -13,7 +13,7 @@ import { Container } from "@/presentation/components/ui/Container";
 import { TarifsFilterable } from "@/presentation/components/tarifs/TarifsFilterable";
 
 export const metadata: Metadata = {
-  title: "Tarifs Agence Web France | Ekolink",
+  title: "Tarifs Agence Web France | Lannkin",
   description:
     "Tarifs transparents : site web, SEO, Google Ads, Meta Ads et graphisme des 50 EUR/mois. Comparez nos forfaits marketing digital. Prix clairs, sans surprise.",
 };

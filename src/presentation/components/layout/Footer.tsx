@@ -1,4 +1,5 @@
 import { Facebook, Globe, Instagram, Linkedin, Phone, Youtube } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { FOOTER_NAVIGATION } from "@/data/navigation";
@@ -44,27 +45,36 @@ const FOOTER_SECTIONS = [
 
 export function Footer() {
   return (
-    <footer className="relative" style={{ backgroundColor: "#f7f5f0" }}>
-      {/* Light cream background */}
-      <div className="rounded-t-2xl">
+    <footer className="relative border-t border-[#2d2d2d]/8" style={{ backgroundColor: "#f7f5f0" }}>
+      <div className="rounded-t-[32px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Top section: Logo + columns */}
-          <div className="grid gap-12 pb-12 pt-8 lg:grid-cols-6">
+          <div className="grid gap-12 pb-12 pt-10 lg:grid-cols-6">
             {/* Brand column */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-flex items-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/logo-lannkin-2026.svg"
                   alt="LANNKIN"
+                  width={127}
+                  height={28}
                   className="h-7 w-auto"
                 />
               </Link>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#2d2d2d]/75">
-                Agence de marketing digital et de
-                d&eacute;veloppement web au Qu&eacute;bec. Nous
-                accompagnons les entreprises dans leur croissance
-                en ligne depuis {SITE_CONFIG.founded}.
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Paris", "Ile-de-France", "France"].map((market) => (
+                  <span
+                    key={market}
+                    className="rounded-full border border-[#2d2d2d]/8 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#498f6d]"
+                  >
+                    {market}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#2d2d2d]/75">
+                Agence de marketing digital et de d&eacute;veloppement web
+                pour les entreprises en France. Sites, acquisition,
+                R&amp;D et croissance mesurable depuis {SITE_CONFIG.founded}.
               </p>
 
               {/* Social icons */}
@@ -92,6 +102,7 @@ export function Footer() {
                 <a
                   href={`tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}`}
                   className="inline-flex items-center gap-2 text-sm text-[#2d2d2d]/75 transition-colors hover:text-accent"
+                  aria-label={`Appeler ${SITE_CONFIG.phone}`}
                 >
                   <Phone className="h-4 w-4 shrink-0 text-accent" />
                   {SITE_CONFIG.phone}
@@ -130,8 +141,7 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-[#2d2d2d]/70 sm:flex-row">
             <p>
               &copy; {SITE_CONFIG.founded}&ndash;2026{" "}
-              {SITE_CONFIG.legalName} &middot; NEQ {SITE_CONFIG.neq} &middot;
-              Tous droits r&eacute;serv&eacute;s
+              {SITE_CONFIG.legalName} &middot; Tous droits r&eacute;serv&eacute;s
             </p>
             <p>
               <Link

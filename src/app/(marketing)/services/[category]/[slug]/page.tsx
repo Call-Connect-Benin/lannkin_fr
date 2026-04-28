@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = getServiceBySlug(slug);
 
   if (!service) {
-    return { title: "Service introuvable | Ekolink" };
+    return { title: "Service introuvable | Lannkin" };
   }
 
   return {

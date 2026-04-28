@@ -18,7 +18,7 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Développement SaaS & Applications sur-mesure | Ekolink Paris",
+  title: "Développement SaaS & Applications sur-mesure | Lannkin Paris",
   description:
     "Studio parisien de développement SaaS. Applications web, mobiles, MVPs, APIs — une architecture pensée pour scaler. Premier appel offert.",
 };
@@ -204,7 +204,7 @@ export default function DeveloppementSaasPage() {
           <div className="grid items-start gap-16 lg:grid-cols-2">
             <div>
               <h2 className="mb-4 font-heading text-xs font-semibold uppercase tracking-wider text-accent">
-                Pourquoi Ekolink
+                Pourquoi Lannkin
               </h2>
               <p className="font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl">
                 Un studio qui pense produit, pas juste code

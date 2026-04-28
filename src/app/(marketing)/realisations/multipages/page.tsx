@@ -9,17 +9,17 @@ import { RealisationsBanner } from "@/presentation/components/portfolio/Realisat
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Création Site Web Multipage Paris & France | Portfolio Ekolink",
+  title: "Création Site Web Multipage Paris & France | Portfolio Lannkin",
   description:
     "Agence web à Paris spécialisée en sites multipages : vitrine, PME, entreprise. Conception web professionnelle en France. Portfolio de réalisations, devis gratuit.",
   alternates: {
-    canonical: "https://ekolink.fr/realisations/multipages/",
+    canonical: "https://lannkin.fr/realisations/multipages/",
   },
   openGraph: {
-    title: "Création Site Web Multipage Paris & France | Portfolio Ekolink",
+    title: "Création Site Web Multipage Paris & France | Portfolio Lannkin",
     description:
       "Sites web multipages pour PME et entreprises à Paris et en France. Conception web professionnelle, SEO local et résultats mesurables. +187 % de leads pour nos clients.",
-    url: "https://ekolink.fr/realisations/multipages/",
+    url: "https://lannkin.fr/realisations/multipages/",
   },
 };
 
@@ -110,7 +110,7 @@ export default function RealisationsMultipagesPage() {
                 Conception web à Paris et en Île-de-France — Votre site web qui génère des leads
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-[#6B7280]">
-                Fondée à <strong className="text-[#2d2d2d]">Paris (France)</strong> en 2015, Ekolink conçoit
+                Fondée à <strong className="text-[#2d2d2d]">Paris (France)</strong> en 2015, Lannkin conçoit
                 des sites web pour les entreprises de la région : Paris, Neuilly, Boulogne,
                 Versailles, Saint-Germain, Repentigny, Paris et partout en province.
                 Nos sites multipages sont développés avec les technologies les plus performantes

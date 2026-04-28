@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Google My Business | Ekolink",
+  title: "Blog Google My Business | Lannkin",
   description: "Articles et guides Google My Business. Optimisation locale, avis clients et stratégies de visibilité Google Maps.",
 };
 

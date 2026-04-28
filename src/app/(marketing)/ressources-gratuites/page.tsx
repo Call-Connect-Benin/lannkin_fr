@@ -6,10 +6,10 @@ import Link from "next/link";
 import { Container } from "@/presentation/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Ressources Marketing Digital Gratuites | Ekolink",
+  title: "Ressources Marketing Digital Gratuites | Lannkin",
   description:
-    "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Ekolink pour booster votre croissance en ligne.",
-  alternates: { canonical: "https://ekolink.fr/ressources-gratuites/" },
+    "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Lannkin pour booster votre croissance en ligne.",
+  alternates: { canonical: "https://lannkin.fr/ressources-gratuites/" },
 };
 
 // ─── Données des ressources ───────────────────────────────────────────────────
@@ -116,7 +116,7 @@ const RESOURCES: Resource[] = [
   {
     type: "ebook",
     label: "Ebook PDF",
-    title: "Collection Ebooks Ekolink",
+    title: "Collection Ebooks Lannkin",
     description:
       "Accédez à tous nos ebooks et guides PDF sur le marketing digital : SEO, Google Ads, réseaux sociaux et plus encore.",
     href: "https://drive.google.com/drive/folders/1xO5RMK2Aa5163y6fOrdJA6DaOCMk-z0Q",
@@ -138,21 +138,21 @@ const RESOURCES: Resource[] = [
   {
     type: "video",
     label: "Chaîne YouTube",
-    title: "Ekolink Canada",
+    title: "Lannkin France - Strat??gie digitale",
     description:
       "Stratégies web, marketing digital et croissance pour les entreprises canadiennes.",
-    href: "https://www.youtube.com/@EkolinkFrance",
-    image: "/images/ressources/lannkin-canada.webp",
+    href: "https://www.youtube.com/@LannkinFrance",
+    image: "/images/ressources/lannkin-france.webp",
     tag: "Disponible",
     available: true,
   },
   {
     type: "video",
     label: "Chaîne YouTube",
-    title: "Ekolink France",
+    title: "Lannkin France",
     description:
       "Conseils marketing digital, tutoriels et analyses pour le marché français.",
-    href: "https://www.youtube.com/@EkolinkFrance",
+    href: "https://www.youtube.com/@LannkinFrance",
     image: "/images/ressources/lannkin-france.webp",
     tag: "Disponible",
     available: true,

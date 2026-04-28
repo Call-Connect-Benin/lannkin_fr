@@ -20,6 +20,55 @@ export const HERO = {
   ],
 } as const;
 
+// --- 1B. OFFRES SPOTLIGHT ---
+export const OFFERS_SPOTLIGHT = {
+  badge: "Offres express",
+  title: "Des offres rapides pour lancer, tester et convertir sans inertie.",
+  subtitle:
+    "Là où beaucoup d'agences vendent seulement du sur-mesure long et opaque, Lannkin propose aussi des formats courts, clairs et actionnables pour aller vite.",
+  items: [
+    {
+      title: "Shopify mono-produit",
+      price: "200€ TTC",
+      description:
+        "Une boutique prête à vendre, pensée pour valider une offre rapidement avec un design propre, responsive et compatible paiement en ligne.",
+      bullets: [
+        "Mise en ligne rapide",
+        "Design pro et adaptatif",
+        "Base conforme RGPD",
+      ],
+      href: "/tarifs/conception-web/",
+      accent: "green",
+    },
+    {
+      title: "Landing page WordPress",
+      price: "200€",
+      description:
+        "Une page d'atterrissage claire, optimisée pour vos campagnes et conçue pour transformer le trafic en demandes qualifiées.",
+      bullets: [
+        "CTA et formulaires intégrés",
+        "Pensée pour le SEO",
+        "Prête pour vos campagnes",
+      ],
+      href: "/devis-gratuit/",
+      accent: "paper",
+    },
+    {
+      title: "Paiement flexible",
+      price: "Jusqu'à 12x",
+      description:
+        "Des modalités plus souples pour démarrer maintenant sans bloquer le projet sur une décision budgétaire lourde.",
+      bullets: [
+        "Lancement plus rapide",
+        "Capex réduit",
+        "Approche progressive",
+      ],
+      href: "/contact/",
+      accent: "dark",
+    },
+  ],
+} as const;
+
 // --- 2. LOGOS / CERTIFICATIONS ---
 export const CERTIFICATIONS = {
   title: "Certifiés par les plus grandes plateformes",
@@ -27,6 +76,31 @@ export const CERTIFICATIONS = {
     { name: "Google Partner", logo: "/images/certifications/google-partner.svg" },
     { name: "Microsoft Advertising Partner", logo: "/images/certifications/microsoft-partner.svg" },
     { name: "Facebook/Meta Partner", logo: "/images/certifications/meta-partner.svg" },
+  ],
+} as const;
+
+// --- 2B. EMPREINTE INTERNATIONALE ---
+export const FOOTPRINT = {
+  badge: "Presence France",
+  title: "Une agence ancree en France, pensee pour les entreprises francaises.",
+  subtitle:
+    "Lannkin concentre ses expertises sur le marche francais pour livrer des strategies plus coherentes, des benchmarks utiles et une execution plus nette.",
+  markets: [
+    {
+      name: "Paris",
+      focus: "Acquisition digitale, SEO local, conception web premium pour PME francaises.",
+      points: ["Google Ads", "SEO", "Sites web", "R&D"],
+    },
+    {
+      name: "Ile-de-France",
+      focus: "Culture performance, offres packagees et forte proximite avec les TPE et PME.",
+      points: ["Shopify", "Lead gen", "Paid media", "Support"],
+    },
+    {
+      name: "France entiere",
+      focus: "Approche selective, orientee qualite d'execution et marches concurrentiels.",
+      points: ["Positionnement premium", "Audit", "SEA", "Visibilite"],
+    },
   ],
 } as const;
 
@@ -88,8 +162,8 @@ export const STATS = {
   ],
 } as const;
 
-// --- 5. POURQUOI EKOLINK ---
-export const WHY_EKOLINK = {
+// --- 5. POURQUOI LANNKIN ---
+export const WHY_LANNKIN = {
   badge: "Pourquoi nous choisir ?",
   title: "L'agilité d'une startup, la rigueur d'une agence.",
   subtitle:
@@ -118,6 +192,34 @@ export const WHY_EKOLINK = {
       description:
         "Chaque levier est tracké. Scripts anti-fraude internes, tests A/B permanents et optimisations continues pour maximiser votre rentabilité.",
       icon: "TrendingUp",
+    },
+  ],
+} as const;
+
+// --- 5B. PÔLE R&D ---
+export const RND_SCRIPTS = {
+  badge: "Pôle R&D",
+  title: "Des scripts et process propriétaires qui transforment vos campagnes en avantage concurrentiel.",
+  subtitle:
+    "Chez Lannkin, l'innovation ne sert pas à faire joli. Elle sert à réduire les pertes, lire des signaux que d'autres ne voient pas et accélérer les décisions.",
+  items: [
+    {
+      title: "Script Google Ads anti-clics frauduleux",
+      description:
+        "Il aide à identifier les clics suspects et à structurer les demandes de remboursement pour protéger votre budget publicitaire.",
+      result: "Moins de pertes invisibles",
+    },
+    {
+      title: "Script d'analyse des campagnes performantes",
+      description:
+        "Il met en lumière des données peu exploitées par les tableaux classiques pour orienter les optimisations plus vite et plus finement.",
+      result: "Décisions mieux informées",
+    },
+    {
+      title: "Méthodes d'itération internes",
+      description:
+        "Tests, scoring, lecture croisée du tunnel et retour terrain: la performance repose sur une méthode, pas seulement sur des plateformes.",
+      result: "Cycles d'optimisation plus courts",
     },
   ],
 } as const;
@@ -173,7 +275,7 @@ export const TESTIMONIALS = {
       company: "Restaurant Le Gourmet",
       sector: "Restauration",
       quote:
-        "Grâce à Ekolink, notre présence en ligne a pris une toute autre dimension. En trois mois, nos réservations ont triplé grâce aux campagnes Google Ads et à notre fiche Business.",
+        "Grâce à Lannkin, notre présence en ligne a pris une toute autre dimension. En trois mois, nos réservations ont triplé grâce aux campagnes Google Ads et à notre fiche Business.",
       rating: 5,
       avatar: "/images/testimonials/avatar-1.jpg",
     },
@@ -315,8 +417,8 @@ export const ECOSYSTEM = {
   title: "Un réseau de sites spécialisés.",
   sites: [
     {
-      name: "ekolink.com",
-      url: "https://ekolink.com",
+      name: "lannkin.com",
+      url: "https://lannkin.com",
       description: "Version internationale — développement web et CMS IA pour clients anglophones et internationaux.",
       icon: "Globe",
     },
@@ -433,9 +535,9 @@ export const COMMUNITY = {
   badge: "Rejoignez-nous",
   title: "Bien plus qu'une agence : une communauté.",
   subtitle:
-    "Ekolink partage ses astuces, ses méthodes et ses retours d'expérience. Abonnez-vous à notre chaîne YouTube pour les cas pratiques, et rejoignez notre Discord pour échanger en direct avec l'équipe et d'autres entrepreneurs.",
+    "Lannkin partage ses astuces, ses méthodes et ses retours d'expérience. Abonnez-vous à notre chaîne YouTube pour les cas pratiques, et rejoignez notre Discord pour échanger en direct avec l'équipe et d'autres entrepreneurs.",
   cta: {
-    youtube: { label: "S'abonner sur YouTube", href: "https://youtube.com/@ekolink" },
+    youtube: { label: "S'abonner sur YouTube", href: "https://youtube.com/@lannkin" },
     discord: { label: "Rejoindre le Discord", href: "#" },
   },
   stats: [
@@ -451,10 +553,13 @@ export const COMMUNITY = {
 
 export const HOMEPAGE = {
   hero: HERO,
+  offersSpotlight: OFFERS_SPOTLIGHT,
   certifications: CERTIFICATIONS,
+  footprint: FOOTPRINT,
   servicesOverview: SERVICES_OVERVIEW,
   stats: STATS,
-  whyEkolink: WHY_EKOLINK,
+  whyLannkin: WHY_LANNKIN,
+  rndScripts: RND_SCRIPTS,
   featuredServices: FEATURED_SERVICES,
   testimonials: TESTIMONIALS,
   pricingPreview: PRICING_PREVIEW,

@@ -596,7 +596,7 @@ export default function FormulaireConceptionPage() {
             Merci, c&apos;est bien reçu.
           </h1>
           <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-md">
-            Votre demande a été transmise à notre équipe. Un expert EKOLINK vous
+            Votre demande a été transmise à notre équipe. Un expert LANNKIN vous
             rappelle sous <strong className="text-white">24 h ouvrables</strong>{" "}
             (lun-ven, 9 h à 17 h 30, heure de Paris).
           </p>
@@ -763,7 +763,7 @@ export default function FormulaireConceptionPage() {
                 type="email"
                 name="email"
                 required
-                placeholder="vous@entreprise.ca"
+                placeholder="vous@entreprise.fr"
                 className={inputCls}
               />
             </div>
@@ -863,7 +863,7 @@ export default function FormulaireConceptionPage() {
                     type="email"
                     name="companyEmail"
                     required
-                    placeholder="info@votreentreprise.ca"
+                    placeholder="info@votreentreprise.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1018,7 +1018,7 @@ export default function FormulaireConceptionPage() {
                 <input
                   type="text"
                   name="referencesSites"
-                  placeholder="Ex. : exemple1.ca, exemple2.ca"
+                  placeholder="Ex. : exemple1.fr, exemple2.fr"
                   className={inputCls}
                 />
               </div>
@@ -1055,7 +1055,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="companyWebsite"
-                    placeholder="Ex. : monsiteweb.ca"
+                    placeholder="Ex. : monsiteweb.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1304,7 +1304,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="email"
                     name="companyEmail"
-                    placeholder="info@votreentreprise.ca"
+                    placeholder="info@votreentreprise.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1414,7 +1414,7 @@ export default function FormulaireConceptionPage() {
                     type="email"
                     name="companyEmail"
                     required
-                    placeholder="info@votreentreprise.ca"
+                    placeholder="info@votreentreprise.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1433,7 +1433,7 @@ export default function FormulaireConceptionPage() {
                 <input
                   type="text"
                   name="companyWebsite"
-                  placeholder="Ex. : votreentreprise.ca"
+                  placeholder="Ex. : votreentreprise.fr"
                   className={inputCls}
                 />
               </div>
@@ -1555,7 +1555,7 @@ export default function FormulaireConceptionPage() {
                     type="email"
                     name="companyEmail"
                     required
-                    placeholder="info@votreentreprise.ca"
+                    placeholder="info@votreentreprise.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1608,7 +1608,7 @@ export default function FormulaireConceptionPage() {
                   <input
                     type="text"
                     name="companyWebsite"
-                    placeholder="Ex. : votreentreprise.ca"
+                    placeholder="Ex. : votreentreprise.fr"
                     className={inputCls}
                   />
                 </div>
@@ -1729,7 +1729,7 @@ export default function FormulaireConceptionPage() {
             </button>
             <p className="text-xs text-white/40">
               En soumettant ce formulaire, vous acceptez d&apos;être contacté par
-              EKOLINK. Vos données restent hébergées en France.
+              LANNKIN. Vos données restent hébergées en France.
             </p>
           </div>
         </form>

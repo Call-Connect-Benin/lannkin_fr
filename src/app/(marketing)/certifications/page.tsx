@@ -7,9 +7,9 @@ import { Container } from "@/presentation/components/ui/Container";
 import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "Agence Certifiée Google Partner Paris | Ekolink",
+  title: "Agence Certifiée Google Partner Paris | Lannkin",
   description:
-    "Ekolink : agence certifiée Google Partner, Meta Partner et Shopify Partner à Paris. Certifications en marketing digital et développement web en France.",
+    "Lannkin : agence certifiée Google Partner, Meta Partner et Shopify Partner à Paris. Certifications en marketing digital et développement web en France.",
 };
 
 const PARTNERS = [
@@ -19,7 +19,7 @@ const PARTNERS = [
     badge: "🔵",
     badgeImg: "/images/badges/badge-google-partner.svg",
     description:
-      "Certifiée Google Partner, Ekolink démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
+      "Certifiée Google Partner, Lannkin démontre son expertise en campagnes Google Ads : Search, Display, Shopping, YouTube et Performance Max. Nos gestionnaires passent régulièrement les examens Google pour maintenir la certification.",
     certifications: [
       "Google Ads Search",
       "Google Ads Display",
@@ -49,7 +49,7 @@ const PARTNERS = [
     name: "Shopify Partner",
     badge: "🟢",
     description:
-      "En tant que Shopify Partner, Ekolink crée et optimise des boutiques e-commerce performantes pour ses clients. Nous maîtrisons Shopify, Shopify Plus, le langage Liquid et les intégrations tierces.",
+      "En tant que Shopify Partner, Lannkin crée et optimise des boutiques e-commerce performantes pour ses clients. Nous maîtrisons Shopify, Shopify Plus, le langage Liquid et les intégrations tierces.",
     certifications: [
       "Shopify Partner Program",
       "Shopify — Business Fundamentals",
@@ -83,7 +83,7 @@ export default function CertificationsPage() {
                 Nos Certifications
               </h1>
               <p className="mt-5 text-lg leading-relaxed" style={{ color: "#6B7280" }}>
-                Google Partner, Meta Business Partner, Shopify Partner — Ekolink est certifiée par
+                Google Partner, Meta Business Partner, Shopify Partner — Lannkin est certifiée par
                 les plus grandes plateformes digitales pour garantir des résultats à la hauteur de
                 vos ambitions.
               </p>
@@ -108,7 +108,7 @@ export default function CertificationsPage() {
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-4 text-center font-heading text-2xl font-bold text-[#2d2d2d] sm:text-3xl">
-              Découvrez Ekolink en vidéo
+              Découvrez Lannkin en vidéo
             </h2>
             <p className="mb-8 text-center text-[#6B7280]">
               Une présentation de notre agence, notre équipe et notre façon de travailler.
@@ -120,7 +120,7 @@ export default function CertificationsPage() {
                 allowFullScreen
                 loading="lazy"
                 className="absolute inset-0 h-full w-full"
-                title="Présentation Ekolink"
+                title="Présentation Lannkin"
               />
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function CertificationsPage() {
                   <div className="relative aspect-video">
                     <iframe
                       src={`https://www.youtube.com/embed/${id}`}
-                      title="Vidéo Ekolink"
+                      title="Vidéo Lannkin"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       loading="lazy"
@@ -256,7 +256,7 @@ export default function CertificationsPage() {
                 className="rounded-lg border px-6 py-3 text-sm font-semibold text-[#2d2d2d] transition-all duration-200 hover:border-accent/30 hover:text-accent"
                 style={{ borderColor: "rgba(45,45,45,0.10)", backgroundColor: "rgba(255,255,255,0.66)" }}
               >
-                À propos de Ekolink
+                À propos de Lannkin
               </Link>
             </div>
           </div>

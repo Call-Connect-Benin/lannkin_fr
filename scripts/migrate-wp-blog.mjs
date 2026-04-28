@@ -1,13 +1,13 @@
 /**
  * Migration WordPress → MDX
- * Récupère tous les articles du blog ekolink.fr via l'API REST WordPress
+ * Récupère tous les articles du blog lannkin.fr via l'API REST WordPress
  * et les convertit en fichiers MDX pour le site Next.js.
  */
 import fs from "fs";
 import path from "path";
 import TurndownService from "turndown";
 
-const WP_API = "https://www.ekolink.fr/wp-json/wp/v2";
+const WP_API = "https://www.lannkin.fr/wp-json/wp/v2";
 const OUTPUT_DIR = path.resolve("content/blog");
 
 // Mapping catégories WordPress → catégories Next.js
@@ -142,7 +142,7 @@ async function migrate() {
     },
   });
 
-  // Supprimer les images WordPress internes (hébergées sur ekolink.fr)
+  // Supprimer les images WordPress internes (hébergées sur lannkin.fr)
   // car elles ne seront pas migrées
   turndown.addRule("wpImages", {
     filter: (node) => {
@@ -152,7 +152,7 @@ async function migrate() {
       const src = node.getAttribute("src") || "";
       const alt = node.getAttribute("alt") || "";
       // Garder l'image si c'est une URL externe utile
-      if (src && !src.includes("ekolink.fr") && !src.includes("wp-content")) {
+      if (src && !src.includes("lannkin.fr") && !src.includes("wp-content")) {
         return `![${alt}](${src})`;
       }
       // Supprimer les images WP internes (non migrées)
@@ -225,7 +225,7 @@ async function migrate() {
       `date: "${date}"`,
       `category: "${category}"`,
       `tags: [${tags.map((t) => `"${t}"`).join(", ")}]`,
-      `author: "Équipe Ekolink"`,
+      `author: "Équipe Lannkin"`,
       `readTime: "${readTime}"`,
       "---",
     ].join("\n");
