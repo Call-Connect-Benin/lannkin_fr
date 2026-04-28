@@ -69,7 +69,10 @@ function SectionIntro({
   const dark = tone === "dark";
 
   return (
-    <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
+    <div
+      className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
+      style={{ overflowWrap: "anywhere" }}
+    >
       <p
         className="font-mono text-xs font-semibold uppercase tracking-[0.24em]"
         style={{ color: dark ? "#7cc59f" : "#498f6d" }}
@@ -125,15 +128,15 @@ function OfferCard({
 
   return (
     <div
-      className="flex h-full flex-col rounded-[28px] p-6 shadow-[0_24px_80px_rgba(45,45,45,0.08)]"
+      className="flex h-full min-w-0 flex-col rounded-[28px] p-5 shadow-[0_24px_80px_rgba(45,45,45,0.08)] sm:p-6"
       style={{
         background: palette.card,
         border: `1px solid ${palette.border}`,
         color: dark ? "#FFFFFF" : "#2d2d2d",
       }}
     >
-      <div className="flex items-start justify-between gap-4">
-        <div>
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
           <p
             className="inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
             style={{
@@ -146,7 +149,7 @@ function OfferCard({
           <h3 className="mt-4 font-heading text-2xl font-bold">{title}</h3>
         </div>
         <div
-          className="rounded-2xl px-4 py-3 text-right"
+          className="rounded-2xl px-4 py-3 text-left sm:ml-auto sm:text-right"
           style={{
             backgroundColor: dark ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.75)",
             border: `1px solid ${dark ? "rgba(255,255,255,0.08)" : "rgba(45,45,45,0.08)"}`,
@@ -192,8 +195,8 @@ function OfferCard({
 
 function HomePage() {
   return (
-    <main className="overflow-hidden bg-[#f7f5f0] text-[#2d2d2d]">
-      <section className="relative overflow-hidden border-b border-[#2d2d2d]/8 pb-20 pt-24 lg:pb-24 lg:pt-28">
+    <main className="overflow-x-hidden overflow-y-visible bg-[#f7f5f0] text-[#2d2d2d]">
+      <section className="relative overflow-hidden border-b border-[#2d2d2d]/8 pb-12 pt-16 sm:pb-20 sm:pt-24 lg:pb-24 lg:pt-28">
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(73,143,109,0.14),transparent_36%),radial-gradient(circle_at_80%_20%,rgba(133,53,62,0.08),transparent_28%)]" />
           <div className="absolute right-[-12%] top-[-8%] h-[420px] w-[420px] rounded-full bg-[#498f6d]/10 blur-[120px]" />
@@ -209,20 +212,22 @@ function HomePage() {
         </div>
 
         <Container className="relative z-10" size="xl">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.22fr)_minmax(360px,460px)] lg:items-start xl:grid-cols-[minmax(0,1.28fr)_minmax(380px,500px)]">
-            <div className="max-w-[46rem] xl:pr-4">
-              <div className="inline-flex flex-wrap items-center gap-3 rounded-full border border-[#498f6d]/20 bg-white/80 px-4 py-2 shadow-[0_12px_30px_rgba(45,45,45,0.05)] backdrop-blur">
-                <span className="flex h-2.5 w-2.5 rounded-full bg-[#498f6d]" />
-                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-[#498f6d]">
-                  {HERO.badge}
-                </span>
-                <span className="hidden text-[#2d2d2d]/20 sm:inline">|</span>
-                <span className="text-xs font-medium text-[#2d2d2d]/60">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.22fr)_minmax(360px,460px)] lg:items-start xl:grid-cols-[minmax(0,1.28fr)_minmax(380px,500px)]">
+            <div className="min-w-0 max-w-[46rem] xl:pr-4">
+              <div className="max-w-full rounded-[28px] border border-[#498f6d]/20 bg-white/85 px-4 py-3 shadow-[0_12px_30px_rgba(45,45,45,0.05)] backdrop-blur sm:inline-flex sm:max-w-fit sm:flex-wrap sm:items-center sm:gap-3 sm:rounded-full sm:px-4 sm:py-2">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-2.5 w-2.5 shrink-0 rounded-full bg-[#498f6d]" />
+                  <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-[#498f6d] sm:text-[11px] sm:tracking-[0.18em]">
+                    {HERO.badge}
+                  </span>
+                </div>
+                <div className="mt-2 pl-[22px] text-[12px] leading-relaxed text-[#2d2d2d]/60 sm:mt-0 sm:pl-0 sm:text-xs sm:font-medium">
+                  <span className="hidden text-[#2d2d2d]/20 sm:inline sm:pr-3">|</span>
                   Strategie locale, execution orientee resultats
-                </span>
+                </div>
               </div>
 
-              <h1 className="mt-7 max-w-4xl font-heading text-[2.85rem] font-bold leading-[0.95] tracking-[-0.04em] text-[#2d2d2d] sm:text-[4.2rem] xl:text-[5.1rem]">
+              <h1 className="mt-7 max-w-4xl break-words font-heading text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-[#2d2d2d] sm:text-[3rem] md:text-[3.8rem] lg:leading-[0.95] lg:tracking-[-0.04em] xl:text-[5.1rem]">
                 L'agence qui rend votre
                 <span className="block text-[#498f6d]">croissance impossible a ignorer.</span>
               </h1>
@@ -231,7 +236,7 @@ function HomePage() {
                 {HERO.subtitle}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 hidden flex-wrap gap-3 sm:flex">
                 {QUICK_PROOFS.map((item) => (
                   <span
                     key={item}
@@ -253,7 +258,7 @@ function HomePage() {
                 </Button>
               </div>
 
-              <div className="mt-12 grid gap-4 sm:grid-cols-4">
+              <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
                 {HERO.stats.map((stat, index) => (
                   <div
                     key={stat.label}
@@ -274,7 +279,7 @@ function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 max-w-full overflow-hidden">
                 <GoogleMapsWidget variant="light" />
               </div>
             </div>
@@ -321,7 +326,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="border-b border-[#2d2d2d]/8 py-20">
+      <section className="border-b border-[#2d2d2d]/8 py-16 sm:py-20">
         <Container size="xl">
           <SectionIntro
             badge={OFFERS_SPOTLIGHT.badge}
@@ -329,7 +334,7 @@ function HomePage() {
             subtitle={OFFERS_SPOTLIGHT.subtitle}
           />
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {OFFERS_SPOTLIGHT.items.map((item) => (
               <OfferCard key={item.title} {...item} />
             ))}
@@ -339,7 +344,7 @@ function HomePage() {
 
       <ShowcaseCards />
 
-      <section className="relative overflow-hidden border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+      <section className="relative overflow-hidden border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute right-0 top-0 h-full w-[40%] opacity-25">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -352,7 +357,7 @@ function HomePage() {
         </div>
 
         <Container className="relative z-10" size="xl">
-          <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
             <div>
               <SectionIntro
                 badge={FOOTPRINT.badge}
@@ -420,7 +425,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container size="xl">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionIntro
@@ -458,9 +463,9 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-16 sm:py-20">
         <Container size="xl">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:items-start">
             <SectionIntro
               badge={RND_SCRIPTS.badge}
               title={RND_SCRIPTS.title}
@@ -498,7 +503,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container size="xl">
           <SectionIntro
             badge={FEATURED_SERVICES.badge}
@@ -511,10 +516,10 @@ function HomePage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group rounded-[30px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_55px_rgba(45,45,45,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(45,45,45,0.1)]"
+                className="group rounded-[30px] border border-[#2d2d2d]/8 bg-white p-5 shadow-[0_20px_55px_rgba(45,45,45,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(45,45,45,0.1)] sm:p-6"
               >
-                <div className="flex items-start justify-between gap-5">
-                  <div>
+                <div className="flex flex-col items-start gap-5 sm:flex-row sm:justify-between">
+                  <div className="min-w-0">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#498f6d]/10 text-[#498f6d]">
                       <LucideIcon name={service.icon} className="h-5 w-5" />
                     </div>
@@ -525,7 +530,7 @@ function HomePage() {
                       {service.description}
                     </p>
                   </div>
-                  <div className="rounded-[24px] border border-[#2d2d2d]/8 bg-[#f7f5f0] px-4 py-3 text-right">
+                  <div className="self-start rounded-[24px] border border-[#2d2d2d]/8 bg-[#f7f5f0] px-4 py-3 text-left sm:ml-auto sm:text-right">
                     <div className="font-heading text-2xl font-bold text-[#498f6d]">
                       {service.stat.value}
                     </div>
@@ -540,7 +545,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-16 sm:py-20">
         <Container size="xl">
           <SectionIntro
             badge={PAID_LANDSCAPE.badge}
@@ -577,10 +582,10 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container size="xl">
           <div className="grid gap-5 lg:grid-cols-2">
-            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_22px_60px_rgba(45,45,45,0.06)]">
+            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_22px_60px_rgba(45,45,45,0.06)] sm:p-8">
               <SectionIntro
                 badge={NATIVE_ADS.badge}
                 title={NATIVE_ADS.title}
@@ -614,7 +619,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-[34px] border border-[#498f6d]/14 bg-[linear-gradient(145deg,rgba(73,143,109,0.12),rgba(255,255,255,0.96))] p-8 shadow-[0_22px_60px_rgba(45,45,45,0.06)]">
+            <div className="rounded-[34px] border border-[#498f6d]/14 bg-[linear-gradient(145deg,rgba(73,143,109,0.12),rgba(255,255,255,0.96))] p-6 shadow-[0_22px_60px_rgba(45,45,45,0.06)] sm:p-8">
               <SectionIntro
                 badge={SHORT_FORM_VIDEO.badge}
                 title={SHORT_FORM_VIDEO.title}
@@ -659,7 +664,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-[#2d2d2d]/8 bg-[#f7f5f0] py-20">
+      <section className="border-y border-[#2d2d2d]/8 bg-[#f7f5f0] py-16 sm:py-20">
         <Container size="xl">
           <SectionIntro
             badge={TESTIMONIALS.badge}
@@ -691,10 +696,10 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container size="xl">
-          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_24px_60px_rgba(45,45,45,0.06)] sm:p-8">
               <SectionIntro
                 badge={PRICING_PREVIEW.badge}
                 title={PRICING_PREVIEW.title}
@@ -708,12 +713,12 @@ function HomePage() {
                       plan.highlighted ? "border-[#498f6d]/25 bg-[#498f6d]/8" : "border-[#2d2d2d]/8 bg-[#f7f5f0]"
                     }`}
                   >
-                    <div className="flex items-center justify-between gap-4">
-                      <div>
+                    <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="min-w-0">
                         <h3 className="font-heading text-xl font-bold text-[#2d2d2d]">{plan.name}</h3>
                         <p className="mt-2 text-sm text-[#2d2d2d]/65">{plan.description}</p>
                       </div>
-                      <div className="shrink-0 text-right">
+                      <div className="shrink-0 self-start text-left sm:ml-auto sm:text-right">
                         <div className="font-heading text-2xl font-bold text-[#498f6d]">{plan.price}</div>
                       </div>
                     </div>
@@ -728,7 +733,7 @@ function HomePage() {
             </div>
 
             <div className="grid gap-5">
-              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-[#ede9e1] p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-[#ede9e1] p-6 shadow-[0_24px_60px_rgba(45,45,45,0.06)] sm:p-8">
                 <SectionIntro
                   badge={SECTORS_PREVIEW.badge}
                   title={SECTORS_PREVIEW.title}
@@ -757,7 +762,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-8 shadow-[0_24px_60px_rgba(45,45,45,0.06)]">
+              <div className="rounded-[34px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_24px_60px_rgba(45,45,45,0.06)] sm:p-8">
                 <SectionIntro
                   badge={BLOG_PREVIEW.badge}
                   title={BLOG_PREVIEW.title}
@@ -802,7 +807,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-20">
+      <section className="border-y border-[#2d2d2d]/8 bg-[#ede9e1] py-16 sm:py-20">
         <Container size="xl">
           <div className="rounded-[36px] border border-[#498f6d]/16 bg-[linear-gradient(145deg,rgba(255,255,255,0.82),rgba(73,143,109,0.08))] p-8 shadow-[0_30px_70px_rgba(45,45,45,0.08)] sm:p-12">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -830,7 +835,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {COMMUNITY.stats.map((stat) => (
                   <div
                     key={stat.label}
@@ -848,13 +853,13 @@ function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container size="xl">
-          <div className="relative overflow-hidden rounded-[36px] border border-[#498f6d]/20 px-8 py-12 shadow-[0_34px_90px_rgba(45,45,45,0.08)] sm:px-12"
+          <div className="relative overflow-hidden rounded-[36px] border border-[#498f6d]/20 px-5 py-10 shadow-[0_34px_90px_rgba(45,45,45,0.08)] sm:px-8 sm:py-12 md:px-12"
             style={{ background: "linear-gradient(135deg, rgba(73,143,109,0.10) 0%, rgba(255,255,255,0.95) 50%, rgba(237,233,225,0.90) 100%)" }}
           >
             <div className="pointer-events-none absolute inset-0" aria-hidden>
-              <div className="absolute right-0 top-0 h-full w-[52%] opacity-60">
+              <div className="absolute right-0 top-0 hidden h-full w-[52%] opacity-60 sm:block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/rendu3D/rendu3d-rouge-vert-dramatic.webp"
@@ -862,7 +867,7 @@ function HomePage() {
                   className="h-full w-full object-cover object-left"
                 />
               </div>
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(247,245,240,1) 30%, rgba(247,245,240,0.4) 58%, transparent 80%)" }} />
+              <div className="absolute inset-0 hidden sm:block" style={{ background: "linear-gradient(to right, rgba(247,245,240,1) 30%, rgba(247,245,240,0.4) 58%, transparent 80%)" }} />
             </div>
 
             <div className="relative z-10 max-w-3xl">

@@ -144,7 +144,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSONLD) }}
         />
       </head>
-      <body className="min-h-screen bg-[#f7f5f0] antialiased" suppressHydrationWarning>
+      <body className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f7f5f0] antialiased" suppressHydrationWarning>
         {children}
         <FloatingContact />
 

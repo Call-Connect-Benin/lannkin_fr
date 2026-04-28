@@ -113,6 +113,9 @@ select option {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -122,6 +125,9 @@ select option {
       radial-gradient(circle at top right, rgba(133, 53, 62, 0.035), transparent 18%),
       #f7f5f0;
     color: #2d2d2d;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   *:focus-visible {
@@ -208,6 +214,12 @@ body::before {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #8a8480;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
 }
 
 /* ===== PARALLAX DARK SECTIONS ===== */

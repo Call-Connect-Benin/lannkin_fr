@@ -18,7 +18,7 @@ export default function FloatingContact() {
   return (
     <>
       {/* Right side - "Contactez nous" + chat toggle */}
-      <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 sm:bottom-6 sm:right-6 sm:gap-3">
         {!open && (
           <span className="hidden md:block rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 shadow-md">
             Contactez nous
@@ -26,7 +26,7 @@ export default function FloatingContact() {
         )}
         <button
           onClick={() => setOpen(!open)}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#498f6d] text-white shadow-lg hover:bg-[#3a7a5a] transition-colors"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#498f6d] text-white shadow-lg transition-colors hover:bg-[#3a7a5a] sm:h-12 sm:w-12"
           aria-label="Ouvrir le menu de contact"
         >
           {open ? (
@@ -39,17 +39,17 @@ export default function FloatingContact() {
 
       {/* Right side - Expanded buttons */}
       {open && (
-        <div className="fixed bottom-20 right-6 z-50 flex flex-col gap-3">
+        <div className="fixed bottom-18 right-4 z-50 flex flex-col gap-2 sm:bottom-20 sm:right-6 sm:gap-3">
           <a
             href={PHONE}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition-colors"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-colors hover:bg-green-600 sm:h-12 sm:w-12"
             aria-label="Appeler"
           >
             <Phone className="h-5 w-5" />
           </a>
           <a
             href={EMAIL}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg hover:bg-rose-600 transition-colors"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg transition-colors hover:bg-rose-600 sm:h-12 sm:w-12"
             aria-label="Envoyer un email"
           >
             <Mail className="h-5 w-5" />
@@ -58,7 +58,7 @@ export default function FloatingContact() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#1fb855] transition-colors"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-colors hover:bg-[#1fb855] sm:h-12 sm:w-12"
             aria-label="WhatsApp"
           >
             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

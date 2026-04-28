@@ -161,7 +161,7 @@ export function TarifsFilterable() {
             <Link
               key={category.slug}
               href={`/tarifs/${category.slug}/`}
-              className="group relative overflow-hidden rounded-[1.75rem] border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_18px_45px_rgba(45,45,45,0.10)]"
+              className="group relative overflow-hidden rounded-[1.75rem] border p-4 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_18px_45px_rgba(45,45,45,0.10)] sm:p-6"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(247,245,240,0.98) 100%)",
@@ -191,12 +191,12 @@ export function TarifsFilterable() {
                   </span>
                 </div>
 
-                <h2 className="mt-6 font-heading text-[1.65rem] font-bold leading-tight text-[#2d2d2d] transition-colors duration-200 group-hover:text-accent">
+                <h2 className="mt-5 font-heading text-xl font-bold leading-tight text-[#2d2d2d] transition-colors duration-200 group-hover:text-accent sm:mt-6 sm:text-[1.65rem]">
                   {category.name}
                 </h2>
 
                 <div className="mt-3 flex items-baseline gap-2.5">
-                  <span className="font-heading text-[1.3rem] font-bold text-[#2d2d2d]">
+                  <span className="font-heading text-lg font-bold text-[#2d2d2d] sm:text-[1.3rem]">
                     {priceRange}
                   </span>
                   <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-semibold text-accent">

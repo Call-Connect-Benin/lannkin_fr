@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   isMegaMenu,
   MAIN_NAVIGATION,
-  MOBILE_NAVIGATION,
   type MegaMenuItem,
   type NavigationItem,
 } from "@/data/navigation";
@@ -72,6 +71,20 @@ const mobileItemVariants = {
     x: 0,
     transition: { delay: 0.05 * i, duration: 0.25, ease: "easeOut" as const },
   }),
+};
+
+const mobileSubmenuVariants = {
+  hidden: { x: 24, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.2, ease: "easeOut" as const },
+  },
+  exit: {
+    x: -24,
+    opacity: 0,
+    transition: { duration: 0.16, ease: "easeInOut" as const },
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -137,6 +150,102 @@ function MegaMenuPanel({ item }: MegaMenuPanelProps) {
           </div>
         )}
       </div>
+    </motion.div>
+  );
+}
+
+interface MobileSubmenuPanelProps {
+  item: MegaMenuItem;
+  onBack: () => void;
+  onNavigate: () => void;
+}
+
+function MobileSubmenuPanel({
+  item,
+  onBack,
+  onNavigate,
+}: MobileSubmenuPanelProps) {
+  return (
+    <motion.div
+      key={item.label}
+      variants={mobileSubmenuVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="flex h-full flex-col bg-[rgba(255,255,255,0.99)]"
+    >
+      <div
+        className="flex items-center gap-3 border-b px-4 py-4"
+        style={{ borderColor: "rgba(0,0,0,0.08)" }}
+      >
+        <button
+          type="button"
+          onClick={onBack}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-[#1A1A1A]"
+          aria-label={`Retour vers le menu principal depuis ${item.label}`}
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+        <div className="min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#498f6d]">
+            {item.label}
+          </p>
+          <p className="truncate text-sm text-[#6B7280]">
+            Choisissez une sous-page
+          </p>
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto px-4 py-4">
+        <div className="space-y-5">
+          {item.groups.map((group) => (
+            <div key={group.title}>
+              <h3 className="mb-2 px-2 font-heading text-xs font-semibold uppercase tracking-[0.16em] text-[#498f6d]">
+                {group.title}
+              </h3>
+              <div className="space-y-1">
+                {group.items.map((navItem) => (
+                  <Link
+                    key={navItem.href}
+                    href={navItem.href}
+                    onClick={onNavigate}
+                    className="block rounded-xl px-3 py-3 transition-colors duration-150 hover:bg-[#F0F0EC]"
+                  >
+                    <span className="block text-sm font-medium text-[#1A1A1A]">
+                      {navItem.label}
+                    </span>
+                    {navItem.description && (
+                      <span className="mt-1 block text-xs text-[#6B7280]">
+                        {navItem.description}
+                      </span>
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {item.cta && (
+        <div
+          className="border-t p-4"
+          style={{ borderColor: "rgba(0,0,0,0.08)" }}
+        >
+          <Link
+            href={item.cta.href}
+            onClick={onNavigate}
+            className="block rounded-xl bg-[#F0F0EC] px-4 py-3"
+          >
+            <span className="block text-sm font-semibold text-[#1A1A1A]">
+              {item.cta.label}
+            </span>
+            <span className="mt-1 block text-xs text-[#6B7280]">
+              {item.cta.description}
+            </span>
+          </Link>
+        </div>
+      )}
     </motion.div>
   );
 }
@@ -212,6 +321,7 @@ export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSubmenu, setMobileSubmenu] = useState<MegaMenuItem | null>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const leaveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -228,6 +338,7 @@ export function Header() {
   // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
+    setMobileSubmenu(null);
     setActiveMenu(null);
   }, [pathname]);
 
@@ -333,43 +444,69 @@ export function Header() {
               style={{ backgroundColor: "rgba(255,255,255,0.97)" }}
               aria-label="Menu mobile"
             >
-              <div className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
-                {MOBILE_NAVIGATION.map((item, i) => (
-                  <motion.div
-                    key={item.href}
-                    custom={i}
-                    variants={mobileItemVariants}
-                    initial="hidden"
-                    animate="visible"
-                  >
-                    <Link
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      {...(item.target ? { target: item.target, rel: "noopener noreferrer" } : {})}
-                      className="block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-150"
-                      style={
-                        pathname.startsWith(item.href)
-                          ? { backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }
-                          : { color: "#1A1A1A" }
-                      }
+              <div className="relative flex flex-1 flex-col overflow-hidden">
+                <AnimatePresence mode="wait" initial={false}>
+                  {mobileSubmenu ? (
+                    <MobileSubmenuPanel
+                      key={mobileSubmenu.label}
+                      item={mobileSubmenu}
+                      onBack={() => setMobileSubmenu(null)}
+                      onNavigate={() => {
+                        setMobileSubmenu(null);
+                        setMobileOpen(false);
+                      }}
+                    />
+                  ) : (
+                    <motion.div
+                      key="mobile-root"
+                      variants={mobileSubmenuVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6"
                     >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="p-4" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
-                <Link
-                  href="/devis-gratuit/"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110"
-                  style={{ backgroundColor: "#498f6d", color: "#FFFFFF" }}
-                >
-                  Devis gratuit
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                      {MAIN_NAVIGATION.map((item, i) => (
+                        <motion.div
+                          key={item.label}
+                          custom={i}
+                          variants={mobileItemVariants}
+                          initial="hidden"
+                          animate="visible"
+                        >
+                          {isMegaMenu(item) ? (
+                            <button
+                              type="button"
+                              onClick={() => setMobileSubmenu(item)}
+                              className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-left text-base font-medium transition-colors duration-150"
+                              style={
+                                pathname.startsWith(item.href)
+                                  ? { backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }
+                                  : { color: "#1A1A1A" }
+                              }
+                            >
+                              <span>{item.label}</span>
+                              <ChevronRight className="h-4 w-4" />
+                            </button>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              onClick={() => setMobileOpen(false)}
+                              {...("target" in item && item.target ? { target: item.target, rel: "noopener noreferrer" } : {})}
+                              className="block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-150"
+                              style={
+                                pathname.startsWith(item.href)
+                                  ? { backgroundColor: "rgba(73,143,109,0.10)", color: "#498f6d" }
+                                  : { color: "#1A1A1A" }
+                              }
+                            >
+                              {item.label}
+                            </Link>
+                          )}
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.nav>
           </>

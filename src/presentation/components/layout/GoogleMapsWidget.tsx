@@ -16,7 +16,7 @@ export function GoogleMapsWidget({ variant = "light" }: GoogleMapsWidgetProps) {
       href="https://www.google.com/maps/search/?api=1&query=7+Rue+Vulpian+75013+Paris"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200"
+      className="inline-flex max-w-full items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 sm:flex-nowrap"
       style={{
         border: isDark ? "1px solid rgba(255,255,255,0.15)" : "1px solid rgba(0,0,0,0.10)",
         backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.03)",
@@ -35,17 +35,17 @@ export function GoogleMapsWidget({ variant = "light" }: GoogleMapsWidgetProps) {
         </svg>
       </div>
 
-      <div className="flex flex-col">
+      <div className="min-w-0 flex flex-col">
         <span className="text-xs font-semibold" style={{ color: isDark ? "#FFFFFF" : "#1A1A1A" }}>
           Agence web Lannkin
         </span>
-        <div className="flex items-center gap-1">
+        <div className="flex min-w-0 flex-wrap items-center gap-1">
           <div className="flex" aria-label={`${rating} étoiles sur 5`}>
             {[1, 2, 3, 4, 5].map((i) => (
               <Star key={i} className="h-3 w-3 fill-[#FBBC05] text-[#FBBC05]" />
             ))}
           </div>
-          <span className="text-xs" style={{ color: isDark ? "rgba(255,255,255,0.70)" : "rgba(0,0,0,0.60)" }}>
+          <span className="min-w-0 text-xs" style={{ color: isDark ? "rgba(255,255,255,0.70)" : "rgba(0,0,0,0.60)" }}>
             {rating}{" "}
             <span style={{ color: isDark ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.40)" }}>
               ({SITE_CONFIG.stats.googleReviews} avis)

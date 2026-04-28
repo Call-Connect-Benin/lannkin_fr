@@ -33,39 +33,39 @@ function PhoneCarousel() {
   }, [prefersReducedMotion]);
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
       {/* Background screenshots — Shopify-style: large, overlapping, close to phone */}
       {/* Left back card */}
       <div
-        className="absolute rounded-2xl overflow-hidden shadow-2xl w-[42%]"
-        style={{ left: "-5%", top: "5%", transform: "rotate(-3deg)", opacity: 0.55, zIndex: 1 }}
+        className="absolute w-[34%] overflow-hidden rounded-2xl shadow-2xl sm:w-[42%]"
+        style={{ left: "0%", top: "5%", transform: "rotate(-3deg)", opacity: 0.55, zIndex: 1 }}
       >
         <Image src={CLIENT_SCREENSHOTS[0]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Left front card — overlaps phone slightly */}
       <div
-        className="absolute rounded-2xl overflow-hidden shadow-2xl w-[38%]"
-        style={{ left: "2%", top: "25%", transform: "rotate(-1deg)", opacity: 0.7, zIndex: 3 }}
+        className="absolute w-[31%] overflow-hidden rounded-2xl shadow-2xl sm:w-[38%]"
+        style={{ left: "4%", top: "25%", transform: "rotate(-1deg)", opacity: 0.7, zIndex: 3 }}
       >
         <Image src={CLIENT_SCREENSHOTS[1]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Right back card */}
       <div
-        className="absolute rounded-2xl overflow-hidden shadow-2xl w-[42%]"
-        style={{ right: "-5%", top: "3%", transform: "rotate(3deg)", opacity: 0.55, zIndex: 1 }}
+        className="absolute w-[34%] overflow-hidden rounded-2xl shadow-2xl sm:w-[42%]"
+        style={{ right: "0%", top: "3%", transform: "rotate(3deg)", opacity: 0.55, zIndex: 1 }}
       >
         <Image src={CLIENT_SCREENSHOTS[2]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
       {/* Right front card — overlaps phone slightly */}
       <div
-        className="absolute rounded-2xl overflow-hidden shadow-2xl w-[38%]"
-        style={{ right: "2%", top: "22%", transform: "rotate(2deg)", opacity: 0.7, zIndex: 3 }}
+        className="absolute w-[31%] overflow-hidden rounded-2xl shadow-2xl sm:w-[38%]"
+        style={{ right: "4%", top: "22%", transform: "rotate(2deg)", opacity: 0.7, zIndex: 3 }}
       >
         <Image src={CLIENT_SCREENSHOTS[3]} alt="" width={480} height={720} className="h-auto w-full" />
       </div>
 
       {/* Center phone mockup — iPhone 16 Pro style */}
-      <div className="relative z-20 w-[180px] rounded-[2.2rem] border-[3px] border-[#1a1a1a] bg-black shadow-[0_20px_80px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,255,255,0.08)] overflow-hidden">
+      <div className="relative z-20 w-[160px] overflow-hidden rounded-[2rem] border-[3px] border-[#1a1a1a] bg-black shadow-[0_20px_80px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,255,255,0.08)] sm:w-[180px] sm:rounded-[2.2rem]">
         {/* Dynamic Island */}
         <div className="absolute top-[8px] left-1/2 -translate-x-1/2 w-[72px] h-[22px] bg-black rounded-full z-30" />
         {/* Side buttons */}
@@ -149,7 +149,7 @@ function MarketingVisual() {
       {MARKETING_METRICS.map((m, i) => (
         <motion.div
           key={m.platform}
-          className="w-full max-w-[220px] rounded-xl px-4 py-3"
+          className="w-full max-w-[min(220px,100%)] rounded-xl px-4 py-3"
           style={{
             backgroundColor: "#ffffff",
             border: `1px solid ${m.color}30`,
@@ -180,10 +180,10 @@ function MarketingVisual() {
 
 function StatsCard() {
   return (
-    <div className="flex flex-col justify-between h-full p-6">
+    <div className="flex h-full min-w-0 flex-col justify-between overflow-hidden p-6">
       {/* Main metric card — dark, integrated */}
       <motion.div
-        className="rounded-xl p-5 max-w-[260px]"
+        className="max-w-full rounded-xl p-5 sm:max-w-[260px]"
         style={{
           backgroundColor: "#ffffff",
           border: "1px solid rgba(45,45,45,0.10)",
@@ -249,8 +249,8 @@ const CARDS = [
 
 export default function ShowcaseCards() {
   return (
-    <section className="pb-10 pt-4 lg:pb-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="overflow-x-hidden pb-10 pt-4 lg:pb-14">
+      <div className="mx-auto max-w-7xl overflow-x-hidden px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="mb-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#498f6d" }}>
@@ -265,6 +265,7 @@ export default function ShowcaseCards() {
           {CARDS.map((card, i) => (
             <motion.div
               key={card.title}
+              className="min-w-0 max-w-full overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -272,7 +273,7 @@ export default function ShowcaseCards() {
             >
               <Link
                 href={card.href}
-                className="group relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(73,143,109,0.12)]"
+                className="group relative flex w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(73,143,109,0.12)]"
                 style={{ backgroundColor: "#ffffff", border: "1px solid rgba(45,45,45,0.08)" }}
               >
                 {/* Visual area */}
