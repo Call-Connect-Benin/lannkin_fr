@@ -266,7 +266,7 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
             "@type": "LocalBusiness",
             name: "Lannkin S.A.S.",
             description: zone.description,
-            url: `https://lannkin.fr/zone/${zone.slug}/`,
+            url: `https://lannkin.com/zone/${zone.slug}/`,
             telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",
@@ -295,3 +295,4 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
     </main>
   );
 }
+

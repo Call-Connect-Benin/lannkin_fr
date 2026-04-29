@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web pour entrepreneurs en construction, rénovation, plomberie, maçonnerie et métiers du bâtiment en France. SEO local et Google Ads.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/construction/",
+    canonical: "https://lannkin.com/realisations/construction/",
   },
 };
 
@@ -95,3 +95,4 @@ export default function RealisationsConstructionPage() {
     </main>
   );
 }
+

@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Agence landing page à Paris : conception de sites onepage et pages de destination à fort taux de conversion pour PME françaises. Devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/onepage/",
+    canonical: "https://lannkin.com/realisations/onepage/",
   },
   openGraph: {
     title: "Création Landing Page & Site Onepage Paris | Portfolio Lannkin",
     description:
       "Landing pages et sites onepage à fort taux de conversion pour Paris et le France. Taux de conversion moyen : 7,8 %. Portfolio et devis gratuit.",
-    url: "https://lannkin.fr/realisations/onepage/",
+    url: "https://lannkin.com/realisations/onepage/",
   },
 };
 
@@ -170,3 +170,4 @@ export default function RealisationsOnepagePage() {
     </main>
   );
 }
+

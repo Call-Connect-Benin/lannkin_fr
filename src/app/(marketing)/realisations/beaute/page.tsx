@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, SEO local et Google Ads beauté.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/beaute/",
+    canonical: "https://lannkin.com/realisations/beaute/",
   },
 };
 
@@ -95,3 +95,4 @@ export default function RealisationsBeautePage() {
     </main>
   );
 }
+

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web pour garderies, CPE, écoles privées et services éducatifs en France. Inscription en ligne, calendriers et SEO local pour le secteur de l'éducation.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/education/",
+    canonical: "https://lannkin.com/realisations/education/",
   },
 };
 
@@ -96,3 +96,4 @@ export default function RealisationsEducationPage() {
     </main>
   );
 }
+

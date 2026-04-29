@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "Lannkin",
   legalName: "Lannkin S.A.S.",
   neq: "1179695284",
-  url: "https://lannkin.fr",
+  url: "https://lannkin.com",
   email: "info@lannkin.fr",
   phone: "+33 1 00 00 00 00",
   founded: 2015,
@@ -46,3 +46,4 @@ export const NAV_LINKS = [
   { label: "À propos", href: "/a-propos/" },
   { label: "Contact", href: "/contact/" },
 ] as const;
+

@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Agence web à Paris spécialisée en sites multipages : vitrine, PME, entreprise. Conception web professionnelle en France. Portfolio de réalisations, devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/multipages/",
+    canonical: "https://lannkin.com/realisations/multipages/",
   },
   openGraph: {
     title: "Création Site Web Multipage Paris & France | Portfolio Lannkin",
     description:
       "Sites web multipages pour PME et entreprises à Paris et en France. Conception web professionnelle, SEO local et résultats mesurables. +187 % de leads pour nos clients.",
-    url: "https://lannkin.fr/realisations/multipages/",
+    url: "https://lannkin.com/realisations/multipages/",
   },
 };
 
@@ -171,3 +171,4 @@ export default function RealisationsMultipagesPage() {
     </main>
   );
 }
+

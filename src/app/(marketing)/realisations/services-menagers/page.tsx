@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web et landing pages pour services d'entretien ménager résidentiel et commercial en France. Conception web, Google Ads et SEO local.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/services-menagers/",
+    canonical: "https://lannkin.com/realisations/services-menagers/",
   },
 };
 
@@ -94,3 +94,4 @@ export default function RealisationsServicesMenagersPage() {
     </main>
   );
 }
+

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://lannkin.fr",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lannkin.com",
   generateRobotsTxt: true,
   trailingSlash: true,
   changefreq: "weekly",

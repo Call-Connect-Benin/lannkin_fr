@@ -554,7 +554,7 @@ export function AuditGoogleAdsLP() {
         <div className="case-wrap case-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
           <div style={{ overflow: "hidden", borderRight: "1px solid var(--bd)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://www.lannkin.fr/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <img src="https://www.lannkin.com/wp-content/uploads/2024/11/Capture-decran-2024-11-06-a-14.56.26.png" alt="Export Google Ads - rapport Excel des clics frauduleux" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
           <div className="case-caption" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 10, color: "var(--text)" }}>Voici un exemple de rapport Excel que vous recevrez</div>
@@ -733,3 +733,4 @@ export function AuditGoogleAdsLP() {
     </div>
   );
 }
+

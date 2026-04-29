@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web pour agences de voyages, hébergements touristiques, pourvoiries et activités de plein air en France. Réservation en ligne et SEO tourisme.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/tourisme/",
+    canonical: "https://lannkin.com/realisations/tourisme/",
   },
 };
 
@@ -95,3 +95,4 @@ export default function RealisationsTourismePage() {
     </main>
   );
 }
+

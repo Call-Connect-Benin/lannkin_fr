@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Agence e-commerce à Paris : création de boutiques en ligne Shopify, WooCommerce et sur mesure. Portfolio de réalisations e-commerce en France. Devis gratuit.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/ecommerce/",
+    canonical: "https://lannkin.com/realisations/ecommerce/",
   },
   openGraph: {
     title: "Création Boutique E-commerce Paris & France | Portfolio Lannkin",
     description:
       "Découvrez nos réalisations e-commerce à Paris et en France : Shopify, WooCommerce, boutiques B2B. +420 % de revenus pour nos clients e-commerce.",
-    url: "https://lannkin.fr/realisations/ecommerce/",
+    url: "https://lannkin.com/realisations/ecommerce/",
   },
 };
 
@@ -167,3 +167,4 @@ export default function RealisationsEcommercePage() {
     </main>
   );
 }
+

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Contacter Agence Web Paris | Lannkin",
   description:
     "Contactez notre agence web à Paris. Devis marketing digital gratuit, réponse en moins de 2 minutes. Consultation offerte avec un expert Lannkin.",
-  alternates: { canonical: "https://lannkin.fr/contact/" },
+  alternates: { canonical: "https://lannkin.com/contact/" },
 };
 
 export default function ContactPage() {
@@ -174,3 +174,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

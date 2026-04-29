@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : sites web pour courtiers immobiliers en France. Pages propriétés, prise de rendez-vous et SEO local immobilier.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/immobilier/",
+    canonical: "https://lannkin.com/realisations/immobilier/",
   },
 };
 
@@ -94,3 +94,4 @@ export default function RealisationsImmobilierPage() {
     </main>
   );
 }
+

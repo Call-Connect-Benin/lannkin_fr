@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "gestion campagnes publicitaires paris",
   ],
   alternates: {
-    canonical: "https://lannkin.fr/zone/agence-traffic-paris/",
+    canonical: "https://lannkin.com/zone/agence-traffic-paris/",
   },
 };
 
@@ -360,7 +360,7 @@ export default function AgenceTrafficParisPage() {
             "@type": "LocalBusiness",
             name: "Lannkin S.A.S.",
             description: zone?.description,
-            url: "https://lannkin.fr/zone/agence-traffic-paris/",
+            url: "https://lannkin.com/zone/agence-traffic-paris/",
             telephone: "+1-438-944-6129",
             address: {
               "@type": "PostalAddress",
@@ -388,3 +388,4 @@ export default function AgenceTrafficParisPage() {
     </main>
   );
 }
+

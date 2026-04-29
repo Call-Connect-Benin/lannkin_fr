@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Lannkin : boutiques en ligne pour commerces locaux français. Shopify, WooCommerce, vente en ligne locale — SEO e-commerce et Google Shopping.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/ecommerce-local/",
+    canonical: "https://lannkin.com/realisations/ecommerce-local/",
   },
 };
 
@@ -95,3 +95,4 @@ export default function RealisationsEcommerceLocalPage() {
     </main>
   );
 }
+

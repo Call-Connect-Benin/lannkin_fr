@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Agence web bilingue à Paris (France) : création de sites web et stratégies digitales pour les entreprises internationales. France, Suisse, USA, Maroc. Portfolio et devis.",
   alternates: {
-    canonical: "https://lannkin.fr/realisations/international/",
+    canonical: "https://lannkin.com/realisations/international/",
   },
   openGraph: {
     title: "Agence Web Internationale Paris | Portfolio Lannkin",
     description:
       "Portfolio international de Lannkin : sites web et stratégies digitales en France, Suisse, USA, Maroc et Allemagne. Agence web française bilingue.",
-    url: "https://lannkin.fr/realisations/international/",
+    url: "https://lannkin.com/realisations/international/",
   },
 };
 
@@ -168,3 +168,4 @@ export default function RealisationsInternationalPage() {
     </main>
   );
 }
+

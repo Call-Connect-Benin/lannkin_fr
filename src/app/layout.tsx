@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lannkin.fr"),
+  metadataBase: new URL("https://lannkin.com"),
   title: {
     default: "Lannkin | Agence Marketing Digital & Développement Web à Paris",
     template: "%s | Lannkin",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://lannkin.fr",
+    url: "https://lannkin.com",
     siteName: "Lannkin",
     title: "Lannkin | Agence Marketing Digital & Développement Web à Paris",
     description:
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     apple: "/images/logo-lannkin-2026.svg",
   },
   alternates: {
-    canonical: "https://lannkin.fr",
+    canonical: "https://lannkin.com",
   },
 };
 
@@ -92,9 +92,9 @@ const LOCAL_BUSINESS_JSONLD = {
   "@type": "LocalBusiness",
   name: "Lannkin S.A.S.",
   alternateName: "Agence web Lannkin",
-  url: "https://lannkin.fr",
-  logo: "https://lannkin.fr/images/logo-lannkin-2026.svg",
-  image: "https://lannkin.fr/images/logo-lannkin-2026.svg",
+  url: "https://lannkin.com",
+  logo: "https://lannkin.com/images/logo-lannkin-2026.svg",
+  image: "https://lannkin.com/images/logo-lannkin-2026.svg",
   description:
     "Agence marketing digital et développement web à Paris, France. Google Ads, SEO, Facebook Ads, conception web, IA et 3D.",
   address: {
@@ -152,3 +152,4 @@ export default function RootLayout({
     </html>
   );
 }
+

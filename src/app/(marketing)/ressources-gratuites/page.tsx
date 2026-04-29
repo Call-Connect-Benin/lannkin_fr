@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Ressources Marketing Digital Gratuites | Lannkin",
   description:
     "Outils SEO gratuits, guides Google Ads et formations marketing digital. Accédez aux ressources Lannkin pour booster votre croissance en ligne.",
-  alternates: { canonical: "https://lannkin.fr/ressources-gratuites/" },
+  alternates: { canonical: "https://lannkin.com/ressources-gratuites/" },
 };
 
 // ─── Données des ressources ───────────────────────────────────────────────────
@@ -737,3 +737,4 @@ function ResourceCard({ resource }: { resource: Resource }) {
     </div>
   );
 }
+

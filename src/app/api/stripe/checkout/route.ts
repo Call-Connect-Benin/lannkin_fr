@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
   const origin =
     req.headers.get("origin") ??
     process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://lannkin.fr";
+    "https://lannkin.com";
 
   const successUrl = `${origin}/merci/?session_id={CHECKOUT_SESSION_ID}`;
   const cancelUrl = `${origin}/tarifs/${plan.category}/`;
@@ -93,3 +93,4 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+

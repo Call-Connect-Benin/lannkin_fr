@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Agence Web Paris France | À Propos | Lannkin",
   description:
     "Agence web à Paris, certifiée Google Partner. +10 ans d'expertise en marketing digital pour PME en France. Découvrez l'équipe Lannkin.",
-  alternates: { canonical: "https://lannkin.fr/a-propos/" },
+  alternates: { canonical: "https://lannkin.com/a-propos/" },
 };
 
 // ---------------------------------------------------------------------------
@@ -1017,3 +1017,4 @@ export default function AProposPage() {
     </main>
   );
 }
+
