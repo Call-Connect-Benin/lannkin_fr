@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, BadgeCheck, Layers3, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, Sparkles } from "lucide-react";
 
 import {
   getAllHubSlugs,

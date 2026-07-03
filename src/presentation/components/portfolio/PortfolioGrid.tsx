@@ -17,7 +17,6 @@ import {
   type PortfolioCategory,
   type PortfolioProject,
 } from "@/data/portfolio";
-import { cn } from "@/lib/utils";
 import { Container } from "@/presentation/components/ui/Container";
 
 const listItemVariants = {

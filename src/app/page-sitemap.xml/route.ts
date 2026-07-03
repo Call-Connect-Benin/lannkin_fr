@@ -2,11 +2,6 @@ import fs from "fs";
 import path from "path";
 
 import { getAllPosts } from "@/lib/blog";
-import { SITE_CONFIG } from "@/lib/constants";
-
-function getSiteUrl() {
-  return SITE_CONFIG.url.replace(/\/$/, "");
-}
 
 function escapeXml(value: string) {
   return value
@@ -24,13 +19,12 @@ function readSitemapUrls() {
 
   const xml = fs.readFileSync(sitemapPath, "utf8");
   return [...xml.matchAll(/<url><loc>(.*?)<\/loc><lastmod>(.*?)<\/lastmod>/g)].map((match) => ({
-    loc: match[1],
-    lastmod: match[2],
+    loc: match[1] ?? "",
+    lastmod: match[2] ?? "",
   }));
 }
 
 export async function GET() {
-  const siteUrl = getSiteUrl();
   const postPaths = new Set(getAllPosts().map((post) => `/blog/${post.slug}/`));
 
   const pageEntries = readSitemapUrls().filter(({ loc }) => {

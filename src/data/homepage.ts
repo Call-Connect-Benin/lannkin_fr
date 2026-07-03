@@ -321,6 +321,7 @@ export const PRICING_PREVIEW = {
       price: "99 €/mois",
       description: "Site vitrine responsive, hébergement et certificat SSL inclus",
       href: "/tarifs/conception-web/",
+      highlighted: false,
     },
     {
       name: "Google Ads Medium",
@@ -334,6 +335,7 @@ export const PRICING_PREVIEW = {
       price: "400 €/mois",
       description: "10 backlinks qualitatifs et stratégie de netlinking ciblée",
       href: "/tarifs/seo/",
+      highlighted: false,
     },
   ],
   cta: { label: "Voir tous les tarifs", href: "/tarifs/" },

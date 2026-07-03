@@ -13,7 +13,7 @@ const CLIENT_SCREENSHOTS = [
   "/images/screenshots/christian-ducharme.webp",
   "/images/screenshots/metal-plus.webp",
   "/images/screenshots/myriame-salon.webp",
-];
+] as const;
 
 function PhoneCarousel() {
   const prefersReducedMotion = useReducedMotion();
