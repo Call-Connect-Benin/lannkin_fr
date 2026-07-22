@@ -482,7 +482,6 @@ export function PortfolioGrid({
           <motion.div layout className="space-y-4">
             <AnimatePresence mode="popLayout">
               {filtered.map((project, index) => {
-                const badge = CATEGORY_BADGE[project.category];
                 const tags = project.services.slice(0, 3).map((service) => resolveServiceTag(service, project));
 
                 return (
