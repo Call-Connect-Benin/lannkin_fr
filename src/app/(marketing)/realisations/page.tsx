@@ -50,7 +50,7 @@ export default function RealisationsPage() {
         ]}
       />
 
-      <PortfolioGrid showFilters={true} />
+      <PortfolioGrid showFilters={true} showQuickView={false} />
 
       <section className="pb-20 pt-2">
         <Container>
