@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle, MapPin, Star } from "lucide-react";
 
+import { SITE_CONFIG } from "@/lib/constants";
 import { Container } from "@/presentation/components/ui/Container";
 import { Button } from "@/presentation/components/ui/Button";
 import { Breadcrumb } from "@/presentation/components/seo/Breadcrumb";
@@ -80,6 +81,13 @@ interface ZonePageTemplateProps {
 export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
   const currentPath = `/zone/${zone.slug}/`;
   const isParis = zone.city === "Paris";
+  const areaServed = isParis
+    ? [{ "@type": "City", name: zone.city }]
+    : [
+      { "@type": "City", name: zone.city },
+      { "@type": "AdministrativeArea", name: zone.region },
+      { "@type": "City", name: "Paris" },
+    ];
 
   return (
     <main className="min-h-screen">
@@ -264,26 +272,24 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "Lannkin S.A.S.",
+            name: SITE_CONFIG.legalName,
             description: zone.description,
             url: `https://lannkin.com/zone/${zone.slug}/`,
-            telephone: "+1-438-944-6129",
+            telephone: SITE_CONFIG.phone,
             address: {
               "@type": "PostalAddress",
+              streetAddress: "7 Rue Vulpian",
+              postalCode: "75013",
               addressLocality: "Paris",
-              addressRegion: "QC",
-              addressCountry: "CA",
+              addressRegion: "Île-de-France",
+              addressCountry: "FR",
             },
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: "4.95",
               reviewCount: "54",
             },
-            areaServed: [
-              { "@type": "City", name: zone.city },
-              { "@type": "City", name: "Paris" },
-              { "@type": "City", name: "Paris" },
-            ],
+            areaServed,
           }),
         }}
       />

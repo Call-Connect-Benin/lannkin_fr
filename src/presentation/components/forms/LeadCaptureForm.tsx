@@ -51,7 +51,7 @@ export function LeadCaptureForm({ title, subtitle, onSuccess }: LeadCaptureFormP
   const onSubmit = async (data: LeadCaptureData) => {
     setSubmitError(null);
     const result = await submit({
-      url: "/api/contact",
+      url: "/api/contact/",
       body: {
         formType: "lead",
         ...data,

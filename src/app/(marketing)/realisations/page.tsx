@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, ArrowUpRight, BadgeCheck, Layers3 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 
 import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
@@ -13,28 +13,6 @@ export const metadata: Metadata = {
   description:
     "Portfolio de l'agence web Lannkin a Paris. Sites vitrine, multipages, onepage et e-commerce. +10 ans d'experience, +50 projets livres en France.",
 };
-
-const multiPagesCount = PORTFOLIO_PROJECTS.filter((project) => project.category === "multipages").length;
-const onePageCount = PORTFOLIO_PROJECTS.filter((project) => project.category === "onepage").length;
-const ecommerceCount = PORTFOLIO_PROJECTS.filter((project) => project.category === "ecommerce").length;
-
-const PORTFOLIO_INSIGHTS = [
-  {
-    title: `Sites multipages (${multiPagesCount})`,
-    body:
-      "Des architectures plus riches, pensees pour des entreprises qui doivent presenter plusieurs services, rassurer et gagner en profondeur SEO.",
-  },
-  {
-    title: `Sites onepage (${onePageCount})`,
-    body:
-      "Des pages de conversion plus nerveuses, utiles pour des lancements, des offres locales ou des activations publicitaires a retour rapide.",
-  },
-  {
-    title: `Boutiques e-commerce (${ecommerceCount})`,
-    body:
-      "Des projets plus denses, centres sur le catalogue, la conversion, la logistique et la croissance internationale des marques.",
-  },
-];
 
 export default function RealisationsPage() {
   return (
@@ -62,56 +40,7 @@ export default function RealisationsPage() {
               borderColor: "rgba(45,45,45,0.08)",
             }}
           >
-            <div className="mb-8 grid gap-6 border-b border-[rgba(45,45,45,0.08)] pb-6 lg:grid-cols-[1fr_auto] lg:items-end">
-              <div className="max-w-3xl">
-                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-accent">
-                  Lecture portfolio
-                </p>
-                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-[#2d2d2d] sm:text-4xl">
-                  Une selection pensee pour montrer plus qu&apos;une simple liste
-                  de sites.
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-[#2d2d2d]/66 sm:text-base">
-                  Notre portfolio melange des projets vitrines, des onepages a
-                  fort enjeu de conversion et des e-commerces plus ambitieux.
-                  L&apos;objectif n&apos;est pas seulement de montrer de beaux ecrans,
-                  mais de faire sentir la diversite des contextes traites.
-                </p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-[rgba(45,45,45,0.08)] bg-white/78 p-4 lg:w-72">
-                <div className="flex items-start gap-3">
-                  <Layers3 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  <div>
-                    <p className="text-sm font-semibold text-[#2d2d2d]">
-                      Structure de lecture
-                    </p>
-                    <p className="mt-1 text-sm leading-relaxed text-[#2d2d2d]/64">
-                      Le haut de grille met en avant les projets les plus
-                      demonstratifs pour casser l&apos;effet catalogue.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid gap-5 lg:grid-cols-3">
-              {PORTFOLIO_INSIGHTS.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[1.5rem] border border-[rgba(45,45,45,0.08)] bg-white/76 p-5"
-                >
-                  <p className="font-heading text-xl font-bold text-[#2d2d2d]">
-                    {item.title}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/66">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 grid gap-6 rounded-[1.75rem] border border-[rgba(45,45,45,0.08)] bg-[#ede9e1]/72 p-6 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="grid gap-6 rounded-[1.75rem] border border-[rgba(45,45,45,0.08)] bg-[#ede9e1]/72 p-6 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <div className="flex items-start gap-3">
                   <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />

@@ -1,10 +1,9 @@
 export const SITE_CONFIG = {
   name: "Lannkin",
   legalName: "Lannkin S.A.S.",
-  neq: "1179695284",
   url: "https://lannkin.com",
-  email: "info@lannkin.fr",
-  phone: "+33 1 00 00 00 00",
+  email: "info@lannkin.com",
+  phone: "+33 6 17 03 03 08",
   founded: 2015,
   founders: ["Albert Lanne", "Kevin Kinani"],
   location: {

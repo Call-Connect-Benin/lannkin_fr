@@ -4,8 +4,28 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import { Container } from "@/presentation/components/ui/Container";
 import { Button } from "@/presentation/components/ui/Button";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
+import { ParallaxBg } from "@/presentation/components/ui/ParallaxSection";
 import { TestimonialsSection } from "@/presentation/components/home/TestimonialsSection";
 import type { Sector } from "@/domain/entities/sector";
+
+// ---------------------------------------------------------------------------
+// Rendu 3D par secteur (coherence visuelle avec /services/ et /realisations/)
+// ---------------------------------------------------------------------------
+
+const SECTOR_3D: Record<string, string> = {
+  "restaurant-restauration": "/images/rendu3D/rendu3d-flatlay-fond-vert.webp",
+  immobilier: "/images/rendu3D/rendu3d-cubes-lateral-angle.webp",
+  sante: "/images/rendu3D/rendu3d-cube-verre-flou-blanc.webp",
+  construction: "/images/rendu3D/rendu3d-cubes-lateral-angle-2.webp",
+  "commerce-detail": "/images/rendu3D/rendu3d-cubes-overhead.webp",
+  "services-professionnels": "/images/rendu3D/rendu3d-cadre-verre-closeup.webp",
+  beaute: "/images/rendu3D/rendu3d-cube-vert-minimaliste.webp",
+  automobile: "/images/rendu3D/rendu3d-rocket-cubes-gris.webp",
+  ecommerce: "/images/rendu3D/rendu3d-cubes-rocket-closeup.webp",
+  education: "/images/rendu3D/rendu3d-diamant-cubes-flottants.webp",
+  tourisme: "/images/rendu3D/rendu3d-orbite-planete-fond-rouge.webp",
+  juridique: "/images/rendu3D/rendu3d-cube-vert-macro.webp",
+};
 
 // ---------------------------------------------------------------------------
 // Service label + description map (hub slugs only)
@@ -59,10 +79,12 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
   return (
     <main>
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section
-        className="pb-20 pt-28"
-        style={{ background: "linear-gradient(145deg, #ede9e1 0%, #e8e4db 65%, #f7f5f0 100%)" }}
-      >
+      <section className="parallax-section relative overflow-hidden pb-20 pt-28">
+        <ParallaxBg
+          src={SECTOR_3D[sector.slug] ?? "/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"}
+          overlay={0.86}
+        />
+        <div className="relative z-10">
         <Container>
           <div className="max-w-3xl">
             {/* Sector badge */}
@@ -106,6 +128,7 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
             </div>
           </div>
         </Container>
+        </div>
       </section>
 
       {/* ── Services recommandés ──────────────────────────────────── */}

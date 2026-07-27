@@ -8,9 +8,9 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full max-w-full overflow-x-hidden" suppressHydrationWarning>
+    <div className="w-full max-w-full overflow-x-clip" suppressHydrationWarning>
       <Header />
-      <div className="w-full max-w-full overflow-x-hidden pt-[72px]">{children}</div>
+      <div className="w-full max-w-full overflow-x-clip pt-[72px]">{children}</div>
       <Footer />
       <ExitIntentPopup />
     </div>

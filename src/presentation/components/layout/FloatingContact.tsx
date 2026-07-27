@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 import { Phone, Mail, MessageCircle, X } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const WHATSAPP_URL = "https://web.whatsapp.com/send?phone=33617030308&text=";
-const EMAIL = "mailto:info@lannkin.fr";
-const PHONE = `tel:${SITE_CONFIG.phone.replace(/[\s()]/g, "")}`;
+const PHONE_DIGITS = SITE_CONFIG.phone.replace(/[\s()]/g, "");
+const WHATSAPP_URL = `https://web.whatsapp.com/send?phone=${PHONE_DIGITS.replace("+", "")}&text=`;
+const EMAIL = `mailto:${SITE_CONFIG.email}`;
+const PHONE = `tel:${PHONE_DIGITS}`;
 
 export default function FloatingContact() {
   const [open, setOpen] = useState(false);

@@ -4,7 +4,7 @@ Allow: /
 Disallow: /api/
 
 # Host
-Host: https://lannkin.fr
+Host: https://lannkin.com
 
 # Sitemaps
-Sitemap: https://lannkin.fr/sitemap.xml
+Sitemap: https://lannkin.com/sitemap.xml

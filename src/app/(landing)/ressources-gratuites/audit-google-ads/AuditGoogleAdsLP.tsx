@@ -6,18 +6,18 @@ import "./audit-lp.css";
 
 /* ─── DATA ─── */
 const FAKE_CLICKS = [
-  { flag: "\u{1F1FA}\u{1F1E6}", name: "Ukraine", region: "Zaporizhzhia Oblast", clicks: 47, cost: "312$", type: "bot" as const, risk: 92 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Tunis Governorate", clicks: 89, cost: "578$", type: "bot" as const, risk: 88 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Sousse Governorate", clicks: 34, cost: "221$", type: "suspect" as const, risk: 75 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Nabeul Governorate", clicks: 22, cost: "143$", type: "suspect" as const, risk: 68 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Ben Arous Gov.", clicks: 18, cost: "117$", type: "bot" as const, risk: 82 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Sfax Governorate", clicks: 15, cost: "97$", type: "unknown" as const, risk: 45 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Monastir Gov.", clicks: 12, cost: "78$", type: "suspect" as const, risk: 60 },
-  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Kairouan Gov.", clicks: 8, cost: "52$", type: "unknown" as const, risk: 38 },
-  { flag: "\u{1F1F5}\u{1F1ED}", name: "Philippines", region: "Metro Manila", clicks: 28, cost: "182$", type: "bot" as const, risk: 85 },
-  { flag: "\u{1F1EE}\u{1F1F3}", name: "Inde", region: "Maharashtra", clicks: 19, cost: "124$", type: "suspect" as const, risk: 62 },
-  { flag: "\u{1F1F3}\u{1F1EC}", name: "Nigeria", region: "Lagos State", clicks: 14, cost: "91$", type: "bot" as const, risk: 79 },
-  { flag: "\u{1F1E7}\u{1F1E9}", name: "Bangladesh", region: "Dhaka Division", clicks: 11, cost: "71$", type: "bot" as const, risk: 76 },
+  { flag: "\u{1F1FA}\u{1F1E6}", name: "Ukraine", region: "Zaporizhzhia Oblast", clicks: 47, cost: "312 €", type: "bot" as const, risk: 92 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Tunis Governorate", clicks: 89, cost: "578 €", type: "bot" as const, risk: 88 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Sousse Governorate", clicks: 34, cost: "221 €", type: "suspect" as const, risk: 75 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Nabeul Governorate", clicks: 22, cost: "143 €", type: "suspect" as const, risk: 68 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Ben Arous Gov.", clicks: 18, cost: "117 €", type: "bot" as const, risk: 82 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Sfax Governorate", clicks: 15, cost: "97 €", type: "unknown" as const, risk: 45 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Monastir Gov.", clicks: 12, cost: "78 €", type: "suspect" as const, risk: 60 },
+  { flag: "\u{1F1F9}\u{1F1F3}", name: "Tunisie", region: "Kairouan Gov.", clicks: 8, cost: "52 €", type: "unknown" as const, risk: 38 },
+  { flag: "\u{1F1F5}\u{1F1ED}", name: "Philippines", region: "Metro Manila", clicks: 28, cost: "182 €", type: "bot" as const, risk: 85 },
+  { flag: "\u{1F1EE}\u{1F1F3}", name: "Inde", region: "Maharashtra", clicks: 19, cost: "124 €", type: "suspect" as const, risk: 62 },
+  { flag: "\u{1F1F3}\u{1F1EC}", name: "Nigeria", region: "Lagos State", clicks: 14, cost: "91 €", type: "bot" as const, risk: 79 },
+  { flag: "\u{1F1E7}\u{1F1E9}", name: "Bangladesh", region: "Dhaka Division", clicks: 11, cost: "71 €", type: "bot" as const, risk: 76 },
 ];
 
 const TYPE_LABELS = { bot: "Robot", suspect: "Suspect", unknown: "Inconnu" } as const;
@@ -269,7 +269,7 @@ export function AuditGoogleAdsLP() {
             Nos équipes <strong style={{ color: "var(--blue)" }}>Google Partner</strong> peuvent effectuer une procédure complète de remboursement auprès de Google Ads pour récupérer vos clics frauduleux.
           </div>
           <div style={{ background: "var(--reda)", border: "1px solid var(--redb)", borderRadius: 10, padding: "14px 18px", marginBottom: 20, textAlign: "left" }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: "var(--red)", marginBottom: 4 }}>Certains de nos clients ont récupéré plus de 5 000$</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: "var(--red)", marginBottom: 4 }}>Certains de nos clients ont récupéré plus de 5 000 €</div>
             <div style={{ fontSize: 12, color: "var(--text2)" }}>En clics frauduleux remboursés par Google grâce à notre procédure d&apos;audit et nos dossiers de preuves.</div>
           </div>
           <a href="tel:+33100000000" style={{ display: "block", background: "var(--red)", color: "#fff", padding: 14, borderRadius: 10, fontSize: 15, fontWeight: 700, textDecoration: "none", marginBottom: 10 }}>
@@ -328,10 +328,10 @@ export function AuditGoogleAdsLP() {
               <label>Budget mensuel Google Ads</label>
               <div className="opts" data-n="budget" data-t="single">
                 <div className="op" data-v="500"><div className="ck" />Moins de 500€/mois</div>
-                <div className="op" data-v="2000"><div className="ck" />500$ - 2 000€/mois</div>
-                <div className="op" data-v="5000"><div className="ck" />2 000$ - 5 000€/mois</div>
-                <div className="op" data-v="10000"><div className="ck" />5 000$ - 10 000€/mois</div>
-                <div className="op" data-v="20000"><div className="ck" />10 000$+ /mois</div>
+                <div className="op" data-v="2000"><div className="ck" />500 € - 2 000€/mois</div>
+                <div className="op" data-v="5000"><div className="ck" />2 000 € - 5 000€/mois</div>
+                <div className="op" data-v="10000"><div className="ck" />5 000 € - 10 000€/mois</div>
+                <div className="op" data-v="20000"><div className="ck" />10 000 €+ /mois</div>
               </div>
             </div>
             <div className="fd">
@@ -606,7 +606,7 @@ export function AuditGoogleAdsLP() {
           <div className="g3">
             <div className="gc"><div className="gc-icon">&#128200;</div><h3>Clics hors zone</h3><p>Google diffuse vos annonces à des utilisateurs situés en dehors de vos zones ciblées. Des clics facturés, zéro conversion.</p></div>
             <div className="gc"><div className="gc-icon">&#129302;</div><h3>Trafic robot</h3><p>Des bots cliquent depuis des pays que vous ne ciblez pas. Google n&apos;en détecte qu&apos;une partie. Les bloqueurs d&apos;IP sont limités à 500 adresses.</p></div>
-            <div className="gc"><div className="gc-icon">&#128184;</div><h3>Budget gaspillé en silence</h3><p>Sans audit, ces fuites passent inaperçues. Sur 5 000€/mois, ça représente 500$ à 2 000$ perdus par trimestre.</p></div>
+            <div className="gc"><div className="gc-icon">&#128184;</div><h3>Budget gaspillé en silence</h3><p>Sans audit, ces fuites passent inaperçues. Sur 5 000€/mois, ça représente 500 € à 2 000 € perdus par trimestre.</p></div>
           </div>
         </div>
       </section>
@@ -716,7 +716,7 @@ export function AuditGoogleAdsLP() {
           </div>
           <div className="ft-col">
             <h4>Contact</h4>
-            <a href="mailto:info@lannkin.fr">info@lannkin.fr</a>
+            <a href="mailto:info@lannkin.com">info@lannkin.com</a>
             <a href="tel:+33100000000">+33 1 00 00 00 00</a>
             <p style={{ marginTop: 6, fontSize: 11, color: "var(--text4)" }}>Lun-Ven, 9h à 17h30 (heure de Paris)</p>
           </div>

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
   Check,
+  Code,
   Globe2,
   ShieldCheck,
   Sparkles,
@@ -28,9 +30,8 @@ import {
   TESTIMONIALS,
   WHY_LANNKIN,
 } from "@/data/homepage";
-import { GoogleMapsWidget } from "@/presentation/components/layout/GoogleMapsWidget";
-import { LeadCaptureForm } from "@/presentation/components/forms/LeadCaptureForm";
 import ShowcaseCards from "@/presentation/components/home/ShowcaseCards";
+import { TestimonialsCarousel } from "@/presentation/components/home/TestimonialsCarousel";
 import { Button } from "@/presentation/components/ui";
 import { Container } from "@/presentation/components/ui/Container";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
@@ -47,9 +48,9 @@ const CLIENT_LOGOS = Array.from(
 );
 
 const QUICK_PROOFS = [
-  "Google Partner et expertises multi-plateformes",
-  "Offres express a partir de 200EUR",
-  "R&D interne pour scripts et optimisations",
+  { icon: ShieldCheck, title: "Google Partner", subtitle: "et expertises multi-plateformes" },
+  { icon: Zap, title: "Offres express", subtitle: "à partir de 200 EUR" },
+  { icon: Code, title: "R&D interne", subtitle: "pour scripts et optimisations" },
 ] as const;
 
 function SectionIntro({
@@ -138,13 +139,13 @@ function OfferCard({
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
           <p
-            className="inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="inline-flex whitespace-nowrap rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]"
             style={{
               backgroundColor: palette.pill,
               color: dark ? "rgba(255,255,255,0.85)" : "#498f6d",
             }}
           >
-            Offre immediate
+            Offre immédiate
           </p>
           <h3 className="mt-4 font-heading text-2xl font-bold">{title}</h3>
         </div>
@@ -155,8 +156,15 @@ function OfferCard({
             border: `1px solid ${dark ? "rgba(255,255,255,0.08)" : "rgba(45,45,45,0.08)"}`,
           }}
         >
-          <div className="font-heading text-2xl font-bold">{price}</div>
-          <div className="text-xs uppercase tracking-[0.16em] opacity-60">Point d'entree</div>
+          {price.endsWith(" TTC") ? (
+            <>
+              <div className="font-heading text-2xl font-bold">{price.slice(0, -4)}</div>
+              <div className="font-heading text-sm font-bold">TTC</div>
+            </>
+          ) : (
+            <div className="font-heading text-2xl font-bold">{price}</div>
+          )}
+          <div className="text-xs uppercase tracking-[0.16em] opacity-60 whitespace-nowrap">Point d'entrée</div>
         </div>
       </div>
 
@@ -185,7 +193,7 @@ function OfferCard({
           size="sm"
           className={dark ? "border-white/30 text-white hover:bg-white/10" : "w-full sm:w-auto"}
         >
-          Voir le detail
+          Voir le détail
           <ArrowRight className="h-4 w-4" />
         </Button>
       </div>
@@ -196,133 +204,151 @@ function OfferCard({
 function HomePage() {
   return (
     <main className="overflow-x-hidden overflow-y-visible bg-[#f7f5f0] text-[#2d2d2d]">
-      <section className="relative overflow-hidden border-b border-[#2d2d2d]/8 pb-12 pt-16 sm:pb-20 sm:pt-24 lg:pb-24 lg:pt-28">
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(73,143,109,0.14),transparent_36%),radial-gradient(circle_at_80%_20%,rgba(133,53,62,0.08),transparent_28%)]" />
-          <div className="absolute right-[-12%] top-[-8%] h-[420px] w-[420px] rounded-full bg-[#498f6d]/10 blur-[120px]" />
-          <div className="absolute left-[-10%] top-[28%] h-[320px] w-[320px] rounded-full bg-[#85353e]/8 blur-[120px]" />
-          <div className="absolute bottom-[-120px] right-[8%] h-[520px] w-[520px] overflow-hidden rounded-full opacity-35">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rendu3D/rendu3d-cubes-logo-lk-rocket.webp"
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
+      <section className="relative overflow-hidden border-b border-[#d6d8db] bg-[#f8fafc] lg:min-h-[calc(100vh-72px)]">
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(73,143,109,0.12),transparent_36%),radial-gradient(circle_at_80%_20%,rgba(133,53,62,0.08),transparent_28%)]"
+          aria-hidden
+        />
 
-        <Container className="relative z-10" size="xl">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.22fr)_minmax(360px,460px)] lg:items-start xl:grid-cols-[minmax(0,1.28fr)_minmax(380px,500px)]">
-            <div className="min-w-0 max-w-[46rem] xl:pr-4">
-              <div className="max-w-full rounded-[28px] border border-[#498f6d]/20 bg-white/85 px-4 py-3 shadow-[0_12px_30px_rgba(45,45,45,0.05)] backdrop-blur sm:inline-flex sm:max-w-fit sm:flex-wrap sm:items-center sm:gap-3 sm:rounded-full sm:px-4 sm:py-2">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-2.5 w-2.5 shrink-0 rounded-full bg-[#498f6d]" />
-                  <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-[#498f6d] sm:text-[11px] sm:tracking-[0.18em]">
-                    {HERO.badge}
-                  </span>
-                </div>
-                <div className="mt-2 pl-[22px] text-[12px] leading-relaxed text-[#2d2d2d]/60 sm:mt-0 sm:pl-0 sm:text-xs sm:font-medium">
-                  <span className="hidden text-[#2d2d2d]/20 sm:inline sm:pr-3">|</span>
-                  Strategie locale, execution orientee resultats
-                </div>
-              </div>
+        <Container
+          className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8"
+          style={{ paddingTop: "clamp(1rem, 3vh, 2.5rem)", paddingBottom: "clamp(1rem, 3vh, 2.5rem)" }}
+          size="xl"
+        >
+          <div
+            className="grid lg:grid-cols-[0.95fr_1.05fr] lg:items-start"
+            style={{ gap: "clamp(1.25rem, 3.5vh, 2.5rem)" }}
+          >
+            <div className="mx-auto flex max-w-3xl flex-col justify-center text-left">
+              <span className="inline-flex items-center rounded-full border border-[#d1d5db] bg-white/95 px-4 py-2 text-sm font-semibold text-[#334155] shadow-sm">
+                <span className="mr-2 h-2.5 w-2.5 rounded-full bg-[#498f6d]" />
+                Agence digitale 360° basée à Paris
+              </span>
 
-              <h1 className="mt-7 max-w-4xl break-words font-heading text-[1.75rem] font-bold leading-[1.08] tracking-[-0.02em] text-[#2d2d2d] sm:text-[3rem] md:text-[3.8rem] lg:leading-[0.95] lg:tracking-[-0.04em] xl:text-[5.1rem]">
-                L'agence qui rend votre
-                <span className="block text-[#498f6d]">croissance impossible a ignorer.</span>
+              <h1
+                className="font-heading font-black leading-[1.05] tracking-[-0.03em] text-[#0f172a]"
+                style={{
+                  fontSize: "clamp(1.9rem, 1rem + 2vw + 1.6vh, 3.8rem)",
+                  marginTop: "clamp(0.75rem, 2.5vh, 1.75rem)",
+                }}
+              >
+                L’agence qui rend
+                <span className="block text-[#498f6d]">votre croissance</span>
+                impossible à ignorer.
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#2d2d2d]/72 sm:text-xl">
-                {HERO.subtitle}
+              <p
+                className="max-w-2xl text-base leading-7 text-[#475569] sm:text-lg"
+                style={{ marginTop: "clamp(0.5rem, 2vh, 1.25rem)" }}
+              >
+                Conception web, publicité en ligne, référencement, social media et intelligence artificielle réunis sous un même toit pour générer des résultats concrets, dès le premier mois.
               </p>
 
-              <div className="mt-8 hidden flex-wrap gap-3 sm:flex">
+              <div
+                className="grid gap-3 sm:grid-cols-3"
+                style={{ marginTop: "clamp(0.5rem, 2vh, 1.5rem)" }}
+              >
                 {QUICK_PROOFS.map((item) => (
-                  <span
-                    key={item}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#2d2d2d]/10 bg-white/70 px-4 py-2 text-sm text-[#2d2d2d]/70 backdrop-blur"
+                  <div
+                    key={item.title}
+                    className="flex items-center gap-3 rounded-2xl border border-[#d1d5db] bg-white px-4 py-2.5 shadow-sm"
                   >
-                    <Check className="h-4 w-4 text-[#498f6d]" />
-                    {item}
-                  </span>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#498f6d]/10 text-[#498f6d]">
+                      <item.icon className="h-5 w-5" />
+                    </span>
+                    <span className="min-w-0 text-sm leading-tight">
+                      <span className="block font-semibold text-[#0f172a]">{item.title}</span>
+                      <span className="block text-[#64748b]">{item.subtitle}</span>
+                    </span>
+                  </div>
                 ))}
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Button href={HERO.cta.primary.href} size="lg">
+              <div
+                className="flex flex-wrap gap-3"
+                style={{ marginTop: "clamp(0.5rem, 2vh, 1.5rem)" }}
+              >
+                <Button href={HERO.cta.primary.href} size="md">
                   {HERO.cta.primary.label}
-                  <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button href={HERO.cta.secondary.href} variant="secondary" size="lg">
+                <Button href={HERO.cta.secondary.href} variant="secondary" size="md">
                   {HERO.cta.secondary.label}
                 </Button>
               </div>
 
-              <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-                {HERO.stats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className={`rounded-[24px] border p-4 shadow-[0_18px_35px_rgba(45,45,45,0.05)] ${
-                      index === 0 ? "sm:col-span-2" : ""
-                    }`}
-                    style={{
-                      background:
-                        index === 0
-                          ? "linear-gradient(145deg, rgba(73,143,109,0.12), rgba(255,255,255,0.9))"
-                          : "rgba(255,255,255,0.82)",
-                      borderColor: "rgba(45,45,45,0.08)",
-                    }}
-                  >
-                    <div className="font-heading text-3xl font-bold text-[#2d2d2d]">{stat.value}</div>
-                    <div className="mt-1 text-sm text-[#2d2d2d]/58">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 max-w-full overflow-hidden">
-                <GoogleMapsWidget variant="light" />
-              </div>
-            </div>
-
-            <div className="relative lg:justify-self-end">
-              <div className="mx-auto w-full max-w-[500px] rounded-[32px] border border-[#2d2d2d]/10 bg-white/92 p-4 shadow-[0_30px_90px_rgba(45,45,45,0.12)] backdrop-blur sm:p-6">
-                <div className="mb-5 grid gap-3 sm:grid-cols-2">
-                  {OFFERS_SPOTLIGHT.items.slice(0, 2).map((item) => (
-                    <div
-                      key={item.title}
-                      className="rounded-[22px] border border-[#2d2d2d]/8 bg-[#f7f5f0] p-4"
-                    >
-                      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#498f6d]">
-                        {item.title}
-                      </div>
-                      <div className="mt-2 font-heading text-2xl font-bold text-[#2d2d2d]">
-                        {item.price}
-                      </div>
-                      <div className="mt-2 text-xs leading-relaxed text-[#2d2d2d]/58">
-                        {item.bullets[0]}
-                      </div>
-                    </div>
+              <div
+                className="flex flex-wrap items-center gap-3 text-sm text-[#475569]"
+                style={{ marginTop: "clamp(0.4rem, 1.5vh, 1rem)" }}
+              >
+                <div className="inline-flex -space-x-2">
+                  {["3.jpeg", "6.jpeg", "7.jpeg"].map((file) => (
+                    <Image
+                      key={file}
+                      src={`/avatars/${file}`}
+                      alt=""
+                      width={36}
+                      height={36}
+                      className="h-9 w-9 rounded-full border-2 border-white object-cover"
+                    />
                   ))}
                 </div>
-
-                <LeadCaptureForm
-                  title="Recevez un plan d'action sur-mesure"
-                  subtitle="Parlez-nous de votre contexte. Un expert Lannkin vous recontacte avec une recommandation claire, un budget et un angle d'attaque."
-                />
-
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#498f6d]/10 px-3 py-1.5 text-xs font-medium text-[#498f6d]">
-                    <ShieldCheck className="h-3.5 w-3.5" />
-                    Sans engagement
-                  </div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#2d2d2d]/6 px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/65">
-                    <Zap className="h-3.5 w-3.5 text-[#498f6d]" />
-                    Reponse humaine
-                  </div>
+                <div className="rounded-full border border-[#d1d5db] bg-white/90 px-4 py-2 shadow-sm">
+                  <p className="text-sm font-semibold text-[#111827]">+1000 clients accompagnés</p>
+                  <p className="text-xs text-[#64748b]">des TPE aux grandes marques</p>
                 </div>
               </div>
             </div>
+
+            <div
+              className="relative mx-auto flex w-full max-w-[680px] justify-center"
+              style={{ maxHeight: "clamp(220px, 42vh, 480px)" }}
+            >
+              <Image
+                src="/images/hero.png"
+                alt="Hero Lannkin"
+                width={1120}
+                height={840}
+                priority
+                className="w-auto object-contain"
+                style={{
+                  height: "100%",
+                  maxWidth: "100%",
+                  maskImage:
+                    "radial-gradient(ellipse 72% 66% at 50% 36%, black 40%, transparent 100%)",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 72% 66% at 50% 36%, black 40%, transparent 100%)",
+                }}
+              />
+            </div>
           </div>
+
+          <div
+            className="grid grid-cols-1 divide-y divide-[#e5e7eb] rounded-[24px] border border-[#e5e7eb] bg-white/95 shadow-[0_20px_45px_rgba(15,23,42,0.06)] sm:grid-cols-4 sm:divide-x sm:divide-y-0"
+            style={{ marginTop: "clamp(0.75rem, 3vh, 2rem)" }}
+          >
+            {HERO.stats.map((stat) => (
+              <div key={stat.label} className="flex items-center gap-3 px-5 py-3.5">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#498f6d]/10 text-[#498f6d]">
+                  <LucideIcon name={stat.icon} className="h-5 w-5" />
+                </span>
+                <div className="min-w-0">
+                  <div className="font-heading text-xl font-bold leading-tight text-[#111827]">{stat.value}</div>
+                  <div className="mt-1 text-sm text-[#475569]">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="mx-auto text-center text-sm text-[#64748b] sm:text-base"
+            style={{ marginTop: "clamp(0.75rem, 2.5vh, 1.5rem)" }}
+          >
+            Un accompagnement transparent, des stratégies sur-mesure et des{" "}
+            <span className="underline decoration-[#498f6d] underline-offset-4">
+              résultats mesurables
+            </span>
+            .
+          </p>
         </Container>
       </section>
 
@@ -672,27 +698,7 @@ function HomePage() {
             subtitle={TESTIMONIALS.subtitle}
             align="center"
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            {TESTIMONIALS.items.map((testimonial) => (
-              <div
-                key={testimonial.name}
-                className="rounded-[30px] border border-[#2d2d2d]/8 bg-white p-6 shadow-[0_20px_50px_rgba(45,45,45,0.06)]"
-              >
-                <div className="flex items-center gap-1 text-[#FBBC05]">
-                  {Array.from({ length: testimonial.rating }).map((_, index) => (
-                    <span key={`${testimonial.name}-${index}`}>★</span>
-                  ))}
-                </div>
-                <p className="mt-5 text-base leading-relaxed text-[#2d2d2d]/80">"{testimonial.quote}"</p>
-                <div className="mt-6 border-t border-[#2d2d2d]/8 pt-4">
-                  <div className="font-heading text-lg font-bold text-[#2d2d2d]">{testimonial.name}</div>
-                  <div className="text-sm text-[#2d2d2d]/55">
-                    {testimonial.company} · {testimonial.sector}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsCarousel items={TESTIMONIALS.items} />
         </Container>
       </section>
 

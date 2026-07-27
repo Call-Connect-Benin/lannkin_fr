@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Mentions Légales | Lannkin",
-  description: "Mentions légales de Lannkin. Informations juridiques, éditeur et hébergeur du site lannkin.fr.",
+  description: "Mentions légales de Lannkin. Informations juridiques, éditeur et hébergeur du site lannkin.com.",
 };
 
 export default function MentionsLegalesPage() {

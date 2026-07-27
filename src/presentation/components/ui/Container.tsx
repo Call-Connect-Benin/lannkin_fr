@@ -1,6 +1,6 @@
 "use client";
 
-import { type ElementType, type ReactNode } from "react";
+import { type CSSProperties, type ElementType, type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -18,6 +18,7 @@ export interface ContainerProps {
   className?: string;
   size?: ContainerSize;
   as?: ElementType;
+  style?: CSSProperties;
 }
 
 export function Container({
@@ -25,6 +26,7 @@ export function Container({
   className,
   size = "lg",
   as: Component = "div",
+  style,
 }: ContainerProps) {
   const Tag = Component as "div";
 
@@ -35,6 +37,7 @@ export function Container({
         maxWidths[size],
         className
       )}
+      style={style}
     >
       {children}
     </Tag>

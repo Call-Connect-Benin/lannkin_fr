@@ -150,13 +150,6 @@ interface PortfolioGridProps {
   showQuickView?: boolean;
 }
 
-const CATEGORY_PAGES: Record<PortfolioCategory, string> = {
-  multipages: "/realisations/multipages/",
-  onepage: "/realisations/onepage/",
-  ecommerce: "/realisations/ecommerce/",
-  international: "/realisations/international/",
-};
-
 function ProjectQuickView({
   project,
   onClose,
@@ -367,122 +360,79 @@ export function PortfolioGrid({
           />
 
           {showFilters && (
-            <div
-              className="relative mb-10 overflow-hidden rounded-[2rem] border p-5 sm:p-6"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(247,245,240,0.96) 100%)",
-                borderColor: "rgba(45,45,45,0.08)",
-              }}
-            >
-              <div
-                className="pointer-events-none absolute inset-0"
-                aria-hidden
-                style={{
-                  background:
-                    "radial-gradient(circle at top right, rgba(73,143,109,0.08), transparent 34%), radial-gradient(circle at bottom left, rgba(133,53,62,0.05), transparent 28%)",
-                }}
-              />
-
-              <div className="relative z-10">
-                <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-                  <div className="max-w-2xl">
-                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-accent">
-                      Navigation portfolio
-                    </p>
-                    <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-[#2d2d2d]">
-                      Une liste plus lisible, puis une fiche detaillee au clic
-                    </h2>
-                    <p className="mt-3 text-sm leading-relaxed text-[#2d2d2d]/66 sm:text-base">
-                      Parcourez d&apos;abord les projets comme un sommaire editorial,
-                      puis ouvrez la fiche detaillee sans quitter la page.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-[rgba(45,45,45,0.08)] bg-white/78 px-4 py-3">
-                    <p className="text-xs uppercase tracking-[0.18em] text-[#2d2d2d]/44">
-                      Resultat courant
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-[#2d2d2d]">
-                      {filtered.length} projet{filtered.length > 1 ? "s" : ""} visible
-                      {filtered.length > 1 ? "s" : ""}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {CATEGORY_TABS.map((tab) => {
-                    const isActive = activeCategory === tab.id;
-                    return (
-                      <button
-                        key={tab.id}
-                        onClick={() => {
-                          setActiveCategory(tab.id);
-                          setActiveSector("all");
-                        }}
-                        className="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
-                        style={
-                          isActive
-                            ? {
-                                backgroundColor: "#498f6d",
-                                color: "#fff",
-                                boxShadow: "0 10px 30px rgba(73,143,109,0.18)",
-                              }
-                            : {
-                                backgroundColor: "rgba(255,255,255,0.78)",
-                                color: "#6B7280",
-                                border: "1px solid rgba(45,45,45,0.10)",
-                              }
-                        }
-                      >
-                        {tab.label}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    onClick={() => setActiveSector("all")}
-                    className="rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-200"
-                    style={
-                      activeSector === "all"
-                        ? {
-                            backgroundColor: "rgba(73,143,109,0.18)",
-                            color: "#2d2d2d",
-                            border: "1px solid rgba(73,143,109,0.28)",
-                          }
-                        : {
-                            backgroundColor: "rgba(255,255,255,0.7)",
-                            color: "#6B7280",
-                            border: "1px solid rgba(45,45,45,0.10)",
-                          }
-                    }
-                  >
-                    Tous les secteurs
-                  </button>
-                  {PORTFOLIO_SECTOR_FILTERS.map((sector) => (
-                    <Link
-                      key={sector.slug}
-                      href={sector.href}
-                      className="rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-200"
-                      style={{
-                        backgroundColor: "rgba(255,255,255,0.7)",
-                        color: "#6B7280",
-                        border: "1px solid rgba(45,45,45,0.10)",
+            <div className="mb-10 space-y-3">
+              <div className="flex flex-wrap gap-2">
+                {CATEGORY_TABS.map((tab) => {
+                  const isActive = activeCategory === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => {
+                        setActiveCategory(tab.id);
+                        setActiveSector("all");
                       }}
+                      className="rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+                      style={
+                        isActive
+                          ? { backgroundColor: "#498f6d", color: "#fff" }
+                          : {
+                              backgroundColor: "rgba(255,255,255,0.78)",
+                              color: "#6B7280",
+                              border: "1px solid rgba(45,45,45,0.10)",
+                            }
+                      }
                     >
-                      {sector.label}
-                    </Link>
-                  ))}
-                </div>
+                      {tab.label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => setActiveSector("all")}
+                  className="rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-200"
+                  style={
+                    activeSector === "all"
+                      ? {
+                          backgroundColor: "rgba(73,143,109,0.18)",
+                          color: "#2d2d2d",
+                          border: "1px solid rgba(73,143,109,0.28)",
+                        }
+                      : {
+                          backgroundColor: "rgba(255,255,255,0.7)",
+                          color: "#6B7280",
+                          border: "1px solid rgba(45,45,45,0.10)",
+                        }
+                  }
+                >
+                  Tous les secteurs
+                </button>
+                {PORTFOLIO_SECTOR_FILTERS.map((sector) => (
+                  <Link
+                    key={sector.slug}
+                    href={sector.href}
+                    className="rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-200"
+                    style={{
+                      backgroundColor: "rgba(255,255,255,0.7)",
+                      color: "#6B7280",
+                      border: "1px solid rgba(45,45,45,0.10)",
+                    }}
+                  >
+                    {sector.label}
+                  </Link>
+                ))}
               </div>
             </div>
           )}
 
-          <motion.div layout className="space-y-4">
+          <motion.div layout className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout">
               {filtered.map((project, index) => {
                 const tags = project.services.slice(0, 3).map((service) => resolveServiceTag(service, project));
+                const openProject = showQuickView
+                  ? () => setSelectedProject(project)
+                  : undefined;
 
                 return (
                   <motion.article
@@ -492,166 +442,147 @@ export function PortfolioGrid({
                     variants={listItemVariants}
                     initial="hidden"
                     animate="visible"
-                    className="group relative overflow-hidden rounded-[2rem] border p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/24 hover:shadow-[0_18px_45px_rgba(45,45,45,0.08)] sm:p-5"
+                    className="group relative flex flex-col overflow-hidden rounded-[1.75rem] border transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/24 hover:shadow-[0_18px_45px_rgba(45,45,45,0.08)]"
                     style={{
                       background:
                         "linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(247,245,240,0.98) 100%)",
                       borderColor: "rgba(45,45,45,0.08)",
                     }}
                   >
-                    <div
-                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                      aria-hidden
-                      style={{
-                        background:
-                          "radial-gradient(circle at top right, rgba(73,143,109,0.10), transparent 34%), radial-gradient(circle at bottom left, rgba(133,53,62,0.05), transparent 28%)",
-                      }}
-                    />
+                    {showQuickView ? (
+                      <button
+                        type="button"
+                        onClick={openProject}
+                        className="relative block aspect-[4/3] w-full overflow-hidden text-left"
+                        aria-label={`Ouvrir la fiche du projet ${project.name}`}
+                      >
+                        {project.previewImage ? (
+                          <>
+                            <Image
+                              src={project.previewImage}
+                              alt={`Preview ${project.name}`}
+                              fill
+                              className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
+                          </>
+                        ) : null}
+                      </button>
+                    ) : (
+                      <Link
+                        href={`/realisations/${project.slug}/`}
+                        className="relative block aspect-[4/3] w-full overflow-hidden text-left"
+                        aria-label={`Voir le projet ${project.name}`}
+                      >
+                        {project.previewImage ? (
+                          <>
+                            <Image
+                              src={project.previewImage}
+                              alt={`Preview ${project.name}`}
+                              fill
+                              className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
+                          </>
+                        ) : null}
+                      </Link>
+                    )}
 
-                    <div className="relative z-10 grid gap-5 lg:grid-cols-[260px_minmax(0,1fr)_auto] lg:items-center">
-                      {showQuickView ? (
-                        <button
-                          type="button"
-                          onClick={() => setSelectedProject(project)}
-                          className="relative block aspect-[16/10] w-full overflow-hidden rounded-[1.5rem] text-left"
-                          aria-label={`Ouvrir la fiche du projet ${project.name}`}
+                    <div className="flex flex-1 flex-col p-5">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className="rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-accent"
+                          style={{ backgroundColor: "rgba(73,143,109,0.12)" }}
                         >
-                          {project.previewImage ? (
-                            <>
-                              <Image
-                                src={project.previewImage}
-                                alt={`Preview ${project.name}`}
-                                fill
-                                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                                sizes="(max-width: 1024px) 100vw, 260px"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
-                            </>
-                          ) : null}
+                          {project.categoryLabel}
+                        </span>
+                        <span className="ml-auto text-[11px] font-medium text-[#2d2d2d]/48">
+                          {project.year}
+                        </span>
+                      </div>
+
+                      <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d2d2d]/56">
+                        {project.sector}
+                      </p>
+
+                      {showQuickView ? (
+                        <button type="button" onClick={openProject} className="mt-1.5 block text-left">
+                          <h2 className="font-heading text-xl font-bold leading-tight text-[#2d2d2d] transition-colors group-hover:text-accent">
+                            {project.name}
+                          </h2>
                         </button>
                       ) : (
-                        <Link
-                          href={`/realisations/${project.slug}/`}
-                          className="relative block aspect-[16/10] w-full overflow-hidden rounded-[1.5rem] text-left"
-                          aria-label={`Voir le projet ${project.name}`}
-                        >
-                          {project.previewImage ? (
-                            <>
-                              <Image
-                                src={project.previewImage}
-                                alt={`Preview ${project.name}`}
-                                fill
-                                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                                sizes="(max-width: 1024px) 100vw, 260px"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
-                            </>
-                          ) : null}
+                        <Link href={`/realisations/${project.slug}/`} className="mt-1.5 block text-left">
+                          <h2 className="font-heading text-xl font-bold leading-tight text-[#2d2d2d] transition-colors hover:text-accent">
+                            {project.name}
+                          </h2>
                         </Link>
                       )}
 
-                      <div>
-                        <div className="flex flex-wrap items-center gap-2">
-                          <Link
-                            href={CATEGORY_PAGES[project.category]}
-                            className="text-xs font-semibold uppercase tracking-[0.18em] text-accent transition-colors hover:text-[#2d2d2d]"
-                          >
-                            Voir toutes les réalisations {project.categoryLabel}
-                          </Link>
-                          <span className="ml-auto rounded-full border border-[rgba(45,45,45,0.10)] bg-white/76 px-3 py-1 text-[11px] font-medium text-[#2d2d2d]/56">
-                            {project.year}
-                          </span>
-                        </div>
+                      <p className="mt-2.5 text-sm leading-relaxed text-[#2d2d2d]/68">
+                        {project.shortDescription}
+                      </p>
 
-                        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#2d2d2d]/72">
-                          {project.sector}
-                        </p>
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {tags.map((tag) =>
+                          tag.href ? (
+                            <Link
+                              key={`${project.id}-${tag.label}`}
+                              href={tag.href}
+                              className="rounded-full border border-[rgba(45,45,45,0.10)] bg-white/76 px-2.5 py-1 text-[11px] font-medium text-[#2d2d2d]/72 transition-all duration-200 hover:border-accent/30 hover:text-accent"
+                            >
+                              {tag.label}
+                            </Link>
+                          ) : (
+                            <span
+                              key={`${project.id}-${tag.label}`}
+                              className="rounded-full border border-[rgba(45,45,45,0.10)] bg-white/76 px-2.5 py-1 text-[11px] font-medium text-[#2d2d2d]/72"
+                            >
+                              {tag.label}
+                            </span>
+                          ),
+                        )}
+                      </div>
 
+                      <div
+                        className="mt-4 border-t pt-3 text-sm font-medium text-accent"
+                        style={{ borderColor: "rgba(45,45,45,0.08)" }}
+                      >
+                        {project.results[0] ?? "Projet livré avec une exécution soignée."}
+                      </div>
+
+                      <div className="mt-3 flex items-center gap-4 text-sm">
                         {showQuickView ? (
                           <button
                             type="button"
-                            onClick={() => setSelectedProject(project)}
-                            className="mt-4 block text-left"
+                            onClick={openProject}
+                            className="inline-flex items-center gap-1.5 font-semibold text-[#2d2d2d] transition-colors hover:text-accent"
                           >
-                            <h2 className="font-heading text-3xl font-bold leading-[1.02] text-[#2d2d2d] transition-colors group-hover:text-accent">
-                              {project.name}
-                            </h2>
+                            Voir le projet
+                            <ArrowRight className="h-3.5 w-3.5" />
                           </button>
                         ) : (
                           <Link
                             href={`/realisations/${project.slug}/`}
-                            className="mt-4 block text-left"
+                            className="inline-flex items-center gap-1.5 font-semibold text-[#2d2d2d] transition-colors hover:text-accent"
                           >
-                            <h2 className="font-heading text-3xl font-bold leading-[1.02] text-[#2d2d2d] transition-colors hover:text-accent">
-                              {project.name}
-                            </h2>
+                            Voir le projet
+                            <ArrowRight className="h-3.5 w-3.5" />
                           </Link>
                         )}
-
-                        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#2d2d2d]/68 sm:text-base">
-                          {project.shortDescription}
-                        </p>
-
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {tags.map((tag) =>
-                            tag.href ? (
-                              <Link
-                                key={`${project.id}-${tag.label}`}
-                                href={tag.href}
-                                className="rounded-full border border-[rgba(45,45,45,0.10)] bg-white/76 px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/72 transition-all duration-200 hover:border-accent/30 hover:text-accent"
-                              >
-                                {tag.label}
-                              </Link>
-                            ) : (
-                              <span
-                                key={`${project.id}-${tag.label}`}
-                                className="rounded-full border border-[rgba(45,45,45,0.10)] bg-white/76 px-3 py-1.5 text-xs font-medium text-[#2d2d2d]/72"
-                              >
-                                {tag.label}
-                              </span>
-                            ),
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col gap-3 lg:w-60">
-                        <div className="rounded-[1.5rem] border border-[rgba(45,45,45,0.08)] bg-white/78 p-4">
-                          <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
-                            Impact cle
-                          </p>
-                          <p className="mt-2 text-sm leading-relaxed text-[#2d2d2d]/72">
-                            {project.results[0] ?? "Projet livre avec une execution soignee et une logique de conversion claire."}
-                          </p>
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={() => setSelectedProject(project)}
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
-                        >
-                          Ouvrir la fiche
-                          <ArrowRight className="h-4 w-4" />
-                        </button>
-
-                        <div className="flex items-center justify-center gap-4 text-sm">
-                          <Link
-                            href={`/realisations/${project.slug}/`}
-                            className="text-[#2d2d2d]/62 transition-colors hover:text-accent"
+                        {project.externalUrl ? (
+                          <a
+                            href={project.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[#2d2d2d]/52 transition-colors hover:text-[#2d2d2d]"
                           >
-                            Page projet
-                          </Link>
-                          {project.externalUrl ? (
-                            <a
-                              href={project.externalUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-[#2d2d2d]/52 transition-colors hover:text-[#2d2d2d]"
-                            >
-                              Visiter
-                              <ExternalLink className="h-3 w-3" />
-                            </a>
-                          ) : null}
-                        </div>
+                            Visiter
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        ) : null}
                       </div>
                     </div>
                   </motion.article>

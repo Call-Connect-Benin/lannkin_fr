@@ -6,7 +6,7 @@ import { PricingPageContent } from "@/presentation/components/pricing";
 export const metadata: Metadata = {
   title: "Tarifs Google Ads | Lannkin",
   description:
-    "Gestion Google Ads dès 250$. Tags à 250$, Medium à 500€/mois, Premium à 750€/mois. Search, Display, Shopping et YouTube.",
+    "Gestion Google Ads dès 250 €. Tags à 250 €, Medium à 500€/mois, Premium à 750€/mois. Search, Display, Shopping et YouTube.",
 };
 
 export default function TarifsGoogleAdsPage() {

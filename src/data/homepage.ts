@@ -13,10 +13,10 @@ export const HERO = {
     secondary: { label: "Découvrir nos expertises", href: "/services/" },
   },
   stats: [
-    { value: "+10", label: "années d'expérience" },
-    { value: "100K€+", label: "pilotés chaque mois" },
-    { value: "4,95/5", label: "note Google" },
-    { value: "20+", label: "spécialités couvertes" },
+    { value: "10+", label: "années d'expérience", icon: "Award" },
+    { value: "100K€+", label: "pilotés chaque mois", icon: "Users" },
+    { value: "4,95/5", label: "note moyenne Google", icon: "BarChart3" },
+    { value: "Partenaire Google", label: "Certifié", icon: "ShieldCheck" },
   ],
 } as const;
 

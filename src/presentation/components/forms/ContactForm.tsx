@@ -92,7 +92,7 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setSubmitError(null);
     const result = await submit({
-      url: "/api/contact",
+      url: "/api/contact/",
       body: {
         formType: "contact",
         ...data,

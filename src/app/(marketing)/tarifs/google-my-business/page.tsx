@@ -6,7 +6,7 @@ import { PricingPageContent } from "@/presentation/components/pricing";
 export const metadata: Metadata = {
   title: "Tarifs Google My Business | Lannkin",
   description:
-    "Gestion fiche Google dès 50€/mois. Optimisation GMB, Google Posts, gestion d'avis et QR Code à 200$. SEO local garanti.",
+    "Gestion fiche Google dès 50€/mois. Optimisation GMB, Google Posts, gestion d'avis et QR Code à 200 €. SEO local garanti.",
 };
 
 export default function TarifsGoogleMyBusinessPage() {

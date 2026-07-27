@@ -201,7 +201,7 @@ export function DevisForm() {
   const onSubmit = async (data: DevisFormData) => {
     setSubmitError(null);
     const result = await submit({
-      url: "/api/contact",
+      url: "/api/contact/",
       body: {
         formType: "devis",
         ...data,

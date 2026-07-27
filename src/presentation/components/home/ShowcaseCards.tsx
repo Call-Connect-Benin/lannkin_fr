@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const CLIENT_SCREENSHOTS = [
   "/images/screenshots/andleikay.webp",
@@ -15,23 +14,9 @@ const CLIENT_SCREENSHOTS = [
   "/images/screenshots/myriame-salon.webp",
 ] as const;
 
+const TRUST_BADGES = ["Signature électronique", "Avis vérifiés", "Paiement sécurisé"];
+
 function PhoneCarousel() {
-  const prefersReducedMotion = useReducedMotion();
-  const [current, setCurrent] = useState(0);
-  const [prev, setPrev] = useState(-1);
-
-  useEffect(() => {
-    if (prefersReducedMotion) return;
-
-    const interval = setInterval(() => {
-      setCurrent((p) => {
-        setPrev(p);
-        return (p + 1) % CLIENT_SCREENSHOTS.length;
-      });
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [prefersReducedMotion]);
-
   return (
     <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
       {/* Background screenshots — Shopify-style: large, overlapping, close to phone */}
@@ -73,153 +58,75 @@ function PhoneCarousel() {
         <div className="absolute top-[64px] -left-[5px] w-[2px] h-[20px] bg-[#2a2a2a] rounded-r-sm z-30" />
         <div className="absolute top-[90px] -left-[5px] w-[2px] h-[28px] bg-[#2a2a2a] rounded-r-sm z-30" />
         <div className="absolute top-[124px] -left-[5px] w-[2px] h-[28px] bg-[#2a2a2a] rounded-r-sm z-30" />
-        {/* Screen */}
-        <div className="relative aspect-[9/19.5] overflow-hidden bg-white rounded-[2rem]">
-          {CLIENT_SCREENSHOTS.map((src, i) => {
-            let x = "100%"; // default: waiting on the right
-            if (i === current) x = "0%"; // active: center
-            else if (i === prev) x = "-100%"; // just left: exit left
-            return (
-            <motion.div
-              key={src}
-              className="absolute inset-0"
-              animate={{ x }}
-              transition={i === current || i === prev ? { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } : { duration: 0 }}
-            >
-              <Image
-                src={src}
-                alt={`Site client ${i + 1}`}
-                width={540}
-                height={1170}
-                className="h-full w-full object-cover object-top"
-              />
-            </motion.div>
-            );
-          })}
+        {/* Screen — mockup statique de marque Lannkin */}
+        <div className="relative flex aspect-[9/19.5] flex-col overflow-hidden bg-white rounded-[2rem] px-4 pb-4 pt-8">
+          {/* Top bar */}
+          <div className="flex items-center justify-between">
+            <span className="font-heading text-[13px] font-bold text-[#2d2d2d]">LANNKIN</span>
+            <div className="flex flex-col gap-[3px]">
+              <span className="block h-[1.5px] w-4 bg-[#2d2d2d]/60" />
+              <span className="block h-[1.5px] w-4 bg-[#2d2d2d]/60" />
+              <span className="block h-[1.5px] w-4 bg-[#2d2d2d]/60" />
+            </div>
+          </div>
+
+          {/* Headline */}
+          <p className="mt-6 font-heading text-[15px] font-bold leading-tight text-[#2d2d2d]">
+            Accélérez votre projet marketing. Résultats concrets.
+          </p>
+          <p className="mt-2 text-[10px] leading-relaxed text-[#2d2d2d]/60">
+            Campagnes performantes, contenus impactants, croissance mesurable.
+          </p>
+
+          <button
+            type="button"
+            tabIndex={-1}
+            className="mt-3 inline-flex w-fit items-center rounded-full px-3 py-1.5 text-[10px] font-semibold text-white"
+            style={{ backgroundColor: "#498f6d" }}
+          >
+            Démarrer mon projet
+          </button>
+
+          {/* Trust bar */}
+          <div className="mt-auto">
+            <p className="text-[8px] font-medium uppercase tracking-wide text-[#2d2d2d]/45">
+              Ils nous font confiance
+            </p>
+            <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+              {TRUST_BADGES.map((badge) => (
+                <span key={badge} className="text-[8px] font-medium text-[#2d2d2d]/55">
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-const STATS = [
-  { value: "1 000+", label: "Clients satisfaits" },
-  { value: "+10", label: "Ans d'expérience" },
-  { value: "4x", label: "ROI moyen" },
-];
-
-const FLOAT_VARIANTS = [
-  { duration: 4 },
-  { duration: 5 },
-  { duration: 6 },
-];
-
-const MARKETING_METRICS = [
-  { platform: "Google Ads", metric: "ROAS", value: "6.8×", change: "+2.1×", color: "#4285F4" },
-  { platform: "Meta Ads", metric: "CPL", value: "4,20 $", change: "−38%", color: "#0866FF" },
-  { platform: "SEO", metric: "Top 3", value: "87 %", change: "+34 pts", color: "#498f6d" },
-];
-
-function MarketingVisual() {
+function AcquisitionDigitaleVisual() {
   return (
-    <div
-      className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5"
-      style={{ background: "linear-gradient(145deg, #f7f5f0 0%, #ede9e1 100%)" }}
-    >
-      {/* Platform header row */}
-      <div className="mb-1 flex items-center gap-2">
-        {/* Google G */}
-        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
-          <path fill="#4285F4" d="M45.5 24.5c0-1.5-.1-3-.4-4.5H24v8.5h12.1c-.5 2.7-2 5-4.3 6.5v5.4h7c4.1-3.8 6.7-9.4 6.7-15.9z"/>
-          <path fill="#34A853" d="M24 46c6.1 0 11.2-2 14.9-5.5l-7-5.4c-2 1.3-4.5 2.1-7.9 2.1-6.1 0-11.2-4.1-13.1-9.6H3.6v5.6C7.3 41.1 15 46 24 46z"/>
-          <path fill="#FBBC05" d="M10.9 27.6A14.8 14.8 0 0 1 10.9 20.4V14.8H3.6A22 22 0 0 0 2 24c0 3.5.8 6.8 2.3 9.7l7.6-6.1z" />
-          <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.6-6.6C35.2 2.5 30 0 24 0 15 0 7.3 4.9 3.6 12.2l7.3 5.6C12.8 12.6 17.9 9.5 24 9.5z"/>
-        </svg>
-        <span className="text-xs font-medium" style={{ color: "rgba(45,45,45,0.4)" }}>·</span>
-        {/* Meta M */}
-        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
-          <path fill="#0866FF" d="M6.2 30.8c0 3.8 2.4 6.2 6.2 6.2 1.8 0 3.3-.5 4.5-1.6L24 28.6l7.1 6.8c1.2 1.1 2.7 1.6 4.5 1.6 3.8 0 6.2-2.4 6.2-6.2 0-1.9-.7-3.6-2-4.9L24 11.4 8 25.9c-1.3 1.3-2 3-2 4.9z"/>
-        </svg>
-        <span className="text-xs font-medium" style={{ color: "rgba(45,45,45,0.4)" }}>·</span>
-        {/* SEO text */}
-        <span className="rounded px-1.5 py-0.5 text-[10px] font-bold" style={{ backgroundColor: "rgba(73,143,109,0.15)", color: "#498f6d" }}>SEO</span>
-      </div>
-
-      {/* Metric cards */}
-      {MARKETING_METRICS.map((m, i) => (
-        <motion.div
-          key={m.platform}
-          className="w-full max-w-[min(220px,100%)] rounded-xl px-4 py-3"
-          style={{
-            backgroundColor: "#ffffff",
-            border: `1px solid ${m.color}30`,
-          }}
-          animate={{ y: [0, -(5 + i * 3), 0] }}
-          transition={{ duration: 4 + i * 1.2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-[10px] font-medium uppercase tracking-wide" style={{ color: "rgba(45,45,45,0.5)" }}>
-                {m.platform}
-              </p>
-              <p className="font-heading text-xl font-bold text-[#2d2d2d] leading-tight">{m.value}</p>
-              <p className="text-[10px]" style={{ color: "rgba(45,45,45,0.45)" }}>{m.metric}</p>
-            </div>
-            <span
-              className="rounded-full px-2 py-1 text-xs font-semibold"
-              style={{ backgroundColor: `${m.color}18`, color: m.color }}
-            >
-              {m.change}
-            </span>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+    <Image
+      src="/images/Acquisition_digitale.png"
+      alt="Résultats Google Ads, Meta Ads et SEO"
+      fill
+      className="object-cover"
+      sizes="(min-width: 768px) 33vw, 100vw"
+    />
   );
 }
 
-function StatsCard() {
+function PerformanceVisual() {
   return (
-    <div className="flex h-full min-w-0 flex-col justify-between overflow-hidden p-6">
-      {/* Main metric card — dark, integrated */}
-      <motion.div
-        className="max-w-full rounded-xl p-5 sm:max-w-[260px]"
-        style={{
-          backgroundColor: "#ffffff",
-          border: "1px solid rgba(45,45,45,0.10)",
-          boxShadow: "0 4px 12px rgba(45,45,45,0.04)",
-        }}
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <p
-          className="text-xs font-medium pb-2 mb-3"
-          style={{ color: "rgba(45,45,45,0.55)", borderBottom: "1px dashed rgba(45,45,45,0.15)" }}
-        >
-          Résultats clients
-        </p>
-        <p className="font-heading text-3xl font-bold text-[#2d2d2d]">+1 000</p>
-        <p className="text-sm mt-1" style={{ color: "rgba(45,45,45,0.55)" }}>
-          projets livrés depuis 2015
-        </p>
-      </motion.div>
-
-      {/* Stats badges — each floats at its own pace */}
-      <div className="mt-6 flex flex-col gap-3">
-        {STATS.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            className="flex items-center justify-between rounded-lg px-4 py-2"
-            style={{ backgroundColor: "#ffffff", border: "1px solid rgba(73,143,109,0.25)" }}
-            animate={{ y: [0, i === 1 ? -12 : -8, 0] }}
-            transition={{ duration: FLOAT_VARIANTS[i]?.duration ?? 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <span className="text-sm text-[#2d2d2d]/75">{stat.label}</span>
-            <span className="font-heading font-bold" style={{ color: "#498f6d" }}>{stat.value}</span>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+    <Image
+      src="/images/Performance_mesure.png"
+      alt="Résultats clients : +1000 projets livrés depuis 2015"
+      fill
+      className="object-cover"
+      sizes="(min-width: 768px) 33vw, 100vw"
+    />
   );
 }
 
@@ -257,7 +164,7 @@ export default function ShowcaseCards() {
             Notre terrain de jeu
           </p>
           <h2 className="font-heading mt-2 text-3xl font-bold text-[#2d2d2d] lg:text-4xl">
-            Un impact tangible sur votre activité
+            Un impact tangible sur votre activité.
           </h2>
         </div>
 
@@ -278,14 +185,14 @@ export default function ShowcaseCards() {
               >
                 {/* Visual area */}
                 <div className="relative aspect-square overflow-hidden" style={{ backgroundColor: "#f7f5f0" }}>
-                  {card.type === "video" && <MarketingVisual />}
+                  {card.type === "video" && <AcquisitionDigitaleVisual />}
                   {card.type === "phone" && <PhoneCarousel />}
-                  {card.type === "stats" && <StatsCard />}
+                  {card.type === "stats" && <PerformanceVisual />}
                   {/* Inner shadow for depth */}
                   <div className="pointer-events-none absolute inset-0 rounded-t-2xl shadow-[0px_1px_0px_0px_rgba(45,45,45,0.05)_inset]" />
                 </div>
 
-                {/* Text area */}
+                {/* Texte — dans la même carte que le visuel */}
                 <div className="p-5 lg:p-6">
                   <div className="flex items-center gap-2">
                     <h3 className="font-heading text-lg font-bold text-[#2d2d2d] transition-colors group-hover:text-[#498f6d]">

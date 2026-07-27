@@ -6,7 +6,7 @@ import { PricingPageContent } from "@/presentation/components/pricing";
 export const metadata: Metadata = {
   title: "Tarifs Montage Vidéo | Lannkin",
   description:
-    "Montage vidéo professionnel dès 119$/vidéo. YouTube, TikTok, Shorts, Reels, corporate. Script, voix-off, effets inclus. Packs et abonnements illimités disponibles.",
+    "Montage vidéo professionnel dès 119 €/vidéo. YouTube, TikTok, Shorts, Reels, corporate. Script, voix-off, effets inclus. Packs et abonnements illimités disponibles.",
 };
 
 export default function TarifsMontageVideoPage() {

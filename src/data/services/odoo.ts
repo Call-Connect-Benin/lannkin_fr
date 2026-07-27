@@ -125,7 +125,7 @@ const erpIntegration: ServicePageContent = {
     { step: 5, title: "Formation et go-live", description: "Formation complète de vos équipes par module, support intensif pendant les premières semaines et ajustements post-lancement." },
   ],
   faq: [
-    { question: "Combien coûte l'implantation d'Odoo pour une PME?", answer: "L'implantation Odoo pour une PME de 5 à 20 utilisateurs coûte généralement entre 10 000$ et 30 000$ selon le nombre de modules et la complexité des processus. L'abonnement Odoo Online commence à 24.90$/utilisateur/mois." },
+    { question: "Combien coûte l'implantation d'Odoo pour une PME?", answer: "L'implantation Odoo pour une PME de 5 à 20 utilisateurs coûte généralement entre 10 000 € et 30 000 € selon le nombre de modules et la complexité des processus. L'abonnement Odoo Online commence à 24.90 €/utilisateur/mois." },
     { question: "Combien de temps prend une implantation Odoo?", answer: "Une implantation standard (ventes + achats + inventaire + comptabilité) prend 2 à 4 mois. Les projets plus complexes avec fabrication et multi-entrepôts peuvent prendre 4 à 6 mois." },
     { question: "Odoo gère-t-il la comptabilité en France?", answer: "Oui. Odoo peut être configuré pour le cadre comptable français, la TVA, les rapports de taxes et les rapprochements bancaires. Nous recommandons toutefois de travailler avec votre comptable pour la configuration initiale." },
     { question: "Puis-je commencer avec quelques modules et ajouter les autres plus tard?", answer: "Absolument. C'est notre approche recommandée. Nous commençons souvent par les ventes et la comptabilité, puis ajoutons les achats, l'inventaire et les autres modules progressivement." },
@@ -189,7 +189,7 @@ const crm: ServicePageContent = {
     { step: 5, title: "Formation commerciale", description: "Formation de votre équipe de vente à l'utilisation quotidienne du CRM : gestion des leads, pipeline, devis et reporting." },
   ],
   faq: [
-    { question: "Le CRM Odoo est-il gratuit?", answer: "Le CRM est inclus dans tous les plans Odoo. L'édition Community (gratuite) inclut les fonctionnalités de base. L'édition Enterprise à 24.90$/utilisateur/mois ajoute les fonctionnalités avancées (VoIP, scoring, automatisation)." },
+    { question: "Le CRM Odoo est-il gratuit?", answer: "Le CRM est inclus dans tous les plans Odoo. L'édition Community (gratuite) inclut les fonctionnalités de base. L'édition Enterprise à 24.90 €/utilisateur/mois ajoute les fonctionnalités avancées (VoIP, scoring, automatisation)." },
     { question: "Puis-je importer mes contacts depuis un autre CRM?", answer: "Oui, nous migrons vos contacts, opportunités et historique depuis Salesforce, HubSpot, Pipedrive, Zoho ou tout autre CRM. Les données sont nettoyées et dédupliquées pendant l'import." },
     { question: "Le CRM Odoo s'intègre-t-il avec mon email?", answer: "Oui, Odoo s'intègre nativement avec Gmail et Outlook. Les emails sont automatiquement associés aux contacts et opportunités correspondantes dans le CRM." },
     { question: "Puis-je utiliser le CRM Odoo sur mobile?", answer: "Oui, Odoo offre une application mobile native (iOS et Android) qui donne accès au CRM, aux contacts et au pipeline de ventes en déplacement." },
@@ -320,7 +320,7 @@ const seo: ServicePageContent = {
     { question: "Le SEO d'Odoo est-il bon nativement?", answer: "Le SEO de base d'Odoo est acceptable mais insuffisant pour se positionner dans un marché compétitif. Les URLs, les méta-données et les performances nécessitent une optimisation professionnelle pour rivaliser avec les sites WordPress ou Next.js." },
     { question: "Combien de temps avant de voir des résultats SEO?", answer: "Les optimisations techniques ont un impact en 4 à 8 semaines. Le positionnement sur des mots-clés compétitifs prend 3 à 6 mois. Nous fournissons des rapports mensuels pour suivre la progression." },
     { question: "Pouvez-vous optimiser le SEO de ma boutique e-commerce Odoo?", answer: "Oui, le SEO e-commerce Odoo est l'une de nos spécialités. Nous optimisons les fiches produits, les catégories, les filtres et les données structurées Product pour les rich snippets Google Shopping." },
-    { question: "Combien coûte le SEO Odoo?", answer: "L'audit SEO initial est à 750$. Les forfaits d'optimisation SEO mensuels commencent à 500€/mois pour le suivi et les optimisations continues. L'optimisation technique initiale est facturée entre 1 500$ et 3 000$ selon la taille du site." },
+    { question: "Combien coûte le SEO Odoo?", answer: "L'audit SEO initial est à 750 €. Les forfaits d'optimisation SEO mensuels commencent à 500€/mois pour le suivi et les optimisations continues. L'optimisation technique initiale est facturée entre 1 500 € et 3 000 € selon la taille du site." },
   ],
 };
 
@@ -447,7 +447,7 @@ const migrationOdoo: ServicePageContent = {
   faq: [
     { question: "Combien de temps prend une migration vers Odoo?", answer: "La migration depuis QuickBooks prend typiquement 1 à 2 mois. Depuis Sage, 2 à 3 mois. Depuis SAP, 3 à 6 mois. Ces délais incluent l'audit, la migration, les tests et la formation." },
     { question: "Vais-je perdre mon historique comptable?", answer: "Non. Nous migrons les soldes d'ouverture et, selon votre besoin, l'historique des transactions passées. Votre ancien système reste accessible en lecture seule pour les archives." },
-    { question: "Combien coûte une migration vers Odoo?", answer: "La migration depuis QuickBooks commence à 5 000$. Depuis Sage, à partir de 8 000$. Depuis SAP, à partir de 15 000$. Le coût dépend du volume de données, du nombre de modules et de la complexité des processus." },
+    { question: "Combien coûte une migration vers Odoo?", answer: "La migration depuis QuickBooks commence à 5 000 €. Depuis Sage, à partir de 8 000 €. Depuis SAP, à partir de 15 000 €. Le coût dépend du volume de données, du nombre de modules et de la complexité des processus." },
     { question: "Mon équipe devra-t-elle être formée?", answer: "Oui, et c'est inclus dans notre offre de migration. Nous formons chaque département (comptabilité, ventes, achats, inventaire) à l'utilisation quotidienne d'Odoo avec des exercices pratiques sur vos propres données." },
   ],
 };
@@ -517,7 +517,7 @@ const formationOdoo: ServicePageContent = {
     { step: 5, title: "Suivi post-formation", description: "30 jours de support par email pour répondre aux questions post-formation. Documentation et guides de référence personnalisés." },
   ],
   faq: [
-    { question: "Combien coûte la formation Odoo?", answer: "La formation utilisateur est à 500$/jour/personne. La formation administrateur (2 jours) est à 1 800$/personne. La formation développeur (3-5 jours) est à 3 000-5 000$/personne. Des tarifs de groupe sont disponibles." },
+    { question: "Combien coûte la formation Odoo?", answer: "La formation utilisateur est à 500 €/jour/personne. La formation administrateur (2 jours) est à 1 800 €/personne. La formation développeur (3-5 jours) est à 3 000-5 000 €/personne. Des tarifs de groupe sont disponibles." },
     { question: "La formation se fait-elle sur notre instance Odoo?", answer: "Oui, toutes nos formations utilisent votre propre instance Odoo avec vos données (ou des données de démonstration réalistes). Cela garantit que les exercices sont directement applicables à votre contexte." },
     { question: "Proposez-vous des formations à distance?", answer: "Oui, nos formations sont disponibles en présentiel à Paris et Paris, ou en ligne via Zoom. Le format en ligne inclut les mêmes exercices pratiques et le même accès au formateur." },
     { question: "Faut-il des prérequis pour la formation développeur?", answer: "La formation développeur requiert des connaissances de base en Python et en HTML/XML. Une expérience préalable avec un framework web (Django, Flask, etc.) est un atout mais n'est pas obligatoire." },

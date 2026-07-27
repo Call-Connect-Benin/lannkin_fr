@@ -6,7 +6,7 @@ import { PricingPageContent } from "@/presentation/components/pricing";
 export const metadata: Metadata = {
   title: "Tarifs Graphisme | Lannkin",
   description:
-    "Logo dès 500$, identité visuelle à 1 000$, brochure à 450$. Fichiers vectoriels inclus. Révisions illimitées sur Logo Premium.",
+    "Logo dès 500 €, identité visuelle à 1 000 €, brochure à 450 €. Fichiers vectoriels inclus. Révisions illimitées sur Logo Premium.",
 };
 
 export default function TarifsGraphismePage() {

@@ -79,8 +79,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/logo-lannkin-2026.svg",
-    apple: "/images/logo-lannkin-2026.svg",
+    icon: "/images/favicon-lannkin.svg",
+    apple: "/images/favicon-lannkin.svg",
   },
   alternates: {
     canonical: "https://lannkin.com",
@@ -144,7 +144,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSONLD) }}
         />
       </head>
-      <body className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f7f5f0] antialiased" suppressHydrationWarning>
+      <body className="min-h-screen w-full max-w-full overflow-x-clip bg-[#f7f5f0] antialiased" suppressHydrationWarning>
         {children}
         <FloatingContact />
 

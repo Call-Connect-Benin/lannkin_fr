@@ -507,7 +507,7 @@ const accompagnement: ServicePageContent = {
     { question: "Faut-il être développeur pour bénéficier de l'accompagnement?", answer: "Non. Nous accompagnons aussi bien les développeurs seniors que les entrepreneurs, designers et gestionnaires sans background technique. Le programme est adapté à votre niveau." },
     { question: "L'accompagnement se fait-il en présentiel?", answer: "Nous offrons les deux formats. Les workshops d'équipe sont particulièrement efficaces en présentiel à Paris et Paris, tandis que le coaching individuel fonctionne très bien en visioconférence." },
     { question: "Combien de temps dure un accompagnement typique?", answer: "Un programme d'adoption complet dure 3 à 6 mois, mais vous pouvez aussi opter pour un consulting ponctuel de 1 à 3 jours ou un coaching hebdomadaire continu." },
-    { question: "Quel est le coût de l'accompagnement?", answer: "Le coaching individuel démarre à 150$/heure. Les workshops d'équipe sont à 2 000$/jour. Les programmes d'adoption sur 3 mois commencent à 5 000€/mois selon la taille de l'équipe." },
+    { question: "Quel est le coût de l'accompagnement?", answer: "Le coaching individuel démarre à 150 €/heure. Les workshops d'équipe sont à 2 000 €/jour. Les programmes d'adoption sur 3 mois commencent à 5 000€/mois selon la taille de l'équipe." },
   ],
 };
 
@@ -628,7 +628,7 @@ const formation: ServicePageContent = {
   ],
   faq: [
     { question: "Faut-il savoir coder pour suivre cette formation?", answer: "Non. La formation est conçue pour les débutants complets comme pour les développeurs expérimentés. Les exercices sont adaptés à votre niveau et les outils de vibe coding permettent de créer des applications sans écrire de code manuellement." },
-    { question: "Combien coûte la formation?", answer: "La formation individuelle est à 497$ + taxes par personne. Des tarifs de groupe sont disponibles à partir de 5 participants (350$/personne). La formation en entreprise sur mesure est à 2 000$/jour." },
+    { question: "Combien coûte la formation?", answer: "La formation individuelle est à 497 € + taxes par personne. Des tarifs de groupe sont disponibles à partir de 5 participants (350 €/personne). La formation en entreprise sur mesure est à 2 000 €/jour." },
     { question: "La formation est-elle disponible en ligne?", answer: "Oui, nous offrons la formation en présentiel à Paris/Paris et en ligne via Zoom. Les deux formats incluent les mêmes contenus, exercices pratiques et certification." },
     { question: "Quels outils faut-il installer avant la formation?", answer: "Vous recevrez un guide de préparation 1 semaine avant la formation. Il inclut la création de comptes gratuits sur Lovable, Bolt.new, Cursor, Claude et v0. Un ordinateur portable avec Chrome est suffisant." },
   ],
@@ -691,7 +691,7 @@ const auditCodeIa: ServicePageContent = {
     { step: 5, title: "Restitution et suivi", description: "Présentation du rapport en visioconférence ou en personne. Questions-réponses et planification des corrections si souhaité." },
   ],
   faq: [
-    { question: "Combien coûte un audit de code IA?", answer: "L'audit standard (1 application, code front-end et back-end) est à 1 500$. L'audit approfondi avec tests de pénétration est à 3 000$. Des audits express (48h) sont disponibles à 2 500$." },
+    { question: "Combien coûte un audit de code IA?", answer: "L'audit standard (1 application, code front-end et back-end) est à 1 500 €. L'audit approfondi avec tests de pénétration est à 3 000 €. Des audits express (48h) sont disponibles à 2 500 €." },
     { question: "Combien de temps dure un audit?", answer: "Un audit standard prend 5 à 7 jours ouvrables entre l'accès au code et la remise du rapport. L'audit express est livré en 48 heures." },
     { question: "Auditez-vous le code de n'importe quel outil de vibe coding?", answer: "Oui. Nous auditons le code généré par Lovable, Bolt.new, Cursor, Claude Code, Replit, Windsurf, v0 et tout autre outil de génération de code par IA." },
     { question: "Pouvez-vous aussi corriger les problèmes identifiés?", answer: "Absolument. Nous pouvons prendre en charge les corrections après l'audit. Le plan d'action du rapport inclut des estimations de temps pour chaque correction, ce qui vous permet de budgéter précisément." },
@@ -757,7 +757,7 @@ const migrationVibeCoding: ServicePageContent = {
   faq: [
     { question: "Combien de temps prend une migration?", answer: "Une migration standard prend 2 à 4 semaines selon la complexité du projet. Les projets simples (landing pages, MVPs) peuvent être migrés en 1 semaine, tandis que les applications complexes avec base de données peuvent prendre 6 à 8 semaines." },
     { question: "Vais-je perdre des fonctionnalités pendant la migration?", answer: "Non. Notre méthodologie garantit la préservation de toutes les fonctionnalités existantes. Nous maintenons le projet source en parallèle jusqu'à la validation complète du projet migré." },
-    { question: "Combien coûte une migration?", answer: "Les migrations de MVPs simples commencent à 2 500$. Les applications avec base de données et authentification coûtent 5 000 à 15 000$ selon la complexité." },
+    { question: "Combien coûte une migration?", answer: "Les migrations de MVPs simples commencent à 2 500 €. Les applications avec base de données et authentification coûtent 5 000 à 15 000 € selon la complexité." },
     { question: "Faut-il tout réécrire depuis zéro?", answer: "Rarement. Nous réutilisons le maximum de code existant et ne réécrivons que ce qui est nécessaire pour la qualité et la maintenabilité. Notre approche progressive minimise le travail et les risques." },
   ],
 };

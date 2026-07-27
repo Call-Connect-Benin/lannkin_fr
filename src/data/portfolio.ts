@@ -1214,13 +1214,15 @@ const additionalProjects: PortfolioProject[] = [
 // EXPORT
 // ============================================================
 
+// Ordre d'affichage : les projets les plus récents en premier, plutôt que
+// regroupés par catégorie (ce qui reproduisait l'ordre de lannkin.ca).
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   ...multiPagesProjects,
   ...onePageProjects,
   ...ecommerceProjects,
   ...internationalProjects,
   ...additionalProjects,
-];
+].sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
 
 export const PORTFOLIO_CATEGORIES: { id: PortfolioCategory | "all"; label: string }[] = [
   { id: "all", label: "Tous" },

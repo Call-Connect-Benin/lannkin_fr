@@ -38,7 +38,7 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
   const onSubmit = async (data: NewsletterData) => {
     setSubmitError(null);
     const result = await submit({
-      url: "/api/newsletter",
+      url: "/api/newsletter/",
       body: data,
     });
 

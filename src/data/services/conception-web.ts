@@ -72,7 +72,7 @@ const siteVitrine: ServicePageContent = {
     { step: 5, title: "Support continu", description: "Maintenance mensuelle, mises à jour de sécurité, rapports de performance et support technique prioritaire." },
   ],
   faq: [
-    { question: "Combien coûte un site vitrine à Paris?", answer: "Nos sites vitrines démarrent à 99€/mois avec notre formule d'abonnement, ou à partir de 2 500$ en projet forfaitaire. Le prix varie selon le nombre de pages, les fonctionnalités et le niveau de personnalisation souhaité." },
+    { question: "Combien coûte un site vitrine à Paris?", answer: "Nos sites vitrines démarrent à 99€/mois avec notre formule d'abonnement, ou à partir de 2 500 € en projet forfaitaire. Le prix varie selon le nombre de pages, les fonctionnalités et le niveau de personnalisation souhaité." },
     { question: "En combien de temps mon site vitrine sera-t-il prêt?", answer: "Un site vitrine standard est livré en 3 à 4 semaines. Les projets plus complexes avec des fonctionnalités avancées peuvent prendre 6 à 8 semaines." },
     { question: "Mon site sera-t-il visible sur Google?", answer: "Absolument. Chaque site vitrine est livré avec une optimisation SEO technique complète : balises méta, données structurées, sitemap XML, Core Web Vitals optimisés et inscription Google Search Console." },
     { question: "Puis-je modifier le contenu moi-même?", answer: "Oui, nous intégrons un système de gestion de contenu (CMS) intuitif qui vous permet de modifier textes, images et pages en toute autonomie, sans connaissance technique." },
@@ -155,7 +155,7 @@ const siteShopify: ServicePageContent = {
     {
       title: "Pourquoi choisir LANNKIN comme agence web Shopify en France?",
       content:
-        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 $ CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
+        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 € CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
         "Configuration multilingue français/anglais pour le France",
@@ -200,7 +200,7 @@ const siteShopify: ServicePageContent = {
     { step: 5, title: "Lancement et formation", description: "Mise en ligne, formation à l'interface admin Shopify, configuration des rapports de vente et du suivi analytique." },
   ],
   faq: [
-    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par LANNKIN commence à 3 500$ pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
+    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par LANNKIN commence à 3 500 € pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
     { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify permet de configurer la TVA pour les ventes en France, ainsi que les autres taxes applicables selon votre marché et vos zones de vente." },
     { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir les marchés francophone et anglophone du Canada." },
     { question: "Comment migrer ma boutique WooCommerce vers Shopify?", answer: "Nous utilisons des outils de migration spécialisés pour transférer vos produits, clients, commandes et redirections SEO de WooCommerce vers Shopify sans perte de données ni de référencement." },
@@ -266,7 +266,7 @@ const siteNextjs: ServicePageContent = {
   faq: [
     { question: "Quand choisir Next.js plutôt que WordPress?", answer: "Next.js est idéal quand vous avez besoin de performances maximales, d'une interface utilisateur riche et interactive, ou d'une application web complexe (dashboard, SaaS, plateforme). WordPress reste excellent pour les sites de contenu simples avec un budget limité." },
     { question: "Next.js est-il bon pour le SEO?", answer: "Excellent. Le Server-Side Rendering de Next.js génère du HTML côté serveur, ce qui permet à Google d'indexer parfaitement votre contenu. Combiné aux metadata API et aux sitemaps dynamiques, c'est la solution technique optimale pour le SEO." },
-    { question: "Combien coûte un site Next.js?", answer: "Les projets Next.js démarrent à 5 000$ pour un site vitrine performant et peuvent atteindre 25 000$+ pour des applications web complexes. L'hébergement sur Vercel commence à 0€/mois (plan gratuit) jusqu'à 20€/mois (plan Pro)." },
+    { question: "Combien coûte un site Next.js?", answer: "Les projets Next.js démarrent à 5 000 € pour un site vitrine performant et peuvent atteindre 25 000 €+ pour des applications web complexes. L'hébergement sur Vercel commence à 0€/mois (plan gratuit) jusqu'à 20€/mois (plan Pro)." },
     { question: "Puis-je gérer le contenu sans être développeur?", answer: "Absolument. Nous intégrons un headless CMS (Sanity, Contentful ou Strapi) qui offre une interface d'administration intuitive pour gérer votre contenu sans toucher au code." },
   ],
 };
