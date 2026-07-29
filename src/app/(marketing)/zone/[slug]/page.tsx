@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const zone = getZoneBySlug(slug);
 
   if (!zone || SPECIAL_STATIC_ZONE_SLUGS.has(slug)) {
-    return { title: "Zone introuvable | Lannkin" };
+    return { title: { absolute: "Zone introuvable | Lannkin" } };
   }
 
   return {
-    title: `${zone.title} | Lannkin`,
+    title: { absolute: `${zone.title} | Lannkin` },
     description: zone.description,
     alternates: {
       canonical: `/zone/${zone.slug}/`,

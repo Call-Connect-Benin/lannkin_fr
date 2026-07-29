@@ -27,16 +27,16 @@ const CATEGORIES: Array<{
   href: string;
   featuredCount: number;
 }> = [
-  { slug: "tous", label: "Tous les projets", href: "/realisations/", featuredCount: 38 },
-  { slug: "multipages", label: "Sites multipages", href: "/realisations/multipages/", featuredCount: 17 },
-  { slug: "onepage", label: "Sites onepage", href: "/realisations/onepage/", featuredCount: 6 },
-  { slug: "ecommerce", label: "E-commerce", href: "/realisations/ecommerce/", featuredCount: 7 },
-  { slug: "international", label: "International", href: "/realisations/international/", featuredCount: 8 },
+  { slug: "tous", label: "Tous les projets", href: "/realisations/", featuredCount: 23 },
+  { slug: "multipages", label: "Sites multipages", href: "/realisations/multipages/", featuredCount: 6 },
+  { slug: "onepage", label: "Sites onepage", href: "/realisations/onepage/", featuredCount: 3 },
+  { slug: "ecommerce", label: "E-commerce", href: "/realisations/ecommerce/", featuredCount: 5 },
+  { slug: "international", label: "International", href: "/realisations/international/", featuredCount: 9 },
 ];
 
 const HERO_STATS = [
   { icon: Star, value: "4,9/5", label: "sur Google" },
-  { icon: FolderOpen, value: "38", label: "projets réalisés" },
+  { icon: FolderOpen, value: "23", label: "projets réalisés" },
   { icon: CalendarDays, value: "+10 ans", label: "d'expérience" },
 ] as const;
 

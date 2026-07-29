@@ -96,7 +96,7 @@ export function getPostsByCategory(category: string): BlogPostMeta[] {
 }
 
 export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("fr-CA", {
+  return new Date(iso).toLocaleDateString("fr-FR", {
     year: "numeric",
     month: "long",
     day: "numeric",

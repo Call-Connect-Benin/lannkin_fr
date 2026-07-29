@@ -7,7 +7,7 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html lang="fr-CA">
+    <html lang="fr-FR">
       <body className="flex min-h-screen flex-col items-center justify-center gap-6 bg-[#f7f5f0] px-4 text-center">
         <h2 className="text-2xl font-bold text-[#2d2d2d]">
           Une erreur est survenue

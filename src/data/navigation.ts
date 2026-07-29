@@ -319,6 +319,7 @@ export const FOOTER_NAVIGATION = {
     links: [
       { label: "Tarifs", href: "/tarifs/" },
       { label: "Devis gratuit", href: "/devis-gratuit/" },
+      { label: "Brief de conception", href: "/formulaire-de-conception/" },
       { label: "Ressources gratuites", href: "/ressources-gratuites/" },
       { label: "Audit Google Ads gratuit", href: "/ressources-gratuites/audit-google-ads/" },
       { label: "Secteurs d'activité", href: "/secteurs/" },

@@ -32,130 +32,6 @@ export interface PortfolioProject {
 // ============================================================
 
 const multiPagesProjects: PortfolioProject[] = [
-  {
-    id: "plomberies-lb",
-    slug: "plomberies-lb",
-    name: "Plomberies LB",
-    client: "Plomberies LB",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Plomberie et chauffage",
-    year: 2023,
-    shortDescription:
-      "Site web multipage pour une entreprise de plomberie et chauffage avec pages services, galerie de réalisations et formulaire de contact.",
-    description:
-      "Conception d'un site web multipage professionnel pour Plomberies LB, entreprise spécialisée en plomberie et chauffage en France. Architecture multipage avec pages services détaillées, galerie de réalisations, formulaire de contact et optimisation SEO local pour dominer les recherches locales.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Site web professionnel livré",
-      "Visibilité locale améliorée sur Google",
-      "Leads via formulaire de contact",
-      "PageSpeed optimisé",
-    ],
-    challenge:
-      "Se démarquer dans un marché compétitif de la plomberie en ligne et générer des demandes de service directement via le web.",
-    solution:
-      "Site multipage optimisé pour le SEO local avec pages services détaillées, galerie photo et formulaire de demande de service en ligne.",
-    seoTitle: "Site Web Plomberie France | Plomberies LB — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web multipage pour Plomberies LB. Conception web plomberie France, SEO local et Google Ads.",
-    externalUrl: "https://www.plomberieslb.ca/",
-    previewImage: "/images/portfolio/plomberie-slb.webp",
-  },
-  {
-    id: "reno-st-georges",
-    slug: "reno-st-georges",
-    name: "Réno St-Georges",
-    client: "Réno St-Georges",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Rénovation résidentielle",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une entreprise de rénovation résidentielle avec galerie projets, soumission en ligne et pages par service.",
-    description:
-      "Conception d'un site web multipage pour Réno St-Georges, entrepreneur en rénovation résidentielle. Pages services détaillées (cuisine, salle de bain, sous-sol), galerie de réalisations avec photos avant/après, formulaire de soumission gratuite et contenu SEO ciblant la clientèle locale.",
-    services: ["Conception Web", "SEO", "Facebook Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
-    results: [
-      "Présence web professionnelle établie",
-      "Galerie de réalisations valorisant le savoir-faire",
-      "Demandes de soumission générées en ligne",
-      "Meilleure visibilité locale sur Google",
-    ],
-    challenge:
-      "Valoriser un savoir-faire artisanal de qualité face à des concurrents mieux établis en ligne et générer des soumissions qualifiées.",
-    solution:
-      "Site multipage avec galerie photo immersive, contenu SEO local et formulaire de soumission simplifié pour convertir les visiteurs en clients.",
-    seoTitle: "Site Web Entrepreneur Rénovation France | Réno St-Georges — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web multipage pour Réno St-Georges. Conception web entrepreneur rénovation résidentielle France.",
-    externalUrl: "https://www.renostgeorges.ca/",
-    previewImage: "/images/portfolio/reno-st-georges.webp",
-  },
-  {
-    id: "groupe-lariviere",
-    slug: "groupe-lariviere",
-    name: "Groupe Larivière",
-    client: "Groupe Larivière",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Groupe de services",
-    year: 2023,
-    shortDescription:
-      "Site web multipage institutionnel pour un groupe d'entreprises de services avec navigation multi-secteurs et formulaires de contact.",
-    description:
-      "Réalisation du site web multipage du Groupe Larivière, regroupant plusieurs entités de services. Architecture multipage pensée pour présenter plusieurs secteurs d'activité de façon claire, avec navigation intuitive, pages par division et formulaires de contact adaptés à chaque service.",
-    services: ["Conception Web", "SEO", "Graphisme"],
-    technologies: ["WordPress", "Elementor Pro", "WP Rocket", "Cloudflare"],
-    results: [
-      "Site institutionnel professionnel livré",
-      "Navigation claire entre les divisions du groupe",
-      "Présence en ligne unifiée pour toutes les entités",
-      "Site responsive et performant",
-    ],
-    challenge:
-      "Concevoir un site qui reflète la diversité des services du groupe tout en maintenant une identité visuelle cohérente et une navigation simple.",
-    solution:
-      "Architecture multipage modulaire avec navigation par secteur, identité visuelle unifiée et contenu SEO spécifique à chaque division du groupe.",
-    seoTitle: "Site Web Groupe de Services France | Groupe Larivière — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web multipage pour le Groupe Larivière. Conception web institutionnelle France, navigation multi-services.",
-    externalUrl: "https://www.groupelariviere.ca/fr",
-    previewImage: "/images/portfolio/groupe-lariviere.webp",
-  },
-  {
-    id: "constructeurs-de-qualite",
-    slug: "constructeurs-de-qualite",
-    name: "Constructeurs de Qualité",
-    client: "Constructeurs de Qualité",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Construction résidentielle",
-    year: 2023,
-    shortDescription:
-      "Site web multipage pour un entrepreneur général en construction résidentielle avec galerie projets et demande de soumission.",
-    description:
-      "Réalisation du site web multipage de Constructeurs de Qualité, entrepreneur général en construction résidentielle en France. Présentation des projets réalisés (maisons neuves, extensions, rénovations majeures), pages services détaillées, formulaire de soumission et optimisation SEO locale.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Cloudflare"],
-    results: [
-      "Site web professionnel reflétant l'expertise en construction",
-      "Galerie de projets réalisés convaincante",
-      "Demandes de soumission générées en ligne",
-      "Meilleure visibilité Google locale",
-    ],
-    challenge:
-      "Établir une présence digitale crédible dans un secteur de la construction où la réputation et les réalisations sont déterminantes.",
-    solution:
-      "Site multipage mettant en avant les réalisations photographiées avec contenu SEO local et formulaire de soumission optimisé.",
-    seoTitle: "Site Web Entrepreneur Général Construction France | Constructeurs de Qualité — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Constructeurs de Qualité. Entrepreneur général construction résidentielle France.",
-    externalUrl: "https://www.constructeursdequalite.ca/",
-    previewImage: "/images/portfolio/constructeurs-de-qualite.webp",
-  },
 ];
 
 // ============================================================
@@ -193,37 +69,6 @@ const onePageProjects: PortfolioProject[] = [
       "Portfolio Lannkin : landing page pour Nettoyage Idéal. Conception web entretien ménager résidentiel France, Google Ads et Facebook Ads.",
     externalUrl: "https://www.nettoyageideal.com/",
     previewImage: "/images/portfolio/nettoyage-ideal.webp",
-  },
-  {
-    id: "nettoyage-leblanc",
-    slug: "nettoyage-leblanc",
-    name: "Nettoyage Leblanc",
-    client: "Nettoyage Leblanc",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Entretien ménager",
-    year: 2022,
-    shortDescription:
-      "Landing page pour une entreprise d'entretien ménager résidentiel et commercial avec formulaire de contact et témoignages.",
-    description:
-      "Réalisation d'une landing page pour Nettoyage Leblanc, service d'entretien ménager résidentiel et commercial. Page unique avec présentation des forfaits, galerie avant/après, section témoignages clients et formulaire de demande de soumission gratuite.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Landing page opérationnelle dès le lancement",
-      "Demandes de soumission générées en ligne",
-      "Présence Google locale établie",
-      "Design professionnel fidèle à l'image de l'entreprise",
-    ],
-    challenge:
-      "Établir rapidement une présence digitale crédible pour attirer de nouveaux clients résidentiels et commerciaux.",
-    solution:
-      "Landing page efficace avec preuve sociale, offres claires et formulaire de soumission pour convertir les visiteurs en clients.",
-    seoTitle: "Site Web Entretien Ménager France | Nettoyage Leblanc — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : landing page pour Nettoyage Leblanc. Entretien ménager résidentiel et commercial France.",
-    externalUrl: "https://www.nettoyageleblanc.ca/",
-    previewImage: "/images/portfolio/nettoyage-leblanc.webp",
   },
   {
     id: "ture-beau-menage",
@@ -273,13 +118,13 @@ const ecommerceProjects: PortfolioProject[] = [
     sector: "Mode — E-commerce Shopify",
     year: 2024,
     shortDescription:
-      "E-commerce Shopify accompagné pour atteindre plus de 30 000 CAD/mois de chiffre d'affaires grâce à une stratégie marketing complète.",
+      "E-commerce Shopify accompagné pour une forte croissance du chiffre d'affaires récurrent grâce à une stratégie marketing complète.",
     description:
-      "Accompagnement e-commerce complet pour Etilik Wear, boutique Shopify de mode. Stratégie marketing digitale intégrée (Facebook Ads, Google Ads, SEO), optimisation du tunnel de conversion et refonte du design pour atteindre un chiffre d'affaires récurrent de plus de 30 000 CAD par mois.",
+      "Accompagnement e-commerce complet pour Etilik Wear, boutique Shopify de mode. Stratégie marketing digitale intégrée (Facebook Ads, Google Ads, SEO), optimisation du tunnel de conversion et refonte du design pour une croissance soutenue du chiffre d'affaires récurrent.",
     services: ["Conception Web", "Facebook Ads", "Google Ads", "SEO"],
     technologies: ["Shopify", "Klaviyo", "Google Analytics 4", "Meta Ads"],
     results: [
-      "+30 000 CAD/mois de chiffre d'affaires",
+      "Chiffre d'affaires récurrent en forte croissance",
       "Tunnel de conversion optimisé",
       "Campagnes publicitaires ROI-positives",
       "Croissance e-commerce soutenue",
@@ -290,7 +135,7 @@ const ecommerceProjects: PortfolioProject[] = [
       "Stratégie marketing 360° combinant publicité ciblée, optimisation Shopify et email marketing pour créer un flux de revenus récurrent.",
     seoTitle: "E-commerce Shopify Mode | Etilik Wear — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : accompagnement e-commerce Shopify pour Etilik Wear. +30 000 CAD/mois de chiffre d'affaires.",
+      "Portfolio Lannkin : accompagnement e-commerce Shopify pour Etilik Wear. Croissance forte du chiffre d'affaires récurrent.",
     externalUrl: "https://www.etilik-wear.com/",
     previewImage: "/images/services/conception de site web/shopify/etilik.png",
   },
@@ -304,13 +149,13 @@ const ecommerceProjects: PortfolioProject[] = [
     sector: "Mode maillots — E-commerce Shopify",
     year: 2023,
     shortDescription:
-      "E-commerce Shopify ayant généré plus de 150 000 $ CAD grâce à notre stratégie marketing complète en 2023.",
+      "E-commerce Shopify ayant généré une forte hausse des ventes grâce à notre stratégie marketing complète en 2023.",
     description:
-      "Accompagnement e-commerce et stratégie marketing complète pour Khaven Swim, marque de maillots de bain sur Shopify. Gestion des campagnes publicitaires (Facebook Ads, Instagram Ads), optimisation du site et stratégie de contenu ayant permis de générer plus de 150 000 $ CAD de ventes en 2023.",
+      "Accompagnement e-commerce et stratégie marketing complète pour Khaven Swim, marque de maillots de bain sur Shopify. Gestion des campagnes publicitaires (Facebook Ads, Instagram Ads), optimisation du site et stratégie de contenu ayant permis une forte hausse des ventes en 2023.",
     services: ["Facebook Ads", "Google Ads", "Conception Web", "SEO"],
     technologies: ["Shopify", "Meta Ads", "Google Analytics 4", "Klaviyo"],
     results: [
-      "+150 000 $ CAD générés en 2023",
+      "Ventes en ligne en forte hausse en 2023",
       "Stratégie marketing ROI-positive",
       "Croissance soutenue des ventes en ligne",
       "Notoriété de marque renforcée",
@@ -321,7 +166,7 @@ const ecommerceProjects: PortfolioProject[] = [
       "Stratégie marketing intégrée avec publicités ciblées, optimisation du tunnel de conversion Shopify et relance automatisée des paniers abandonnés.",
     seoTitle: "Khaven Swim — E-commerce Shopify | Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : +150 000 $ CAD générés en 2023 pour Khaven Swim. Stratégie e-commerce Shopify complète.",
+      "Portfolio Lannkin : forte hausse des ventes en 2023 pour Khaven Swim. Stratégie e-commerce Shopify complète.",
     externalUrl: "https://khaven.com/",
     previewImage: "/images/services/conception de site web/shopify/khaven.png",
   },
@@ -392,14 +237,14 @@ const ecommerceProjects: PortfolioProject[] = [
     slug: "kway-canada",
     name: "K-Way Canada",
     client: "K-Way Canada",
-    category: "ecommerce",
-    categoryLabel: "E-commerce",
+    category: "international",
+    categoryLabel: "International",
     sector: "Mode outdoor — E-commerce",
     year: 2024,
     shortDescription:
       "Accompagnement e-commerce et SEO pour K-Way Canada, marque iconique de vêtements outdoor.",
     description:
-      "Accompagnement sur la partie e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements imperméables. Optimisation du référencement naturel, stratégie de contenu et amélioration de l'expérience d'achat en ligne pour le marché français.",
+      "Accompagnement sur la partie e-commerce et SEO pour K-Way Canada, la marque iconique de vêtements imperméables. Optimisation du référencement naturel, stratégie de contenu et amélioration de l'expérience d'achat en ligne bilingue pour le marché canadien.",
     services: ["SEO", "Conception Web", "Google Ads"],
     technologies: ["Shopify", "Google Analytics 4", "Search Console"],
     results: [
@@ -409,45 +254,14 @@ const ecommerceProjects: PortfolioProject[] = [
       "Trafic organique en hausse",
     ],
     challenge:
-      "Renforcer la présence digitale d'une marque mondiale sur le marché français spécifique.",
+      "Renforcer la présence digitale d'une marque mondiale sur son marché canadien spécifique.",
     solution:
-      "Stratégie SEO adaptée au marché français bilingue avec optimisation e-commerce et contenu ciblé.",
+      "Stratégie SEO adaptée au marché canadien bilingue avec optimisation e-commerce et contenu ciblé.",
     seoTitle: "E-commerce K-Way Canada | SEO & Shopify — Portfolio Lannkin",
     seoDescription:
-      "Portfolio Lannkin : accompagnement e-commerce et SEO pour K-Way Canada. Optimisation Shopify marché français.",
+      "Portfolio Lannkin : accompagnement e-commerce et SEO pour K-Way Canada. Optimisation Shopify marché canadien.",
     externalUrl: "https://kwaycanada.com/",
     previewImage: "/images/services/conception de site web/shopify/kway.png",
-  },
-  {
-    id: "ironmeals",
-    slug: "ironmeals",
-    name: "Iron Meals",
-    client: "Iron Meals",
-    category: "ecommerce",
-    categoryLabel: "E-commerce",
-    sector: "Alimentation sportive — E-commerce Shopify",
-    year: 2024,
-    shortDescription:
-      "Refonte Shopify et publicité pour Iron Meals, e-commerce de repas en abonnement pour sportifs.",
-    description:
-      "Refonte complète de la boutique Shopify et gestion des campagnes publicitaires pour Iron Meals, e-commerce de repas préparés en abonnement pour sportifs. Optimisation du tunnel d'abonnement, landing pages dédiées et stratégie publicitaire multicanal.",
-    services: ["Conception Web", "Facebook Ads", "Google Ads"],
-    technologies: ["Shopify", "Shopify Subscriptions", "Meta Ads", "Google Analytics 4"],
-    results: [
-      "Boutique Shopify entièrement refondue",
-      "Tunnel d'abonnement optimisé",
-      "Campagnes publicitaires performantes",
-      "Acquisition de nouveaux abonnés",
-    ],
-    challenge:
-      "Convertir des visiteurs en abonnés récurrents pour un service de repas sportifs dans un marché de niche.",
-    solution:
-      "Refonte Shopify axée sur le modèle d'abonnement avec landing pages dédiées et publicité ciblée vers les communautés fitness.",
-    seoTitle: "Iron Meals — E-commerce Shopify | Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : refonte Shopify et publicité pour Iron Meals. E-commerce repas en abonnement pour sportifs.",
-    externalUrl: "https://ironmeals.ca/",
-    previewImage: "/images/services/conception de site web/shopify/ironmeals.png",
   },
   {
     id: "le-coffre-a-jouets",
@@ -837,37 +651,6 @@ const additionalProjects: PortfolioProject[] = [
     previewImage: "/images/portfolio/patrenov.webp",
   },
   {
-    id: "scs-entretien",
-    slug: "scs-entretien",
-    name: "SCS Entretien",
-    client: "SCS Entretien",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Services d'entretien",
-    year: 2024,
-    shortDescription:
-      "Landing page pour une entreprise de services d'entretien résidentiel et commercial avec forfaits et formulaire de réservation.",
-    description:
-      "Conception d'une landing page optimisée pour SCS Entretien, service d'entretien ménager résidentiel et commercial en France. Présentation des forfaits, section témoignages clients, processus de service en 3 étapes et formulaire de demande de soumission en ligne.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket"],
-    results: [
-      "Landing page opérationnelle dès le lancement",
-      "Demandes de soumission reçues en ligne",
-      "Présence Google locale établie",
-      "Design professionnel fidèle à l'image de l'entreprise",
-    ],
-    challenge:
-      "Générer rapidement des demandes de service dans un marché local de l'entretien très concurrentiel.",
-    solution:
-      "Landing page conversion-first avec offre claire, preuve sociale renforcée et formulaire de contact simplifié.",
-    seoTitle: "Site Web Services Entretien France | SCS Entretien — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : landing page pour SCS Entretien. Services d'entretien résidentiel et commercial France.",
-    externalUrl: "https://www.scsentretien.ca/",
-    previewImage: "/images/portfolio/scs-entretien.webp",
-  },
-  {
     id: "christian-olivier-ducharme",
     slug: "christian-olivier-ducharme",
     name: "Christian-Olivier Ducharme",
@@ -899,161 +682,6 @@ const additionalProjects: PortfolioProject[] = [
     previewImage: "/images/portfolio/christian-olivier-ducharme.webp",
   },
   {
-    id: "creations-boreales-du-lac",
-    slug: "creations-boreales-du-lac",
-    name: "Créations Boréales du Lac",
-    client: "Créations Boréales du Lac",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Artisanat bois et époxy",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour un artisan spécialisé en tables bois et époxy sur mesure au Saguenay-Lac-Saint-Jean.",
-    description:
-      "Conception d'un site web multipage pour Créations Boréales du Lac, artisan du Saguenay créant des pièces décoratives sur mesure alliant bois et époxy. Galerie de réalisations, pages services, présentation des produits personnalisables et formulaire de contact.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "WP Rocket", "Google Analytics 4"],
-    results: [
-      "Site vitrine mettant en valeur le savoir-faire artisanal",
-      "Galerie de réalisations bois et époxy percutante",
-      "Demandes de commandes sur mesure générées",
-      "Référencement local Saguenay optimisé",
-    ],
-    challenge:
-      "Mettre en valeur un artisanat unique et convaincre les clients de la qualité des pièces sur mesure sans visite physique.",
-    solution:
-      "Site multipage axé sur la galerie photo haute résolution et le storytelling artisanal, avec SEO ciblant le Saguenay-Lac-Saint-Jean.",
-    seoTitle: "Site Web Artisan Bois Époxy Saguenay | Créations Boréales du Lac — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Créations Boréales du Lac. Tables bois et époxy sur mesure Saguenay, conception web et SEO.",
-    externalUrl: "https://www.creationsborealesdulac.ca/",
-    previewImage: "/images/portfolio/creations-boreales-du-lac.webp",
-  },
-  {
-    id: "metal-plus",
-    slug: "metal-plus",
-    name: "Métal Plus",
-    client: "Métal Plus Inc",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Coffrage et bétonnage",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une entreprise de coffrage, bétonnage et armatures en Abitibi-Témiscamingue.",
-    description:
-      "Développement d'un site web multipage pour Métal Plus, spécialiste en coffrage résidentiel et commercial, bétonnage et pose d'armatures en Abitibi-Témiscamingue. Pages services détaillées, régions desservies (Val-d'Or, Amos, Rouyn-Noranda), galerie de réalisations et blog.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WPForms"],
-    results: [
-      "Présence web professionnelle en Abitibi-Témiscamingue",
-      "Pages régions desservies optimisées pour le SEO local",
-      "Demandes de soumission en ligne générées",
-      "Blog actif pour le référencement organique",
-    ],
-    challenge:
-      "Couvrir un vaste territoire en Abitibi-Témiscamingue et se positionner sur les recherches locales dans plusieurs villes.",
-    solution:
-      "Site multipage avec pages dédiées par région desservie et par service, optimisées pour le SEO local multirégion.",
-    seoTitle: "Site Web Coffrage Bétonnage Abitibi | Métal Plus — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Métal Plus. Coffrage et bétonnage Abitibi-Témiscamingue, conception web et SEO local.",
-    externalUrl: "https://www.metalplus.ca/",
-    previewImage: "/images/portfolio/metal-plus.webp",
-  },
-  {
-    id: "installation-lgagne",
-    slug: "installation-lgagne",
-    name: "Installation L. Gagné",
-    client: "Installation L. Gagné Inc",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Soudure et travaux d'acier",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une firme de soudure mobile et travaux d'acier sur mesure certifiée RBQ et CWB.",
-    description:
-      "Réalisation d'un site web multipage pour Installation L. Gagné, firme spécialisée en soudure mobile et travaux d'acier sur mesure. Galerie de réalisations, pages services (structures d'acier, escaliers, rampes, réparation agricole), régions desservies et formulaire de soumission.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
-    results: [
-      "Site professionnel reflétant l'expertise en soudure",
-      "Certifications RBQ et CWB mises en avant",
-      "Soumissions en ligne reçues régulièrement",
-      "Visibilité locale améliorée dans plusieurs régions",
-    ],
-    challenge:
-      "Couvrir un large territoire (Nice, Paris, Nanterre, Mont-Tremblant) et attirer des projets diversifiés.",
-    solution:
-      "Site multipage avec pages régions et services détaillées, mettant en avant les certifications et la polyvalence de l'entreprise.",
-    seoTitle: "Site Web Soudure Travaux Acier France | Installation L. Gagné — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Installation L. Gagné. Soudure mobile et travaux d'acier sur mesure France.",
-    externalUrl: "https://installationlgagne.ca/",
-    previewImage: "/images/portfolio/installation-lgagne.webp",
-  },
-  {
-    id: "construction-veloce",
-    slug: "construction-veloce",
-    name: "Construction Véloce",
-    client: "Construction Véloce Inc",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Charpenterie",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour une entreprise de charpenterie haut de gamme à Paris et Hauts-de-Seine.",
-    description:
-      "Conception d'un site web multipage pour Construction Véloce, spécialiste en charpenterie sur mesure à Paris et Hauts-de-Seine. Pages services (construction de charpente, rénovation, rénovation majeure), galerie de projets réalisés et formulaire de contact.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "Google Analytics 4", "Google Site Kit"],
-    results: [
-      "Image de marque haut de gamme établie en ligne",
-      "Portfolio de charpentes sur mesure convaincant",
-      "Leads qualifiés générés via le site",
-      "Positionnement SEO local Paris et Hauts-de-Seine",
-    ],
-    challenge:
-      "Communiquer le positionnement haut de gamme et la qualité sans compromis dans un secteur de la construction souvent perçu comme générique.",
-    solution:
-      "Site multipage avec design professionnel, galerie photo mettant en valeur la qualité des charpentes et contenu SEO ciblé.",
-    seoTitle: "Site Web Charpenterie Paris | Construction Véloce — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Construction Véloce. Charpenterie haut de gamme Paris et Hauts-de-Seine.",
-    externalUrl: "https://constructionveloce.ca/",
-    previewImage: "/images/portfolio/construction-veloce.webp",
-  },
-  {
-    id: "andleikay-garderie-24h",
-    slug: "andleikay-garderie-24h",
-    name: "Andleikay Garderie 24h",
-    client: "Andleikay Garderie 24h",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Services de garde — Petite enfance",
-    year: 2024,
-    shortDescription:
-      "Site web multipage bilingue pour une garderie 24h offrant des horaires flexibles et des services spécialisés.",
-    description:
-      "Développement d'un site web multipage bilingue (FR/EN) pour Andleikay Garderie 24h, garderie fondée en 2013 offrant un service 24h avec transport, hébergement de nuit, halte-répit et accompagnement pour enfants à besoins particuliers.",
-    services: ["Conception Web", "SEO", "Facebook Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Tag Manager"],
-    results: [
-      "Site bilingue fonctionnel FR/EN",
-      "Inscriptions générées via formulaire en ligne",
-      "Visibilité accrue pour les parents aux horaires non conventionnels",
-      "Confiance renforcée grâce à la présentation des services",
-    ],
-    challenge:
-      "Rassurer les parents sur la qualité et la sécurité d'une garderie 24h et les convaincre d'inscrire leurs enfants.",
-    solution:
-      "Site multipage rassurant avec présentation détaillée des services, galerie photo chaleureuse et témoignages de parents satisfaits.",
-    seoTitle: "Site Web Garderie 24h France | Andleikay Garderie — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Andleikay Garderie 24h. Garderie avec horaires flexibles France, conception web bilingue.",
-    externalUrl: "https://andleikaygarderie24h.ca/",
-    previewImage: "/images/portfolio/andleikay-garderie-24h.webp",
-  },
-  {
     id: "kagalexo",
     slug: "kagalexo",
     name: "Kagalexo",
@@ -1083,99 +711,6 @@ const additionalProjects: PortfolioProject[] = [
       "Portfolio Lannkin : site web pour Kagalexo. Rénovation et restauration Grand Paris, conception web bilingue et SEO.",
     externalUrl: "https://www.kagalexo.com/",
     previewImage: "/images/portfolio/kagalexo.webp",
-  },
-  {
-    id: "dcg-electrique",
-    slug: "dcg-electrique",
-    name: "DCG Électrique",
-    client: "DCG Électrique Inc",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Services électriques",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour un maître électricien certifié RBQ desservant Paris, les Laurentides et l'Île-de-France.",
-    description:
-      "Conception d'un site web multipage pour DCG Électrique, maître électricien avec plus de 25 ans d'expérience. Pages services (filage, rénovation électrique, bornes de recharge, urgences 24/7), régions desservies et formulaire de contact.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "WPForms", "Google Site Kit"],
-    results: [
-      "Site professionnel reflétant 25 ans d'expertise",
-      "Service d'urgence 24/7 mis en avant",
-      "Leads qualifiés via formulaire et appels directs",
-      "Visibilité locale dans 4 régions",
-    ],
-    challenge:
-      "Couvrir plusieurs zones de service (Paris, Laurentides, Île-de-France) et se positionner sur les recherches d'urgence électrique.",
-    solution:
-      "Site multipage avec pages régions dédiées, CTA téléphonique proéminent pour les urgences et contenu SEO local multirégion.",
-    seoTitle: "Site Web Électricien Paris Paris | DCG Électrique — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour DCG Électrique. Maître électricien à Paris, dans les Laurentides et en Île-de-France.",
-    externalUrl: "https://www.dcgelectrique.ca/",
-    previewImage: "/images/portfolio/dcg-electrique.webp",
-  },
-  {
-    id: "yves-baillargeon",
-    slug: "yves-baillargeon",
-    name: "Yves Baillargeon",
-    client: "Yves Baillargeon",
-    category: "multipages",
-    categoryLabel: "Multipages",
-    sector: "Courtage immobilier",
-    year: 2024,
-    shortDescription:
-      "Site web multipage pour un courtier immobilier Via Capitale Élite dans la région de France.",
-    description:
-      "Réalisation d'un site web multipage pour Yves Baillargeon, courtier immobilier avec Via Capitale Élite dans la région de Québec et Beauport. Pages Acheter/Vendre, présentation des propriétés, témoignages et formulaire de contact.",
-    services: ["Conception Web", "SEO", "Google Ads"],
-    technologies: ["WordPress", "Elementor Pro", "Cloudflare", "WPForms"],
-    results: [
-      "Image de marque personnelle professionnelle",
-      "Site vitrine mettant en avant l'expertise locale",
-      "Prise de contact facilitée via formulaire",
-      "Référencement local région de France",
-    ],
-    challenge:
-      "Établir une présence digitale personnelle distincte dans un marché immobilier compétitif à Paris.",
-    solution:
-      "Site multipage personnel avec témoignages clients, pages de services immobiliers et contenu SEO ciblant la région de France.",
-    seoTitle: "Site Web Courtier Immobilier France | Yves Baillargeon — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site web pour Yves Baillargeon, courtier immobilier Via Capitale Élite, région de France.",
-    externalUrl: "https://www.yvesbaillargeon.ca/",
-    previewImage: "/images/portfolio/yves-baillargeon.webp",
-  },
-  {
-    id: "myriame-chic-salon",
-    slug: "myriame-chic-salon",
-    name: "Myriame Chic Salon",
-    client: "Myriame Chic Salon",
-    category: "onepage",
-    categoryLabel: "Onepage",
-    sector: "Salon de coiffure",
-    year: 2024,
-    shortDescription:
-      "Site onepage pour un salon de coiffure à Strasbourg avec présentation des services, réalisations et témoignages.",
-    description:
-      "Conception d'un site onepage pour Myriame Chic Salon, salon de coiffure à Strasbourg. Sections À propos, services (coupes, colorations, soins capillaires), galerie de réalisations, témoignages clients et formulaire de contact.",
-    services: ["Conception Web", "SEO", "Réseaux Sociaux"],
-    technologies: ["WordPress", "Elementor Pro", "Yoast SEO", "WP Rocket"],
-    results: [
-      "Site vitrine professionnel reflétant l'image du salon",
-      "Galerie de réalisations coiffure inspirante",
-      "Nouveaux clients acquis via le web",
-      "Référencement local Strasbourg optimisé",
-    ],
-    challenge:
-      "Refléter l'ambiance et le style du salon en ligne pour attirer une clientèle locale à Strasbourg.",
-    solution:
-      "Site onepage avec design élégant, galerie de réalisations et témoignages pour convaincre les visiteurs de prendre rendez-vous.",
-    seoTitle: "Site Web Salon Coiffure Strasbourg | Myriame Chic Salon — Portfolio Lannkin",
-    seoDescription:
-      "Portfolio Lannkin : site onepage pour Myriame Chic Salon. Salon de coiffure Strasbourg, conception web et SEO local.",
-    externalUrl: "https://www.myriamechicsalon.ca/",
-    previewImage: "/images/portfolio/myriame-chic-salon.webp",
   },
   {
     id: "fenide-dieujuste",

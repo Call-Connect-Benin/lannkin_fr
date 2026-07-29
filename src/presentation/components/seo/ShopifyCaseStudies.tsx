@@ -30,8 +30,8 @@ const SHOPIFY_CASE_STUDIES: CaseStudy[] = [
     name: "Etilik Wear",
     slug: "etilik-wear",
     description:
-      "E-commerce Shopify accompagné pour dépasser les 30 000 CAD/mois de chiffre d'affaires grâce à une stratégie marketing complète.",
-    result: "+30 000 CAD/mois",
+      "E-commerce Shopify accompagné pour une forte croissance du chiffre d'affaires récurrent grâce à une stratégie marketing complète.",
+    result: "Chiffre d'affaires en forte croissance",
     image: "/images/services/conception de site web/shopify/etilik.png",
     externalUrl: "https://www.etilik-wear.com/",
     tags: ["Shopify", "Facebook Ads", "Conversion"],
@@ -40,8 +40,8 @@ const SHOPIFY_CASE_STUDIES: CaseStudy[] = [
     name: "Khaven Swim",
     slug: "khaven-swim",
     description:
-      "Marque de maillots de bain ayant généré plus de 150 000 $ CAD grâce à notre stratégie marketing e-commerce en 2023.",
-    result: "+150 000 $ CAD en 2023",
+      "Marque de maillots de bain ayant généré une forte hausse des ventes grâce à notre stratégie marketing e-commerce en 2023.",
+    result: "Ventes en forte hausse en 2023",
     image: "/images/services/conception de site web/shopify/khaven.png",
     externalUrl: "https://khaven.com/",
     tags: ["Shopify", "Marketing", "Facebook Ads"],
@@ -75,16 +75,6 @@ const SHOPIFY_CASE_STUDIES: CaseStudy[] = [
     image: "/images/services/conception de site web/shopify/kway.png",
     externalUrl: "https://kwaycanada.com/",
     tags: ["Shopify", "SEO", "E-commerce"],
-  },
-  {
-    name: "Iron Meals",
-    slug: "ironmeals",
-    description:
-      "Refonte de la boutique Shopify et gestion publicitaire pour un e-commerce de repas en abonnement pour sportifs.",
-    result: "Refonte Shopify + Pub",
-    image: "/images/services/conception de site web/shopify/ironmeals.png",
-    externalUrl: "https://ironmeals.ca/",
-    tags: ["Shopify", "Refonte", "Facebook Ads"],
   },
   {
     name: "Montecarlo Designs",

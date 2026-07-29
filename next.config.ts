@@ -334,16 +334,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/formulaire-de-conception/",
-        destination: "/formulaire-de-conception/",
-        permanent: true,
-      },
-      {
-        source: "/formulaire-de-conception",
-        destination: "/formulaire-de-conception/",
-        permanent: true,
-      },
-      {
         source: "/home-page-new/",
         destination: "/",
         permanent: true,

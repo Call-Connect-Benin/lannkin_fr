@@ -155,10 +155,10 @@ const siteShopify: ServicePageContent = {
     {
       title: "Pourquoi choisir LANNKIN comme agence web Shopify en France?",
       content:
-        "Shopify est une entreprise française basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces au Canada et à l'international — de Khaven Swim (+150 000 € CAD en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
+        "Shopify est une entreprise canadienne basée à Ottawa qui propulse plus de 4 millions de boutiques dans le monde. En tant qu'agence web Shopify expérimentée, LANNKIN accompagne des e-commerces en France et à l'international — de Khaven Swim (forte hausse des ventes en 2023) à Montecarlo Designs (mobilier de luxe à Monaco). Notre expertise couvre la création, l'optimisation conversion et la stratégie marketing complète.",
       items: [
         "Thèmes Shopify personnalisés avec développement Liquid",
-        "Configuration multilingue français/anglais pour le France",
+        "Configuration multilingue français/anglais adaptée au marché français",
         "Shopify Payments avec configuration des taxes adaptée à votre marché",
         "Intégration apps essentielles : avis clients, upsell, email marketing",
         "Shopify POS pour la vente en magasin (point de vente)",
@@ -185,7 +185,7 @@ const siteShopify: ServicePageContent = {
     },
   ],
   benefits: [
-    "Plateforme française avec support en français et devise CAD native",
+    "Plateforme robuste avec support en français et devise EUR native",
     "Hébergement inclus avec certificat SSL et conformité PCI DSS",
     "Plus de 8 000 applications dans le Shopify App Store",
     "Shopify Payments élimine les frais de passerelle tiers",
@@ -193,16 +193,16 @@ const siteShopify: ServicePageContent = {
     "Mises à jour automatiques de la plateforme sans temps d'arrêt",
   ],
   process: [
-    { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, étude de la concurrence française, définition de la stratégie de prix et de livraison (Postes Canada, Purolator)." },
+    { step: 1, title: "Stratégie e-commerce", description: "Analyse de votre catalogue, étude de la concurrence française, définition de la stratégie de prix et de livraison (Colissimo, Chronopost)." },
     { step: 2, title: "Design de la boutique", description: "Maquettes Figma de la page d'accueil, pages collection, fiches produit et panier. Design axé sur la conversion mobile." },
     { step: 3, title: "Développement Shopify", description: "Installation et personnalisation du thème Liquid, configuration des apps, import du catalogue produits et paramétrage des taxes selon votre marché." },
     { step: 4, title: "Tests et optimisation", description: "Tests de commande complète, vérification des paiements, optimisation de la vitesse et du SEO e-commerce." },
     { step: 5, title: "Lancement et formation", description: "Mise en ligne, formation à l'interface admin Shopify, configuration des rapports de vente et du suivi analytique." },
   ],
   faq: [
-    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 CAD/mois. La conception sur mesure par LANNKIN commence à 3 500 € pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
+    { question: "Combien coûte une boutique Shopify?", answer: "L'abonnement Shopify Basic démarre à 39 €/mois. La conception sur mesure par LANNKIN commence à 3 500 € pour une boutique standard avec personnalisation du thème, configuration des apps et import de produits." },
     { question: "Shopify gère-t-il les taxes françaises?", answer: "Oui, Shopify permet de configurer la TVA pour les ventes en France, ainsi que les autres taxes applicables selon votre marché et vos zones de vente." },
-    { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir les marchés francophone et anglophone du Canada." },
+    { question: "Puis-je vendre en français et en anglais?", answer: "Oui, Shopify Markets permet de gérer plusieurs langues et devises. Nous configurons votre boutique pour servir vos marchés francophone et anglophone à l'international." },
     { question: "Comment migrer ma boutique WooCommerce vers Shopify?", answer: "Nous utilisons des outils de migration spécialisés pour transférer vos produits, clients, commandes et redirections SEO de WooCommerce vers Shopify sans perte de données ni de référencement." },
   ],
 };

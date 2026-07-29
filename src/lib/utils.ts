@@ -12,9 +12,9 @@ export function slugToTitle(slug: string): string {
 }
 
 export function formatPrice(price: number, unit?: "month" | "one-shot"): string {
-  const formatted = new Intl.NumberFormat("fr-CA", {
+  const formatted = new Intl.NumberFormat("fr-FR", {
     style: "currency",
-    currency: "CAD",
+    currency: "EUR",
     minimumFractionDigits: 0,
   }).format(price);
 

@@ -12,9 +12,9 @@ import {
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
 
 function formatPrice(price: number): string {
-  return new Intl.NumberFormat("fr-CA", {
+  return new Intl.NumberFormat("fr-FR", {
     style: "currency",
-    currency: "CAD",
+    currency: "EUR",
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(price);

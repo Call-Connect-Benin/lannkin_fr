@@ -6,12 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CLIENT_SCREENSHOTS = [
-  "/images/screenshots/andleikay.webp",
+  "/images/screenshots/rotho.webp",
+  "/images/screenshots/artisans-marceau.webp",
   "/images/screenshots/artisans-marceau.webp",
   "/images/screenshots/rotho.webp",
-  "/images/screenshots/christian-ducharme.webp",
-  "/images/screenshots/metal-plus.webp",
-  "/images/screenshots/myriame-salon.webp",
 ] as const;
 
 const TRUST_BADGES = ["Signature électronique", "Avis vérifiés", "Paiement sécurisé"];
