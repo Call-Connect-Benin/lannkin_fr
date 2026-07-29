@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const internationalCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "international").length;
 
 const INCLUS = [
   "Sites web bilingues français/anglais",
@@ -41,11 +39,6 @@ export default function RealisationsInternationalPage() {
         currentCategory="international"
         title="Agence web internationale basée en France"
         description="De Paris à Lausanne — notre agence web française accompagne les entreprises d'Europe, des États-Unis et du Maroc dans leur présence digitale internationale."
-        stats={[
-          { value: "40+ pays", label: "clients générés via nos sites" },
-          { value: `${internationalCount} projets`, label: "internationaux livrés" },
-          { value: "FR / EN / DE", label: "sites bilingues et multilingues" },
-        ]}
       />
 
       {/* Separator */}
@@ -133,7 +126,6 @@ export default function RealisationsInternationalPage() {
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                 >
                   Discuter de votre projet international
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

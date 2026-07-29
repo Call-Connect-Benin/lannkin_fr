@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  ArrowRight,
   ArrowUpRight,
   BadgeCheck,
   Layers3,
@@ -118,7 +117,6 @@ export default function TarifsPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                 >
                   Parcourir les tarifs
-                  <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/devis-gratuit/"
@@ -351,7 +349,6 @@ export default function TarifsPage() {
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
               >
                 Demander un devis gratuit
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact/"

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle, History, Send, X } from "lucide-react";
+import { ArrowLeft, CheckCircle, History, Send, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -492,7 +492,6 @@ export function DevisForm() {
               <div className="flex justify-end">
                 <Button type="button" onClick={goToStep2}>
                   Suivant
-                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
             </motion.div>

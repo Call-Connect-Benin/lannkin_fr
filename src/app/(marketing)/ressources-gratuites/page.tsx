@@ -276,7 +276,6 @@ export default function RessourcesGratuitesPage() {
                   style={{ backgroundColor: "#498f6d", color: "#f7f5f0" }}
                 >
                   Explorer les ressources
-                  <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
                   href="#youtube"
@@ -563,7 +562,6 @@ export default function RessourcesGratuitesPage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Parler à un expert
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/tarifs/"

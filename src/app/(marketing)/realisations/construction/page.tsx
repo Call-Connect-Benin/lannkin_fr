@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS, getSectorSlug } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "construction").length;
 
 export default function RealisationsConstructionPage() {
   return (
@@ -26,11 +23,6 @@ export default function RealisationsConstructionPage() {
         currentCategory="tous"
         title="Sites web — Construction & Rénovation"
         description="De l'entrepreneur général au maître électricien, Lannkin conçoit des sites web qui génèrent des demandes de soumission et dominent le SEO local pour les métiers du bâtiment en France."
-        stats={[
-          { value: `${count} projets`, label: "dans le bâtiment" },
-          { value: "+187 %", label: "de leads (client rénovation)" },
-          { value: "Google Partner", label: "SEO certifié" },
-        ]}
       />
 
       <div className="border-t border-[#2d2d2d]/[0.08]">
@@ -72,7 +64,6 @@ export default function RealisationsConstructionPage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Démarrer votre projet
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/realisations/immobilier/"

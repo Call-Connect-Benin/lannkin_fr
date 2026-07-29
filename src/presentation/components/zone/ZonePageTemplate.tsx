@@ -113,7 +113,6 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
             <Link href="/devis-gratuit/">
               <Button variant="primary" size="lg">
                 Devis gratuit sous 24h
-                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link href="/contact/">
@@ -252,7 +251,6 @@ export function ZonePageTemplate({ zone }: ZonePageTemplateProps) {
               <Link href="/devis-gratuit/">
                 <Button variant="primary" size="lg">
                   Demander un devis gratuit
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/contact/">

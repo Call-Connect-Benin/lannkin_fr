@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS, getSectorSlug } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "tourisme").length;
 
 export default function RealisationsTourismePage() {
   return (
@@ -26,11 +23,6 @@ export default function RealisationsTourismePage() {
         currentCategory="tous"
         title="Sites web — Tourisme & Aventure"
         description="Lannkin crée des sites web immersifs pour le secteur touristique : agences de voyages, pourvoiries, hébergements et activités de plein air. Réservation en ligne, galeries et SEO pour attirer des voyageurs du monde entier."
-        stats={[
-          { value: `${count} projets`, label: "en tourisme" },
-          { value: "Réservation", label: "en ligne intégrée" },
-          { value: "Multilingue", label: "FR / EN / ES" },
-        ]}
       />
 
       <div className="border-t border-[#2d2d2d]/[0.08]">
@@ -72,7 +64,6 @@ export default function RealisationsTourismePage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Démarrer votre projet
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/realisations/international/"

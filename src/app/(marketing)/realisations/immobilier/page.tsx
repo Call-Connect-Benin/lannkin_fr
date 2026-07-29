@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS, getSectorSlug } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "immobilier").length;
 
 export default function RealisationsImmobilierPage() {
   return (
@@ -26,11 +23,6 @@ export default function RealisationsImmobilierPage() {
         currentCategory="tous"
         title="Sites web — Courtage Immobilier"
         description="Lannkin conçoit des sites web pour courtiers immobiliers en France : pages achat/vente, témoignages et SEO local pour dominer votre marché."
-        stats={[
-          { value: `${count} projets`, label: "en immobilier" },
-          { value: "Pages biens", label: "présentation claire" },
-          { value: "SEO local", label: "par secteur et ville" },
-        ]}
       />
 
       <div className="border-t border-[#2d2d2d]/[0.08]">
@@ -71,7 +63,6 @@ export default function RealisationsImmobilierPage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Démarrer votre projet
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/realisations/construction/"

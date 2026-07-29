@@ -19,7 +19,7 @@ import {
 } from "@/data/services";
 import { Container } from "@/presentation/components/ui";
 import { LucideIcon } from "@/presentation/components/ui/LucideIcon";
-import { Breadcrumb, InternalLinks } from "@/presentation/components/seo";
+import { InternalLinks } from "@/presentation/components/seo";
 
 const FEATURE_BULLETS = [
   {
@@ -409,7 +409,6 @@ export default async function ServiceHubPage({ params }: PageProps) {
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                     >
                       Découvrir les tarifs
-                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   ) : (
                     <Link
@@ -417,7 +416,6 @@ export default async function ServiceHubPage({ params }: PageProps) {
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                     >
                       Demander un devis
-                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   )}
                   <Link
@@ -560,30 +558,47 @@ export default async function ServiceHubPage({ params }: PageProps) {
 
       <section className="pb-12 pt-4">
         <Container size="md">
-          <div className="rounded-[2rem] border p-8 text-center sm:p-12">
-            <h2 className="font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
-              Pret a activer {hub.name.toLowerCase()} dans votre strategie ?
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#2d2d2d]/68">
-              Recevez une proposition claire, adaptee a votre contexte et a votre
-              niveau d&apos;urgence, sans discours commercial inutile.
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/devis-gratuit/"
-                className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
-              >
-                Obtenir mon devis
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              {hub.pricingLink ? (
+          <div className="relative overflow-hidden rounded-[2rem] border p-8 text-center sm:p-12">
+            <Image
+              src="/images/rendu3D/rendu3d-diamant-cubes-flottants.webp"
+              alt=""
+              fill
+              aria-hidden
+              className="object-cover opacity-80"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse 46% 60% at 50% 50%, #f7f5f0 40%, transparent 100%)",
+              }}
+              aria-hidden
+            />
+            <div className="relative z-10">
+              <h2 className="font-heading text-3xl font-bold text-[#2d2d2d] sm:text-4xl">
+                Prêt à activer {hub.name.toLowerCase()} dans votre stratégie ?
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#2d2d2d]/68">
+                Recevez une proposition claire, adaptée à votre contexte et à votre
+                niveau d&apos;urgence, sans discours commercial inutile.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
-                  href={hub.pricingLink}
-                  className="inline-flex items-center gap-2 rounded-xl border border-[rgba(45,45,45,0.14)] bg-white/80 px-6 py-3.5 text-sm font-semibold text-[#2d2d2d] transition-colors hover:border-accent/30 hover:text-accent"
+                  href="/devis-gratuit/"
+                  className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                 >
-                  Voir les tarifs
+                  Obtenir mon devis
                 </Link>
-              ) : null}
+                {hub.pricingLink ? (
+                  <Link
+                    href={hub.pricingLink}
+                    className="inline-flex items-center gap-2 rounded-xl border border-[rgba(45,45,45,0.14)] bg-white/80 px-6 py-3.5 text-sm font-semibold text-[#2d2d2d] transition-colors hover:border-accent/30 hover:text-accent"
+                  >
+                    Voir les tarifs
+                  </Link>
+                ) : null}
+              </div>
             </div>
           </div>
         </Container>

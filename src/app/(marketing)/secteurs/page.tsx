@@ -38,7 +38,6 @@ export default function SecteursPage() {
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-semibold text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110"
               >
                 Devis gratuit
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/services/"
@@ -121,7 +120,6 @@ export default function SecteursPage() {
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-lg font-semibold text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110"
             >
               Demander un devis gratuit
-              <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </Container>

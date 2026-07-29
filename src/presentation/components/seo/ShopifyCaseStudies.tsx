@@ -200,7 +200,6 @@ export function ShopifyCaseStudies() {
             className="inline-flex items-center gap-2 rounded-lg border-2 border-accent/60 bg-transparent px-6 py-3 text-base font-semibold text-accent transition-colors hover:border-accent hover:bg-accent/10"
           >
             Voir tous nos projets e-commerce
-            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   ArrowUpRight,
   BadgeCheck,
   Check,
@@ -122,7 +121,6 @@ export function PricingPageContent({
                     className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                   >
                     Voir les forfaits
-                    <ArrowRight className="h-4 w-4" />
                   </a>
                   <Button href={serviceHref} variant="secondary" size="md">
                     Voir le service
@@ -345,7 +343,6 @@ export function PricingPageContent({
                         )}
                       >
                         {plan.cta}
-                        <ArrowRight className="h-4 w-4 shrink-0" />
                       </a>
                       <p className="mt-2 flex items-center justify-center gap-1 text-xs text-[#2d2d2d]/52">
                         <ShieldCheck className="h-3 w-3" />

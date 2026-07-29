@@ -193,7 +193,6 @@ export default async function ServiceSubPage({ params }: PageProps) {
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                     >
                       Decouvrir les tarifs
-                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   ) : (
                     <Link
@@ -201,7 +200,6 @@ export default async function ServiceSubPage({ params }: PageProps) {
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                     >
                       Obtenir mon devis
-                      <ArrowRight className="h-4 w-4" />
                     </Link>
                   )}
                   <Link
@@ -343,7 +341,6 @@ export default async function ServiceSubPage({ params }: PageProps) {
                       className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                     >
                       Voir le projet
-                      <ArrowRight className="h-4 w-4" />
                     </Link>
                     <Link
                       href="/services/sites-immersifs-3d/"
@@ -449,7 +446,6 @@ export default async function ServiceSubPage({ params }: PageProps) {
                   className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                 >
                   Decouvrir les tarifs
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               ) : (
                 <Link
@@ -457,7 +453,6 @@ export default async function ServiceSubPage({ params }: PageProps) {
                   className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                 >
                   Obtenir mon devis
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               )}
               <Link

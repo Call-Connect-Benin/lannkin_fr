@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
   CheckCircle2,
   Globe,
+  type LucideIcon,
   Mail,
   MapPin,
   Phone,
@@ -206,7 +206,12 @@ const TRUST_POINTS = [
   "Recommandations franches, y compris quand il faut réduire, recentrer ou simplifier.",
 ] as const;
 
-const CONTACT_ITEMS = [
+const CONTACT_ITEMS: ReadonlyArray<{
+  label: string;
+  value: string;
+  href?: string;
+  icon: LucideIcon;
+}> = [
   {
     label: "Téléphone",
     value: SITE_CONFIG.phone,
@@ -224,11 +229,11 @@ const CONTACT_ITEMS = [
     value: "Paris, France",
     icon: MapPin,
   },
-] as const;
+];
 
 export default function AProposPage() {
   return (
-    <main className="overflow-x-hidden bg-[#f7f5f0] text-[#2d2d2d]">
+    <main className="overflow-x-clip bg-[#f7f5f0] text-[#2d2d2d]">
       <section className="relative overflow-hidden border-b border-[#d8d5ce] bg-[#f8fafc] pb-14 pt-10 lg:pb-18 lg:pt-16">
         <div
           className="pointer-events-none absolute inset-0"
@@ -241,7 +246,7 @@ export default function AProposPage() {
         <div className="pointer-events-none absolute right-[8%] top-10 hidden h-72 w-72 rounded-full bg-[rgba(73,143,109,0.10)] blur-[120px] lg:block" aria-hidden />
 
         <Container className="relative z-10">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_22rem] lg:items-end">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_22rem] lg:items-start">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#bfd5c8] bg-white/88 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#498f6d] shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-[#498f6d]" />
@@ -267,7 +272,6 @@ export default function AProposPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#498f6d] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                 >
                   Démarrer un projet
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/realisations/"
@@ -443,7 +447,6 @@ export default function AProposPage() {
                         className="inline-flex items-center gap-1.5 rounded-lg border border-[#bfd5c8] bg-white px-4 py-2 text-sm font-medium text-[#498f6d] transition-colors hover:bg-[#498f6d]/5"
                       >
                         {link.label}
-                        <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     ))}
                   </div>

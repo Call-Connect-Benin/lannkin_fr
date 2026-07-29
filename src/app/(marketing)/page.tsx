@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
   Check,
   Code,
   Globe2,
@@ -194,7 +193,6 @@ function OfferCard({
           className={dark ? "border-white/30 text-white hover:bg-white/10" : "w-full sm:w-auto"}
         >
           Voir le détail
-          <ArrowRight className="h-4 w-4" />
         </Button>
       </div>
     </div>
@@ -640,7 +638,6 @@ function HomePage() {
               <div className="mt-8">
                 <Button href={NATIVE_ADS.cta.href} size="md">
                   {NATIVE_ADS.cta.label}
-                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -890,7 +887,6 @@ function HomePage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href={CTA_SECTION.cta.primary.href} size="lg">
                   {CTA_SECTION.cta.primary.label}
-                  <ArrowRight className="h-5 w-5" />
                 </Button>
                 <Button
                   href={CTA_SECTION.cta.secondary.href}

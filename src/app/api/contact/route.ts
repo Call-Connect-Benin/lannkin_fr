@@ -203,7 +203,7 @@ export async function POST(req: NextRequest) {
     }
     if (code === "EAUTH") {
       return NextResponse.json(
-        { error: "Erreur de configuration email. Veuillez nous contacter directement à info@lannkin.com." },
+        { error: "Erreur de configuration email. Veuillez nous contacter directement à login@lannkin.com." },
         { status: 503 },
       );
     }

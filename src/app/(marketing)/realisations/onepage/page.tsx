@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const onePageCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "onepage").length;
 
 const INCLUS = [
   "Copywriting orienté conversion inclus",
@@ -41,11 +39,6 @@ export default function RealisationsOnepagePage() {
         currentCategory="onepage"
         title="Landing pages & sites onepage à Paris"
         description="Des pages de destination qui convertissent — notre agence crée des sites onepage et landing pages pour les entreprises françaises qui veulent générer des leads et des ventes rapidement."
-        stats={[
-          { value: "7,8 %", label: "taux de conversion (vs 2,5 % industrie)" },
-          { value: `${onePageCount} projets`, label: "onepage & landing pages livrés" },
-          { value: "4,9/5", label: "sur Google (54 avis)" },
-        ]}
       />
 
       {/* Separator */}
@@ -128,7 +121,6 @@ export default function RealisationsOnepagePage() {
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                 >
                   Créer ma landing page
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/tarifs/google-ads/"

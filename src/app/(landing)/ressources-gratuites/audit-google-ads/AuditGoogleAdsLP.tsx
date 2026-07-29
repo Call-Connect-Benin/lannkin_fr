@@ -716,7 +716,7 @@ export function AuditGoogleAdsLP() {
           </div>
           <div className="ft-col">
             <h4>Contact</h4>
-            <a href="mailto:info@lannkin.com">info@lannkin.com</a>
+            <a href="mailto:login@lannkin.com">login@lannkin.com</a>
             <a href="tel:+33100000000">+33 1 00 00 00 00</a>
             <p style={{ marginTop: 6, fontSize: 11, color: "var(--text4)" }}>Lun-Ven, 9h à 17h30 (heure de Paris)</p>
           </div>

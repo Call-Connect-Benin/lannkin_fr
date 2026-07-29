@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS, getSectorSlug } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "services-menagers").length;
 
 export default function RealisationsServicesMenagersPage() {
   return (
@@ -26,11 +23,6 @@ export default function RealisationsServicesMenagersPage() {
         currentCategory="tous"
         title="Sites web — Services ménagers"
         description="Lannkin crée des landing pages et sites web haute conversion pour les services d'entretien ménager résidentiel et commercial en France — avec formulaires de réservation et campagnes Google Ads."
-        stats={[
-          { value: `${count} projets`, label: "en services ménagers" },
-          { value: "Google Ads", label: "ROI-positif dès le lancement" },
-          { value: "Landing page", label: "optimisée pour la conversion" },
-        ]}
       />
 
       <div className="border-t border-[#2d2d2d]/[0.08]">
@@ -71,7 +63,6 @@ export default function RealisationsServicesMenagersPage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Démarrer votre projet
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/realisations/construction/"

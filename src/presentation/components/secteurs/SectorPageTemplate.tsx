@@ -117,7 +117,6 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               <Link href="/contact/">
                 <Button variant="primary" size="lg">
                   Devis gratuit sous 24h
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href={realisationsHref}>
@@ -270,7 +269,6 @@ export function SectorPageTemplate({ sector, benefits }: SectorPageTemplateProps
               <Link href="/contact/">
                 <Button variant="primary" size="lg">
                   Demander un devis gratuit
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href={realisationsHref}>

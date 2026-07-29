@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -110,7 +110,6 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
                 ) : (
                   <>
                     S&apos;inscrire
-                    <ArrowRight className="h-4 w-4" />
                   </>
                 )}
               </motion.button>

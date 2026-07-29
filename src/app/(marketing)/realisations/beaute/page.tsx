@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS, getSectorSlug } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const count = PORTFOLIO_PROJECTS.filter((p) => getSectorSlug(p.sector) === "beaute").length;
 
 export default function RealisationsBeautePage() {
   return (
@@ -26,11 +23,6 @@ export default function RealisationsBeautePage() {
         currentCategory="tous"
         title="Sites web — Beauté & Bien-être"
         description="Lannkin conçoit des sites web élégants pour salons de coiffure, instituts de beauté, spas et esthétiques en France. Réservation en ligne, galeries photos et SEO local pour attirer de nouveaux clients."
-        stats={[
-          { value: `${count} projets`, label: "dans la beauté" },
-          { value: "Réservation", label: "en ligne intégrée" },
-          { value: "SEO local", label: "par ville et quartier" },
-        ]}
       />
 
       <div className="border-t border-[#2d2d2d]/[0.08]">
@@ -72,7 +64,6 @@ export default function RealisationsBeautePage() {
                 style={{ backgroundColor: "#498f6d", color: "#fff" }}
               >
                 Démarrer votre projet
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/realisations/services-menagers/"

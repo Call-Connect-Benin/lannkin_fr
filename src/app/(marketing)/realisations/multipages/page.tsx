@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const multiPagesCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "multipages").length;
 
 const INCLUS = [
   "Architecture multipage optimisée pour le SEO local",
@@ -41,11 +39,6 @@ export default function RealisationsMultipagesPage() {
         currentCategory="multipages"
         title="Création de sites web multipages à Paris"
         description="Sites vitrine, sites PME, sites institutionnels — notre agence web à Paris conçoit des sites multipages modernes et optimisés pour le SEO local, pour les entreprises d'Île-de-France et de toute la France."
-        stats={[
-          { value: "+187 %", label: "de leads qualifiés (client Paris)" },
-          { value: `${multiPagesCount} projets`, label: "multipages livrés" },
-          { value: "Google Partner", label: "SEO certifié depuis 2015" },
-        ]}
       />
 
       {/* Separator */}
@@ -129,7 +122,6 @@ export default function RealisationsMultipagesPage() {
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                 >
                   Démarrer votre projet web
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/tarifs/conception-web/"

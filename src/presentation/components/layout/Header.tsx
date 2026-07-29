@@ -428,7 +428,7 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 top-[72px] z-40 backdrop-blur-sm lg:hidden"
+              className="fixed inset-x-0 bottom-0 top-[72px] z-[70] backdrop-blur-sm lg:hidden"
               style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
               onClick={() => setMobileOpen(false)}
             />
@@ -440,8 +440,11 @@ export function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed inset-y-0 right-0 top-[72px] z-50 flex w-[85vw] max-w-72 flex-col backdrop-blur-xl lg:hidden"
-              style={{ backgroundColor: "rgba(255,255,255,0.97)" }}
+              className="fixed bottom-0 right-0 top-[72px] z-[80] flex h-[calc(100dvh-72px)] w-[88vw] max-w-80 flex-col border-l shadow-[0_24px_60px_rgba(15,23,42,0.24)] backdrop-blur-xl lg:hidden"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.98)",
+                borderColor: "rgba(0,0,0,0.08)",
+              }}
               aria-label="Menu mobile"
             >
               <div className="relative flex flex-1 flex-col overflow-hidden">

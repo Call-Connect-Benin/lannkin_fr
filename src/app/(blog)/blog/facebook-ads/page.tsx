@@ -263,7 +263,6 @@ export default function BlogFacebookAdsPage() {
                   style={{ backgroundColor: categoryColor }}
                 >
                   Voir nos services Meta Ads
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/tarifs/facebook-ads/"
@@ -294,7 +293,6 @@ export default function BlogFacebookAdsPage() {
                       <span className="text-sm font-medium text-[#2d2d2d] group-hover:text-accent">
                         {cat.name}
                       </span>
-                      <ArrowRight className="h-3.5 w-3.5 text-[#6B7280] transition-colors group-hover:text-accent" />
                     </Link>
                   ))}
                   <Link
@@ -327,7 +325,6 @@ export default function BlogFacebookAdsPage() {
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-4 text-lg font-semibold text-on-accent shadow-[0_0_20px_rgba(73,143,109,0.15)] transition-all duration-200 hover:brightness-110"
               >
                 Obtenir une stratégie gratuite
-                <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 href="/tarifs/facebook-ads/"

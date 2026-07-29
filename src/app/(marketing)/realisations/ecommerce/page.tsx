@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
-import { PORTFOLIO_PROJECTS } from "@/data/portfolio";
 import { PortfolioGrid } from "@/presentation/components/portfolio/PortfolioGrid";
 import { RealisationsBanner } from "@/presentation/components/portfolio/RealisationsBanner";
 import { Container } from "@/presentation/components/ui/Container";
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const ecommerceCount = PORTFOLIO_PROJECTS.filter((p) => p.category === "ecommerce").length;
 
 const WHY_US = [
   "Shopify Partner certifié — thèmes sur mesure en Liquid",
@@ -41,11 +39,6 @@ export default function RealisationsEcommercePage() {
         currentCategory="ecommerce"
         title="Création de boutiques e-commerce à Paris"
         description="Shopify, WooCommerce ou sur mesure — notre agence e-commerce de Paris crée des boutiques en ligne performantes pour les entreprises françaises qui veulent vendre plus."
-        stats={[
-          { value: "+420 %", label: "de revenus e-commerce (client réel)" },
-          { value: `${ecommerceCount} projets`, label: "e-commerce livrés" },
-          { value: "Shopify Partner", label: "certifié depuis 2015" },
-        ]}
       />
 
       {/* Separator */}
@@ -125,7 +118,6 @@ export default function RealisationsEcommercePage() {
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all duration-200 hover:brightness-110"
                 >
                   Lancer votre boutique en ligne
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/tarifs/conception-web/"

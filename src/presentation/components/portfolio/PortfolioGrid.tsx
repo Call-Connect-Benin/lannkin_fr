@@ -148,6 +148,7 @@ interface PortfolioGridProps {
   initialSectorFilter?: string;
   showFilters?: boolean;
   showQuickView?: boolean;
+  showTopDivider?: boolean;
 }
 
 function ProjectQuickView({
@@ -308,7 +309,6 @@ function ProjectQuickView({
                             className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                           >
                             Voir le projet
-                            <ArrowRight className="h-4 w-4" />
                           </Link>
                           {project.externalUrl ? (
                             <a
@@ -336,6 +336,7 @@ export function PortfolioGrid({
   initialSectorFilter,
   showFilters = false,
   showQuickView = true,
+  showTopDivider = true,
 }: PortfolioGridProps) {
   const [activeCategory, setActiveCategory] = useState<PortfolioCategory | "all">(initialFilter);
   const [activeSector, setActiveSector] = useState<string>(initialSectorFilter ?? "all");
@@ -351,13 +352,15 @@ export function PortfolioGrid({
     <>
       <section style={{ backgroundColor: "#f7f5f0" }} className="pb-20 pt-8 lg:pb-24">
         <Container>
-          <div
-            className="mb-8 h-px w-full"
-            style={{
-              background:
-                "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)",
-            }}
-          />
+          {showTopDivider && (
+            <div
+              className="mb-8 h-px w-full"
+              style={{
+                background:
+                  "linear-gradient(to right, transparent, rgba(45,45,45,0.10), transparent)",
+              }}
+            />
+          )}
 
           {showFilters && (
             <div className="mb-10 space-y-3">

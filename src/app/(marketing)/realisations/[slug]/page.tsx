@@ -136,7 +136,6 @@ export default async function PortfolioProjectPage({ params }: Props) {
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-[rgba(45,45,45,0.12)] bg-white/84 px-6 py-3.5 text-sm font-semibold text-[#2d2d2d] transition-colors hover:border-[#498f6d]/30 hover:text-[#498f6d]"
                 >
                   Demander un devis similaire
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -188,7 +187,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               <ProjectTextBlock
                 accent={accent}
                 eyebrow="Réponse"
-                title={buildSolutionTitle(project)}
+                title={buildSolutionTitle()}
                 body={project.solution}
               />
 
@@ -458,7 +457,6 @@ function CtaCard({ accent }: { accent: string }) {
           style={{ backgroundColor: accent }}
         >
           Demander un devis
-          <ArrowRight className="h-4 w-4" />
         </Link>
         <Link
           href="/contact/"
@@ -616,7 +614,6 @@ function InlineServiceLink({
       style={{ borderColor: `${accent}3d`, color: accent }}
     >
       {label}
-      <ArrowRight className="h-3.5 w-3.5" />
     </Link>
   );
 }
@@ -637,7 +634,7 @@ function buildChallengeTitle(project: PortfolioProject): string {
   return `Le point de friction principal à résoudre pour ${project.client}`;
 }
 
-function buildSolutionTitle(project: PortfolioProject): string {
+function buildSolutionTitle(): string {
   return "La réponse construite par Lannkin";
 }
 

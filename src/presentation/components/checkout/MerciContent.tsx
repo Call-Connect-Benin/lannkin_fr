@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
-  ArrowRight,
   CheckCircle,
   Loader2,
   MapPin,
@@ -280,7 +279,6 @@ export function MerciContent() {
                         ) : (
                           <>
                             Ajouter
-                            <ArrowRight className="h-3.5 w-3.5" />
                           </>
                         )}
                       </button>
@@ -304,7 +302,6 @@ export function MerciContent() {
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-all hover:brightness-110"
               >
                 Nous contacter
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/tarifs/"

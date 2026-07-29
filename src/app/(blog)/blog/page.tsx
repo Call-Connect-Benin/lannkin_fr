@@ -91,7 +91,6 @@ export default function BlogPage() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
                 >
                   Lire les derniers articles
-                  <ArrowRight className="h-4 w-4" />
                 </a>
                 <Link
                   href="/services/"
@@ -478,7 +477,6 @@ export default function BlogPage() {
                 className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
               >
                 S&apos;abonner au blog
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/services/"
